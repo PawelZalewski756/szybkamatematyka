@@ -40,23 +40,12 @@ export function BazaZadanTreningPanel({ sheets }: { sheets: ExamSheet[] }) {
   }
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col gap-2 rounded-2xl border border-surface-border bg-surface p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-        <div>
-          <p className="text-overline">Symulacje</p>
-          <p className="mt-1 text-sm text-muted">
-            Kompletne arkusze z wynikiem na końcu:{" "}
-            <span className="font-semibold text-foreground">
-              {sheets.length}
-            </span>
-            .
-          </p>
-        </div>
-        <p className="text-sm text-muted">
-          Ścieżka:{" "}
-          <span className="font-semibold text-foreground">{pathLabel}</span>
-        </p>
-      </div>
+    <div className="space-y-6">
+      <p className="text-sm text-muted">
+        Kompletne arkusze z wynikiem na końcu.{" "}
+        <span className="font-semibold text-foreground">{sheets.length}</span> w
+        ścieżce „{pathLabel}”.
+      </p>
 
       {grouped.map(({ kind, label, sheets: items }) => (
         <section key={kind} aria-labelledby={`trening-group-${kind}`}>

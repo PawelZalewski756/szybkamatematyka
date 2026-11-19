@@ -107,4 +107,31 @@ describe("sortTasksForDisplay", () => {
       "10",
     ]);
   });
+
+  it("miesza warianty proceduralne, ale stabilnie i po poziomie trudności", () => {
+    const tasks = [
+      makeTask({ id: "proc-pct-1", title: "Ile to 5% z 40?" }),
+      makeTask({ id: "proc-pct-2", title: "Ile to 5% z 60?" }),
+      makeTask({ id: "proc-pct-3", title: "Ile to 10% z 40?" }),
+      makeTask({ id: "proc-pct-4", title: "Ile to 20% z 80?" }),
+      makeTask({
+        id: "proc-pct-5",
+        title: "Ile to 50% z 8?",
+        difficulty: "trudny",
+      }),
+    ];
+
+    const first = sortTasksForDisplay(tasks).map((task) => task.id);
+    const second = sortTasksForDisplay(tasks).map((task) => task.id);
+
+    expect(first).toEqual(second);
+    expect(first[first.length - 1]).toBe("proc-pct-5");
+    // Alfabetycznie byłoby 1,2,3,4 - mieszanie musi zmienić kolejność.
+    expect(first.slice(0, 4)).not.toEqual([
+      "proc-pct-1",
+      "proc-pct-2",
+      "proc-pct-3",
+      "proc-pct-4",
+    ]);
+  });
 });

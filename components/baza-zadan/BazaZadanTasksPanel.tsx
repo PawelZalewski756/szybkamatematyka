@@ -10,7 +10,6 @@ import {
 } from "@/lib/baza-zadan/labels";
 import {
   TASK_CATEGORY_GROUPS,
-  type TaskCategoryGroupId,
 } from "@/lib/baza-zadan/sections";
 import { sortTasksForDisplay } from "@/lib/baza-zadan/task-order";
 import type {
@@ -18,31 +17,22 @@ import type {
   TaskDifficulty,
 } from "@/lib/baza-zadan/types";
 import { matchesLearningPath } from "@/lib/learning-path";
-import {
-  ArrowLeft,
-  ChevronRight,
-  Search,
-  SearchX,
-  SlidersHorizontal,
-} from "lucide-react";
-import type { ReactNode } from "react";
+import { ArrowLeft, ChevronRight, Search, SearchX } from "lucide-react";
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 
 const PAGE_SIZE = 9;
 
 /**
- * Filtry katalogu przeżywają wejście w zadanie i powrót. Wcześniej komponent
- * montował się od zera, więc „wstecz” z zadania pokazywało start katalogu -
- * uczeń tracił dział, frazę i poziom, który właśnie ustawił.
+ * Filtry katalogu przeżywają wejście w zadanie i powrót, żeby „wstecz”
+ * z zadania nie wyrzucało ucznia na start katalogu.
  */
-const FILTERS_STORAGE_KEY = "baza-zadan:filters:v1";
+const FILTERS_STORAGE_KEY = "baza-zadan:filters:v2";
 const SCROLL_STORAGE_KEY = "baza-zadan:scroll:v1";
 
 type StoredFilters = {
   search: string;
-  category: TaskCategory | "all";
+  category: TaskCategory | null;
   difficulty: TaskDifficulty | "all";
-  group: TaskCategoryGroupId | null;
 };
 
 function readStoredFilters(): StoredFilters | null {
@@ -54,23 +44,18 @@ function readStoredFilters(): StoredFilters | null {
     const category =
       typeof parsed.category === "string" && parsed.category in CATEGORY_LABELS
         ? (parsed.category as TaskCategory)
-        : "all";
+        : null;
     const difficulty =
       typeof parsed.difficulty === "string" &&
       parsed.difficulty in DIFFICULTY_LABELS
         ? (parsed.difficulty as TaskDifficulty)
         : "all";
-    const group =
-      typeof parsed.group === "string" &&
-      TASK_CATEGORY_GROUPS.some((entry) => entry.id === parsed.group)
-        ? (parsed.group as TaskCategoryGroupId)
-        : null;
 
     return {
-      search: typeof parsed.search === "string" ? parsed.search.slice(0, 200) : "",
+      search:
+        typeof parsed.search === "string" ? parsed.search.slice(0, 200) : "",
       category,
       difficulty,
-      group,
     };
   } catch {
     return null;
@@ -105,27 +90,6 @@ function polishCount(count: number): string {
   return `${count} ${form}`;
 }
 
-function FilterChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`filter-chip ${active ? "filter-chip-active" : ""}`}
-    >
-      {children}
-    </button>
-  );
-}
-
 export function BazaZadanTasksPanel({
   tasks: catalogTasks,
 }: {
@@ -133,12 +97,9 @@ export function BazaZadanTasksPanel({
 }) {
   const { path } = useLearningPath();
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState<TaskCategory | "all">("all");
+  const [category, setCategory] = useState<TaskCategory | null>(null);
   const [difficulty, setDifficulty] = useState<TaskDifficulty | "all">("all");
-  const [selectedGroup, setSelectedGroup] =
-    useState<TaskCategoryGroupId | null>(null);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [filtersOpen, setFiltersOpen] = useState(false);
   const [restored, setRestored] = useState(false);
 
   // Odtworzenie filtrów po powrocie z zadania (po hydratacji, bez różnic SSR).
@@ -149,23 +110,16 @@ export function BazaZadanTasksPanel({
       setSearch(stored.search);
       setCategory(stored.category);
       setDifficulty(stored.difficulty);
-      setSelectedGroup(stored.group);
     }
     setRestored(true);
   }, []);
 
   useEffect(() => {
     if (!restored) return;
-    storeFilters({
-      search,
-      category,
-      difficulty,
-      group: selectedGroup,
-    });
-  }, [restored, search, category, difficulty, selectedGroup]);
+    storeFilters({ search, category, difficulty });
+  }, [restored, search, category, difficulty]);
 
-  // Po powrocie z zadania przywracamy też pozycję listy - inaczej uczeń ląduje
-  // na górze katalogu i myśli, że to inna strona.
+  // Po powrocie z zadania przywracamy pozycję listy.
   useEffect(() => {
     const saveScroll = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
@@ -200,340 +154,295 @@ export function BazaZadanTasksPanel({
   }, [restored]);
 
   const deferredSearch = useDeferredValue(search);
+  const query = deferredSearch.trim().toLowerCase();
+
   const allTasks = useMemo(
     () => catalogTasks.filter((task) => matchesLearningPath(path, task.paths)),
     [catalogTasks, path],
   );
+
+  const countByCategory = useMemo(() => {
+    const counts = new Map<TaskCategory, number>();
+    for (const task of allTasks) {
+      counts.set(task.category, (counts.get(task.category) ?? 0) + 1);
+    }
+    return counts;
+  }, [allTasks]);
+
   const catalogGroups = useMemo(
     () =>
-      TASK_CATEGORY_GROUPS.map((group) => ({
-        ...group,
-        taskCount: allTasks.filter((task) =>
-          group.categories.includes(task.category),
-        ).length,
-      })).filter((group) => group.taskCount > 0),
-    [allTasks],
+      TASK_CATEGORY_GROUPS.map((group) => {
+        const entries = group.categories
+          .map((id) => ({
+            id,
+            label: CATEGORY_LABELS[id],
+            count: countByCategory.get(id) ?? 0,
+          }))
+          .filter((entry) => entry.count > 0);
+        return {
+          ...group,
+          entries,
+          taskCount: entries.reduce((sum, entry) => sum + entry.count, 0),
+        };
+      }).filter((group) => group.entries.length > 0),
+    [countByCategory],
   );
-  const selectedGroupDefinition = selectedGroup
-    ? TASK_CATEGORY_GROUPS.find((group) => group.id === selectedGroup)
-    : undefined;
 
-  const tasks = useMemo(() => {
-    const groupCategories = selectedGroupDefinition?.categories;
-    const query = deferredSearch.trim().toLowerCase();
+  // Po zmianie poziomu nauki wybrany temat może nie istnieć w nowej ścieżce.
+  // Wtedy wracamy do katalogu zamiast pokazywać pustą listę wyników.
+  const activeCategory =
+    category && countByCategory.has(category) ? category : null;
 
+  const filteredTasks = useMemo(() => {
     const filtered = allTasks.filter((task) => {
+      if (activeCategory && task.category !== activeCategory) return false;
       if (difficulty !== "all" && task.difficulty !== difficulty) return false;
-      if (category !== "all" && task.category !== category) return false;
-      if (groupCategories && !groupCategories.includes(task.category)) {
-        return false;
-      }
       if (!query) return true;
-      return `${task.title} ${task.prompt} ${task.category}`
+      return `${task.title} ${task.prompt} ${CATEGORY_LABELS[task.category]}`
         .toLowerCase()
         .includes(query);
     });
 
     return sortTasksForDisplay(filtered);
-  }, [
-    allTasks,
-    category,
-    deferredSearch,
-    difficulty,
-    selectedGroupDefinition,
-  ]);
+  }, [activeCategory, allTasks, difficulty, query]);
 
-  const hasIntent =
-    selectedGroup !== null ||
-    category !== "all" ||
-    difficulty !== "all" ||
-    search.trim().length > 0;
-  const visible = tasks.slice(0, visibleCount);
-  const hasMore = visibleCount < tasks.length;
-  const resultTitle = selectedGroupDefinition
-    ? `Zadania: ${selectedGroupDefinition.label}`
-    : search.trim()
-      ? "Wyniki wyszukiwania"
-      : category !== "all"
-        ? CATEGORY_LABELS[category]
-        : "Wybrane zadania";
+  const isBrowsingCatalog = !activeCategory && !query;
+  const visible = filteredTasks.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredTasks.length;
+  const hasFilters = difficulty !== "all" || query.length > 0;
 
   const resetPagination = () => setVisibleCount(PAGE_SIZE);
 
-  const clearSelection = () => {
+  const openCategory = (next: TaskCategory) => {
     setSearch("");
-    setCategory("all");
-    setDifficulty("all");
-    setSelectedGroup(null);
+    setCategory(next);
     resetPagination();
   };
 
-  const chooseGroup = (groupId: TaskCategoryGroupId) => {
+  const backToCatalog = () => {
     setSearch("");
-    setCategory("all");
+    setCategory(null);
     setDifficulty("all");
-    setSelectedGroup(groupId);
     resetPagination();
   };
 
-  const searchAndFilters = (
-    <section
-      className="border-b border-surface-border pb-6"
-      aria-labelledby="baza-zadan-search-heading"
-    >
-      <div className="max-w-xl">
-        <p className="text-overline">Zadania treningowe</p>
-        <h2
-          id="baza-zadan-search-heading"
-          className="mt-1 text-lg font-bold text-foreground sm:text-xl"
-        >
-          Wybierz dział lub wyszukaj zadanie
-        </h2>
-        <p className="mt-2 text-sm text-muted">
-          Zacznij od tematu albo wpisz szukaną frazę.
-        </p>
-      </div>
+  const clearSearch = () => {
+    setSearch("");
+    resetPagination();
+  };
 
-      <label
-        htmlFor="baza-search"
-        className="mt-5 block text-xs font-semibold text-muted"
-      >
-        Szukaj po tytule lub treści
-      </label>
-      <div className="relative mt-1.5 max-w-2xl">
-        <Search
-          className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-          aria-hidden="true"
-        />
-        <input
-          id="baza-search"
-          type="search"
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setSelectedGroup(null);
-            resetPagination();
-          }}
-          placeholder="Np. równania, procenty, trójkąt…"
-          className="input-field w-full py-3 pl-10 pr-3 text-sm"
-        />
-      </div>
+  const resultTitle = query
+    ? "Wyniki wyszukiwania"
+    : activeCategory
+      ? CATEGORY_LABELS[activeCategory]
+      : "Wszystkie zadania";
 
-      <div className="mt-4 flex flex-wrap items-center gap-3">
-        <button
-          type="button"
-          aria-expanded={filtersOpen}
-          aria-controls="baza-zadan-detailed-filters"
-          onClick={() => setFiltersOpen((open) => !open)}
-          className="btn-ghost inline-flex items-center gap-2 px-3 py-2 text-xs font-bold"
-        >
-          <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
-          {filtersOpen ? "Ukryj filtry" : "Doprecyzuj filtry"}
-        </button>
-        {hasIntent ? (
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+        <div className="relative min-w-0 flex-1">
+          <Search
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+            aria-hidden="true"
+          />
+          <input
+            id="baza-search"
+            type="search"
+            aria-label="Szukaj po tytule lub treści"
+            value={search}
+            onChange={(event) => {
+              setSearch(event.target.value);
+              setCategory(null);
+              resetPagination();
+            }}
+            placeholder="Szukaj zadania, np. procenty, trójkąt, równanie…"
+            className="input-field w-full py-2.5 pl-10 pr-3 text-sm"
+          />
+        </div>
+        {hasFilters ? (
           <button
             type="button"
-            onClick={clearSelection}
-            className="text-sm font-semibold text-accent hover:text-accent-strong"
+            onClick={clearSearch}
+            className="self-start text-sm font-semibold text-accent hover:text-accent-strong sm:self-auto"
           >
-            Wyczyść wybór
+            Wyczyść szukanie
           </button>
         ) : null}
       </div>
 
-      {filtersOpen ? (
-        <div
-          id="baza-zadan-detailed-filters"
-          className="mt-5 grid gap-5 border-t border-surface-border pt-5 sm:grid-cols-2"
-        >
-          <div>
-            <p className="mb-2 text-xs font-semibold text-muted">Trudność</p>
-            <div className="flex flex-wrap gap-1.5">
-              <FilterChip
-                active={difficulty === "all"}
-                onClick={() => {
-                  setDifficulty("all");
-                  resetPagination();
-                }}
+      {isBrowsingCatalog ? (
+        <section aria-labelledby="baza-tematy-heading">
+          <div className="flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <h2
+                id="baza-tematy-heading"
+                className="text-lg font-extrabold text-foreground"
               >
-                Wszystkie
-              </FilterChip>
-              {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
-                <FilterChip
-                  key={d}
-                  active={difficulty === d}
-                  onClick={() => {
-                    setDifficulty(d);
-                    setSelectedGroup(null);
-                    resetPagination();
-                  }}
-                >
-                  {DIFFICULTY_LABELS[d]}
-                </FilterChip>
-              ))}
+                Wybierz temat
+              </h2>
             </div>
+            <p className="text-sm text-muted">
+              <span className="font-semibold text-foreground">
+                {polishCount(allTasks.length)}
+              </span>{" "}
+              w {catalogGroups.length} obszarach
+            </p>
           </div>
 
-          <div>
-            <label
-              htmlFor="baza-dzial"
-              className="text-xs font-semibold text-muted"
-            >
-              Dział
-            </label>
-            <select
-              id="baza-dzial"
-              value={category}
-              onChange={(e) => {
-                setCategory(e.target.value as TaskCategory | "all");
-                setSelectedGroup(null);
-                resetPagination();
-              }}
-              className="input-field mt-1.5 w-full px-3 py-2.5 text-sm"
-            >
-              <option value="all">Wszystkie działy</option>
-              {Object.entries(CATEGORY_LABELS).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-      ) : null}
-    </section>
-  );
-
-  const catalog = (
-    <section
-      className="pt-5"
-      aria-labelledby="baza-zadan-catalog-heading"
-    >
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
-        <div>
-          <p className="text-overline">Katalog tematów</p>
-          <h2
-            id="baza-zadan-catalog-heading"
-            className="mt-1 text-lg font-bold text-foreground"
-          >
-            Od czego chcesz zacząć?
-          </h2>
-        </div>
-        <p className="text-sm text-muted">
-          <span className="font-semibold text-foreground">
-            {polishCount(allTasks.length)}
-          </span>{" "}
-          w tej ścieżce
-        </p>
-      </div>
-
-      <ul className="mt-4 divide-y divide-surface-border border-y border-surface-border">
-        {catalogGroups.map((group, index) => (
-          <li key={group.id}>
-            <button
-              type="button"
-              onClick={() => chooseGroup(group.id)}
-              className="group flex w-full items-center gap-3 px-1 py-3.5 text-left transition hover:bg-surface-hover/60 sm:px-2"
-            >
-              <span
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-xs font-bold tabular-nums text-accent-strong"
-                aria-hidden="true"
+          <div className="mt-4 grid items-start gap-3 sm:grid-cols-2">
+            {catalogGroups.map((group) => (
+              <section
+                key={group.id}
+                data-testid={`baza-group-${group.id}`}
+                className="overflow-hidden rounded-2xl border border-surface-border bg-surface"
               >
-                {index + 1}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-sm font-bold text-foreground group-hover:text-accent">
-                  {group.label}
-                </span>
-                <span className="mt-0.5 block text-xs leading-relaxed text-muted">
-                  {group.description}
-                </span>
-              </span>
-              <span className="flex shrink-0 items-center gap-2">
-                <span className="text-xs font-semibold tabular-nums text-muted">
-                  {polishCount(group.taskCount)}
-                </span>
-                <ChevronRight
-                  className="h-4 w-4 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
-                  aria-hidden="true"
-                />
-              </span>
-            </button>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-
-  const results = (
-    <section aria-labelledby="baza-zadan-results-heading">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="text-overline">Wyniki</p>
-          <h2
-            id="baza-zadan-results-heading"
-            className="mt-1 text-xl font-black text-foreground"
-          >
-            {resultTitle}
-          </h2>
-          <p className="mt-1 text-sm text-muted" role="status" aria-live="polite">
-            Znaleziono{" "}
-            <span className="font-semibold text-foreground">
-              {polishCount(tasks.length)}
-            </span>
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={clearSelection}
-          className="inline-flex items-center gap-2 self-start text-sm font-semibold text-accent hover:text-accent-strong sm:self-auto"
-        >
-          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-          Wróć do katalogu
-        </button>
-      </div>
-
-      {tasks.length === 0 ? (
-        <div className="mt-5">
-          <EmptyState
-            icon={SearchX}
-            title="Brak zadań"
-            description="Zmień frazę albo wybierz inny dział i spróbuj ponownie."
-          />
-        </div>
-      ) : (
-        <>
-          <ul
-            className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
-            aria-label="Wyniki zadań"
-          >
-            {visible.map((task) => (
-              <li key={task.id}>
-                <TaskCard task={task} />
-              </li>
+                {group.entries.length === 1 ? (
+                  <button
+                    type="button"
+                    onClick={() => openCategory(group.entries[0]!.id)}
+                    className="group flex w-full items-center gap-3 p-4 text-left transition hover:bg-surface-hover"
+                  >
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-extrabold text-foreground group-hover:text-accent">
+                        {group.label}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-xs font-semibold tabular-nums text-muted">
+                      {group.taskCount}
+                    </span>
+                    <ChevronRight
+                      className="h-4 w-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+                      aria-hidden="true"
+                    />
+                  </button>
+                ) : (
+                  <>
+                    <div className="flex items-start justify-between gap-3 border-b border-surface-border px-4 py-3">
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-extrabold text-foreground">
+                          {group.label}
+                        </h3>
+                      </div>
+                      <span className="shrink-0 text-xs font-semibold tabular-nums text-muted">
+                        {group.taskCount}
+                      </span>
+                    </div>
+                    <ul className="divide-y divide-surface-border">
+                      {group.entries.map((entry) => (
+                        <li key={entry.id}>
+                          <button
+                            type="button"
+                            onClick={() => openCategory(entry.id)}
+                            className="group flex w-full items-center gap-3 px-4 py-2.5 text-left transition hover:bg-surface-hover"
+                          >
+                            <span className="min-w-0 flex-1 text-sm font-semibold text-foreground group-hover:text-accent">
+                              {entry.label}
+                            </span>
+                            <span className="shrink-0 text-xs tabular-nums text-muted">
+                              {entry.count}
+                            </span>
+                            <ChevronRight
+                              className="h-4 w-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+                              aria-hidden="true"
+                            />
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </section>
             ))}
-          </ul>
-
-          {hasMore ? (
-            <div className="mt-6 flex justify-center">
+          </div>
+        </section>
+      ) : (
+        <section aria-labelledby="baza-wyniki-heading">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div className="min-w-0">
               <button
                 type="button"
-                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-                className="btn-ghost px-6 py-2.5 text-sm font-semibold"
+                onClick={backToCatalog}
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-strong"
               >
-                Pokaż więcej ({tasks.length - visibleCount} pozostało)
+                <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
+                Wszystkie tematy
               </button>
+              <h2
+                id="baza-wyniki-heading"
+                className="mt-1 text-xl font-extrabold text-foreground"
+              >
+                {resultTitle}
+              </h2>
+              <p className="mt-1 text-sm text-muted" role="status" aria-live="polite">
+                {polishCount(filteredTasks.length)}
+              </p>
             </div>
-          ) : null}
-        </>
-      )}
-    </section>
-  );
 
-  return (
-    <div className="space-y-5">
-      {searchAndFilters}
-      {hasIntent ? results : catalog}
+            <label className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-muted">Poziom</span>
+              <select
+                aria-label="Filtr trudności"
+                value={difficulty}
+                onChange={(event) => {
+                  setDifficulty(event.target.value as TaskDifficulty | "all");
+                  resetPagination();
+                }}
+                className="input-field px-3 py-2 text-sm"
+              >
+                <option value="all">Wszystkie</option>
+                {(Object.keys(DIFFICULTY_LABELS) as TaskDifficulty[]).map((d) => (
+                  <option key={d} value={d}>
+                    {DIFFICULTY_LABELS[d]}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          {filteredTasks.length === 0 ? (
+            <div className="mt-5">
+              <EmptyState
+                icon={SearchX}
+                title="Brak zadań"
+                description="Zmień frazę albo wybierz inny temat i spróbuj ponownie."
+              >
+                <button
+                  type="button"
+                  onClick={backToCatalog}
+                  className="btn-primary px-5 py-2.5 text-sm"
+                >
+                  Wróć do tematów
+                </button>
+              </EmptyState>
+            </div>
+          ) : (
+            <>
+              <ul
+                className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
+                aria-label="Wyniki zadań"
+              >
+                {visible.map((task) => (
+                  <li key={task.id}>
+                    <TaskCard task={task} />
+                  </li>
+                ))}
+              </ul>
+
+              {hasMore ? (
+                <div className="mt-6 flex justify-center">
+                  <button
+                    type="button"
+                    onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+                    className="btn-ghost px-6 py-2.5 text-sm font-semibold"
+                  >
+                    Pokaż więcej ({filteredTasks.length - visibleCount} pozostało)
+                  </button>
+                </div>
+              ) : null}
+            </>
+          )}
+        </section>
+      )}
     </div>
   );
 }

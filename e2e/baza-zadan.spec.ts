@@ -1,56 +1,83 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("Baza zadań", () => {
-  test("domyślnie pokazuje katalog zamiast ściany kart", async ({ page }) => {
+  test("katalog tematów jest widoczny od razu, bez zjeżdżania na dół", async ({
+    page,
+  }) => {
     await page.goto("/baza-zadan");
 
     await expect(
-      page.getByRole("heading", { level: 1, name: "Wybierz punkt startu" }),
+      page.getByRole("heading", { level: 1, name: "Baza zadań" }),
     ).toBeVisible();
+
+    const tablist = page.getByRole("tablist", { name: "Sekcje bazy zadań" });
     await expect(
-      page
-        .getByRole("tablist", { name: "Sposób pracy w bazie zadań" })
-        .getByRole("tab", { name: /Ćwicz zadania/ }),
+      tablist.getByRole("tab", { name: /Ćwicz zadania/ }),
     ).toHaveAttribute("aria-selected", "true");
     await expect(
       page.getByLabel("Szukaj po tytule lub treści"),
     ).toBeVisible();
     await expect(
-      page.getByRole("heading", {
-        name: "Od czego chcesz zacząć?",
-      }),
+      page.getByRole("heading", { name: "Wybierz temat" }),
     ).toBeVisible();
     await expect(page.getByRole("list", { name: "Wyniki zadań" })).toHaveCount(
       0,
     );
+
+    // Temat musi być na pierwszym ekranie - wcześniej katalog był pod
+    // wyszukiwarką i wynikami, więc trzeba było zjeżdżać na sam dół.
+    const firstTopic = page
+      .getByRole("button", { name: /^Arytmetyka/ })
+      .first();
+    const box = await firstTopic.boundingBox();
+    expect(box).not.toBeNull();
+    expect(box!.y).toBeLessThan(900);
   });
 
-  test("pokazuje wyniki dopiero po wyborze działu", async ({ page }) => {
+  test("wybór tematu pokazuje jego zadania z czytelnymi tytułami", async ({
+    page,
+  }) => {
     await page.goto("/baza-zadan");
 
-    await page
-      .getByRole("button", { name: /Algebra i równania/ })
-      .click();
+    await page.getByRole("button", { name: /^Procenty/ }).first().click();
 
     await expect(
-      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+      page.getByRole("heading", { level: 2, name: "Procenty" }),
     ).toBeVisible();
+    const list = page.getByRole("list", { name: "Wyniki zadań" });
+    await expect(list).toBeVisible();
     await expect(
-      page.getByRole("list", { name: "Wyniki zadań" }),
+      page.getByRole("button", { name: "Wszystkie tematy" }),
     ).toBeVisible();
-    await expect(
-      page.getByRole("button", { name: "Wróć do katalogu" }),
-    ).toBeVisible();
+
+    // Tytuły proceduralnych zadań nie mogą być już numerami („Procent #17”).
+    const firstTitle = await list.getByRole("link").first().innerText();
+    expect(firstTitle).not.toMatch(/#\d+/);
+    expect(firstTitle.toLowerCase()).toContain("procent");
   });
 
-  test("zachowuje wybór celu w URL i przełącza panel bez przeładowania", async ({
+  test("filtr trudności zawęża listę zadań", async ({ page }) => {
+    await page.goto("/baza-zadan");
+    await page.getByRole("button", { name: /^Procenty/ }).first().click();
+
+    const list = page.getByRole("list", { name: "Wyniki zadań" });
+    const before = await list.getByRole("link").count();
+
+    await page.getByLabel("Filtr trudności").selectOption("trudny");
+    await expect(
+      page.getByText(/Brak zadań|zadań/).first(),
+    ).toBeVisible();
+
+    const after = await list.getByRole("link").count();
+    expect(after).toBeLessThanOrEqual(before);
+  });
+
+  test("zachowuje wybór zakładki w URL i przełącza panel bez przeładowania", async ({
     page,
   }) => {
     await page.goto("/baza-zadan?tab=trening");
 
-    const tablist = page.getByRole("tablist", {
-      name: "Sposób pracy w bazie zadań",
-    });
+    const tablist = page.getByRole("tablist", { name: "Sekcje bazy zadań" });
     await expect(
       tablist.getByRole("tab", { name: /Symulacje/ }),
     ).toHaveAttribute("aria-selected", "true");
@@ -67,7 +94,7 @@ test.describe("Baza zadań", () => {
     ).toHaveAttribute("aria-selected", "true");
   });
 
-  test("filtr wyszukiwania pokazuje pusty stan i można go wyczyścić", async ({
+  test("wyszukiwanie pokazuje pusty stan i wraca do katalogu", async ({
     page,
   }) => {
     await page.goto("/baza-zadan");
@@ -76,12 +103,15 @@ test.describe("Baza zadań", () => {
     await search.fill("fraza-której-nie-ma-w-bazie-987654");
     await expect(page.getByText("Brak zadań")).toBeVisible();
     await expect(
-      page.getByRole("button", { name: "Wyczyść wybór" }),
+      page.getByRole("button", { name: "Wyczyść szukanie" }),
     ).toBeVisible();
 
-    await page.getByRole("button", { name: "Wyczyść wybór" }).click();
+    await page.getByRole("button", { name: "Wróć do tematów" }).click();
     await expect(page.getByText("Brak zadań")).toHaveCount(0);
     await expect(search).toHaveValue("");
+    await expect(
+      page.getByRole("heading", { name: "Wybierz temat" }),
+    ).toBeVisible();
   });
 
   test("arkusze CKE pokazują katalog po załadowaniu danych", async ({
@@ -142,7 +172,7 @@ test.describe("Baza zadań", () => {
     ).toHaveAttribute("aria-pressed", "true");
   });
 
-  test("na telefonie wyszukiwanie pozostaje dostępne przed filtrami", async ({
+  test("na telefonie wyszukiwanie i tematy są dostępne bez zjeżdżania", async ({
     page,
   }) => {
     await page.setViewportSize({ width: 390, height: 844 });
@@ -152,16 +182,20 @@ test.describe("Baza zadań", () => {
       page.getByLabel("Szukaj po tytule lub treści"),
     ).toBeVisible();
     await expect(
-      page.getByRole("button", { name: "Doprecyzuj filtry", exact: true }),
+      page.getByRole("heading", { name: "Wybierz temat" }),
     ).toBeVisible();
+    const firstTopic = page
+      .getByRole("button", { name: /^Arytmetyka/ })
+      .first();
+    await expect(firstTopic).toBeVisible();
   });
 
-  test("powrót z zadania zachowuje wybrany dział", async ({ page }) => {
+  test("powrót z zadania zachowuje wybrany temat", async ({ page }) => {
     await page.goto("/baza-zadan");
 
-    await page.getByRole("button", { name: /Algebra i równania/ }).click();
+    await page.getByRole("button", { name: /^Procenty/ }).first().click();
     await expect(
-      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+      page.getByRole("heading", { level: 2, name: "Procenty" }),
     ).toBeVisible();
 
     const firstTask = page
@@ -179,7 +213,7 @@ test.describe("Baza zadań", () => {
     await page.goBack();
 
     await expect(
-      page.getByRole("heading", { name: "Zadania: Algebra i równania" }),
+      page.getByRole("heading", { level: 2, name: "Procenty" }),
     ).toBeVisible();
     await expect(
       page.getByRole("list", { name: "Wyniki zadań" }),
@@ -217,7 +251,7 @@ test.describe("Baza zadań", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/baza-zadan");
 
-    await page.getByRole("button", { name: /Podstawy szkolne/ }).click();
+    await page.getByRole("button", { name: /^Arytmetyka/ }).first().click();
     const list = page.getByRole("list", { name: "Wyniki zadań" });
     await expect(list).toBeVisible();
 
@@ -231,7 +265,7 @@ test.describe("Baza zadań", () => {
     await page.goBack();
 
     await expect(
-      page.getByRole("heading", { name: /Zadania: Podstawy szkolne/ }),
+      page.getByRole("heading", { level: 2, name: "Arytmetyka" }),
     ).toBeVisible();
     await expect
       .poll(() => page.evaluate(() => window.scrollY))

@@ -1,10 +1,5 @@
 "use client";
 
-import { useLearningPath } from "@/components/LearningPathProvider";
-import {
-  getDiagnosticSnapshot,
-  subscribeDiagnostic,
-} from "@/lib/diagnostyka";
 import {
   daysUntilExam,
   examDateLabel,
@@ -14,7 +9,6 @@ import {
   subscribeExamDate,
 } from "@/lib/exam-date";
 import { CalendarDays } from "lucide-react";
-import Link from "next/link";
 import { useSyncExternalStore, useState, type FormEvent } from "react";
 
 function daysLabel(days: number): string {
@@ -26,36 +20,28 @@ function daysLabel(days: number): string {
 
 const getServerDate = () => null;
 
-/** Mała karta z datą egzaminu i licznikiem dni. Nie wymaga konta. */
+/**
+ * Jedna linijka z datą egzaminu - wcześniej była to osobna, duża karta z
+ * etykietą, opisem i linkiem do diagnozy. Treść została ta sama, ale bez
+ * dodatkowego bloku na stronie treningu.
+ */
 export function ExamCountdown() {
-  const { path } = useLearningPath();
   const storedDate = useSyncExternalStore(
     subscribeExamDate,
     loadExamDate,
-    getServerDate,
-  );
-  const diagnostic = useSyncExternalStore(
-    subscribeDiagnostic,
-    getDiagnosticSnapshot,
     getServerDate,
   );
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const examLabel = path === "sp" ? "egzamin ósmoklasisty" : "matura";
   const inputValue = draft ?? storedDate ?? "";
   const days = storedDate ? daysUntilExam(storedDate) : null;
-  const weakest = diagnostic
-    ? [...diagnostic.categories].sort(
-        (a, b) => a.correct / a.total - b.correct / b.total,
-      )[0]
-    : null;
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!isValidExamDate(inputValue)) {
-      setError("Wybierz poprawną datę egzaminu.");
+      setError("Wybierz poprawną datę.");
       return;
     }
     setError(null);
@@ -65,37 +51,12 @@ export function ExamCountdown() {
   };
 
   return (
-    <section
-      className="card-raised mt-4 flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between"
-      aria-label="Data egzaminu"
-    >
-      <div className="flex items-center gap-3">
-        <span className="icon-chip h-10 w-10 shrink-0">
-          <CalendarDays className="h-5 w-5" aria-hidden />
-        </span>
-        <div>
-          <p className="text-overline">Twój egzamin</p>
-          <p className="text-sm font-bold text-foreground">{examLabel}</p>
-          {diagnostic ? (
-            <p className="mt-0.5 text-[11px] text-muted">
-              Diagnoza: {diagnostic.correct}/{diagnostic.total}
-              {weakest ? ` · najsłabszy: ${weakest.label}` : ""}
-            </p>
-          ) : (
-            <Link
-              href="/diagnostyka"
-              className="mt-0.5 inline-block text-[11px] font-semibold text-accent hover:underline"
-            >
-              Zrób diagnozę startową
-            </Link>
-          )}
-        </div>
-      </div>
-
+    <div className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+      <CalendarDays className="h-3.5 w-3.5 shrink-0" aria-hidden />
       {editing ? (
         <form
           onSubmit={submit}
-          className="flex flex-col gap-2 sm:flex-row sm:items-center"
+          className="flex flex-wrap items-center gap-1.5"
         >
           <label htmlFor="exam-date" className="sr-only">
             Data egzaminu
@@ -108,10 +69,14 @@ export function ExamCountdown() {
               setDraft(event.target.value);
               setError(null);
             }}
-            className="input-field py-2 text-sm"
+            className="input-field px-2 py-1 text-xs"
+            autoFocus
           />
-          <button type="submit" className="btn-chunky px-4 py-2 text-sm">
-            Zapisz datę
+          <button
+            type="submit"
+            className="font-bold text-accent hover:underline"
+          >
+            Zapisz
           </button>
           <button
             type="button"
@@ -120,35 +85,34 @@ export function ExamCountdown() {
               setEditing(false);
               setError(null);
             }}
-            className="text-xs font-semibold text-muted underline underline-offset-4 hover:text-accent"
+            className="underline underline-offset-2 hover:text-foreground"
           >
             Anuluj
           </button>
           {error ? (
-            <p className="text-xs font-semibold text-danger sm:max-w-40">
-              {error}
-            </p>
+            <span className="font-semibold text-danger">{error}</span>
           ) : null}
         </form>
       ) : storedDate && days != null ? (
-        <div className="flex items-center gap-4">
-          <div className="text-right">
-            <p className="text-xl font-extrabold tabular-nums text-foreground">
+        <span className="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+          <span>
+            Do egzaminu:{" "}
+            <strong className="font-bold text-foreground">
               {daysLabel(days)}
-            </p>
-            <p className="text-xs text-muted">{examDateLabel(storedDate)}</p>
-          </div>
+            </strong>{" "}
+            <span className="text-muted">({examDateLabel(storedDate)})</span>
+          </span>
           <button
             type="button"
             onClick={() => {
               setDraft(storedDate);
               setEditing(true);
             }}
-            className="text-xs font-semibold text-muted underline underline-offset-4 hover:text-accent"
+            className="underline underline-offset-2 hover:text-foreground"
           >
-            Zmień
+            zmień
           </button>
-        </div>
+        </span>
       ) : (
         <button
           type="button"
@@ -156,11 +120,11 @@ export function ExamCountdown() {
             setDraft("");
             setEditing(true);
           }}
-          className="self-start rounded-xl border border-surface-border px-3 py-2 text-xs font-bold text-foreground transition hover:border-accent/50 hover:text-accent sm:self-auto"
+          className="font-semibold text-accent hover:underline"
         >
           Ustaw datę egzaminu
         </button>
       )}
-    </section>
+    </div>
   );
 }

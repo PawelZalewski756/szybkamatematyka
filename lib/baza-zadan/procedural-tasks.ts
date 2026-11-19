@@ -2,6 +2,7 @@ import { generateExtraProceduralTasks } from "@/lib/baza-zadan/procedural-extra"
 import {
   exactAverage,
   exactPercentOf,
+  finalizeProceduralTasks,
   gcd,
   integerChoices,
   uniqueChoices,
@@ -315,5 +316,8 @@ export function generateProceduralTasks(): Task[] {
     );
   }
 
-  return [...tasks, ...generateExtraProceduralTasks()];
+  return finalizeProceduralTasks([
+    ...tasks,
+    ...generateExtraProceduralTasks(),
+  ]);
 }

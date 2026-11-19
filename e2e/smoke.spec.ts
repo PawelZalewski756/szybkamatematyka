@@ -447,7 +447,7 @@ test.describe("Smoke", () => {
     await expect(page.getByText("Dla Ciebie")).toHaveCount(0);
 
     await expect(
-      page.getByRole("heading", { name: "Wybierz tryb" }),
+      page.getByRole("heading", { name: "Tryb gry" }),
     ).toBeVisible();
     await expect(page.getByTestId("minigame-mode-time_attack")).toHaveAttribute(
       "href",
@@ -455,7 +455,7 @@ test.describe("Smoke", () => {
     );
     await expect(
       page.getByTestId("minigame-mode-time_attack"),
-    ).toContainText("Proponowana minigra");
+    ).toContainText("Na czas");
   });
 
   test("/minigry odkrywa karty dopiero po otwarciu obszaru", async ({
@@ -463,10 +463,7 @@ test.describe("Smoke", () => {
   }) => {
     await page.goto("/minigry");
 
-    const matchedLibrary = page.getByTestId("minigame-matched-library");
-    const arithmeticGroup = matchedLibrary.getByTestId(
-      "minigame-group-rachunki",
-    );
+    const arithmeticGroup = page.getByTestId("minigame-group-rachunki");
     const multiplicationLink = arithmeticGroup.getByRole("link", {
       name: /Mnożenie/,
     });
@@ -480,10 +477,13 @@ test.describe("Smoke", () => {
       "/minigry/mnozenie?mode=time_attack",
     );
 
-    const fullLibrary = page.getByTestId("minigame-other-library");
-    await expect(fullLibrary).toBeVisible();
+    // Biblioteka jest jedną listą obszarów - bez drugiego, zagnieżdżonego
+    // poziomu „dopasowane / pełna biblioteka”.
+    await expect(page.getByTestId("minigame-group-funkcje")).toHaveCount(1);
     await expect(
-      fullLibrary.getByRole("link", { name: /Funkcje/ }),
+      page.getByTestId("minigame-group-funkcje").getByRole("link", {
+        name: /Funkcje/,
+      }),
     ).toBeHidden();
   });
 
@@ -593,18 +593,23 @@ test.describe("Smoke", () => {
     await expect(
       page.getByTestId("training-department-navigation"),
     ).toBeVisible();
-    await expect(page.getByTestId("training-next-step")).toHaveAttribute(
+
+    const nextStep = page.getByTestId("training-next-step");
+    await expect(nextStep).toBeVisible();
+    await expect(
+      nextStep.getByRole("link", { name: /Otwórz temat/ }),
+    ).toHaveAttribute(
       "href",
       /^\/trening\/egzamin-osmoklasisty\/liczby\//,
     );
-    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-    await expect(page.getByText("14 tematów").first()).toBeVisible();
-    await expect(
-      page.getByRole("button", { name: /Pokaż tematy/ }).first(),
-    ).toBeVisible();
+
+    // Na desktopie tematy wybranego działu są widoczne od razu - bez
+    // dodatkowego przycisku „Pokaż tematy”.
+    await expect(page.getByTestId("training-topic-list")).toBeVisible();
+    await expect(page.getByText("58 tematów")).toBeVisible();
   });
 
-  test("lista treningu otwiera tematy dopiero po wyborze działu", async ({
+  test("panel działu pokazuje tematy bez dodatkowego kliknięcia", async ({
     page,
   }) => {
     await page.goto("/trening");
@@ -617,14 +622,6 @@ test.describe("Smoke", () => {
     );
     await expect(departmentButton).toBeVisible();
     await expect(departmentPanel).toBeVisible();
-    await expect(page.getByTestId("training-topic-list")).toHaveCount(0);
-
-    const expandButton = departmentPanel.getByRole("button", {
-      name: /Pokaż tematy/,
-    });
-    await expect(expandButton).toBeVisible();
-    await expandButton.click();
-
     await expect(page.getByTestId("training-topic-list")).toBeVisible();
     await expect(topicLinks).toHaveCount(14);
   });

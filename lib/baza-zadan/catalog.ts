@@ -21,14 +21,33 @@ import {
 
 let cachedAllTasks: Task[] | null = null;
 
+/**
+ * Katalog nie może pokazywać dwóch zadań o tej samej treści w jednym dziale
+ * (np. statyczne „Oblicz: √144” i wygenerowane „Oblicz: √144”). Zostawiamy
+ * pierwsze wystąpienie - statyczne zadania mają pełniejsze wyjaśnienia.
+ */
+function dedupeCatalogTasks(tasks: readonly Task[]): Task[] {
+  const seen = new Set<string>();
+  const result: Task[] = [];
+
+  for (const task of tasks) {
+    const key = `${task.category}\u0000${task.prompt}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(task);
+  }
+
+  return result;
+}
+
 export function getAllTasks(): Task[] {
   if (!cachedAllTasks) {
-    cachedAllTasks = [
+    cachedAllTasks = dedupeCatalogTasks([
       ...STATIC_TASKS,
       ...STATIC_TASKS_EXTRA,
       ...EXAM_ARCHIVE_TASKS,
       ...generateProceduralTasks(),
-    ];
+    ]);
   }
   return cachedAllTasks;
 }

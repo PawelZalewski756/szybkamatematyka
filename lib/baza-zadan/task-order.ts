@@ -6,19 +6,41 @@ const DIFFICULTY_RANK: Record<TaskDifficulty, number> = {
   trudny: 2,
 };
 
+function hashId(value: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
 /**
  * Kolejność zadań w temacie: od łatwych do trudnych, a w obrębie poziomu
  * alfabetycznie. Bez tego lista szła w kolejności z pliku danych i wyglądała
  * losowo.
+ *
+ * Wyjątek: zadania proceduralne (`proc-*`) mają alfabetycznie identyczny
+ * początek („Ile to 5% z 40?”, „Ile to 5% z 60?”...), więc sortowanie po
+ * tytule pokazywało dziewięć wariantów tego samego przykładu. Dla nich
+ * kolejność jest deterministycznie mieszana po ID - lista jest różnorodna,
+ * ale stabilna między odświeżeniami.
  */
 export function sortTasksForDisplay<
-  T extends Pick<Task, "difficulty" | "title">,
+  T extends Pick<Task, "difficulty" | "title" | "id">,
 >(tasks: readonly T[]): T[] {
-  return [...tasks].sort(
-    (a, b) =>
-      DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty] ||
-      a.title.localeCompare(b.title, "pl", { numeric: true }),
-  );
+  return [...tasks].sort((a, b) => {
+    const byDifficulty =
+      DIFFICULTY_RANK[a.difficulty] - DIFFICULTY_RANK[b.difficulty];
+    if (byDifficulty !== 0) return byDifficulty;
+
+    const aProc = a.id.startsWith("proc-");
+    const bProc = b.id.startsWith("proc-");
+    if (aProc !== bProc) return aProc ? 1 : -1;
+    if (aProc && bProc) return hashId(a.id) - hashId(b.id);
+
+    return a.title.localeCompare(b.title, "pl", { numeric: true });
+  });
 }
 
 export type OrderedChoices = {

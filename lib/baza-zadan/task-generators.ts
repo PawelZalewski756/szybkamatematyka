@@ -1,6 +1,31 @@
 /** Pomocniki do generowania zadań z poprawnymi, całkowitymi wynikami. */
 
+import type { Task } from "@/lib/baza-zadan/types";
 import { answersEquivalent } from "@/lib/math/answer-equiv";
+
+/**
+ * Porządkuje zadania proceduralne przed dodaniem do katalogu.
+ *
+ * Dwa problemy, które widział uczeń:
+ * 1. Tytuły typu „Procent #17” nic nie mówiły - teraz tytułem jest treść
+ *    zadania („Ile to 15% z 80?”), więc lista czyta się jak zestaw zadań,
+ *    a nie jak ponumerowany dump.
+ * 2. Pętle generatorów z modulo powtarzały ten sam prompt kilka razy
+ *    (np. „sin(30°) = ?” 11 razy). Liczymy każdą treść tylko raz.
+ */
+export function finalizeProceduralTasks(tasks: readonly Task[]): Task[] {
+  const seen = new Set<string>();
+  const result: Task[] = [];
+
+  for (const task of tasks) {
+    const key = `${task.category}\u0000${task.prompt}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push({ ...task, title: task.prompt });
+  }
+
+  return result;
+}
 
 export function gcd(a: number, b: number): number {
   let x = Math.abs(a);

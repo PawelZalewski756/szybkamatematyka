@@ -34,22 +34,11 @@ import { getClassPlan } from "@/lib/trening/class-plan";
 import {
   loadSchoolClass,
   subscribeLearningPath,
-  type SchoolClassPath,
 } from "@/lib/learning-path";
-import {
-  getDiagnosticSnapshot,
-  subscribeDiagnostic,
-} from "@/lib/diagnostyka";
-import {
-  daysUntilExam,
-  loadExamDate,
-  subscribeExamDate,
-} from "@/lib/exam-date";
 import {
   ArrowRight,
   BookOpen,
   CheckCircle2,
-  ChevronDown,
   ChevronRight,
   Search,
   X,
@@ -147,50 +136,6 @@ function filterExamByQuery(
 
 function countTopics(exam: ExamWithProgress): number {
   return exam.categories.reduce((n, c) => n + c.topics.length, 0);
-}
-
-type TopicCardFilter = "all" | "incomplete" | "completed";
-type TopicSort = "az" | "progress";
-
-function filterTopicsByStatus(
-  exam: ExamWithProgress,
-  filter: TopicCardFilter,
-): ExamWithProgress {
-  if (filter === "all") return exam;
-
-  const categories = exam.categories
-    .map((category) => {
-      const topics = category.topics.filter((topic) => {
-        if (topic.total === 0) return false;
-        if (filter === "completed") return topic.status === "completed";
-        return topic.status !== "completed";
-      });
-      if (topics.length === 0) return null;
-      return { ...category, topics };
-    })
-    .filter((c): c is CategoryWithProgress => c !== null);
-
-  return { ...exam, categories };
-}
-
-function sortTopicsInExam(
-  exam: ExamWithProgress,
-  sort: TopicSort,
-): ExamWithProgress {
-  const categories = exam.categories.map((category) => {
-    const topics = [...category.topics];
-    if (sort === "az") {
-      topics.sort((a, b) => a.name.localeCompare(b.name, "pl"));
-    } else {
-      topics.sort(
-        (a, b) =>
-          b.percent - a.percent ||
-          a.name.localeCompare(b.name, "pl"),
-      );
-    }
-    return { ...category, topics };
-  });
-  return { ...exam, categories };
 }
 
 type NextTrainingTopic = {
@@ -298,30 +243,14 @@ function TopicRow({
   const hasTheory = theoryTier !== "none";
   const canPlay = topic.total > 0;
   const canOpen = canPlay || hasTheory;
-  const isComingSoon = !canOpen;
   const isCompleted = topic.status === "completed";
   const href = buildTopicHref(examKey, category.id, topic.id);
   const theory = theoryLabel(theoryTier);
   const progress = Math.max(0, Math.min(100, topic.percent));
-  const statusLabel = isComingSoon
-    ? "Wkrótce"
-    : !canPlay
-      ? "Teoria dostępna"
-    : isCompleted
-      ? "Ukończone"
-      : topic.solved > 0
-        ? "W toku"
-        : "Do zrobienia";
-
-  const rowClass =
-    "group flex min-h-16 items-center gap-3 border-l-2 border-transparent px-4 py-3.5 text-sm transition " +
-    (canOpen
-      ? "hover:border-accent/60 hover:bg-surface-hover"
-      : "opacity-50");
 
   const inner = (
     <>
-      <span className="flex h-6 w-6 shrink-0 items-center justify-center">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center">
         {isCompleted ? (
           <CheckCircle2
             className="h-4 w-4 text-success"
@@ -329,66 +258,61 @@ function TopicRow({
           />
         ) : (
           <span
-            className="h-2 w-2 rounded-full bg-surface-border transition-colors group-hover:bg-accent"
+            className="h-1.5 w-1.5 rounded-full bg-surface-border transition-colors group-hover:bg-accent"
             aria-hidden
           />
         )}
       </span>
-      <span className="min-w-0 flex-1 font-normal text-foreground">
-        <span className="block truncate">{topic.name}</span>
-        <span className="mt-1 block text-xs text-muted sm:hidden">
-          {canPlay ? `${statusLabel} · ${topic.solved}/${topic.total}` : statusLabel}
-        </span>
+      <span className="min-w-0 flex-1 truncate text-sm text-foreground">
+        {topic.name}
       </span>
-      {theory && (
+      {theory ? (
         <span
           aria-label={theory}
           title={theory}
-          className="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent/15 px-2 py-1 text-xs font-semibold text-accent"
+          className="hidden shrink-0 items-center gap-1 text-xs font-semibold text-accent sm:inline-flex"
         >
-          <BookOpen className="h-3 w-3" aria-hidden />
-          <span className="hidden sm:inline">{theory}</span>
+          <BookOpen className="h-3.5 w-3.5" aria-hidden />
         </span>
-      )}
-      {canPlay && (
-        <div
-          className="hidden w-24 shrink-0 sm:block"
-          role="progressbar"
-          aria-label={`Postęp tematu: ${progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-        >
-          <div className="h-1.5 overflow-hidden rounded-full bg-surface-hover">
-            <div
-              className="progress-accent"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <span className="mt-1 block text-right text-xs text-muted">
-            {statusLabel}
-          </span>
-        </div>
-      )}
-      <span className="shrink-0 tabular-nums text-xs text-muted">
-        {canPlay
-          ? `${topic.solved}/${topic.total}`
-          : isComingSoon
-            ? "Wkrótce"
-            : "Teoria"}
+      ) : null}
+      <span className="w-16 shrink-0 text-right text-xs tabular-nums text-muted">
+        {canPlay ? `${topic.solved}/${topic.total}` : "Teoria"}
       </span>
-      {canOpen && (
-        <ChevronRight className="h-4 w-4 shrink-0 text-muted" aria-hidden />
-      )}
+      <span
+        className="hidden h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-surface-hover sm:block"
+        role="progressbar"
+        aria-label={`Postęp tematu ${topic.name}: ${progress}%`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+      >
+        <span
+          className="progress-accent block h-full"
+          style={{ width: `${progress}%` }}
+        />
+      </span>
+      <ChevronRight
+        className={`h-4 w-4 shrink-0 text-muted ${
+          canOpen ? "" : "opacity-0"
+        }`}
+        aria-hidden
+      />
     </>
   );
 
   if (!canOpen) {
-    return <div className={rowClass}>{inner}</div>;
+    return (
+      <div className="flex min-h-12 items-center gap-3 px-1 py-2.5 opacity-50 sm:px-2">
+        {inner}
+      </div>
+    );
   }
 
   return (
-    <Link href={href} className={rowClass}>
+    <Link
+      href={href}
+      className="group flex min-h-12 items-center gap-3 px-1 py-2.5 transition hover:bg-surface-hover/60 sm:px-2"
+    >
       {inner}
     </Link>
   );
@@ -411,22 +335,10 @@ function polishCount(
   return `${count} ${many}`;
 }
 
-type CategoryMetrics = {
-  playableTopics: number;
-  completedTopics: number;
-  inProgressTopics: number;
-  totalTasks: number;
-  solvedTasks: number;
-  progress: number;
-};
-
-function getCategoryMetrics(category: CategoryWithProgress): CategoryMetrics {
+function getCategoryMetrics(category: CategoryWithProgress) {
   const playableTopics = category.topics.filter((topic) => topic.total > 0);
   const completedTopics = playableTopics.filter(
     (topic) => topic.status === "completed",
-  ).length;
-  const inProgressTopics = playableTopics.filter(
-    (topic) => topic.solved > 0 && topic.status !== "completed",
   ).length;
   const totalTasks = playableTopics.reduce((sum, topic) => sum + topic.total, 0);
   const solvedTasks = playableTopics.reduce(
@@ -435,175 +347,90 @@ function getCategoryMetrics(category: CategoryWithProgress): CategoryMetrics {
   );
 
   return {
-    playableTopics: playableTopics.length,
     completedTopics,
-    inProgressTopics,
     totalTasks,
     solvedTasks,
     progress: Math.max(0, Math.min(100, category.progressPercent)),
   };
 }
 
-function categoryStatus(metrics: CategoryMetrics, hasTheory: boolean): string {
-  if (metrics.playableTopics === 0) {
-    // Dział bez zadań nie jest "wkrótce", jeśli są w nim lekcje do przerobienia.
-    return hasTheory ? "Teoria dostępna" : "Wkrótce";
-  }
-  if (metrics.progress === 100) return "Ukończony";
-  if (metrics.inProgressTopics > 0 || metrics.completedTopics > 0) {
-    return "W toku";
-  }
-  return "Do zrobienia";
-}
-
-function TrainingOverview({
-  exam,
-  overallProgress,
-  topicCount,
-  topicsWithTasks,
-}: {
-  exam: ExamWithProgress;
-  overallProgress: number;
-  topicCount: number;
-  topicsWithTasks: number;
-}) {
-  const progress = Math.max(0, Math.min(100, overallProgress));
-  const progressMessage =
-    overallProgress === 0
-      ? "Zacznij od jednego tematu - reszta ścieżki poczeka."
-      : overallProgress === 100
-        ? "Ścieżka ukończona - możesz wrócić do wybranych tematów."
-        : "Każdy rozwiązany temat przybliża Cię do celu.";
-
-  return (
-    <section
-      className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 border-y border-surface-border py-3"
-      aria-label="Podsumowanie postępu"
-    >
-      <div className="min-w-52 flex-1">
-        <div className="flex items-center justify-between gap-3 text-xs">
-          <span className="font-semibold text-foreground">{exam.label}</span>
-          <span className="font-bold tabular-nums text-accent">{progress}%</span>
-        </div>
-        <div
-          className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-hover"
-          role="progressbar"
-          aria-label={`Ogólny postęp treningu: ${progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress}
-        >
-          <div className="progress-accent" style={{ width: `${progress}%` }} />
-        </div>
-        <p className="mt-1.5 text-xs text-muted">{progressMessage}</p>
-      </div>
-      <div className="text-xs text-muted">
-        <span className="font-bold text-foreground">{topicCount}</span> tematów
-      </div>
-      <div className="text-xs text-muted">
-        <span className="font-bold text-foreground">{topicsWithTasks}</span>{" "}
-        aktywnych
-      </div>
-    </section>
-  );
-}
-
-function NextStepCard({
+function StartCard({
   nextTopic,
   overallProgress,
+  solvedTasks,
+  totalTasks,
+  firstTaskHrefValue,
 }: {
   nextTopic: NextTrainingTopic;
   overallProgress: number;
+  solvedTasks: number;
+  totalTasks: number;
+  firstTaskHrefValue: string;
 }) {
-  const examDate = useSyncExternalStore(
-    subscribeExamDate,
-    loadExamDate,
-    () => null,
-  );
-  const diagnostic = useSyncExternalStore(
-    subscribeDiagnostic,
-    getDiagnosticSnapshot,
-    () => null,
-  );
-  const days = examDate ? daysUntilExam(examDate) : null;
-  const weakest = diagnostic
-    ? [...diagnostic.categories].sort(
-        (a, b) => a.correct / a.total - b.correct / b.total,
-      )[0]
-    : null;
-
-  const hasStarted = overallProgress > 0 || nextTopic.topic.solved > 0;
-  const progress = Math.max(
-    0,
-    Math.min(100, nextTopic.topic.percent),
-  );
   const focusLabel =
     overallProgress === 100
       ? "Powtórka"
-      : days != null
-        ? "Plan na dziś"
-        : hasStarted
-          ? "Następny krok"
-          : "Zacznij tutaj";
-  const focusAction = overallProgress === 100 ? "Powtórz temat" : "Otwórz temat";
+      : nextTopic.topic.solved > 0
+        ? "Następny krok"
+        : "Zacznij tutaj";
 
   return (
-    <Link
-      href={nextTopic.href}
+    <section
+      aria-label="Twój następny krok"
       data-testid="training-next-step"
-      className="group mt-6 block overflow-hidden rounded-r-2xl border-y border-r border-accent/35 border-l-4 border-l-accent bg-accent-soft/30 transition hover:bg-accent-soft/50"
+      className="mt-6 overflow-hidden rounded-r-2xl border-y border-r border-accent/35 border-l-4 border-l-accent bg-accent-soft/30"
     >
-      <div className="flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex min-w-0 items-start gap-4">
-          <div className="min-w-0">
-            <p className="text-overline text-accent">{focusLabel}</p>
-            <h2 className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl">
-              {nextTopic.topic.name}
-            </h2>
-            <p className="mt-1.5 text-sm text-muted">
-              {nextTopic.categoryName} · {nextTopic.topic.total} zadań
-              {nextTopic.topic.solved > 0
-                ? ` · ${nextTopic.topic.solved}/${nextTopic.topic.total} rozwiązanych`
-                : ""}
-            </p>
-            {(days != null || weakest) && (
-              <p className="mt-1 text-xs text-muted">
-                {days != null
-                  ? `Do egzaminu: ${days >= 0 ? `${days} dni` : "termin minął"}`
-                  : ""}
-                {days != null && weakest ? " · " : ""}
-                {weakest ? `najsłabszy dział: ${weakest.label}` : ""}
-              </p>
-            )}
-          </div>
+      <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+        <div className="min-w-0">
+          <p className="text-overline text-accent">{focusLabel}</p>
+          <h2 className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl">
+            {nextTopic.topic.name}
+          </h2>
+          <p className="mt-1 text-sm text-muted">
+            {nextTopic.categoryName} · {nextTopic.topic.total} zadań ·{" "}
+            {nextTopic.topic.solved}/{nextTopic.topic.total} rozwiązanych
+          </p>
         </div>
-        <span className="btn-chunky shrink-0 px-4 py-2.5 text-sm sm:px-5">
-          {focusAction}
-          <ArrowRight
-            className="h-4 w-4 transition-transform group-hover:translate-x-1"
-            aria-hidden
-          />
-        </span>
+        <div className="flex shrink-0 flex-col items-stretch gap-2 sm:items-end">
+          <Link
+            href={nextTopic.href}
+            className="btn-chunky px-4 py-2.5 text-sm sm:px-5"
+          >
+            Otwórz temat
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+          <Link
+            href={firstTaskHrefValue}
+            data-testid="first-task-cta"
+            className="text-center text-xs font-semibold text-muted underline-offset-4 hover:text-accent hover:underline"
+          >
+            albo pierwsze zadanie (2 min) →
+          </Link>
+        </div>
       </div>
+
       <div className="border-t border-accent/20 px-4 py-3 sm:px-5">
-        <div className="flex items-center justify-between gap-4 text-xs">
-          <span className="font-semibold text-foreground">Postęp tego tematu</span>
-          <span className="tabular-nums text-muted">
-            {nextTopic.topic.solved}/{nextTopic.topic.total} zadań · {progress}%
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 text-xs">
+          <span className="font-semibold text-foreground">
+            Postęp: <span className="text-accent">{overallProgress}%</span>{" "}
+            <span className="font-normal text-muted">
+              ({solvedTasks}/{totalTasks} zadań)
+            </span>
           </span>
+          <ExamCountdown />
         </div>
         <div
           className="mt-2 h-2 overflow-hidden rounded-full bg-background/60"
           role="progressbar"
-          aria-label={`Postęp tematu ${nextTopic.topic.name}: ${progress}%`}
+          aria-label={`Postęp egzaminu: ${overallProgress}%`}
           aria-valuemin={0}
           aria-valuemax={100}
-          aria-valuenow={progress}
+          aria-valuenow={overallProgress}
         >
-          <div className="progress-accent" style={{ width: `${progress}%` }} />
+          <div className="progress-accent" style={{ width: `${overallProgress}%` }} />
         </div>
       </div>
-    </Link>
+    </section>
   );
 }
 
@@ -611,21 +438,14 @@ function DepartmentButton({
   category,
   index,
   active,
-  theoryByTopic,
   onSelect,
 }: {
   category: CategoryWithProgress;
   index: number;
   active: boolean;
-  theoryByTopic: Map<string, TheoryTier>;
   onSelect: (categoryId: string) => void;
 }) {
   const metrics = getCategoryMetrics(category);
-  const categoryHasTheory = category.topics.some(
-    (topic) =>
-      (theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none") !== "none",
-  );
-  const status = categoryStatus(metrics, categoryHasTheory);
 
   return (
     <button
@@ -633,52 +453,35 @@ function DepartmentButton({
       data-testid={`training-department-${category.id}`}
       aria-pressed={active}
       onClick={() => onSelect(category.id)}
-      className={`w-full border-l-2 px-3 py-3 text-left transition ${
+      className={`w-full border-l-2 px-3 py-2.5 text-left transition ${
         active
           ? "border-accent bg-accent-soft/55 text-foreground"
           : "border-transparent text-muted hover:bg-surface-hover hover:text-foreground"
       }`}
     >
-      <div className="flex items-start gap-3">
+      <div className="flex items-center gap-2.5">
         <span
           aria-hidden="true"
-          className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
-            active
-              ? "bg-accent text-on-accent"
-              : "bg-surface-hover text-muted"
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-extrabold ${
+            active ? "bg-accent text-on-accent" : "bg-surface-hover text-muted"
           }`}
         >
           {index + 1}
         </span>
         <span className="min-w-0 flex-1">
-          <span className="flex items-start justify-between gap-2">
+          <span className="flex items-baseline justify-between gap-2">
             <span className="truncate text-sm font-bold">{category.name}</span>
             <span className="shrink-0 text-xs tabular-nums text-accent">
               {metrics.progress}%
             </span>
           </span>
-          <span className="mt-1 block text-xs">
-            {polishCount(
-              category.topics.length,
-              "temat",
-              "tematy",
-              "tematów",
-            )}{" "}
-            · {status}
-          </span>
-          <span className="mt-2 block h-1 overflow-hidden rounded-full bg-surface-hover">
+          <span className="mt-1.5 block h-1 overflow-hidden rounded-full bg-surface-hover">
             <span
               className="block h-full rounded-full bg-accent transition-[width]"
               style={{ width: `${metrics.progress}%` }}
             />
           </span>
         </span>
-        <ChevronRight
-          className={`mt-1 h-4 w-4 shrink-0 ${
-            active ? "text-accent" : "text-muted"
-          }`}
-          aria-hidden
-        />
       </div>
     </button>
   );
@@ -687,12 +490,10 @@ function DepartmentButton({
 function DepartmentNavigation({
   categories,
   activeCategoryId,
-  theoryByTopic,
   onSelect,
 }: {
   categories: CategoryWithProgress[];
   activeCategoryId: string | null;
-  theoryByTopic: Map<string, TheoryTier>;
   onSelect: (categoryId: string) => void;
 }) {
   return (
@@ -701,18 +502,14 @@ function DepartmentNavigation({
       aria-label="Działy treningu"
       className="min-w-0 border-y border-surface-border py-3 lg:sticky lg:top-5"
     >
-      <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
-        <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
-        <p className="text-xs text-muted">Wybierz obszar</p>
-      </div>
-      <div className="space-y-1">
+      <p className="px-1 pb-2 text-sm font-extrabold text-foreground">Działy</p>
+      <div className="space-y-0.5">
         {categories.map((category, index) => (
           <DepartmentButton
             key={category.id}
             category={category}
             index={index}
             active={category.id === activeCategoryId}
-            theoryByTopic={theoryByTopic}
             onSelect={onSelect}
           />
         ))}
@@ -726,52 +523,39 @@ function MobileDepartmentList({
   categories,
   activeCategoryId,
   theoryByTopic,
-  topicsVisible,
   onSelect,
-  onToggleTopics,
 }: {
   examKey: SelectedExam;
   categories: CategoryWithProgress[];
   activeCategoryId: string | null;
   theoryByTopic: Map<string, TheoryTier>;
-  topicsVisible: boolean;
   onSelect: (categoryId: string) => void;
-  onToggleTopics: () => void;
 }) {
   return (
     <nav
       data-testid="training-department-navigation"
       aria-label="Działy treningu"
-      className="min-w-0 border-y border-surface-border py-3"
+      className="min-w-0 space-y-0.5 border-y border-surface-border py-3"
     >
-      <div className="flex items-baseline justify-between gap-3 px-1 pb-2">
-        <h2 className="text-sm font-extrabold text-foreground">Działy</h2>
-        <p className="text-xs text-muted">Wybierz obszar</p>
-      </div>
-      <div className="space-y-1">
-        {categories.map((category, index) => (
-          <div key={category.id}>
-            <DepartmentButton
-              category={category}
-              index={index}
-              active={category.id === activeCategoryId}
-              theoryByTopic={theoryByTopic}
-              onSelect={onSelect}
-            />
-            {category.id === activeCategoryId && (
-              <div className="mt-2">
-                <DepartmentPanel
-                  examKey={examKey}
-                  category={category}
-                  theoryByTopic={theoryByTopic}
-                  topicsVisible={topicsVisible}
-                  onToggleTopics={onToggleTopics}
-                />
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+      {categories.map((category, index) => (
+        <div key={category.id}>
+          <DepartmentButton
+            category={category}
+            index={index}
+            active={category.id === activeCategoryId}
+            onSelect={onSelect}
+          />
+          {category.id === activeCategoryId && (
+            <div className="mt-2">
+              <DepartmentPanel
+                examKey={examKey}
+                category={category}
+                theoryByTopic={theoryByTopic}
+              />
+            </div>
+          )}
+        </div>
+      ))}
     </nav>
   );
 }
@@ -780,130 +564,73 @@ function DepartmentPanel({
   examKey,
   category,
   theoryByTopic,
-  topicsVisible,
-  onToggleTopics,
 }: {
   examKey: SelectedExam;
   category: CategoryWithProgress;
   theoryByTopic: Map<string, TheoryTier>;
-  topicsVisible: boolean;
-  onToggleTopics: () => void;
 }) {
   const metrics = getCategoryMetrics(category);
-  const topicsId = `training-topics-${category.id}`;
 
   return (
     <section
       data-testid="training-department-panel"
       aria-labelledby={`training-department-heading-${category.id}`}
-      className="min-w-0 overflow-hidden border-y border-surface-border"
+      className="min-w-0"
     >
-      <div className="py-4 sm:py-5">
-        <div className="flex items-start justify-between gap-4">
-          <div className="min-w-0">
-            <p className="text-overline">Wybrany dział</p>
-            <h2
-              id={`training-department-heading-${category.id}`}
-              className="mt-1 text-lg font-extrabold tracking-tight text-foreground sm:text-xl"
-            >
-              {category.name}
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              {polishCount(
-                category.topics.length,
-                "temat",
-                "tematy",
-                "tematów",
-              )}{" "}
-              w dziale · {metrics.totalTasks} zadań do rozwiązania
-            </p>
-          </div>
-          <span
-            className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-extrabold ${
-              metrics.progress === 100
-                ? "bg-success/15 text-success"
-                : "bg-accent-soft text-accent"
-            }`}
+      <div className="flex items-start justify-between gap-4 border-b border-surface-border pb-3">
+        <div className="min-w-0">
+          <h2
+            id={`training-department-heading-${category.id}`}
+            className="text-lg font-extrabold tracking-tight text-foreground sm:text-xl"
           >
-            {metrics.progress}%
-          </span>
+            {category.name}
+          </h2>
+          <p className="mt-1 text-xs text-muted">
+            {polishCount(category.topics.length, "temat", "tematy", "tematów")} ·{" "}
+            {metrics.solvedTasks}/{metrics.totalTasks} zadań ·{" "}
+            {metrics.completedTopics} ukończonych
+          </p>
         </div>
-
-        <div
-          className="mt-5 h-2 overflow-hidden rounded-full bg-surface-hover"
-          role="progressbar"
-          aria-label={`Postęp działu ${category.name}: ${metrics.progress}%`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={metrics.progress}
+        <span
+          className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-extrabold ${
+            metrics.progress === 100
+              ? "bg-success/15 text-success"
+              : "bg-accent-soft text-accent"
+          }`}
         >
-          <div
-            className="progress-accent"
-            style={{ width: `${metrics.progress}%` }}
-          />
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
-          <span>
-            <strong className="text-foreground">{metrics.playableTopics}</strong>{" "}
-            z zadaniami
-          </span>
-          <span>
-            <strong className="text-foreground">{metrics.completedTopics}</strong>{" "}
-            ukończonych
-          </span>
-          {metrics.inProgressTopics > 0 && (
-            <span>
-              <strong className="text-foreground">{metrics.inProgressTopics}</strong>{" "}
-              w toku
-            </span>
-          )}
-        </div>
-
-        <button
-          type="button"
-          aria-expanded={topicsVisible}
-          aria-controls={topicsId}
-          onClick={onToggleTopics}
-          className="btn-ghost mt-5 px-3 py-2 text-sm font-bold"
-        >
-          {topicsVisible ? "Ukryj tematy" : `Pokaż tematy (${category.topics.length})`}
-          <ChevronDown
-            className={`h-4 w-4 transition-transform ${
-              topicsVisible ? "rotate-180" : ""
-            }`}
-            aria-hidden
-          />
-        </button>
+          {metrics.progress}%
+        </span>
       </div>
 
-      {topicsVisible && (
+      <div
+        className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-hover"
+        role="progressbar"
+        aria-label={`Postęp działu ${category.name}: ${metrics.progress}%`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={metrics.progress}
+      >
         <div
-          id={topicsId}
-          data-testid="training-topic-list"
-          className="border-t border-surface-border"
-        >
-          <div className="flex items-center justify-between gap-3 bg-surface-hover/30 px-3 py-3 text-xs text-muted sm:px-4">
-            <span>Tematy i ich stan</span>
-            <span className="tabular-nums">
-              {metrics.solvedTasks}/{metrics.totalTasks} rozwiązanych
-            </span>
-          </div>
-          <div className="divide-y divide-surface-border">
-            {category.topics.map((topic) => (
-              <TopicRow
-                key={topic.id}
-                examKey={examKey}
-                category={category}
-                topic={topic}
-                theoryTier={
-                  theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"
-                }
-              />
-            ))}
-          </div>
-        </div>
-      )}
+          className="progress-accent"
+          style={{ width: `${metrics.progress}%` }}
+        />
+      </div>
+
+      <div
+        id={`training-topics-${category.id}`}
+        data-testid="training-topic-list"
+        className="mt-3 divide-y divide-surface-border"
+      >
+        {category.topics.map((topic) => (
+          <TopicRow
+            key={topic.id}
+            examKey={examKey}
+            category={category}
+            topic={topic}
+            theoryTier={theoryByTopic.get(`${category.id}:${topic.id}`) ?? "none"}
+          />
+        ))}
+      </div>
     </section>
   );
 }
@@ -916,7 +643,7 @@ function TrainingListSkeleton() {
         <div className="mt-3 h-3 w-44 rounded bg-surface-hover" />
         <div className="mt-7 space-y-3">
           {[0, 1, 2, 3, 4].map((item) => (
-            <div key={item} className="h-14 rounded-xl bg-surface-hover" />
+            <div key={item} className="h-12 rounded-xl bg-surface-hover" />
           ))}
         </div>
       </div>
@@ -940,7 +667,7 @@ export default function TreningPage() {
   const schoolClass = useSyncExternalStore(
     subscribeLearningPath,
     loadSchoolClass,
-    () => "klasa-8" as SchoolClassPath,
+    () => "klasa-8" as const,
   );
   const classPlan = useMemo(() => getClassPlan(schoolClass), [schoolClass]);
   const [selectedExam, setSelectedExam] =
@@ -952,12 +679,7 @@ export default function TreningPage() {
   const [pathInitialized, setPathInitialized] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
-  const [topicFilter, setTopicFilter] = useState<TopicCardFilter>("all");
-  const [topicSort, setTopicSort] = useState<TopicSort>("az");
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
-    null,
-  );
-  const [expandedCategoryId, setExpandedCategoryId] = useState<string | null>(
     null,
   );
   const [theoryByTopic, setTheoryByTopic] = useState<Map<string, TheoryTier>>(
@@ -1050,8 +772,6 @@ export default function TreningPage() {
   useEffect(() => {
     // Po hydratacji `useSyncExternalStore` może najpierw zwrócić snapshot
     // serwerowy (`sp`), a dopiero potem wartość z localStorage (`srednia`).
-    // Wcześniejszy `boolean` blokował drugi przebieg, więc użytkownik ze
-    // szkołą średnią widział egzamin ósmoklasisty. Porównujemy samą ścieżkę.
     if (syncedPathRef.current === learningPath) return;
     syncedPathRef.current = learningPath;
     const key = examKeyForLearningPath(learningPath);
@@ -1067,14 +787,11 @@ export default function TreningPage() {
     setExam(emptyExamFor(key));
     setTheoryByTopic(new Map());
     // Bez tego między zmianą egzaminu a pobraniem liczników drzewo renderuje
-    // się z zerami i wszystkie działy dostają etykietę "Wkrótce".
+    // się z zerami i wszystkie działy dostają etykietę „Wkrótce”.
     setLoading(true);
     setSearchInput("");
     setDebouncedQuery("");
-    setTopicFilter("all");
-    setTopicSort("az");
     setSelectedCategoryId(null);
-    setExpandedCategoryId(null);
   };
 
   // Trening pokazuje zawsze cały zakres egzaminu (wszystkie działy i tematy
@@ -1083,11 +800,10 @@ export default function TreningPage() {
   // funkcję kwadratową, wielomiany i kilkadziesiąt innych tematów.
   const visibleExam = exam;
 
-  const filteredExam = useMemo(() => {
-    const searched = filterExamByQuery(visibleExam, debouncedQuery);
-    const statusFiltered = filterTopicsByStatus(searched, topicFilter);
-    return sortTopicsInExam(statusFiltered, topicSort);
-  }, [visibleExam, debouncedQuery, topicFilter, topicSort]);
+  const filteredExam = useMemo(
+    () => filterExamByQuery(visibleExam, debouncedQuery),
+    [visibleExam, debouncedQuery],
+  );
 
   const matchedTopicCount = useMemo(
     () => countTopics(filteredExam),
@@ -1095,14 +811,9 @@ export default function TreningPage() {
   );
 
   const nextTopic = useMemo(
-    () => findNextTrainingTopic(sortTopicsInExam(visibleExam, "az"), selectedExam),
+    () => findNextTrainingTopic(visibleExam, selectedExam),
     [visibleExam, selectedExam],
   );
-
-  const hasFilterIntent =
-    Boolean(debouncedQuery.trim()) ||
-    topicFilter !== "all" ||
-    topicSort !== "az";
 
   const activeCategory = useMemo(
     () =>
@@ -1117,48 +828,47 @@ export default function TreningPage() {
     [filteredExam.categories, nextTopic, selectedCategoryId],
   );
 
-  const topicsVisible = Boolean(
-    activeCategory &&
-      (expandedCategoryId === activeCategory.id || hasFilterIntent),
-  );
+  // Na telefonie panel otwiera się dopiero po kliknięciu działu (albo po
+  // wyszukaniu) - inaczej strona startuje z rozwiniętymi 14 tematami.
+  const mobileCategoryId =
+    selectedCategoryId ??
+    (debouncedQuery.trim() ? (activeCategory?.id ?? null) : null);
 
   const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategoryId(categoryId);
-    // Na telefonie tematy mają się otworzyć od razu pod klikniętym działem.
-    // Na desktopie panel jest obok, więc zostawiamy ręczne „Pokaż tematy”.
-    setExpandedCategoryId(isMobile ? categoryId : null);
+    setSelectedCategoryId((current) =>
+      isMobile && current === categoryId ? null : categoryId,
+    );
   };
 
   const examSubtitle =
     selectedExam === "matura_podstawowa"
-      ? "Matura podstawowa - działy i tematy zgodne z wymaganiami CKE."
-      : "Egzamin ósmoklasisty - działy i tematy zgodne z pełną podstawą programową.";
+      ? "Cały zakres CKE, temat po temacie."
+      : "Cała podstawa programowa, temat po temacie.";
 
-  const overallProgress = useMemo(() => {
-    const cats = visibleExam.categories;
-    if (cats.length === 0) return 0;
-    const totalTasks = cats.reduce(
-      (sum, c) => sum + c.topics.reduce((s, t) => s + t.total, 0),
+  const progressSummary = useMemo(() => {
+    const categories = visibleExam.categories;
+    const totalTasks = categories.reduce(
+      (sum, category) =>
+        sum + category.topics.reduce((s, topic) => s + topic.total, 0),
       0,
     );
-    const solvedTasks = cats.reduce(
-      (sum, c) => sum + c.topics.reduce((s, t) => s + t.solved, 0),
+    const solvedTasks = categories.reduce(
+      (sum, category) =>
+        sum + category.topics.reduce((s, topic) => s + topic.solved, 0),
       0,
     );
-    if (totalTasks === 0) return 0;
-    return Math.round((solvedTasks / totalTasks) * 100);
+
+    return {
+      totalTasks,
+      solvedTasks,
+      percent:
+        totalTasks > 0 ? Math.round((solvedTasks / totalTasks) * 100) : 0,
+    };
   }, [visibleExam.categories]);
 
   const topicCount = useMemo(() => countTopics(visibleExam), [visibleExam]);
 
-  const topicsWithTasks = useMemo(
-    () =>
-      visibleExam.categories.reduce(
-        (n, c) => n + c.topics.filter((t) => t.total > 0).length,
-        0,
-      ),
-    [visibleExam.categories],
-  );
+  const isSearching = debouncedQuery.trim().length > 0;
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
@@ -1168,271 +878,125 @@ export default function TreningPage() {
             <h1 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
               Trening
             </h1>
-            <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
+            <p className="mt-1.5 max-w-xl text-sm text-muted sm:text-base">
               {examSubtitle}
             </p>
+            <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
+              <Link
+                href="/plan-klasy"
+                className="font-semibold text-accent transition hover:underline"
+              >
+                Plan dla klasy: {classPlan.label}
+              </Link>
+              <Link
+                href="/diagnostyka"
+                className="font-semibold text-accent transition hover:underline"
+              >
+                Diagnoza startowa
+              </Link>
+            </p>
           </div>
-          <ExamSwitcher
-            selected={selectedExam}
-            onChange={handleExamChange}
-          />
+          <ExamSwitcher selected={selectedExam} onChange={handleExamChange} />
         </header>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted">
-          <span>
-            Plan obejmuje cały zakres CKE, także tematy z klas wcześniejszych.
-          </span>
-          <Link
-            href="/plan-klasy"
-            className="font-semibold text-accent transition hover:underline"
-          >
-            Plan dla klasy
-          </Link>
-          <Link
-            href="/diagnostyka"
-            className="font-semibold text-accent transition hover:underline"
-          >
-            Diagnoza startowa
-          </Link>
-          <Link
-            href="/sprawdziany"
-            className="font-semibold text-accent transition hover:underline"
-          >
-            Sprawdziany klasowe
-          </Link>
-          <Link
-            href="/trening/arkusze"
-            className="font-semibold text-accent transition hover:underline"
-          >
-            Arkusze CKE, także rozszerzone
-          </Link>
-        </div>
-
-        {classPlan.examKey === selectedExam && (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-accent/25 bg-accent-soft/30 px-4 py-3 text-sm">
-            <p className="text-foreground">
-              <span className="font-bold">Plan dla: {classPlan.label}</span>
-              {classPlan.topicCount > 0
-                ? ` · plan na ten rok: ${classPlan.topicCount} tematów. Trening poniżej pokazuje cały zakres CKE.`
-                : " · brak planu tematycznego dla klas 1–3"}
-            </p>
-            <Link
-              href="/plan-klasy"
-              className="font-bold text-accent hover:underline"
-            >
-              Zmień klasę →
-            </Link>
-          </div>
-        )}
-
         {!loading && nextTopic && (
-          <NextStepCard
+          <StartCard
             nextTopic={nextTopic}
-            overallProgress={overallProgress}
+            overallProgress={progressSummary.percent}
+            solvedTasks={progressSummary.solvedTasks}
+            totalTasks={progressSummary.totalTasks}
+            firstTaskHrefValue={firstTaskHref(learningPath)}
           />
         )}
-
-        {!loading && nextTopic && overallProgress === 0 && (
-          <p className="mt-3 text-sm text-muted">
-            Wolisz od razu spróbować?{" "}
-            <Link
-              href={firstTaskHref(learningPath)}
-              data-testid="first-task-cta"
-              className="font-bold text-accent hover:underline"
-            >
-              Rozwiąż jedno zadanie (2 min) →
-            </Link>
-          </p>
-        )}
-
-        <ExamCountdown />
-
-        <TrainingOverview
-          exam={visibleExam}
-          overallProgress={overallProgress}
-          topicCount={topicCount}
-          topicsWithTasks={topicsWithTasks}
-        />
 
         <section
           className="mt-8"
           aria-label="Przeglądanie tematów"
           data-testid="training-browse"
         >
-          <div className="border-y border-surface-border py-4">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <p className="text-overline">Tematy</p>
-                <h2 className="mt-1 text-lg font-extrabold text-foreground">
-                  Wybierz dział
-                </h2>
-              </div>
-              <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-bold text-muted">
-                {matchedTopicCount} tematów
+          <div className="flex flex-col gap-3 border-b border-surface-border pb-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-baseline gap-2">
+              <h2 className="text-lg font-extrabold text-foreground">Tematy</h2>
+              <span className="text-xs text-muted" aria-live="polite">
+                {loading
+                  ? "Ładowanie…"
+                  : isSearching
+                    ? `Znaleziono ${polishCount(
+                        matchedTopicCount,
+                        "temat",
+                        "tematy",
+                        "tematów",
+                      )}`
+                    : `${topicCount} tematów`}
               </span>
             </div>
 
-            <details className="group mt-3">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-surface-border pt-3 text-sm font-semibold text-muted transition hover:text-foreground marker:content-none">
-                <span className="inline-flex items-center gap-2">
-                  <Search className="h-4 w-4" aria-hidden />
-                  Znajdź temat lub filtruj
-                </span>
-                <ChevronDown
-                  className="h-4 w-4 transition-transform group-open:rotate-180"
-                  aria-hidden
-                />
-              </summary>
-              <div className="mt-3 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
-                <div className="min-w-0">
-                <label className="sr-only" htmlFor="trening-search">
-                  Szukaj tematu
-                </label>
-                <div className="relative mt-4">
-                  <Search
-                    className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
-                    aria-hidden
-                  />
-                  <input
-                    id="trening-search"
-                    type="search"
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                    placeholder="Szukaj działu lub tematu…"
-                    className="input-field w-full py-2.5 pl-10 pr-10 text-sm"
-                  />
-                  {searchInput && (
-                    <button
-                      type="button"
-                      aria-label="Wyczyść wyszukiwanie"
-                      onClick={() => {
-                        setSearchInput("");
-                        setDebouncedQuery("");
-                      }}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 text-muted transition hover:bg-surface-hover hover:text-foreground"
-                    >
-                      <X className="h-4 w-4" aria-hidden />
-                    </button>
-                  )}
-                </div>
-                <p className="mt-2 text-xs text-muted" aria-live="polite">
-                  {loading
-                    ? "Ładowanie tematów…"
-                    : debouncedQuery.trim()
-                      ? `Znaleziono ${polishCount(
-                          matchedTopicCount,
-                          "temat",
-                          "tematy",
-                          "tematów",
-                        )}`
-                      : `${matchedTopicCount} tematów`}
-                </p>
-                </div>
-
-                <div className="flex flex-col gap-3 lg:min-w-[22rem]">
-                <div
-                  role="group"
-                  aria-label="Filtr tematów"
-                  className="flex flex-wrap items-center gap-2"
+            <div className="relative w-full sm:max-w-xs">
+              <label className="sr-only" htmlFor="trening-search">
+                Szukaj tematu
+              </label>
+              <Search
+                className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+                aria-hidden
+              />
+              <input
+                id="trening-search"
+                type="search"
+                value={searchInput}
+                onChange={(event) => {
+                  setSearchInput(event.target.value);
+                  setSelectedCategoryId(null);
+                }}
+                placeholder="Szukaj tematu…"
+                className="input-field w-full py-2 pl-9 pr-9 text-sm"
+              />
+              {searchInput ? (
+                <button
+                  type="button"
+                  aria-label="Wyczyść wyszukiwanie"
+                  onClick={() => {
+                    setSearchInput("");
+                    setDebouncedQuery("");
+                  }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1 text-muted transition hover:bg-surface-hover hover:text-foreground"
                 >
-                  <span className="text-caption mr-1">Pokaż</span>
-                  {(
-                    [
-                      { id: "all" as const, label: "Wszystkie" },
-                      { id: "incomplete" as const, label: "Nieukończone" },
-                      { id: "completed" as const, label: "Ukończone" },
-                    ] as const
-                  ).map((opt) => {
-                    const active = topicFilter === opt.id;
-                    return (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => setTopicFilter(opt.id)}
-                        className={`filter-chip ${
-                          active ? "filter-chip-active" : ""
-                        }`}
-                      >
-                        {opt.label}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <label className="flex items-center gap-2 lg:self-end">
-                  <span className="text-caption">Sortuj</span>
-                  <select
-                    id="topic-sort"
-                    aria-label="Sortowanie tematów"
-                    value={topicSort}
-                    onChange={(e) => setTopicSort(e.target.value as TopicSort)}
-                    className="input-field min-w-32 py-2.5 text-sm"
-                  >
-                    <option value="az">A–Z</option>
-                    <option value="progress">Postęp</option>
-                  </select>
-                </label>
-                </div>
-              </div>
-            </details>
+                  <X className="h-3.5 w-3.5" aria-hidden />
+                </button>
+              ) : null}
+            </div>
           </div>
-        </section>
 
-        <div className="mt-6" data-testid="training-results">
-          {loading ? (
-            <TrainingListSkeleton />
-          ) : exam.categories.length === 0 ? (
-            <p className="mt-16 text-center text-sm text-muted">
-              Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
-              <code className="rounded bg-surface px-1.5 py-0.5 text-foreground">
-                npm run seed:trening-tasks
-              </code>{" "}
-              lub dodaj zadania w Supabase.
-            </p>
-          ) : filteredExam.categories.length === 0 ? (
-            <EmptyState
-              className="mt-16"
-              icon={Search}
-              title={
-                debouncedQuery.trim()
-                  ? "Brak pasujących tematów"
-                  : topicFilter === "completed"
-                    ? "Brak ukończonych tematów"
-                    : topicFilter === "incomplete"
-                      ? "Wszystko ukończone!"
-                      : "Brak tematów do wyświetlenia"
-              }
-              description={
-                debouncedQuery.trim()
-                  ? `Nie znaleziono tematów dla „${debouncedQuery.trim()}”. Spróbuj innej frazy.`
-                  : topicFilter === "completed"
-                    ? "Rozwiąż zadania w arenie, aby ukończyć pierwsze tematy."
-                    : topicFilter === "incomplete"
-                      ? "Wszystkie aktywne tematy są ukończone - możesz przejść do powtórek."
-                      : "Zmień filtr lub wyszukiwanie, aby zobaczyć tematy."
-              }
-            />
-          ) : (
-            isMobile ? (
+          <div className="mt-5" data-testid="training-results">
+            {loading ? (
+              <TrainingListSkeleton />
+            ) : exam.categories.length === 0 ? (
+              <p className="mt-10 text-center text-sm text-muted">
+                Brak zadań w bazie dla tego egzaminu. Uruchom{" "}
+                <code className="rounded bg-surface px-1.5 py-0.5 text-foreground">
+                  npm run seed:trening-tasks
+                </code>{" "}
+                lub dodaj zadania w Supabase.
+              </p>
+            ) : filteredExam.categories.length === 0 ? (
+              <EmptyState
+                className="mt-10"
+                icon={Search}
+                title="Brak pasujących tematów"
+                description={`Nie znaleziono tematów dla „${debouncedQuery.trim()}”. Spróbuj innej frazy.`}
+              />
+            ) : isMobile ? (
               <MobileDepartmentList
                 examKey={selectedExam}
                 categories={filteredExam.categories}
-                activeCategoryId={activeCategory?.id ?? null}
+                activeCategoryId={mobileCategoryId}
                 theoryByTopic={theoryByTopic}
-                topicsVisible={topicsVisible}
                 onSelect={handleCategorySelect}
-                onToggleTopics={() =>
-                  setExpandedCategoryId((current) =>
-                    current === activeCategory?.id ? null : activeCategory?.id ?? null,
-                  )
-                }
               />
             ) : (
               <div className="grid items-start gap-6 lg:grid-cols-[minmax(210px,0.34fr)_minmax(0,1fr)]">
                 <DepartmentNavigation
                   categories={filteredExam.categories}
                   activeCategoryId={activeCategory?.id ?? null}
-                  theoryByTopic={theoryByTopic}
                   onSelect={handleCategorySelect}
                 />
                 {activeCategory && (
@@ -1440,18 +1004,12 @@ export default function TreningPage() {
                     examKey={selectedExam}
                     category={activeCategory}
                     theoryByTopic={theoryByTopic}
-                    topicsVisible={topicsVisible}
-                    onToggleTopics={() =>
-                      setExpandedCategoryId((current) =>
-                        current === activeCategory.id ? null : activeCategory.id,
-                      )
-                    }
                   />
                 )}
               </div>
-            )
-          )}
-        </div>
+            )}
+          </div>
+        </section>
       </div>
     </div>
   );
