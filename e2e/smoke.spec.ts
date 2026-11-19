@@ -99,7 +99,7 @@ test.describe("Smoke", () => {
     await expect(prompt).toHaveCount(0);
   });
 
-  test("tag Google Ads ładuje się dopiero po zgodzie na reklamy", async ({
+  test("tag Google Ads ładuje się od razu, ale startuje bez zgód", async ({
     page,
   }) => {
     const requests: string[] = [];
@@ -113,15 +113,38 @@ test.describe("Smoke", () => {
     });
 
     await page.goto("/");
-    await page.waitForTimeout(600);
-    expect(requests).toHaveLength(0);
+
+    // Tag musi być widoczny dla weryfikatora Google jeszcze przed zgodą - inaczej
+    // Ads pokazuje „Nie zainstalowano" i nie udostępnia etykiety konwersji.
+    await expect
+      .poll(() => requests.length, { timeout: 5_000 })
+      .toBeGreaterThan(0);
+
+    const readConsent = async (command: "default" | "update") =>
+      page.evaluate((cmd) => {
+        const win = window as unknown as { dataLayer?: unknown[][] };
+        const entries = (win.dataLayer ?? []).filter(
+          (entry) => entry[0] === "consent" && entry[1] === cmd,
+        );
+        const last = entries[entries.length - 1] as
+          | [string, string, Record<string, string>]
+          | undefined;
+        return last?.[2]?.ad_storage ?? null;
+      }, command);
+
+    // Sam tag nie wystarcza - bez zgody nie może zapisywać cookies reklamowych.
+    await expect
+      .poll(() => readConsent("default"), { timeout: 5_000 })
+      .toBe("denied");
 
     await page
       .locator('[aria-label="Zgoda na pliki cookies"]')
       .getByRole("button", { name: "Akceptuję wszystkie" })
       .click();
 
-    await expect.poll(() => requests.length, { timeout: 5_000 }).toBeGreaterThan(0);
+    await expect
+      .poll(() => readConsent("update"), { timeout: 5_000 })
+      .toBe("granted");
   });
 
   test("same niezbędne cookies nie wysyłają pageview", async ({ page }) => {
