@@ -34,6 +34,7 @@ import {
 } from "@/lib/supabase/profiles";
 import { useSubscription } from "@/lib/subscription/use-subscription";
 import { confirmCheckout } from "@/lib/subscription/checkout-client";
+import { trackPurchaseConversion } from "@/lib/analytics/purchase";
 import {
   isGiftPro,
   isPro as snapshotIsPro,
@@ -377,8 +378,12 @@ export default function ProfilPage() {
     const params = new URLSearchParams(window.location.search);
     const sessionId = params.get("session_id");
     if (params.get("checkout") !== "success" || !sessionId) return;
-    void confirmCheckout(sessionId).then((confirmed) => {
-      if (confirmed) void refreshSubscription();
+    void confirmCheckout(sessionId).then((result) => {
+      if (!result.confirmed) return;
+      void refreshSubscription();
+      // Konwersja „Zakup PRO”: transaction_id = id sesji Stripe, więc
+      // powtórne wejście na stronę nie policzy zakupu drugi raz.
+      if (result.purchase) trackPurchaseConversion(result.purchase);
     });
   }, [refreshSubscription]);
 
