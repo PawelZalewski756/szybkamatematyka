@@ -2,8 +2,8 @@
  * Zgody na pliki cookies i technologie reklamowe.
  *
  * Trzymamy je w jednym miejscu, żeby analityka i Google Ads korzystały z tej
- * samej decyzji użytkownika. Dopóki nie ma zapisanej zgody, tag reklamowy nie
- * jest w ogóle ładowany - samo ukrycie skryptu byłoby niewystarczające.
+ * samej decyzji użytkownika. Tag reklamowy ładuje się zawsze, ale w trybie
+ * Consent Mode v2: bez zgody wysyła wyłącznie sygnały bez cookies.
  */
 
 export type ConsentState = {
