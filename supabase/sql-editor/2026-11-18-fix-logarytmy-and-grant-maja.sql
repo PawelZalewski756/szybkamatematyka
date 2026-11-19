@@ -1,19 +1,15 @@
--- 1. Poprawa zadania logarytmy (zgłoszenie maja.dynda1@gmail.com)
+-- 1. Poprawa zadania logarytmy (zgłoszenie użytkownika; dane osobowe usunięte).
 --    log2(64) - log2(2) = 6 - 1 = 5, a w bazie było 32.
 -- 2. 30 dni kalendarzowych Pro dla zgłaszającej.
 -- Uruchom w Supabase → SQL Editor → Run. Idempotentne.
+--
+-- Adres e-mail usunięty z repozytorium (RODO). Jeśli odtwarzasz ten
+-- historyczny skrypt, wpisz właściwy adres lokalnie w SQL Editor - nigdy
+-- w pliku w repo. Placeholder poniżej celowo nie znajdzie konta.
 
 update public.tasks
    set correct_answer = '5'
  where id = '17c88022-b528-42f1-bebf-ea65194697c9';
-
--- Najpierw zobacz, jakie konta zawierają „maja” lub „dynda”.
--- Jeśli e-mail w zgłoszeniu różni się od konta, skopiuj właściwy adres.
-select id, email
-  from auth.users
- where lower(email) like '%maja%'
-    or lower(email) like '%dynda%'
- order by created_at desc;
 
 do $$
 declare
@@ -22,7 +18,7 @@ declare
   v_source text;
   v_period_end timestamptz;
   v_end timestamptz;
-  v_email constant text := 'maja.dynda1@gmail.com';
+  v_email constant text := 'adres-usuniety@example.invalid';
   v_actual_email text;
 begin
   select id, email into v_user_id, v_actual_email
@@ -30,17 +26,8 @@ begin
    where lower(btrim(email)) = lower(btrim(v_email))
    limit 1;
 
-  -- Fallback: e-mail w zgłoszeniu bywa kontaktowy, nie kontowy.
   if v_user_id is null then
-    select id, email into v_user_id, v_actual_email
-      from auth.users
-     where lower(email) like '%maja.dynda%'
-     order by created_at desc
-     limit 1;
-  end if;
-
-  if v_user_id is null then
-    raise notice 'Nie znaleziono konta dla %. Zobacz listę kont powyżej.', v_email;
+    raise notice 'Adres usunięty z repo - uzupełnij lokalnie, aby przyznać Pro.';
     return;
   end if;
 
@@ -78,7 +65,7 @@ select id, content, correct_answer, options
   from public.tasks
  where id = '17c88022-b528-42f1-bebf-ea65194697c9';
 
--- Weryfikacja Pro
+-- Weryfikacja Pro (szukamy po powodzie grantu, nie po adresie e-mail)
 select
   u.email,
   p.subscription_status as status,
@@ -89,8 +76,7 @@ select
   p.pro_granted_reason as powod
 from auth.users u
 join public.profiles p on p.id = u.id
-where lower(u.email) like '%maja%'
-   or lower(u.email) like '%dynda%';
+where p.pro_granted_reason like '%17c88022-b528-42f1-bebf-ea65194697c9%';
 
 -- Licznik solved_tasks po naprawie (osobno uruchom repair, jeśli jeszcze nie)
 select count(*) as wszystkie, count(distinct user_id) as uczniowie

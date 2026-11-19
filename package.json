@@ -24,6 +24,7 @@
     "repair:production-tasks": "tsx scripts/repairProductionTasks.ts",
     "audit:tasks-cache": "tsx scripts/auditTasksCache.ts",
     "audit:placement": "tsx scripts/auditTaskPlacement.ts",
+    "audit:privacy": "tsx scripts/auditPrivacy.ts",
     "audit:reported-tasks": "node scripts/verifyReportedTasks.mjs",
     "vercel:prune": "node scripts/pruneVercelDeployments.mjs",
     "grant:pro": "tsx scripts/grantPro.ts",
