@@ -61,6 +61,7 @@ import {
   CreditCard,
   Crown,
   Flame,
+  Gift,
   Loader2,
   LogOut,
   Save,
@@ -299,7 +300,8 @@ export default function ProfilPage() {
         setProfile(null);
         setArenaSolvedCount(0);
         setTopicsCompletedPercent(0);
-        router.replace("/login");
+        const nextPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+        router.replace(`/login?next=${encodeURIComponent(nextPath)}`);
         return;
       }
 
@@ -551,6 +553,13 @@ export default function ProfilPage() {
                 }}
               />
               <p className="mt-3 break-all text-xs text-muted">{user.email}</p>
+              <Link
+                href="#program-polecen"
+                className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 text-xs font-bold text-accent transition hover:bg-accent/15"
+              >
+                <Gift className="h-3.5 w-3.5" aria-hidden />
+                Program poleceń: 30 dni Pro
+              </Link>
             </header>
 
             <section className="mt-8">
