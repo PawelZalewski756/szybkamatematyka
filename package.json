@@ -31,6 +31,7 @@
     "repair:tasks-cache": "tsx scripts/repairTasksCache.ts",
     "sync:tasks-answers": "tsx scripts/syncTaskAnswers.ts",
     "audit:theory": "tsx scripts/auditTheoryCoverage.ts",
+    "referrals:qualify": "tsx scripts/qualifyReferrals.ts",
     "seed:cke": "node scripts/seedCKE.js",
     "seed:cke-matura": "tsx scripts/seedCkeMaturaAll.ts",
     "seed:cke-solutions": "tsx scripts/seedCkeMaturaAll.ts -- --fill-solutions --delay=2500",

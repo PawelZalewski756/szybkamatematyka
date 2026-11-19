@@ -137,6 +137,8 @@ function readProSource(row: ProfileRow): ProSource {
       return "gift";
     case "manual":
       return "manual";
+    case "referral":
+      return "referral";
     default:
       return "none";
   }

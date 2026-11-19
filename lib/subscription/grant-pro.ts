@@ -182,7 +182,7 @@ export async function grantProToUser(
     ? Date.parse(profile.subscription_current_period_end)
     : Number.NaN;
   const extended =
-    profile.pro_source === "gift" &&
+    (profile.pro_source === "gift" || profile.pro_source === "referral") &&
     Number.isFinite(currentEnd) &&
     currentEnd > now;
   const base = extended ? currentEnd : now;
