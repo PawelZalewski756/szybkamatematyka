@@ -25,7 +25,7 @@ export function validateEmailInput(email: string): string | null {
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
-    return "Podaj poprawny adres e-mail (np. jan.kowalski@gmail.com).";
+    return "Podaj poprawny adres e-mail (np. uczen@example.com).";
   }
 
   return null;
