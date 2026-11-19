@@ -53,6 +53,9 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Audit privacy (PII + secrets)
+        run: npm run audit:privacy
+
       - name: Status docs up to date
         run: npm run status:check
 

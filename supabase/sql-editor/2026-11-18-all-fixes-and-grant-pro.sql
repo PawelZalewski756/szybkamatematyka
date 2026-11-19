@@ -508,9 +508,12 @@ create temporary table _gift_emails (
   reason text not null default 'rekompensata za zgłoszenie błędu 2026-11-18'
 );
 
+-- Adresy e-mail usunięte z repozytorium (dane osobowe / RODO).
+-- Jeśli odtwarzasz ten historyczny skrypt, wpisz adresy lokalnie w SQL Editor,
+-- nigdy w pliku w repo. Poniższe placeholdery nie znajdą konta (celowo).
 insert into _gift_emails (email) values
-  ('yashinaksyha85@gmail.com'),
-  ('amelkaaa1606@gmail.com')
+  ('adres-usuniety-1@example.invalid'),
+  ('adres-usuniety-2@example.invalid')
 on conflict (email) do nothing;
 
 do $$
