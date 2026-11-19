@@ -36,6 +36,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/rankingi", changeFrequency: "daily", priority: 0.6 },
   { path: "/osiagniecia", changeFrequency: "monthly", priority: 0.5 },
   { path: "/cennik", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/polecenia", changeFrequency: "monthly", priority: 0.5 },
   { path: "/regulamin", changeFrequency: "yearly", priority: 0.3 },
   { path: "/polityka-prywatnosci", changeFrequency: "yearly", priority: 0.3 },
   { path: "/kontakt", changeFrequency: "yearly", priority: 0.4 },

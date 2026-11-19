@@ -67,4 +67,25 @@ test.describe("Program poleceń", () => {
     expect(response.status()).toBe(400);
     expect(await response.text()).toContain("stałego adresu e-mail");
   });
+
+  test("cennik prowadzi do krótkiego wyjaśnienia zasad", async ({ page }) => {
+    await page.goto("/cennik");
+
+    await expect(
+      page.getByRole("heading", { name: "Zaproś 2 znajomych - 30 dni Pro" }),
+    ).toBeVisible();
+    await page.getByRole("link", { name: "Jak to działa" }).click();
+
+    await expect(page).toHaveURL(/\/polecenia$/);
+    await expect(
+      page.getByRole("heading", {
+        level: 1,
+        name: /Zaproś 2 znajomych, dostań 30 dni Pro/,
+      }),
+    ).toBeVisible();
+    await expect(page.getByText("Konto ma co najmniej 7 dni.")).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /Otwórz mój profil/ }),
+    ).toHaveAttribute("href", "/profil#program-polecen");
+  });
 });

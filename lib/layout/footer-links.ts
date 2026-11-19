@@ -13,6 +13,7 @@ export const FOOTER_PRODUCT_LINKS: readonly NavLink[] = [
 
 /** Zakładki informacyjne i prawne w stopce. */
 export const FOOTER_INFO_LINKS: readonly NavLink[] = [
+  { href: "/polecenia", label: "Program poleceń" },
   { href: "/regulamin", label: "Regulamin" },
   { href: "/polityka-prywatnosci", label: "Polityka prywatności" },
   { href: "/dla-szkol", label: "Dla szkół" },

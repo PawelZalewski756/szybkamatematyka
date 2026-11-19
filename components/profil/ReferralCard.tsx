@@ -6,6 +6,7 @@ import {
 } from "@/lib/referral/progress";
 import { getSupabase } from "@/lib/supabase";
 import { Check, Copy, Gift, Users } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type ReferralStatsRow = {
@@ -97,8 +98,9 @@ export function ReferralCard() {
 
   return (
     <section
+      id="program-polecen"
       aria-labelledby="referral-heading"
-      className="mt-8 rounded-2xl border border-accent/30 bg-surface p-5 sm:p-6"
+      className="mt-8 scroll-mt-24 rounded-2xl border border-accent/30 bg-surface p-5 sm:p-6"
     >
       <div className="flex items-start justify-between gap-3">
         <div>
@@ -224,6 +226,13 @@ export function ReferralCard() {
           Nagroda przyznawana jest raz na konto.
         </p>
       )}
+
+      <Link
+        href="/polecenia"
+        className="mt-3 inline-block text-xs font-semibold text-accent hover:underline"
+      >
+        Pełne zasady programu poleceń →
+      </Link>
     </section>
   );
 }

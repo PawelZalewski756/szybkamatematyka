@@ -37,6 +37,7 @@ export const NAV_MORE_GROUPS: readonly NavGroup[] = [
     links: [
       { href: "/rankingi", label: "Rankingi" },
       { href: "/osiagniecia", label: "Osiągnięcia" },
+      { href: "/polecenia", label: "Program poleceń" },
     ],
   },
   {
