@@ -40,6 +40,24 @@ type AuthView = "login" | "signup";
 const inputClassName =
   "rounded-2xl border border-surface-border bg-background px-4 py-3.5 text-foreground outline-none transition-shadow placeholder:text-muted focus:ring-4";
 
+/**
+ * Bezpieczny powrót po logowaniu (np. z `/profil#program-polecen`).
+ * Tylko ścieżki wewnętrzne - bez `//`, backslashy i obcych originów.
+ */
+function nextPathFromLocation(): string | null {
+  if (typeof window === "undefined") return null;
+  const raw = new URLSearchParams(window.location.search).get("next");
+  if (
+    !raw ||
+    !raw.startsWith("/") ||
+    raw.startsWith("//") ||
+    raw.includes("\\")
+  ) {
+    return null;
+  }
+  return raw;
+}
+
 export default function LoginPage() {
   const router = useRouter();
   const [view, setView] = useState<AuthView>("login");
@@ -94,7 +112,7 @@ export default function LoginPage() {
       .getSession()
       .then(({ data: { session } }) => {
         if (session?.user) {
-          router.replace("/");
+          router.replace(nextPathFromLocation() ?? "/");
         }
       })
       .catch((error: unknown) => {
@@ -260,7 +278,7 @@ export default function LoginPage() {
         }
       }
 
-      router.replace("/");
+      router.replace(nextPathFromLocation() ?? "/");
     } catch (err) {
       const code = (err as Error & { code?: string })?.code;
       setIsError(true);

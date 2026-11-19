@@ -68,6 +68,17 @@ export function ReferralCard() {
     };
   }, []);
 
+  // Link `/profil#program-polecen` trafia tu, zanim karta się wyrenderuje
+  // (najpierw jest skeleton). Po wczytaniu RPC dociągamy scroll do sekcji.
+  useEffect(() => {
+    if (loading || !row?.referral_code) return;
+    if (typeof window === "undefined") return;
+    if (window.location.hash !== "#program-polecen") return;
+    document
+      .getElementById("program-polecen")
+      ?.scrollIntoView({ block: "start" });
+  }, [loading, row?.referral_code]);
+
   if (loading) {
     return <div className="mt-8 h-28 animate-pulse rounded-2xl bg-surface" />;
   }
