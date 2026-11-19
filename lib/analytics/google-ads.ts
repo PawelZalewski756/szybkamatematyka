@@ -21,11 +21,12 @@ export const GOOGLE_ADS_SIGNUP_CONVERSION =
  * Google Ads → Narzędzia → Konwersje → „Zakup PRO” → fragment `send_to`
  * po ukośniku (np. `AW-18540137652/AbC-D_efGh`).
  *
- * Celowo brak wartości domyślnej: dopóki jej nie ustawisz, zdarzenie się nie
- * wyśle (lepiej zero danych niż konwersja przypisana do złej etykiety).
+ * Wartość domyślna to etykieta akcji „Zakup PRO” z tego konta; można ją
+ * nadpisać zmienną NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_CONVERSION.
  */
 export const GOOGLE_ADS_PURCHASE_CONVERSION =
-  process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_CONVERSION?.trim() || "";
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_CONVERSION?.trim() ||
+  "AW-18540137652/cQaICLWAwrsdELSZ0IhFt";
 
 export function isGoogleAdsConfigured(): boolean {
   return /^AW-\d+$/.test(GOOGLE_ADS_ID);
