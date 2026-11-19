@@ -25,7 +25,7 @@ describe("google-ads purchase conversion", () => {
     vi.resetModules();
   });
 
-  it("nie buduje konwersji bez skonfigurowanej etykiety", async () => {
+  it("używa domyślnej etykiety konwersji zakupu", async () => {
     vi.stubEnv("NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_CONVERSION", "");
     vi.resetModules();
     const { buildPurchaseConversion } = await import(
@@ -38,6 +38,29 @@ describe("google-ads purchase conversion", () => {
         amountTotalMinorUnits: 2900,
         currency: "pln",
       }),
+    ).toEqual({
+      sendTo: "AW-18540137652/cQaICLWAwrsdELSZ0IhFt",
+      transactionId: "cs_test_1",
+      value: 29,
+      currency: "PLN",
+    });
+  });
+
+  it("odrzuca nieprawidłową etykietę konwersji", async () => {
+    vi.resetModules();
+    const { buildPurchaseConversion } = await import(
+      "@/lib/analytics/purchase"
+    );
+
+    expect(
+      buildPurchaseConversion(
+        {
+          sessionId: "cs_test_1",
+          amountTotalMinorUnits: 2900,
+          currency: "pln",
+        },
+        "AW-18540137652",
+      ),
     ).toBeNull();
   });
 

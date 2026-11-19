@@ -38,4 +38,17 @@ describe("google-ads config", () => {
     );
     expect(isGoogleAdsSignupConversionConfigured()).toBe(true);
   });
+
+  it("ma domyślną etykietę konwersji zakupu", async () => {
+    vi.stubEnv("NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_CONVERSION", "");
+    vi.resetModules();
+    const {
+      GOOGLE_ADS_PURCHASE_CONVERSION,
+      isGoogleAdsPurchaseConversionConfigured,
+    } = await import("@/lib/analytics/google-ads");
+    expect(GOOGLE_ADS_PURCHASE_CONVERSION).toBe(
+      "AW-18540137652/cQaICLWAwrsdELSZ0IhFt",
+    );
+    expect(isGoogleAdsPurchaseConversionConfigured()).toBe(true);
+  });
 });
