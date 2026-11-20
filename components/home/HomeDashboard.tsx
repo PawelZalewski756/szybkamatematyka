@@ -159,7 +159,7 @@ const FORMULAS: Record<"osmoklasista" | "matura", readonly Formula[]> = {
   ],
 };
 
-function FormulaSheet() {
+export function FormulaSheet() {
   const [track, setTrack] = useState<"osmoklasista" | "matura">(
     "osmoklasista",
   );
@@ -339,7 +339,7 @@ const getDayIndex = () => {
   return Math.floor(localDay / 86_400_000) % PUZZLES.length;
 };
 
-function DailyPuzzle() {
+export function DailyPuzzle() {
   const index = useSyncExternalStore(subscribeNoop, getDayIndex, () => 0);
   const [revealed, setRevealed] = useState(false);
 
@@ -375,7 +375,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
 };
 
-function ProductPreview() {
+export function ProductPreview() {
   const [recentTopic, setRecentTopic] =
     useState<RecentTrainingTopic | null>(null);
 
