@@ -16709,12 +16709,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $($\\sqrt{32}$ - $\\sqrt{2}$)$ 2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $(\\sqrt{32}-\\sqrt{2})^2$ jest równa",
     "choices": [
-      "16",
-      "18",
-      "30",
-      "34"
+      "$16$",
+      "$18$",
+      "$30$",
+      "$34$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli 18",
