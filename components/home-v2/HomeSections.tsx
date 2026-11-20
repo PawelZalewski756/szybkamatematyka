@@ -137,7 +137,7 @@ export function RankingSection() {
                   >
                     {tab}
                     {tab === "Ten tydzień" ? (
-                      <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-[9px] uppercase tracking-wide text-accent">
+                      <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-accent-strong">
                         Nowe
                       </span>
                     ) : null}
@@ -396,7 +396,7 @@ export function TestsSection() {
                 <span className="text-xs font-bold text-foreground">
                   Sprawdzian · klasa 8
                 </span>
-                <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-bold text-accent">
+                <span className="rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-bold text-accent-strong">
                   Grupa A
                 </span>
               </div>

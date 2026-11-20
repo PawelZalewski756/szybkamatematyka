@@ -7,6 +7,7 @@ import {
 import Link from "next/link";
 
 import { DailyPuzzle, FormulaSheet, ProductPreview } from "@/components/home/HomeDashboard";
+import { MinigamePromo } from "@/components/home/MinigamePromo";
 import { AiSection, FaqSection, PricingTeaser, RankingSection, TeacherBand, TestsSection } from "@/components/home-v2/HomeSections";
 import { FeatureGrid } from "@/components/home-v2/FeatureGrid";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
@@ -179,6 +180,7 @@ export function HomeDashboardV2({
       </section>
 
       <FeatureGrid />
+      <MinigamePromo />
       <WeekSection />
       <RankingSection />
       <AiSection />
