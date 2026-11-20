@@ -7,11 +7,16 @@ export const OG_SIZE = { width: 1200, height: 630 } as const;
 export const OG_ALT = `${SITE_NAME} - matura i egzamin ósmoklasisty online`;
 export const OG_CONTENT_TYPE = "image/png";
 
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="112" fill="#f4b740"/><rect width="512" height="512" rx="112" fill="none" stroke="#ffd479" stroke-opacity="0.5" stroke-width="16"/><path d="M104 264 L160 288 L216 384 L336 144 H416" fill="none" stroke="#1a1200" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const LOGO_DATA_URI = `data:image/svg+xml;base64,${btoa(LOGO_SVG)}`;
+
 type OgImageOptions = {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
   footer?: string;
+  primaryLabel?: string;
+  secondaryLabel?: string;
 };
 
 /**
@@ -26,6 +31,8 @@ export function renderOgImage({
   title = "Matematyka pod maturę i egzamin ósmoklasisty",
   subtitle = "Teoria, zadania, arkusze CKE, powtórki i gry — w jednym miejscu.",
   footer = BRAND_DOMAIN,
+  primaryLabel = "Zacznij trening",
+  secondaryLabel = "Zobacz arkusze CKE",
 }: OgImageOptions = {}) {
   return new ImageResponse(
     (
@@ -78,39 +85,14 @@ export function renderOgImage({
         />
 
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: 54,
-              height: 54,
-              marginRight: 16,
-              borderRadius: 16,
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#a15d00",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                width: 26,
-                height: 5,
-                marginBottom: 8,
-                borderRadius: 2,
-                background: "#ffffff",
-              }}
-            />
-            <div
-              style={{
-                display: "flex",
-                width: 26,
-                height: 5,
-                borderRadius: 2,
-                background: "#ffffff",
-              }}
-            />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={LOGO_DATA_URI}
+            width={56}
+            height={56}
+            alt=""
+            style={{ marginRight: 16 }}
+          />
           <div
             style={{
               display: "flex",
@@ -119,7 +101,8 @@ export function renderOgImage({
               letterSpacing: "-0.02em",
             }}
           >
-            {SITE_NAME}
+            <span style={{ color: "#a15d00" }}>Szybka</span>
+            <span style={{ marginLeft: 8, color: "#1c1812" }}>Matematyka</span>
           </div>
           <div
             style={{
@@ -160,6 +143,40 @@ export function renderOgImage({
           }}
         >
           {subtitle}
+        </div>
+
+        <div style={{ display: "flex", alignItems: "center", marginTop: 36 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginRight: 14,
+              padding: "16px 26px",
+              borderRadius: 16,
+              background: "#a15d00",
+              color: "#ffffff",
+              fontSize: 22,
+              fontWeight: 700,
+            }}
+          >
+            {primaryLabel}
+            <span style={{ marginLeft: 10 }}>→</span>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "16px 26px",
+              borderRadius: 16,
+              border: "2px solid #e2dac9",
+              background: "#ffffff",
+              color: "#1c1812",
+              fontSize: 22,
+              fontWeight: 700,
+            }}
+          >
+            {secondaryLabel}
+          </div>
         </div>
 
         <div

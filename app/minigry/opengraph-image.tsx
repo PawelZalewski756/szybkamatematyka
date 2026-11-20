@@ -15,5 +15,7 @@ export default function MinigryOpengraphImage() {
     subtitle:
       "34 gry w trzech trybach. 60 sekund rachunków i EXP.",
     footer: "szybkamatematyka.pl/minigry",
+    primaryLabel: "Zagraj teraz",
+    secondaryLabel: "Zobacz wszystkie gry",
   });
 }
