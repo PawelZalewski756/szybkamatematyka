@@ -8,7 +8,10 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba (√ 32 − √ 2 ) 2 jest równa A) 16 B) 18 C) 30 D) 34",
-      "rozwiazanie": "**Krok 1.** Zastosuj wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = \\sqrt{32}$ i $b = \\sqrt{2}$. Otrzymujemy $(\\sqrt{32})^2 - 2 \\cdot \\sqrt{32} \\cdot \\sqrt{2} + (\\sqrt{2})^2$.\n**Krok 2.** Uprość wyrażenie: $32 - 2 \\cdot \\sqrt{32 \\cdot 2} + 2 = 32 - 2 \\cdot \\sqrt{64} + 2$.\n**Krok 3.** Oblicz wartość pierwiastka i dokończ obliczenia: $32 - 2 \\cdot 8 + 2 = 32 - 16 + 2 = 16 + 2 = 18$.\n\n**Odpowiedź:** B, czyli 18"
+      "rozwiazanie": "**Krok 1.** Zastosuj wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$, gdzie $a = \\sqrt{32}$ i $b = \\sqrt{2}$. Otrzymujemy $(\\sqrt{32})^2 - 2 \\cdot \\sqrt{32} \\cdot \\sqrt{2} + (\\sqrt{2})^2$.\n**Krok 2.** Uprość wyrażenie: $32 - 2 \\cdot \\sqrt{32 \\cdot 2} + 2 = 32 - 2 \\cdot \\sqrt{64} + 2$.\n**Krok 3.** Oblicz wartość pierwiastka i dokończ obliczenia: $32 - 2 \\cdot 8 + 2 = 32 - 16 + 2 = 16 + 2 = 18$.\n\n**Odpowiedź:** B, czyli 18",
+      "tekst": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $(\\sqrt{32}-\\sqrt{2})^2$ jest równa\n\nA) $16$\nB) $18$\nC) $30$\nD) $34$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 2,

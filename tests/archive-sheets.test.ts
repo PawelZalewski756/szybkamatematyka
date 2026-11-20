@@ -43,14 +43,16 @@ describe("EXAM_ARCHIVE_TASKS answer keys", () => {
     expect(
       EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m15-maj-z02")
         ?.correctIndex,
-    ).toBe(3);
+    ).toBe(1);
   });
 
-  it("keeps unresolved image and composite solutions open", () => {
-    expect(
-      EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m15-maj-z03")
-        ?.choices,
-    ).toHaveLength(1);
+  it("resolves transcribed 2015 tasks and keeps unresolved composite solutions open", () => {
+    const transcribed = EXAM_ARCHIVE_TASKS.find(
+      (task) => task.id === "cke-m15-maj-z03",
+    );
+    expect(transcribed?.choices).toHaveLength(4);
+    expect(transcribed?.correctIndex).toBe(2);
+
     expect(
       EXAM_ARCHIVE_TASKS.find((task) => task.id === "cke-m23-maj-z12")?.choices,
     ).toHaveLength(1);
