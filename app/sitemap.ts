@@ -24,6 +24,7 @@ const PUBLIC_ROUTES: Array<{
   { path: "/minigry", changeFrequency: "weekly", priority: 0.9 },
   { path: "/trening", changeFrequency: "weekly", priority: 0.9 },
   { path: "/plan-klasy", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/plan-tygodnia", changeFrequency: "weekly", priority: 0.8 },
   { path: "/matura-rozszerzona", changeFrequency: "monthly", priority: 0.8 },
   { path: "/diagnostyka", changeFrequency: "monthly", priority: 0.8 },
   { path: "/baza-zadan", changeFrequency: "weekly", priority: 0.9 },

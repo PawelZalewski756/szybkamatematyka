@@ -11,7 +11,14 @@ export function Footer() {
   const pathname = usePathname();
 
   // Minigry to pełnoekranowa rozgrywka - stopka z linkami tylko przeszkadza.
-  if (pathname === "/" || pathname.startsWith("/minigry")) return null;
+  // Podgląd nowej strony głównej ma własną, pełną mapę serwisu.
+  if (
+    pathname === "/" ||
+    pathname === "/nowa-strona-glowna" ||
+    pathname.startsWith("/minigry")
+  ) {
+    return null;
+  }
 
   return (
     <footer

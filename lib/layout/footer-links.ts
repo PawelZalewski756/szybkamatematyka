@@ -4,6 +4,7 @@ import type { NavLink } from "@/lib/layout/nav-links";
 export const FOOTER_PRODUCT_LINKS: readonly NavLink[] = [
   { href: "/trening", label: "Trening" },
   { href: "/baza-zadan", label: "Baza zadań" },
+  { href: "/plan-tygodnia", label: "Plan tygodnia" },
   { href: "/trening/arkusze", label: "Arkusze CKE" },
   { href: "/minigry", label: "Minigry" },
   { href: "/wyzwania", label: "Wyzwania" },
