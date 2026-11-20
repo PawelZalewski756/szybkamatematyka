@@ -64,8 +64,17 @@ function inferCkePoints(task: Task, open: boolean): number {
   return 2;
 }
 
-/** Punktacja CKE: klucz z rozwiązania, inaczej typowa formula arkusza. */
+/** Punktacja CKE: najpierw wartość z arkusza, potem klucz z rozwiązania, na końcu heurystyka. */
 export function examTaskPoints(task: Task): number {
+  if (
+    typeof task.points === "number" &&
+    Number.isInteger(task.points) &&
+    task.points >= 1 &&
+    task.points <= 6
+  ) {
+    return task.points;
+  }
+
   const open = isOpenExamTask(task);
   if (!open) return 1;
   const blob = [task.prompt, task.explanation, ...(task.solutionSteps ?? [])].join(

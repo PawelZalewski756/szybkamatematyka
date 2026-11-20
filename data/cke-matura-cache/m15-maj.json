@@ -8,205 +8,298 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności – 4 ≤ x – 1 ≤ 4. A) ![Rysunek do zadania](/cke-matura/m15-maj/z01-1.jpg) B) ![Rysunek do zadania](/cke-matura/m15-maj/z01-2.jpg) C) ![Rysunek do zadania](/cke-matura/m15-maj/z01-3.jpg) D) ![Rysunek do zadania](/cke-matura/m15-maj/z01-4.jpg)",
-      "rozwiazanie": "**Krok 1.** Rozwiąż nierówność – 4 ≤ x – 1 ≤ 4, dodając 1 do każdej jej części: – 4 + 1 ≤ x ≤ 4 + 1, co daje – 3 ≤ x ≤ 5.\n**Krok 2.** Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby od – 3 do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach – 3 i 5 oraz odcinkiem między nimi.\n**Odpowiedź:** B)"
+      "rozwiazanie": "**Krok 1.** Rozwiąż nierówność – 4 ≤ x – 1 ≤ 4, dodając 1 do każdej jej części: – 4 + 1 ≤ x ≤ 4 + 1, co daje – 3 ≤ x ≤ 5.\n**Krok 2.** Przedstaw otrzymane rozwiązanie w postaci przedziału domkniętego, co oznacza liczby od – 3 do 5 włącznie. Na osi liczbowej zaznacza się to kropkami w punktach – 3 i 5 oraz odcinkiem między nimi.\n**Odpowiedź:** B)",
+      "tekst": "Wskaż rysunek, na którym przedstawiono przedział, będący zbiorem wszystkich rozwiązań nierówności $-4 \\le x - 1 \\le 4$.\n\nA) ![Rysunek 1](/cke-matura/m15-maj/z01-fig1.png)\nB) ![Rysunek 2](/cke-matura/m15-maj/z01-fig2.png)\nC) ![Rysunek 3](/cke-matura/m15-maj/z01-fig3.png)\nD) ![Rysunek 4](/cke-matura/m15-maj/z01-fig4.png)",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 2,
       "dzial": "Algebra",
       "tresc": "Dane są liczby ![Rysunek do zadania](/cke-matura/m15-maj/z02-1.png) . Iloczyn abc jest równy A) – 9 B) – ⅓ C) ⅓ D) 3",
-      "rozwiazanie": "**Krok 1.** Zauważ, że liczby są podane w postaci iloczynu potęg. Aby obliczyć $a \\cdot b \\cdot c$, należy pomnożyć podstawy potęg i dodać ich wykładniki (zgodnie z własnością potęgowania: $x^m \\cdot x^n = x^{m+n}$).\n\n**Krok 2.** Oblicz iloczyn potęg o tej samej podstawie: $a \\cdot b \\cdot c = (3^2 \\cdot 3^{-1}) \\cdot (3^{-3}) \\cdot (3^3) = 3^{2 + (-1) + (-3) + 3}$.\n\n**Krok 3.** Dodaj wykładniki: $2 - 1 - 3 + 3 = 1$. Zatem $a \\cdot b \\cdot c = 3^1$.\n\n**Odpowiedź:** D, czyli $3$"
+      "rozwiazanie": "1. Mamy $a = -\\frac{1}{27}$.\n2. Obliczamy $b = \\log_{\\frac{1}{4}} 64$. Ponieważ $\\frac{1}{4} = 4^{-1}$ oraz $64 = 4^3$, więc $b = \\frac{3}{-1} = -3$.\n3. Obliczamy $c = \\log_{\\frac{1}{3}} 27$. Ponieważ $\\frac{1}{3} = 3^{-1}$ oraz $27 = 3^3$, więc $c = \\frac{3}{-1} = -3$.\n4. Iloczyn $abc = \\left(-\\frac{1}{27}\\right) \\cdot (-3) \\cdot (-3) = -\\frac{9}{27} = -\\frac{1}{3}$.\n\nOdpowiedź: B.",
+      "tekst": "Dane są liczby $a = -\\frac{1}{27}$, $b = \\log_{\\frac{1}{4}} 64$, $c = \\log_{\\frac{1}{3}} 27$. Iloczyn $abc$ jest równy\n\nA) $-9$\nB) $-\\frac{1}{3}$\nC) $\\frac{1}{3}$\nD) $3$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 3,
       "dzial": "Statystyka",
       "tresc": "Kwotę 1000 zł ulokowano w banku na roczną lokatę oprocentowaną w wysokości 4% w stosunku rocznym. Po zakończeniu lokaty od naliczonych odsetek odprowadzany jest podatek w wysokości 19%. Maksymalna kwota, jaką po upływie roku będzie można wypłacić z banku, jest równa A) ![Rysunek do zadania](/cke-matura/m15-maj/z03-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z03-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z03-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z03-4.gif)",
-      "rozwiazanie": "**Krok 1.** Oblicz kwotę odsetek przed opodatkowaniem. Odsetki to 4% z 1000 zł, czyli $1000 \\cdot 0.04 = 40$ zł.\n**Krok 2.** Oblicz kwotę podatku od odsetek. Podatek wynosi 19% od 40 zł, czyli $40 \\cdot 0.19 = 7.60$ zł.\n**Krok 3.** Oblicz kwotę do wypłaty po potrąceniu podatku. Od kwoty początkowej (1000 zł) dodajemy odsetki pomniejszone o podatek: $1000 + (40 - 7.60) = 1000 + 32.40 = 1032.40$ zł.\n\n**Odpowiedź:** 1032,40 zł"
+      "rozwiazanie": "1. Odsetki przed podatkiem: $1000 \\cdot 4\\% = 40$ zł.\n2. Podatek: $19\\% \\cdot 40 = 7{,}60$ zł.\n3. Odsetki netto: $40 - 7{,}60 = 32{,}40$ zł.\n4. Kwota do wypłaty: $1000 + 32{,}40 = 1032{,}40$ zł.\n\nMożna też od razu: $1000 \\cdot \\left(1 + \\frac{81}{100} \\cdot \\frac{4}{100}\\right) = 1032{,}40$.\n\nOdpowiedź: C.",
+      "tekst": "Kwotę $1000$ zł ulokowano w banku na roczną lokatę oprocentowaną w wysokości $4\\%$ w stosunku rocznym. Po zakończeniu lokaty od naliczonych odsetek odprowadzany jest podatek w wysokości $19\\%$. Maksymalna kwota, jaką po upływie roku będzie można wypłacić z banku, jest równa\n\nA) $1000 \\cdot \\left(1 - \\frac{81}{100} \\cdot \\frac{4}{100}\\right)$\nB) $1000 \\cdot \\left(1 + \\frac{19}{100} \\cdot \\frac{4}{100}\\right)$\nC) $1000 \\cdot \\left(1 + \\frac{81}{100} \\cdot \\frac{4}{100}\\right)$\nD) $1000 \\cdot \\left(1 - \\frac{19}{100} \\cdot \\frac{4}{100}\\right)$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 4,
       "dzial": "Algebra",
       "tresc": "Równość ![Rysunek do zadania](/cke-matura/m15-maj/z04-1.png) zachodzi dla A) m = 5 B) m = 4 C) m = 1 D) m = – 5",
-      "rozwiazanie": "**Krok 1.** Zapisujemy równanie z treści zadania i mnożymy obie strony przez wspólny mianownik $6$: $2(2m-1) = 3(m+1)$.\n**Krok 2.** Rozwiązujemy otrzymane równanie liniowe: $4m - 2 = 3m + 3$, co po przeniesieniu wyrazów z $m$ na jedną stronę i liczb na drugą daje $m = 5$.\n**Odpowiedź:** A, czyli $m = 5$."
+      "rozwiazanie": "1. Mnożymy obie strony przez $5 - \\sqrt{5}$: $m = \\frac{(5+\\sqrt{5})(5-\\sqrt{5})}{5}$.\n2. Korzystamy ze wzoru $(a+b)(a-b)=a^2-b^2$: $(5+\\sqrt{5})(5-\\sqrt{5})=25-5=20$.\n3. Zatem $m = \\frac{20}{5}=4$.\n\nOdpowiedź: B.",
+      "tekst": "Równość $\\frac{m}{5 - \\sqrt{5}} = \\frac{5 + \\sqrt{5}}{5}$ zachodzi dla\n\nA) $m = 5$\nB) $m = 4$\nC) $m = 1$\nD) $m = -5$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 5,
       "dzial": "Funkcje",
       "tresc": "Układ równań ![Rysunek do zadania](/cke-matura/m15-maj/z05-1.png) opisuje w układzie współrzędnych na płaszczyźnie A) zbiór pusty B) dokładnie jeden punkt C) dokładnie dwa różne punkty D) zbiór nieskończony",
-      "rozwiazanie": "**Krok 1.** Z pierwszego równania wyznaczamy $y$: $y = -x+4$.\n**Krok 2.** Podstawiamy $y$ do drugiego równania: $x^2 + (-x+4)^2 = 16$, co po przekształceniu daje $2x^2 - 8x = 0$.\n**Krok 3.** Rozwiązujemy równanie kwadratowe: $2x(x-4) = 0$, otrzymując $x=0$ lub $x=4$. Obliczamy odpowiadające wartości $y$: dla $x=0$, $y=4$; dla $x=4$, $y=0$.\n**Krok 4.** Znalezione pary $(x,y)$ to $(0,4)$ i $(4,0)$, co oznacza dwa różne punkty przecięcia.\n\n**Odpowiedź:** C, czyli dokładnie dwa różne punkty"
+      "rozwiazanie": "1. Z pierwszego równania $x-y=3$ wyznaczamy $y=x-3$.\n2. Podstawiamy do drugiego równania: $2x+0{,}5(x-3)=4$.\n3. Otrzymujemy $2{,}5x - 1{,}5 = 4$, więc $2{,}5x=5{,}5$ i $x=2{,}2$.\n4. Wtedy $y=2{,}2-3=-0{,}8$. Istnieje dokładnie jedna para $(x,y)$, więc układ opisuje jeden punkt.\n\nOdpowiedź: B.",
+      "tekst": "Układ równań $\\begin{cases} x - y = 3 \\\\ 2x + 0{,}5y = 4 \\end{cases}$ opisuje w układzie współrzędnych na płaszczyźnie\n\nA) zbiór pusty\nB) dokładnie jeden punkt\nC) dokładnie dwa różne punkty\nD) zbiór nieskończony",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 6,
       "dzial": "Równania",
       "tresc": "Suma wszystkich pierwiastków równania ( x + 3)( x + 7)( x – 11) = 0 jest równa A) – 1 B) 21 C) 1 D) – 21",
-      "rozwiazanie": "**Krok 1.** Równanie jest w postaci iloczynowej, więc pierwiastki odczytujemy z czynników, przyrównując każdy do zera.\n**Krok 2.** Pierwiastki to $x+3=0 \\Rightarrow x_1=-3$, $x+7=0 \\Rightarrow x_2=-7$, $x-11=0 \\Rightarrow x_3=11$.\n**Krok 3.** Sumujemy znalezione pierwiastki: $-3 + (-7) + 11 = -10 + 11 = 1$.\n\n**Odpowiedź:** C, czyli $1$"
+      "rozwiazanie": "**Krok 1.** Równanie jest w postaci iloczynowej, więc pierwiastki odczytujemy z czynników, przyrównując każdy do zera.\n**Krok 2.** Pierwiastki to $x+3=0 \\Rightarrow x_1=-3$, $x+7=0 \\Rightarrow x_2=-7$, $x-11=0 \\Rightarrow x_3=11$.\n**Krok 3.** Sumujemy znalezione pierwiastki: $-3 + (-7) + 11 = -10 + 11 = 1$.\n\n**Odpowiedź:** C, czyli $1$",
+      "tekst": "Suma wszystkich pierwiastków równania $(x+3)(x+7)(x-11)=0$ jest równa\n\nA) $-1$\nB) $21$\nC) $1$\nD) $-21$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 7,
       "dzial": "Równania",
       "tresc": "Równanie ![Rysunek do zadania](/cke-matura/m15-maj/z07-1.png) A) ma dokładnie jedno rozwiązanie: x = 1 B) ma dokładnie jedno rozwiązanie: x = 0 C) ma dokładnie jedno rozwiązanie: x = − 1 D) ma dokładnie dwa rozwiązania: x = 0 , x = 1",
-      "rozwiazanie": "**Krok 1.** Przekształć równanie do postaci $ax^2 + bx + c = 0$. Po przeniesieniu wszystkich wyrazów na jedną stronę otrzymamy $2x^2 - 2x = 0$.\n**Krok 2.** Wyłącz wspólny czynnik przed nawias. Wspólnym czynnikiem jest $2x$, co daje $2x(x-1)=0$.\n**Krok 3.** Aby iloczyn był równy zero, co najmniej jeden z czynników musi być równy zero. Zatem $2x = 0$ lub $x-1 = 0$. Rozwiązując te proste równania, otrzymujemy $x=0$ oraz $x=1$.\n\n**Odpowiedź:** D, czyli ma dwa rozwiązania: $x=0$, $x=1$."
+      "rozwiazanie": "**Krok 1.** Przekształć równanie do postaci $ax^2 + bx + c = 0$. Po przeniesieniu wszystkich wyrazów na jedną stronę otrzymamy $2x^2 - 2x = 0$.\n**Krok 2.** Wyłącz wspólny czynnik przed nawias. Wspólnym czynnikiem jest $2x$, co daje $2x(x-1)=0$.\n**Krok 3.** Aby iloczyn był równy zero, co najmniej jeden z czynników musi być równy zero. Zatem $2x = 0$ lub $x-1 = 0$. Rozwiązując te proste równania, otrzymujemy $x=0$ oraz $x=1$.\n\n**Odpowiedź:** D, czyli ma dwa rozwiązania: $x=0$, $x=1$.",
+      "tekst": "Równanie $\\frac{x-1}{x+1}=x-1$\n\nA) ma dokładnie jedno rozwiązanie: $x=1$\nB) ma dokładnie jedno rozwiązanie: $x=0$\nC) ma dokładnie jedno rozwiązanie: $x=-1$\nD) ma dokładnie dwa rozwiązania: $x=0$, $x=1$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 8,
       "dzial": "Funkcje",
       "tresc": "Na rysunku przedstawiono wykres funkcji ƒ. ![Rysunek do zadania](/cke-matura/m15-maj/z08-1.png) Zbiorem wartości funkcji ƒ jest A) (–2,2) B) &lang;–2,2) C) &lang;–2,2&rang; D) (–2,2&rang;",
-      "rozwiazanie": "**Krok 1.** Odczytaj z wykresu najmniejszą i największą wartość funkcji (wartości na osi $y$). Najmniejsza wartość to $-2$ (z dołkiem funkcji), a największa to $2$ (z górką funkcji).\n**Krok 2.** Określ, czy wartości $-2$ i $2$ należą do zbioru wartości. Kropki na wykresie wskazują, że funkcja przyjmuje te wartości, więc zapisujemy je z nawiasami kwadratowymi.\n**Krok 3.** Zapisz zbiór wartości funkcji, uwzględniając odczytane wartości i typ nawiasów. Zbiorem wartości są wszystkie liczby od $-2$ do $2$, włącznie z $-2$ i $2$.\n\n**Odpowiedź:** C, czyli $\\langle-2,2\\rangle$"
+      "rozwiazanie": "1. Z wykresu odczytujemy, że wartości funkcji mieszczą się między $-2$ a $2$.\n2. Punkty o wartościach $-2$ i $2$ są zaznaczone pustymi kółkami, więc te wartości nie należą do zbioru wartości.\n3. Wszystkie wartości pomiędzy $-2$ a $2$ są przyjmowane, więc zbiór wartości to $(-2,2)$.\n\nOdpowiedź: A.",
+      "tekst": "Na rysunku przedstawiono wykres funkcji $f$.\n\n![Rysunek 1](/cke-matura/m15-maj/z08-fig1.png)\n\nZbiorem wartości funkcji $f$ jest\n\nA) $(-2,2)$\nB) $[ -2,2)$\nC) $[ -2,2]$\nD) $(-2,2]$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 9,
       "dzial": "Funkcje",
       "tresc": "Na wykresie funkcji liniowej określonej wzorem &fnof;( x ) = ( m − 1) x + 3 leży punkt S = (5, −2) . Zatem A) m = − 1 B) m = 0 C) m = 1 D) m = 2",
-      "rozwiazanie": "**Krok 1.** Podstaw współrzędne punktu $S = (5, -2)$ do wzoru funkcji $f(x) = (m-1)x + 3$, pamiętając, że $x=5$ i $f(x)=-2$. Otrzymasz równanie $-2 = (m-1) \\cdot 5 + 3$.\n**Krok 2.** Rozwiąż otrzymane równanie, aby wyznaczyć wartość $m$. Najpierw odejmij 3 od obu stron: $-2 - 3 = (m-1) \\cdot 5$, czyli $-5 = (m-1) \\cdot 5$. Następnie podziel obie strony przez 5: $\\frac{-5}{5} = m-1$, co daje $-1 = m-1$. Na koniec dodaj 1 do obu stron: $-1 + 1 = m$, czyli $m=0$.\n**Odpowiedź:** B, czyli $m=0$."
+      "rozwiazanie": "**Krok 1.** Podstaw współrzędne punktu $S = (5, -2)$ do wzoru funkcji $f(x) = (m-1)x + 3$, pamiętając, że $x=5$ i $f(x)=-2$. Otrzymasz równanie $-2 = (m-1) \\cdot 5 + 3$.\n**Krok 2.** Rozwiąż otrzymane równanie, aby wyznaczyć wartość $m$. Najpierw odejmij 3 od obu stron: $-2 - 3 = (m-1) \\cdot 5$, czyli $-5 = (m-1) \\cdot 5$. Następnie podziel obie strony przez 5: $\\frac{-5}{5} = m-1$, co daje $-1 = m-1$. Na koniec dodaj 1 do obu stron: $-1 + 1 = m$, czyli $m=0$.\n**Odpowiedź:** B, czyli $m=0$.",
+      "tekst": "Na wykresie funkcji liniowej określonej wzorem $f(x)=(m-1)x+3$ leży punkt $S=(5,-2)$. Zatem\n\nA) $m=-1$\nB) $m=0$\nC) $m=1$\nD) $m=2$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 10,
       "dzial": "Funkcje",
       "tresc": "Funkcja liniowa &fnof; określona wzorem &fnof;( x ) = 2 x + b ma takie samo miejsce zerowe, jakie ma funkcja liniowa g ( x ) = −3 x + 4. Stąd wynika, że A) b = 4 B) b = – 3 &frasl; 2 C) b = – 8 &frasl; 3 D) b = 4 &frasl; 3",
-      "rozwiazanie": "**Krok 1.** Obliczamy miejsce zerowe funkcji $g(x) = -3x + 4$. Miejsce zerowe to wartość $x$, dla której $g(x) = 0$, czyli $-3x + 4 = 0$. Rozwiązując to równanie, otrzymujemy $x = \\frac{4}{3}$.\n**Krok 2.** Wiemy, że funkcja $f(x) = 2x + b$ ma takie samo miejsce zerowe, czyli $f(\\frac{4}{3}) = 0$. Podstawiamy tę wartość do wzoru funkcji $f(x)$, otrzymując $2 \\cdot \\frac{4}{3} + b = 0$.\n**Krok 3.** Rozwiązujemy równanie $ \\frac{8}{3} + b = 0 $, aby znaleźć wartość $b$. Po przekształceniu otrzymujemy $b = -\\frac{8}{3}$.\n\n**Odpowiedź:** C, czyli $b = -\\frac{8}{3}$"
+      "rozwiazanie": "**Krok 1.** Obliczamy miejsce zerowe funkcji $g(x) = -3x + 4$. Miejsce zerowe to wartość $x$, dla której $g(x) = 0$, czyli $-3x + 4 = 0$. Rozwiązując to równanie, otrzymujemy $x = \\frac{4}{3}$.\n**Krok 2.** Wiemy, że funkcja $f(x) = 2x + b$ ma takie samo miejsce zerowe, czyli $f(\\frac{4}{3}) = 0$. Podstawiamy tę wartość do wzoru funkcji $f(x)$, otrzymując $2 \\cdot \\frac{4}{3} + b = 0$.\n**Krok 3.** Rozwiązujemy równanie $ \\frac{8}{3} + b = 0 $, aby znaleźć wartość $b$. Po przekształceniu otrzymujemy $b = -\\frac{8}{3}$.\n\n**Odpowiedź:** C, czyli $b = -\\frac{8}{3}$",
+      "tekst": "Funkcja liniowa $f$ określona wzorem $f(x)=2x+b$ ma takie samo miejsce zerowe, jakie ma funkcja liniowa $g(x)=-3x+4$. Stąd wynika, że\n\nA) $b=4$\nB) $b=-\\frac{3}{2}$\nC) $b=-\\frac{8}{3}$\nD) $b=\\frac{4}{3}$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 11,
       "dzial": "Funkcje",
       "tresc": "Funkcja kwadratowa określona jest wzorem &fnof;( x ) = x 2 + x + c . Jeżeli &fnof;(3) = 4, to A) &fnof;(1) = − 6 B) &fnof;(1) = 0 C) &fnof;(1) = 6 D) &fnof;(1) = 18",
-      "rozwiazanie": "**Krok 1.** Oblicz wartość współczynnika $c$ korzystając z podanego warunku $f(3) = 4$. Podstawiamy $x=3$ do wzoru funkcji: $f(3) = 3^2 + 3 + c = 9 + 3 + c = 12 + c$. Skoro $f(3)=4$, to $12 + c = 4$, co daje $c = 4 - 12 = -8$.\n**Krok 2.** Oblicz wartość funkcji dla $x=1$ używając wyznaczonego współczynnika $c$. Wzór funkcji to teraz $f(x) = x^2 + x - 8$. Obliczamy $f(1)$: $f(1) = 1^2 + 1 - 8 = 1 + 1 - 8 = 2 - 8 = -6$.\n**Odpowiedź:** A, czyli $f(1) = -6$."
+      "rozwiazanie": "**Krok 1.** Oblicz wartość współczynnika $c$ korzystając z podanego warunku $f(3) = 4$. Podstawiamy $x=3$ do wzoru funkcji: $f(3) = 3^2 + 3 + c = 9 + 3 + c = 12 + c$. Skoro $f(3)=4$, to $12 + c = 4$, co daje $c = 4 - 12 = -8$.\n**Krok 2.** Oblicz wartość funkcji dla $x=1$ używając wyznaczonego współczynnika $c$. Wzór funkcji to teraz $f(x) = x^2 + x - 8$. Obliczamy $f(1)$: $f(1) = 1^2 + 1 - 8 = 1 + 1 - 8 = 2 - 8 = -6$.\n**Odpowiedź:** A, czyli $f(1) = -6$.",
+      "tekst": "Funkcja kwadratowa określona jest wzorem $f(x)=x^2+x+c$. Jeżeli $f(3)=4$, to\n\nA) $f(1)=-6$\nB) $f(1)=0$\nC) $f(1)=6$\nD) $f(1)=18$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 12,
       "dzial": "Równania",
       "tresc": "Ile liczb całkowitych x spełnia nierówność ![Rysunek do zadania](/cke-matura/m15-maj/z12-1.png) ? A) 14 B) 15 C) 16 D) 17",
-      "rozwiazanie": "**Krok 1.** Odczytujemy nierówność z rysunku: $\\frac{2}{7} < \\frac{x}{14} < \\frac{4}{3}$.\n**Krok 2.** Mnożymy wszystkie części przez $14$ (liczba dodatnia, więc znaki się nie zmieniają): $4 < x < \\frac{56}{3}$.\n**Krok 3.** Ponieważ $\\frac{56}{3}=18\\frac{2}{3}$, szukamy liczb całkowitych większych od $4$ i mniejszych od $18\\frac{2}{3}$.\n**Krok 4.** Są to liczby $5,6,\\ldots,18$. Jest ich $18-5+1=14$.\n**Odpowiedź:** A) $14$."
+      "rozwiazanie": "**Krok 1.** Odczytujemy nierówność z rysunku: $\\frac{2}{7} < \\frac{x}{14} < \\frac{4}{3}$.\n**Krok 2.** Mnożymy wszystkie części przez $14$ (liczba dodatnia, więc znaki się nie zmieniają): $4 < x < \\frac{56}{3}$.\n**Krok 3.** Ponieważ $\\frac{56}{3}=18\\frac{2}{3}$, szukamy liczb całkowitych większych od $4$ i mniejszych od $18\\frac{2}{3}$.\n**Krok 4.** Są to liczby $5,6,\\ldots,18$. Jest ich $18-5+1=14$.\n**Odpowiedź:** A) $14$.",
+      "tekst": "Ile liczb całkowitych $x$ spełnia nierówność $\\frac{2}{7}<\\frac{x}{14}<\\frac{4}{3}$?\n\nA) $14$\nB) $15$\nC) $16$\nD) $17$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 13,
       "dzial": "Ciągi",
       "tresc": "W rosnącym ciągu geometrycznym ( a n ) , określonym dla n ≥ 1, spełniony jest warunek a 4 = 3 a 1 . Iloraz q tego ciągu jest równy A) ![Rysunek do zadania](/cke-matura/m15-maj/z13-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z13-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z13-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z13-4.gif)",
-      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiając dane z zadania ($a_4 = 3a_1$), otrzymamy $a_1 \\cdot q^{4-1} = 3a_1$.\n\n**Krok 2.** Uprość równanie uzyskane w poprzednim kroku: $a_1 \\cdot q^3 = 3a_1$. Ponieważ ciąg jest rosnący, $a_1 \\ne 0$, możemy podzielić obie strony przez $a_1$, co daje $q^3 = 3$.\n\n**Krok 3.** Wyznacz iloraz $q$ z równania $q^3 = 3$. Aby to zrobić, oblicz pierwiastek sześcienny z obu stron: $q = \\sqrt[3]{3}$.\n\n**Odpowiedź:** C, czyli $\\sqrt[3]{3}$"
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzoru na n-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstawiając dane z zadania ($a_4 = 3a_1$), otrzymamy $a_1 \\cdot q^{4-1} = 3a_1$.\n\n**Krok 2.** Uprość równanie uzyskane w poprzednim kroku: $a_1 \\cdot q^3 = 3a_1$. Ponieważ ciąg jest rosnący, $a_1 \\ne 0$, możemy podzielić obie strony przez $a_1$, co daje $q^3 = 3$.\n\n**Krok 3.** Wyznacz iloraz $q$ z równania $q^3 = 3$. Aby to zrobić, oblicz pierwiastek sześcienny z obu stron: $q = \\sqrt[3]{3}$.\n\n**Odpowiedź:** C, czyli $\\sqrt[3]{3}$",
+      "tekst": "W rosnącym ciągu geometrycznym $(a_n)$, określonym dla $n\\ge1$, spełniony jest warunek $a_4=3a_1$. Iloraz $q$ tego ciągu jest równy\n\nA) $q=\\frac{1}{3}$\nB) $q=\\frac{1}{\\sqrt[3]{3}}$\nC) $q=\\sqrt[3]{3}$\nD) $q=3$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 14,
       "dzial": "Algebra",
       "tresc": "Tangens kąta α zaznaczonego na rysunku jest równy ![Rysunek do zadania](/cke-matura/m15-maj/z14-1.png) A) ![Rysunek do zadania](/cke-matura/m15-maj/z14-2.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z14-3.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z14-4.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z14-5.gif)",
-      "rozwiazanie": "**Krok 1.** Tangens kąta w trójkącie prostokątnym to stosunek długości przyprostokątnej naprzeciw kąta do długości przyprostokątnej przyległej do tego kąta. Z rysunku odczytujemy długości przyprostokątnych: 3 (naprzeciwko kąta $\\alpha$) i 4 (przyległa do kąta $\\alpha$).\n**Krok 2.** Obliczamy tangens kąta $\\alpha$, dzieląc długość przyprostokątnej naprzeciw kąta przez długość przyprostokątnej przyległej: $\\tan(\\alpha) = \\frac{3}{4}$.\n\n**Odpowiedź:** A, czyli $\\frac{3}{4}$"
+      "rozwiazanie": "1. Prosta przechodzi przez początek układu współrzędnych $(0,0)$ oraz przez punkt $P=(-4,5)$.\n2. Współczynnik kierunkowy prostej to $a=\\frac{5-0}{-4-0}=-\\frac{5}{4}$.\n3. Kąt $\\alpha$ jest kątem rozwartym, a tangens kąta nachylenia prostej jest równy jej współczynnikowi kierunkowemu, więc $\\operatorname{tg}\\alpha=-\\frac{5}{4}$.\n\nOdpowiedź: D.",
+      "tekst": "Tangens kąta $\\alpha$ zaznaczonego na rysunku jest równy\n\n![Rysunek 1](/cke-matura/m15-maj/z14-fig1.png)\n\nA) $-\\frac{\\sqrt{3}}{3}$\nB) $-\\frac{4}{5}$\nC) $-1$\nD) $-\\frac{5}{4}$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 15,
       "dzial": "Trygonometria",
       "tresc": "Jeżeli 0° oraz tg α = 2sin α, to A) ![Rysunek do zadania](/cke-matura/m15-maj/z15-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z15-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z15-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z15-4.gif)",
-      "rozwiazanie": "**Krok 1.** Zauważ, że $0^\\circ < \\alpha < 90^\\circ$, więc $\\cos \\alpha \\neq 0$. Podziel obie strony równania $tg \\alpha = 2\\sin \\alpha$ przez $\\cos \\alpha$, podstawiając $tg \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. Otrzymasz $\\frac{\\sin \\alpha}{\\cos \\alpha} = 2\\sin \\alpha$.\n**Krok 2.** Ponieważ $0^\\circ < \\alpha < 90^\\circ$, to $\\sin \\alpha > 0$. Możemy podzielić obie strony przez $\\sin \\alpha$, co daje $\\frac{1}{\\cos \\alpha} = 2$.\n**Krok 3.** Przekształć równanie $\\frac{1}{\\cos \\alpha} = 2$ do postaci $\\cos \\alpha = \\frac{1}{2}$. Z wartości dla kątów ostrych wiemy, że $\\cos \\alpha = \\frac{1}{2}$ dla $\\alpha = 60^\\circ$.\n\n**Odpowiedź:** A"
+      "rozwiazanie": "**Krok 1.** Zauważ, że $0^\\circ < \\alpha < 90^\\circ$, więc $\\cos \\alpha \\neq 0$. Podziel obie strony równania $tg \\alpha = 2\\sin \\alpha$ przez $\\cos \\alpha$, podstawiając $tg \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. Otrzymasz $\\frac{\\sin \\alpha}{\\cos \\alpha} = 2\\sin \\alpha$.\n**Krok 2.** Ponieważ $0^\\circ < \\alpha < 90^\\circ$, to $\\sin \\alpha > 0$. Możemy podzielić obie strony przez $\\sin \\alpha$, co daje $\\frac{1}{\\cos \\alpha} = 2$.\n**Krok 3.** Przekształć równanie $\\frac{1}{\\cos \\alpha} = 2$ do postaci $\\cos \\alpha = \\frac{1}{2}$. Z wartości dla kątów ostrych wiemy, że $\\cos \\alpha = \\frac{1}{2}$ dla $\\alpha = 60^\\circ$.\n\n**Odpowiedź:** A",
+      "tekst": "Jeżeli $0^\\circ<\\alpha<90^\\circ$ oraz $\\operatorname{tg}\\alpha=2\\sin\\alpha$, to\n\nA) $\\cos\\alpha=\\frac{1}{2}$\nB) $\\cos\\alpha=\\frac{\\sqrt{2}}{2}$\nC) $\\cos\\alpha=\\frac{\\sqrt{3}}{2}$\nD) $\\cos\\alpha=1$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 16,
       "dzial": "Geometria",
       "tresc": "Miara kąta wpisanego w okrąg jest o 20° mniejsza od miary kąta środkowego opartego na tym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa A) 5° B) 10° C) 20° D) 30°",
-      "rozwiazanie": "**Krok 1.** Oznaczmy miarę kąta wpisanego jako $\\alpha$, a miarę kąta środkowego jako $\\beta$. Z treści zadania wiemy, że $\\alpha = \\beta - 20°$.\n**Krok 2.** Z twierdzenia o związku między kątem wpisanym a kątem środkowym opartymi na tym samym łuku wiemy, że $\\beta = 2\\alpha$.\n**Krok 3.** Podstawiamy drugie równanie do pierwszego: $\\alpha = 2\\alpha - 20°$, co po przekształceniu daje $\\alpha = 20°$.\n**Odpowiedź:** C, czyli 20°"
+      "rozwiazanie": "**Krok 1.** Oznaczmy miarę kąta wpisanego jako $\\alpha$, a miarę kąta środkowego jako $\\beta$. Z treści zadania wiemy, że $\\alpha = \\beta - 20°$.\n**Krok 2.** Z twierdzenia o związku między kątem wpisanym a kątem środkowym opartymi na tym samym łuku wiemy, że $\\beta = 2\\alpha$.\n**Krok 3.** Podstawiamy drugie równanie do pierwszego: $\\alpha = 2\\alpha - 20°$, co po przekształceniu daje $\\alpha = 20°$.\n**Odpowiedź:** C, czyli 20°",
+      "tekst": "Miara kąta wpisanego w okrąg jest o $20^\\circ$ mniejsza od miary kąta środkowego opartego na tym samym łuku. Wynika stąd, że miara kąta wpisanego jest równa\n\nA) $5^\\circ$\nB) $10^\\circ$\nC) $20^\\circ$\nD) $30^\\circ$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 17,
       "dzial": "Geometria",
       "tresc": "Pole rombu o obwodzie 8 jest równe 1. Kąt ostry tego rombu ma miarę α. Wtedy A) 14° B) 29° C) 60° D) 75°",
-      "rozwiazanie": "**Krok 1.** Oblicz długość boku rombu. Obwód rombu to $4a$, gdzie $a$ to długość boku. Mamy $4a=8$, więc $a=2$.\n\n**Krok 2.** Wyznacz pole rombu ze wzoru $P = a^2 \\sin \\alpha$. Wstawiając dane, otrzymujemy $1 = 2^2 \\sin \\alpha$, czyli $1 = 4 \\sin \\alpha$.\n\n**Krok 3.** Rozwiąż równanie ze względu na $\\sin \\alpha$. Dzieląc obie strony przez 4, mamy $\\sin \\alpha = \\frac{1}{4}$. Kąt ostry $\\alpha$, dla którego $\\sin \\alpha = \\frac{1}{4}$, wynosi w przybliżeniu 14.5°, co odpowiada opcji A.\n\n**Odpowiedź:** A, czyli 14°"
+      "rozwiazanie": "**Krok 1.** Oblicz długość boku rombu. Obwód rombu to $4a$, gdzie $a$ to długość boku. Mamy $4a=8$, więc $a=2$.\n\n**Krok 2.** Wyznacz pole rombu ze wzoru $P = a^2 \\sin \\alpha$. Wstawiając dane, otrzymujemy $1 = 2^2 \\sin \\alpha$, czyli $1 = 4 \\sin \\alpha$.\n\n**Krok 3.** Rozwiąż równanie ze względu na $\\sin \\alpha$. Dzieląc obie strony przez 4, mamy $\\sin \\alpha = \\frac{1}{4}$. Kąt ostry $\\alpha$, dla którego $\\sin \\alpha = \\frac{1}{4}$, wynosi w przybliżeniu 14.5°, co odpowiada opcji A.\n\n**Odpowiedź:** A, czyli 14°",
+      "tekst": "Pole rombu o obwodzie $8$ jest równe $1$. Kąt ostry tego rombu ma miarę $\\alpha$. Wtedy\n\nA) $14^\\circ$\nB) $29^\\circ$\nC) $60^\\circ$\nD) $75^\\circ$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 18,
       "dzial": "Równania",
       "tresc": "Prosta l o równaniu y = m 2 x + 3 jest równoległa do prostej k o równaniu y = (4 m − 4) x − 3. Zatem A) m = 2 B) m = − 2 C) m = − 2 − 2√ 2 D) m = 2 + 2√ 2",
-      "rozwiazanie": "**Krok 1.** Proste są równoległe, gdy ich współczynniki kierunkowe są równe. Zatem przyrównujemy współczynniki przy $x$ z obu równań: $m^2 = 4m - 4$.\n\n**Krok 2.** Przekształcamy równanie do postaci kwadratowej i rozwiązujemy je: $m^2 - 4m + 4 = 0$. Jest to wzór skróconego mnożenia $(m-2)^2 = 0$, co daje jedyne rozwiązanie $m=2$.\n\n**Odpowiedź:** A, czyli $m = 2$."
+      "rozwiazanie": "**Krok 1.** Proste są równoległe, gdy ich współczynniki kierunkowe są równe. Zatem przyrównujemy współczynniki przy $x$ z obu równań: $m^2 = 4m - 4$.\n\n**Krok 2.** Przekształcamy równanie do postaci kwadratowej i rozwiązujemy je: $m^2 - 4m + 4 = 0$. Jest to wzór skróconego mnożenia $(m-2)^2 = 0$, co daje jedyne rozwiązanie $m=2$.\n\n**Odpowiedź:** A, czyli $m = 2$.",
+      "tekst": "Prosta $l$ o równaniu $y = m^2x + 3$ jest równoległa do prostej $k$ o równaniu $y = (4m - 4)x - 3$. Zatem\n\nA) $m = 2$\nB) $m = -2$\nC) $m = -2 - 2\\sqrt{2}$\nD) $m = 2 + 2\\sqrt{2}$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 19,
       "dzial": "Równania",
       "tresc": "Proste o równaniach: y = 2 mx − m 2 − 1 oraz y = 4 m 2 x + m 2 + 1 są prostopadłe dla A) m = − 1 &frasl; 2 B) m = 1 &frasl; 2 C) m = 1 D) m = 2",
-      "rozwiazanie": "**Krok 1.** Warunkiem prostopadłości dwóch prostych o równaniach kierunkowych $y = a_1 x + b_1$ i $y = a_2 x + b_2$ jest iloczyn ich współczynników kierunkowych równy $-1$, czyli $a_1 \\cdot a_2 = -1$. W naszym przypadku $a_1 = 2m$ oraz $a_2 = 4m^2$.\n**Krok 2.** Zapisujemy warunek prostopadłości prostych: $2m \\cdot 4m^2 = -1$. Upraszczamy równanie do postaci $8m^3 = -1$, a następnie $m^3 = -\\frac{1}{8}$.\n**Krok 3.** Obliczamy wartość $m$ poprzez spierwiastkowanie obu stron równania $m^3 = -\\frac{1}{8}$. Otrzymujemy $m = \\sqrt[3]{-\\frac{1}{8}}$, co daje $m = -\\frac{1}{2}$.\n\n**Odpowiedź:** A, czyli $m = -\\frac{1}{2}$"
+      "rozwiazanie": "**Krok 1.** Warunkiem prostopadłości dwóch prostych o równaniach kierunkowych $y = a_1 x + b_1$ i $y = a_2 x + b_2$ jest iloczyn ich współczynników kierunkowych równy $-1$, czyli $a_1 \\cdot a_2 = -1$. W naszym przypadku $a_1 = 2m$ oraz $a_2 = 4m^2$.\n**Krok 2.** Zapisujemy warunek prostopadłości prostych: $2m \\cdot 4m^2 = -1$. Upraszczamy równanie do postaci $8m^3 = -1$, a następnie $m^3 = -\\frac{1}{8}$.\n**Krok 3.** Obliczamy wartość $m$ poprzez spierwiastkowanie obu stron równania $m^3 = -\\frac{1}{8}$. Otrzymujemy $m = \\sqrt[3]{-\\frac{1}{8}}$, co daje $m = -\\frac{1}{2}$.\n\n**Odpowiedź:** A, czyli $m = -\\frac{1}{2}$",
+      "tekst": "Proste o równaniach $y = 2mx - m^2 - 1$ oraz $y = 4m^2x + m^2 + 1$ są prostopadłe dla\n\nA) $m = -\\frac{1}{2}$\nB) $m = \\frac{1}{2}$\nC) $m = 1$\nD) $m = 2$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 20,
       "dzial": "Funkcje",
       "tresc": "Dane są punkty M = (− 2,1) i N = (− 1,3) . Punkt K jest środkiem odcinka MN . Obrazem punktu K w symetrii względem początku układu współrzędnych jest punkt A) ![Rysunek do zadania](/cke-matura/m15-maj/z20-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z20-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z20-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z20-4.gif)",
-      "rozwiazanie": "**Krok 1.** Obliczamy współrzędne punktu K, który jest środkiem odcinka MN, korzystając ze wzoru na środek odcinka: $K = (\\frac{x_M + x_N}{2}, \\frac{y_M + y_N}{2})$. Podstawiamy dane: $K = (\\frac{-2 + (-1)}{2}, \\frac{1 + 3}{2}) = (\\frac{-3}{2}, \\frac{4}{2}) = (-\\frac{3}{2}, 2)$.\n\n**Krok 2.** Znajdujemy obraz punktu K w symetrii względem początku układu współrzędnych. Symetria względem początku $(0,0)$ zamienia punkt $(x,y)$ na punkt $(-x,-y)$. Zatem dla punktu $K = (-\\frac{3}{2}, 2)$, obrazem jest punkt $A = (-(-\\frac{3}{2}), -2) = (\\frac{3}{2}, -2)$.\n\n**Odpowiedź:** A, czyli $(\\frac{3}{2}, -2)$."
+      "rozwiazanie": "1. Środek odcinka $MN$: $K = \\left(\\frac{-2+(-1)}{2}, \\frac{1+3}{2}\\right) = \\left(-\\frac{3}{2}, 2\\right)$.\n2. Symetria względem początku układu współrzędnych: $(x,y)\\mapsto(-x,-y)$, więc $K' = \\left(\\frac{3}{2}, -2\\right)$.\n\nOdpowiedź: D.",
+      "tekst": "Dane są punkty $M = (-2,1)$ i $N = (-1,3)$. Punkt $K$ jest środkiem odcinka $MN$. Obrazem punktu $K$ w symetrii względem początku układu współrzędnych jest punkt\n\nA) $K' = \\left(2, -\\frac{3}{2}\\right)$\nB) $K' = \\left(2, \\frac{3}{2}\\right)$\nC) $K' = \\left(\\frac{3}{2}, 2\\right)$\nD) $K' = \\left(\\frac{3}{2}, -2\\right)$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 21,
       "dzial": "Geometria",
       "tresc": "W graniastosłupie prawidłowym czworokątnym EFGHIJKL wierzchołki E , G , L połączono odcinkami (tak jak na rysunku). ![Rysunek do zadania](/cke-matura/m15-maj/z21-1.gif) Wskaż kąt między wysokością OL trójkąta EGL i płaszczyzną podstawy tego graniastosłupa. A) ∢ HOL B) ∢ OGL C) ∢ HLO D) ∢ OHL",
-      "rozwiazanie": "**Krok 1.** Graniastosłup prawidłowy czworokątny ma w podstawie kwadrat. Odcinek OL jest wysokością trójkąta EGL opuszczoną z wierzchołka L na bok EG. Punkt O jest środkiem przekątnej EG.\n**Krok 2.** Płaszczyzna podstawy to płaszczyzna kwadratu EFGH. Punkt O leży w tej płaszczyźnie, a punkt L leży nad nią. Kąt między odcinkiem OL a płaszczyzną podstawy to kąt między OL a jego rzutem prostokątnym na tę płaszczyznę.\n**Krok 3.** Rzutem prostokątnym punktu L na płaszczyznę podstawy jest punkt H (ponieważ LH jest wysokością graniastosłupa, prostopadłą do podstawy). Rzutem prostokątnym odcinka OL na płaszczyznę podstawy jest odcinek OH. Szukany kąt to zatem kąt między OL a OH, czyli ∢ HOL.\n\n**Odpowiedź:** A) ∢ HOL"
+      "rozwiazanie": "**Krok 1.** Graniastosłup prawidłowy czworokątny ma w podstawie kwadrat. Odcinek OL jest wysokością trójkąta EGL opuszczoną z wierzchołka L na bok EG. Punkt O jest środkiem przekątnej EG.\n**Krok 2.** Płaszczyzna podstawy to płaszczyzna kwadratu EFGH. Punkt O leży w tej płaszczyźnie, a punkt L leży nad nią. Kąt między odcinkiem OL a płaszczyzną podstawy to kąt między OL a jego rzutem prostokątnym na tę płaszczyznę.\n**Krok 3.** Rzutem prostokątnym punktu L na płaszczyznę podstawy jest punkt H (ponieważ LH jest wysokością graniastosłupa, prostopadłą do podstawy). Rzutem prostokątnym odcinka OL na płaszczyznę podstawy jest odcinek OH. Szukany kąt to zatem kąt między OL a OH, czyli ∢ HOL.\n\n**Odpowiedź:** A) ∢ HOL",
+      "tekst": "W graniastosłupie prawidłowym czworokątnym $EFGHIJKL$ wierzchołki $E$, $G$, $L$ połączono odcinkami (tak jak na rysunku).\n\n![Rysunek 1](/cke-matura/m15-maj/z21-fig1.png)\n\nWskaż kąt między wysokością $OL$ trójkąta $EGL$ i płaszczyzną podstawy tego graniastosłupa.\n\nA) ∢ HOL\nB) ∢ OGL\nC) ∢ HLO\nD) ∢ OHL",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 22,
       "dzial": "Geometria",
       "tresc": "Przekrojem osiowym stożka jest trójkąt równoboczny o boku długości 6. Objętość tego stożka jest równa A) 27π√ 3 B) 9π√ 3 C) 18π D) 6π",
-      "rozwiazanie": "**Krok 1.** Z treści zadania wiemy, że bok trójkąta równobocznego wynosi 6. W przekroju osiowym stożka jest to jednocześnie tworząca stożka ($l=6$) oraz średnica podstawy ($2r=6$, czyli $r=3$). Wysokość stożka ($h$) obliczymy z Twierdzenia Pitagorasa: $h^2 + r^2 = l^2$.\n\n**Krok 2.** Podstawiamy dane do wzoru Pitagorasa: $h^2 + 3^2 = 6^2$, co daje $h^2 + 9 = 36$, czyli $h^2 = 27$. Wyciągając pierwiastek, otrzymujemy $h = \\sqrt{27} = 3\\sqrt{3}$.\n\n**Krok 3.** Objętość stożka obliczamy ze wzoru $V = \\frac{1}{3} \\pi r^2 h$. Podstawiamy $r=3$ i $h=3\\sqrt{3}$: $V = \\frac{1}{3} \\pi (3^2) (3\\sqrt{3}) = \\frac{1}{3} \\pi \\cdot 9 \\cdot 3\\sqrt{3} = 9\\pi\\sqrt{3}$.\n\n**Odpowiedź:** B, czyli $9\\pi\\sqrt{3}$"
+      "rozwiazanie": "**Krok 1.** Z treści zadania wiemy, że bok trójkąta równobocznego wynosi 6. W przekroju osiowym stożka jest to jednocześnie tworząca stożka ($l=6$) oraz średnica podstawy ($2r=6$, czyli $r=3$). Wysokość stożka ($h$) obliczymy z Twierdzenia Pitagorasa: $h^2 + r^2 = l^2$.\n\n**Krok 2.** Podstawiamy dane do wzoru Pitagorasa: $h^2 + 3^2 = 6^2$, co daje $h^2 + 9 = 36$, czyli $h^2 = 27$. Wyciągając pierwiastek, otrzymujemy $h = \\sqrt{27} = 3\\sqrt{3}$.\n\n**Krok 3.** Objętość stożka obliczamy ze wzoru $V = \\frac{1}{3} \\pi r^2 h$. Podstawiamy $r=3$ i $h=3\\sqrt{3}$: $V = \\frac{1}{3} \\pi (3^2) (3\\sqrt{3}) = \\frac{1}{3} \\pi \\cdot 9 \\cdot 3\\sqrt{3} = 9\\pi\\sqrt{3}$.\n\n**Odpowiedź:** B, czyli $9\\pi\\sqrt{3}$",
+      "tekst": "Przekrojem osiowym stożka jest trójkąt równoboczny o boku długości $6$. Objętość tego stożka jest równa\n\nA) $27\\pi\\sqrt{3}$\nB) $9\\pi\\sqrt{3}$\nC) $18\\pi$\nD) $6\\pi$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 23,
       "dzial": "Geometria",
       "tresc": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą 8. Pole powierzchni całkowitej tego graniastosłupa jest równe A) ![Rysunek do zadania](/cke-matura/m15-maj/z23-1.gif) B) ![Rysunek do zadania](/cke-matura/m15-maj/z23-2.gif) C) ![Rysunek do zadania](/cke-matura/m15-maj/z23-3.gif) D) ![Rysunek do zadania](/cke-matura/m15-maj/z23-4.gif)",
-      "rozwiazanie": "**Krok 1.** Oblicz pole podstawy graniastosłupa. Podstawą jest trójkąt równoboczny o boku $a=8$. Pole trójkąta równobocznego to $P_p = \\frac{a^2 \\sqrt{3}}{4}$.\n**Krok 2.** Oblicz pole powierzchni bocznej graniastosłupa. Graniastosłup ma 3 ściany boczne, każda będąca prostokątem o wymiarach $8 \\times 8$. Pole powierzchni bocznej to $P_b = 3 \\cdot (8 \\cdot 8)$.\n**Krok 3.** Oblicz pole powierzchni całkowitej, sumując pola obu podstaw i pola powierzchni bocznej: $P_c = 2 P_p + P_b$.\n\n$P_p = \\frac{8^2 \\sqrt{3}}{4} = \\frac{64 \\sqrt{3}}{4} = 16 \\sqrt{3}$.\n$P_b = 3 \\cdot 64 = 192$.\n$P_c = 2 \\cdot (16 \\sqrt{3}) + 192 = 32 \\sqrt{3} + 192$.\n\n**Odpowiedź:** $192 + 32 \\sqrt{3}$"
+      "rozwiazanie": "**Krok 1.** Oblicz pole podstawy graniastosłupa. Podstawą jest trójkąt równoboczny o boku $a=8$. Pole trójkąta równobocznego to $P_p = \\frac{a^2 \\sqrt{3}}{4}$.\n**Krok 2.** Oblicz pole powierzchni bocznej graniastosłupa. Graniastosłup ma 3 ściany boczne, każda będąca prostokątem o wymiarach $8 \\times 8$. Pole powierzchni bocznej to $P_b = 3 \\cdot (8 \\cdot 8)$.\n**Krok 3.** Oblicz pole powierzchni całkowitej, sumując pola obu podstaw i pola powierzchni bocznej: $P_c = 2 P_p + P_b$.\n\n$P_p = \\frac{8^2 \\sqrt{3}}{4} = \\frac{64 \\sqrt{3}}{4} = 16 \\sqrt{3}$.\n$P_b = 3 \\cdot 64 = 192$.\n$P_c = 2 \\cdot (16 \\sqrt{3}) + 192 = 32 \\sqrt{3} + 192$.\n\n**Odpowiedź:** $192 + 32 \\sqrt{3}$",
+      "tekst": "Każda krawędź graniastosłupa prawidłowego trójkątnego ma długość równą $8$. Pole powierzchni całkowitej tego graniastosłupa jest równe\n\nA) $\\frac{8^2}{3}\\left(\\frac{\\sqrt{3}}{2}+3\\right)$\nB) $8^2\\sqrt{3}$\nC) $\\frac{8^2\\sqrt{6}}{3}$\nD) $8^2\\left(\\frac{\\sqrt{3}}{2}+3\\right)$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 24,
       "dzial": "Statystyka",
       "tresc": "Średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9 jest taka sama jak średnia arytmetyczna zestawu danych: 2, 4, 7, 8, 9, x . Wynika stąd, że A) x = 0 B) x = 3 C) x = 5 D) x = 6",
-      "rozwiazanie": "**Krok 1.** Obliczamy średnią arytmetyczną pierwszego zestawu danych: suma liczb to $2+4+7+8+9=30$, a jest ich 5, więc średnia wynosi $\\frac{30}{5}=6$.\n**Krok 2.** Obliczamy średnią arytmetyczną drugiego zestawu danych: suma liczb to $2+4+7+8+9+x=30+x$, a jest ich 6, więc średnia wynosi $\\frac{30+x}{6}$.\n**Krok 3.** Przyrównujemy obie średnie do siebie, ponieważ zgodnie z treścią zadania są równe: $6 = \\frac{30+x}{6}$. Mnożymy obie strony przez 6: $36 = 30+x$, skąd $x=6$.\n\n**Odpowiedź:** D, czyli x = 6"
+      "rozwiazanie": "**Krok 1.** Obliczamy średnią arytmetyczną pierwszego zestawu danych: suma liczb to $2+4+7+8+9=30$, a jest ich 5, więc średnia wynosi $\\frac{30}{5}=6$.\n**Krok 2.** Obliczamy średnią arytmetyczną drugiego zestawu danych: suma liczb to $2+4+7+8+9+x=30+x$, a jest ich 6, więc średnia wynosi $\\frac{30+x}{6}$.\n**Krok 3.** Przyrównujemy obie średnie do siebie, ponieważ zgodnie z treścią zadania są równe: $6 = \\frac{30+x}{6}$. Mnożymy obie strony przez 6: $36 = 30+x$, skąd $x=6$.\n\n**Odpowiedź:** D, czyli x = 6",
+      "tekst": "Średnia arytmetyczna zestawu danych: $2, 4, 7, 8, 9$ jest taka sama jak średnia arytmetyczna zestawu danych: $2, 4, 7, 8, 9, x$. Wynika stąd, że\n\nA) $x = 0$\nB) $x = 3$\nC) $x = 5$\nD) $x = 6$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 25,
       "dzial": "Prawdopodobieństwo",
       "tresc": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga – niebieska. Z każdego pojemnika losujemy jedną kulę. Niech p oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy A) p = 1 &frasl; 4 B) p = 3 &frasl; 8 C) p = 1 &frasl; 2 D) p = 2 &frasl; 3",
-      "rozwiazanie": "**Krok 1.** Określ prawdopodobieństwo wylosowania kuli czerwonej (C) i niebieskiej (N) z jednego pojemnika. Ponieważ w każdym pojemniku jest jedna kula czerwona i jedna niebieska, prawdopodobieństwo wylosowania kuli czerwonej $P(C) = \\frac{1}{2}$, a niebieskiej $P(N) = \\frac{1}{2}$.\n\n**Krok 2.** Wypisz wszystkie możliwe kombinacje wylosowania trzech kul z trzech pojemników, które dają dokładnie dwie kule czerwone: CCN, CNC, NCC. Każda z tych kombinacji ma takie samo prawdopodobieństwo, ponieważ losowania są niezależne: $P(CCN) = P(C) \\cdot P(C) \\cdot P(N) = \\frac{1}{2} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{8}$.\n\n**Krok 3.** Zsumuj prawdopodobieństwa poszczególnych kombinacji, które spełniają warunek zadania (dokładnie dwie czerwone kule). Ponieważ są trzy takie kombinacje (CCN, CNC, NCC), a każda ma prawdopodobieństwo $\\frac{1}{8}$, całkowite prawdopodobieństwo wynosi $p = P(CCN) + P(CNC) + P(NCC) = \\frac{1}{8} + \\frac{1}{8} + \\frac{1}{8} = \\frac{3}{8}$.\n\n**Odpowiedź:** B, czyli $\\frac{3}{8}$"
+      "rozwiazanie": "**Krok 1.** Określ prawdopodobieństwo wylosowania kuli czerwonej (C) i niebieskiej (N) z jednego pojemnika. Ponieważ w każdym pojemniku jest jedna kula czerwona i jedna niebieska, prawdopodobieństwo wylosowania kuli czerwonej $P(C) = \\frac{1}{2}$, a niebieskiej $P(N) = \\frac{1}{2}$.\n\n**Krok 2.** Wypisz wszystkie możliwe kombinacje wylosowania trzech kul z trzech pojemników, które dają dokładnie dwie kule czerwone: CCN, CNC, NCC. Każda z tych kombinacji ma takie samo prawdopodobieństwo, ponieważ losowania są niezależne: $P(CCN) = P(C) \\cdot P(C) \\cdot P(N) = \\frac{1}{2} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{8}$.\n\n**Krok 3.** Zsumuj prawdopodobieństwa poszczególnych kombinacji, które spełniają warunek zadania (dokładnie dwie czerwone kule). Ponieważ są trzy takie kombinacje (CCN, CNC, NCC), a każda ma prawdopodobieństwo $\\frac{1}{8}$, całkowite prawdopodobieństwo wynosi $p = P(CCN) + P(CNC) + P(NCC) = \\frac{1}{8} + \\frac{1}{8} + \\frac{1}{8} = \\frac{3}{8}$.\n\n**Odpowiedź:** B, czyli $\\frac{3}{8}$",
+      "tekst": "W każdym z trzech pojemników znajduje się para kul, z których jedna jest czerwona, a druga – niebieska. Z każdego pojemnika losujemy jedną kulę. Niech $p$ oznacza prawdopodobieństwo zdarzenia polegającego na tym, że dokładnie dwie z trzech wylosowanych kul będą czerwone. Wtedy\n\nA) $p = \\frac{1}{4}$\nB) $p = \\frac{3}{8}$\nC) $p = \\frac{1}{2}$\nD) $p = \\frac{2}{3}$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 26,
       "dzial": "Równania",
       "tresc": "Rozwiąż nierówność 2 x 2 − 4 x > ( x + 3)( x − 2) .",
-      "rozwiazanie": "**Krok 1.** Rozwiń prawą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby uzyskać nierówność kwadratową.\n$2x^2 - 4x > x^2 - 2x + 3x - 6$\n$2x^2 - 4x > x^2 + x - 6$\n$2x^2 - x^2 - 4x - x + 6 > 0$\n$x^2 - 5x + 6 > 0$\n\n**Krok 2.** Znajdź pierwiastki równania kwadratowego $x^2 - 5x + 6 = 0$, aby określić miejsca zerowe paraboli.\nUżyjemy delty: $\\Delta = b^2 - 4ac = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$.\nPierwiastki: $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{5 - 1}{2} = 2$ oraz $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{5 + 1}{2} = 3$.\n\n**Krok 3.** Określ przedziały, w których nierówność $x^2 - 5x + 6 > 0$ jest spełniona, analizując parabolę z ramionami skierowanymi w górę i miejscami zerowymi $x=2$ i $x=3$.\nNierówność jest spełniona, gdy $x < 2$ lub $x > 3$.\n\n**Odpowiedź:** $x \\in (-\\infty, 2) \\cup (3, \\infty)$"
+      "rozwiazanie": "**Krok 1.** Rozwiń prawą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby uzyskać nierówność kwadratową.\n$2x^2 - 4x > x^2 - 2x + 3x - 6$\n$2x^2 - 4x > x^2 + x - 6$\n$2x^2 - x^2 - 4x - x + 6 > 0$\n$x^2 - 5x + 6 > 0$\n\n**Krok 2.** Znajdź pierwiastki równania kwadratowego $x^2 - 5x + 6 = 0$, aby określić miejsca zerowe paraboli.\nUżyjemy delty: $\\Delta = b^2 - 4ac = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$.\nPierwiastki: $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{5 - 1}{2} = 2$ oraz $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{5 + 1}{2} = 3$.\n\n**Krok 3.** Określ przedziały, w których nierówność $x^2 - 5x + 6 > 0$ jest spełniona, analizując parabolę z ramionami skierowanymi w górę i miejscami zerowymi $x=2$ i $x=3$.\nNierówność jest spełniona, gdy $x < 2$ lub $x > 3$.\n\n**Odpowiedź:** $x \\in (-\\infty, 2) \\cup (3, \\infty)$",
+      "tekst": "Rozwiąż nierówność $2x^2 - 4x > (x+3)(x-2)$.",
+      "tekstV": 2
     },
     {
       "numer": 27,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y prawdziwa jest nierówność 4 x 2 −8 xy + 5 y 2 ≥ 0 .",
-      "rozwiazanie": "**Krok 1.** Przekształć nierówność, grupując wyrazy tak, aby powstały kwadraty różnic. Możemy zapisać $4x^2 - 8xy + 5y^2$ jako $(4x^2 - 8xy + 4y^2) + y^2$.\n**Krok 2.** Zauważ, że wyrażenie w nawiasie jest kwadratem różnicy: $(2x - 2y)^2$. Nierówność przyjmuje więc postać $(2x - 2y)^2 + y^2 \\ge 0$.\n**Krok 3.** Ponieważ kwadrat dowolnej liczby rzeczywistej jest nieujemny, a suma dwóch liczb nieujemnych jest również nieujemna, nierówność $(2x - 2y)^2 + y^2 \\ge 0$ jest zawsze prawdziwa.\n\n**Odpowiedź:** Nierówność jest zawsze prawdziwa, ponieważ jest sumą dwóch kwadratów liczb rzeczywistych."
+      "rozwiazanie": "**Krok 1.** Przekształć nierówność, grupując wyrazy tak, aby powstały kwadraty różnic. Możemy zapisać $4x^2 - 8xy + 5y^2$ jako $(4x^2 - 8xy + 4y^2) + y^2$.\n**Krok 2.** Zauważ, że wyrażenie w nawiasie jest kwadratem różnicy: $(2x - 2y)^2$. Nierówność przyjmuje więc postać $(2x - 2y)^2 + y^2 \\ge 0$.\n**Krok 3.** Ponieważ kwadrat dowolnej liczby rzeczywistej jest nieujemny, a suma dwóch liczb nieujemnych jest również nieujemna, nierówność $(2x - 2y)^2 + y^2 \\ge 0$ jest zawsze prawdziwa.\n\n**Odpowiedź:** Nierówność jest zawsze prawdziwa, ponieważ jest sumą dwóch kwadratów liczb rzeczywistych.",
+      "tekst": "Wykaż, że dla każdej liczby rzeczywistej $x$ i dla każdej liczby rzeczywistej $y$ prawdziwa jest nierówność $4x^2 - 8xy + 5y^2 \\ge 0$.",
+      "tekstV": 2
     },
     {
       "numer": 28,
       "dzial": "Algebra",
       "tresc": "Dany jest kwadrat ABCD . Przekątne AC i BD przecinają się w punkcie E . Punkty K i M są środkami odcinków – odpowiednio – AE i EC . Punkty L i N leżą na przekątnej BD tak, że | BL | = 1 &frasl; 3 | BE | i | DN | = 1 &frasl; 3 | DE | (zobacz rysunek). Wykaż, że stosunek pola czworokąta KLMN do pola kwadratu ABCD jest równy 1:3. ![Rysunek do zadania](/cke-matura/m15-maj/z28-1.png)",
-      "rozwiazanie": "**Krok 1.** Oznaczmy długość boku kwadratu ABCD jako $a$. Wtedy długość jego przekątnej wynosi $a\\sqrt{2}$. Punkt E jest środkiem każdej z przekątnych, więc $|BE| = |DE| = \\frac{1}{2} a\\sqrt{2}$. Punkty K i M są środkami odcinków AE i EC. Długości odcinków $|BK|$ i $|DM|$ wyznaczymy, korzystając z podziału odcinka BE i DE przez punkty L i N.\n\n**Krok 2.** Długości odcinków na przekątnej BD: $|BL| = \\frac{1}{3}|BE|$ i $|DN| = \\frac{1}{3}|DE|$. Ponieważ $|BE|=|DE|$, mamy $|BL|=|DN|$. Długość całej przekątnej $BD = |BE| + |DE|$. Długość odcinka $LN = BD - BL - DN = BD - \\frac{1}{3}BD - \\frac{1}{3}BD = \\frac{1}{3}BD$.\n\n**Krok 3.** Czworokąt KLMN jest rombem (można to wykazać, analizując położenie punktów i symetrię). Jego pole można obliczyć jako połowę iloczynu długości przekątnych LN i KM. Długość przekątnej LN wynosi $\\frac{1}{3}a\\sqrt{2}$. Długość przekątnej KM jest równa $|AE| = \\frac{1}{2} a\\sqrt{2}$. Pole kwadratu ABCD wynosi $a^2$. Pole czworokąta KLMN wynosi $\\frac{1}{2}|LN| \\cdot |KM| = \\frac{1}{2} \\cdot (\\frac{1}{3}a\\sqrt{2}) \\cdot (\\frac{1}{2}a\\sqrt{2}) = \\frac{1}{12} a^2 \\cdot 2 = \\frac{1}{6}a^2$. Stosunek pola KLMN do pola ABCD wynosi $\\frac{\\frac{1}{6}a^2}{a^2} = \\frac{1}{6}$.\n\n**Odpowiedź:** Stosunek pola czworokąta KLMN do pola kwadratu ABCD wynosi $\\frac{1}{6}$."
+      "rozwiazanie": "1. Oznaczmy bok kwadratu przez $a$. Wtedy $|AC|=|BD|=a\\sqrt{2}$, a punkt $E$ dzieli każdą przekątną na połowy.\n2. Punkty $K$ i $M$ są środkami $AE$ i $EC$, więc $|KM|=\\frac{1}{2}|AC|=\\frac{a\\sqrt{2}}{2}$ oraz $KM \\parallel AC$.\n3. $|BL|=\\frac{1}{3}|BE|=\\frac{1}{6}|BD|$ i $|DN|=\\frac{1}{6}|BD|$, więc $|LN|=|BD|-\\frac{1}{6}|BD|-\\frac{1}{6}|BD|=\\frac{2}{3}|BD|=\\frac{2a\\sqrt{2}}{3}$.\n4. Przekątne $KM$ i $LN$ czworokąta $KLMN$ są prostopadłe (bo $KM \\parallel AC$ i $LN \\parallel BD$, a przekątne kwadratu są prostopadłe). Pole czworokąta o prostopadłych przekątnych to $\\frac{1}{2}|KM|\\cdot|LN|$.\n5. $P_{KLMN}=\\frac{1}{2}\\cdot\\frac{a\\sqrt{2}}{2}\\cdot\\frac{2a\\sqrt{2}}{3}=\\frac{a^2}{3}$.\n6. $P_{ABCD}=a^2$, więc $\\frac{P_{KLMN}}{P_{ABCD}}=\\frac{1}{3}$.\n\nOdpowiedź: stosunek pól jest równy $1:3$.",
+      "tekst": "Dany jest kwadrat $ABCD$. Przekątne $AC$ i $BD$ przecinają się w punkcie $E$. Punkty $K$ i $M$ są środkami odcinków – odpowiednio – $AE$ i $EC$. Punkty $L$ i $N$ leżą na przekątnej $BD$ tak, że $|BL| = \\frac{1}{3}|BE|$ i $|DN| = \\frac{1}{3}|DE|$ (zobacz rysunek). Wykaż, że stosunek pola czworokąta $KLMN$ do pola kwadratu $ABCD$ jest równy $1:3$.\n\n![Rysunek 1](/cke-matura/m15-maj/z28-fig1.png)",
+      "tekstV": 2
     },
     {
       "numer": 29,
       "dzial": "Funkcje",
       "tresc": "Oblicz najmniejszą i największą wartość funkcji kwadratowej &fnof;( x ) = x 2 − 6 x + 3 w przedziale &lang;0,4&rang;.",
-      "rozwiazanie": "**Krok 1.** Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.\n\n**Krok 2.** Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji będzie w tym punkcie. Oblicz wartość funkcji w wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.\n\n**Krok 3.** Oblicz wartości funkcji na krańcach przedziału: $f(0) = 0^2 - 6 \\cdot 0 + 3 = 3$ oraz $f(4) = 4^2 - 6 \\cdot 4 + 3 = 16 - 24 + 3 = -5$. Największą wartością będzie największa z obliczonych wartości, czyli $f(0)=3$.\n\n**Odpowiedź:** Najmniejsza wartość to $-6$, a największa wartość to $3$."
+      "rozwiazanie": "**Krok 1.** Oblicz współrzędną $x$ wierzchołka paraboli, korzystając ze wzoru $x_w = -\\frac{b}{2a}$. Dla funkcji $f(x) = x^2 - 6x + 3$, mamy $a=1$ i $b=-6$, więc $x_w = -\\frac{-6}{2 \\cdot 1} = 3$.\n\n**Krok 2.** Sprawdź, czy wierzchołek należy do przedziału $\\langle 0,4 \\rangle$. Ponieważ $x_w=3$ należy do przedziału $\\langle 0,4 \\rangle$, najmniejsza wartość funkcji będzie w tym punkcie. Oblicz wartość funkcji w wierzchołku: $f(3) = 3^2 - 6 \\cdot 3 + 3 = 9 - 18 + 3 = -6$.\n\n**Krok 3.** Oblicz wartości funkcji na krańcach przedziału: $f(0) = 0^2 - 6 \\cdot 0 + 3 = 3$ oraz $f(4) = 4^2 - 6 \\cdot 4 + 3 = 16 - 24 + 3 = -5$. Największą wartością będzie największa z obliczonych wartości, czyli $f(0)=3$.\n\n**Odpowiedź:** Najmniejsza wartość to $-6$, a największa wartość to $3$.",
+      "tekst": "Oblicz najmniejszą i największą wartość funkcji kwadratowej $f(x)=x^2-6x+3$ w przedziale $[0,4]$.",
+      "tekstV": 2
     },
     {
       "numer": 30,
       "dzial": "Funkcje",
       "tresc": "W układzie współrzędnych są dane punkty A = (−43,−12) , B = (50,19) . Prosta AB przecina oś Ox w punkcie P . Oblicz pierwszą współrzędną punktu P .",
-      "rozwiazanie": "**Krok 1.** Obliczamy współczynnik kierunkowy prostej $a$, korzystając ze wzoru $a = \\frac{y_B - y_A}{x_B - x_A}$. Mamy: $a = \\frac{19 - (-12)}{50 - (-43)} = \\frac{31}{93} = \\frac{1}{3}$.\n\n**Krok 2.** Wyznaczamy równanie prostej AB w postaci $y - y_A = a(x - x_A)$. Podstawiając dane punkty i obliczony współczynnik: $y - (-12) = \\frac{1}{3}(x - (-43)$, co po uproszczeniu daje $y + 12 = \\frac{1}{3}(x + 43)$.\n\n**Krok 3.** Punkt P leży na osi Ox, więc jego druga współrzędna jest równa 0 ($y_P = 0$). Podstawiamy $y = 0$ do równania prostej i obliczamy $x$: $0 + 12 = \\frac{1}{3}(x + 43)$, czyli $36 = x + 43$, co daje $x = 36 - 43 = -7$.\n\n**Odpowiedź:** $-7$"
+      "rozwiazanie": "1. Współczynnik kierunkowy prostej $AB$: $a=\\frac{19-(-12)}{50-(-43)}=\\frac{31}{93}=\\frac{1}{3}$.\n2. Równanie prostej: $y+12=\\frac{1}{3}(x+43)$.\n3. Punkt $P$ leży na osi $Ox$, więc $y=0$: $12=\\frac{1}{3}(x+43)$, czyli $36=x+43$, skąd $x=-7$.\n\nOdpowiedź: $-7$.",
+      "tekst": "W układzie współrzędnych są dane punkty $A=(-43,-12)$, $B=(50,19)$. Prosta $AB$ przecina oś $Ox$ w punkcie $P$. Oblicz pierwszą współrzędną punktu $P$.",
+      "tekstV": 2
     },
     {
       "numer": 31,
       "dzial": "Algebra",
       "tresc": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy 4 &frasl; 7 , a jeżeli do licznika i do mianownika dodamy 1, to otrzymamy 1 &frasl; 2 . Wyznacz ten ułamek.",
-      "rozwiazanie": "**Krok 1.** Oznaczmy szukany ułamek jako $\\frac{x}{y}$, gdzie $x, y$ są dodatnie i $\\frac{x}{y}$ jest nieskracalny. Z treści zadania tworzymy dwa równania:\n$\\frac{x + \\frac{1}{2}x}{y + \\frac{1}{2}x} = \\frac{4}{7}$ oraz $\\frac{x+1}{y+1} = \\frac{1}{2}$.\n\n**Krok 2.** Upraszczamy pierwsze równanie, przekształcając je do postaci: $7(\\frac{3}{2}x) = 4(y + \\frac{1}{2}x)$, co daje $10.5x = 4y + 2x$, czyli $8.5x = 4y$ lub $17x = 8y$. Z drugiego równania mamy $2(x+1) = y+1$, co daje $2x+2 = y+1$, czyli $y = 2x+1$.\n\n**Krok 3.** Podstawiamy $y = 2x+1$ do równania $17x = 8y$. Otrzymujemy $17x = 8(2x+1)$, czyli $17x = 16x+8$, skąd $x=8$. Obliczamy $y = 2 \\cdot 8 + 1 = 16+1 = 17$. Sprawdzamy, czy ułamek $\\frac{8}{17}$ jest nieskracalny (tak) i dodatni (tak).\n\n**Odpowiedź:** $\\frac{8}{17}$"
+      "rozwiazanie": "**Krok 1.** Oznaczmy szukany ułamek jako $\\frac{x}{y}$, gdzie $x, y$ są dodatnie i $\\frac{x}{y}$ jest nieskracalny. Z treści zadania tworzymy dwa równania:\n$\\frac{x + \\frac{1}{2}x}{y + \\frac{1}{2}x} = \\frac{4}{7}$ oraz $\\frac{x+1}{y+1} = \\frac{1}{2}$.\n\n**Krok 2.** Upraszczamy pierwsze równanie, przekształcając je do postaci: $7(\\frac{3}{2}x) = 4(y + \\frac{1}{2}x)$, co daje $10.5x = 4y + 2x$, czyli $8.5x = 4y$ lub $17x = 8y$. Z drugiego równania mamy $2(x+1) = y+1$, co daje $2x+2 = y+1$, czyli $y = 2x+1$.\n\n**Krok 3.** Podstawiamy $y = 2x+1$ do równania $17x = 8y$. Otrzymujemy $17x = 8(2x+1)$, czyli $17x = 16x+8$, skąd $x=8$. Obliczamy $y = 2 \\cdot 8 + 1 = 16+1 = 17$. Sprawdzamy, czy ułamek $\\frac{8}{17}$ jest nieskracalny (tak) i dodatni (tak).\n\n**Odpowiedź:** $\\frac{8}{17}$",
+      "tekst": "Jeżeli do licznika i do mianownika nieskracalnego dodatniego ułamka dodamy połowę jego licznika, to otrzymamy $\\frac{4}{7}$, a jeżeli do licznika i do mianownika dodamy $1$, to otrzymamy $\\frac{1}{2}$. Wyznacz ten ułamek.",
+      "tekstV": 2
     },
     {
       "numer": 32,
       "dzial": "Trygonometria",
       "tresc": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa 16. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy 3 &frasl; 5 . Oblicz pole powierzchni całkowitej tego graniastosłupa.",
-      "rozwiazanie": "**Krok 1.** Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość graniastosłupa ($h=16$). Przekątna graniastosłupa ($d$), przekątna podstawy ($p$) i wysokość graniastosłupa tworzą trójkąt prostokątny. Z treści zadania mamy $\\cos \\alpha = \\frac{p}{d} = \\frac{3}{5}$, gdzie $\\alpha$ to kąt nachylenia przekątnej graniastosłupa do płaszczyzny podstawy.\n\n**Krok 2.** Wyznaczamy zależności między $p$, $d$ i $a$. Przekątna podstawy graniastosłupa czworokątnego to $p = a\\sqrt{2}$. Z $\\cos \\alpha = \\frac{3}{5}$ oraz $p = a\\sqrt{2}$ mamy $\\frac{a\\sqrt{2}}{d} = \\frac{3}{5}$, czyli $d = \\frac{5a\\sqrt{2}}{3}$.\n\n**Krok 3.** Korzystamy z twierdzenia Pitagorasa dla trójkąta prostokątnego utworzonego przez $p$, $h$ i $d$: $p^2 + h^2 = d^2$. Podstawiamy znane wartości: $(a\\sqrt{2})^2 + 16^2 = (\\frac{5a\\sqrt{2}}{3})^2$. Po przekształceniach otrzymujemy $2a^2 + 256 = \\frac{50a^2}{9}$, co daje $\\frac{32a^2}{9} = 256$, a stąd $a^2 = 72$, więc $a = \\sqrt{72} = 6\\sqrt{2}$.\n\n**Krok 4.** Obliczamy pole powierzchni całkowitej graniastosłupa $P_c = 2P_p + P_b$. Pole podstawy $P_p = a^2 = (6\\sqrt{2})^2 = 72$. Pole boczne $P_b = 4a \\cdot h = 4 \\cdot 6\\sqrt{2} \\cdot 16 = 384\\sqrt{2}$. Zatem $P_c = 2 \\cdot 72 + 384\\sqrt{2} = 144 + 384\\sqrt{2}$.\n\n**Odpowiedź:** $144 + 384\\sqrt{2}$"
+      "rozwiazanie": "**Krok 1.** Oznaczmy przez $a$ długość krawędzi podstawy, a przez $h$ wysokość graniastosłupa ($h=16$). Przekątna graniastosłupa ($d$), przekątna podstawy ($p$) i wysokość graniastosłupa tworzą trójkąt prostokątny. Z treści zadania mamy $\\cos \\alpha = \\frac{p}{d} = \\frac{3}{5}$, gdzie $\\alpha$ to kąt nachylenia przekątnej graniastosłupa do płaszczyzny podstawy.\n\n**Krok 2.** Wyznaczamy zależności między $p$, $d$ i $a$. Przekątna podstawy graniastosłupa czworokątnego to $p = a\\sqrt{2}$. Z $\\cos \\alpha = \\frac{3}{5}$ oraz $p = a\\sqrt{2}$ mamy $\\frac{a\\sqrt{2}}{d} = \\frac{3}{5}$, czyli $d = \\frac{5a\\sqrt{2}}{3}$.\n\n**Krok 3.** Korzystamy z twierdzenia Pitagorasa dla trójkąta prostokątnego utworzonego przez $p$, $h$ i $d$: $p^2 + h^2 = d^2$. Podstawiamy znane wartości: $(a\\sqrt{2})^2 + 16^2 = (\\frac{5a\\sqrt{2}}{3})^2$. Po przekształceniach otrzymujemy $2a^2 + 256 = \\frac{50a^2}{9}$, co daje $\\frac{32a^2}{9} = 256$, a stąd $a^2 = 72$, więc $a = \\sqrt{72} = 6\\sqrt{2}$.\n\n**Krok 4.** Obliczamy pole powierzchni całkowitej graniastosłupa $P_c = 2P_p + P_b$. Pole podstawy $P_p = a^2 = (6\\sqrt{2})^2 = 72$. Pole boczne $P_b = 4a \\cdot h = 4 \\cdot 6\\sqrt{2} \\cdot 16 = 384\\sqrt{2}$. Zatem $P_c = 2 \\cdot 72 + 384\\sqrt{2} = 144 + 384\\sqrt{2}$.\n\n**Odpowiedź:** $144 + 384\\sqrt{2}$",
+      "tekst": "Wysokość graniastosłupa prawidłowego czworokątnego jest równa $16$. Przekątna graniastosłupa jest nachylona do płaszczyzny jego podstawy pod kątem, którego cosinus jest równy $\\frac{3}{5}$. Oblicz pole powierzchni całkowitej tego graniastosłupa.",
+      "tekstV": 2
     },
     {
       "numer": 33,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Wśród 115 osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne. Rodzaj kupionych biletów Liczba osób ulgowe 76 normalne 41 Uwaga! 27 osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
-      "rozwiazanie": "**Krok 1.** Oblicz, ile osób kupiło tylko jeden rodzaj biletu, odejmując od liczby osób kupujących bilety ulgowe lub normalne liczbę osób kupujących oba rodzaje biletów. $76 - 27 = 49$ (tylko ulgowe), $41 - 27 = 14$ (tylko normalne).\n\n**Krok 2.** Oblicz łączną liczbę osób, które kupiły przynajmniej jeden bilet, sumując osoby kupujące tylko ulgowe, tylko normalne oraz oba rodzaje biletów. $49 + 14 + 27 = 90$ osób.\n\n**Krok 3.** Oblicz liczbę osób, które nie kupiły żadnego biletu, odejmując od całkowitej liczby ankietowanych liczbę osób, które kupiły przynajmniej jeden bilet. $115 - 90 = 25$ osób.\n\n**Krok 4.** Oblicz prawdopodobieństwo zdarzenia, dzieląc liczbę osób, które nie kupiły żadnego biletu, przez całkowitą liczbę ankietowanych. Następnie skróć ułamek. $\\frac{25}{115} = \\frac{5}{23}$.\n\n**Odpowiedź:** $\\frac{5}{23}$"
+      "rozwiazanie": "**Krok 1.** Oblicz, ile osób kupiło tylko jeden rodzaj biletu, odejmując od liczby osób kupujących bilety ulgowe lub normalne liczbę osób kupujących oba rodzaje biletów. $76 - 27 = 49$ (tylko ulgowe), $41 - 27 = 14$ (tylko normalne).\n\n**Krok 2.** Oblicz łączną liczbę osób, które kupiły przynajmniej jeden bilet, sumując osoby kupujące tylko ulgowe, tylko normalne oraz oba rodzaje biletów. $49 + 14 + 27 = 90$ osób.\n\n**Krok 3.** Oblicz liczbę osób, które nie kupiły żadnego biletu, odejmując od całkowitej liczby ankietowanych liczbę osób, które kupiły przynajmniej jeden bilet. $115 - 90 = 25$ osób.\n\n**Krok 4.** Oblicz prawdopodobieństwo zdarzenia, dzieląc liczbę osób, które nie kupiły żadnego biletu, przez całkowitą liczbę ankietowanych. Następnie skróć ułamek. $\\frac{25}{115} = \\frac{5}{23}$.\n\n**Odpowiedź:** $\\frac{5}{23}$",
+      "tekst": "Wśród $115$ osób przeprowadzono badania ankietowe, związane z zakupami w pewnym kiosku. W poniższej tabeli przedstawiono informacje o tym, ile osób kupiło bilety tramwajowe ulgowe oraz ile osób kupiło bilety tramwajowe normalne.\n\n| Rodzaj kupionych biletów | Liczba osób |\n| --- | ---: |\n| ulgowe | 76 |\n| normalne | 41 |\n\nUwaga! $27$ osób spośród ankietowanych kupiło oba rodzaje biletów. Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że osoba losowo wybrana spośród ankietowanych nie kupiła żadnego biletu. Wynik przedstaw w formie nieskracalnego ułamka.",
+      "tekstV": 2
     },
     {
       "numer": 34,
       "dzial": "Statystyka",
       "tresc": "W nieskończonym ciągu arytmetycznym ( a n ) , określonym dla n ≥ 1 , suma jedenastu początkowych wyrazów tego ciągu jest równa 187. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu, jest równa 12. Wyrazy a 1 , a 3 , a k ciągu ( a n ), w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny ( b n ). Oblicz k . <ul class=\"",
-      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzorów na sumę ( $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)r)$ ) i średnią arytmetyczną ciągu arytmetycznego, a następnie ułóż układ równań. Dla sumy jedenastu wyrazów: $S_{11} = \\frac{11}{2}(2a_1 + 10r) = 187$. Średnia pierwszego, trzeciego i dziewiątego wyrazu: $\\frac{a_1 + a_3 + a_9}{3} = \\frac{a_1 + (a_1+2r) + (a_1+8r)}{3} = \\frac{3a_1+10r}{3} = 12$.\n\n**Krok 2.** Rozwiąż układ równań uzyskany w poprzednim kroku. Z pierwszego równania $11(a_1 + 5r) = 187 \\implies a_1 + 5r = 17$. Z drugiego równania $3a_1 + 10r = 36$. Po pomnożeniu pierwszego równania przez 2 i odjęciu od drugiego: $(3a_1 + 10r) - 2(a_1 + 5r) = 36 - 2(17) \\implies a_1 = 2$. Podstawiając $a_1=2$ do $a_1 + 5r = 17$, otrzymujemy $2 + 5r = 17 \\implies 5r = 15 \\implies r = 3$. Zatem $a_1 = 2$ i $r = 3$.\n\n**Krok 3.** Wykorzystaj warunek tworzenia ciągu geometrycznego. Wyrazy $a_1$, $a_3$, $a_k$ tworzą ciąg geometryczny, więc iloraz sąsiednich wyrazów jest stały: $\\frac{a_3}{a_1} = \\frac{a_k}{a_3}$. Oblicz $a_1 = 2$, $a_3 = a_1 + 2r = 2 + 2(3) = 8$. Następnie $a_k = a_1 + (k-1)r = 2 + (k-1)3$. Podstawiając do warunku: $\\frac{8}{2} = \\frac{2 + 3(k-1)}{8} \\implies 4 = \\frac{2 + 3k - 3}{8} \\implies 32 = 3k - 1 \\implies 3k = 33 \\implies k = 11$.\n\n**Odpowiedź:** 11"
+      "rozwiazanie": "**Krok 1.** Skorzystaj ze wzorów na sumę ( $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)r)$ ) i średnią arytmetyczną ciągu arytmetycznego, a następnie ułóż układ równań. Dla sumy jedenastu wyrazów: $S_{11} = \\frac{11}{2}(2a_1 + 10r) = 187$. Średnia pierwszego, trzeciego i dziewiątego wyrazu: $\\frac{a_1 + a_3 + a_9}{3} = \\frac{a_1 + (a_1+2r) + (a_1+8r)}{3} = \\frac{3a_1+10r}{3} = 12$.\n\n**Krok 2.** Rozwiąż układ równań uzyskany w poprzednim kroku. Z pierwszego równania $11(a_1 + 5r) = 187 \\implies a_1 + 5r = 17$. Z drugiego równania $3a_1 + 10r = 36$. Po pomnożeniu pierwszego równania przez 2 i odjęciu od drugiego: $(3a_1 + 10r) - 2(a_1 + 5r) = 36 - 2(17) \\implies a_1 = 2$. Podstawiając $a_1=2$ do $a_1 + 5r = 17$, otrzymujemy $2 + 5r = 17 \\implies 5r = 15 \\implies r = 3$. Zatem $a_1 = 2$ i $r = 3$.\n\n**Krok 3.** Wykorzystaj warunek tworzenia ciągu geometrycznego. Wyrazy $a_1$, $a_3$, $a_k$ tworzą ciąg geometryczny, więc iloraz sąsiednich wyrazów jest stały: $\\frac{a_3}{a_1} = \\frac{a_k}{a_3}$. Oblicz $a_1 = 2$, $a_3 = a_1 + 2r = 2 + 2(3) = 8$. Następnie $a_k = a_1 + (k-1)r = 2 + (k-1)3$. Podstawiając do warunku: $\\frac{8}{2} = \\frac{2 + 3(k-1)}{8} \\implies 4 = \\frac{2 + 3k - 3}{8} \\implies 32 = 3k - 1 \\implies 3k = 33 \\implies k = 11$.\n\n**Odpowiedź:** 11",
+      "tekst": "W nieskończonym ciągu arytmetycznym $(a_n)$, określonym dla $n\\ge1$, suma jedenastu początkowych wyrazów tego ciągu jest równa $187$. Średnia arytmetyczna pierwszego, trzeciego i dziewiątego wyrazu tego ciągu jest równa $12$. Wyrazy $a_1$, $a_3$, $a_k$ ciągu $(a_n)$, w podanej kolejności, tworzą nowy ciąg – trzywyrazowy ciąg geometryczny $(b_n)$. Oblicz $k$.",
+      "tekstV": 2
     }
   ],
   "fetchedAt": "2026-07-17T21:37:48.400Z"
