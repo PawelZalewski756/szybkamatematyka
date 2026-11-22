@@ -215,7 +215,7 @@ export function renderOgImage({
               color: "#a15d00",
             }}
           >
-            Bez karty na start
+            Darmowe konto, bez karty
           </div>
         </div>
       </div>

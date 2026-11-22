@@ -33,7 +33,7 @@ const FAQ_ITEMS = [
   {
     question: "Czy muszę mieć konto?",
     answer:
-      "Nie, żeby zacząć. Konto zapisuje postęp, serię i osiągnięcia oraz pozwala uczyć się na kilku urządzeniach.",
+      "Nie, żeby zacząć. Konto jest darmowe i zapisuje postęp, serię i osiągnięcia, więc możesz uczyć się na kilku urządzeniach. Założysz je w 30 sekund — bez karty.",
   },
   {
     question: "Skąd są arkusze?",
@@ -586,10 +586,11 @@ export function PricingTeaser() {
         <div className="mt-8 grid gap-4 lg:grid-cols-3">
           {SUBSCRIPTION_PLANS.map((plan) => {
             const highlighted = Boolean(plan.highlighted);
-            const ctaHref = plan.id === "start" ? "/trening" : "/cennik";
+            const ctaHref =
+              plan.id === "start" ? "/login?mode=signup" : "/cennik";
             const ctaLabel =
               plan.id === "start"
-                ? "Zacznij za darmo"
+                ? "Załóż darmowe konto"
                 : plan.id === "pro"
                   ? "Wybierz Pro"
                   : "Wybierz roczny";

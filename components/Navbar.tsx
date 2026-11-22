@@ -72,18 +72,34 @@ function NavbarActions({
   loggingOut: boolean;
   onLogout: () => void;
 }) {
-  // Gość: zawsze pokazuj Zaloguj od razu (bez czekania na Supabase).
-  // Zalogowany: chip / skeleton / wyloguj pojawiają się po rozpoznaniu sesji.
+  const pathname = usePathname();
+  // Na /login nagłówek nie dubluje akcji - strona ma własny przełącznik
+  // logowanie/rejestracja, a zmiana samego parametru nie przemontowuje widoku.
+  const isAuthPage = pathname === "/login";
+
+  // Gość: zawsze pokazuj „Załóż konto" + „Zaloguj" od razu (bez czekania
+  // na Supabase). Zalogowany: chip / skeleton / wyloguj pojawiają się po
+  // rozpoznaniu sesji.
   return (
     <div className="flex shrink-0 items-center gap-1.5">
       <ThemeToggle />
       {!user ? (
-        <Link
-          href="/login"
-          className="btn-primary rounded-md px-4 py-2 text-xs sm:text-sm"
-        >
-          Zaloguj
-        </Link>
+        isAuthPage ? null : (
+          <div className="flex items-center gap-1">
+            <Link
+              href="/login"
+              className="rounded-md px-2 py-2 text-xs font-bold text-muted transition-colors hover:text-foreground sm:text-sm"
+            >
+              Zaloguj
+            </Link>
+            <Link
+              href="/login?mode=signup"
+              className="btn-primary rounded-md px-4 py-2 text-xs sm:text-sm"
+            >
+              Załóż konto
+            </Link>
+          </div>
+        )
       ) : (
         <>
           {profileLoading && !profile ? (
@@ -113,6 +129,7 @@ function NavbarActions({
 
 export function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const isDesktopNav = useDesktopNav();
   const { isPro: subscriptionIsPro, loading: subscriptionLoading } =
     useSubscription();
@@ -273,12 +290,14 @@ export function Navbar() {
           <div className="flex shrink-0 items-center gap-1.5">
             <ThemeToggle />
             {!user ? (
-              <Link
-                href="/login"
-                className="btn-primary shrink-0 rounded-md px-3 py-1.5 text-xs"
-              >
-                Zaloguj
-              </Link>
+              pathname === "/login" ? null : (
+                <Link
+                  href="/login?mode=signup"
+                  className="btn-primary shrink-0 rounded-md px-3 py-1.5 text-xs"
+                >
+                  Załóż konto
+                </Link>
+              )
             ) : profile ? (
               <NavbarProfileChip profile={profile} />
             ) : null}
