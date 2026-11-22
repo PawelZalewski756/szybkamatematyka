@@ -94,7 +94,7 @@ export default function TeacherPanelPage() {
         <p className="mt-2 text-sm leading-relaxed text-muted">
           Docelowy panel nauczyciela (klasy, przypisywanie zadań, wyniki i
           faktury) wymaga kont szkolnych i osobnego wdrożenia. Ten ekran zbiera
-          to, co jest gotowe już teraz — bez udawania, że B2B jest skończone.
+          to, co jest gotowe już teraz - bez udawania, że B2B jest skończone.
         </p>
         <a
           href="mailto:kontakt@szybkamatematyka.pl?subject=Pakiet%20szkolny"

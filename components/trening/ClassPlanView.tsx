@@ -40,7 +40,7 @@ export function ClassPlanView() {
       </h1>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
         Wybierz klasę, a pokażemy tematy, które warto przerobić w tym roku.
-        Plan jest orientacyjny — kolejność może różnić się od programu Twojej
+        Plan jest orientacyjny - kolejność może różnić się od programu Twojej
         szkoły.
       </p>
 

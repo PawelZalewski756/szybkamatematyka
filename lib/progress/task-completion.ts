@@ -125,7 +125,7 @@ export async function recordTaskCompletion(
 
 /**
  * Dosyła lokalne (gość / sprzed migracji) identyfikatory rozwiązań do bazy.
- * Nie nalicza XP — służy tylko do odzyskania historii, którą uczeń ma w
+ * Nie nalicza XP - służy tylko do odzyskania historii, którą uczeń ma w
  * przeglądarce, a której nie było jeszcze w solved_tasks.
  */
 export async function syncLocalSolvedTasks(

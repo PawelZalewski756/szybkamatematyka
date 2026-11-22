@@ -29,7 +29,7 @@ type OgImageOptions = {
 export function renderOgImage({
   eyebrow = "MATURA · EGZAMIN ÓSMOKLASISTY",
   title = "Matematyka pod maturę i egzamin ósmoklasisty",
-  subtitle = "Teoria, zadania, arkusze CKE, powtórki i gry — w jednym miejscu.",
+  subtitle = "Teoria, zadania, arkusze CKE, powtórki i gry - w jednym miejscu.",
   footer = BRAND_DOMAIN,
   primaryLabel = "Zacznij trening",
   secondaryLabel = "Zobacz arkusze CKE",

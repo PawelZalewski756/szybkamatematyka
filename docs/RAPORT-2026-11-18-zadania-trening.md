@@ -25,8 +25,8 @@
 - `components/trening/TopicPageClient.tsx` + `lib/trening/summaries.ts`: nowe tematy dostają kartę „Mapa tematu” z lekcji, nawet bez ręcznego wpisu w `TOPIC_SUMMARIES`.
 
 ### 2.3. Pełna podstawa CKE
-- `lib/trening/cke-egzamin-8.ts`: **58 tematów** w 10 działach — cała podstawa klas IV–VIII (14 działów IV–VI + 15 działów VII–VIII).
-- `lib/trening/cke-matura-podstawowa.ts`: **76 tematów** w 8 działach — wszystkie sekcje CKE I–XIII, w tym funkcja kwadratowa, wielomiany, wyrażenia wymierne, ciągi, trygonometria, stereometria, prawdopodobieństwo warunkowe, pochodna.
+- `lib/trening/cke-egzamin-8.ts`: **58 tematów** w 10 działach - cała podstawa klas IV–VIII (14 działów IV–VI + 15 działów VII–VIII).
+- `lib/trening/cke-matura-podstawowa.ts`: **76 tematów** w 8 działach - wszystkie sekcje CKE I–XIII, w tym funkcja kwadratowa, wielomiany, wyrażenia wymierne, ciągi, trygonometria, stereometria, prawdopodobieństwo warunkowe, pochodna.
 - `docs/cke-podstawa-programowa.md`: lista źródeł CKE i wiążący kontrakt treningu.
 - Nowe zadania: **58 nowych plików cache** (20 zadań każdy) = **1160 zadań**; łącznie **2635 zadań** w 134 tematach.
 - Nowe lekcje: **58 nowych lekcji** (`materials-complete-e8.ts`, `materials-complete-matura.ts`); łącznie **134 lekcje**, wszystkie `full`/`comprehensive`.
@@ -60,13 +60,13 @@
 
 ## 4. Zrzuty ekranu
 
-- Przed: [`screenshots/arena-algebra.png`](../screenshots/arena-algebra.png) — wzór `2a+3b` uniesiony nad zdaniem.
-- Po: [`screenshots/final-arena-algebra.png`](../screenshots/final-arena-algebra.png) — wzór w linii tekstu.
-- Przed: [`screenshots/trening-matura.png`](../screenshots/trening-matura.png) — 11 tematów (plan liceum 3).
-- Po: [`screenshots/final-trening-matura.png`](../screenshots/final-trening-matura.png) — 76 tematów, 76 aktywnych.
-- Po: [`screenshots/final-trening-e8.png`](../screenshots/final-trening-e8.png) — 58 tematów, 58 aktywnych.
-- Po: [`screenshots/ulamki-play.png`](../screenshots/ulamki-play.png) — ułamek bez suwaka.
-- Po: [`screenshots/final-plan-klasa-5.png`](../screenshots/final-plan-klasa-5.png) — plan klasy 5 zapisany poprawnie.
+- Przed: [`screenshots/arena-algebra.png`](../screenshots/arena-algebra.png) - wzór `2a+3b` uniesiony nad zdaniem.
+- Po: [`screenshots/final-arena-algebra.png`](../screenshots/final-arena-algebra.png) - wzór w linii tekstu.
+- Przed: [`screenshots/trening-matura.png`](../screenshots/trening-matura.png) - 11 tematów (plan liceum 3).
+- Po: [`screenshots/final-trening-matura.png`](../screenshots/final-trening-matura.png) - 76 tematów, 76 aktywnych.
+- Po: [`screenshots/final-trening-e8.png`](../screenshots/final-trening-e8.png) - 58 tematów, 58 aktywnych.
+- Po: [`screenshots/ulamki-play.png`](../screenshots/ulamki-play.png) - ułamek bez suwaka.
+- Po: [`screenshots/final-plan-klasa-5.png`](../screenshots/final-plan-klasa-5.png) - plan klasy 5 zapisany poprawnie.
 
 ## 5. Co pozostaje
 
@@ -132,7 +132,7 @@ Naprawa:
   - odtworzenie triggera `handle_new_user`,
   - RPC `get_platform_stats()` liczące konta z `auth.users` (total, 7 dni, 24 h),
     profile, rozwiązania i aktywnych uczniów,
-- `/stats` używa RPC, a gdy go brak — awaryjnie liczy `auth.users` przez admin API,
+- `/stats` używa RPC, a gdy go brak - awaryjnie liczy `auth.users` przez admin API,
 - `/api/signup` wysyła powiadomienie Telegram **przed** odpowiedzią (nie w `after()`),
 - nowy cron `/api/telegram/sync-signups` (`vercel.json`, co 15 minut (Vercel Pro)) dosyła
   powiadomienia dla kont z ostatnich 7 dni; idempotencja przez

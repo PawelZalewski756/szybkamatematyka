@@ -47,7 +47,7 @@ export function SchoolInquiryForm() {
       <div className="rounded-2xl border border-success/30 bg-success/10 p-5" role="status">
         <p className="flex items-center gap-2 font-bold text-success">
           <CheckCircle2 className="h-5 w-5" aria-hidden />
-          Dziękujemy — zapytanie zostało wysłane.
+          Dziękujemy - zapytanie zostało wysłane.
         </p>
         <p className="mt-2 text-sm text-muted">
           Odpowiemy na podany adres e-mail. Jeśli sprawa jest pilna, napisz
@@ -61,7 +61,7 @@ export function SchoolInquiryForm() {
     <form onSubmit={onSubmit} className="rounded-2xl border border-surface-border bg-surface p-5">
       <h2 className="text-lg font-extrabold text-foreground">Zapytaj o pakiet szkolny</h2>
       <p className="mt-1 text-sm text-muted">
-        Napisz, czego potrzebuje szkoła — odpowiemy z propozycją.
+        Napisz, czego potrzebuje szkoła - odpowiemy z propozycją.
       </p>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">

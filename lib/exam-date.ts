@@ -17,7 +17,7 @@ export function isValidExamDate(value: string): boolean {
 
 /**
  * Liczba dni do egzaminu (0 = dziś, ujemna = po terminie).
- * Liczymy po lokalnych datach, bez godzin — DST nie zmienia wyniku.
+ * Liczymy po lokalnych datach, bez godzin - DST nie zmienia wyniku.
  */
 export function daysUntilExam(date: string, now: Date = new Date()): number | null {
   if (!isValidExamDate(date)) return null;

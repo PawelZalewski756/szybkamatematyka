@@ -179,7 +179,7 @@ function main(): void {
         `  ✗ ${item.id} [${item.topic}] ${item.content}`,
       );
       console.log(
-        `      correct_answer=${item.answer} | wyliczono=${item.computed ?? "—"}`,
+        `      correct_answer=${item.answer} | wyliczono=${item.computed ?? "-"}`,
       );
     }
   }

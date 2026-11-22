@@ -109,7 +109,7 @@ export function FeatureGrid() {
             Wszystko w jednym miejscu
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Nie tylko zadania. Cały system nauki — od diagnozy po ostatnią
+            Nie tylko zadania. Cały system nauki - od diagnozy po ostatnią
             powtórkę przed egzaminem.
           </p>
         </div>

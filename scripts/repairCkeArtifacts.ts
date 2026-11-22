@@ -22,7 +22,7 @@ const FIXES: Record<string, Record<number, string>> = {
   "m16-maj": {
     22: [
       "**Krok 1.** Wszystkich wyników trzech rzutów monetą jest $2^3=8$.",
-      "**Krok 2.** Dokładnie dwa orły otrzymujemy w wynikach $OO R$, $O R O$, $R O O$ — są $3$ takie wyniki.",
+      "**Krok 2.** Dokładnie dwa orły otrzymujemy w wynikach $OO R$, $O R O$, $R O O$ - są $3$ takie wyniki.",
       "**Krok 3.** Zatem $p=\\frac{3}{8}=0{,}375$.",
       "**Krok 4.** $0{,}375 \\ge 0{,}35$, więc poprawna jest odpowiedź C.",
       "**Odpowiedź:** C) $p \\ge 0{,}35$.",
@@ -30,7 +30,7 @@ const FIXES: Record<string, Record<number, string>> = {
   },
   "m17-maj": {
     17: [
-      "**Krok 1.** Kąt przy wierzchołku $A$ ma miarę $30^\\circ$, a kąt przy $B$ jest prosty. Trzeci kąt ma więc $60^\\circ$ — trójkąt jest prostokątny o kątach $30^\\circ,60^\\circ,90^\\circ$.",
+      "**Krok 1.** Kąt przy wierzchołku $A$ ma miarę $30^\\circ$, a kąt przy $B$ jest prosty. Trzeci kąt ma więc $60^\\circ$ - trójkąt jest prostokątny o kątach $30^\\circ,60^\\circ,90^\\circ$.",
       "**Krok 2.** Bok $BC=a$ leży naprzeciw kąta $30^\\circ$, więc jest najkrótszym bokiem. Przeciwprostokątna $AC=2a$.",
       "**Krok 3.** Z twierdzenia Pitagorasa: $AB^2+BC^2=AC^2$, czyli $AB^2+a^2=(2a)^2=4a^2$, więc $AB=a\\sqrt{3}$.",
       "**Krok 4.** Obwód: $AB+BC+AC=a\\sqrt{3}+a+2a=(3+\\sqrt{3})a$.",
@@ -58,8 +58,8 @@ const FIXES: Record<string, Record<number, string>> = {
     26: [
       "**Krok 1.** Liczba jest trzycyfrowa i parzysta, więc jej cyfra jedności należy do $\\{0,2,4,6,8\\}$.",
       "**Krok 2.** Cyfra $7$ występuje dokładnie raz. Rozpatrujemy położenie tej cyfry.",
-      "**Krok 3.** $7$ na miejscu setek: cyfra dziesiątek — $9$ możliwości (bez $7$), cyfra jedności — $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.",
-      "**Krok 4.** $7$ na miejscu dziesiątek: cyfra setek — $8$ możliwości (bez $0$ i $7$), cyfra jedności — $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.",
+      "**Krok 3.** $7$ na miejscu setek: cyfra dziesiątek - $9$ możliwości (bez $7$), cyfra jedności - $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.",
+      "**Krok 4.** $7$ na miejscu dziesiątek: cyfra setek - $8$ możliwości (bez $0$ i $7$), cyfra jedności - $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.",
       "**Krok 5.** $7$ na miejscu jedności nie daje liczby parzystej, więc ten przypadek odpada.",
       "**Krok 6.** Łącznie $45+40=85$ liczb.",
       "**Odpowiedź:** A) $85$.",

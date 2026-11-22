@@ -534,7 +534,7 @@ async function buildCommandReply(command: string, args: string[]): Promise<strin
     if (grant.status === "skipped_paid") {
       return [
         `ℹ️ ${grant.nick}${grant.email ? ` (${grant.email})` : ""} ma aktywne płatne Pro Stripe.`,
-        "Nie nadpisałem subskrypcji — gift nie jest potrzebny.",
+        "Nie nadpisałem subskrypcji - gift nie jest potrzebny.",
       ].join("\n");
     }
 

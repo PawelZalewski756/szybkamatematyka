@@ -62,7 +62,7 @@ async function main() {
     console.log(
       isBugReportApologyConfigured()
         ? "Resend skonfigurowany. Użyj --send, żeby wysłać."
-        : "Brak RESEND_API_KEY — to tylko podgląd. Uzupełnij .env.local i użyj --send.",
+        : "Brak RESEND_API_KEY - to tylko podgląd. Uzupełnij .env.local i użyj --send.",
     );
     return;
   }
@@ -75,7 +75,7 @@ async function main() {
   }
   if (!isBugReportApologyConfigured()) {
     console.error(
-      "Brak RESEND_API_KEY w .env.local — nie mogę wysłać maili. Użyj --dry-run, żeby zobaczyć treść.",
+      "Brak RESEND_API_KEY w .env.local - nie mogę wysłać maili. Użyj --dry-run, żeby zobaczyć treść.",
     );
     process.exit(1);
   }

@@ -262,7 +262,7 @@ export function SheetView() {
     return (
       <div className="page-container py-10">
         <h1 className="text-2xl font-bold text-foreground">
-          {sheet.title} — wyniki
+          {sheet.title} - wyniki
         </h1>
         <p className="mt-1 text-sm text-muted">
           {classLabel(sheet.schoolClass)}, grupa {sheet.group}
@@ -607,7 +607,7 @@ function ResultTask({
             const given = answers.tf[task.id]?.[i] ?? null;
             return (
               <li key={i}>
-                <MathText content={s.text} /> — poprawnie:{" "}
+                <MathText content={s.text} /> - poprawnie:{" "}
                 {s.truth ? "P" : "F"}, Twoja odpowiedź:{" "}
                 {given === null ? "brak" : given ? "P" : "F"}
               </li>
@@ -674,7 +674,7 @@ function ResultTask({
             <ul className="space-y-1 text-foreground">
               {task.scheme.map((s, i) => (
                 <li key={i}>
-                  {pointsLabel(s.points)} — <MathText content={s.text} />
+                  {pointsLabel(s.points)} - <MathText content={s.text} />
                 </li>
               ))}
             </ul>

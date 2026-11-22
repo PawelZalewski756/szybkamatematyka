@@ -48,7 +48,7 @@ export type Profile = {
   subscriptionPlan?: SubscriptionPlanId | null;
   subscriptionCurrentPeriodEnd?: string | null;
   subscriptionCancelAtPeriodEnd?: boolean;
-  /** none | stripe | gift | manual — rozróżnia płatne Pro od przyznanego. */
+  /** none | stripe | gift | manual - rozróżnia płatne Pro od przyznanego. */
   proSource?: ProSource;
   proGrantedReason?: string | null;
 };
