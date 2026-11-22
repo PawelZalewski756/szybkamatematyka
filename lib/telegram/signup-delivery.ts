@@ -97,6 +97,14 @@ export async function deliverSignupNotification(
   if (!options.user && !supabase) missing.push("SUPABASE_SERVICE_ROLE_KEY");
 
   if (missing.length > 0) {
+    const configuredAdmins =
+      process.env.TELEGRAM_ADMIN_IDS ?? process.env.ADMIN_TELEGRAM_ID ?? "";
+    if (adminIds.size === 0 && configuredAdmins.trim()) {
+      console.error(
+        "[telegram-signup] TELEGRAM_ADMIN_IDS jest ustawione, ale nie zawiera żadnego numerycznego ID:",
+        configuredAdmins,
+      );
+    }
     console.error(
       "[telegram-signup] Brak konfiguracji:",
       missing.join(", "),
@@ -139,6 +147,11 @@ export async function deliverSignupNotification(
       options.maxAgeMs ?? MAX_SIGNUP_AGE_MS,
     )
   ) {
+    console.info(
+      "[telegram-signup] Pominięto powiadomienie - konto starsze niż limit:",
+      user.id,
+      user.created_at,
+    );
     return {
       status: 202,
       body: { delivered: false, reason: "account is not recent" },
