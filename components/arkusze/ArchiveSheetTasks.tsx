@@ -395,18 +395,26 @@ export function ArchiveSheetTasks({ tasks }: { tasks: ArchiveSheetTaskData[] }) 
         <div className="rounded-2xl border border-accent/30 bg-accent/5 px-4 py-4 text-center">
           <p className="inline-flex items-center gap-2 text-sm font-bold text-foreground">
             <Lock className="h-4 w-4 text-accent" aria-hidden />
-            Zaloguj się, aby zaznaczać odpowiedzi i sprawdzać zadania
+            Załóż darmowe konto, aby zaznaczać odpowiedzi i sprawdzać zadania
           </p>
           <p className="mt-1 text-xs text-muted">
-            Darmowe konto: zamknięte bez limitu, 10 sprawdzeń zadań otwartych
-            przez AI w miesiącu.
+            Konto jest darmowe: zadania zamknięte bez limitu, 10 sprawdzeń zadań
+            otwartych przez AI w miesiącu.
           </p>
-          <Link
-            href="/login"
-            className="btn-chunky-soft mt-3 inline-block px-4 py-2 text-sm"
-          >
-            Zaloguj się
-          </Link>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link
+              href="/login?mode=signup"
+              className="btn-chunky-soft px-4 py-2 text-sm"
+            >
+              Załóż darmowe konto
+            </Link>
+            <Link
+              href="/login"
+              className="text-xs font-bold text-muted transition-colors hover:text-foreground"
+            >
+              Mam już konto
+            </Link>
+          </div>
         </div>
       ) : null}
       {tasks.map((task) => (

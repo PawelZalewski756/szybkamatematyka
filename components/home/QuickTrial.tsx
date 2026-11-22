@@ -2,6 +2,7 @@
 
 import { ArrowRight, Check } from "lucide-react";
 import { recordTaskCompletion } from "@/lib/progress/task-completion";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -67,6 +68,7 @@ export function QuickTrial() {
   const [answer, setAnswer] = useState<string | null>(null);
   const [mistakes, setMistakes] = useState(0);
   const sessionId = useRef<string | null>(null);
+  const { isLoggedIn, loading: authLoading } = useSubscription();
 
   const { tasks, label, href } = TRACKS[track];
   const task = tasks[taskIndex];
@@ -222,18 +224,39 @@ export function QuickTrial() {
               ? "Świetnie! Oba zadania bez pomyłki."
               : `Gotowe! Błędnych odpowiedzi: ${mistakes}.`}
           </p>
+          {!authLoading && !isLoggedIn ? (
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Konto zapisze Twój wynik, serię dni i postęp na wszystkich
+              urządzeniach.
+            </p>
+          ) : null}
           <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-            <Link
-              href={href}
-              className="btn-chunky px-5 py-3 text-base"
-            >
-              Trenuj dalej: {label}
-              <ArrowRight className="h-5 w-5" aria-hidden />
-            </Link>
+            {!authLoading && !isLoggedIn ? (
+              <>
+                <Link
+                  href="/login?mode=signup"
+                  className="btn-chunky px-5 py-3 text-base"
+                >
+                  Zapisz wynik — załóż konto
+                  <ArrowRight className="h-5 w-5" aria-hidden />
+                </Link>
+                <Link
+                  href={href}
+                  className="text-sm font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                >
+                  Trenuj bez konta
+                </Link>
+              </>
+            ) : (
+              <Link href={href} className="btn-chunky px-5 py-3 text-base">
+                Trenuj dalej: {label}
+                <ArrowRight className="h-5 w-5" aria-hidden />
+              </Link>
+            )}
             <button
               type="button"
               onClick={() => reset(track)}
-              className="text-sm font-bold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+              className="text-sm font-bold text-muted underline decoration-surface-border underline-offset-4 transition hover:text-foreground"
             >
               Jeszcze raz
             </button>

@@ -100,18 +100,8 @@ export const HOME_FEATURES: readonly HomeFeature[] = [
     title: "Powtórki",
     description:
       "Zadania wracają w rytmie spaced repetition — dokładnie wtedy, gdy zaczynasz je zapominać.",
-    href: "#powtorki",
+    href: "/powtorki",
     icon: "RefreshCw",
-  },
-  {
-    id: "plan-tygodnia",
-    group: "learn",
-    title: "Plan tygodnia",
-    description:
-      "7 dni, 2–3 zadania dziennie i jasny cel. Plan układa się z daty egzaminu i Twoich zaległości.",
-    href: "#plan-tygodnia",
-    icon: "CalendarRange",
-    badge: "Nowe",
   },
   {
     id: "sprawdziany",
@@ -146,7 +136,7 @@ export const HOME_FEATURES: readonly HomeFeature[] = [
     title: "Ranking i osiągnięcia",
     description:
       "Top 20 w trzech kategoriach i 26 odznak do zdobycia. Sprawdź, ile brakuje Ci do podium.",
-    href: "#ranking",
+    href: "/rankingi",
     icon: "Trophy",
   },
   {
@@ -167,16 +157,6 @@ export const HOME_FEATURES: readonly HomeFeature[] = [
     href: "#ai",
     icon: "Sparkles",
     badge: "Pro",
-  },
-  {
-    id: "matura-rozszerzona",
-    group: "progress",
-    title: "Matura rozszerzona",
-    description:
-      "12 oficjalnych arkuszy i mapa zakresu. Pełna ścieżka tematyczna w przygotowaniu.",
-    href: "/matura-rozszerzona",
-    icon: "GraduationCap",
-    badge: "W przygotowaniu",
   },
   {
     id: "polecenia",

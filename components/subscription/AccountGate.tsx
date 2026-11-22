@@ -42,11 +42,23 @@ export function AccountGate({
         {featureLabel} wymaga darmowego konta
       </p>
       <p className="mt-1 text-xs text-muted">
-        Załóż konto, aby zaznaczać odpowiedzi i sprawdzać zadania.
+        Załóż je w 30 sekund, żeby zaznaczać odpowiedzi i sprawdzać zadania.
+        Postęp zostanie na koncie.
       </p>
-      <Link href="/login" className="btn-chunky-soft mt-3 inline-block px-4 py-2 text-sm">
-        Zaloguj się
-      </Link>
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+        <Link
+          href="/login?mode=signup"
+          className="btn-chunky-soft px-4 py-2 text-sm"
+        >
+          Załóż darmowe konto
+        </Link>
+        <Link
+          href="/login"
+          className="text-xs font-bold text-muted transition-colors hover:text-foreground"
+        >
+          Mam już konto
+        </Link>
+      </div>
     </div>
   );
 }

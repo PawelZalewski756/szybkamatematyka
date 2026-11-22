@@ -522,7 +522,13 @@ export function TaskArena({
 
         {guestHint && !userId && (
           <p className="mb-2 text-center text-xs font-semibold text-amber-300/90">
-            Zaloguj się, aby zapisać postęp i zdobywać XP.
+            <Link
+              href="/login?mode=signup"
+              className="underline decoration-amber-300/50 underline-offset-2 hover:decoration-amber-300"
+            >
+              Załóż darmowe konto
+            </Link>{" "}
+            aby zapisać postęp i zdobywać XP.
           </p>
         )}
 

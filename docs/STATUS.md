@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-20 20:58 UTC · branch `feature/google-ads-zakup-pro` · commit `0dd539c`
+> Ostatnia aktualizacja: 2026-11-22 22:24 UTC · branch `feature/rejestracja-cta` · commit `8f09dd3`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -21,9 +21,9 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Migracje Supabase | 51 | `supabase/migrations` |
 | Strony App Router | 46 | `app/**/page.tsx` |
 | Endpointy API | 32 | `app/**/route.ts` |
-| Pliki źródłowe TS/TSX | 655 | bez `node_modules` |
+| Pliki źródłowe TS/TSX | 656 | bez `node_modules` |
 | Pliki testów jednostkowych | 93 | `tests/*.test.ts` |
 | Asercje `it`/`test` w testach | 561 | statycznie |
 | Pliki E2E | 12 | `e2e/*.spec.ts` |
-| Scenariusze E2E | 77 | statycznie |
+| Scenariusze E2E | 79 | statycznie |
 <!-- STATUS:END -->

@@ -54,19 +54,28 @@ export function ReviewAccessGate({ children }: { children: ReactNode }) {
       <div className="mx-auto flex w-full max-w-xl flex-1 items-center justify-center px-4 py-12">
         <div className="card-raised w-full p-6 text-center sm:p-8">
           <h1 className="text-xl font-extrabold text-foreground">
-            Powtórki są dostępne po zalogowaniu
+            Powtórki zapisują się na koncie
           </h1>
           <p className="mt-2 text-sm text-muted">
-            Zaloguj się, aby wrócić do zapisanych zadań i kontynuować naukę.
+            Załóż darmowe konto, aby wracać do zapisanych zadań i kontynuować
+            naukę na każdym urządzeniu.
           </p>
           {state === "error" ? (
             <p className="mt-3 text-sm text-muted">
               Nie udało się potwierdzić sesji. Spróbuj ponownie.
             </p>
           ) : null}
-          <Link href="/login" className="btn-primary mt-5 inline-flex">
-            Zaloguj się
-          </Link>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <Link href="/login?mode=signup" className="btn-primary">
+              Załóż darmowe konto
+            </Link>
+            <Link
+              href="/login"
+              className="text-sm font-bold text-muted transition-colors hover:text-foreground"
+            >
+              Mam już konto
+            </Link>
+          </div>
         </div>
       </div>
     );

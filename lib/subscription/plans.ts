@@ -27,7 +27,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
       "Wszystkie minigry bez limitu",
       "Podgląd bazy zadań i arkuszy CKE",
       "Codzienne wyzwanie i powtórki",
-      "Bez karty - rejestracja opcjonalna",
+      "Bez karty - konto zapisuje postęp",
     ],
   },
   {
