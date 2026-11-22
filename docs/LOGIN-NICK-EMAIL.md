@@ -5,7 +5,7 @@
 - Pole „Nick lub e-mail” przyjmuje oba identyfikatory.
 - E-mail: bezpośrednio `supabase.auth.signInWithPassword`.
 - Nick: `POST /api/auth/login` tłumaczy nick na e-mail przez `service_role`
-  i dopiero potem loguje. Klient dostaje tylko tokeny sesji — **e-mail nie jest
+  i dopiero potem loguje. Klient dostaje tylko tokeny sesji - **e-mail nie jest
   wysyłany do przeglądarki**.
 - Nick jest wyszukiwany w `profiles.nick` / `profiles.nickname` bez względu na
   wielkość liter.
@@ -15,7 +15,7 @@
 ## Wymagania
 
 - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
-- `SUPABASE_SERVICE_ROLE_KEY` (tylko serwer) — bez niego logowanie nickiem
+- `SUPABASE_SERVICE_ROLE_KEY` (tylko serwer) - bez niego logowanie nickiem
   zwraca 503; logowanie e-mailem nadal działa.
 - Konto musi mieć potwierdzony e-mail (Supabase Auth).
 
@@ -28,5 +28,5 @@
 
 ## Testy
 
-- `tests/login-identifier.test.ts` — nick, e-mail, nieznany nick, złe hasło.
+- `tests/login-identifier.test.ts` - nick, e-mail, nieznany nick, złe hasło.
 - `npm test -- --run tests/login-identifier.test.ts`.

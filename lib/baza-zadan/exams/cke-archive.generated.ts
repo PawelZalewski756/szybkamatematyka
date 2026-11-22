@@ -3150,7 +3150,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C.",
     "solutionSteps": [
-      "Sprawdzamy kolejne liczby:\n- $x=1$: $-1+1-1=-1$, a $-1<-2$ jest fałszem.\n- $x=-1$: $1-1+1=1$, fałsz.\n- $x=2$: $-32+8-2=-26<-2$ — prawda.\n- $x=-2$: $32-8+2=26$, fałsz."
+      "Sprawdzamy kolejne liczby:\n- $x=1$: $-1+1-1=-1$, a $-1<-2$ jest fałszem.\n- $x=-1$: $1-1+1=1$, fałsz.\n- $x=2$: $-32+8-2=-26<-2$ - prawda.\n- $x=-2$: $32-8+2=26$, fałsz."
     ],
     "examSource": {
       "kind": "matura",
@@ -3270,7 +3270,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A.",
     "solutionSteps": [
-      "1. Mnożymy obie strony przez $x+5$ (przy $x\\ne-5$): $3x-1=3(x+5)$.\n2. $3x-1=3x+15$, czyli $-1=15$ — sprzeczność.\n3. Równanie nie ma rozwiązań rzeczywistych."
+      "1. Mnożymy obie strony przez $x+5$ (przy $x\\ne-5$): $3x-1=3(x+5)$.\n2. $3x-1=3x+15$, czyli $-1=15$ - sprzeczność.\n3. Równanie nie ma rozwiązań rzeczywistych."
     ],
     "examSource": {
       "kind": "matura",
@@ -3654,7 +3654,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C.",
     "solutionSteps": [
-      "1. Wszystkich wyników trzech rzutów monetą jest $2^3=8$.\n2. Dokładnie dwa orły otrzymujemy w wynikach $OOR$, $ORO$, $ROO$ — są $3$ takie wyniki.\n3. Zatem $p=\\frac{3}{8}=0{,}375$, czyli $0{,}35\\lt p\\le0{,}5$."
+      "1. Wszystkich wyników trzech rzutów monetą jest $2^3=8$.\n2. Dokładnie dwa orły otrzymujemy w wynikach $OOR$, $ORO$, $ROO$ - są $3$ takie wyniki.\n3. Zatem $p=\\frac{3}{8}=0{,}375$, czyli $0{,}35\\lt p\\le0{,}5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -4227,7 +4227,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C.",
     "solutionSteps": [
-      "1. $x=0$ lub $x^2-4=0$ lub $x^2+4=0$.\n2. Rozwiązania rzeczywiste: $0,2,-2$ — trzy."
+      "1. $x=0$ lub $x^2-4=0$ lub $x^2+4=0$.\n2. Rozwiązania rzeczywiste: $0,2,-2$ - trzy."
     ],
     "examSource": {
       "kind": "matura",
@@ -4720,7 +4720,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B.",
     "solutionSteps": [
-      "1. Dzielniki $24$: $1,2,3,4,6,8,12,24$ — jest ich $8$.\n2. $P(A)=\\frac{8}{24}=\\frac{1}{3}$."
+      "1. Dzielniki $24$: $1,2,3,4,6,8,12,24$ - jest ich $8$.\n2. $P(A)=\\frac{8}{24}=\\frac{1}{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -4926,9 +4926,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ — jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$.",
+    "explanation": "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ - jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$.",
     "solutionSteps": [
-      "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ — jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$."
+      "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ - jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5247,7 +5247,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D.",
     "solutionSteps": [
-      "1. $a+b=0$ oraz $3a+b=-2$.\n2. Odejmując: $2a=-2$, więc $a=-1$? Sprawdzenie: $b=1$, $3(-1)+1=-2$ — tak. 3. $a=-1$."
+      "1. $a+b=0$ oraz $3a+b=-2$.\n2. Odejmując: $2a=-2$, więc $a=-1$? Sprawdzenie: $b=1$, $3(-1)+1=-2$ - tak. 3. $a=-1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -5909,9 +5909,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "1. Wszystkich par: $7\\cdot7=49$.\n2. Reszty w $A$: $(0,2)$, $(1,3)$, $(2,2)$; w $B$: $(0,2)$, $(1,3)$, $(2,2)$.\n3. Sprzyjające: $(0,0)$: $2\\cdot2=4$, $(1,2)$: $3\\cdot2=6$, $(2,1)$: $2\\cdot3=6$ — razem $16$.\n4. $P=\\frac{16}{49}$.",
+    "explanation": "1. Wszystkich par: $7\\cdot7=49$.\n2. Reszty w $A$: $(0,2)$, $(1,3)$, $(2,2)$; w $B$: $(0,2)$, $(1,3)$, $(2,2)$.\n3. Sprzyjające: $(0,0)$: $2\\cdot2=4$, $(1,2)$: $3\\cdot2=6$, $(2,1)$: $2\\cdot3=6$ - razem $16$.\n4. $P=\\frac{16}{49}$.",
     "solutionSteps": [
-      "1. Wszystkich par: $7\\cdot7=49$.\n2. Reszty w $A$: $(0,2)$, $(1,3)$, $(2,2)$; w $B$: $(0,2)$, $(1,3)$, $(2,2)$.\n3. Sprzyjające: $(0,0)$: $2\\cdot2=4$, $(1,2)$: $3\\cdot2=6$, $(2,1)$: $2\\cdot3=6$ — razem $16$.\n4. $P=\\frac{16}{49}$."
+      "1. Wszystkich par: $7\\cdot7=49$.\n2. Reszty w $A$: $(0,2)$, $(1,3)$, $(2,2)$; w $B$: $(0,2)$, $(1,3)$, $(2,2)$.\n3. Sprzyjające: $(0,0)$: $2\\cdot2=4$, $(1,2)$: $3\\cdot2=6$, $(2,1)$: $2\\cdot3=6$ - razem $16$.\n4. $P=\\frac{16}{49}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -6661,7 +6661,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 2,
     "explanation": "C.",
     "solutionSteps": [
-      "1. Pierwsza cyfra: $2$ lub $5$ — $2$ możliwości.\n2. Każda z pozostałych czterech cyfr: $3$ możliwości.\n3. $2\\cdot3^4=162$."
+      "1. Pierwsza cyfra: $2$ lub $5$ - $2$ możliwości.\n2. Każda z pozostałych czterech cyfr: $3$ możliwości.\n3. $2\\cdot3^4=162$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10875,8 +10875,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "solutionSteps": [
       "Liczba jest trzycyfrowa i parzysta, więc jej cyfra jedności należy do $\\{0,2,4,6,8\\}$.",
       "Cyfra $7$ występuje dokładnie raz. Rozpatrujemy położenie tej cyfry.",
-      "$7$ na miejscu setek: cyfra dziesiątek — $9$ możliwości (bez $7$), cyfra jedności — $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.",
-      "$7$ na miejscu dziesiątek: cyfra setek — $8$ możliwości (bez $0$ i $7$), cyfra jedności — $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.",
+      "$7$ na miejscu setek: cyfra dziesiątek - $9$ możliwości (bez $7$), cyfra jedności - $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.",
+      "$7$ na miejscu dziesiątek: cyfra setek - $8$ możliwości (bez $0$ i $7$), cyfra jedności - $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.",
       "$7$ na miejscu jedności nie daje liczby parzystej, więc ten przypadek odpada.",
       "Łącznie $45+40=85$ liczb."
     ],

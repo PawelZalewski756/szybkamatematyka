@@ -71,7 +71,7 @@
       "numer": 8,
       "dzial": "Równania",
       "tresc": "Równanie x(x 2 – 4)(x 2 + 4) = 0 z niewiadomą x A) nie ma rozwiązań w zbiorze liczb rzeczywistych. B) ma dokładnie dwa rozwiązania w zbiorze liczb rzeczywistych. C) ma dokładnie trzy rozwiązania w zbiorze liczb rzeczywistych. D) ma dokładnie pięć rozwiązań w zbiorze liczb rzeczywistych.",
-      "rozwiazanie": "1. $x=0$ lub $x^2-4=0$ lub $x^2+4=0$.\n2. Rozwiązania rzeczywiste: $0,2,-2$ — trzy.\n\nOdpowiedź: C.",
+      "rozwiazanie": "1. $x=0$ lub $x^2-4=0$ lub $x^2+4=0$.\n2. Rozwiązania rzeczywiste: $0,2,-2$ - trzy.\n\nOdpowiedź: C.",
       "tekst": "Równanie $x(x^2-4)(x^2+4)=0$ z niewiadomą $x$\n\nA) nie ma rozwiązań w zbiorze liczb rzeczywistych.\nB) ma dokładnie dwa rozwiązania w zbiorze liczb rzeczywistych.\nC) ma dokładnie trzy rozwiązania w zbiorze liczb rzeczywistych.\nD) ma dokładnie pięć rozwiązań w zbiorze liczb rzeczywistych.",
       "tekstV": 2,
       "correctIndex": 2
@@ -224,7 +224,7 @@
       "numer": 25,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od 1 do 24 losujemy jedną liczbę. Niech A oznacza zdarzenie, że wylosowana liczba będzie dzielnikiem liczby 24. Wtedy prawdopodobieństwo zdarzenia A jest równe A) 1 &frasl; 4 B) 1 &frasl; 3 C) 1 &frasl; 8 D) 1 &frasl; 6",
-      "rozwiazanie": "1. Dzielniki $24$: $1,2,3,4,6,8,12,24$ — jest ich $8$.\n2. $P(A)=\\frac{8}{24}=\\frac{1}{3}$.\n\nOdpowiedź: B.",
+      "rozwiazanie": "1. Dzielniki $24$: $1,2,3,4,6,8,12,24$ - jest ich $8$.\n2. $P(A)=\\frac{8}{24}=\\frac{1}{3}$.\n\nOdpowiedź: B.",
       "tekst": "Ze zbioru dwudziestu czterech kolejnych liczb naturalnych od $1$ do $24$ losujemy jedną liczbę. Niech $A$ oznacza zdarzenie, że wylosowana liczba będzie dzielnikiem liczby $24$. Wtedy prawdopodobieństwo zdarzenia $A$ jest równe\n\nA) $\\frac{1}{4}$\nB) $\\frac{1}{3}$\nC) $\\frac{1}{8}$\nD) $\\frac{1}{6}$",
       "tekstV": 2,
       "correctIndex": 1
@@ -289,7 +289,7 @@
       "numer": 33,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia, że wylosujemy liczbę, która jest równocześnie mniejsza od 40 i podzielna przez 3. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
-      "rozwiazanie": "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ — jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$.",
+      "rozwiazanie": "1. Liczb dwucyfrowych jest $90$.\n2. Liczby mniejsze od $40$ i podzielne przez $3$: $12,15,\\ldots,39$ - jest ich $10$.\n3. $P=\\frac{10}{90}=\\frac{1}{9}$.",
       "tekst": "Ze zbioru wszystkich liczb naturalnych dwucyfrowych losujemy jedną liczbę. Oblicz prawdopodobieństwo zdarzenia, że wylosujemy liczbę, która jest równocześnie mniejsza od $40$ i podzielna przez $3$. Wynik zapisz w postaci ułamka zwykłego nieskracalnego.",
       "tekstV": 2
     },

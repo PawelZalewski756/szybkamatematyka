@@ -25,7 +25,7 @@ musi **pierwszy** wysłać botowi `/start` na prywatnym czacie. Dopiero wtedy
 `sendMessage` zwróci `200`. Bez tego dostaniesz `403 Forbidden: bot can't
 initiate conversation with a user`.
 
-To jest najczęstsza przyczyna braku powiadomień — kod działa, ale Telegram
+To jest najczęstsza przyczyna braku powiadomień - kod działa, ale Telegram
 odrzuca wiadomość.
 
 ## 3. Sprawdzenie krok po kroku
@@ -36,8 +36,8 @@ odrzuca wiadomość.
    - ✅ przy `@nazwa_bota`,
    - ✅ przy webhooku (jeśli używasz komend).
 3. Kliknij **Wyślij testową wiadomość**:
-   - jeśli dojdzie — powiadomienia o rejestracji też zadziałają,
-   - jeśli nie — zobaczysz dokładny błąd Telegrama (403, 400, 401).
+   - jeśli dojdzie - powiadomienia o rejestracji też zadziałają,
+   - jeśli nie - zobaczysz dokładny błąd Telegrama (403, 400, 401).
 
 ## 4. Najczęstsze błędy
 
@@ -88,7 +88,7 @@ Jeśli wynik to **0**:
 `/users` liczy teraz tym samym agregatorem co `/admin/analityka`
 (`fetchSolvedStats`), więc liczby powinny się zgadzać.
 
-## 8. Komenda `/pro` — ręczne Pro
+## 8. Komenda `/pro` - ręczne Pro
 
 Administrator może przyznać Pro z Telegrama:
 

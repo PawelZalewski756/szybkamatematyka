@@ -56,7 +56,7 @@ export function buildChoices(
   return { choices, correctIndex: choices.indexOf(correct) };
 }
 
-/** Odpowiedzi liczbowe — błędne z typowych pomyłek, reszta jako sąsiednie wartości. */
+/** Odpowiedzi liczbowe - błędne z typowych pomyłek, reszta jako sąsiednie wartości. */
 export function numericQuestion(
   rng: Rng,
   data: {
@@ -84,7 +84,7 @@ export function numericQuestion(
   };
 }
 
-/** Odpowiedzi tekstowe (ułamki, wyrażenia) — wymagają jawnych błędnych wariantów. */
+/** Odpowiedzi tekstowe (ułamki, wyrażenia) - wymagają jawnych błędnych wariantów. */
 export function textQuestion(
   rng: Rng,
   data: {

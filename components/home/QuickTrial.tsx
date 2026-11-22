@@ -237,7 +237,7 @@ export function QuickTrial() {
                   href="/login?mode=signup"
                   className="btn-chunky px-5 py-3 text-base"
                 >
-                  Zapisz wynik — załóż konto
+                  Zapisz wynik - załóż konto
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </Link>
                 <Link

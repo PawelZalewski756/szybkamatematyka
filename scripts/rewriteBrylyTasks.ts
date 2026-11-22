@@ -27,7 +27,7 @@ const SPECS: Spec[] = [
   { content: "Ile ścian ma ostrosłup czworokątny?", correct: "5", wrongs: ["4", "6", "8"], explanation: "Ostrosłup czworokątny ma $1$ podstawę i $4$ ściany boczne, razem $5$ ścian.", difficulty: 2 },
   { content: "Ile krawędzi ma graniastosłup trójkątny?", correct: "9", wrongs: ["6", "12", "8"], explanation: "Graniastosłup trójkątny ma $3$ krawędzie w każdej podstawie i $3$ krawędzie boczne, razem $9$.", difficulty: 2 },
   { content: "Ile wierzchołków ma graniastosłup trójkątny?", correct: "6", wrongs: ["5", "8", "9"], explanation: "Graniastosłup trójkątny ma po $3$ wierzchołki w każdej podstawie, razem $6$.", difficulty: 2 },
-  { content: "Która bryła nie ma ani wierzchołka, ani krawędzi?", correct: "kula", wrongs: ["walec", "stożek", "sześcian"], explanation: "Kula ma tylko powierzchnię zakrzywioną — nie ma wierzchołków ani krawędzi.", difficulty: 1 },
+  { content: "Która bryła nie ma ani wierzchołka, ani krawędzi?", correct: "kula", wrongs: ["walec", "stożek", "sześcian"], explanation: "Kula ma tylko powierzchnię zakrzywioną - nie ma wierzchołków ani krawędzi.", difficulty: 1 },
   { content: "Która siatka składa się z sześciu kwadratów?", correct: "sześcian", wrongs: ["prostopadłościan", "ostrosłup", "walec"], explanation: "Siatka sześcianu to $6$ jednakowych kwadratów.", difficulty: 1 },
   { content: "Ile ścian ma graniastosłup trójkątny?", correct: "5", wrongs: ["6", "4", "8"], explanation: "Graniastosłup trójkątny ma $2$ podstawy i $3$ ściany boczne, razem $5$ ścian.", difficulty: 2 },
   { content: "Ile krawędzi ma ostrosłup czworokątny?", correct: "8", wrongs: ["5", "6", "12"], explanation: "Ostrosłup czworokątny ma $4$ krawędzie podstawy i $4$ krawędzie boczne, razem $8$.", difficulty: 2 },

@@ -5,7 +5,7 @@
 miejscu.
 
 > **Plan rozwoju i decyzje produktowe:** [`docs/PLAN-ROZWOJU.md`](docs/PLAN-ROZWOJU.md)
-> — co jest ukryte, dlaczego i jak przywrócić.
+> - co jest ukryte, dlaczego i jak przywrócić.
 
 ## Co robi aplikacja?
 

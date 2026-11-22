@@ -31,11 +31,11 @@ function WarmupSection() {
         <div className="max-w-2xl">
           <p className="text-overline">DARMOWA ROZGRZEWKA</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            Zanim założysz konto — wzory i zagadka.
+            Zanim założysz konto - wzory i zagadka.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
             Sześć wzorów na start i jedno pytanie dziennie. Bez konta i bez
-            zobowiązań — konto dodasz w każdej chwili, gdy zechcesz zapisywać
+            zobowiązań - konto dodasz w każdej chwili, gdy zechcesz zapisywać
             postęp.
           </p>
         </div>
@@ -94,7 +94,7 @@ export function HomeDashboardV2({
               </h1>
 
               <p className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-                Teoria, zadania, arkusze CKE, powtórki i gry — w jednym miejscu.
+                Teoria, zadania, arkusze CKE, powtórki i gry - w jednym miejscu.
                 Bez skakania po dziesięciu stronach i bez zgadywania, od czego
                 zacząć.
               </p>

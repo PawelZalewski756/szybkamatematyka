@@ -1,11 +1,11 @@
 # Propozycja przebudowy strony głównej
 
 **Data:** 20.11.2026  
-**Status:** do rozmowy — nic nie jest jeszcze wdrażane  
+**Status:** do rozmowy - nic nie jest jeszcze wdrażane  
 **Zakres:** strona główna, nowa strona `/funkcje`, lista braków produktowych
 
 > **Wersja 2 po uwagach:** [`propozycja-strona-glowna-v2-2026-11-20.md`](propozycja-strona-glowna-v2-2026-11-20.md)
-> — ranking, AI, sprawdziany, powtórki i plan tygodnia jako osobne sekcje;
+> - ranking, AI, sprawdziany, powtórki i plan tygodnia jako osobne sekcje;
 > cennik przeniesiony na sam dół.
 
 ---
@@ -13,34 +13,34 @@
 ## 1. W skrócie
 
 Dziś strona główna pokazuje **3 ścieżki** (trening, baza zadań, arkusze CKE) i kilka
-dodatków (minigry, liczby, wzory, zagadka). W serwisie jest jednak **21 obszarów** —
+dodatków (minigry, liczby, wzory, zagadka). W serwisie jest jednak **21 obszarów** -
 m.in. powtórki, sprawdziany, wyzwania, pojedynki, rankingi, osiągnięcia, profil,
 asysta AI, cennik, program poleceń i panel dla szkół. Użytkownik nie ma szansy
 dowiedzieć się o nich z home page.
 
 Proponuję układ:
 
-1. **Hero** — jedna obietnica + szybka próba (zostaje, bez zmian).
-2. **„Wszystko w jednym miejscu”** — 16 kart w 4 grupach, każda z jednym zdaniem
+1. **Hero** - jedna obietnica + szybka próba (zostaje, bez zmian).
+2. **„Wszystko w jednym miejscu”** - 16 kart w 4 grupach, każda z jednym zdaniem
    i linkiem. To jest odpowiedź na „co jeszcze dostaję”.
-3. **„Jak to działa”** — 3 kroki: diagnoza → trening → egzamin i powtórki.
-4. **Dla nauczyciela** — osobny pas, bo to inny odbiorca i inna konwersja.
-5. **Cennik** — krótki pasek Start / Pro / Roczny (dziś na home go nie ma).
-6. **Darmowa rozgrzewka** — wzory i zagadka dnia (zostają, ale niżej).
-7. **FAQ** — 6 pytań, które najczęściej blokują rejestrację.
+3. **„Jak to działa”** - 3 kroki: diagnoza → trening → egzamin i powtórki.
+4. **Dla nauczyciela** - osobny pas, bo to inny odbiorca i inna konwersja.
+5. **Cennik** - krótki pasek Start / Pro / Roczny (dziś na home go nie ma).
+6. **Darmowa rozgrzewka** - wzory i zagadka dnia (zostają, ale niżej).
+7. **FAQ** - 6 pytań, które najczęściej blokują rejestrację.
 8. **Końcowe CTA + stopka jako pełna mapa serwisu.**
 
-Równolegle proponuję **nową stronę `/funkcje`** — pełny, szczegółowy katalog
+Równolegle proponuję **nową stronę `/funkcje`** - pełny, szczegółowy katalog
 wszystkiego, co jest w serwisie. Home page ma być skanowalny, a `/funkcje` ma
 domykać pytanie „a co dokładnie tam jest?”. Link do niej w karcie „wszystko”
 i w stopce.
 
 **Czego nie mamy (skrót):**
 
-- matura rozszerzona to na razie tylko arkusze — brak planu, teorii i zadań,
-- B2B to generator i panel z linkami — brak klas, przypisań, wyników i faktur,
-- przypomnienia są tylko w przeglądarce — brak e-maili,
-- raport dla rodzica to wydruk profilu — brak podziału na działy i historii,
+- matura rozszerzona to na razie tylko arkusze - brak planu, teorii i zadań,
+- B2B to generator i panel z linkami - brak klas, przypisań, wyników i faktur,
+- przypomnienia są tylko w przeglądarce - brak e-maili,
+- raport dla rodzica to wydruk profilu - brak podziału na działy i historii,
 - brak trybu egzaminu na czas,
 - brak zeszytu błędów,
 - brak globalnej wyszukiwarki,
@@ -65,7 +65,7 @@ Legenda: ✅ = jest na stronie głównej, 🟡 = tylko wzmianka/pill, ❌ = nie 
 | 4 | Baza zadań | 1926 zadań w katalogu (+ zadania CMS), filtry egzamin/dział/poziom, wyszukiwarka w panelu, rozwiązania w Pro | `/baza-zadan` | ✅ |
 | 5 | Arkusze CKE | 46 arkuszy: 40 sesji CKE (20 podstawowych, 12 rozszerzonych, 8 ósmoklasisty) + 6 arkuszy treningowych; klucz, druk, rozwiązania w Pro | `/trening/arkusze` | ✅ |
 | 6 | Sprawdziany | generator dla klas 6–8 i liceum: grupy A/B, klucz, punktacja, PDF, tryb online, ocena AI zadań otwartych | `/sprawdziany`, `/sprawdziany/druk` | ❌ |
-| 7 | Panel nauczyciela | generator, baza zadań, arkusze CKE, matura rozszerzona, plan dla klasy — jedno miejsce dla nauczyciela | `/dla-szkol/panel` | ❌ |
+| 7 | Panel nauczyciela | generator, baza zadań, arkusze CKE, matura rozszerzona, plan dla klasy - jedno miejsce dla nauczyciela | `/dla-szkol/panel` | ❌ |
 | 8 | Diagnoza startowa | 8 krótkich pytań, wynik per dział, zapis lokalny, bez konta | `/diagnostyka` | 🟡 |
 | 9 | Plan klasy | orientacyjny plan roku dla klas 4–8 i szkół średnich; klasy 1–3 bez planu (świadoma decyzja) | `/plan-klasy` | ❌ |
 | 10 | Powtórki | spaced repetition w wariancie SM-2: własna talia, dodawanie zadań, sesja, podsumowanie | `/powtorki` | ❌ |
@@ -104,15 +104,15 @@ i co daje Pro?”.
 
 ---
 
-## 4. Trzy warianty — i co rekomenduję
+## 4. Trzy warianty - i co rekomenduję
 
 | | A. Hub + `/funkcje` | B. Wszystko na home page | C. Segmentacja po odbiorcy |
 |---|---|---|---|
 | Idea | home = 16 kart w 4 grupach + link do pełnej listy | home = 30+ pozycji, pełny katalog | przełącznik: uczeń E8 / maturzysta / nauczyciel / rodzic |
 | Długość | średnia (ok. 1,5× dziś) | bardzo długa (2,5–3×) | średnia, ale treść zmienna |
 | Skanowalność | wysoka | niska | wysoka |
-| Konwersja | wysoka — jedno główne CTA | ryzyko rozproszenia | wysoka, jeśli trafimy z segmentem |
-| SEO | dobre — `/funkcje` zbiera długi ogon | dobre, ale wszystko na jednym URL | średnie — treść ukryta za stanem |
+| Konwersja | wysoka - jedno główne CTA | ryzyko rozproszenia | wysoka, jeśli trafimy z segmentem |
+| SEO | dobre - `/funkcje` zbiera długi ogon | dobre, ale wszystko na jednym URL | średnie - treść ukryta za stanem |
 | Koszt | 1–2 dni | 2–3 dni | 3–5 dni |
 | Ryzyko | trzeba pilnować, by karty nie były „ścianą” | użytkownik przewija i nie klika | więcej stanu, trudniejsze testy |
 
@@ -120,12 +120,12 @@ i co daje Pro?”.
 „wszystko” dodajemy dyskretny przełącznik „Uczę się do: ósmoklasisty / matury”,
 który podświetla rekomendowane karty. Pełny katalog żyje na `/funkcje`.
 
-Jeśli zależy Ci, żeby **dosłownie wszystko** było na home page, wybierz B — ale
+Jeśli zależy Ci, żeby **dosłownie wszystko** było na home page, wybierz B - ale
 wtedy trzeba zaakceptować długość i mniejszą klikalność. Nie polecam.
 
 ---
 
-## 5. Proponowany układ strony głównej — sekcja po sekcji
+## 5. Proponowany układ strony głównej - sekcja po sekcji
 
 Poniżej gotowy szkielet i copy do zatwierdzenia. Kolejność jest celowa:
 najpierw „co z tego mam”, potem „jak to działa”, potem „ile to kosztuje”.
@@ -157,7 +157,7 @@ najpierw „co z tego mam”, potem „jak to działa”, potem „ile to kosztu
 
 **H1:** Przygotuj się do egzaminu z matematyki.
 
-**Podtytuł:** Teoria, zadania, arkusze CKE, powtórki i gry — w jednym miejscu.
+**Podtytuł:** Teoria, zadania, arkusze CKE, powtórki i gry - w jednym miejscu.
 Bez skakania po dziesięciu stronach i bez zgadywania, od czego zacząć.
 
 **CTA:**
@@ -171,50 +171,50 @@ Bez skakania po dziesięciu stronach i bez zgadywania, od czego zacząć.
 **Szybka próba** (obecny komponent `QuickTrial`) zostaje po prawej. To najlepszy
 element home page: daje natychmiastową wartość bez konta.
 
-### 5.2. „Wszystko w jednym miejscu” — 16 kart w 4 grupach
+### 5.2. „Wszystko w jednym miejscu” - 16 kart w 4 grupach
 
 **Nagłówek:** Wszystko, czego potrzebujesz do matematyki  
-**Lead:** Nie tylko zadania. Cały system nauki — od diagnozy po ostatnią powtórkę
+**Lead:** Nie tylko zadania. Cały system nauki - od diagnozy po ostatnią powtórkę
 przed egzaminem.
 
 Karty są kompaktowe: ikona, tytuł, jedno zdanie, link „Otwórz →”. Na mobile
 zwijają się w akordeon per grupa.
 
-#### Grupa 1 — „Zacznij tutaj”
+#### Grupa 1 - „Zacznij tutaj”
 
 | Karta | Copy | Link | Badge |
 |---|---|---|---|
-| Trening tematyczny | Teoria, zadania i rozwiązania krok po kroku. Wybierasz temat i widzisz, co już umiesz. | `/trening` | — |
-| Diagnoza startowa | 8 pytań i konkretny wynik: od czego zacząć i co powtórzyć najpierw. | `/diagnostyka` | — |
-| Arkusze CKE | 46 arkuszy z lat 2015–2026: matura podstawowa, rozszerzona i egzamin ósmoklasisty. Rozwiąż online albo wydrukuj; klucz i pełne rozwiązania w Pro. | `/trening/arkusze` | — |
-| Minigry | 34 szybkie gry w trzech trybach. 60 sekund rachunków zamiast przewijania telefonu. | `/minigry` | — |
+| Trening tematyczny | Teoria, zadania i rozwiązania krok po kroku. Wybierasz temat i widzisz, co już umiesz. | `/trening` | - |
+| Diagnoza startowa | 8 pytań i konkretny wynik: od czego zacząć i co powtórzyć najpierw. | `/diagnostyka` | - |
+| Arkusze CKE | 46 arkuszy z lat 2015–2026: matura podstawowa, rozszerzona i egzamin ósmoklasisty. Rozwiąż online albo wydrukuj; klucz i pełne rozwiązania w Pro. | `/trening/arkusze` | - |
+| Minigry | 34 szybkie gry w trzech trybach. 60 sekund rachunków zamiast przewijania telefonu. | `/minigry` | - |
 
-#### Grupa 2 — „Ucz się i utrwalaj”
-
-| Karta | Copy | Link | Badge |
-|---|---|---|---|
-| Teoria | 134 lekcje z wzorami i przykładami. Krótko i konkretnie, bez akademickiego lania wody. | `/trening` | — |
-| Baza zadań | 1926 zadań z filtrami po egzaminie, dziale i poziomie. Rozwiązania krok po kroku odblokowuje Pro. | `/baza-zadan` | — |
-| Powtórki | Zadania wracają w rytmie spaced repetition — dokładnie wtedy, gdy zaczynasz je zapominać. | `/powtorki` | — |
-| Plan klasy | Wybierz klasę i zobacz, które tematy warto przerobić w tym roku. | `/plan-klasy` | — |
-
-#### Grupa 3 — „Sprawdzaj i rywalizuj”
+#### Grupa 2 - „Ucz się i utrwalaj”
 
 | Karta | Copy | Link | Badge |
 |---|---|---|---|
-| Sprawdziany | Generator klasówek: grupy A/B, punktacja, klucz i PDF w minutę. Dla nauczyciela i dla siebie. | `/sprawdziany` | — |
-| Wyzwania | 5 pytań dziennie i seria dni. Mały rytuał, który trzyma cię w nauce. | `/wyzwania` | — |
-| Pojedynki | 1v1 na żywo, na kod, na jednym urządzeniu albo z botem. Ten sam zestaw pytań, jeden zwycięzca. | `/pojedynki` | — |
-| Rankingi i osiągnięcia | Top 20 w trzech kategoriach i 26 odznak do zdobycia. | `/rankingi` | — |
+| Teoria | 134 lekcje z wzorami i przykładami. Krótko i konkretnie, bez akademickiego lania wody. | `/trening` | - |
+| Baza zadań | 1926 zadań z filtrami po egzaminie, dziale i poziomie. Rozwiązania krok po kroku odblokowuje Pro. | `/baza-zadan` | - |
+| Powtórki | Zadania wracają w rytmie spaced repetition - dokładnie wtedy, gdy zaczynasz je zapominać. | `/powtorki` | - |
+| Plan klasy | Wybierz klasę i zobacz, które tematy warto przerobić w tym roku. | `/plan-klasy` | - |
 
-#### Grupa 4 — „Twój progres i wsparcie”
+#### Grupa 3 - „Sprawdzaj i rywalizuj”
 
 | Karta | Copy | Link | Badge |
 |---|---|---|---|
-| Profil i postępy | XP, poziom, seria, historia zadań i raport do druku. Widzisz, że idziesz do przodu. | `/profil` | — |
+| Sprawdziany | Generator klasówek: grupy A/B, punktacja, klucz i PDF w minutę. Dla nauczyciela i dla siebie. | `/sprawdziany` | - |
+| Wyzwania | 5 pytań dziennie i seria dni. Mały rytuał, który trzyma cię w nauce. | `/wyzwania` | - |
+| Pojedynki | 1v1 na żywo, na kod, na jednym urządzeniu albo z botem. Ten sam zestaw pytań, jeden zwycięzca. | `/pojedynki` | - |
+| Rankingi i osiągnięcia | Top 20 w trzech kategoriach i 26 odznak do zdobycia. | `/rankingi` | - |
+
+#### Grupa 4 - „Twój progres i wsparcie”
+
+| Karta | Copy | Link | Badge |
+|---|---|---|---|
+| Profil i postępy | XP, poziom, seria, historia zadań i raport do druku. Widzisz, że idziesz do przodu. | `/profil` | - |
 | Asystent AI | Podpowiedź, gdy utkniesz, i ocena zadań otwartych. Bez podawania gotowca. | `/trening` | Pro |
 | Matura rozszerzona | 12 oficjalnych arkuszy i mapa zakresu. Pełna ścieżka tematyczna w przygotowaniu. | `/matura-rozszerzona` | W przygotowaniu |
-| Program poleceń | Zaproś 2 znajomych, którzy naprawdę zaczną ćwiczyć, i odbierz 30 dni Pro. | `/polecenia` | — |
+| Program poleceń | Zaproś 2 znajomych, którzy naprawdę zaczną ćwiczyć, i odbierz 30 dni Pro. | `/polecenia` | - |
 
 **Pod siatką:** `Pełna lista funkcji →` `/funkcje`
 
@@ -227,9 +227,9 @@ zwijają się w akordeon per grupa.
 zgłaszanie błędów · eksport danych.
 
 > Uwaga: karta „Asystent AI” prowadzi do treningu, bo nie ma osobnej strony AI.
-> Jeśli chcemy osobne `/ai`, to już nowa funkcja — patrz sekcja 7.
+> Jeśli chcemy osobne `/ai`, to już nowa funkcja - patrz sekcja 7.
 
-### 5.3. „Jak to działa” — 3 kroki
+### 5.3. „Jak to działa” - 3 kroki
 
 **Nagłówek:** Od pierwszego pytania do ostatniej powtórki  
 **Lead:** Trzy kroki, które możesz przejść dziś. Bez planowania na pół roku.
@@ -242,7 +242,7 @@ zgłaszanie błędów · eksport danych.
 
 CTA pod krokami: `Zacznij od diagnozy` → `/diagnostyka`.
 
-### 5.4. Dla nauczyciela — osobny pas
+### 5.4. Dla nauczyciela - osobny pas
 
 **Nagłówek:** Prowadzisz lekcje? Sprawdzian zrobisz w minutę.  
 **Copy:** Wybierasz klasę i dział, generujesz grupy A i B, drukujesz z kluczem
@@ -256,7 +256,7 @@ i punktacją. Bez Worda i bez liczenia punktów na piechotę.
 **CTA:** `Zobacz generator` → `/sprawdziany` · `Panel nauczyciela` → `/dla-szkol/panel`
 · `Pakiet szkolny` → `/dla-szkol`
 
-### 5.5. Cennik — krótki pasek
+### 5.5. Cennik - krótki pasek
 
 **Nagłówek:** Start jest darmowy. Pro odblokowuje pełną naukę.
 
@@ -267,12 +267,12 @@ i punktacją. Bez Worda i bez liczenia punktów na piechotę.
 | Roczny | 249 zł/rok | wszystko z Pro, jedna płatność, oszczędność 99 zł |
 
 **CTA:** `Zobacz pełny cennik` → `/cennik`  
-**Pod spodem:** `Zaproś 2 znajomych — 30 dni Pro` → `/polecenia`
+**Pod spodem:** `Zaproś 2 znajomych - 30 dni Pro` → `/polecenia`
 
 > Dziś cennik jest tylko na `/cennik`. Uważam, że na home page musi być przynajmniej
 > zajawka, bo „czy to darmowe?” to jedno z pierwszych pytań.
 
-### 5.6. Darmowa rozgrzewka — wzory i zagadka
+### 5.6. Darmowa rozgrzewka - wzory i zagadka
 
 Zostają obecne sekcje (`FormulaSheet`, `DailyPuzzle`), ale schodzą niżej i dostają
 wspólny nagłówek: **„Nie chcesz się jeszcze rejestrować? Zacznij od wzorów i zagadki.”**
@@ -280,7 +280,7 @@ wspólny nagłówek: **„Nie chcesz się jeszcze rejestrować? Zacznij od wzor�
 To ważne: home page nie może skończyć się na cenniku. Dajemy jeszcze jedną
 bezpłatną, natychmiastową wartość.
 
-### 5.7. FAQ — 6 pytań
+### 5.7. FAQ - 6 pytań
 
 | Pytanie | Odpowiedź |
 |---|---|
@@ -289,7 +289,7 @@ bezpłatną, natychmiastową wartość.
 | Skąd są arkusze? | Z oficjalnych arkuszy CKE. Nie jesteśmy oficjalnym serwisem CKE i nie publikujemy przecieków. |
 | Czy to zastąpi korepetytora? | Nie. To narzędzie do regularnej pracy. Rozwiązania i AI pomagają, gdy utkniesz, ale nie odrabiają zadań za Ciebie. |
 | Czy mogę uczyć się na telefonie? | Tak. Strona działa w przeglądarce na telefonie i komputerze. |
-| Czy matura rozszerzona jest gotowa? | Mamy 12 oficjalnych arkuszy i mapę zakresu. Pełna ścieżka z teorią i zadaniami jest w przygotowaniu — nie udajemy, że jest skończona. |
+| Czy matura rozszerzona jest gotowa? | Mamy 12 oficjalnych arkuszy i mapę zakresu. Pełna ścieżka z teorią i zadaniami jest w przygotowaniu - nie udajemy, że jest skończona. |
 
 ### 5.8. Końcowe CTA
 
@@ -324,7 +324,7 @@ matematyki”, „sprawdziany z matematyki online”, „powtórki matematyki”
 2. Sekcje tematyczne (te same 4 grupy co na home page), ale każda pozycja ma
    2–4 zdania, zrzut/ikonę i link.
 3. Tabela „Co dostajesz w Start, a co w Pro”.
-4. „Czego jeszcze nie ma” — krótka, uczciwa lista „w przygotowaniu”
+4. „Czego jeszcze nie ma” - krótka, uczciwa lista „w przygotowaniu”
    (matura rozszerzona, B2B, e-maile, tryb egzaminu).
 5. FAQ i CTA.
 
@@ -334,7 +334,7 @@ z jednego źródła. Nad Link do `/funkcje` w stopce i w sekcji „wszystko”.
 
 ---
 
-## 7. Czego jeszcze nie mamy — propozycje
+## 7. Czego jeszcze nie mamy - propozycje
 
 Legenda rozmiaru: **S** = 1–3 dni, **M** = 1–2 tyg., **L** = 2–4 tyg., **XL** = 4–8 tyg.
 
@@ -342,12 +342,12 @@ Legenda rozmiaru: **S** = 1–3 dni, **M** = 1–2 tyg., **L** = 2–4 tyg., **X
 
 | Priorytet | Propozycja | Problem, który rozwiązuje | Rozmiar |
 |---|---|---|---|
-| P1 | **Matura rozszerzona — pełna ścieżka** | Dziś są tylko arkusze. Uczeń rozszerzenia nie ma planu, teorii ani zadań. To najbardziej widoczna obietnica bez pokrycia. | L |
+| P1 | **Matura rozszerzona - pełna ścieżka** | Dziś są tylko arkusze. Uczeń rozszerzenia nie ma planu, teorii ani zadań. To najbardziej widoczna obietnica bez pokrycia. | L |
 | P1 | **B2B: klasy, przypisania, wyniki, faktury** | Panel nauczyciela to dziś zestaw linków. Szkoła nie może przypisać sprawdzianu klasie ani zobaczyć wyników. | XL |
 | P1 | **E-maile z przypomnieniami** | Przypomnienia są tylko w przeglądarce, więc działają, gdy użytkownik sam wejdzie na stronę. | M |
 | P2 | **Raport rodzica** | Wydruk profilu nie pokazuje podziału na działy ani historii. Rodzic nie widzi, co dziecko realnie umie. | S–M |
 
-### 7.2. Nowe rekomendacje — domknięcie pętli nauki
+### 7.2. Nowe rekomendacje - domknięcie pętli nauki
 
 | Priorytet | Propozycja | Problem, który rozwiązuje | Rozmiar |
 |---|---|---|---|
@@ -364,49 +364,49 @@ Legenda rozmiaru: **S** = 1–3 dni, **M** = 1–2 tyg., **L** = 2–4 tyg., **X
 
 ### 7.3. Czego nie robić teraz
 
-- **Sklep za XP i kosmetyki** — fajne, ale nie zwiększa wyników egzaminu.
-- **Publiczne profile i znajomi** — moderacja, RODO, za dużo na ten etap.
-- **Certyfikaty i dyplomy** — sensowne dopiero przy B2B.
-- **Kolejne minigry** — jest ich 34; problemem nie jest liczba, tylko konwersja.
+- **Sklep za XP i kosmetyki** - fajne, ale nie zwiększa wyników egzaminu.
+- **Publiczne profile i znajomi** - moderacja, RODO, za dużo na ten etap.
+- **Certyfikaty i dyplomy** - sensowne dopiero przy B2B.
+- **Kolejne minigry** - jest ich 34; problemem nie jest liczba, tylko konwersja.
 
 ### 7.4. Rekomendowana kolejność po home page
 
-To kolejność wdrożeń, nie ważność — matura rozszerzona jest ważna, ale większa
+To kolejność wdrożeń, nie ważność - matura rozszerzona jest ważna, ale większa
 i wymaga osobnego cyklu treści.
 
-1. **Tryb egzaminu na czas** (M) — domyka najważniejszą obietnicę.
-2. **Zeszyt błędów + auto-dodawanie do powtórek** (M) — domyka pętlę nauki.
-3. **Plan tygodnia + e-maile** (M) — podnosi powroty i aktywację.
-4. **Matura rozszerzona** (L) — nowy segment uczniów.
-5. **B2B** (XL) — największy projekt, ale i największy przychód; dopiero po
+1. **Tryb egzaminu na czas** (M) - domyka najważniejszą obietnicę.
+2. **Zeszyt błędów + auto-dodawanie do powtórek** (M) - domyka pętlę nauki.
+3. **Plan tygodnia + e-maile** (M) - podnosi powroty i aktywację.
+4. **Matura rozszerzona** (L) - nowy segment uczniów.
+5. **B2B** (XL) - największy projekt, ale i największy przychód; dopiero po
    uporządkowaniu home page i lejka.
 
 ---
 
-## 8. Wdrożenie strony głównej — plan techniczny
+## 8. Wdrożenie strony głównej - plan techniczny
 
-### Etap 1 — szkielet i copy (1–2 dni)
+### Etap 1 - szkielet i copy (1–2 dni)
 
-- `lib/home/feature-map.ts` — jedno źródło danych: grupa, tytuł, opis, link, badge.
-- `components/home/FeatureMap.tsx` — server component, grid 2/4 kolumny, akordeon
+- `lib/home/feature-map.ts` - jedno źródło danych: grupa, tytuł, opis, link, badge.
+- `components/home/FeatureMap.tsx` - server component, grid 2/4 kolumny, akordeon
   na mobile (bez JS, np. `<details>`).
-- `components/home/HowItWorks.tsx` — 3 kroki.
-- `components/home/TeacherBand.tsx` — pas dla nauczycieli.
-- `components/home/PricingTeaser.tsx` — pasek cennika (dane z `lib/subscription/plans.ts`).
-- `app/page.tsx` + `components/home/HomeDashboard.tsx` — nowa kolejność sekcji.
-- `app/funkcje/page.tsx` — pełna lista.
-- `app/sitemap.ts` — dodać `/funkcje`.
-- `lib/layout/footer-links.ts` — nowe kolumny.
-- `e2e/smoke.spec.ts` — test, że `/funkcje` się renderuje i linki działają.
+- `components/home/HowItWorks.tsx` - 3 kroki.
+- `components/home/TeacherBand.tsx` - pas dla nauczycieli.
+- `components/home/PricingTeaser.tsx` - pasek cennika (dane z `lib/subscription/plans.ts`).
+- `app/page.tsx` + `components/home/HomeDashboard.tsx` - nowa kolejność sekcji.
+- `app/funkcje/page.tsx` - pełna lista.
+- `app/sitemap.ts` - dodać `/funkcje`.
+- `lib/layout/footer-links.ts` - nowe kolumny.
+- `e2e/smoke.spec.ts` - test, że `/funkcje` się renderuje i linki działają.
 
-### Etap 2 — dopracowanie (1 dzień)
+### Etap 2 - dopracowanie (1 dzień)
 
 - FAQ z `<details>` (bez JS).
 - Pasek dodatków (tryb ciemny, przypomnienia, zgłoszenia).
 - Spójne badge „Pro” i „W przygotowaniu”.
-- Mobile: sprawdzić, że 16 kart nie tworzy ściany — akordeon per grupa.
+- Mobile: sprawdzić, że 16 kart nie tworzy ściany - akordeon per grupa.
 
-### Etap 3 — pomiar (opcjonalnie)
+### Etap 3 - pomiar (opcjonalnie)
 
 - Zdarzenia: klik w kartę funkcji, klik w `/funkcje`, scroll depth, start diagnozy.
 - A/B: obecny home vs nowy (jeśli ruch pozwala).
@@ -430,7 +430,7 @@ i wymaga osobnego cyklu treści.
 1. **Wariant:** A (hub + `/funkcje`), B (wszystko na home), C (segmentacja)?
 2. **Czy dodajemy `/funkcje` i przebudowujemy stopkę?** (Rekomendacja: tak.)
 3. **Czy pokazujemy „W przygotowaniu”?** (Rekomendacja: tak, ale tylko przy
-   maturze rozszerzonej i w FAQ — nie jako osobną sekcję na home.)
+   maturze rozszerzonej i w FAQ - nie jako osobną sekcję na home.)
 4. **Które braki robimy pierwsze?** (Rekomendacja: tryb egzaminu → zeszyt błędów
    → plan tygodnia + e-maile.)
 
@@ -438,6 +438,6 @@ i wymaga osobnego cyklu treści.
 
 ## 10. Jedno zdanie podsumowania
 
-Strona główna nie powinna być spisem 30 funkcji — powinna być **mapą 16 rzeczy,
+Strona główna nie powinna być spisem 30 funkcji - powinna być **mapą 16 rzeczy,
 które uczeń i nauczyciel naprawdę dostają**, z jednym mocnym CTA i uczciwym
 „w przygotowaniu” tam, gdzie coś jeszcze nie działa.

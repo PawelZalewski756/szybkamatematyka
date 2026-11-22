@@ -204,7 +204,7 @@ export function OnboardingModal({
               disabled={saving}
               className="mt-3 w-full text-sm font-semibold text-muted underline-offset-2 hover:text-foreground hover:underline disabled:opacity-60"
             >
-              Pomiń na razie — chcę zacząć zadania
+              Pomiń na razie - chcę zacząć zadania
             </button>
           ) : null}
         </form>

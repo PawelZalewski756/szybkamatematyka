@@ -42,7 +42,7 @@ export default function MaturaRozszerzonaPage() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Na tej stronie znajdziesz oficjalne arkusze rozszerzone CKE i mapę
           materiału. Pełny plan tematyczny z zadaniami rozszerzonymi jest w
-          przygotowaniu — nie udajemy, że jest gotowy, zanim nie będzie.
+          przygotowaniu - nie udajemy, że jest gotowy, zanim nie będzie.
         </p>
       </header>
 

@@ -141,7 +141,7 @@ function PlanCard({
                   {day.weekday}
                 </p>
                 <p className="mt-1 text-sm font-black tabular-nums text-foreground">
-                  {day.isRest ? "—" : day.totalCount}
+                  {day.isRest ? "-" : day.totalCount}
                 </p>
                 <p className="text-[9px] text-muted">
                   {day.isRest ? "przerwa" : "zad."}
@@ -213,7 +213,7 @@ function PlanCard({
               </ul>
             ) : (
               <p className="mt-2 text-xs text-muted">
-                Dziś dzień przerwy — wróć jutro z nową energią.
+                Dziś dzień przerwy - wróć jutro z nową energią.
               </p>
             )}
 
@@ -271,7 +271,7 @@ function ReviewCard({
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">
         Spaced repetition w wariancie SM-2. Po błędzie zadanie wraca szybciej,
-        po poprawnej odpowiedzi — rzadziej.
+        po poprawnej odpowiedzi - rzadziej.
       </p>
 
       <div className="mt-5 rounded-xl border border-accent/25 bg-accent-soft/40 p-4">
@@ -280,7 +280,7 @@ function ReviewCard({
         </p>
         <p className="mt-0.5 text-xs font-semibold text-muted">
           {dueCount === 0
-            ? "Brak zaległych powtórek — dobra robota."
+            ? "Brak zaległych powtórek - dobra robota."
             : dueCount === 1
               ? "zadanie czeka na powtórkę dziś"
               : "zadań czeka na powtórkę dziś"}

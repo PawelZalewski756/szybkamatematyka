@@ -33,7 +33,7 @@ const FAQ_ITEMS = [
   {
     question: "Czy muszę mieć konto?",
     answer:
-      "Nie, żeby zacząć. Konto jest darmowe i zapisuje postęp, serię i osiągnięcia, więc możesz uczyć się na kilku urządzeniach. Założysz je w 30 sekund — bez karty.",
+      "Nie, żeby zacząć. Konto jest darmowe i zapisuje postęp, serię i osiągnięcia, więc możesz uczyć się na kilku urządzeniach. Założysz je w 30 sekund - bez karty.",
   },
   {
     question: "Skąd są arkusze?",
@@ -53,7 +53,7 @@ const FAQ_ITEMS = [
   {
     question: "Czy matura rozszerzona jest gotowa?",
     answer:
-      "Mamy 12 oficjalnych arkuszy i mapę zakresu. Pełna ścieżka z teorią i zadaniami jest w przygotowaniu — nie udajemy, że jest skończona.",
+      "Mamy 12 oficjalnych arkuszy i mapę zakresu. Pełna ścieżka z teorią i zadaniami jest w przygotowaniu - nie udajemy, że jest skończona.",
   },
 ] as const;
 
@@ -220,7 +220,7 @@ export function RankingSection() {
             </div>
 
             <p className="mt-3 text-[10px] text-muted">
-              Podgląd wyglądu — dane przykładowe. Po podłączeniu bazy ranking
+              Podgląd wyglądu - dane przykładowe. Po podłączeniu bazy ranking
               pokaże realne wyniki.
             </p>
           </div>
@@ -249,7 +249,7 @@ export function AiSection() {
             </h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
               Gdy utkniesz, AI wskazuje następny krok. Gdy piszesz zadanie
-              otwarte, sprawdza tok rozumowania — nie tylko wynik.
+              otwarte, sprawdza tok rozumowania - nie tylko wynik.
             </p>
 
             <ul className="mt-6 space-y-3 text-sm text-foreground">
@@ -257,20 +257,20 @@ export function AiSection() {
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
                 <span>
                   <strong className="font-bold">Podpowiedź krok po kroku</strong>{" "}
-                  — bez podawania wyniku.
+                  - bez podawania wyniku.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
                 <span>
                   <strong className="font-bold">Ocena zadania otwartego</strong>{" "}
-                  — punkty i uwagi, co poprawić (Pro).
+                  - punkty i uwagi, co poprawić (Pro).
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
                 <span>
-                  <strong className="font-bold">Pytania do treści</strong> — „dlaczego
+                  <strong className="font-bold">Pytania do treści</strong> - „dlaczego
                   tutaj jest delta?”.
                 </span>
               </li>
@@ -346,7 +346,7 @@ export function TestsSection() {
             id="sprawdziany-heading"
             className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl"
           >
-            Klasówka w minutę — dla nauczyciela i dla siebie
+            Klasówka w minutę - dla nauczyciela i dla siebie
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
             Wybierasz klasę i dział, generujesz grupy A i B, drukujesz z kluczem
@@ -662,7 +662,7 @@ export function PricingTeaser() {
             href="/polecenia"
             className="font-bold text-accent hover:underline"
           >
-            Zaproś 2 znajomych — 30 dni Pro →
+            Zaproś 2 znajomych - 30 dni Pro →
           </Link>
         </div>
       </div>

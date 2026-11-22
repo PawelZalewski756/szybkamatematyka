@@ -1,4 +1,4 @@
-# Vercel — limit 10 GB i usuwanie starych deploymentów
+# Vercel - limit 10 GB i usuwanie starych deploymentów
 
 ## 1. To nie jest Git
 
@@ -20,7 +20,7 @@ Ustaw dla:
 
 Na Hobby maksimum to 30 dni, ale można wybrać krócej. Vercel i tak zawsze
 zostawia kilka ostatnich deploymentów (3 produkcje + 3 dowolne) oraz te z
-aliasem/aktywnym branchem — tego nie da się usunąć polityką retencji.
+aliasem/aktywnym branchem - tego nie da się usunąć polityką retencji.
 
 ## 3. Ręczne usunięcie starych deploymentów
 
@@ -34,9 +34,9 @@ Workflow: `.github/workflows/prune-vercel-deployments.yml` (codziennie 03:00 UTC
 
 W GitHub → Settings → Secrets and variables → Actions dodaj:
 
-- `VERCEL_TOKEN` — Vercel → Account Settings → Tokens,
-- `VERCEL_PROJECT_ID` — Vercel → projekt → Settings → General → Project ID,
-- `VERCEL_TEAM_ID` — tylko jeśli projekt jest w teamie.
+- `VERCEL_TOKEN` - Vercel → Account Settings → Tokens,
+- `VERCEL_PROJECT_ID` - Vercel → projekt → Settings → General → Project ID,
+- `VERCEL_TEAM_ID` - tylko jeśli projekt jest w teamie.
 
 Ręcznie:
 
@@ -58,7 +58,7 @@ Skrypt nie usuwa:
 1. Ustaw retencję 7 dni.
 2. Uruchom skrypt z `--apply`.
 3. Sprawdź **Usage → Deployment Storage**.
-4. Jeśli nadal dużo — zmniejsz rozmiar builda (np. mniej prerenderowanych stron,
+4. Jeśli nadal dużo - zmniejsz rozmiar builda (np. mniej prerenderowanych stron,
    lżejsze obrazy) albo usuń stare preview deploymenty ręcznie.
 
 ## 6. Szybka diagnostyka

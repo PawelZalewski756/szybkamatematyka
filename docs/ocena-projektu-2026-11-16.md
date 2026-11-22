@@ -10,8 +10,8 @@ Skala ocen: 1–10.
 
 ## 0. Werdykt
 
-- **Jako projekt inżynierski: 8,5/10.** To nie jest demo ani zadanie rekrutacyjne. Działa build, testy, CI, migracje, płatności, RLS, AI i PWA. Jak na projekt jednej osoby — bardzo dużo.
-- **Jako produkt edukacyjny: 7/10.** Jest realna treść i realny loop nauki. Uczeń klasy 8 i maturzysta mogą z tego korzystać. Ale produkt jest zbudowany pod egzamin, nie pod konkretną klasę — i to jest jego główne ograniczenie.
+- **Jako projekt inżynierski: 8,5/10.** To nie jest demo ani zadanie rekrutacyjne. Działa build, testy, CI, migracje, płatności, RLS, AI i PWA. Jak na projekt jednej osoby - bardzo dużo.
+- **Jako produkt edukacyjny: 7/10.** Jest realna treść i realny loop nauki. Uczeń klasy 8 i maturzysta mogą z tego korzystać. Ale produkt jest zbudowany pod egzamin, nie pod konkretną klasę - i to jest jego główne ograniczenie.
 - **Jako biznes: 4,5/10.** Brakuje wyboru rynku, monetyzacja przecieka, nie ma B2B, a pozyskanie użytkownika jest droższe niż obecna cena. To firma „do zrobienia”, nie firma „już zrobiona”.
 - **Najkrócej:** bardzo dobry warsztat i przyzwoity produkt egzaminacyjny, ale jeszcze nie biznes. Największa wartość do odblokowania nie leży w kodzie, tylko w decyzji: **produkt dla klasy 8 i matury czy platforma klasowa 4–8/LO**.
 
@@ -27,7 +27,7 @@ Skala ocen: 1–10.
 | Technika | Next.js 16, React 19, Supabase + RLS, Stripe, Gemini, Vercel, PWA | 43 migracje, 484 testy, 1 190 statycznych stron |
 | Jakość | lint, typecheck, testy, 4 audyty treści, build, Playwright, migracje, deploy | CI przechodzi; build 0 błędów, 5 ostrzeżeń KaTeX |
 
-To jest pełnoprawna aplikacja: konta, profile, postęp, płatności, webhooki, AI z limitem, panel admina, analityka, RODO (eksport/usunięcie konta), cookie consent. Jak na projekt „na GitHub” — poziom bardzo wysoki.
+To jest pełnoprawna aplikacja: konta, profile, postęp, płatności, webhooki, AI z limitem, panel admina, analityka, RODO (eksport/usunięcie konta), cookie consent. Jak na projekt „na GitHub” - poziom bardzo wysoki.
 
 ---
 
@@ -35,9 +35,9 @@ To jest pełnoprawna aplikacja: konta, profile, postęp, płatności, webhooki, 
 
 ### 2.1 Uczniowie według rocznika
 
-Ważne zastrzeżenie: aplikacja ma tylko dwie realne ścieżki — **„Szkoła podstawowa” = egzamin 8-klasisty** i **„Szkoła średnia” = matura podstawowa**. Wybór konkretnej klasy (1–8, LO 1–4, technikum 1–5, branżowa 1–5) istnieje w kodzie, ale **nie jest dostępny w UI**; picker pokazuje tylko dwie opcje. Dlatego „klasa” jest etykietą, nie planem.
+Ważne zastrzeżenie: aplikacja ma tylko dwie realne ścieżki - **„Szkoła podstawowa” = egzamin 8-klasisty** i **„Szkoła średnia” = matura podstawowa**. Wybór konkretnej klasy (1–8, LO 1–4, technikum 1–5, branżowa 1–5) istnieje w kodzie, ale **nie jest dostępny w UI**; picker pokazuje tylko dwie opcje. Dlatego „klasa” jest etykietą, nie planem.
 
-Uwaga do liczb gier: to gry **przypisane do klasy w danych**. W UI uczeń „szkoły podstawowej” widzi wszystkie 34 gry, bo `matchesLearningPath` traktuje każdą `klasa-*` jako „sp” — czyli filtr klasy nie działa.
+Uwaga do liczb gier: to gry **przypisane do klasy w danych**. W UI uczeń „szkoły podstawowej” widzi wszystkie 34 gry, bo `matchesLearningPath` traktuje każdą `klasa-*` jako „sp” - czyli filtr klasy nie działa.
 
 | Użytkownik | Co realnie dostaje | Czego brakuje | Ocena |
 | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ Uwaga do liczb gier: to gry **przypisane do klasy w danych**. W UI uczeń „szk
 - `GET /api/trening/tasks` zwraca `correct_answer` i `explanation` bez logowania,
 - strona arkusza serializuje `explanation` i `steps` do klienta, a `ProGate` tylko je ukrywa.
 
-To nie jest „dziura” w sensie bezpieczeństwa danych osobowych — to dziura w modelu przychodów. Jeśli Pro ma sprzedawać treść, trzeba ją zamknąć po stronie serwera. Jeśli nie — **wartość Pro trzeba przenieść na AI, personalizację, raporty i narzędzia dla nauczyciela**, bo statyczna treść nie utrzyma paywalla.
+To nie jest „dziura” w sensie bezpieczeństwa danych osobowych - to dziura w modelu przychodów. Jeśli Pro ma sprzedawać treść, trzeba ją zamknąć po stronie serwera. Jeśli nie - **wartość Pro trzeba przenieść na AI, personalizację, raporty i narzędzia dla nauczyciela**, bo statyczna treść nie utrzyma paywalla.
 
 ### 3.3 Lejek i unit economics
 
@@ -115,10 +115,10 @@ Przykładowa ekonomia (założenia, nie dane z projektu):
 - ARPU netto: ok. 27 zł/mies. (29 zł minus Stripe).
 - Średni czas życia w sezonie: 4 miesiące → **LTV ok. 108 zł**.
 - Docelowy CAC: ≤ 54 zł przy LTV/CAC = 2.
-- Google Ads: CPC 2–4 zł; przy konwersji landing→rejestracja 8% i rejestracja→płatność 8% koszt pozyskania płacącego to **ok. 300–600 zł** — czyli adsy na 29 zł nie spięłyby się bez bardzo dobrej konwersji.
+- Google Ads: CPC 2–4 zł; przy konwersji landing→rejestracja 8% i rejestracja→płatność 8% koszt pozyskania płacącego to **ok. 300–600 zł** - czyli adsy na 29 zł nie spięłyby się bez bardzo dobrej konwersji.
 - Wniosek: **SEO, referral i B2B muszą być głównymi kanałami**, a nie płatne adsy.
 
-Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesiącach, potrzeba ok. **8 600 płacących uczniów rocznie** (ok. 1,2% rynku egzaminacyjnego). To możliwe, ale wymaga dużego ruchu i wysokiej konwersji. Przy 49 zł/mies. potrzeba ok. 5 100 osób; przy 249 zł/rok — ok. 4 000 subskrypcji anualnych. **Cena 29 zł jest dobra dla ucznia, ale zła dla biznesu bez skali.**
+Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesiącach, potrzeba ok. **8 600 płacących uczniów rocznie** (ok. 1,2% rynku egzaminacyjnego). To możliwe, ale wymaga dużego ruchu i wysokiej konwersji. Przy 49 zł/mies. potrzeba ok. 5 100 osób; przy 249 zł/rok - ok. 4 000 subskrypcji anualnych. **Cena 29 zł jest dobra dla ucznia, ale zła dla biznesu bez skali.**
 
 ### 3.4 Konkurencja i moat
 
@@ -130,9 +130,9 @@ Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesią
 | Odrabiamy | 49 zł/mies. | brand, wszystkie przedmioty, prace domowe | wysokie |
 | Korepetycje | 60–80 zł/h | personalizacja, odpowiedzialność | średnie (cena) |
 | Podręczniki / platformy szkolne | 0–50 zł | zaufanie nauczyciela, integracja | średnie |
-| Szybka Matematyka | 29 zł/mies. | polski egzamin, gry, AI, cena | — |
+| Szybka Matematyka | 29 zł/mies. | polski egzamin, gry, AI, cena | - |
 
-**Moat:** treść (12,8 tys. zadań), archiwum CKE, UX, SEO i gry. To wszystko jest **do skopiowania** — treść CKE jest publiczna, zadania można wygenerować, AI jest tanie. Trwałą przewagę mogą dać tylko: **marka, sieć nauczycieli, umowy ze szkołami, dane o postępach i personalizacja**.
+**Moat:** treść (12,8 tys. zadań), archiwum CKE, UX, SEO i gry. To wszystko jest **do skopiowania** - treść CKE jest publiczna, zadania można wygenerować, AI jest tanie. Trwałą przewagę mogą dać tylko: **marka, sieć nauczycieli, umowy ze szkołami, dane o postępach i personalizacja**.
 
 ### 3.5 Ryzyka
 
@@ -149,12 +149,12 @@ Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesią
 
 ### 3.6 Szanse
 
-1. **Plany klasowe 4–8 i LO 1–4** — to nie tylko feature, to **silnik LTV**: uczeń wchodzi w klasie 7 i zostaje na 2–4 lata, zamiast na 4 miesiące.
-2. **Matura rozszerzona** — najwyższa willingness to pay, mała konkurencja w polskim online; wystarczy plan + teoria + 500–1000 zadań.
-3. **Panel nauczyciela** — klasy, zadania domowe, auto-ocena, raporty; sprzedaż per nauczyciel/szkoła, faktura, RODO.
-4. **Raport dla rodzica** — miesięczny PDF/email z postępem; rodzic płaci, ale nie ma dziś produktu dla niego.
-5. **Referral w pojedynkach** — „zaproś kolegę, oboje dostajecie X”; obecne pojedynki są gotową pętlą wiralową, ale bez nagrody za zaproszenie.
-6. **Content hub SEO** — „matura 2027”, „E8 2027”, „powtórka przed maturą”, „działy matury” — artykuły, nie tylko zadania.
+1. **Plany klasowe 4–8 i LO 1–4** - to nie tylko feature, to **silnik LTV**: uczeń wchodzi w klasie 7 i zostaje na 2–4 lata, zamiast na 4 miesiące.
+2. **Matura rozszerzona** - najwyższa willingness to pay, mała konkurencja w polskim online; wystarczy plan + teoria + 500–1000 zadań.
+3. **Panel nauczyciela** - klasy, zadania domowe, auto-ocena, raporty; sprzedaż per nauczyciel/szkoła, faktura, RODO.
+4. **Raport dla rodzica** - miesięczny PDF/email z postępem; rodzic płaci, ale nie ma dziś produktu dla niego.
+5. **Referral w pojedynkach** - „zaproś kolegę, oboje dostajecie X”; obecne pojedynki są gotową pętlą wiralową, ale bez nagrody za zaproszenie.
+6. **Content hub SEO** - „matura 2027”, „E8 2027”, „powtórka przed maturą”, „działy matury” - artykuły, nie tylko zadania.
 
 ---
 
@@ -258,7 +258,7 @@ Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesią
 - Kanały: sprzedaż bezpośrednia, konferencje nauczycieli, partnerstwa.
 - Ryzyko: długi cykl sprzedaży, wsparcie, SSO.
 
-**Rekomendacja:** zacznij od **A**, ale z **planami klasowymi** jako pierwszym rozszerzeniem — to one dają LTV. B2B dodaj po 3–6 miesiącach, gdy będzie 50–100 płacących szkół/nauczycieli w pilocie.
+**Rekomendacja:** zacznij od **A**, ale z **planami klasowymi** jako pierwszym rozszerzeniem - to one dają LTV. B2B dodaj po 3–6 miesiącach, gdy będzie 50–100 płacących szkół/nauczycieli w pilocie.
 
 ### Pięć rzeczy do zrobienia w tym tygodniu
 
@@ -284,7 +284,7 @@ Skala: żeby mieć **1 mln zł przychodu rocznie** przy 29 zł/mies. i 4 miesią
 | **Jako biznes dziś** | **4,5/10** |
 | **Potencjał po fokusie** | **7/10** |
 
-**Zdanie na koniec:** to nie jest projekt, który trzeba „poprawiać”. To projekt, który trzeba **zawęzić**: wybrać jednego użytkownika (klasa 8 / matura), jedną obietnicę (plan i egzamin, nie „wszystko”) i jeden kanał (SEO + referral), a resztę odłożyć. Technicznie jesteś gotowy. Biznesowo — dopiero zaczynasz.
+**Zdanie na koniec:** to nie jest projekt, który trzeba „poprawiać”. To projekt, który trzeba **zawęzić**: wybrać jednego użytkownika (klasa 8 / matura), jedną obietnicę (plan i egzamin, nie „wszystko”) i jeden kanał (SEO + referral), a resztę odłożyć. Technicznie jesteś gotowy. Biznesowo - dopiero zaczynasz.
 
 ---
 
@@ -313,10 +313,10 @@ Pierwsza partia z priorytetów 0–30 dni:
 - [x] Welcome email przez Resend (`lib/email/welcome.ts`) wysyłany po rejestracji, jeśli `RESEND_API_KEY` jest ustawiony.
 - [ ] Zweryfikować domenę w Resend i ustawić `WELCOME_EMAIL_FROM`, żeby mail dochodził do uczniów.
 - [x] `/matura-rozszerzona`: strona z zakresem materiału i 12 oficjalnymi arkuszami rozszerzonymi.
-- [ ] Pełny plan tematyczny i baza zadań rozszerzonych — nadal brak treści.
+- [ ] Pełny plan tematyczny i baza zadań rozszerzonych - nadal brak treści.
 - [x] Startowy panel nauczyciela `/dla-szkol/panel`: generator, baza zadań, arkusze, rozszerzona i plan klasy w jednym miejscu.
 - [x] Formularz zapytania o pakiet szkolny (`/api/school-inquiry`): walidacja, honeypot, wysyłka przez Resend.
-- [ ] Pełny panel B2B (klasy, uczniowie, wyniki, faktury) — wymaga kont szkolnych i osobnego wdrożenia.
+- [ ] Pełny panel B2B (klasy, uczniowie, wyniki, faktury) - wymaga kont szkolnych i osobnego wdrożenia.
 - [x] A11y quick wins: skip link, `aria-live` w diagnozie, `role="status"` przy ładowaniu.
 - [x] Raport postępów do druku z profilu (`Drukuj raport` + `@media print`).
 - [x] Macierz layoutu zadań 390/710/1280: trening, baza zadań, arkusz CKE i diagnoza (`e2e/layout-matrix.spec.ts`).

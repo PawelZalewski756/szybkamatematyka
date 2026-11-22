@@ -245,7 +245,7 @@ const TOPIC_METHODS: Record<string, string> = {
   statystyka:
     "Porządkujemy dane i korzystamy z definicji średniej lub mediany.",
   mediana_i_dominanta:
-    "Porządkujemy dane rosnąco; mediana to środkowa wartość (przy parzystej liczbie danych — średnia dwóch środkowych).",
+    "Porządkujemy dane rosnąco; mediana to środkowa wartość (przy parzystej liczbie danych - średnia dwóch środkowych).",
   statystyka_zaawansowana:
     "Korzystamy z definicji średniej ważonej, wariancji lub wartości oczekiwanej i podstawiamy dane.",
   prawdopodobienstwo:
@@ -273,13 +273,13 @@ const TOPIC_METHODS: Record<string, string> = {
   wielokaty:
     "Korzystamy ze wzorów na sumę kątów wielokąta i pole trapezu oraz z definicji obwodu.",
   bryly:
-    "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu — sześcian długości krawędzi.",
+    "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu - sześcian długości krawędzi.",
   objetosc_i_pole:
-    "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu — sześcian długości krawędzi.",
+    "Objętość prostopadłościanu to iloczyn jego wymiarów, a sześcianu - sześcian długości krawędzi.",
   stereometria:
     "Dobieramy wzór na pole powierzchni lub objętość bryły i podstawiamy wymiary.",
   symetrie:
-    "W symetrii względem osi $OY$ zmienia się znak współrzędnej $x$, a względem osi $OX$ — znak współrzędnej $y$.",
+    "W symetrii względem osi $OY$ zmienia się znak współrzędnej $x$, a względem osi $OX$ - znak współrzędnej $y$.",
   punkty_na_plaszczyznie:
     "Ćwiartkę wyznaczają znaki współrzędnych: $(+,+)$ to I, $(-,+)$ to II, $(-,-)$ to III, $(+,-)$ to IV.",
   potegi:
@@ -1281,7 +1281,7 @@ const handleQuadrant: Handler = (content) => {
   const y = Number(match[2]);
   const quadrant = x > 0 && y > 0 ? "I" : x < 0 && y > 0 ? "II" : x < 0 && y < 0 ? "III" : "IV";
   return {
-    text: `Punkt ma współrzędne $x=${plNumber(x)}$ i $y=${plNumber(y)}$ — ${signPhrase(x, y)}. Dlatego leży w $${quadrant}$ ćwiartce.`,
+    text: `Punkt ma współrzędne $x=${plNumber(x)}$ i $y=${plNumber(y)}$ - ${signPhrase(x, y)}. Dlatego leży w $${quadrant}$ ćwiartce.`,
     value: quadrant,
   };
 };
@@ -1788,7 +1788,7 @@ const handleRoman: Handler = (content) => {
     const symbols = symbol[1]!.toUpperCase();
     const value = fromRoman(symbols);
     return {
-      text: `Symbol $${symbols}$ ma wartość $${plNumber(value)}$ — tyle jednostek odpowiada tej literze w zapisie rzymskim.`,
+      text: `Symbol $${symbols}$ ma wartość $${plNumber(value)}$ - tyle jednostek odpowiada tej literze w zapisie rzymskim.`,
       value: plNumber(value, 4),
     };
   }
@@ -2185,7 +2185,7 @@ const HANDLERS: Record<string, Handler> = {
   proste_i_odcinki: (content) => {
     if (/Ile końców ma odcinek/i.test(content)) {
       return {
-        text: "Odcinek ma dwa końce — wyznaczają go dwa punkty $A$ i $B$, więc poprawna odpowiedź to dwa.",
+        text: "Odcinek ma dwa końce - wyznaczają go dwa punkty $A$ i $B$, więc poprawna odpowiedź to dwa.",
         value: "dwa",
       };
     }

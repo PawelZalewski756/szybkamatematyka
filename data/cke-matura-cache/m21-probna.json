@@ -158,7 +158,7 @@
       "numer": 26,
       "dzial": "Kombinatoryka",
       "tresc": "Wszystkich liczb naturalnych trzycyfrowych parzystych, w których cyfra 7 występuje dokładnie jeden raz, jest A) 85 B) 90 C) 100 D) 150",
-      "rozwiazanie": "**Krok 1.** Liczba jest trzycyfrowa i parzysta, więc jej cyfra jedności należy do $\\{0,2,4,6,8\\}$.\n**Krok 2.** Cyfra $7$ występuje dokładnie raz. Rozpatrujemy położenie tej cyfry.\n**Krok 3.** $7$ na miejscu setek: cyfra dziesiątek — $9$ możliwości (bez $7$), cyfra jedności — $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.\n**Krok 4.** $7$ na miejscu dziesiątek: cyfra setek — $8$ możliwości (bez $0$ i $7$), cyfra jedności — $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.\n**Krok 5.** $7$ na miejscu jedności nie daje liczby parzystej, więc ten przypadek odpada.\n**Krok 6.** Łącznie $45+40=85$ liczb.\n**Odpowiedź:** A) $85$."
+      "rozwiazanie": "**Krok 1.** Liczba jest trzycyfrowa i parzysta, więc jej cyfra jedności należy do $\\{0,2,4,6,8\\}$.\n**Krok 2.** Cyfra $7$ występuje dokładnie raz. Rozpatrujemy położenie tej cyfry.\n**Krok 3.** $7$ na miejscu setek: cyfra dziesiątek - $9$ możliwości (bez $7$), cyfra jedności - $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.\n**Krok 4.** $7$ na miejscu dziesiątek: cyfra setek - $8$ możliwości (bez $0$ i $7$), cyfra jedności - $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.\n**Krok 5.** $7$ na miejscu jedności nie daje liczby parzystej, więc ten przypadek odpada.\n**Krok 6.** Łącznie $45+40=85$ liczb.\n**Odpowiedź:** A) $85$."
     },
     {
       "numer": 27,

@@ -1,14 +1,14 @@
-# Stripe webhook — naprawa i ponowne włączenie
+# Stripe webhook - naprawa i ponowne włączenie
 
 ## Dlaczego Stripe wyłączył endpoint
 
 Stripe wyłącza webhook po kilku dniach błędów (5xx, timeouty, brak profilu).
 W naszym kodzie były dwa źródła błędów:
 
-1. **Brak profilu użytkownika** — `applyPatch` rzucał 500, gdy `profiles`
+1. **Brak profilu użytkownika** - `applyPatch` rzucał 500, gdy `profiles`
    nie miało wiersza dla `auth.users` (np. trigger nie zadziałał).
    Teraz webhook tworzy minimalny profil i zapisuje subskrypcję.
-2. **Telegram blokował odpowiedź** — powiadomienie o zakupie było `await`
+2. **Telegram blokował odpowiedź** - powiadomienie o zakupie było `await`
    w webhooku. Wolny Telegram potrafił przekroczyć limit czasu Vercel.
    Teraz powiadomienie leci w tle, a Stripe dostaje 200 od razu.
 
@@ -32,10 +32,10 @@ przyjąć podpisany POST.
 
 W **Project → Settings → Environment Variables** (Production):
 
-- `STRIPE_SECRET_KEY` — klucz **live** `sk_live_...`,
-- `STRIPE_WEBHOOK_SECRET` — **live** signing secret endpointu
+- `STRIPE_SECRET_KEY` - klucz **live** `sk_live_...`,
+- `STRIPE_WEBHOOK_SECRET` - **live** signing secret endpointu
   `https://www.szybkamatematyka.pl/api/stripe/webhook` (`whsec_...`),
-- `SUPABASE_SERVICE_ROLE_KEY` — klucz `service_role`,
+- `SUPABASE_SERVICE_ROLE_KEY` - klucz `service_role`,
 - `NEXT_PUBLIC_SUPABASE_URL`,
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 

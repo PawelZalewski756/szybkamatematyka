@@ -29,7 +29,7 @@ export const HOME_FEATURE_GROUPS: readonly {
   {
     id: "check",
     label: "Sprawdzaj i rywalizuj",
-    description: "Sprawdziany, gry i ranking — żeby wiedza została na dłużej.",
+    description: "Sprawdziany, gry i ranking - żeby wiedza została na dłużej.",
   },
   {
     id: "progress",
@@ -99,7 +99,7 @@ export const HOME_FEATURES: readonly HomeFeature[] = [
     group: "learn",
     title: "Powtórki",
     description:
-      "Zadania wracają w rytmie spaced repetition — dokładnie wtedy, gdy zaczynasz je zapominać.",
+      "Zadania wracają w rytmie spaced repetition - dokładnie wtedy, gdy zaczynasz je zapominać.",
     href: "/powtorki",
     icon: "RefreshCw",
   },

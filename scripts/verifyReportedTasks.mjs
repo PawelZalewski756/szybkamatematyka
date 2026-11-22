@@ -64,7 +64,7 @@ for (const [id, expected] of EXPECTED) {
   console.log(
     `${ok ? "✓" : "✗"} ${id}: correct_answer=${answer} (oczekiwane ${expected})` +
       (options.length ? `, opcje=${JSON.stringify(options)}` : ", zadanie otwarte") +
-      ` — ${String(row.content ?? "").slice(0, 80)}`,
+      ` - ${String(row.content ?? "").slice(0, 80)}`,
   );
   if (!ok) wrong += 1;
 }

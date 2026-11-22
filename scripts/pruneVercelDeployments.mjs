@@ -118,7 +118,7 @@ for (const deployment of candidates.slice(0, 100)) {
     continue;
   }
   const error = await deleteDeployment(deployment);
-  console.log(error ? `✗ ${label} — ${error}` : `✓ ${label}`);
+  console.log(error ? `✗ ${label} - ${error}` : `✓ ${label}`);
 }
 
 if (!apply) {
