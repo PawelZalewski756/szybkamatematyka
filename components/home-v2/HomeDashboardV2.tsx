@@ -31,7 +31,7 @@ function WarmupSection() {
         <div className="max-w-2xl">
           <p className="text-overline">DARMOWA ROZGRZEWKA</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            Zanim założysz konto — wzory i zagadka dnia.
+            Zanim założysz konto — wzory i zagadka.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
             Sześć wzorów na start i jedno pytanie dziennie. Bez konta i bez

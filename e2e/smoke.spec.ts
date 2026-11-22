@@ -55,7 +55,9 @@ test.describe("Smoke", () => {
 
   test("zagadka dnia pokazuje rozwiązanie po kliknięciu", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByText("ZAGADKA DNIA")).toBeVisible();
+    await expect(
+      page.getByText("ZAGADKA DNIA", { exact: true }),
+    ).toBeVisible();
     await page.getByRole("button", { name: "Pokaż rozwiązanie" }).click();
     await expect(
       page.getByRole("button", { name: "Pokaż rozwiązanie" }),
