@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-22 22:03 UTC · branch `feature/rejestracja-cta` · commit `6461de9`
+> Ostatnia aktualizacja: 2026-11-22 22:24 UTC · branch `feature/rejestracja-cta` · commit `8f09dd3`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.

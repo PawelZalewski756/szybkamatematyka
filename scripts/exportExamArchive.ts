@@ -30,6 +30,8 @@ type CachedTask = {
   tresc: string;
   tekst?: string;
   tekstV?: number;
+  punkty?: number;
+  correctIndex?: number;
   rozwiazanie: string;
 };
 
@@ -87,7 +89,12 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     parsed.steps.length > 0 ? parsed.steps : [task.rozwiazanie];
   const solutionSteps = rawSteps.map((step) => formatCkeMathText(step));
   const correctIndex = hasChoices
-    ? inferCorrectChoiceIndex(parsed.answer, formattedChoices)
+    ? (typeof task.correctIndex === "number" &&
+      Number.isInteger(task.correctIndex) &&
+      task.correctIndex >= 0 &&
+      task.correctIndex < formattedChoices.length
+        ? task.correctIndex
+        : inferCorrectChoiceIndex(parsed.answer, formattedChoices))
     : null;
   const isOpen = !hasChoices || correctIndex === null;
 
@@ -106,6 +113,13 @@ function buildTask(sheet: CachedSheet, task: CachedTask): Task | null {
     correctIndex: isOpen ? 0 : correctIndex,
     explanation,
     solutionSteps,
+    points:
+      typeof task.punkty === "number" &&
+      Number.isInteger(task.punkty) &&
+      task.punkty >= 1 &&
+      task.punkty <= 6
+        ? task.punkty
+        : undefined,
     examSource: {
       kind: sheet.typ ?? "matura",
       year: sheet.rok,

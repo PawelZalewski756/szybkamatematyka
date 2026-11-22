@@ -47,6 +47,8 @@ export type Task = {
   solutionSteps?: readonly string[];
   hint?: string;
   examTags?: readonly string[];
+  /** Punktacja CKE z arkusza (1–6). Gdy brak, UI liczy ją heurystycznie. */
+  points?: number;
   examSource?: ExamSource;
 };
 
