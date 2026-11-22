@@ -8,10 +8,9 @@ import Link from "next/link";
 
 import { DailyPuzzle, FormulaSheet, ProductPreview } from "@/components/home/HomeDashboard";
 import { MinigamePromo } from "@/components/home/MinigamePromo";
-import { AiSection, FaqSection, PricingTeaser, RankingSection, TeacherBand, TestsSection } from "@/components/home-v2/HomeSections";
+import { AiSection, FaqSection, PricingTeaser, TestsSection } from "@/components/home-v2/HomeSections";
 import { FeatureGrid } from "@/components/home-v2/FeatureGrid";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
-import { WeekSection } from "@/components/home-v2/WeekSection";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 
 type HomeDashboardV2Props = {
@@ -182,11 +181,8 @@ export function HomeDashboardV2({
 
       <FeatureGrid />
       <MinigamePromo />
-      <WeekSection />
-      <RankingSection />
       <AiSection />
       <TestsSection />
-      <TeacherBand />
       <WarmupSection />
       <FaqSection />
       <PricingTeaser />

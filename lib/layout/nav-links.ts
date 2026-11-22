@@ -29,7 +29,6 @@ export const NAV_MORE_GROUPS: readonly NavGroup[] = [
     label: "Nauka",
     links: [
       { href: "/sprawdziany", label: "Sprawdziany" },
-      { href: "/plan-tygodnia", label: "Plan tygodnia" },
       { href: "/powtorki", label: "Powtórki", requiresAuth: true },
     ],
   },

@@ -413,10 +413,10 @@ export function TestsSection() {
                 Wypróbuj generator
               </Link>
               <Link
-                href="/dla-szkol/panel"
+                href="/dla-szkol"
                 className="rounded-xl border border-surface-border bg-surface px-4 py-2.5 text-sm font-bold text-foreground transition hover:border-accent/50 hover:text-accent"
               >
-                Panel nauczyciela
+                Dla szkół
               </Link>
             </div>
           </div>
