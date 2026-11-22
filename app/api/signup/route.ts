@@ -12,6 +12,9 @@ import {
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+// Wysyłka Telegrama i maila powitalnego jest awaitowana przed odpowiedzią.
+// Domyślne 10 s bywa za krótkie przy zimnym starcie i wolnym Telegramie.
+export const maxDuration = 30;
 
 const HEADERS = { "Cache-Control": "no-store" };
 
@@ -177,6 +180,12 @@ export async function POST(request: Request): Promise<Response> {
       : Promise.resolve({ ok: false as const, error: "missing recipient" }),
   ]);
 
+  if (notification?.status === 202) {
+    console.warn(
+      "[telegram-signup] Powiadomienie pominięte (konto poza limitem wieku):",
+      notification.body,
+    );
+  }
   if (notification && notification.status >= 400) {
     console.error(
       "[telegram-signup] Powiadomienie nie zostało wysłane:",

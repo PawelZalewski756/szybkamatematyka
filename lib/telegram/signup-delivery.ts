@@ -97,6 +97,14 @@ export async function deliverSignupNotification(
   if (!options.user && !supabase) missing.push("SUPABASE_SERVICE_ROLE_KEY");
 
   if (missing.length > 0) {
+    const configuredAdmins =
+      process.env.TELEGRAM_ADMIN_IDS ?? process.env.ADMIN_TELEGRAM_ID ?? "";
+    if (adminIds.size === 0 && configuredAdmins.trim()) {
+      console.error(
+        "[telegram-signup] TELEGRAM_ADMIN_IDS jest ustawione, ale nie zawiera żadnego numerycznego ID:",
+        configuredAdmins,
+      );
+    }
     console.error(
       "[telegram-signup] Brak konfiguracji:",
       missing.join(", "),
@@ -139,6 +147,11 @@ export async function deliverSignupNotification(
       options.maxAgeMs ?? MAX_SIGNUP_AGE_MS,
     )
   ) {
+    console.info(
+      "[telegram-signup] Pominięto powiadomienie - konto starsze niż limit:",
+      user.id,
+      user.created_at,
+    );
     return {
       status: 202,
       body: { delivered: false, reason: "account is not recent" },
@@ -162,52 +175,52 @@ export async function deliverSignupNotification(
   let delivered = 0;
 
   for (const adminId of adminIds) {
-    let claimed = false;
-
+    // Najpierw sprawdzamy, czy to powiadomienie już poszło. Wpis potwierdzenia
+    // zapisujemy DOPIERO po udanej wysyłce: wcześniejszy "claim przed sendem"
+    // zostawiał trwały wpis, gdy funkcję ucięło na limicie czasu - i cron
+    // uznawał konto za powiadomione, mimo że wiadomość nigdy nie wyszła.
     if (!options.skipIdempotency && supabase) {
-      const { error: claimError } = await supabase
+      const { data: alreadySent, error: checkError } = await supabase
         .from("signup_notification_deliveries")
-        .insert({ user_id: user.id, telegram_admin_id: adminId });
+        .select("user_id")
+        .eq("user_id", user.id)
+        .eq("telegram_admin_id", adminId)
+        .maybeSingle();
 
-      if (claimError?.code === "23505") {
+      if (checkError) {
+        console.error(
+          "[telegram-signup] Nie udało się sprawdzić idempotencji (wysyłam mimo to):",
+          checkError,
+        );
+      } else if (alreadySent) {
         // Już wysłane wcześniej - nie duplikujemy.
         continue;
-      }
-      if (claimError) {
-        console.error(
-          "[telegram-signup] Could not claim notification delivery (wysyłam mimo to):",
-          claimError,
-        );
-      } else {
-        claimed = true;
       }
     }
 
     const result = await sendTelegramMessage(botToken, adminId, text);
-    if (result.ok) {
-      delivered += 1;
+    if (!result.ok) {
+      const description = describeTelegramFailure(
+        result.status,
+        result.description,
+      );
+      console.error(
+        `[telegram-signup] Telegram delivery to ${adminId} failed: ${description}`,
+      );
+      failures.push({ adminId, error: description });
       continue;
     }
 
-    const description = describeTelegramFailure(
-      result.status,
-      result.description,
-    );
-    console.error(
-      `[telegram-signup] Telegram delivery to ${adminId} failed: ${description}`,
-    );
-    failures.push({ adminId, error: description });
+    delivered += 1;
 
-    if (claimed && supabase) {
-      const { error: releaseError } = await supabase
+    if (!options.skipIdempotency && supabase) {
+      const { error: confirmError } = await supabase
         .from("signup_notification_deliveries")
-        .delete()
-        .eq("user_id", user.id)
-        .eq("telegram_admin_id", adminId);
-      if (releaseError) {
+        .insert({ user_id: user.id, telegram_admin_id: adminId });
+      if (confirmError && confirmError.code !== "23505") {
         console.error(
-          "[telegram-signup] Could not release failed delivery claim:",
-          releaseError,
+          "[telegram-signup] Nie udało się zapisać potwierdzenia wysyłki:",
+          confirmError,
         );
       }
     }

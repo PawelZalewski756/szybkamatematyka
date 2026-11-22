@@ -11,7 +11,7 @@ Preview, jeśli testujesz na preview):
 | Zmienna | Wymagana | Opis |
 | --- | --- | --- |
 | `TELEGRAM_BOT_TOKEN` | tak | Token z BotFather, np. `123456789:AA...`. Bez prefiksu `bot`. |
-| `TELEGRAM_ADMIN_IDS` | tak | Numeryczne ID czatu prywatnego, po przecinku, np. `111111111,222222222`. |
+| `TELEGRAM_ADMIN_IDS` | tak | Numeryczne ID czatu prywatnego (dodatnie) lub grupy (ujemne, np. `-1001234567890`), po przecinku. |
 | `SUPABASE_SERVICE_ROLE_KEY` | opcjonalnie | Potrzebny do idempotencji i backfillu. Sama wysyłka działa też bez niego. |
 | `NEXT_PUBLIC_SUPABASE_URL` | tak | URL projektu Supabase. |
 | `TELEGRAM_WEBHOOK_SECRET` | dla komend bota | Sekret webhooka Telegrama. |
@@ -49,15 +49,18 @@ odrzuca wiadomość.
 | `401 Unauthorized` | Zły token / token z prefiksem `bot` | Wklej token z BotFather; kod i tak usuwa prefiks `bot` |
 | Powiadomienie nie dochodzi, a test działa | Stary kod wymagał `SUPABASE_SERVICE_ROLE_KEY` do odczytu użytkownika | Zaktualizowany `/api/signup` przekazuje dane użytkownika bezpośrednio; service role nie jest już potrzebny do wysyłki |
 | Brak powiadomień po wdrożeniu | Zmienne ustawione tylko dla Preview | Ustaw też dla Production i zrób redeploy |
+| Test dochodzi, a powiadomienia o rejestracji nie | Wysyłka przerwana przez timeout funkcji albo błąd Telegrama | Sprawdź logi `[telegram-signup]`; potwierdzenie zapisuje się dopiero po udanej wysyłce, więc cron `sync-signups` ponowi w ciągu 15 min (Vercel Pro), a `/api/telegram/signup-notification` pozwala wymusić ponowienie |
+| W logach `Pominięto powiadomienie - konto starsze niż limit` | Powiadomienie wywołane po 10 min od rejestracji | To ścieżka cronu/backfillu; sprawdź, czy cron działa (plan Vercel i `CRON_SECRET`) |
 
 ## 5. Jak to działa w kodzie
 
 - `app/api/signup/route.ts` tworzy konto przez Supabase i **przed odpowiedzią**
   woła `deliverSignupNotification` z danymi nowego użytkownika. `after()` było
   zbyt często przerywane przez Vercel, więc powiadomienia ginęły.
-- `lib/telegram/signup-delivery.ts` buduje treść, pilnuje idempotencji
-  (`signup_notification_deliveries`) i wysyła wiadomość przez
-  `lib/telegram/send.ts`.
+- `lib/telegram/signup-delivery.ts` buduje treść, wysyła wiadomość przez
+  `lib/telegram/send.ts`, a wpis idempotencji (`signup_notification_deliveries`)
+  zapisuje **dopiero po udanej wysyłce**. Dzięki temu przerwany request nie
+  blokuje ponowienia przez cron.
 - `lib/telegram/send.ts` normalizuje token, woła `sendMessage` i zwraca
   czytelny błąd zamiast rzucać wyjątkiem.
 - `POST /api/telegram/signup-notification` służy do ponowienia/backfillu. Jest
