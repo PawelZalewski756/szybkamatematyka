@@ -175,52 +175,52 @@ export async function deliverSignupNotification(
   let delivered = 0;
 
   for (const adminId of adminIds) {
-    let claimed = false;
-
+    // Najpierw sprawdzamy, czy to powiadomienie już poszło. Wpis potwierdzenia
+    // zapisujemy DOPIERO po udanej wysyłce: wcześniejszy "claim przed sendem"
+    // zostawiał trwały wpis, gdy funkcję ucięło na limicie czasu - i cron
+    // uznawał konto za powiadomione, mimo że wiadomość nigdy nie wyszła.
     if (!options.skipIdempotency && supabase) {
-      const { error: claimError } = await supabase
+      const { data: alreadySent, error: checkError } = await supabase
         .from("signup_notification_deliveries")
-        .insert({ user_id: user.id, telegram_admin_id: adminId });
+        .select("user_id")
+        .eq("user_id", user.id)
+        .eq("telegram_admin_id", adminId)
+        .maybeSingle();
 
-      if (claimError?.code === "23505") {
+      if (checkError) {
+        console.error(
+          "[telegram-signup] Nie udało się sprawdzić idempotencji (wysyłam mimo to):",
+          checkError,
+        );
+      } else if (alreadySent) {
         // Już wysłane wcześniej - nie duplikujemy.
         continue;
-      }
-      if (claimError) {
-        console.error(
-          "[telegram-signup] Could not claim notification delivery (wysyłam mimo to):",
-          claimError,
-        );
-      } else {
-        claimed = true;
       }
     }
 
     const result = await sendTelegramMessage(botToken, adminId, text);
-    if (result.ok) {
-      delivered += 1;
+    if (!result.ok) {
+      const description = describeTelegramFailure(
+        result.status,
+        result.description,
+      );
+      console.error(
+        `[telegram-signup] Telegram delivery to ${adminId} failed: ${description}`,
+      );
+      failures.push({ adminId, error: description });
       continue;
     }
 
-    const description = describeTelegramFailure(
-      result.status,
-      result.description,
-    );
-    console.error(
-      `[telegram-signup] Telegram delivery to ${adminId} failed: ${description}`,
-    );
-    failures.push({ adminId, error: description });
+    delivered += 1;
 
-    if (claimed && supabase) {
-      const { error: releaseError } = await supabase
+    if (!options.skipIdempotency && supabase) {
+      const { error: confirmError } = await supabase
         .from("signup_notification_deliveries")
-        .delete()
-        .eq("user_id", user.id)
-        .eq("telegram_admin_id", adminId);
-      if (releaseError) {
+        .insert({ user_id: user.id, telegram_admin_id: adminId });
+      if (confirmError && confirmError.code !== "23505") {
         console.error(
-          "[telegram-signup] Could not release failed delivery claim:",
-          releaseError,
+          "[telegram-signup] Nie udało się zapisać potwierdzenia wysyłki:",
+          confirmError,
         );
       }
     }
