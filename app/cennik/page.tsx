@@ -1,10 +1,16 @@
 "use client";
 
 import { PricingSection } from "@/components/home/PricingSection";
+import { proMemberPricing } from "@/lib/home/signed-in-home";
+import { useSubscription } from "@/lib/subscription/use-subscription";
 import { ArrowRight, Gift } from "lucide-react";
 import Link from "next/link";
 
 export default function CennikPage() {
+  const { isPro, loading } = useSubscription();
+  const owned = !loading && isPro;
+  const member = proMemberPricing();
+
   return (
     <div className="page-container flex flex-1 flex-col py-10 sm:py-14">
       <Link
@@ -16,11 +22,12 @@ export default function CennikPage() {
 
       <header className="mt-4 max-w-2xl">
         <h1 className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
-          Cennik
+          {owned ? member.title : "Cennik"}
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-          Start jest darmowy i zostaje darmowy. Pro i Roczny to ta sama treść -
-          wybierasz, czy płacisz co miesiąc, czy z góry za rok.
+          {owned
+            ? member.text
+            : "Start jest darmowy i zostaje darmowy. Pro i Roczny to ta sama treść - wybierasz, czy płacisz co miesiąc, czy z góry za rok."}
         </p>
       </header>
 

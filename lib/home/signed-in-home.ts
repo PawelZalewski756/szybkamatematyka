@@ -89,3 +89,18 @@ export function signedInPlanCta(
   if (planId === "pro") return { href: "/cennik", label: "Wybierz Pro" };
   return { href: "/cennik", label: "Wybierz roczny" };
 }
+
+/** Konto z Pro nie dostaje cennika do kupienia. */
+export function proMemberPricing(): {
+  title: string;
+  text: string;
+  train: HomeAction;
+  manage: HomeAction;
+} {
+  return {
+    title: "Masz już Pro.",
+    text: "Pełne rozwiązania, arkusze i asystent AI są na tym koncie. Nie trzeba nic dokupować.",
+    train: { href: "/trening", label: "Przejdź do treningu" },
+    manage: { href: "/profil", label: "Zarządzaj subskrypcją" },
+  };
+}

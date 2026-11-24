@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  proMemberPricing,
   signedInHeadline,
   signedInPlanCta,
   signedInPrimaryAction,
@@ -71,5 +72,13 @@ describe("strona główna zalogowanego", () => {
     expect(signedInPlanCta("start", false).label).toBe("Przejdź do treningu");
     expect(signedInPlanCta("pro", true).label).toBe("Masz Pro");
     expect(signedInPlanCta("pro", false).href).toBe("/cennik");
+  });
+
+  it("aktywne Pro nie prowadzi do zakupu", () => {
+    const pricing = proMemberPricing();
+    expect(pricing.title).toBe("Masz już Pro.");
+    expect(pricing.text).not.toMatch(/29 zł|249 zł/);
+    expect(pricing.train.href).toBe("/trening");
+    expect(pricing.manage.href).toBe("/profil");
   });
 });

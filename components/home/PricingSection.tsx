@@ -1,11 +1,33 @@
 "use client";
 
 import { startCheckout } from "@/lib/subscription/checkout-client";
+import { proMemberPricing } from "@/lib/home/signed-in-home";
 import { SUBSCRIPTION_PLANS, type SubscriptionPlan } from "@/lib/subscription/plans";
 import { useSubscription } from "@/lib/subscription/use-subscription";
-import { Check, Loader2 } from "lucide-react";
+import { ArrowRight, Check, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+
+function OwnedPlan() {
+  const copy = proMemberPricing();
+  return (
+    <div className="flex flex-col gap-3 sm:flex-row">
+      <Link
+        href={copy.train.href}
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2.5 text-sm font-bold text-on-accent"
+      >
+        {copy.train.label}
+        <ArrowRight className="h-4 w-4" aria-hidden />
+      </Link>
+      <Link
+        href={copy.manage.href}
+        className="inline-flex min-h-11 items-center justify-center rounded-xl border border-surface-border bg-surface px-4 py-2.5 text-sm font-bold text-foreground"
+      >
+        {copy.manage.label}
+      </Link>
+    </div>
+  );
+}
 
 function PlanCta({
   plan,
@@ -80,6 +102,10 @@ export function PricingSection({ compact = false }: PricingSectionProps) {
   const [pendingPlan, setPendingPlan] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [acceptTerms, setAcceptTerms] = useState(false);
+
+  if (!loading && isPro) {
+    return <OwnedPlan />;
+  }
 
   const handleBuy = async (planId: string) => {
     setError(null);

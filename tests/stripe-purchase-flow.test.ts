@@ -32,10 +32,16 @@ vi.mock("@/lib/stripe/service-supabase", () => ({
   }),
 }));
 
+let alreadyPro = false;
+
 vi.mock("@/lib/subscription/server-auth", () => ({
   verifyUserRequest: async (req: Request) =>
     req.headers.get("authorization") === "Bearer ok"
       ? { ok: true, user: { id: USER, email: "a@b.pl" } }
+      : { ok: false, status: 401, error: "Wymagane zalogowanie." },
+  verifyTaskAssistRequest: async (req: Request) =>
+    req.headers.get("authorization") === "Bearer ok"
+      ? { ok: true, user: { id: USER, email: "a@b.pl" }, isPro: alreadyPro }
       : { ok: false, status: 401, error: "Wymagane zalogowanie." },
 }));
 
@@ -70,6 +76,7 @@ const req = (url: string, body: unknown, headers: Record<string, string> = {}) =
   new Request(url, { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body), headers });
 
 beforeEach(() => {
+  alreadyPro = false;
   for (const k of Object.keys(profiles)) delete profiles[k];
   process.env.STRIPE_PRICE_PRO = "price_pro";
   session = {
@@ -87,6 +94,16 @@ describe("symulacja zakupu Pro", () => {
     expect(res.status).toBe(200);
     const args = (stripeMock.checkout.sessions.create.mock.calls as unknown as [{ success_url: string }][])[0][0];
     expect(args.success_url).toContain("session_id={CHECKOUT_SESSION_ID}");
+  });
+
+  it("checkout: aktywne Pro nie tworzy drugiej sesji", async () => {
+    alreadyPro = true;
+    const { POST } = await import("@/app/api/checkout/route");
+    const before = stripeMock.checkout.sessions.create.mock.calls.length;
+    const res = await POST(req("http://x/api/checkout", { planId: "pro", acceptTerms: true }, { authorization: "Bearer ok" }));
+    expect(res.status).toBe(409);
+    expect((await res.json()).code).toBe("already_pro");
+    expect(stripeMock.checkout.sessions.create.mock.calls.length).toBe(before);
   });
 
   it("checkout: bez zgody na regulamin nie tworzy sesji", async () => {
