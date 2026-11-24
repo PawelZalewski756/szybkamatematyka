@@ -17,6 +17,11 @@ test.describe("Smoke", () => {
       "Przygotuj się do",
     );
     await expect(
+      page.getByRole("heading", { name: "Rywalizacja, która motywuje" }),
+    ).toBeVisible();
+    await expect(page.getByRole("tab", { name: "Wszyscy" })).toBeVisible();
+    await expect(page.getByText("dane przykładowe")).toHaveCount(0);
+    await expect(
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
     ).toHaveCount(0);
     const quickTask = page.getByRole("group", {

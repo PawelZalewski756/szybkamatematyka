@@ -16,7 +16,7 @@ a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`]
 | Funkcja | Gdzie była widoczna | Dlaczego ukryta | Jak przywrócić |
 |---|---|---|---|
 | **Plan tygodnia** (`/plan-tygodnia`) | sekcja na stronie głównej (`WeekSection`), karta w siatce funkcji, menu „Więcej", stopka, sitemap | MVP nowej funkcji; na stronie głównej pokazywała przykładowe dni i „0 zaległych powtórek", co wyglądało jak atrapa | 1) w `components/home-v2/HomeDashboardV2.tsx` dodaj import i `<WeekSection />`; 2) w `lib/home/feature-map.ts` przywróć kartę `plan-tygodnia`; 3) w `lib/layout/nav-links.ts` i `lib/layout/footer-links.ts` dodaj link; 4) w `components/home-v2/HomeFooterV2.tsx` dodaj link; 5) w `app/sitemap.ts` dodaj trasę; 6) usuń `robots: noindex` z `app/plan-tygodnia/page.tsx` |
-| **Ranking na stronie głównej** (sekcja z podium) | sekcja `RankingSection` na home | dane były **przykładowe** i strona sama to przyznawała („Podgląd wyglądu - dane przykładowe”) | prawdziwy ranking działa pod `/rankingi`; kartę w `feature-map.ts` przestawiono na `/rankingi`. Sekcję można przywrócić po podłączeniu realnych danych z `lib/supabase/leaderboard.ts` |
+| **Ranking na stronie głównej** (sekcja z podium) | przywrócony 24.11.2026 | wcześniej dane były przykładowe („Podgląd wyglądu”) | `HomeRankingPreview` czyta `fetchTopLeaderboard` (top 5, kategorie XP / minigry / pojedynki). Pusta baza pokazuje pusty stan, bez wymyślonych nicków |
 | **Pakiet szkolny / panel nauczyciela** | pas `TeacherBand` na home, link „Panel nauczyciela" w stopce i w sekcji sprawdzianów | B2B nie ma klas, uczniów, wyników ani faktur - pas obiecywał rzeczy, których nie ma | strona `/dla-szkol` (kontakt B2B) została; panel `/dla-szkol/panel` nadal działa z bezpośredniego linku. Przywrócenie: `<TeacherBand />` w `HomeDashboardV2.tsx`, link w `HomeFooterV2.tsx` i przycisk w sekcji sprawdzianów (`HomeSections.tsx`) |
 | **Karta „Matura rozszerzona - W przygotowaniu”** | siatka funkcji na home | badge „W przygotowaniu" na stronie głównej odstraszał uczniów zdających rozszerzenie | karta usunięta z `lib/home/feature-map.ts`; strona `/matura-rozszerzona` (12 oficjalnych arkuszy) **zostaje** i jest linkowana w stopce |
 
@@ -46,9 +46,9 @@ a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`]
 1. **Plan tygodnia** - dokończyć (integracja z powtórkami, e-mailowe przypomnienia)
    czy usunąć na stałe? Jeśli wraca, musi pokazywać realne zadania użytkownika,
    a nie przykładowy tydzień.
-2. **Ranking na stronie głównej** - podłączyć realne top 3 z `leaderboard.ts`
-   (najlepiej po stronie klienta, z obsługą pustej bazy) albo zostawić tylko
-   link do `/rankingi`.
+2. **Ranking na stronie głównej** - zrobione 24.11.2026: top 5 z
+   `leaderboard.ts` po stronie klienta, pusta baza bez danych przykładowych.
+   Pełna lista zostaje pod `/rankingi`.
 3. **Matura rozszerzona** - dokończyć plan tematyczny + zadania (P1) albo
    zostawić same arkusze i nie nazywać tego „pełną ścieżką”.
 4. **B2B** - klasy, uczniowie, wyniki, faktury; do tego czasu nie obiecywać
@@ -76,7 +76,7 @@ a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`]
 | Pełna matura rozszerzona | plan tematyczny + zadania; dziś tylko arkusze |
 | Pełne B2B | klasy, uczniowie, wyniki, faktury - wymaga migracji i ról |
 | E-mail reminders | dziś przypomnienia tylko w przeglądarce |
-| Ranking na home na realnych danych | patrz decyzja nr 2 |
+| Ranking na home na realnych danych | zrobione 24.11.2026, `HomeRankingPreview` |
 | Audyt a11y | kontrast, fokus w modalach, nawigacja klawiaturą |
 
 ### P2 - techniczne
@@ -92,6 +92,8 @@ a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`]
 
 ## 5. Dziennik zmian
 
+- **24.11.2026** - ranking na stronie głównej pokazuje prawdziwe top 5
+  (XP, minigry, pojedynki). Zniknęły dane przykładowe i plakietka „Podgląd”.
 - **22.11.2026** - audyt strony głównej: brak CTA rejestracji, fejkowy ranking,
   „rejestracja opcjonalna". Wdrożone: CTA „Załóż konto" w nagłówku, rejestracja
   pod `/login?mode=signup`, propozycja konta po szybkiej próbie, uczciwe copy,
