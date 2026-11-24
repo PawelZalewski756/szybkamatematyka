@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { HomePlanLink } from "@/components/home-v2/HomePlanLink";
 import { CONTACT_EMAIL } from "@/lib/brand/constants";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscription/plans";
 
@@ -637,17 +638,16 @@ export function PricingTeaser() {
                   ))}
                 </ul>
 
-                <Link
-                  href={ctaHref}
+                <HomePlanLink
+                  planId={plan.id}
+                  guestHref={ctaHref}
+                  guestLabel={ctaLabel}
                   className={`mt-auto inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition ${
                     highlighted
                       ? "btn-chunky"
                       : "border border-surface-border bg-surface text-foreground hover:border-accent/50 hover:text-accent"
                   }`}
-                >
-                  {ctaLabel}
-                  <ArrowRight className="h-4 w-4" aria-hidden />
-                </Link>
+                />
               </div>
             );
           })}

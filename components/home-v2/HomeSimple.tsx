@@ -1,7 +1,5 @@
 import {
-  ArrowRight,
   BookOpen,
-  Check,
   FileText,
   Gamepad2,
   RefreshCw,
@@ -12,6 +10,7 @@ import {
 import Link from "next/link";
 
 import { ProductPreview } from "@/components/home/HomeDashboard";
+import { HomeHero } from "@/components/home-v2/HomeHero";
 import {
   FaqSection,
   PricingTeaser,
@@ -141,55 +140,7 @@ export function HomeSimple({
 
         <div className="page-container relative z-10">
           <div className="grid items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(26rem,0.85fr)] lg:gap-12 lg:px-10 lg:py-20 xl:px-12 2xl:px-16">
-            <div>
-              <h1 className="max-w-2xl text-[clamp(2.65rem,6.5vw,5.4rem)] font-extrabold leading-[0.94] tracking-[-0.055em]">
-                <span className="text-foreground">Przygotuj się do</span>
-                <br />
-                <span className="text-accent">egzaminu z matematyki.</span>
-              </h1>
-
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-                Teoria, zadania i arkusze CKE w jednym miejscu. Zacznij od
-                jednego zadania - konto założysz w 30 sekund.
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
-                <Link
-                  href="/login?mode=signup"
-                  className="btn-chunky px-7 py-4 text-base sm:px-8"
-                >
-                  Załóż darmowe konto
-                  <ArrowRight className="h-5 w-5" aria-hidden />
-                </Link>
-                <Link
-                  href="#szybka-proba"
-                  className="rounded-xl border border-surface-border bg-surface px-5 py-3.5 text-sm font-bold text-foreground transition hover:border-accent/50 hover:text-accent"
-                >
-                  Wypróbuj bez konta
-                </Link>
-                <Link
-                  href="/login"
-                  className="text-sm font-bold text-muted underline decoration-surface-border underline-offset-4 transition hover:text-foreground"
-                >
-                  Mam już konto
-                </Link>
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold text-muted">
-                <span className="inline-flex items-center gap-1.5">
-                  <Check className="h-4 w-4 text-accent" aria-hidden />0 zł na
-                  start
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Check className="h-4 w-4 text-accent" aria-hidden />
-                  {taskCount}+ zadań
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Check className="h-4 w-4 text-accent" aria-hidden />
-                  {sheetCount} arkuszy CKE
-                </span>
-              </div>
-            </div>
+            <HomeHero taskCount={taskCount} sheetCount={sheetCount} />
 
             <div id="szybka-proba" className="scroll-mt-24">
               <ProductPreview />
