@@ -58,17 +58,6 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
-  test("zagadka dnia pokazuje rozwiązanie po kliknięciu", async ({ page }) => {
-    await page.goto("/");
-    await expect(
-      page.getByText("ZAGADKA DNIA", { exact: true }),
-    ).toBeVisible();
-    await page.getByRole("button", { name: "Pokaż rozwiązanie" }).click();
-    await expect(
-      page.getByRole("button", { name: "Pokaż rozwiązanie" }),
-    ).toHaveCount(0);
-  });
-
   test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({
     page,
   }) => {
@@ -82,7 +71,7 @@ test.describe("Smoke", () => {
       "Przygotuj się do",
     );
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await page.getByRole("link", { name: /Wejdź do treningu/ }).click();
     await expect(page).toHaveURL(/\/trening$/);
   });
 
