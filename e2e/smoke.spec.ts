@@ -66,7 +66,7 @@ test.describe("Smoke", () => {
       "Przygotuj się do",
     );
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await page.getByRole("link", { name: /Wejdź do treningu/ }).click();
     await expect(page).toHaveURL(/\/trening$/);
   });
 
