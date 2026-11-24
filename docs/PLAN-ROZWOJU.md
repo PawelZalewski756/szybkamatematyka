@@ -6,6 +6,9 @@ to, co realnie działa. Niedokończone funkcje są **ukryte, ale nie usunięte**
 kod i trasy zostają, żeby można je było dokończyć bez odtwarzania pracy.
 
 Ten plik jest źródłem prawdy o tym, co jest ukryte, dlaczego i jak to przywrócić.
+
+**Aktualny audyt całej strony:** [`AUDYT-STRONY-2026-11-24.md`](AUDYT-STRONY-2026-11-24.md)
+— luki, wady techniczne i priorytety.
 Backlog techniczny i historia projektu są w [`AI-HANDOFF.md`](../AI-HANDOFF.md),
 a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`](propozycja-strona-glowna-v2-2026-11-20.md).
 
