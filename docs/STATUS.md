@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-24 14:01 UTC · branch `cursor/home-zalogowany-012b` · commit `11bfc18`
+> Ostatnia aktualizacja: 2026-11-24 14:03 UTC · branch `cursor/home-zalogowany-012b` · commit `791d875`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -21,7 +21,7 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 | Migracje Supabase | 51 | `supabase/migrations` |
 | Strony App Router | 46 | `app/**/page.tsx` |
 | Endpointy API | 32 | `app/**/route.ts` |
-| Pliki źródłowe TS/TSX | 666 | bez `node_modules` |
+| Pliki źródłowe TS/TSX | 664 | bez `node_modules` |
 | Pliki testów jednostkowych | 95 | `tests/*.test.ts` |
 | Asercje `it`/`test` w testach | 570 | statycznie |
 | Pliki E2E | 12 | `e2e/*.spec.ts` |
