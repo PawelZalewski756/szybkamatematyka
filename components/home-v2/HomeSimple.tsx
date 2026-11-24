@@ -14,6 +14,7 @@ import { HomeHero } from "@/components/home-v2/HomeHero";
 import {
   FaqSection,
   PricingTeaser,
+  RankingSection,
 } from "@/components/home-v2/HomeSections";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
@@ -203,6 +204,7 @@ export function HomeSimple({
         </div>
       </section>
 
+      <RankingSection />
       <FaqSection />
       <PricingTeaser />
 
