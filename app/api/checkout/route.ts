@@ -5,7 +5,7 @@ import {
 } from "@/lib/stripe/config";
 import { reportServerError } from "@/lib/observability/report";
 import { getPlanById } from "@/lib/subscription/plans";
-import { verifyUserRequest } from "@/lib/subscription/server-auth";
+import { verifyTaskAssistRequest } from "@/lib/subscription/server-auth";
 
 // Stripe SDK używa Node crypto / fetcha - wymuszamy runtime Node (nie Edge).
 export const runtime = "nodejs";
@@ -37,10 +37,19 @@ export async function POST(request: Request) {
       );
     }
 
-    // 2) Autoryzacja: dowolny zalogowany użytkownik.
-    const auth = await verifyUserRequest(request);
+    // 2) Autoryzacja: zalogowany użytkownik bez aktywnego Pro.
+    const auth = await verifyTaskAssistRequest(request);
     if (!auth.ok) {
       return Response.json({ error: auth.error }, { status: auth.status });
+    }
+    if (auth.isPro) {
+      return Response.json(
+        {
+          error: "Masz już aktywny plan Pro. Nie trzeba kupować go drugi raz.",
+          code: "already_pro",
+        },
+        { status: 409 },
+      );
     }
 
     // 3) Walidacja planu.

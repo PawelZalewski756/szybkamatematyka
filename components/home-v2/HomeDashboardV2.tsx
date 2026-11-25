@@ -8,7 +8,8 @@ import Link from "next/link";
 
 import { DailyPuzzle, FormulaSheet, ProductPreview } from "@/components/home/HomeDashboard";
 import { MinigamePromo } from "@/components/home/MinigamePromo";
-import { AiSection, FaqSection, PricingTeaser, RankingSection, TestsSection } from "@/components/home-v2/HomeSections";
+import { AiSection, FaqSection, RankingSection, TestsSection } from "@/components/home-v2/HomeSections";
+import { HomePricing } from "@/components/home-v2/HomePricing";
 import { FeatureGrid } from "@/components/home-v2/FeatureGrid";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
@@ -186,7 +187,7 @@ export function HomeDashboardV2({
       <TestsSection />
       <WarmupSection />
       <FaqSection />
-      <PricingTeaser />
+      <HomePricing />
 
       <div className="page-container px-4 pb-10 pt-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <HomeFooterV2 />

@@ -13,9 +13,9 @@ import { ProductPreview } from "@/components/home/HomeDashboard";
 import { HomeHero } from "@/components/home-v2/HomeHero";
 import {
   FaqSection,
-  PricingTeaser,
   RankingSection,
 } from "@/components/home-v2/HomeSections";
+import { HomePricing } from "@/components/home-v2/HomePricing";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 
@@ -206,7 +206,7 @@ export function HomeSimple({
 
       <RankingSection />
       <FaqSection />
-      <PricingTeaser />
+      <HomePricing />
 
       <div className="page-container px-4 pb-10 pt-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <HomeFooterV2 />
