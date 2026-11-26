@@ -1,12 +1,19 @@
 import { CONTACT_EMAIL } from "@/lib/brand/constants";
 import { ArrowRight, CheckCircle2, FileText, Printer, School, Users } from "lucide-react";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Dla szkół i nauczycieli - sprawdziany z matematyki",
   description:
     "Gotowe sprawdziany z matematyki dla klas 6-8 i liceum: grupy A/B, klucz, schemat punktowania, PDF do druku. Generator zadań i arkusze CKE dla nauczycieli.",
+  openGraph: pageOpenGraph({
+    path: "/dla-szkol",
+    title: "Dla szkół i nauczycieli - sprawdziany z matematyki",
+    description:
+      "Gotowe sprawdziany z matematyki dla klas 6-8 i liceum: grupy A/B, klucz, schemat punktowania, PDF do druku. Generator zadań i arkusze CKE dla nauczycieli.",
+  }),
   alternates: { canonical: "/dla-szkol" },
 };
 

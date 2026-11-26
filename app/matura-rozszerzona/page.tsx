@@ -3,12 +3,19 @@ import {
 } from "@/lib/baza-zadan/exams/archive-catalog";
 import { officialCkeSheetHref } from "@/lib/baza-zadan/exams/archive-sheet-meta";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Matura rozszerzona z matematyki - arkusze i plan",
   description:
     "Matura rozszerzona z matematyki: oficjalne arkusze CKE, zakres materiału i wskazówki, od czego zacząć. Plan tematyczny i zadania rozszerzone w przygotowaniu.",
+  openGraph: pageOpenGraph({
+    path: "/matura-rozszerzona",
+    title: "Matura rozszerzona z matematyki - arkusze i plan",
+    description:
+      "Matura rozszerzona z matematyki: oficjalne arkusze CKE, zakres materiału i wskazówki, od czego zacząć. Plan tematyczny i zadania rozszerzone w przygotowaniu.",
+  }),
   alternates: { canonical: "/matura-rozszerzona" },
 };
 

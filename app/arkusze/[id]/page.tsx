@@ -9,10 +9,14 @@ type PageProps = {
   params: Promise<{ id: string }>;
 };
 
-export const metadata: Metadata = {
-  title: "Arkusz CKE - Szybka Matematyka",
-  description: "Zadania i rozwiązania arkusza CKE krok po kroku.",
-};
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  return {
+    title: "Arkusz CKE",
+    description: "Zadania i rozwiązania arkusza CKE krok po kroku.",
+    alternates: { canonical: `/arkusze/${id}` },
+  };
+}
 
 export default async function ArkuszCkePage({ params }: PageProps) {
   const { id } = await params;
