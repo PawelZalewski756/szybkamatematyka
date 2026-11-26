@@ -9,11 +9,12 @@ Ten plik jest źródłem prawdy o tym, co jest ukryte, dlaczego i jak to przywr�
 
 **Aktualny audyt całej strony:** [`AUDYT-STRONY-2026-11-24.md`](AUDYT-STRONY-2026-11-24.md)
 — luki, wady techniczne i priorytety.
-**Audyt bazy zadań (25.11.2026):** 12 847 zadań, 10 179 sprawdzonych (79%),
-18 błędnych odpowiedzi, 69 niespójnych zadań z walcem (π), 3 złe formy,
-22 duże liczby do ręcznej weryfikacji, 2 668 niezweryfikowanych. Narzędzie:
-`npm run audit:answers -- --file zadania.json` (albo `--db`), SQL z poprawkami:
-[`audyt-zadan-2026-11-25.sql`](audyt-zadan-2026-11-25.sql).
+**Audyt bazy zadań (25.11.2026):** 12 847 zadań, 10 179 sprawdzonych (79%).
+Po uruchomieniu SQL: **8 błędnych odpowiedzi, 0 niespójnych z walcem (π),
+1 zła forma, 22 duże liczby do ręcznej weryfikacji, 2 668 niezweryfikowanych**.
+Narzędzie: `npm run audit:answers -- --file zadania.json` (albo `--db`), SQL:
+[`audyt-zadan-2026-11-25.sql`](audyt-zadan-2026-11-25.sql). Pozostałe 8 to
+zadania wyboru bez poprawnej opcji - do przepisania albo usunięcia.
 Backlog techniczny i historia projektu są w [`AI-HANDOFF.md`](../AI-HANDOFF.md),
 a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`](propozycja-strona-glowna-v2-2026-11-20.md).
 
