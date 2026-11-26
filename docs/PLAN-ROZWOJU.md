@@ -1,6 +1,6 @@
 # Plan rozwoju - Szybka Matematyka
 
-**Ostatnia aktualizacja:** 22.11.2026
+**Ostatnia aktualizacja:** 25.11.2026
 **Zasada:** na stronie głównej, w nawigacji, stopce i sitemapie pokazujemy tylko
 to, co realnie działa. Niedokończone funkcje są **ukryte, ale nie usunięte** -
 kod i trasy zostają, żeby można je było dokończyć bez odtwarzania pracy.
@@ -9,6 +9,14 @@ Ten plik jest źródłem prawdy o tym, co jest ukryte, dlaczego i jak to przywr�
 
 **Aktualny audyt całej strony:** [`AUDYT-STRONY-2026-11-24.md`](AUDYT-STRONY-2026-11-24.md)
 — luki, wady techniczne i priorytety.
+**Audyt bazy zadań (25.11.2026):** 12 847 zadań, 10 179 sprawdzonych (79%).
+Po uruchomieniu SQL: **8 błędnych odpowiedzi, 0 niespójnych z walcem (π),
+1 zła forma, 22 duże liczby do ręcznej weryfikacji, 2 668 niezweryfikowanych**.
+Narzędzie: `npm run audit:answers -- --file zadania.json` (albo `--db`), SQL:
+[`audyt-zadan-2026-11-25.sql`](audyt-zadan-2026-11-25.sql). Pozostałe 8 to
+zadania wyboru bez poprawnej opcji; naprawia je
+[`audyt-zadan-opcje-2026-11-26.sql`](audyt-zadan-opcje-2026-11-26.sql)
+(podmiana błędnej opcji na poprawną, bez usuwania zadań).
 Backlog techniczny i historia projektu są w [`AI-HANDOFF.md`](../AI-HANDOFF.md),
 a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`](propozycja-strona-glowna-v2-2026-11-20.md).
 
@@ -26,6 +34,25 @@ a propozycje układu strony w [`docs/propozycja-strona-glowna-v2-2026-11-20.md`]
 > Uwaga: ukrycie polega na **odlinkowaniu**, nie na usunięciu tras. Adresy
 > `/plan-tygodnia`, `/dla-szkol/panel` i `/matura-rozszerzona` nadal odpowiadają,
 > więc można je testować i linkować bezpośrednio.
+
+---
+
+## 1a. Jakość bazy zadań (25.11.2026)
+
+Baza `tasks` ma 12 847 wierszy, z czego 2 668 to unikalne zadania słowne/CKE,
+których nie da się w pełni zweryfikować automatem. Audyt wykrył:
+
+- **18 błędnych odpowiedzi** — m.in. `log₃ 81` z kluczem `81` (poprawnie `4`),
+  `1 2/5 + 2 1/3` z kluczem `3 7/15` (poprawnie `3 11/15`).
+- **69 zadań z walcem**, gdzie treść mówi `π≈3,14`, a klucz jest liczony z π.
+- **3 odpowiedzi w złej formie** (np. `-24, a nie 12`, `7)`).
+- **22 duże potęgi** z kluczem zaokrąglonym — do ręcznej weryfikacji.
+- **10 000 zadań** z niewidzialnymi znakami `U+200B` w treści.
+
+**Zasada na przyszłość:** nowe zadania przed zapisem do bazy muszą przejść
+`npm run audit:answers` (kod wyjścia 1 przy błędzie). Nie serwujemy zadań
+niezweryfikowanych. Zadania bez poprawnej opcji (lista w SQL) są do przepisania
+albo usunięcia.
 
 ---
 

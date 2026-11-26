@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import { TreningSubNav } from "@/components/trening/TreningSubNav";
 
 export const metadata: Metadata = {
   title: "Trening tematyczny",
   description:
     "Trening tematyczny: zadania pogrupowane po działach i tematach, ze ścieżką pod maturę lub egzamin ósmoklasisty. Ćwicz wybrany temat krok po kroku.",
+  openGraph: pageOpenGraph({
+    path: "/trening",
+    title: "Trening tematyczny",
+    description:
+      "Trening tematyczny: zadania pogrupowane po działach i tematach, ze ścieżką pod maturę lub egzamin ósmoklasisty. Ćwicz wybrany temat krok po kroku.",
+  }),
   alternates: { canonical: "/trening" },
 };
 

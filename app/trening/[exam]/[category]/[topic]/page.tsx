@@ -8,6 +8,7 @@ import { decodeSlug, examTypeFromParam } from "@/lib/trening/slugs";
 import { resolveSeedMaterial } from "@/lib/trening/resolve-material";
 import type { ExamType, Material } from "@/types/database";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import { notFound } from "next/navigation";
 
 type PageProps = {
@@ -47,9 +48,17 @@ export async function generateMetadata({
     findCkeTopicLabel(examType, categorySlug, topicSlug) ??
     formatTreningLabel(topicSlug);
 
+  const title = `${topicLabel} - trening (${examLabel})`;
+  const description = `Zadania z tematu „${topicLabel}” (dział: ${categoryLabel}) pod ${examLabel}. Ćwicz, zdobywaj EXP i utrwalaj materiał krok po kroku.`;
+
   return {
-    title: `${topicLabel} - trening (${examLabel})`,
-    description: `Zadania z tematu „${topicLabel}” (dział: ${categoryLabel}) pod ${examLabel}. Ćwicz, zdobywaj EXP i utrwalaj materiał krok po kroku.`,
+    title,
+    description,
+    openGraph: pageOpenGraph({
+      path: `/trening/${exam}/${category}/${topic}`,
+      title,
+      description,
+    }),
     alternates: {
       canonical: `/trening/${exam}/${category}/${topic}`,
     },

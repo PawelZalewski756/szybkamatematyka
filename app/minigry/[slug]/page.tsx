@@ -5,6 +5,7 @@ import {
   MINIGAME_SLUGS,
 } from "@/lib/minigry/minigame-registry";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -28,9 +29,17 @@ export async function generateMetadata({
     };
   }
 
+  const title = `${game.title} - minigra matematyczna`;
+  const description = `${game.description} Graj online, zdobywaj EXP i trenuj matematykę w tempie gry.`;
+
   return {
-    title: `${game.title} - minigra matematyczna`,
-    description: `${game.description} Graj online, zdobywaj EXP i trenuj matematykę w tempie gry.`,
+    title,
+    description,
+    openGraph: pageOpenGraph({
+      path: `/minigry/${game.slug}`,
+      title,
+      description,
+    }),
     alternates: { canonical: `/minigry/${game.slug}` },
   };
 }
