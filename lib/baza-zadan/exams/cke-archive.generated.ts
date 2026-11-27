@@ -10037,19 +10037,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dla każdej dodatniej liczby b wyrażenie ![Rysunek do zadania](/cke-matura/m21-probna/z04-1.png) jest równe",
+    "prompt": "Dla każdej dodatniej liczby $b$ wyrażenie $\\left(\\sqrt b\\cdot\\sqrt[4]b\\right)^{\\frac13}$ jest równe",
     "choices": [
-      "b 2",
-      "$b_{0}$,25",
-      "$b_{8} / 3$",
-      "$b_{4} / 3$ pokaż wskazówkę »"
+      "$b^2$",
+      "$b^{0{,}25}$",
+      "$b^{\\frac83}$",
+      "$b^{\\frac43}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $b^{\\frac{7}{6}}$",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Przepisujemy wyrażenie, korzystając z własności potęg $(a^m)^n = a^{m \\cdot n}$ i $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$. Otrzymujemy $b^{\\frac{1}{2}} \\cdot b^{\\frac{2}{3}}$.",
-      "Korzystamy z własności potęg $a^m \\cdot a^n = a^{m+n}$, aby dodać wykładniki: $\\frac{1}{2} + \\frac{2}{3}$. Wspólny mianownik to 6, więc $\\frac{3}{6} + \\frac{4}{6} = \\frac{7}{6}$.",
-      "Wyrażenie przyjmuje postać $b^{\\frac{7}{6}}$."
+      "1. $\\sqrt b=b^{1/2}$, $\\sqrt[4]b=b^{1/4}$.\n2. $b^{1/2+1/4}=b^{3/4}$; $(b^{3/4})^{1/3}=b^{1/4}=b^{0,25}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10068,20 +10066,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Para liczb $x = 1$ , $y = -3$ spełnia układ równań ![Rysunek do zadania](/cke-matura/m21-probna/z05-1.png) Wtedy a jest równe",
+    "prompt": "Para liczb $x=1$, $y=-3$ spełnia układ równań\n\n$x-y=a^2 \\qquad (1+a)x-3y=-4a.$\n\nWtedy $a$ jest równe",
     "choices": [
-      "2",
-      "-2",
-      "$\\sqrt{2}$",
-      "-$\\sqrt{2}$"
+      "$2$",
+      "$-2$",
+      "$\\sqrt2$",
+      "$-\\sqrt2$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $2$.",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Podstaw dane pary liczb $x=1$ i $y=-3$ do pierwszego równania układu, aby wyznaczyć niewiadomą $a$. Otrzymamy $-3 = \\frac{1}{2} \\cdot 1 + a$.",
-      "Rozwiąż otrzymane równanie liniowe względem $a$: $a = -3 - \\frac{1}{2} = -\\frac{6}{2} - \\frac{1}{2} = -\\frac{7}{2}$.",
-      "Podstaw wyznaczoną wartość $a = -\\frac{7}{2}$ oraz dane $x=1, y=-3$ do drugiego równania, aby sprawdzić, czy jest ono spełnione. Otrzymamy $-3 = -\\frac{7}{2} \\cdot 1 - \\frac{1}{2} = -\\frac{8}{2} = -4$.",
-      "Ponieważ drugie równanie $-3 = -4$ nie jest spełnione, oznacza to błąd w treści zadania lub braku możliwości wyznaczenia $a$ z jednego równania i podstawienia do drugiego. Należy przeanalizować treść i obrazek ponownie. Na obrazku w pierwszym równaniu znajduje się $a$, a w drugim jest $b$. Należy wyznaczyć $a$ z pierwszego równania, a $b$ z drugiego."
+      "1. $1-(-3)=4=a^2$.\n2. $(1+a)\\cdot1-3(-3)=-4a$, więc $10+a=-4a$ i $a=-2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10123,22 +10118,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-probna-z07",
     "title": "Matura - próbna 2021 - poziom podstawowy - zad. 7",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-probna/z07-1.png) jest\n\nRozwiąż zadanie.",
+    "prompt": "Zbiorem rozwiązań nierówności $\\frac{12-5x}{2}<3\\left(1-\\frac12x\\right)+7x$ jest",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\left(-\\infty,\\frac27\\right)$",
+      "$\\left(\\frac27,+\\infty\\right)$",
+      "$\\left(-\\infty,\\frac38\\right)$",
+      "$\\left(\\frac38,+\\infty\\right)$"
     ],
-    "correctIndex": 0,
-    "explanation": "Brak możliwości udzielenia odpowiedzi przy podanej treści zadania i braku rysunku.",
+    "correctIndex": 3,
+    "explanation": "D.",
     "solutionSteps": [
-      "Nierówność $\\frac{2x-3}{7-4x} \\ge 0$ jest spełniona, gdy licznik i mianownik mają przeciwne znaki lub licznik jest równy zero. Rozwiązujemy dwa przypadki: $2x-3 \\ge 0$ i $7-4x > 0$ (mianownik nie może być zerem) lub $2x-3 \\le 0$ i $7-4x < 0$.",
-      "W pierwszym przypadku: $x \\ge \\frac{3}{2}$ i $x < \\frac{7}{4}$. Zatem $\\frac{3}{2} \\le x < \\frac{7}{4}$. W drugim przypadku: $x \\le \\frac{3}{2}$ i $x > \\frac{7}{4}$. Ten przypadek nie ma rozwiązań, ponieważ $x$ nie może być jednocześnie mniejszy lub równy $\\frac{3}{2}$ i większy od $\\frac{7}{4}$.",
-      "Połączone rozwiązanie z pierwszego przypadku to przedział $\\left[ \\frac{3}{2}, \\frac{7}{4} \\right)$. Należy sprawdzić, czy to rozwiązanie jest dostępne w opcjach odpowiedzi. Zauważamy, że pytanie jest błędnie sformułowane lub rysunek (którego nie widzę) stanowi część nierówności, której tu nie ma. Zakładając, że celem było rozwiązanie podanej nierówności, żadna z opcji $A - D$ nie odpowiada wynikowi. Przyjmując, że pytanie dotyczyło pierwiastków z rysunku i nierówność miała być inna, nie można udzielić prawidłowej odpowiedzi."
+      "1. $6-\\frac52x<3-\\frac32x+7x=3+\\frac{11}{2}x$.\n2. $3<8x$, więc $x>\\frac38$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10186,20 +10182,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na wykresie przedstawiono wykres funkcji $f$. ![Rysunek do zadania](/cke-matura/m21-probna/z09-1.png) Wskaż zdanie prawdziwe.",
+    "prompt": "Na wykresie przedstawiono wykres funkcji $f$.\n\n![Rysunek 1](/cke-matura/m21-probna/z09-fig1.png)\n\nWskaż zdanie prawdziwe.",
     "choices": [
       "Dziedziną funkcji $f$ jest przedział $(-4,5)$.",
       "Funkcja $f$ ma dwa miejsca zerowe.",
-      "Funkcja $f$ dla argumentu 1 przyjmuje wartość $(-1)$.",
-      "Zbiorem wartości funkcji $f$ jest przedział (-4,5⟩."
+      "Funkcja $f$ dla argumentu $1$ przyjmuje wartość $-1$.",
+      "Zbiorem wartości funkcji $f$ jest przedział $(-4,5]$."
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli Funkcja $f$ dla argumentu 1 przyjmuje wartość $(-1)$.",
+    "correctIndex": 3,
+    "explanation": "D.",
     "solutionSteps": [
-      "Odczytaj dziedzinę funkcji $z$ wykresu. Dziedzina to zbiór wszystkich dopuszczalnych argumentów (wartości $x$), odczytujemy ją z osi $x$. Wykres funkcji istnieje dla $x$ od $-4$ (nie włącznie) do $5$ (włącznie).",
-      "Określ zbiór wartości funkcji $z$ wykresu. Zbiór wartości to zbiór wszystkich wartości przyjmowanych przez funkcję (wartości $y$), odczytujemy go z osi $y$. Najniższa wartość to $-4$ (włącznie), a najwyższa to $5$ (włącznie).",
-      "Sprawdź miejsca zerowe i wartość funkcji dla argumentu 1. Miejsca zerowe to punkty, w których wykres przecina oś $x$ (mają $y=0$). Wartość funkcji dla $x=1$ to $y$ odczytane z wykresu dla $x=1$. Funkcja ma dwa miejsca zerowe, a dla $x=1$ przyjmuje wartość $y=-1$.",
-      "Oceń prawdziwość podanych zdań. A) Dziedzina to $(-4, 5]$, nie $(-4, 5)$. B) Funkcja ma dwa miejsca zerowe. C) Funkcja dla argumentu 1 przyjmuje wartość $-1$. D) Zbiór wartości to $[-4, 5]$, nie $(-4, 5]$. Zdania B i C są prawdziwe, ale w zadaniach CKE wybieramy jedno najlepsze. Zwykle chodzi o konkretną wartość, więc C jest precyzyjniejsze. Przyjęliśmy standard CKE, że podajemy jedną poprawną odpowiedź."
+      "1. Z wykresu zbiór wartości to $(-4,5\\rangle$.\n2. Pozostałe zdania są fałszywe."
     ],
     "examSource": {
       "kind": "matura",
@@ -10218,19 +10211,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-probna/z10-1.png) dla każdej liczby rzeczywistej x . Wartość funkcji $f$ dla argumentu 1 jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x)=\\frac{8x-7}{2x^2+1}$ dla każdej liczby rzeczywistej $x$. Wartość funkcji $f$ dla argumentu $1$ jest równa",
     "choices": [
-      "$\\frac{1}{5}$",
-      "$\\frac{1}{3}$",
-      "1",
-      "2"
+      "$\\frac15$",
+      "$\\frac13$",
+      "$1$",
+      "$2$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $0$.",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Aby obliczyć wartość funkcji $f$ dla argumentu 1, podstawiamy $x=1$ do podanego wzoru funkcji: $f(1) = \\frac{1^3 - 2 \\cdot 1^2 + 1}{1^2 - 1} = \\frac{1 - 2 + 1}{1 - 1} = \\frac{0}{0}$. Otrzymaliśmy symbol nieoznaczony, co oznacza, że musimy uprościć wzór funkcji.",
-      "Rozkładamy licznik i mianownik na czynniki. Licznik: $x^3 - 2x^2 + x = x(x^2 - 2x + 1) = x(x-1)^2$. Mianownik: $x^2 - 1 = (x-1)(x+1)$. Wzór funkcji można zapisać jako $f(x) = \\frac{x(x-1)^2}{(x-1)(x+1)}$, co po skróceniu $(x-1)$ dla $x \\neq 1$ daje $f(x) = \\frac{x(x-1)}{x+1}$.",
-      "Obliczamy wartość funkcji dla $x=1$, korzystając z uproszczonego wzoru: $f(1) = \\frac{1(1-1)}{1+1} = \\frac{1 \\cdot 0}{2} = \\frac{0}{2} = 0$."
+      "1. $f(1)=\\frac{8-7}{2+1}=\\frac13$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10272,22 +10263,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-probna-z12",
     "title": "Matura - próbna 2021 - poziom podstawowy - zad. 12",
     "category": "ciagi",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$, jest arytmetyczny. Różnica tego ciągu jest równa 5, a pierwszy wyraz tego ciągu jest równy $(-3)$. Wtedy iloraz ![Rysunek do zadania](/cke-matura/m21-probna/z12-1.png) jest równy\n\nRozwiąż zadanie.",
+    "prompt": "Ciąg $(a_n)$, określony dla każdej liczby naturalnej $n\\ge1$, jest arytmetyczny. Różnica tego ciągu jest równa $5$, a pierwszy wyraz tego ciągu jest równy $-3$. Wtedy iloraz $\\frac{a_4}{a_2}$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac53$",
+      "$2$",
+      "$6$",
+      "$25$"
     ],
-    "correctIndex": 0,
-    "explanation": "Zadanie jest błędnie sformułowane lub podana odpowiedź jest niepoprawna. Według podanych danych i kroków obliczeń, wynik $to - 4$. Brak opcji -4 w odpowiedziach.",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Zapisz wzór na ogólny wyraz ciągu arytmetycznego, podstawiając dane: $a_n = a_1 + (n-1)r = -3 + (n-1)5 = -3 + 5n - 5 = 5n - 8$.",
-      "Oblicz wartość $a_4$: $a_4 = 5 \\cdot 4 - 8 = 20 - 8 = 12$.",
-      "Oblicz iloraz $\\frac{a_4}{a_1}$: $\\frac{a_4}{a_1} = \\frac{12}{-3} = -4$."
+      "1. $a_n=-3+(n-1)5=5n-8$.\n2. $a_4=12$, $a_2=2$, więc $\\frac{a_4}{a_2}=6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10306,19 +10298,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt ABC jest wpisany w okrąg o środku O . Miara kąta CAO jest równa $70^{\\circ}$ (zobacz rysunek). Wtedy miara kąta ABC jest równa ![Rysunek do zadania](/cke-matura/m21-probna/z13-1.png)",
+    "prompt": "Trójkąt $ABC$ jest wpisany w okrąg o środku $O$. Miara kąta $CAO$ jest równa $70^\\circ$ (zobacz rysunek). Wtedy miara kąta $ABC$ jest równa\n\n![Rysunek 1](/cke-matura/m21-probna/z13-fig1.png)",
     "choices": [
-      "$20^{\\circ}$",
-      "$25^{\\circ}$",
-      "$30^{\\circ}$",
-      "$35^{\\circ}$ pokaż wskazówkę »"
+      "$20^\\circ$",
+      "$25^\\circ$",
+      "$30^\\circ$",
+      "$35^\\circ$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $20^\\circ$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Trójkąt CAO jest równoramienny, ponieważ boki CA i CO są promieniami okręgu. Zatem kąty przy podstawie CO są równe, czyli $\\angle ACO = \\angle CAO = 70^\\circ$.",
-      "Suma kątów w trójkącie CAO wynosi $180^\\circ$. Stąd obliczamy kąt środkowy $\\angle COA$: $\\angle COA = 180^\\circ - (\\angle CAO + \\angle ACO) = 180^\\circ - (70^\\circ + 70^\\circ) = 180^\\circ - 140^\\circ = 40^\\circ$.",
-      "Kąt wpisany $\\angle ABC$ jest oparty na tym samym łuku co kąt środkowy $\\angle COA$. Miara kąta wpisanego jest o połowę mniejsza od miary kąta środkowego opartego na tym samym łuku, czyli $\\angle ABC = \\frac{1}{2} \\angle COA = \\frac{1}{2} \\cdot 40^\\circ = 20^\\circ$."
+      "1. $\\angle ACO=\\angle CAO=70^\\circ$, więc $\\angle COA=40^\\circ$.\n2. $\\angle ABC=\\frac12\\angle COA=20^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10424,20 +10414,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przez punkt przecięcia wysokości trójkąta równobocznego ABC poprowadzono prostą DE równoległą do podstawy AB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z17-1.png) Stosunek pola trójkąta ABC do pola trójkąta CDE jest równy",
+    "prompt": "Przez punkt przecięcia wysokości trójkąta równobocznego $ABC$ poprowadzono prostą $DE$ równoległą do podstawy $AB$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-probna/z17-fig1.png)\n\nStosunek pola trójkąta $ABC$ do pola trójkąta $CDE$ jest równy",
     "choices": [
-      "9 ∶ 4",
-      "4 ∶ 1",
-      "4 ∶ 9",
-      "3 ∶ 2 pokaż wskazówkę »"
+      "$9:4$",
+      "$4:1$",
+      "$4:9$",
+      "$3:2$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 9 ∶ 4",
+    "explanation": "A.",
     "solutionSteps": [
-      "Punkt przecięcia wysokości w trójkącie równobocznym to jego środek ciężkości. Dzieli on każdą wysokość w stosunku 2:1, licząc od wierzchołka. Oznacza to, że wysokość trójkąta CDE stanowi $\\frac{1}{3}$ wysokości trójkąta ABC.",
-      "Ponieważ trójkąty ABC i CDE są podobne (kąty przy wierzchołku C są takie same, a kąty przy podstawie DE i AB są równe jako odpowiadające przy prostych równoległych), stosunek ich pól jest równy kwadratowi stosunku odpowiadających sobie wysokości.",
-      "Stosunek pola ABC do pola CDE wynosi $(\\frac{h_{ABC}}{h_{CDE}})^2 = (\\frac{3}{1})^2 = \\frac{9}{1}$. Ponieważ w zadaniu pytanie jest o stosunek pola ABC do pola CDE, to jest on równy 9:1.",
-      "Chwila, w treści zadania jest \"stosunek pola trójkąta ABC do pola trójkąta CDE jest równy\". Według moich obliczeń stosunek ten wynosi 9:1. Sprawdzam opcje. Opcje A) 9 ∶ 4, B) 4 ∶ 1, C) 4 ∶ 9, D) 3 ∶ 2. Moja odpowiedź 9:1 nie pasuje do żadnej opcji. Zastanawiam się, czy rysunek nie wprowadza w błąd lub ja czegoś nie zrozumiałem. Sprawdzam raz jeszcze. Punkt przecięcia wysokości jest środkiem okręgu wpisanego i opisanego. Wysokość dzieli się w stosunku 2:1. Czyli od wierzchołka do środka jest $\\frac{2}{3}$, od środka do podstawy $\\frac{1}{3}$. Wysokość trójkąta CDE to ta od wierzchołka C do prostej DE. Czyli wysokość CDE wynosi $\\frac{2}{3}$ wysokości ABC. Stosunek pól to kwadrat stosunku wysokości. Czyli $(\\frac{h_{ABC}}{h_{CDE}})^2 = (\\frac{3}{2})^2 = \\frac{9}{4}$."
+      "1. Punkt przecięcia wysokości dzieli wysokość w stosunku $2:1$ od wierzchołka.\n2. Skala podobieństwa $CDE$ do $ABC$ wynosi $\\frac23$, więc stosunek pól $=\\left(\\frac32\\right)^2=\\frac94$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10595,23 +10582,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-probna-z23",
     "title": "Matura - próbna 2021 - poziom podstawowy - zad. 23",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie równoramiennym ABCD podstawy AB i CD mają długości $r$ówne odpowiednio a i b $(przy czym a > b)$. Miara kąta ostrego trapezu jest równa $30^{\\circ}$. Wtedy wysokość tego trapezu jest równa\n\nRozwiąż zadanie.",
+    "prompt": "W trapezie równoramiennym $ABCD$ podstawy $AB$ i $CD$ mają długości $r$ówne odpowiednio $a$ i $b$ (przy czym $a>b$). Miara kąta ostrego trapezu jest równa $30^\\circ$. Wtedy wysokość tego trapezu jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\frac{a-b}{2}\\cdot\\sqrt3$",
+      "$\\frac{a-b}{6}\\cdot\\sqrt3$",
+      "$\\frac{a+b}{2}$",
+      "$\\frac{a+b}{4}$"
     ],
-    "correctIndex": 0,
-    "explanation": "D, czyli $\\frac{(a-b)\\sqrt{3}}{6}$",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Narysuj wysokość opuszczoną z wierzchołka C na podstawę AB. Nazwij punkt przecięcia D'. Powstanie trójkąt prostokątny BCC', gdzie kąt przy wierzchołku B ma miarę $180^\\circ - 30^\\circ = 150^\\circ$. Ponieważ trapez jest równoramienny, kąt przy wierzchołku B ma miarę $180^\\circ - 30^\\circ = 150^\\circ$, ale interesuje nas kąt przy podstawie, który wynosi $30^\\circ$. Zatem w trójkącie prostokątnym stworzonym przez wysokość z C, ramię BC i część podstawy AB, kąt przy A lub B jest $30^\\circ$.",
-      "Zauważ, że w powstałym trójkącie prostokątnym (np. z wierzchołkiem C, punktem na podstawie AB nazwanym D' i wierzchołkiem B), przeciwprostokątna to ramię trapezu (oznaczmy je jako $c$), kąt ostry przy podstawie to $30^\\circ$, a wysokość ($h$) jest przyprostokątną leżącą naprzeciw tego kąta. Użyj funkcji sinus: $\\sin(30^\\circ) = \\frac{h}{c}$. Po przekształceniu otrzymujemy $h = c \\cdot \\sin(30^\\circ) = c \\cdot \\frac{1}{2} = \\frac{c}{2}$.",
-      "Rozważ dolny fragment podstawy trapezu. Różnica długości podstaw wynosi $a-b$. Dzieląc tę różnicę na pół, otrzymujemy długość odcinka przy podstawie, gdzie opuszczono wysokość z wierzchołka (oznaczmy ten odcinek jako $x$). Zatem $x = \\frac{a-b}{2}$. W tym samym trójkącie prostokątnym, mamy $\\cos(30^\\circ) = \\frac{x}{c}$, co daje $c = \\frac{x}{\\cos(30^\\circ)} = \\frac{\\frac{a-b}{2}}{\\frac{\\sqrt{3}}{2}} = \\frac{a-b}{\\sqrt{3}}$.",
-      "Podstaw długość ramienia $c$ do wzoru na wysokość $h$. Mamy $h = \\frac{c}{2} = \\frac{\\frac{a-b}{\\sqrt{3}}}{2} = \\frac{a-b}{2\\sqrt{3}}$. Możemy też pomnożyć licznik i mianownik przez $\\sqrt{3}$, aby usunąć niewymierność z mianownika: $h = \\frac{(a-b)\\sqrt{3}}{2\\sqrt{3}\\sqrt{3}} = \\frac{(a-b)\\sqrt{3}}{6}$. Alternatywnie, w trójkącie prostokątnym z kątem $30^\\circ$, przyprostokątna naprzeciw $30^\\circ$ ($h$) ma długość połowy przeciwprostokątnej ($c$), a przyprostokątna przy $30^\\circ$ ($x$) jest $\\sqrt{3}$ razy dłuższa od $h$, czyli $x = h\\sqrt{3}$. Stąd $h = \\frac{x}{\\sqrt{3}} = \\frac{\\frac{a-b}{2}}{\\sqrt{3}} = \\frac{a-b}{2\\sqrt{3}}$."
+      "1. Rzut wysokości tworzy trójkąt o przyprostokątnej $\\frac{a-b}{2}$ i kącie $30^\\circ$.\n2. $\\operatorname{tg}30^\\circ=\\frac{h}{\\frac{a-b}{2}}$, więc $h=\\frac{a-b}{2}\\cdot\\frac{\\sqrt3}{3}=\\frac{a-b}{6}\\sqrt3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10801,16 +10788,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-probna/z30-1.png)",
+    "prompt": "Rozwiąż równanie $\\frac{6x-1}{3x-2}=3x+2$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x=0$",
+    "explanation": "$x=1$ lub $x=-\\frac13$.",
     "solutionSteps": [
-      "Przekształć równanie, mnożąc obie strony przez wspólny mianownik $6$, aby pozbyć się ułamków. Otrzymasz $3(x-1) + 2(x+2) = 1$.",
-      "Uprość równanie, mnożąc nawiasy i grupując podobne wyrazy: $3x - 3 + 2x + 4 = 1$, co daje $5x + 1 = 1$.",
-      "Rozwiąż proste równanie liniowe, odejmując $1$ od obu stron i dzieląc przez $5$: $5x = 0$, czyli $x = 0$."
+      "1. $6x-1=(3x+2)(3x-2)=9x^2-4$.\n2. $9x^2-6x-3=0$, czyli $3x^2-2x-1=0$.\n3. $x=1$ lub $x=-\\frac13$ (obie wartości spełniają $x\\ne\\frac23$)."
     ],
     "examSource": {
       "kind": "matura",
@@ -10829,17 +10814,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości $a$ i b . Punkt O leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-probna/z31-1.png) Wykaż, że promień r tego okręgu jest równy ![Rysunek do zadania](/cke-matura/m21-probna/z31-2.png) .",
+    "prompt": "Dany jest trójkąt prostokątny, którego przyprostokątne mają długości $a$ i $b$. Punkt $O$ leży na przeciwprostokątnej tego trójkąta i jest środkiem okręgu stycznego do przyprostokątnych tego trójkąta (zobacz rysunek). Wykaż, że promień $r$ tego okręgu jest równy $\\frac{ab}{a+b}$.\n\n![Rysunek 1](/cke-matura/m21-probna/z31-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$r = \\frac{ab}{a+b}$",
+    "explanation": "1. Niech $P$ i $Q$ będą punktami styczności z przyprostokątnymi. $OP\\perp AC$, $OQ\\perp BC$, $|OP|=|OQ|=r$.\n2. Trójkąty $AOP$ i $ABC$ są podobne; $\\frac{r}{b}=\\frac{|AP|}{a}$.\n3. Trójkąty $BOQ$ i $BAC$ są podobne; $\\frac{r}{a}=\\frac{|BQ|}{b}$.\n4. Z styczności i podobieństwa otrzymujemy $r(a+b)=ab$, więc $r=\\frac{ab}{a+b}$.",
     "solutionSteps": [
-      "Oznaczmy wierzchołki trójkąta prostokątnego jako A, B, C, gdzie C jest wierzchołkiem kąta prostego. Przyprostokątne AC i BC mają długości odpowiednio $b$ i $a$. Punkt O leży na przeciwprostokątnej AB. Z rysunku wynika, że okrąg jest styczny do przyprostokątnych AC i BC w punktach P i Q. Ponieważ O jest środkiem okręgu, a OP i OQ są promieniami, to OP $\\perp$ AC i OQ $\\perp$ BC, a ich długości $s$ą równe $r$.",
-      "Czworokąt OQCP jest kwadratem o boku $r$, ponieważ kąty przy C, P, Q są proste, a $OP = OQ$ = $r$. Punkt O ma zatem współrzędne $(r, r)$, jeśli umieścimy wierzchołek C w początku układu współrzędnych $(0, 0)$, a przyprostokątne wzdłuż osi układu.",
-      "Ponieważ O leży na przeciwprostokątnej AB, odległość punktu O od prostej AB jest równa 0. Równanie prostej AB przechodzącej przez punkty $(0, a)$ i $(b, 0)$ wynosi $\\frac{x}{b} + \\frac{y}{a} = 1$, co można zapisać jako $ax + by - ab = 0$. Korzystając ze wzoru na odległość punktu $(x_0, y_0)$ od prostej $Ax + By + C = 0$, czyli $d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$, dla punktu O$(r, r)$ i prostej $ax + by - ab = 0$ mamy $0 = \\frac{|ar + br - ab|}{\\sqrt{a^2 + b^2}}$. Stąd $|r(a+b) - ab| = 0$, czyli $r(a+b) = ab$.",
-      "Dzieląc obie strony równania $r(a+b) = ab$ przez $(a+b)$, otrzymujemy $r = \\frac{ab}{a+b}$."
+      "1. Niech $P$ i $Q$ będą punktami styczności z przyprostokątnymi. $OP\\perp AC$, $OQ\\perp BC$, $|OP|=|OQ|=r$.\n2. Trójkąty $AOP$ i $ABC$ są podobne; $\\frac{r}{b}=\\frac{|AP|}{a}$.\n3. Trójkąty $BOQ$ i $BAC$ są podobne; $\\frac{r}{a}=\\frac{|BQ|}{b}$.\n4. Z styczności i podobieństwa otrzymujemy $r(a+b)=ab$, więc $r=\\frac{ab}{a+b}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10884,16 +10866,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest czworokąt ABCD , w którym $|BC| = |CD| = |AD| = 13$ (zobacz rysunek). Przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD . Oblicz pole czworokąta ABCD . ![Rysunek do zadania](/cke-matura/m21-probna/z33-1.png)",
+    "prompt": "Dany jest czworokąt $ABCD$, w którym $|BC|=|CD|=|AD|=13$ (zobacz rysunek). Przekątna $BD$ tego czworokąta ma długość $10$ i jest prostopadła do boku $AD$. Oblicz pole czworokąta $ABCD$.\n\n![Rysunek 1](/cke-matura/m21-probna/z33-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "125",
+    "explanation": "1. $AD\\perp BD$, więc $P_{ABD}=\\frac12\\cdot10\\cdot13=65$.\n2. Trójkąt $BCD$ jest równoramienny: wysokość do $BD$ ma $\\sqrt{13^2-5^2}=12$.\n3. $P_{BCD}=\\frac12\\cdot10\\cdot12=60$.\n4. $P_{ABCD}=65+60=125$.",
     "solutionSteps": [
-      "Oblicz pole trójkąta ABD. Zauważ, że AD jest wysokością w trójkącie ABD opuszczoną na podstawę BD (ponieważ BD jest prostopadła do AD). Użyj wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$.\n$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$\nNie znamy długości AD, ale wiemy, że trójkąt ABD jest prostokątny (kąt między BD i AD jest prosty). Możemy użyć twierdzenia Pitagorasa. Jednakże, skoro BD jest podstawą, a AD jest wysokością, potrzebujemy długości AD, która nie jest dana bezpośrednio. Zauważmy, że rysunek sugeruje, iż AD jest wysokością do BD. Ale AD nie jest wysokością. BD jest prostopadła do AD. To oznacza, że trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku A. W takim razie $\\angle DAB = 90^\\circ$. Nie, to nie wynika z treści. Jest napisane, że przekątna BD jest prostopadła do boku AD. Czyli $\\angle ADB = 90^\\circ$.\n$P_{ABD} = \\frac{1}{2} \\cdot |BD| \\cdot |AD|$\nWiemy, że $|BC| = |CD| = |AD| = 13$ i $|BD| = 10$. W trójkącie ABD mamy bok AD (nieznany), bok $BD = 10$. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W trójkącie prostokątnym ABD mamy przyprostokątne AD i BD oraz przeciwprostokątną AB. To nieprawda. BD jest prostopadła do AD, czyli kąt między nimi wynosi $90^\\circ$. To oznacza, że trójkąt ABD ma kąt prosty przy A lub D. Z opisu \"przekątna BD tego czworokąta ma długość 10 i jest prostopadła do boku AD\" wynika, że $\\angle ADB = 90^\\circ$. W takim razie AD i BD są przyprostokątnymi trójkąta prostokątnego ADB, a AB jest przeciwprostokątną. Nie, to też nie jest poprawne. BD i AD są odcinkami, które tworzą kąt prosty. Niekoniecznie są przyprostokątnymi.\n\nRzeczywiście, skoro BD jest prostopadła do AD, to trójkąt ABD jest prostokątny, a kąt prosty jest przy wierzchołku D. W trójkącie prostokątnym ABD, przyprostokątne to AD i BD. Ale nie, to jest błędne. AD i BD są dwoma bokami, a kąt między nimi jest prosty. To właśnie oznacza, że są przyprostokątnymi. Ale BD nie jest bokiem trójkąta ABD. BD jest przekątną.\n\nSpróbujmy inaczej. Skoro BD jest prostopadła do AD, to $\\angle ADB = 90^\\circ$. W takim razie trójkąt ABD jest prostokątny, a jego przyprostokątnymi są AD i BD. Ale BD nie jest bokiem, tylko przekątną. To wynika z rysunku.\n\nOznaczmy $|AD| = 13$. Skoro BD jest prostopadła do AD, to kąt między nimi wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny z kątem prostym przy wierzchołku D. Przyprostokątnymi są AD i BD. Ale BD ma długość 10. To znaczy, że $|AD| = 13$ i $|BD| = 10$ są przyprostokątnymi trójkąta prostokątnego ABD. Nie, to wynika z treści: $|BC| = |CD| = |AD| = 13$. To nie znaczy, że $|AD| = 13$. To znaczy, że boki BC, CD, AD mają długość 13.\n\nDobrze, przeanalizujmy jeszcze raz: $|BC| = |CD| = |AD| = 13$. Przekątna $|BD| = 10$. BD jest prostopadła do AD. To oznacza, że kąt między AD a BD wynosi $90^\\circ$. Zatem trójkąt ABD jest prostokątny, a kąt prosty jest przy D. Przyprostokątnymi są AD i BD. A zatem $|AD| = 13$ i $|BD| = 10$.\n$$P_{ABD} = \\frac{1}{2} \\cdot |AD| \\cdot |BD| = \\frac{1}{2} \\cdot 13 \\cdot 10 = 65$$",
-      "Oblicz pole trójkąta BCD. Trójkąt BCD jest trójkątem równoramiennym, ponieważ $|BC| = |CD| = 13$. Podstawą tego trójkąta jest bok BD o długości 10. Obliczymy wysokość tego trójkąta opuszczoną z wierzchołka C na podstawę BD. Wysokość ta dzieli podstawę BD na dwie równe części.\n$h_{BCD}^2 + (\\frac{10}{2})^2 = 13^2$\n$h_{BCD}^2 + 5^2 = 13^2$\n$h_{BCD}^2 + 25 = 169$\n$h_{BCD}^2 = 144$\n$h_{BCD} = 12$\nPole trójkąta BCD wynosi:\n$$P_{BCD} = \\frac{1}{2} \\cdot |BD| \\cdot h_{BCD} = \\frac{1}{2} \\cdot 10 \\cdot 12 = 60$$",
-      "Oblicz pole całego czworokąta ABCD. Sumujemy pola obliczonych trójkątów ABD i BCD.\n$P_{ABCD} = P_{ABD} + P_{BCD} = 65 + 60 = 125$"
+      "1. $AD\\perp BD$, więc $P_{ABD}=\\frac12\\cdot10\\cdot13=65$.\n2. Trójkąt $BCD$ jest równoramienny: wysokość do $BD$ ma $\\sqrt{13^2-5^2}=12$.\n3. $P_{BCD}=\\frac12\\cdot10\\cdot12=60$.\n4. $P_{ABCD}=65+60=125$."
     ],
     "examSource": {
       "kind": "matura",
