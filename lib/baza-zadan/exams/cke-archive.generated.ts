@@ -9950,19 +9950,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba $($\\sqrt{6}$ - $\\sqrt{2}$)$ 2 - $2\\sqrt{3}$ jest równa",
+    "prompt": "Liczba $(\\sqrt6-\\sqrt2)^2-2\\sqrt3$ jest równa",
     "choices": [
-      "8 - $6\\sqrt{3}$",
-      "8 - $2\\sqrt{3}$",
-      "4 - $2\\sqrt{3}$",
-      "8 - $4\\sqrt{3}$ pokaż wskazówkę »"
+      "$8-6\\sqrt3$",
+      "$8-2\\sqrt3$",
+      "$4-2\\sqrt3$",
+      "$8-4\\sqrt3$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $8 - 6\\sqrt{3}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zastosuj wzór skróconego mnożenia $(a-b)^2 = a^2 - 2ab + b^2$ do pierwszego członu wyrażenia. Otrzymasz $(\\sqrt{6})^2 - 2\\sqrt{6}\\sqrt{2} + (\\sqrt{2})^2 = 6 - 2\\sqrt{12} + 2$.",
-      "Uprość otrzymane wyrażenie i połącz elementy, a następnie odejmij drugi człon wyrażenia z zadania. Mamy $6 + 2 - 2\\sqrt{12} - 2\\sqrt{3} = 8 - 2\\sqrt{4 \\cdot 3} - 2\\sqrt{3} = 8 - 2 \\cdot 2\\sqrt{3} - 2\\sqrt{3}$.",
-      "Wykonaj ostateczne obliczenia, grupując wyrazy podobne. Wynosi $8 - 4\\sqrt{3} - 2\\sqrt{3} = 8 - 6\\sqrt{3}$."
+      "1. $(\\sqrt6-\\sqrt2)^2=6-2\\sqrt{12}+2=8-4\\sqrt3$.\n2. $8-4\\sqrt3-2\\sqrt3=8-6\\sqrt3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9981,19 +9979,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 2 log 5 $4 - 3$ log 5 $\\frac{1}{2}$ jest równa",
+    "prompt": "Liczba $2\\log_5 4-3\\log_5\\frac12$ jest równa",
     "choices": [
-      "-log 5 $\\frac{7}{2}$",
-      "7 log 5 2",
-      "-log 5 2",
-      "log 5 2 pokaż wskazówkę »"
+      "$-\\log_5\\frac72$",
+      "$7\\log_5 2$",
+      "$-\\log_5 2$",
+      "$\\log_5 2$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $4 \\log_5 2$.",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Skorzystaj z własności logarytmów: $a \\log_c b = \\log_c b^a$ oraz $\\log_c 1 = 0$. Zastosuj je do obu wyrazów w wyrażeniu: $2 \\log_5 4 = \\log_5 4^2 = \\log_5 16$ oraz $3 \\log_5 1 = \\log_5 1^3 = \\log_5 1 = 0$.",
-      "Odejmowanie logarytmów o tej samej podstawie sprowadza się do dzielenia argumentów: $\\log_c a - \\log_c b = \\log_c \\frac{a}{b}$. Podstawiając otrzymane wyniki z Kroku 1: $\\log_5 16 - 0 = \\log_5 16$.",
-      "Zapisz liczbę 16 jako potęgę liczby 2, czyli $16 = 2^4$. Użyj własności potęgi w argumencie logarytmu: $\\log_c a^k = k \\log_c a$. Otrzymujemy: $\\log_5 16 = \\log_5 2^4 = 4 \\log_5 2$."
+      "1. $2\\log_5 4=\\log_5 16$; $3\\log_5\\frac12=\\log_5\\frac18$.\n2. $\\log_5 16-\\log_5\\frac18=\\log_5 128=7\\log_5 2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10012,19 +10008,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Medyczna maseczka ochronna wielokrotnego użytku z wymiennymi filtrami wskutek podwyżki zdrożała o 40% i kosztuje obecnie 106,40 zł . Cena maseczki przed podwyżką była równa",
+    "prompt": "Medyczna maseczka ochronna wielokrotnego użytku z wymiennymi filtrami wskutek podwyżki zdrożała o $40\\%$ i kosztuje obecnie $106{,}40$ zł. Cena maseczki przed podwyżką była równa",
     "choices": [
-      "63,84 zł",
-      "65,40 zł",
-      "76,00 zł",
-      "66,40 zł"
+      "$63{,}84$ zł",
+      "$65{,}40$ zł",
+      "$76{,}00$ zł",
+      "$66{,}40$ zł"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 76,00 zł",
+    "explanation": "C.",
     "solutionSteps": [
-      "Oznacz cenę maseczki przed podwyżką jako $x$. Po podwyżce o 40% cena wynosi $x + 0,40x = 1,40x$.",
-      "Ustaw równanie, wiedząc, że obecna cena to 106,40 zł: $1,40x = 106,40$ zł.",
-      "Rozwiąż równanie, dzieląc obie strony przez 1,40, aby znaleźć pierwotną cenę: $x = \\frac{106,40}{1,40} = 76$ zł."
+      "1. $1{,}4x=106{,}40$.\n2. $x=76$ zł."
     ],
     "examSource": {
       "kind": "matura",
@@ -10100,22 +10094,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-probna-z06",
     "title": "Matura - próbna 2021 - poziom podstawowy - zad. 6",
     "category": "rownania",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Iloczyn wszystkich rozwiązań równania 2$(x - 4)(x^{2} - 1)$ = 0 jest równy\n\nRozwiąż zadanie.",
+    "prompt": "Iloczyn wszystkich rozwiązań równania $2(x-4)(x^2-1)=0$ jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$-8$",
+      "$-4$",
+      "$4$",
+      "$8$"
     ],
-    "correctIndex": 0,
-    "explanation": "-4",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Czynniki to $(x-4)$, $(x^2-1)$, a stała 2 nie wpływa na rozwiązania.",
-      "Rozwiązania to $x-4=0 \\Rightarrow x=4$ oraz $x^2-1=0 \\Rightarrow x^2=1 \\Rightarrow x=1$ lub $x=-1$.",
-      "Oblicz iloczyn wszystkich rozwiązań: $4 \\cdot 1 \\cdot (-1)$."
+      "1. $x=4$, $x=1$, $x=-1$.\n2. Iloczyn $4\\cdot1\\cdot(-1)=-4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10162,19 +10157,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa $f(x)$ = $(a - 1) x + 3$ osiąga wartość najmniejszą równą 3. Wtedy",
+    "prompt": "Funkcja liniowa $f(x)=(a-1)x+3$ osiąga wartość najmniejszą równą $3$. Wtedy",
     "choices": [
-      "$a = -1$",
-      "$a = 0$",
-      "$a = 1$",
-      "$a = 3$"
+      "$a=-1$",
+      "$a=0$",
+      "$a=1$",
+      "$a=3$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $a = 1$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Funkcja liniowa $f(x) = (a-1)x + 3$ osiąga wartość najmniejszą, gdy jej współczynnik kierunkowy $(a-1)$ jest ujemny. Wartość najmniejszą równą 3 funkcja osiąga dla $x=0$, ponieważ $f(0) = (a-1)\\cdot 0 + 3 = 3$.",
-      "Aby funkcja miała wartość najmniejszą, musi być malejąca, czyli $a-1 < 0$. Jednocześnie, najmniejsza wartość funkcji wynosi 3, co jest zgodne z wyrazem wolnym. Ponieważ funkcja jest malejąca, najmniejszą wartość osiąga dla argumentu dążącego do $+\\infty$, która wynosi $-\\infty$. Z treści zadania wynika, że funkcja osiąga najmniejszą wartość równą 3. Dzieje się tak tylko wtedy, gdy funkcja jest stała, co oznacza, że współczynnik przy $x$ jest równy 0.",
-      "Przyrównujemy współczynnik kierunkowy do zera: $a - 1 = 0$, co daje $a = 1$. Wtedy funkcja $f(x) = (1-1)x + 3 = 3$ jest funkcją stałą, a jej najmniejsza i największa wartość jest równa 3."
+      "1. Funkcja liniowa ma minimum równe $3$ tylko wtedy, gdy jest stała.\n2. $a-1=0$, więc $a=1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10256,19 +10249,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg (x , y , z) jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy 64. Stąd wynika, że y jest równe",
+    "prompt": "Ciąg $(x,y,z)$ jest geometryczny. Iloczyn wszystkich wyrazów tego ciągu jest równy $64$. Stąd wynika, że $y$ jest równe",
     "choices": [
-      "3 ⋅ 64",
+      "$3\\cdot64$",
       "$\\frac{64}{3}$",
-      "4",
-      "3 pokaż wskazówkę »"
+      "$4$",
+      "$3$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 4",
+    "explanation": "C.",
     "solutionSteps": [
-      "W ciągu geometrycznym iloczyn wyrazów jest równy środkowemu wyrazowi podniesionemu do potęgi równej liczbie wyrazów. Mamy więc $x \\cdot y \\cdot z = y^3$.",
-      "Wiemy, że $x \\cdot y \\cdot z = 64$, więc możemy zapisać równanie $y^3 = 64$.",
-      "Obliczamy $y$ z równania $y^3 = 64$. Jest to pierwiastek sześcienny z 64, czyli $y = \\sqrt[3]{64}$."
+      "1. $xyz=y^3$.\n2. $y^3=64$, więc $y=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10346,20 +10337,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciągi ($a_{n}$), ($b_{n}$) oraz ($c_{n}$) są określone dla każdej liczby naturalnej $n \\ge 1$ następująco: • $a_{n} = 6n^{2} - n^{3}$ • $b_{n} = 2n + 13$ • $c_{n} = 2$ n Wskaż zdanie prawdziwe.",
+    "prompt": "Ciągi $(a_n)$, $(b_n)$ oraz $(c_n)$ są określone dla każdej liczby naturalnej $n\\ge1$ następująco: $a_n=6n^2-n^3$, $b_n=2n+13$, $c_n=2n$. Wskaż zdanie prawdziwe.",
     "choices": [
-      "Ciąg ($a_{n}$) jest arytmetyczny.",
-      "Ciąg ($b_{n}$) jest arytmetyczny.",
-      "Ciąg ($c_{n}$) jest arytmetyczny.",
-      "Wśród ciągów ($a_{n}$), ($b_{n}$), ($c_{n}$) nie ma ciągu arytmetycznego."
+      "Ciąg $(a_n)$ jest arytmetyczny.",
+      "Ciąg $(b_n)$ jest arytmetyczny.",
+      "Ciąg $(c_n)$ jest arytmetyczny.",
+      "Wśród ciągów $(a_n)$, $(b_n)$, $(c_n)$ nie ma ciągu arytmetycznego."
     ],
     "correctIndex": 1,
-    "explanation": "B",
+    "explanation": "B.",
     "solutionSteps": [
-      "Ciąg arytmetyczny charakteryzuje się stałą różnicą między kolejnymi wyrazami, czyli $a_{n+1} - a_n = r$, gdzie $r$ jest stałą. Sprawdźmy ciąg (a_n).",
-      "Dla ciągu $(a_n)$, $a_{n+1} - a_n = (6(n+1)^2 - (n+1)^3) - (6n^2 - n^3) = 6(n^2+2n+1) - (n^3+3n^2+3n+1) - 6n^2 + n^3 = 6n^2+12n+6 - n^3-3n^2-3n-1 - 6n^2 + n^3 = -3n^2 + 9n + 5$. Różnica zależy od $n$, więc ciąg (a_n) nie jest arytmetyczny.",
-      "Dla ciągu $(b_n)$, $b_{n+1} - b_n = (2(n+1)+13) - (2n+13) = 2n+2+13 - 2n-13 = 2$. Różnica jest stała, więc ciąg (b_n) jest arytmetyczny.",
-      "Dla ciągu $(c_n)$, $c_{n+1} - c_n = 2(n+1) - 2n = 2n+2 - 2n = 2$. Różnica jest stała, więc ciąg (c_n) jest arytmetyczny. Zgodnie z poleceniem wybieramy jedno prawdziwe zdanie."
+      "1. $b_n=2n+13$ ma stałą różnicę $2$.\n2. $(a_n)$ i $(c_n)$ nie są arytmetyczne."
     ],
     "examSource": {
       "kind": "matura",
@@ -10378,19 +10366,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(-2)$ n ⋅ $n + 1$ dla każdej liczby naturalnej $n \\ge 1$ . Wtedy trzeci wyraz tego ciągu jest równy",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n=(-2)^n\\cdot n+1$ dla każdej liczby naturalnej $n\\ge1$. Wtedy trzeci wyraz tego ciągu jest równy",
     "choices": [
-      "-24",
-      "-17",
-      "-32",
-      "-23"
+      "$-24$",
+      "$-17$",
+      "$-32$",
+      "$-23$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $-23$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Aby obliczyć trzeci wyraz ciągu, podstawiamy $n=3$ do wzoru $a_n = (-2)^n \\cdot n + 1$.",
-      "Obliczamy wartość: $a_3 = (-2)^3 \\cdot 3 + 1 = (-8) \\cdot 3 + 1$.",
-      "Wykonujemy mnożenie i dodawanie: $-24 + 1 = -23$."
+      "1. $a_3=(-2)^3\\cdot3+1=-24+1=-23$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10409,18 +10395,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W romb o boku $2\\sqrt{3}$ i kącie $60^{\\circ}$ wpisano okrąg. Promień tego okręgu jest równy",
+    "prompt": "W romb o boku $2\\sqrt3$ i kącie $60^\\circ$ wpisano okrąg. Promień tego okręgu jest równy",
     "choices": [
-      "3",
-      "$\\frac{1}{2}$",
-      "$\\frac{3}{4}$",
-      "$\\frac{3}{2}$ pokaż wskazówkę »"
+      "$3$",
+      "$\\frac12$",
+      "$\\frac34$",
+      "$\\frac32$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{3}{2}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "W rombie o boku $a=2\\sqrt{3}$ i kącie $60^\\circ$ wysokość $h$ można obliczyć ze wzoru $h=a \\cdot \\sin(60^\\circ) = 2\\sqrt{3} \\cdot \\frac{\\sqrt{3}}{2} = 3$.",
-      "Promień okręgu wpisanego w romb jest równy połowie jego wysokości, czyli $r = \\frac{h}{2} = \\frac{3}{2}$."
+      "1. Wysokość rombu: $h=2\\sqrt3\\cdot\\sin60^\\circ=3$.\n2. Promień okręgu wpisanego: $r=\\frac h2=\\frac32$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10471,18 +10456,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Końcami odcinka PR są punkty $P = (4,7)$ i R = $(-2, - 3)$ . Odległość punktu T = $(3, - 1)$ od środka odcinka PR jest równa",
+    "prompt": "Końcami odcinka $PR$ są punkty $P=(4,7)$ i $R=(-2,-3)$. Odległość punktu $T=(3,-1)$ od środka odcinka $PR$ jest równa",
     "choices": [
-      "$\\sqrt{3}$",
+      "$\\sqrt3$",
       "$\\sqrt{13}$",
       "$\\sqrt{17}$",
-      "$6\\sqrt{2}$ pokaż wskazówkę »"
+      "$6\\sqrt2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $\\sqrt{13}$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Oblicz współrzędne środka $S$ odcinka PR, korzystając ze wzoru $S = (\\frac{x_P+x_R}{2}, \\frac{y_P+y_R}{2})$. Podstaw dane: $S = (\\frac{4+(-2)}{2}, \\frac{7+(-3)}{2}) = (\\frac{2}{2}, \\frac{4}{2}) = (1,2)$.",
-      "Oblicz odległość $d$ między punktem $T=(3,-1)$ a środkiem odcinka $S=(1,2)$, używając wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Podstaw dane: $d = \\sqrt{(1-3)^2 + (2-(-1))^2} = \\sqrt{(-2)^2 + 3^2} = \\sqrt{4+9} = \\sqrt{13}$."
+      "1. Środek $PR$: $S=(1,2)$.\n2. $|ST|=\\sqrt{(3-1)^2+(-1-2)^2}=\\sqrt{4+9}=\\sqrt{13}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10501,19 +10485,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry oraz sin $α = \\frac{4}{5}$ . Wtedy",
+    "prompt": "Kąt $\\alpha$ jest ostry oraz $\\sin\\alpha=\\frac45$. Wtedy",
     "choices": [
-      "cos $α = \\frac{1}{5}$",
-      "cos $α = -\\frac{1}{5}$",
-      "cos $α = -\\frac{3}{5}$",
-      "cos $α = \\frac{3}{5}$ pokaż wskazówkę »"
+      "$\\cos\\alpha=\\frac15$",
+      "$\\cos\\alpha=-\\frac15$",
+      "$\\cos\\alpha=-\\frac35$",
+      "$\\cos\\alpha=\\frac35$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{3}{5}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Podstaw znany sinus: $(\\frac{4}{5})^2 + \\cos^2 \\alpha = 1$.",
-      "Oblicz $\\cos^2 \\alpha$: $\\frac{16}{25} + \\cos^2 \\alpha = 1$, czyli $\\cos^2 \\alpha = 1 - \\frac{16}{25} = \\frac{9}{25}$.",
-      "Wyciągnij pierwiastek, pamiętając, że kąt α jest ostry (czyli $\\cos \\alpha > 0$): $\\cos \\alpha = \\sqrt{\\frac{9}{25}} = \\frac{3}{5}$."
+      "1. $\\cos^2\\alpha=1-\\frac{16}{25}=\\frac9{25}$.\n2. $\\cos\\alpha=\\frac35$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10532,19 +10514,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są punkty $M = (6,0)$ , $N = (6,8)$ oraz $O = (0,0)$ . Tangens kąta ostrego MON jest równy",
+    "prompt": "Dane są punkty $M=(6,0)$, $N=(6,8)$ oraz $O=(0,0)$. Tangens kąta ostrego $MON$ jest równy",
     "choices": [
-      "$\\frac{4}{3}$",
-      "$\\frac{6}{10}$",
-      "$\\frac{3}{4}$",
-      "$\\frac{8}{10}$ pokaż wskazówkę »"
+      "$\\frac43$",
+      "$\\frac6{10}$",
+      "$\\frac34$",
+      "$\\frac8{10}$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{4}{3}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zauważ, że punkty O, M, N tworzą trójkąt prostokątny o wierzchołkach w $O(0,0)$, $M(6,0)$ i $N(6,8)$. Przyprostokątne tego trójkąta to OM $(długość 6)$ i MN $(długość 8)$.",
-      "Tangens kąta MON to stosunek długości przyprostokątnej leżącej naprzeciwko kąta do długości przyprostokątnej leżącej przy tym kącie, czyli $\\operatorname{tg}(\\angle MON) = \\frac{MN}{OM} = \\frac{8}{6}$.",
-      "Uprość otrzymany ułamek: $\\frac{8}{6} = \\frac{4}{3}$."
+      "1. $|OM|=6$, $|MN|=8$.\n2. $\\operatorname{tg}\\angle MON=\\frac86=\\frac43$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10563,19 +10543,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach $y = 3 ax - 2$ i $y = 2x + 3$ a są prostopadłe. Wtedy a jest równe",
+    "prompt": "Proste o równaniach $y=3ax-2$ i $y=2x+3a$ są prostopadłe. Wtedy $a$ jest równe",
     "choices": [
-      "$\\frac{2}{3}$",
-      "- $\\frac{1}{6}$",
-      "$\\frac{3}{2}$",
-      "-5 pokaż wskazówkę »"
+      "$\\frac23$",
+      "$-\\frac16$",
+      "$\\frac32$",
+      "$-5$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $-\\frac{1}{6}$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi -1. Współczynnik kierunkowy pierwszej prostej to $3a$, a drugiej to $2$.",
-      "Zapisujemy równanie wynikające z warunku prostopadłości: $(3a) \\cdot 2 = -1$.",
-      "Rozwiązujemy równanie, aby wyznaczyć $a$: $6a = -1$, czyli $a = -\\frac{1}{6}$."
+      "1. $3a\\cdot2=-1$.\n2. $6a=-1$, więc $a=-\\frac16$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10594,19 +10572,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trapez ABCD , w którym boki AB i CD są równoległe oraz $C = (3,5)$ . Wierzchołki A i B tego trapezu leżą na prostej o równaniu $y = 5x + 3$ . Wtedy bok CD tego trapezu zawiera się w prostej o równaniu",
+    "prompt": "Dany jest trapez $ABCD$, w którym boki $AB$ i $CD$ są równoległe oraz $C=(3,5)$. Wierzchołki $A$ i $B$ tego trapezu leżą na prostej o równaniu $y=5x+3$. Wtedy bok $CD$ tego trapezu zawiera się w prostej o równaniu",
     "choices": [
-      "$y = 3x + 5$",
-      "y = -\\frac{1}{5}$x + 3$",
-      "$y = 5x - 10$",
-      "y = -\\frac{1}{5}$x + \\frac{28}{5}$ pokaż wskazówkę »"
+      "$y=3x+5$",
+      "$y=-\\frac15x+3$",
+      "$y=5x-10$",
+      "$y=-\\frac15x+\\frac{28}{5}$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $y = -\\frac{1}{5}x + \\frac{28}{5}$.",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Proste zawierające ramiona trapezu są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. Prosta $AB$ ma równanie $y = 5x + 3$, więc jej współczynnik kierunkowy to $5$.",
-      "Prosta zawierająca bok $CD$ musi być prostopadła do prostej $AB$. Zatem jej współczynnik kierunkowy to $-\\frac{1}{5}$. Równanie prostej $CD$ ma postać $y = -\\frac{1}{5}x + b$.",
-      "Punkt $C(3,5)$ leży na prostej $CD$. Podstawiamy współrzędne punktu $C$ do równania prostej, aby znaleźć $b$: $5 = -\\frac{1}{5} \\cdot 3 + b$, co daje $5 = -\\frac{3}{5} + b$, czyli $b = 5 + \\frac{3}{5} = \\frac{25+3}{5} = \\frac{28}{5}$."
+      "1. $CD\\parallel AB$, więc $CD$ ma współczynnik $5$.\n2. Przez $C=(3,5)$: $y-5=5(x-3)$, więc $y=5x-10$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10654,18 +10630,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątna sześcianu ma długość $5\\sqrt{3}$ . Wtedy objętość tego sześcianu jest równa",
+    "prompt": "Przekątna sześcianu ma długość $5\\sqrt3$. Wtedy objętość tego sześcianu jest równa",
     "choices": [
-      "125",
-      "75",
-      "$375\\sqrt{3}$",
-      "$125\\sqrt{3}$"
+      "$125$",
+      "$75$",
+      "$375\\sqrt3$",
+      "$125\\sqrt3$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 125",
+    "explanation": "A.",
     "solutionSteps": [
-      "Użyj wzoru na długość przekątnej sześcianu o krawędzi $a$: $d = a\\sqrt{3}$. Podstaw daną długość przekątnej ($5\\sqrt{3}$) i oblicz długość krawędzi $a$.\n$5\\sqrt{3} = a\\sqrt{3} \\implies a = 5$.",
-      "Oblicz objętość sześcianu ze wzoru $V = a^3$, podstawiając obliczoną długość krawędzi.\n$V = 5^3 = 125$."
+      "1. $a\\sqrt3=5\\sqrt3$, więc $a=5$.\n2. $V=5^3=125$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10684,19 +10659,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ostrosłupy prawidłowe trójkątne O 1 i O 2 mają takie same wysokości. Długość krawędzi podstawy ostrosłupa O 1 jest trzy razy dłuższa od długości krawędzi podstawy ostrosłupa O 2 . Stosunek objętości ostrosłupa O 1 do objętości ostrosłupa O 2 jest równy",
+    "prompt": "Ostrosłupy prawidłowe trójkątne $O_1$ i $O_2$ mają takie same wysokości. Długość krawędzi podstawy ostrosłupa $O_1$ jest trzy razy dłuższa od długości krawędzi podstawy ostrosłupa $O_2$. Stosunek objętości ostrosłupa $O_1$ do objętości ostrosłupa $O_2$ jest równy",
     "choices": [
-      "3 ∶ 1",
-      "1 ∶ 3",
-      "9 ∶ 1",
-      "1 ∶ 9 pokaż wskazówkę »"
+      "$3:1$",
+      "$1:3$",
+      "$9:1$",
+      "$1:9$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $9 \\colon 1$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Oblicz pole podstawy każdego ostrosłupa. Pole trójkąta równobocznego o boku $a$ to $P = \\frac{a^2\\sqrt{3}}{4}$. Niech $a_1$ i $a_2$ będą długościami krawędzi podstaw, wtedy $a_1 = 3a_2$. Pola podstaw to $P_1 = \\frac{a_1^2\\sqrt{3}}{4} = \\frac{(3a_2)^2\\sqrt{3}}{4} = \\frac{9a_2^2\\sqrt{3}}{4}$ i $P_2 = \\frac{a_2^2\\sqrt{3}}{4}$. Zauważ, że $P_1 = 9P_2$.",
-      "Zapisz wzory na objętość ostrosłupów. Objętość ostrosłupa to $V = \\frac{1}{3}Ph$, gdzie $P$ to pole podstawy, a $h$ to wysokość. Ostrosłupy mają tę samą wysokość $h$. Objętości wynoszą $V_1 = \\frac{1}{3}P_1h$ i $V_2 = \\frac{1}{3}P_2h$.",
-      "Oblicz stosunek objętości. Stosunek objętości to $\\frac{V_1}{V_2} = \\frac{\\frac{1}{3}P_1h}{\\frac{1}{3}P_2h} = \\frac{P_1}{P_2}$. Podstawiając wyniki z kroku 1, otrzymujemy $\\frac{P_1}{P_2} = \\frac{9P_2}{P_2} = 9$. Stosunek objętości $V_1$ do $V_2$ wynosi $9:1$."
+      "1. Pola podstaw są w stosunku $9:1$.\n2. Wysokości równe, więc objętości $9:1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10715,22 +10688,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkich liczb naturalnych trzycyfrowych parzystych, w których cyfra 7 występuje dokładnie jeden raz, jest",
+    "prompt": "Wszystkich liczb naturalnych trzycyfrowych parzystych, w których cyfra $7$ występuje dokładnie jeden raz, jest",
     "choices": [
-      "85",
-      "90",
-      "100",
-      "150"
+      "$85$",
+      "$90$",
+      "$100$",
+      "$150$"
     ],
     "correctIndex": 0,
-    "explanation": "A) $85$.",
+    "explanation": "A.",
     "solutionSteps": [
-      "Liczba jest trzycyfrowa i parzysta, więc jej cyfra jedności należy do $\\{0,2,4,6,8\\}$.",
-      "Cyfra $7$ występuje dokładnie raz. Rozpatrujemy położenie tej cyfry.",
-      "$7$ na miejscu setek: cyfra dziesiątek — $9$ możliwości (bez $7$), cyfra jedności — $5$ możliwości. Razem $1\\cdot 9\\cdot 5=45$.",
-      "$7$ na miejscu dziesiątek: cyfra setek — $8$ możliwości (bez $0$ i $7$), cyfra jedności — $5$ możliwości. Razem $8\\cdot 1\\cdot 5=40$.",
-      "$7$ na miejscu jedności nie daje liczby parzystej, więc ten przypadek odpada.",
-      "Łącznie $45+40=85$ liczb."
+      "1. $7$ na miejscu setek: $9\\cdot5=45$.\n2. $7$ na miejscu dziesiątek: $8\\cdot5=40$ (jedności parzyste).\n3. Razem $85$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10749,19 +10717,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ze zbioru liczb naturalnych dwucyfrowych losujemy jedną liczbę. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowana liczba jest podzielna przez 5, jest równe",
+    "prompt": "Ze zbioru liczb naturalnych dwucyfrowych losujemy jedną liczbę. Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowana liczba jest podzielna przez $5$, jest równe",
     "choices": [
-      "$\\frac{2}{5}$",
-      "$\\frac{5}{100}$",
-      "$\\frac{5}{90}$",
+      "$\\frac25$",
+      "$\\frac5{100}$",
+      "$\\frac5{90}$",
       "$\\frac{18}{90}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{18}{90}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Określ liczbę wszystkich dwucyfrowych liczb naturalnych. Liczby dwucyfrowe to liczby od 10 do 99, czyli jest ich $99 - 10 + 1 = 90$.",
-      "Policz, ile jest dwucyfrowych liczb naturalnych podzielnych przez 5. Są to liczby 10, 15, ..., 95. Jest ich $\\frac{95 - 10}{5} + 1 = \\frac{85}{5} + 1 = 17 + 1 = 18$.",
-      "Oblicz prawdopodobieństwo jako stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń. Prawdopodobieństwo wynosi $\\frac{18}{90}$."
+      "1. Liczb dwucyfrowych jest $90$.\n2. Podzielnych przez $5$: $10,15,\\ldots,95$ — $18$.\n3. $P=\\frac{18}{90}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10780,19 +10746,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba x jest dodatnia. Mediana zestawu czterech liczb: $1 + x$ , $1 + 2x$ , $4 + 3x$ , 1 , jest równa 10. Wtedy",
+    "prompt": "Liczba $x$ jest dodatnia. Mediana zestawu czterech liczb: $1+x$, $1+2x$, $4+3x$, $1$, jest równa $10$. Wtedy",
     "choices": [
-      "$x = 6$",
-      "$x = 5,5$",
-      "$x = 2,5$",
-      "$x = 1$ pokaż wskazówkę »"
+      "$x=6$",
+      "$x=5{,}5$",
+      "$x=2{,}5$",
+      "$x=1$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $x=6$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Uporządkuj liczby: $1$, $1+x$, $1+2x$, $4+3x$. Ponieważ $x$ jest dodatnie, $1$ jest najmniejszą liczbą, a $4+3x$ największą.",
-      "Mediana dla czterech liczb to średnia arytmetyczna dwóch środkowych wyrazów. Zatem $\\frac{(1+x) + (1+2x)}{2} = 10$.",
-      "Rozwiąż równanie: $2 + 3x = 20$, co daje $3x = 18$, czyli $x = 6$."
+      "1. Mediana to średnia $1+x$ i $1+2x$.\n2. $\\frac{2+3x}{2}=10$, więc $x=6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10811,16 +10775,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: 3 x $(x + 1)$ > $x^{2} + x + 24$",
+    "prompt": "Rozwiąż nierówność: $3x(x+1)>x^2+x+24$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x \\in (-\\infty, -4) \\cup (3, \\infty)$",
+    "explanation": "$x\\in(-\\infty,-4)\\cup(3,+\\infty)$.",
     "solutionSteps": [
-      "Rozwiń lewą stronę nierówności i przenieś wszystkie wyrazy na jedną stronę, aby otrzymać nierówność kwadratową.\n$3x^2 + 3x > x^2 + x + 24 \\implies 2x^2 + 2x - 24 > 0$",
-      "Uprość nierówność, dzieląc obie strony przez 2, a następnie znajdź pierwiastki równania kwadratowego $x^2 + x - 12 = 0$.\n$x^2 + x - 12 > 0$. Pierwiastki to $x_1 = -4$ i $x_2 = 3$.",
-      "Naszkicuj parabolę $y = x^2 + x - 12$ z ramionami skierowanymi w górę i odczytaj z wykresu przedziały, dla których wartości funkcji $s$ą dodatnie.\nNierówność jest spełniona dla $x < -4$ lub $x > 3$."
+      "1. $3x^2+3x>x^2+x+24$, więc $2x^2+2x-24>0$.\n2. $x^2+x-12>0$, czyli $(x+4)(x-3)>0$.\n3. $x\\in(-\\infty,-4)\\cup(3,+\\infty)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10896,16 +10858,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry i sin $α + cos α = \\frac{7}{5}$ . Oblicz wartość wyrażenia 2 sin α cos α .",
+    "prompt": "Kąt $\\alpha$ jest ostry i $\\sin\\alpha+\\cos\\alpha=\\frac75$. Oblicz wartość wyrażenia $2\\sin\\alpha\\cos\\alpha$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{24}{25}$",
+    "explanation": "1. $(\\sin\\alpha+\\cos\\alpha)^2=\\frac{49}{25}$.\n2. $1+2\\sin\\alpha\\cos\\alpha=\\frac{49}{25}$.\n3. $2\\sin\\alpha\\cos\\alpha=\\frac{24}{25}$.",
     "solutionSteps": [
-      "Podnieś obustronnie równanie $\\sin \\alpha + \\cos \\alpha = \\frac{7}{5}$ do kwadratu, aby uzyskać wyrażenie zawierające $\\sin^2 \\alpha$, $\\cos^2 \\alpha$ i $2 \\sin \\alpha \\cos \\alpha$.\n$$(\\sin \\alpha + \\cos \\alpha)^2 = \\left(\\frac{7}{5}\\right)^2$$\n$$\\sin^2 \\alpha + 2 \\sin \\alpha \\cos \\alpha + \\cos^2 \\alpha = \\frac{49}{25}$$",
-      "Skorzystaj z tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby uprościć równanie z kroku 1.\n$1 + 2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25}$",
-      "Wyznacz wartość szukanego wyrażenia $2 \\sin \\alpha \\cos \\alpha$, odejmując 1 od obu stron równania.\n$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - 1$\n$$2 \\sin \\alpha \\cos \\alpha = \\frac{49}{25} - \\frac{25}{25}$$\n$2 \\sin \\alpha \\cos \\alpha = \\frac{24}{25}$"
+      "1. $(\\sin\\alpha+\\cos\\alpha)^2=\\frac{49}{25}$.\n2. $1+2\\sin\\alpha\\cos\\alpha=\\frac{49}{25}$.\n3. $2\\sin\\alpha\\cos\\alpha=\\frac{24}{25}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10952,17 +10912,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa $f(x) = x^{2} + bx + c$ nie ma miejsc zerowych. Wykaż, że $1 + c > b$ .",
+    "prompt": "Funkcja kwadratowa $f(x)=x^2+bx+c$ nie ma miejsc zerowych. Wykaż, że $1+c>b$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Wykazano, że $1 + c > b$.",
+    "explanation": "1. Brak miejsc zerowych: $\\Delta=b^2-4c<0$, więc $c>\\frac{b^2}{4}$.\n2. $1+c>1+\\frac{b^2}{4}$.\n3. $1+\\frac{b^2}{4}-b=\\frac{(b-2)^2}{4}\\ge0$, więc $1+\\frac{b^2}{4}\\ge b$.\n4. Zatem $1+c>b$.",
     "solutionSteps": [
-      "Funkcja kwadratowa nie ma miejsc zerowych, gdy jej wyróżnik (delta) jest ujemny. Wzór na deltę to $\\Delta = b^2 - 4ac$. Dla naszej funkcji $a=1$, więc $\\Delta = b^2 - 4c < 0$.",
-      "Z nierówności $b^2 - 4c < 0$ wynika, że $b^2 < 4c$. Musimy wykazać, że $1 + c > b$. Przekształćmy nierówność do postaci $c > \\frac{b^2}{4}$.",
-      "Podstawmy nierówność z kroku 2 do nierówności, którą mamy wykazać: $1 + c > 1 + \\frac{b^2}{4}$. Teraz porównajmy $1 + \\frac{b^2}{4}$ z $b$. Zauważmy, że $1 + \\frac{b^2}{4} - b = \\frac{4 + b^2 - 4b}{4} = \\frac{(b-2)^2}{4}$. Ta wartość jest zawsze większa lub równa 0.",
-      "Ponieważ $\\frac{(b-2)^2}{4} \\ge 0$, to $1 + \\frac{b^2}{4} \\ge b$. Skoro $1+c > 1 + \\frac{b^2}{4}$, to tym bardziej $1+c > b$."
+      "1. Brak miejsc zerowych: $\\Delta=b^2-4c<0$, więc $c>\\frac{b^2}{4}$.\n2. $1+c>1+\\frac{b^2}{4}$.\n3. $1+\\frac{b^2}{4}-b=\\frac{(b-2)^2}{4}\\ge0$, więc $1+\\frac{b^2}{4}\\ge b$.\n4. Zatem $1+c>b$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10981,17 +10938,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rosnący ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$ . Suma pierwszych pięciu wyrazów tego ciągu jest równa 10. Wyrazy $a_{3}$ , $a_{5}$ , a 13 tworzą - w podanej kolejności - ciąg geometryczny. Wyznacz wzór na $n - ty$ wyraz ciągu arytmetycznego ($a_{n}$).",
+    "prompt": "Rosnący ciąg arytmetyczny $(a_n)$ jest określony dla każdej liczby naturalnej $n\\ge1$. Suma pierwszych pięciu wyrazów tego ciągu jest równa $10$. Wyrazy $a_3$, $a_5$, $a_{13}$ tworzą - w podanej kolejności - ciąg geometryczny. Wyznacz wzór na $n$-ty wyraz ciągu arytmetycznego $(a_n)$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$a_n = 3n - 7$",
+    "explanation": "$a_n=3n-7$.",
     "solutionSteps": [
-      "Zapisz warunki zadania w postaci równań. Suma pierwszych pięciu wyrazów ciągu arytmetycznego to $5a_1 + 10r = 10$, co upraszcza się do $a_1 + 2r = 2$. Z faktu, że $a_3, a_5, a_{13}$ tworzą ciąg geometryczny, wynika warunek $a_5^2 = a_3 \\cdot a_{13}$.",
-      "Wyraź wyrazy ciągu arytmetycznego przez $a_1$ i $r$, a następnie podstaw do równań z Kroku 1. $a_3 = a_1 + 2r$, $a_5 = a_1 + 4r$, $a_{13} = a_1 + 12r$. Podstawienie do pierwszego równania daje $a_1 + 2r = 2$. Podstawienie do drugiego równania i wykorzystanie $a_1 = 2 - 2r$ prowadzi do $(2 - 2r + 4r)^2 = (2 - 2r + 2r)(2 - 2r + 12r)$, czyli $(2 + 2r)^2 = 2(2 + 10r)$.",
-      "Rozwiąż równanie kwadratowe, aby znaleźć wartość $r$. Po rozwinięciu i uporządkowaniu równania z Kroku 2 otrzymujemy $4 + 8r + 4r^2 = 4 + 20r$, co daje $4r^2 - 12r = 0$. Rozwiązaniami są $r = 0$ i $r = 3$. Ponieważ ciąg jest rosnący, odrzucamy $r=0$.",
-      "Oblicz $a_1$ i wyznacz wzór na $n$-ty wyraz ciągu. Dla $r=3$ obliczamy $a_1 = 2 - 2r = 2 - 2(3) = -4$. Wzór na $n$-ty wyraz ciągu arytmetycznego to $a_n = a_1 + (n-1)r$. Podstawiając znalezione wartości, otrzymujemy $a_n = -4 + (n-1)3$."
+      "1. $S_5=10$, więc $a_1+2r=2$.\n2. $a_5^2=a_3a_{13}$: $(a_1+4r)^2=(a_1+2r)(a_1+12r)$.\n3. Po podstawieniu $a_1=2-2r$: $(2+2r)^2=2(2+10r)$, więc $4r^2-12r=0$ i $r=3$.\n4. $a_1=2-6=-4$, więc $a_n=-4+(n-1)3=3n-7$."
     ],
     "examSource": {
       "kind": "matura",
