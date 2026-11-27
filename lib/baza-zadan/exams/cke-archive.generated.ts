@@ -11886,21 +11886,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-maj/z02-1.png) jest równa",
+    "prompt": "Liczba $\\sqrt[3]{-\\frac{27}{16}}\\cdot\\sqrt[3]{2}$ jest równa",
     "choices": [
-      "$(-\\frac{3}{2})$",
-      "$\\frac{3}{2}$",
-      "$\\frac{2}{3}$",
-      "$(-\\frac{2}{3})$ Zasady oceniania 1 pkt - odpowiedź poprawna. 0 pkt - odpowiedź niepoprawna albo brak odpowiedzi."
+      "$-\\frac32$",
+      "$\\frac32$",
+      "$\\frac23$",
+      "$-\\frac23$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $(-\\frac{2}{3})$.",
+    "correctIndex": 0,
+    "explanation": "A.",
     "solutionSteps": [
-      "Zapisz wyrażenie z użyciem wykładników ujemnych i ułamkowych: $\\frac{1}{\\sqrt[3]{(\\frac{2}{3})^2}} = \\frac{1}{(\\frac{2}{3})^{\\frac{2}{3}}} = (\\frac{2}{3})^{-\\frac{2}{3}}$.",
-      "Odwróć podstawę potęgi, zmieniając znak wykładnika na przeciwny: $(\\frac{2}{3})^{-\\frac{2}{3}} = (\\frac{3}{2})^{\\frac{2}{3}}$.",
-      "Zamień wykładnik ułamkowy na potęgę pierwiastkową: $(\\frac{3}{2})^{\\frac{2}{3}} = \\sqrt[3]{(\\frac{3}{2})^2} = \\sqrt[3]{\\frac{9}{4}}$.\n\n*Korekta na podstawie obrazka:* Obrazek zawiera liczbę $- \\sqrt[3]{\\frac{8}{27}}$.",
-      "Zapisz liczbę pod pierwiastkiem jako sześcian liczby wymiernej: $- \\sqrt[3]{\\frac{8}{27}} = - \\sqrt[3]{(\\frac{2}{3})^3}$.",
-      "Wyciągnij pierwiastek sześcienny z liczby wymiernej: $- \\sqrt[3]{(\\frac{2}{3})^3} = - \\frac{2}{3}$."
+      "1. Iloczyn pod pierwiastkiem: $-\\frac{27}{16}\\cdot2=-\\frac{27}{8}$.\n2. $\\sqrt[3]{-\\frac{27}{8}}=-\\frac32$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12003,19 +11999,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m23-maj/z06-1.png) jest przedział",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZbiorem wszystkich rozwiązań nierówności $-2(x+3)\\le\\frac{2-x}{3}$ jest przedział",
     "choices": [
-      "(-∞ , -4]",
-      "(-∞ , 4]",
-      "[-4 , ∞)",
-      "[4 , ∞)"
+      "$(-\\infty,-4]$",
+      "$(-\\infty,4]$",
+      "$[-4,+\\infty)$",
+      "$[4,+\\infty)$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $[4, \\infty)$.",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Rozwiązujemy nierówność kwadratową $x^2+4x-32 \\ge 0$. Najpierw znajdujemy pierwiastki równania $x^2+4x-32 = 0$. Delta wynosi $\\Delta = 4^2 - 4 \\cdot 1 \\cdot (-32) = 16 + 128 = 144$, więc $\\sqrt{\\Delta} = 12$. Pierwiastki to $x_1 = \\frac{-4-12}{2} = -8$ oraz $x_2 = \\frac{-4+12}{2} = 4$.",
-      "Parabola $y=x^2+4x-32$ ma ramiona skierowane w górę (współczynnik przy $x^2$ jest dodatni). Nierówność $x^2+4x-32 \\ge 0$ jest spełniona dla wartości $x$ leżących na zewnątrz przedziału między pierwiastkami, włączając pierwiastki.",
-      "Zatem zbiorem rozwiązań nierówności jest suma przedziałów $(-\\infty, -8] \\cup [4, \\infty)$. Sprawdzamy, która z podanych odpowiedzi jest zgodna z naszym wynikiem lub jego częścią. Widzimy, że przedział $[4, \\infty)$ jest jedną z opcji."
+      "1. $-2x-6\\le\\frac{2-x}{3}$, więc $-6x-18\\le2-x$.\n2. $-5x\\le20$, czyli $x\\ge-4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12206,20 +12200,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa f jest określona wzorem $f(x) = ax + b$, gdzie a i b są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji $f$ w kartezjańskim układzie współrzędnych (x , y). ![Rysunek do zadania](/cke-matura/m23-maj/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba a oraz liczba b we wzorze funkcji $f$ spełniają warunki:",
+    "prompt": "Funkcja liniowa $f$ jest określona wzorem $f(x)=ax+b$, gdzie $a$ i $b$ są pewnymi liczbami rzeczywistymi. Na rysunku obok przedstawiono fragment wykresu funkcji $f$.\n\n![Rysunek 1](/cke-matura/m23-maj/z13-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $a$ oraz liczba $b$ we wzorze funkcji $f$ spełniają warunki:",
     "choices": [
-      "$a > 0$ i $b > 0$.",
-      "$a > 0$ i b",
-      "$a_{0}$.",
-      "a"
+      "$a>0$ i $b>0$.",
+      "$a>0$ i $b<0$.",
+      "$a<0$ i $b>0$.",
+      "$a<0$ i $b<0$."
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $a < 0$ i $b > 0$.",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Odczytujemy współczynniki a i b z wykresu, korzystając z punktów przez niego przechodzących. Z wykresu widać, że funkcja przechodzi przez punkty $(0, 2)$ i $(3, 0)$.",
-      "Obliczamy współczynnik kierunkowy a. Jest on równy zmianie wartości funkcji przez zmianę argumentu, czyli $a = \\frac{0 - 2}{3 - 0} = \\frac{-2}{3}$.",
-      "Odczytujemy wyraz wolny b, który jest wartością funkcji dla $x=0$. Z wykresu widzimy, że $f(0) = 2$, więc $b=2$.",
-      "Sprawdzamy warunki dla a i b. Mamy $a = -\\frac{2}{3}$, więc $a < 0$. Mamy $b=2$, więc $b > 0$."
+      "1. Wykres opada, więc $a<0$.\n2. Przecięcie z osią $Oy$ jest dodatnie, więc $b>0$."
     ],
     "examSource": {
       "kind": "matura",
