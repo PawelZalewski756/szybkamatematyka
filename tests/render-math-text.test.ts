@@ -164,7 +164,7 @@ describe("unwrapPlainNumberMath", () => {
   });
 });
 
-describe("normalizeMathText — symbole Unicode w matematyce", () => {
+describe("normalizeMathText - symbole Unicode w matematyce", () => {
   it("zamienia półpauzę i znak minus na zwykły minus", () => {
     expect(normalizeMathText("$x – 4 = 0$")).toBe("$x - 4 = 0$");
     expect(normalizeMathText("$x − 1$")).toBe("$x - 1$");

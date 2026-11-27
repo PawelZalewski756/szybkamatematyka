@@ -4,6 +4,7 @@ import { toClientTask } from "@/lib/baza-zadan/client-task";
 import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "@/lib/baza-zadan/labels";
 import { orderTaskChoices } from "@/lib/baza-zadan/task-order";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import { notFound } from "next/navigation";
 
 type PageProps = {
@@ -44,11 +45,19 @@ export async function generateMetadata({
   const dzial = CATEGORY_LABELS[task.category];
   const poziom = DIFFICULTY_LABELS[task.difficulty];
 
+  const title = `${task.title} - ${dzial}`;
+  const description = clampText(
+    `${dzial} (poziom: ${poziom}). ${task.prompt} Rozwiąż zadanie i sprawdź odpowiedź z wyjaśnieniem.`,
+  );
+
   return {
-    title: `${task.title} - ${dzial}`,
-    description: clampText(
-      `${dzial} (poziom: ${poziom}). ${task.prompt} Rozwiąż zadanie i sprawdź odpowiedź z wyjaśnieniem.`,
-    ),
+    title,
+    description,
+    openGraph: pageOpenGraph({
+      path: `/baza-zadan/${task.id}`,
+      title,
+      description,
+    }),
     alternates: { canonical: `/baza-zadan/${task.id}` },
   };
 }

@@ -87,7 +87,7 @@ function DayCard({
 
       {day.isRest ? (
         <p className="mt-4 flex-1 text-xs leading-relaxed text-muted">
-          Dzień przerwy. Odpoczynek też jest częścią planu — wróć jutro.
+          Dzień przerwy. Odpoczynek też jest częścią planu - wróć jutro.
         </p>
       ) : (
         <ul className="mt-3 space-y-2">
@@ -288,7 +288,7 @@ export function PlanTygodniaView() {
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
           Plan układa się z daty egzaminu, Twojej klasy, diagnozy i zaległych
-          powtórek. Każdy dzień to 2–3 zadania — dość, żeby iść do przodu, i
+          powtórek. Każdy dzień to 2–3 zadania - dość, żeby iść do przodu, i
           dość mało, żeby nie wypalić się w pierwszy poniedziałek.
         </p>
         <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-muted">

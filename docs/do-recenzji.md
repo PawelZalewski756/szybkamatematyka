@@ -4,7 +4,7 @@
 > Znalezione automatycznie przez `npm run audit:cke` (17.11.2026),
 > uzupełnione 18.11.2026.
 
-## Artefakty rozumowania LLM — naprawione 18.11.2026
+## Artefakty rozumowania LLM - naprawione 18.11.2026
 
 Wszystkie 7 rozwiązań zostało przepisanych ręcznie w
 `data/cke-matura-cache/*.json` przez `scripts/repairCkeArtifacts.ts`.
@@ -26,7 +26,7 @@ zostaje jako ślad, co było nie tak.
 Prompt to sam `![Zadanie N](...png)`, więc kategoria wpada w domyślną
 `algebra`, a wyszukiwarka i audyty nie widzą treści. Priorytet: dodać OCR /
 alt-text i poprawne działy (osobne zadanie w planie, P2). To nie są błędy
-rozwiązań — brakuje tekstu zadania, więc nie da się ich poprawnie
+rozwiązań - brakuje tekstu zadania, więc nie da się ich poprawnie
 przypisać do działu.
 
 ## Jak zamykać pozycję

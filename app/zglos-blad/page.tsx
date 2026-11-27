@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Zgłoś błąd - Szybka Matematyka",
+  title: "Zgłoś błąd",
   description:
     "Zgłoś błąd w zadaniu, treści lub działaniu aplikacji. Bez konta, wystarczy adres e-mail.",
   alternates: { canonical: "/zglos-blad" },

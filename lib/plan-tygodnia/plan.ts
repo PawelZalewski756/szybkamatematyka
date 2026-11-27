@@ -124,7 +124,7 @@ function dateKey(date: Date): string {
   return `${year}-${month}-${day}`;
 }
 
-/** Klucz poniedziałku bieżącego tygodnia — używany też przez zapis postępu. */
+/** Klucz poniedziałku bieżącego tygodnia - używany też przez zapis postępu. */
 export function getWeekStartKey(now: Date = new Date()): string {
   return dateKey(startOfWeek(now));
 }

@@ -41,7 +41,7 @@ export function welcomeEmailHtml(input: WelcomeEmailInput): string {
       <h1 style="font-size:24px;margin:0 0 12px">Cześć, ${nick}!</h1>
       <p style="font-size:15px;line-height:1.6;margin:0 0 14px">
         Dziękujemy za założenie konta w ${BRAND_NAME}. Najprostszy start to
-        krótka diagnoza — 8 pytań, po których zobaczysz, od czego zacząć.
+        krótka diagnoza - 8 pytań, po których zobaczysz, od czego zacząć.
       </p>
       <p style="margin:0 0 20px">
         <a href="${site}/diagnostyka" style="display:inline-block;background:#b45309;color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:bold">
@@ -87,7 +87,7 @@ export async function sendWelcomeEmail(
       body: JSON.stringify({
         from: sender(),
         to: [input.to],
-        subject: `Witaj w ${BRAND_NAME} — zacznij od diagnozy`,
+        subject: `Witaj w ${BRAND_NAME} - zacznij od diagnozy`,
         html: welcomeEmailHtml(input),
       }),
       signal: AbortSignal.timeout(8_000),

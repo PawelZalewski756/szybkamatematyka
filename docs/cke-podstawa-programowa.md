@@ -1,20 +1,20 @@
-# CKE — pełna lista tematów treningu (SP 4–8 i szkoła średnia)
+# CKE - pełna lista tematów treningu (SP 4–8 i szkoła średnia)
 
 > **Status: wiążący kontrakt treningu.** Ten dokument jest źródłem prawdy dla
 > zawartości `/trening`. Jeśli temat jest w podstawie programowej CKE, musi być
-> widoczny w treningu — także wtedy, gdy w danym roku nie było z niego zadania
+> widoczny w treningu - także wtedy, gdy w danym roku nie było z niego zadania
 > na egzaminie. Plan klasy (`/plan-klasy`) jest tylko podpowiedzią „co w tym
 > roku”; **nie może ukrywać tematów**.
 >
 > Źródła (odczyt 18.11.2026):
-> - [Podstawa programowa — matematyka, szkoła podstawowa IV–VIII (zpe.gov.pl)](https://zpe.gov.pl/podstawa-programowa/szkola-podstawowa/matematyka)
-> - [Podstawa programowa — matematyka, liceum ogólnokształcące i technikum (zpe.gov.pl)](https://zpe.gov.pl/podstawa-programowa/szkola-ponadpodstawowa/matematyka)
+> - [Podstawa programowa - matematyka, szkoła podstawowa IV–VIII (zpe.gov.pl)](https://zpe.gov.pl/podstawa-programowa/szkola-podstawowa/matematyka)
+> - [Podstawa programowa - matematyka, liceum ogólnokształcące i technikum (zpe.gov.pl)](https://zpe.gov.pl/podstawa-programowa/szkola-ponadpodstawowa/matematyka)
 > - [Informatory CKE o egzaminie ósmoklasisty i maturze](https://cke.gov.pl/egzamin-osmoklasisty/informatory/) oraz [komunikaty o wymaganiach egzaminacyjnych](https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/komunikaty/)
 >
 > Mapowanie na slugi aplikacji: `lib/trening/cke-egzamin-8.ts` i
 > `lib/trening/cke-matura-podstawowa.ts`.
 
-## 1. Szkoła podstawowa — klasy IV–VI (14 działów)
+## 1. Szkoła podstawowa - klasy IV–VI (14 działów)
 
 | Nr | Dział podstawy programowej | Tematy w aplikacji (slugi) |
 | --- | --- | --- |
@@ -33,7 +33,7 @@
 | XIII | Elementy statystyki opisowej | `diagramy`, `tabele_i_wykresy`, `srednia` |
 | XIV | Zadania tekstowe | `zadania_tekstowe` |
 
-## 2. Szkoła podstawowa — klasy VII–VIII (15 działów)
+## 2. Szkoła podstawowa - klasy VII–VIII (15 działów)
 
 | Nr | Dział podstawy programowej | Tematy w aplikacji (slugi) |
 | --- | --- | --- |
@@ -53,7 +53,7 @@
 | XIV | Długość okręgu i pole koła | `okrag_i_kolo` |
 | XV | Symetrie | `symetralna_i_dwusieczna`, `symetrie` |
 
-## 3. Szkoła średnia — matura podstawowa (13 sekcji CKE)
+## 3. Szkoła średnia - matura podstawowa (13 sekcji CKE)
 
 | Nr | Sekcja wymagań CKE | Tematy w aplikacji (slugi) |
 | --- | --- | --- |

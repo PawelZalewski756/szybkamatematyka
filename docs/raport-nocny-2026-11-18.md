@@ -1,4 +1,4 @@
-# Rano, 18.11.2026 — raport z nocnej sesji
+# Rano, 18.11.2026 - raport z nocnej sesji
 
 ## W 60 sekund
 
@@ -7,13 +7,13 @@
   build exit 0, **0 ostrzeżeń KaTeX**, wszystkie 4 audyty CI exit 0.
 - **Nic nie zostało zepsute.** Branch WIP nie był potrzebny, bo każdy krok
   kończył się zielonymi testami.
-- **Nie pushowałem** — push na GitHuba wymaga Twoich uprawnień. Branch jest
+- **Nie pushowałem** - push na GitHuba wymaga Twoich uprawnień. Branch jest
   lokalny, gotowy do `git push -u origin chore/nocna-sesja-2026-11-17`.
 
 ## Od czego zacząć przy kawie (10 minut)
 
-1. `git log --oneline master..HEAD` — zobacz 13 commitów.
-2. `git show --stat HEAD` — ostatnia zmiana (LaTeX), jeśli chcesz jedną.
+1. `git log --oneline master..HEAD` - zobacz 13 commitów.
+2. `git show --stat HEAD` - ostatnia zmiana (LaTeX), jeśli chcesz jedną.
 3. Push i PR:
 
    ```bash
@@ -45,27 +45,27 @@
 ## Co się zepsuło / na co uważać
 
 - **Nic nie jest zepsute.** Wszystkie bramki przeszły po każdym kroku.
-- **E2E wydłużyło się do ~2 min** — doszły 4 testy axe (29 tras) i 12 testów
+- **E2E wydłużyło się do ~2 min** - doszły 4 testy axe (29 tras) i 12 testów
   macierzy layoutu. To świadomy koszt; CI nadal mieści się w limicie.
 - **`audit:render` bez env nie sprawdza produkcyjnej bazy** (2461 rekordów
   zamiast 16459). To celowe: CI nie może uderzać w produkcyjny Supabase bez
   sekretów. Lokalnie z env pokrycie wraca.
-- **`region` w axe wyklucza skip link** — świadome, ten sam wzorzec co GOV.UK.
+- **`region` w axe wyklucza skip link** - świadome, ten sam wzorzec co GOV.UK.
   Opisane w `e2e/a11y-audit.spec.ts`.
 - **Workspace nie miał `.git`.** Dołączyłem historię z GitHuba
   (`/tmp/smt-clone` → `.git`), pliki były identyczne z `master`, więc nic nie
   nadpisałem. To trzeba wiedzieć, jeśli będziesz klonować gdzie indziej.
-- **Nie ruszałem** danych operatora, Resend, matury rozszerzonej ani B2B —
+- **Nie ruszałem** danych operatora, Resend, matury rozszerzonej ani B2B -
   wymagają Twoich decyzji/treści, a nie kodu.
 
 ## Co dalej (moja propozycja)
 
 1. **P0:** dane operatora + Resend (Twoje konta).
-2. **P1:** matura rozszerzona — potrzebna treść (plan tematów i zadania),
+2. **P1:** matura rozszerzona - potrzebna treść (plan tematów i zadania),
    tego nie wymyślam.
 3. **P2:** ten sam problem w `/baza-zadan/arkusz/[id]` i leniwy import
    katalogu w `TaskArena` (odpowiedź na zadanie CKE dociąga ~1,9 MB chunk).
-   To kolejny kandydat na API „zadania po ids” — wzorzec jest już gotowy
+   To kolejny kandydat na API „zadania po ids” - wzorzec jest już gotowy
    w `lib/powtorki/tasks-client.ts`.
 
 ## Komendy przypominające

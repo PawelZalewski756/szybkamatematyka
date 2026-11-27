@@ -11,7 +11,6 @@ const FOOTER_GROUPS = [
       { href: "/baza-zadan", label: "Baza zadań" },
       { href: "/powtorki", label: "Powtórki" },
       { href: "/plan-klasy", label: "Plan klasy" },
-      { href: "/plan-tygodnia", label: "Plan tygodnia" },
     ],
   },
   {
@@ -46,7 +45,6 @@ const FOOTER_GROUPS = [
     label: "Szkoła i informacje",
     links: [
       { href: "/dla-szkol", label: "Dla szkół" },
-      { href: "/dla-szkol/panel", label: "Panel nauczyciela" },
       { href: "/kontakt", label: "Kontakt" },
       { href: "/regulamin", label: "Regulamin" },
       { href: "/polityka-prywatnosci", label: "Polityka prywatności" },

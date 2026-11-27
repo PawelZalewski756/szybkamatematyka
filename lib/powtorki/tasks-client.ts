@@ -4,7 +4,7 @@ import type { TaskForClient } from "@/lib/baza-zadan/types";
  * Zadanie powtórki dla klienta.
  *
  * `hasSolution` mówi tylko, czy istnieje rozwiązanie krok po kroku. Same kroki
- * nie wychodzą z serwera — Pro pobiera je osobno przez
+ * nie wychodzą z serwera - Pro pobiera je osobno przez
  * `/api/trening/task-solution`, tak jak w bazie zadań.
  */
 export type ReviewTask = TaskForClient & { hasSolution: boolean };

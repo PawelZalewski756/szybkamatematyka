@@ -6,12 +6,19 @@ import {
 } from "@/lib/baza-zadan/catalog";
 import { toCatalogTask } from "@/lib/baza-zadan/catalog-task";
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo/open-graph";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Baza zadań - matura i egzamin ósmoklasisty",
   description:
     "Zadania treningowe z wyjaśnieniami, arkusze CKE i arkusze egzaminacyjne w aplikacji.",
+  openGraph: pageOpenGraph({
+    path: "/baza-zadan",
+    title: "Baza zadań - matura i egzamin ósmoklasisty",
+    description:
+      "Zadania treningowe z wyjaśnieniami, arkusze CKE i arkusze egzaminacyjne w aplikacji.",
+  }),
   alternates: { canonical: "/baza-zadan" },
 };
 

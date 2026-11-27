@@ -215,7 +215,7 @@
       "numer": 24,
       "dzial": "Kombinatoryka",
       "tresc": "Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry 0, 2, 5, jest A) 12 B) 36 C) 162 D) 243",
-      "rozwiazanie": "1. Pierwsza cyfra: $2$ lub $5$ — $2$ możliwości.\n2. Każda z pozostałych czterech cyfr: $3$ możliwości.\n3. $2\\cdot3^4=162$.\n\nOdpowiedź: C.",
+      "rozwiazanie": "1. Pierwsza cyfra: $2$ lub $5$ - $2$ możliwości.\n2. Każda z pozostałych czterech cyfr: $3$ możliwości.\n3. $2\\cdot3^4=162$.\n\nOdpowiedź: C.",
       "tekst": "Wszystkich liczb pięciocyfrowych, w których występują wyłącznie cyfry $0,2,5$, jest\n\nA) $12$\nB) $36$\nC) $162$\nD) $243$",
       "tekstV": 2,
       "correctIndex": 2

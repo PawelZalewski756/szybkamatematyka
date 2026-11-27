@@ -74,7 +74,7 @@ export async function GET(request: Request): Promise<Response> {
     return Response.json(
       {
         error:
-          "Brak tabeli signup_notification_deliveries — uruchom migrację 20261101200000_signup_telegram_notifications.sql.",
+          "Brak tabeli signup_notification_deliveries - uruchom migrację 20261101200000_signup_telegram_notifications.sql.",
       },
       { status: 503 },
     );

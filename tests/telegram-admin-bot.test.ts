@@ -19,6 +19,10 @@ describe("Telegram admin bot helpers", () => {
 
   it("accepts only numeric admin IDs and supports the legacy single ID", () => {
     expect(parseTelegramAdminIds("12, abc, 34")).toEqual(new Set(["12", "34"]));
+    // Grupy i supergrupy mają ujemne ID - też mają być obsłużone.
+    expect(parseTelegramAdminIds("12, -1001234567890")).toEqual(
+      new Set(["12", "-1001234567890"]),
+    );
     expect(isTelegramAdmin(42, "", "42")).toBe(true);
     expect(isTelegramAdmin(42, "43", "42")).toBe(false);
   });

@@ -4,6 +4,9 @@
 ósmoklasisty.** Łączy teorię, zadania, arkusze CKE i krótkie gry w jednym
 miejscu.
 
+> **Plan rozwoju i decyzje produktowe:** [`docs/PLAN-ROZWOJU.md`](docs/PLAN-ROZWOJU.md)
+> - co jest ukryte, dlaczego i jak przywrócić.
+
 ## Co robi aplikacja?
 
 Uczeń wybiera swój egzamin i temat, a następnie:

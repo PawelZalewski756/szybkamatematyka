@@ -8,10 +8,10 @@ import Link from "next/link";
 
 import { DailyPuzzle, FormulaSheet, ProductPreview } from "@/components/home/HomeDashboard";
 import { MinigamePromo } from "@/components/home/MinigamePromo";
-import { AiSection, FaqSection, PricingTeaser, RankingSection, TeacherBand, TestsSection } from "@/components/home-v2/HomeSections";
+import { AiSection, FaqSection, RankingSection, TestsSection } from "@/components/home-v2/HomeSections";
+import { HomePricing } from "@/components/home-v2/HomePricing";
 import { FeatureGrid } from "@/components/home-v2/FeatureGrid";
 import { HomeFooterV2 } from "@/components/home-v2/HomeFooterV2";
-import { WeekSection } from "@/components/home-v2/WeekSection";
 import { GamingBackground } from "@/components/gaming/GamingBackground";
 
 type HomeDashboardV2Props = {
@@ -32,11 +32,12 @@ function WarmupSection() {
         <div className="max-w-2xl">
           <p className="text-overline">DARMOWA ROZGRZEWKA</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            Nie chcesz się jeszcze rejestrować? Zacznij od wzorów i zagadki.
+            Zanim założysz konto - wzory i zagadka.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Sześć wzorów na start i jedno pytanie dziennie. Bez konta, bez
-            zobowiązań — tak wygląda pierwsza minuta w Szybkiej Matematyce.
+            Sześć wzorów na start i jedno pytanie dziennie. Bez konta i bez
+            zobowiązań - konto dodasz w każdej chwili, gdy zechcesz zapisywać
+            postęp.
           </p>
         </div>
 
@@ -94,7 +95,7 @@ export function HomeDashboardV2({
               </h1>
 
               <p className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-                Teoria, zadania, arkusze CKE, powtórki i gry — w jednym miejscu.
+                Teoria, zadania, arkusze CKE, powtórki i gry - w jednym miejscu.
                 Bez skakania po dziesięciu stronach i bez zgadywania, od czego
                 zacząć.
               </p>
@@ -146,7 +147,7 @@ export function HomeDashboardV2({
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-accent" aria-hidden />
-                  Bez karty na start
+                  Darmowe konto, bez karty
                 </span>
               </div>
             </div>
@@ -180,15 +181,13 @@ export function HomeDashboardV2({
       </section>
 
       <FeatureGrid />
-      <MinigamePromo />
-      <WeekSection />
       <RankingSection />
+      <MinigamePromo />
       <AiSection />
       <TestsSection />
-      <TeacherBand />
       <WarmupSection />
       <FaqSection />
-      <PricingTeaser />
+      <HomePricing />
 
       <div className="page-container px-4 pb-10 pt-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         <HomeFooterV2 />

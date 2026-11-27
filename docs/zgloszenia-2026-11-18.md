@@ -1,4 +1,4 @@
-# Zgłoszenia błędów z 18.11.2026 — status
+# Zgłoszenia błędów z 18.11.2026 - status
 
 Cztery zgłoszenia dotyczyły tematu **„Kolejność wykonywania działań”**.
 Zadania są w produkcyjnej tabeli `public.tasks` (nie w lokalnym cache), więc
@@ -36,7 +36,7 @@ Oczekiwane: `Wszystkie 4 zgłoszone zadania są poprawne.`
 ## Rekompensata
 
 Osoby zgłaszające dostają **30 dni Pro** (`pro_source = 'gift'`), bez karty
-i bez subskrypcji Stripe. Nie mogą jej anulować w panelu Stripe — nie mają
+i bez subskrypcji Stripe. Nie mogą jej anulować w panelu Stripe - nie mają
 tam czego anulować. Po 30 dniach dostęp wygasa automatycznie.
 
 ```bash

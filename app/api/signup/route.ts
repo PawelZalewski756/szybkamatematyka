@@ -1,4 +1,3 @@
-import { createClient } from "@supabase/supabase-js";
 import { deliverSignupNotification } from "@/lib/telegram/signup-delivery";
 import { sendWelcomeEmail } from "@/lib/email/welcome";
 import { validateAuthInput, validateNick } from "@/lib/auth-errors";
@@ -12,16 +11,109 @@ import {
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+// Wysyłka Telegrama i maila powitalnego jest awaitowana przed odpowiedzią.
+// Domyślne 10 s bywa za krótkie przy zimnym starcie i wolnym Telegramie.
+export const maxDuration = 30;
 
 const HEADERS = { "Cache-Control": "no-store" };
 
-function getAnonSupabase() {
+type SupabaseConfig = { url: string; anonKey: string };
+
+function getSupabaseConfig(): SupabaseConfig | null {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
   if (!url || !anonKey) return null;
-  return createClient(url, anonKey, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
+  return { url: url.replace(/\/$/, ""), anonKey };
+}
+
+type SignupUser = {
+  id: string;
+  email?: string | null;
+  created_at?: string;
+  email_confirmed_at?: string | null;
+  user_metadata?: Record<string, unknown> | null;
+  identities?: unknown[];
+};
+
+type SignupOutcome =
+  | { ok: true; user: SignupUser; hasSession: boolean }
+  | { ok: false; status: number; message: string };
+
+/**
+ * Rejestracja przez GoTrue zwracana jest jako użytkownik na najwyższym poziomie
+ * JSON-a. supabase-js 2.106.1 parsuje ją przez `_sessionResponse`, które czyta
+ * `data.user` - i w tej wersji API zwraca `user: null` mimo sukcesu. Dlatego
+ * wołamy endpoint bezpośrednio i normalizujemy odpowiedź sami.
+ */
+async function signUpWithSupabase(
+  config: SupabaseConfig,
+  input: {
+    email: string;
+    password: string;
+    metadata: Record<string, unknown>;
+    redirectTo: string;
+  },
+): Promise<SignupOutcome> {
+  const endpoint = new URL(`${config.url}/auth/v1/signup`);
+  endpoint.searchParams.set("redirect_to", input.redirectTo);
+
+  let response: Response;
+  try {
+    response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        apikey: config.anonKey,
+        authorization: `Bearer ${config.anonKey}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        email: input.email,
+        password: input.password,
+        data: input.metadata,
+      }),
+      cache: "no-store",
+    });
+  } catch {
+    return { ok: false, status: 0, message: "Brak połączenia z Supabase." };
+  }
+
+  const payload = (await response.json().catch(() => null)) as
+    | (Record<string, unknown> & {
+        msg?: string;
+        message?: string;
+        error_description?: string;
+        error?: string;
+        user?: Record<string, unknown>;
+      })
+    | null;
+
+  if (!response.ok) {
+    return {
+      ok: false,
+      status: response.status,
+      message:
+        payload?.msg ??
+        payload?.message ??
+        payload?.error_description ??
+        payload?.error ??
+        `Supabase ${response.status}`,
+    };
+  }
+
+  const rawUser = (payload?.user ?? payload) as Record<string, unknown> | null;
+  if (!rawUser || typeof rawUser.id !== "string") {
+    return {
+      ok: false,
+      status: 502,
+      message: "Supabase nie zwrócił danych nowego konta.",
+    };
+  }
+
+  return {
+    ok: true,
+    user: rawUser as SignupUser,
+    hasSession: typeof payload?.access_token === "string",
+  };
 }
 
 function siteUrl(request: Request): string {
@@ -37,8 +129,8 @@ function siteUrl(request: Request): string {
  * zwracamy `needsConfirmation: false` i klient loguje od razu.
  */
 export async function POST(request: Request): Promise<Response> {
-  const supabase = getAnonSupabase();
-  if (!supabase) {
+  const config = getSupabaseConfig();
+  if (!config) {
     return Response.json(
       { error: "Rejestracja jest obecnie niedostępna." },
       { status: 503, headers: HEADERS },
@@ -93,58 +185,56 @@ export async function POST(request: Request): Promise<Response> {
     );
   }
 
-  const { data, error } = await supabase.auth.signUp({
+  const signup = await signUpWithSupabase(config, {
     email,
     password,
-    options: {
-      emailRedirectTo: `${siteUrl(request)}/login`,
-      data: {
-        nick,
-        nickname: nick,
-        school_level: schoolLevel || null,
-        terms_accepted_at: new Date().toISOString(),
-        age_confirmed: true,
-        ...(referralCode ? { referral_code: referralCode } : {}),
-      },
+    redirectTo: `${siteUrl(request)}/login`,
+    metadata: {
+      nick,
+      nickname: nick,
+      school_level: schoolLevel || null,
+      terms_accepted_at: new Date().toISOString(),
+      age_confirmed: true,
+      ...(referralCode ? { referral_code: referralCode } : {}),
     },
   });
 
-  if (error) {
-    if (error.status === 429 || /rate limit/i.test(error.message)) {
+  if (!signup.ok) {
+    if (signup.status === 429 || /rate limit/i.test(signup.message)) {
       return Response.json(
         { error: "Zbyt wiele prób. Spróbuj ponownie za kilka minut.", code: "rate_limited" },
         { status: 429, headers: HEADERS },
       );
     }
-    if (/already|registered|exists/i.test(error.message)) {
+    if (/already|registered|exists/i.test(signup.message)) {
       return Response.json(
         { ok: true, needsConfirmation: true },
         { headers: HEADERS },
       );
     }
-    console.error("[szybka-matma] signup failed:", error.message);
+    console.error("[szybka-matma] signup failed:", signup.status, signup.message);
     return Response.json(
       { error: "Nie udało się utworzyć konta. Spróbuj ponownie." },
       { status: 500, headers: HEADERS },
     );
   }
 
-  // Dla istniejącego adresu Supabase zwraca użytkownika bez tożsamości.
-  // Odpowiadamy tak samo jak przy nowym koncie (bez ujawniania, że konto istnieje).
-  if (!data.user || data.user.identities?.length === 0) {
+  // Dla istniejącego, potwierdzonego adresu Supabase zwraca obfuskację bez
+  // tożsamości. Odpowiadamy tak samo jak przy nowym koncie (bez enumeracji).
+  if (signup.user.identities && signup.user.identities.length === 0) {
     return Response.json(
       { ok: true, needsConfirmation: true },
       { headers: HEADERS },
     );
   }
 
-  const newUserId = data.user.id;
+  const newUserId = signup.user.id;
   const newUser = {
-    id: data.user.id,
-    email: data.user.email ?? null,
-    created_at: data.user.created_at,
-    email_confirmed_at: data.user.email_confirmed_at ?? null,
-    user_metadata: data.user.user_metadata ?? null,
+    id: signup.user.id,
+    email: signup.user.email ?? null,
+    created_at: signup.user.created_at ?? new Date().toISOString(),
+    email_confirmed_at: signup.user.email_confirmed_at ?? null,
+    user_metadata: signup.user.user_metadata ?? null,
   };
   // Wysyłamy powiadomienie przed odpowiedzią, a nie w `after()`. Wcześniej
   // zdarzało się, że funkcja serverless kończyła się przed callbackiem i nowe
@@ -177,6 +267,12 @@ export async function POST(request: Request): Promise<Response> {
       : Promise.resolve({ ok: false as const, error: "missing recipient" }),
   ]);
 
+  if (notification?.status === 202) {
+    console.warn(
+      "[telegram-signup] Powiadomienie pominięte (konto poza limitem wieku):",
+      notification.body,
+    );
+  }
   if (notification && notification.status >= 400) {
     console.error(
       "[telegram-signup] Powiadomienie nie zostało wysłane:",
@@ -188,7 +284,7 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   return Response.json(
-    { ok: true, userId: data.user.id, needsConfirmation: !data.session },
+    { ok: true, userId: newUserId, needsConfirmation: !signup.hasSession },
     { headers: HEADERS },
   );
 }

@@ -1,4 +1,4 @@
-# AI-HANDOFF — Szybka Matematyka
+# AI-HANDOFF - Szybka Matematyka
 
 > **Przeczytaj ten plik w całości przed pierwszą zmianą.**
 > Ostatnia aktualizacja: **2026-11-17, 00:30 Europe/Warsaw**
@@ -21,7 +21,7 @@
 1. To jest **prawdziwe repo Git**, nie ZIP. Pracujemy na branchu
    `chore/ocena-projektu-0-30`, **nigdy bezpośrednio na `master`**.
 2. Na komputerze są **3 niezacommitowane pliki**:
-   - `AI-HANDOFF.md` (nowy — ten dokument),
+   - `AI-HANDOFF.md` (nowy - ten dokument),
    - `components/diagnostyka/DiagnosticQuiz.tsx`,
    - `e2e/smoke.spec.ts`.
 3. **Przed przeniesieniem na laptopa** trzeba je zacommitować i wypchnąć
@@ -48,7 +48,7 @@
 
 ## 1. Co to za projekt
 
-**Szybka Matematyka** — polska platforma do nauki matematyki dla:
+**Szybka Matematyka** - polska platforma do nauki matematyki dla:
 
 - **egzaminu ósmoklasisty** (`8_klasa`),
 - **matury podstawowej** (`matura_podstawowa`),
@@ -114,7 +114,7 @@ domykanie konkretnych ścieżek i pilnowanie, żeby layout/testy nie pękały.
 | Element | Wartość |
 |---|---|
 | Branch roboczy | `chore/ocena-projektu-0-30` |
-| HEAD | `c94520e` — `fdaa` |
+| HEAD | `c94520e` - `fdaa` |
 | Poprzednie commity | `e6765e4 2 pr`, `468d027 Ocena projektu: paywall, diagnoza i data egzaminu` |
 | Upstream | `origin/chore/ocena-projektu-0-30` |
 | PR | otwarty PR dla tego brancha (sprawdź w GitHubie) |
@@ -168,7 +168,7 @@ wpisz Summary: `Diagnoza: layout + handoff dla AI`, ale dwa są czytelniejsze.
 
 | Folder | Rola |
 |---|---|
-| `C:\Users\pafci\Downloads\szybkamatematyka-fix` | **prawdziwy klon Git** — tu pracujemy |
+| `C:\Users\pafci\Downloads\szybkamatematyka-fix` | **prawdziwy klon Git** - tu pracujemy |
 | `C:\Users\pafci\Downloads\szybkamatematyka-master(2)\szybkamatematyka-master` | snapshot z ZIP, **nie jest źródłem prawdy** |
 
 Na laptopie **nie kopiuj ZIP-a**. Sklonuj repo z GitHuba.
@@ -177,7 +177,7 @@ Na laptopie **nie kopiuj ZIP-a**. Sklonuj repo z GitHuba.
 
 ## 3. Przenoszenie z desktopa na laptopa
 
-### Wariant A — zalecany: przez GitHuba
+### Wariant A - zalecany: przez GitHuba
 
 1. Na desktopie dokończ commit poprawki layoutu.
 2. Kliknij **Push origin**.
@@ -194,7 +194,7 @@ Na laptopie **nie kopiuj ZIP-a**. Sklonuj repo z GitHuba.
 4. Uzupełnij `.env.local` (patrz sekcja 5).
 5. `npm run dev`.
 
-### Wariant B — bez pusha: patch
+### Wariant B - bez pusha: patch
 
 Na desktopie:
 
@@ -213,10 +213,10 @@ już są na branchu.
 
 ### Czego NIE przenosić
 
-- `node_modules/` — ogromne, platformowo zależne,
-- `.next/` — build cache,
+- `node_modules/` - ogromne, platformowo zależne,
+- `.next/` - build cache,
 - `test-results/`, `playwright-report/`,
-- `.env.local` — sekrety,
+- `.env.local` - sekrety,
 - `*.tsbuildinfo`,
 - `data/*.log`.
 
@@ -229,7 +229,7 @@ nie jest repo Git.
 
 ### 4.1. Wymagania
 
-- **Node.js 22** — plik `.nvmrc` zawiera `22`.
+- **Node.js 22** - plik `.nvmrc` zawiera `22`.
   CI używa Node 22. Lokalny Node 26 może działać, ale do reprodukcji CI użyj 22.
 - **npm 11+** (albo zgodny z `package-lock.json`).
 - **Git**.
@@ -351,7 +351,7 @@ Administrator musi najpierw wysłać botowi `/start`, inaczej dostanie 403
 | `STRIPE_PRICE_PRO` | `price_...` dla Pro |
 | `STRIPE_PRICE_ROCZNY` | `price_...` dla rocznego |
 
-Bez env build nadal przechodzi — aplikacja czyta zmienne leniwie. Ale funkcje
+Bez env build nadal przechodzi - aplikacja czyta zmienne leniwie. Ale funkcje
 zależne od Supabase/Stripe/Resend nie zadziałają.
 
 ---
@@ -412,7 +412,7 @@ Job `e2e` uruchamia `npm run test:e2e` na Ubuntu 24.04 z Chrome.
 > wywalają się o Supabase, sprawdź, czy nie brakuje `.env.local` lub czy skrypt
 > nie wymaga service role.
 
-### 6.4. Playwright — ważne
+### 6.4. Playwright - ważne
 
 - Config: `playwright.config.ts`.
 - Domyślny port: `3000`; można zmienić `E2E_PORT`.
@@ -424,7 +424,7 @@ Job `e2e` uruchamia `npm run test:e2e` na Ubuntu 24.04 z Chrome.
 
 ---
 
-## 7. Architektura — co gdzie jest
+## 7. Architektura - co gdzie jest
 
 ### 7.1. Katalogi
 
@@ -467,15 +467,15 @@ Job `e2e` uruchamia `npm run test:e2e` na Ubuntu 24.04 z Chrome.
 
 - Statyczny katalog zadań żyje w `lib/baza-zadan/`.
 - CMS: Supabase `zadania`, `arkusze`.
-- `fetchZadaniaSafe` **nie selekcjonuje już `rozwiazanie`** — to celowe.
+- `fetchZadaniaSafe` **nie selekcjonuje już `rozwiazanie`** - to celowe.
 - Rozwiązania Pro pobierane są przez API:
-  - `/api/trening/task-solution` — pojedyncze zadanie,
-  - `/api/trening/cms-solution` — zadanie CMS,
-  - `/api/trening/arkusz-solutions` — klucz całego arkusza.
+  - `/api/trening/task-solution` - pojedyncze zadanie,
+  - `/api/trening/cms-solution` - zadanie CMS,
+  - `/api/trening/arkusz-solutions` - klucz całego arkusza.
 - `toClientTask` usuwa `solutionSteps` przed wysłaniem do klienta.
 - Paywall jest sprawdzany po stronie serwera przez `verifyTaskAssistRequest`.
 
-Nie „upraszczaj” tego, wracając do przekazywania `rozwiazanie` w propsach —
+Nie „upraszczaj” tego, wracając do przekazywania `rozwiazanie` w propsach -
 to był realny wyciek treści Pro.
 
 ### 7.4. Plany klasowe
@@ -483,7 +483,7 @@ to był realny wyciek treści Pro.
 - `lib/trening/class-plan.ts` mapuje klasy na tematy z drzewa CKE.
 - `/plan-klasy` pokazuje plan.
 - `/trening` filtruje drzewo po `schoolClass` z `localStorage`.
-- Klasy 1–3 nie mają planu — to świadoma decyzja, nie bug.
+- Klasy 1–3 nie mają planu - to świadoma decyzja, nie bug.
 - Mapowanie jest **orientacyjne**, nie oficjalną podstawą programową.
 
 ---
@@ -531,9 +531,9 @@ to był realny wyciek treści Pro.
 
 ---
 
-## 9. Co jeszcze zostało — backlog
+## 9. Co jeszcze zostało - backlog
 
-### P0 — dokończ przed kolejnym PR
+### P0 - dokończ przed kolejnym PR
 
 | Zadanie | Pliki | Definition of Done |
 |---|---|---|
@@ -542,7 +542,7 @@ to był realny wyciek treści Pro.
 | Prawdziwe dane operatora | `.env.local` / Vercel | sekcja „Dane operatora” widoczna |
 | Weryfikacja domeny Resend | Resend dashboard | welcome email dochodzi do obcego adresu |
 
-### P1 — produkt
+### P1 - produkt
 
 | Zadanie | Uwagi |
 |---|---|
@@ -551,7 +551,7 @@ to był realny wyciek treści Pro.
 | E-mail reminders | obecnie przypomnienia w przeglądarce; brak e-maili |
 | Pełny audyt a11y | kontrast, fokus w modalach, nawigacja klawiaturą |
 
-### P2 — techniczne
+### P2 - techniczne
 
 | Zadanie | Uwagi |
 |---|---|
@@ -593,7 +593,7 @@ to był realny wyciek treści Pro.
 
 ---
 
-## 11. Git + GitHub Desktop — instrukcja krok po kroku
+## 11. Git + GitHub Desktop - instrukcja krok po kroku
 
 ### 11.1. Zasady branchy
 
@@ -603,7 +603,7 @@ to był realny wyciek treści Pro.
   `chore/ocena-projektu-0-30` sam nie ma reguł.
 - Praca idzie przez branch + PR, nie direct push na master.
 
-### 11.2. GitHub Desktop — pierwsze uruchomienie na laptopie
+### 11.2. GitHub Desktop - pierwsze uruchomienie na laptopie
 
 1. Zainstaluj GitHub Desktop.
 2. **File → Clone repository**.
@@ -612,7 +612,7 @@ to był realny wyciek treści Pro.
 5. Po sklonowaniu: **Current branch → chore/ocena-projektu-0-30**.
 6. **Fetch origin**, potem ewentualnie **Pull origin**.
 
-### 11.3. GitHub Desktop — commit zmian
+### 11.3. GitHub Desktop - commit zmian
 
 1. Otwórz repo.
 2. Sprawdź **Current branch** (ma być `chore/ocena-projektu-0-30`).
@@ -637,7 +637,7 @@ to był realny wyciek treści Pro.
 **Ważne:** GitHub Desktop wymaga niepustego Summary. Nie da się kliknąć
 Commitu bez wpisania nazwy.
 
-### 11.4. GitHub Desktop — PR
+### 11.4. GitHub Desktop - PR
 
 1. Po pushu pojawi się **Create Pull Request** (albo **View on GitHub**).
 2. Base: `master`, compare: `chore/ocena-projektu-0-30`.
@@ -672,7 +672,7 @@ albo w GitHub Desktop:
 
 Aktualnie upstream jest już poprawny.
 
-### 11.6. CLI — odpowiedniki
+### 11.6. CLI - odpowiedniki
 
 ```bash
 # stan
@@ -698,7 +698,7 @@ Jeśli GitHub Desktop pokaże konflikt:
 2. Otwórz plik, rozwiąż konflikt ręcznie.
 3. `git add <plik>`.
 4. Kontynuuj commit.
-5. Jeśli nie wiesz — zatrzymaj się i opisz problem.
+5. Jeśli nie wiesz - zatrzymaj się i opisz problem.
 
 ---
 
@@ -790,7 +790,7 @@ użyj 22.
 
 ### Kodowanie
 
-Pliki są UTF-8. Jeśli PowerShell pokazuje „krzaki”, to tylko wyświetlanie —
+Pliki są UTF-8. Jeśli PowerShell pokazuje „krzaki”, to tylko wyświetlanie -
 nie zapisuj ich ponownie w ANSI.
 
 ---
@@ -800,11 +800,11 @@ nie zapisuj ich ponownie w ANSI.
 Przed commitem:
 
 - [ ] zmiana jest logicznie jednym tematem,
-- [ ] `npm.cmd run lint` — 0 błędów,
-- [ ] `node node_modules/typescript/bin/tsc --noEmit` — 0 błędów,
-- [ ] `npm.cmd test -- --reporter=dot` — wszystkie przechodzą,
-- [ ] `npm.cmd run build` — exit 0,
-- [ ] przy UI: `npm.cmd run test:e2e` — przechodzi,
+- [ ] `npm.cmd run lint` - 0 błędów,
+- [ ] `node node_modules/typescript/bin/tsc --noEmit` - 0 błędów,
+- [ ] `npm.cmd test -- --reporter=dot` - wszystkie przechodzą,
+- [ ] `npm.cmd run build` - exit 0,
+- [ ] przy UI: `npm.cmd run test:e2e` - przechodzi,
 - [ ] nie ma sekretów w diffie,
 - [ ] checklist w `docs/ocena-projektu-2026-11-16.md` zaktualizowany,
 - [ ] commit message opisuje efekt, nie „fix”.
@@ -856,7 +856,7 @@ Na koniec podaj:
 
 ---
 
-## 16. Ściąga — najważniejsze komendy
+## 16. Ściąga - najważniejsze komendy
 
 ```bash
 # stan

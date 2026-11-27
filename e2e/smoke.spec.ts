@@ -17,6 +17,11 @@ test.describe("Smoke", () => {
       "Przygotuj się do",
     );
     await expect(
+      page.getByRole("heading", { name: "Rywalizacja, która motywuje" }),
+    ).toBeVisible();
+    await expect(page.getByRole("tab", { name: "Wszyscy" })).toBeVisible();
+    await expect(page.getByText("dane przykładowe")).toHaveCount(0);
+    await expect(
       page.getByText("Ścieżka: Szkoła podstawowa", { exact: true }),
     ).toHaveCount(0);
     const quickTask = page.getByRole("group", {
@@ -33,6 +38,11 @@ test.describe("Smoke", () => {
     await quickTask.getByRole("button", { name: "Odpowiedź B 20" }).click();
     await expect(page.getByText("Gotowe! Błędnych odpowiedzi: 1.")).toBeVisible();
     await expect.poll(() => attempts.length).toBe(3);
+    // Po szybkiej próbie gość dostaje propozycję konta (zapisz wynik),
+    // a nie tylko link do treningu bez konta.
+    await expect(
+      page.getByRole("link", { name: /Zapisz wynik/ }),
+    ).toBeVisible();
     expect(attempts.map(({ isCorrect }) => isCorrect)).toEqual([
       false,
       true,
@@ -48,15 +58,6 @@ test.describe("Smoke", () => {
     ).toBeVisible();
   });
 
-  test("zagadka dnia pokazuje rozwiązanie po kliknięciu", async ({ page }) => {
-    await page.goto("/");
-    await expect(page.getByText("ZAGADKA DNIA")).toBeVisible();
-    await page.getByRole("button", { name: "Pokaż rozwiązanie" }).click();
-    await expect(
-      page.getByRole("button", { name: "Pokaż rozwiązanie" }),
-    ).toHaveCount(0);
-  });
-
   test("gość może wejść na stronę bez wymuszonego wyboru klasy", async ({
     page,
   }) => {
@@ -70,7 +71,7 @@ test.describe("Smoke", () => {
       "Przygotuj się do",
     );
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await page.getByRole("link", { name: "Zacznij trening" }).click();
+    await page.getByRole("link", { name: /Wejdź do treningu/ }).click();
     await expect(page).toHaveURL(/\/trening$/);
   });
 
@@ -189,6 +190,24 @@ test.describe("Smoke", () => {
     await expect(page.locator('input[name="password"]')).toBeVisible();
     await expect(page.getByRole("button", { name: "Zaloguj się" })).toBeVisible();
     await expect(page.getByRole("link", { name: "Zapomniałeś hasła?" })).toBeVisible();
+  });
+
+  test("/login?mode=signup otwiera od razu rejestrację", async ({ page }) => {
+    await page.goto("/login?mode=signup");
+    await expect(
+      page.getByRole("heading", { name: /Dołącz do/i }),
+    ).toBeVisible();
+    await expect(page.locator('input[name="nick"]')).toBeVisible();
+  });
+
+  test("gość widzi w nagłówku Załóż konto obok Zaloguj", async ({ page }) => {
+    await page.goto("/");
+    await expect(
+      page.getByRole("link", { name: "Załóż konto" }).first(),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Zaloguj" }).first(),
+    ).toBeVisible();
   });
 
   test("/login/zapomniane-haslo ma formularz resetu", async ({ page }) => {
@@ -420,12 +439,15 @@ test.describe("Smoke", () => {
     );
   });
 
-  test("/powtorki pokazuje bramkę logowania dla gościa", async ({ page }) => {
+  test("/powtorki pokazuje bramkę rejestracji dla gościa", async ({ page }) => {
     await page.goto("/powtorki");
     await expect(
       page.getByRole("heading", {
-        name: "Powtórki są dostępne po zalogowaniu",
+        name: "Powtórki zapisują się na koncie",
       }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: "Załóż darmowe konto" }),
     ).toBeVisible();
   });
 

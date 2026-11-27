@@ -17,7 +17,8 @@ export function parseTelegramAdminIds(value: string | undefined): Set<string> {
     (value ?? "")
       .split(",")
       .map((id) => id.trim())
-      .filter((id) => /^\d+$/.test(id)),
+      // Prywatne czaty mają dodatnie ID, grupy i supergrupy ujemne (-100...).
+      .filter((id) => /^-?\d+$/.test(id)),
   );
 }
 

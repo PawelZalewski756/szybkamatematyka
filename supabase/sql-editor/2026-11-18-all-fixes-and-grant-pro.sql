@@ -1,5 +1,5 @@
 -- ============================================================================
--- Szybka Matematyka — wszystkie poprawki z 18.11.2026 + 30 dni Pro
+-- Szybka Matematyka - wszystkie poprawki z 18.11.2026 + 30 dni Pro
 --
 -- Wklej CAŁY plik do Supabase -> SQL Editor -> Run.
 -- Skrypt jest idempotentny: można go uruchomić ponownie.
@@ -13,7 +13,7 @@
 --   6. dodaje RPC get_platform_stats (statystyki z auth.users),
 --   7. przyznaje 30 DNI KALENDARZOWYCH Pro osobom z listy _gift_emails.
 --
--- Na końcu są zapytania weryfikacyjne — ich wyniki pokażą, czy wszystko weszło.
+-- Na końcu są zapytania weryfikacyjne - ich wyniki pokażą, czy wszystko weszło.
 -- ============================================================================
 
 -- ============================================================================
@@ -586,7 +586,7 @@ end $$;
 commit;
 
 -- ============================================================================
--- 7. WERYFIKACJA — sprawdź wyniki tych zapytań
+-- 7. WERYFIKACJA - sprawdź wyniki tych zapytań
 -- ============================================================================
 
 -- 7.1. Pro dla zgłoszonych adresów (powinno być active/pro/gift i data ~+30 dni)

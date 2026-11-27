@@ -1,4 +1,4 @@
-# Naprawa `solved_tasks` — wszyscy mają 0 zadań
+# Naprawa `solved_tasks` - wszyscy mają 0 zadań
 
 ## Objaw
 
@@ -62,4 +62,4 @@ W konsoli przeglądarki po rozwiązaniu zadania sprawdź:
 [szybka-matma] recordTaskCompletion: ...
 ```
 
-Wklej mi dokładny błąd — będzie zawierał kod PostgREST/RLS.
+Wklej mi dokładny błąd - będzie zawierał kod PostgREST/RLS.
