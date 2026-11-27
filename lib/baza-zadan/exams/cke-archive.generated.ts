@@ -10894,19 +10894,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dodatnie liczby x i y spełniają warunek $2x = 3y$. Wynika stąd, że wartość wyrażenia ![Rysunek do zadania](/cke-matura/m22-maj/z02-1.png) jest równa",
+    "prompt": "Dodatnie liczby $x$ i $y$ spełniają warunek $2x=3y$. Wynika stąd, że wartość wyrażenia $\\frac{x^2+y^2}{xy}$ jest równa",
     "choices": [
-      "$\\frac{2}{3}$",
+      "$\\frac23$",
       "$\\frac{13}{6}$",
-      "$\\frac{6}{13}$",
-      "$\\frac{3}{2}$"
+      "$\\frac6{13}$",
+      "$\\frac32$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{2}{3}$.\n\n*(Uwaga: W opisie zadania wystąpił błąd w obliczeniach. Poprawna odpowiedź przy podanym warunku to $\\frac{8}{7}$, która nie znajduje się wśród proponowanych opcji. Jeśli jednak założyć, że w zadaniu chodziło o wyrażenie $\\frac{2x-y}{3x+y}$ lub inny warunek, odpowiedź mogłaby być inna.)*\n\n**\n**Odpowiedź:** A, czyli $\\frac{2}{3}$.",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Z warunku $2x = 3y$ wyznaczemy stosunek $\\frac{x}{y}$. Dzieląc obie strony przez $2y$, otrzymujemy $\\frac{x}{y} = \\frac{3}{2}$.",
-      "Podstawimy $\\frac{x}{y} = \\frac{3}{2}$ do wyrażenia $\\frac{2x+y}{3x-y}$. Dzieląc licznik i mianownik przez $y$, otrzymujemy $\\frac{2\\frac{x}{y}+1}{3\\frac{x}{y}-1}$.",
-      "Obliczamy wartość liczbową wyrażenia po podstawieniu: $\\frac{2 \\cdot \\frac{3}{2} + 1}{3 \\cdot \\frac{3}{2} - 1} = \\frac{3+1}{\\frac{9}{2}-1} = \\frac{4}{\\frac{7}{2}} = 4 \\cdot \\frac{2}{7} = \\frac{8}{7}$."
+      "1. $\\frac{x^2+y^2}{xy}=\\frac{x}{y}+\\frac{y}{x}$.\n2. $\\frac{x}{y}=\\frac32$, więc $\\frac32+\\frac23=\\frac{13}{6}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10925,19 +10923,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 4 log 4 $2 + 2$ log 4 8 jest równa",
+    "prompt": "Liczba $4\\log_4 2+2\\log_4 8$ jest równa",
     "choices": [
-      "6 log 4 10",
-      "16",
-      "5",
-      "6 log 4 16"
+      "$6\\log_4 10$",
+      "$16$",
+      "$5$",
+      "$6\\log_4 16$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 5",
+    "explanation": "C.",
     "solutionSteps": [
-      "Zastosuj wzór na logarytm potęgi: $log_a(x^k) = k \\cdot log_a(x)$. Otrzymujemy: $4 \\cdot \\frac{1}{2} \\log_4 4 + 2 \\cdot \\frac{3}{2} \\log_4 4$.",
-      "Skorzystaj z własności $log_a a = 1$ i uprość wyrażenie: $2 \\cdot 1 + 3 \\cdot 1 = 2 + 3$.",
-      "Oblicz końcową wartość wyrażenia: $2 + 3 = 5$."
+      "1. $4\\log_4 2=4\\cdot\\frac12=2$.\n2. $2\\log_4 8=2\\cdot\\frac32=3$.\n3. Suma $=5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10956,19 +10952,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Cena działki po kolejnych dwóch obniżkach, za każdym razem o 10% w odniesieniu do ceny obowiązującej w danym momencie, jest równa 78 732 zł. Cena tej działki przed obiema obniżkami była, w zaokrągleniu do 1 zł, równa",
+    "prompt": "Cena działki po kolejnych dwóch obniżkach, za każdym razem o $10\\%$ w odniesieniu do ceny obowiązującej w danym momencie, jest równa $78\\,732$ zł. Cena tej działki przed obiema obniżkami była, w zaokrągleniu do $1$ zł, równa",
     "choices": [
-      "98 732 zł",
-      "97 200 zł",
-      "95 266 zł",
-      "94 478 zł"
+      "$98\\,732$ zł",
+      "$97\\,200$ zł",
+      "$95\\,266$ zł",
+      "$94\\,478$ zł"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 97 200 zł",
+    "explanation": "B.",
     "solutionSteps": [
-      "Oznaczmy pierwotną cenę działki jako $x$. Po pierwszej obniżce o 10% cena wynosi $x \\cdot (1 - 0.10) = 0.9x$.",
-      "Po drugiej obniżce o 10% od nowej ceny, cena wynosi $0.9x \\cdot (1 - 0.10) = 0.9x \\cdot 0.9 = 0.81x$.",
-      "Wiemy, że cena po obu obniżkach wynosi 78 732 zł, zatem $0.81x = 78732$. Rozwiązując to równanie dla $x$, otrzymujemy $x = \\frac{78732}{0.81} = 97200$."
+      "1. $0{,}9\\cdot0{,}9x=0{,}81x$.\n2. $0{,}81x=78\\,732$, więc $x=97\\,200$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11080,19 +11074,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Iloczyn wszystkich rozwiązań równania 2x$(x^{2} - 9)(x + 1)$ = 0 jest równy",
+    "prompt": "Iloczyn wszystkich rozwiązań równania $2x(x^2-9)(x+1)=0$ jest równy",
     "choices": [
-      "$(-3)$",
-      "3",
-      "0",
-      "9"
+      "$-3$",
+      "$3$",
+      "$0$",
+      "$9$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $0$.",
+    "explanation": "C.",
     "solutionSteps": [
-      "Równanie $2x(x^2 - 9)(x + 1) = 0$ jest spełnione, gdy jeden z czynników jest równy zero. Stąd otrzymujemy $2x = 0$ lub $x^2 - 9 = 0$ lub $x + 1 = 0$.",
-      "Rozwiązujemy poszczególne równania: z $2x = 0$ otrzymujemy $x = 0$; z $x^2 - 9 = 0$ mamy $x^2 = 9$, czyli $x = 3$ lub $x = -3$; z $x + 1 = 0$ otrzymujemy $x = -1$.",
-      "Obliczamy iloczyn wszystkich rozwiązań: $0 \\cdot 3 \\cdot (-3) \\cdot (-1) = 0$."
+      "1. Pierwiastki: $0,3,-3,-1$.\n2. Iloczyn zawiera $0$, więc jest równy $0$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11204,19 +11196,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej $f(x) = 3x^{2} + bx + c$ jest parabola o wierzchołku w punkcie W = $(-3, 2)$. Wzór tej funkcji $w$ postaci kanonicznej to",
+    "prompt": "Wykresem funkcji kwadratowej $f(x)=3x^2+bx+c$ jest parabola o wierzchołku w punkcie $W=(-3,2)$. Wzór tej funkcji $w$ postaci kanonicznej to",
     "choices": [
-      "$f(x) = 3(x - 3) 2 + 2$",
-      "$f(x) = 3(x + 3) 2 + 2$",
-      "$f(x)$ = $(x - 3) 2 + 2$",
-      "$f(x)$ = $(x + 3) 2 + 2$"
+      "$f(x)=3(x-3)^2+2$",
+      "$f(x)=3(x+3)^2+2$",
+      "$f(x)=(x-3)^2+2$",
+      "$f(x)=(x+3)^2+2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $f(x) = 3(x + 3)^2 + 2$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Wzór ogólny funkcji kwadratowej w postaci kanonicznej to $f(x) = a(x-p)^2 + q$, gdzie $W=(p, q)$ to wierzchołek paraboli.",
-      "Z treści zadania wiemy, że $a=3$ (współczynnik przy $x^2$) i $W=(-3, 2)$, czyli $p=-3$ oraz $q=2$.",
-      "Podstawiamy wartości $a, p, q$ do wzoru kanonicznego: $f(x) = 3(x - (-3))^2 + 2 = 3(x+3)^2 + 2$."
+      "1. $a=3$, $p=-3$, $q=2$.\n2. $f(x)=3(x+3)^2+2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11265,19 +11255,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla każdej liczby naturalnej $n \\ge 1$, $a_{5} = -31$ oraz $a_{10} = -66$. Różnica tego ciągu jest równa",
+    "prompt": "W ciągu arytmetycznym $(a_n)$, określonym dla każdej liczby naturalnej $n\\ge1$, $a_5=-31$ oraz $a_{10}=-66$. Różnica tego ciągu jest równa",
     "choices": [
-      "$(-7)$",
-      "$(-19,4)$",
-      "7",
-      "19,4"
+      "$-7$",
+      "$-19{,}4$",
+      "$7$",
+      "$19{,}4$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $(-7)$.",
+    "explanation": "A.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Zapisz dane zadania w postaci układu równań: $a_5 = a_1 + 4r = -31$ oraz $a_{10} = a_1 + 9r = -66$.",
-      "Odejmij pierwsze równanie od drugiego, aby wyeliminować $a_1$ i obliczyć różnicę $r$. Otrzymasz: $(a_1 + 9r) - (a_1 + 4r) = -66 - (-31)$, co upraszcza się do $5r = -35$.",
-      "Podziel obie strony równania przez 5, aby znaleźć wartość $r$. Dzieląc $-35$ przez $5$, otrzymasz $r = -7$."
+      "1. $a_{10}-a_5=5r=-35$.\n2. $r=-7$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11296,19 +11284,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkie wyrazy nieskończonego ciągu geometrycznego ($a_{n}$), określonego dla każdej liczby naturalnej $n \\ge 1$, są dodatnie i $9a^{5} = 4a_{3}$ . Wtedy iloraz tego ciągu jest równy",
+    "prompt": "Wszystkie wyrazy nieskończonego ciągu geometrycznego $(a_n)$, określonego dla każdej liczby naturalnej $n\\ge1$, są dodatnie i $9a_5=4a_3$. Wtedy iloraz tego ciągu jest równy",
     "choices": [
-      "$\\frac{2}{3}$",
-      "$\\frac{3}{2}$",
-      "$\\frac{2}{9}$",
-      "$\\frac{9}{2}$"
+      "$\\frac23$",
+      "$\\frac32$",
+      "$\\frac29$",
+      "$\\frac92$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{2}{3}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, gdzie $a_1$ to pierwszy wyraz, a $q$ to iloraz. Zapisz dane równanie $9a_5 = 4a_3$ przy użyciu tego wzoru.\n$9 \\cdot (a_1 \\cdot q^{5-1}) = 4 \\cdot (a_1 \\cdot q^{3-1})$\n$9a_1 q^4 = 4a_1 q^2$",
-      "Podziel obie strony równania przez $a_1$ (wiemy, że $a_1 \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie) i przez $q^2$ (wiemy, że $q \\ne 0$, bo wszystkie wyrazy $s$ą dodatnie).\n$9q^2 = 4$",
-      "Rozwiąż równanie kwadratowe dla $q$ i wybierz dodatnie rozwiązanie, ponieważ wszystkie wyrazy ciągu są dodatnie.\n$q^2 = \\frac{4}{9}$\n$q = \\sqrt{\\frac{4}{9}}$\n$q = \\frac{2}{3}$"
+      "1. $9a_5=4a_3$, więc $9q^2=4$.\n2. $q>0$, więc $q=\\frac23$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11327,19 +11313,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba $\\cos 12^{\\circ}$ ⋅ $\\sin 78^{\\circ}$ + $\\sin 12^{\\circ}$ ⋅ $\\cos 78^{\\circ}$ jest równa",
+    "prompt": "Liczba $\\cos12^\\circ\\cdot\\sin78^\\circ+\\sin12^\\circ\\cdot\\cos78^\\circ$ jest równa",
     "choices": [
-      "$\\frac{1}{2}$",
-      "$\\frac{\\sqrt{2}}{2}$",
-      "$\\frac{\\sqrt{3}}{2}$",
-      "1"
+      "$\\frac12$",
+      "$\\frac{\\sqrt2}{2}$",
+      "$\\frac{\\sqrt3}{2}$",
+      "$1$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 1",
+    "explanation": "D.",
     "solutionSteps": [
-      "Zastosuj wzór na sinus sumy kątów: $\\sin(\\alpha + \\beta) = \\sin \\alpha \\cos \\beta + \\cos \\alpha \\sin \\beta$. W zadaniu mamy $\\alpha = 12^\\circ$ i $\\beta = 78^\\circ$.",
-      "Podstaw wartości do wzoru: $\\cos 12^\\circ \\cdot \\sin 78^\\circ + \\sin 12^\\circ \\cdot \\cos 78^\\circ = \\sin(12^\\circ + 78^\\circ)$.",
-      "Oblicz sumę kątów i wartość sinusa: $\\sin(12^\\circ + 78^\\circ) = \\sin(90^\\circ) = 1$."
+      "1. $\\sin(12^\\circ+78^\\circ)=\\sin90^\\circ=1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11420,19 +11404,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wysokość trójkąta równobocznego jest równa $6\\sqrt{3}$ . Pole tego trójkąta jest równe",
+    "prompt": "Wysokość trójkąta równobocznego jest równa $6\\sqrt3$. Pole tego trójkąta jest równe",
     "choices": [
-      "$3\\sqrt{3}$",
-      "$4\\sqrt{3}$",
-      "$27\\sqrt{3}$",
-      "$36\\sqrt{3}$"
+      "$3\\sqrt3$",
+      "$4\\sqrt3$",
+      "$27\\sqrt3$",
+      "$36\\sqrt3$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $36\\sqrt{3}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na wysokość trójkąta równobocznego: $h = \\frac{a\\sqrt{3}}{2}$, gdzie $a$ to długość boku. Podstawiając daną wysokość, mamy $6\\sqrt{3} = \\frac{a\\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i przemnożeniu przez 2 otrzymujemy $a=12$.",
-      "Oblicz pole trójkąta równobocznego ze wzoru $P = \\frac{a^2\\sqrt{3}}{4}$. Podstaw długość boku $a=12$: $P = \\frac{12^2\\sqrt{3}}{4} = \\frac{144\\sqrt{3}}{4}$.",
-      "Uprość wynik, dzieląc 144 przez 4: $P = 36\\sqrt{3}$."
+      "1. $6\\sqrt3=\\frac{a\\sqrt3}{2}$, więc $a=12$.\n2. $P=\\frac{144\\sqrt3}{4}=36\\sqrt3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11451,19 +11433,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Boki równoległoboku mają długości 6 i 10, a kąt rozwarty między tymi bokami ma miarę $120^{\\circ}$. Pole tego równoległoboku jest równe",
+    "prompt": "Boki równoległoboku mają długości $6$ i $10$, a kąt rozwarty między tymi bokami ma miarę $120^\\circ$. Pole tego równoległoboku jest równe",
     "choices": [
-      "$30\\sqrt{3}$",
-      "30",
-      "$60\\sqrt{3}$",
-      "60"
+      "$30\\sqrt3$",
+      "$30$",
+      "$60\\sqrt3$",
+      "$60$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $30\\sqrt{3}$.",
+    "explanation": "A.",
     "solutionSteps": [
-      "Wzór na pole równoległoboku to $P = a \\cdot b \\cdot \\sin \\alpha$, gdzie $a$ i $b$ to długości boków, a $\\alpha$ to kąt między nimi. Wykorzystujemy kąt ostry, który wynosi $180^\\circ - 120^\\circ = 60^\\circ$.",
-      "Podstawiamy dane do wzoru: $a=6$, $b=10$, $\\alpha=60^\\circ$. Wartość $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
-      "Obliczamy pole: $P = 6 \\cdot 10 \\cdot \\frac{\\sqrt{3}}{2} = 60 \\cdot \\frac{\\sqrt{3}}{2} = 30\\sqrt{3}$."
+      "1. Kąt ostry $=60^\\circ$.\n2. $P=6\\cdot10\\cdot\\sin60^\\circ=30\\sqrt3$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11482,20 +11462,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = $(-2,6)$ oraz $B = (3,b)$ leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy b jest równe",
+    "prompt": "Punkty $A=(-2,6)$ oraz $B=(3,b)$ leżą na prostej, która przechodzi przez początek układu współrzędnych. Wtedy $b$ jest równe",
     "choices": [
-      "9",
-      "$(-9)$",
-      "$(-4)$",
-      "4"
+      "$9$",
+      "$-9$",
+      "$-4$",
+      "$4$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $-9$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Prosta przechodząca przez początek układu współrzędnych $(0,0)$ i punkt $A(-2,6)$ ma równanie postaci $y=ax$. Podstawiamy współrzędne punktu A, aby wyznaczyć $a$.",
-      "Po podstawieniu współrzędnych punktu $A(-2,6)$ do $y=ax$ otrzymujemy $6 = a \\cdot (-2)$, co po podzieleniu przez $-2$ daje $a = -3$. Równanie prostej to $y = -3x$.",
-      "Punkt $B(3,b)$ leży na tej samej prostej, więc jego współrzędne muszą spełniać równanie prostej. Podstawiamy współrzędne punktu B do $y = -3x$: $b = -3 \\cdot 3$.",
-      "Obliczamy wartość $b$: $b = -9$."
+      "1. Prosta przez $(0,0)$ i $(-2,6)$: $y=-3x$.\n2. Dla $x=3$: $b=-9$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11514,19 +11491,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są cztery proste k,l,m,n o równaniach: k : y = -$x + 1$ l : y = \\frac{2}{3}$x + 1$ m : y = -\\frac{3}{2}$x + 4$ n : y = -\\frac{2}{3}$x - 1$ Wśród tych prostych prostopadłe są",
+    "prompt": "Dane są cztery proste $k$, $l$, $m$, $n$ o równaniach: $k:y=-x+1$, $l:y=\\frac23x+1$, $m:y=-\\frac32x+4$, $n:y=-\\frac23x-1$. Wśród tych prostych prostopadłe są",
     "choices": [
-      "proste k oraz l.",
-      "proste k oraz n.",
-      "proste l oraz m.",
-      "proste m oraz n."
+      "proste $k$ oraz $l$.",
+      "proste $k$ oraz $n$.",
+      "proste $l$ oraz $m$.",
+      "proste $m$ oraz $n$."
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli proste l oraz m.",
+    "explanation": "C.",
     "solutionSteps": [
-      "Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych ($a_1 \\cdot a_2$) wynosi $-1$. Zidentyfikuj współczynniki kierunkowe ($a$) wszystkich danych prostych: $k: a_k = -1$, $l: a_l = \\frac{2}{3}$, $m: a_m = -\\frac{3}{2}$, $n: a_n = -\\frac{2}{3}$.",
-      "Sprawdź warunek prostopadłości dla poszczególnych par prostych. Oblicz iloczyn współczynników kierunkowych dla par: $k$ i $l$ ($-1 \\cdot \\frac{2}{3} = -\\frac{2}{3}$), $k$ i $m$ ($-1 \\cdot -\\frac{3}{2} = \\frac{3}{2}$), $k$ i $n$ ($-1 \\cdot -\\frac{2}{3} = \\frac{2}{3}$), $l$ i $m$ ($\\frac{2}{3} \\cdot -\\frac{3}{2} = -1$), $l$ i $n$ ($\\frac{2}{3} \\cdot -\\frac{2}{3} = -\\frac{4}{9}$), $m$ i $n$ ($-\\frac{3}{2} \\cdot -\\frac{2}{3} = 1$).",
-      "Para prostych $l$ i $m$ spełnia warunek prostopadłości, ponieważ iloczyn ich współczynników kierunkowych wynosi $-1$."
+      "1. $a_l=\\frac23$, $a_m=-\\frac32$.\n2. $a_l\\cdot a_m=-1$, więc $l\\perp m$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11545,19 +11520,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty K = $(4, - 10)$ i $L = (b,2)$ są końcami odcinka KL. Pierwsza współrzędna środka odcinka KL jest równa $(-12)$. Wynika stąd, że",
+    "prompt": "Punkty $K=(4,-10)$ i $L=(b,2)$ są końcami odcinka $KL$. Pierwsza współrzędna środka odcinka $KL$ jest równa $-12$. Wynika stąd, że",
     "choices": [
-      "$b = -28$",
-      "$b = -14$",
-      "$b = -24$",
-      "$b = -10$"
+      "$b=-28$",
+      "$b=-14$",
+      "$b=-24$",
+      "$b=-10$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $b = -28$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Wzór na pierwszą współrzędną środka odcinka o końcach $(x_1, y_1)$ i $(x_2, y_2)$ to $\\frac{x_1 + x_2}{2}$. Mamy $K = (4, -10)$ oraz $L = (b, 2)$, więc pierwsza współrzędna środka to $\\frac{4 + b}{2}$.",
-      "Wiemy, że pierwsza współrzędna środka odcinka KL jest równa -12. Układamy równanie: $\\frac{4 + b}{2} = -12$.",
-      "Rozwiązujemy równanie, aby znaleźć wartość $b$. Mnożymy obie strony przez 2: $4 + b = -24$. Następnie odejmujemy 4 od obu stron: $b = -24 - 4$, co daje $b = -28$."
+      "1. $\\frac{4+b}{2}=-12$.\n2. $4+b=-24$, więc $b=-28$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11576,19 +11549,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = $(-4,4)$ i $B = (4,0)$ są sąsiednimi wierzchołkami kwadratu ABCD. Przekątna tego kwadratu ma długość",
+    "prompt": "Punkty $A=(-4,4)$ i $B=(4,0)$ są sąsiednimi wierzchołkami kwadratu $ABCD$. Przekątna tego kwadratu ma długość",
     "choices": [
       "$4\\sqrt{10}$",
-      "$4\\sqrt{2}$",
-      "$4\\sqrt{5}$",
-      "$4\\sqrt{7}$"
+      "$4\\sqrt2$",
+      "$4\\sqrt5$",
+      "$4\\sqrt7$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $4\\sqrt{10}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Oblicz długość boku kwadratu $a$, korzystając ze wzoru na odległość między dwoma punktami $A = (x_1, y_1)$ i $B = (x_2, y_2)$: $a = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Wstawiając współrzędne punktów A i B: $a = \\sqrt{(4 - (-4))^2 + (0 - 4)^2} = \\sqrt{8^2 + (-4)^2} = \\sqrt{64 + 16} = \\sqrt{80}$.",
-      "Przekątną kwadratu $d$ obliczamy ze wzoru $d = a\\sqrt{2}$. Podstawiamy obliczoną długość boku: $d = \\sqrt{80} \\cdot \\sqrt{2} = \\sqrt{160}$.",
-      "Uprość pierwiastek $\\sqrt{160}$. Ponieważ $160 = 16 \\cdot 10$, otrzymujemy $d = \\sqrt{16 \\cdot 10} = \\sqrt{16} \\cdot \\sqrt{10} = 4\\sqrt{10}$."
+      "1. $|AB|=\\sqrt{8^2+(-4)^2}=\\sqrt{80}=4\\sqrt5$.\n2. Przekątna $=|AB|\\sqrt2=4\\sqrt{10}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11607,19 +11578,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Podstawą graniastosłupa prostego jest romb o przekątnych długości 7 cm i 10 cm. Wysokość tego graniastosłupa jest krótsza od dłuższej przekątnej rombu o 2 cm. Wtedy objętość graniastosłupa jest równa",
+    "prompt": "Podstawą graniastosłupa prostego jest romb o przekątnych długości $7$ cm i $10$ cm. Wysokość tego graniastosłupa jest krótsza od dłuższej przekątnej rombu o $2$ cm. Wtedy objętość graniastosłupa jest równa",
     "choices": [
-      "560 cm 3",
-      "280 cm 3",
-      "$\\frac{280}{3}$ cm 3",
-      "$\\frac{560}{3}$ cm 3"
+      "$560$ cm$^3$",
+      "$280$ cm$^3$",
+      "$\\frac{280}{3}$ cm$^3$",
+      "$\\frac{560}{3}$ cm$^3$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 280 cm$^3$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Oblicz pole podstawy graniastosłupa (rombu). Pole rombu $P$ to połowa iloczynu długości jego przekątnych ($d_1, d_2$).\n$$P = \\frac{1}{2} d_1 \\cdot d_2 = \\frac{1}{2} \\cdot 7 \\text{ cm} \\cdot 10 \\text{ cm} = 35 \\text{ cm}^2$$",
-      "Oblicz wysokość graniastosłupa. Dłuższa przekątna rombu ma 10 cm, a wysokość graniastosłupa jest od niej krótsza o 2 cm.\n$h = 10 \\text{ cm} - 2 \\text{ cm} = 8 \\text{ cm}$",
-      "Oblicz objętość graniastosłupa. Objętość $V$ to pole podstawy $P$ pomnożone przez wysokość $h$.\n$$V = P \\cdot h = 35 \\text{ cm}^2 \\cdot 8 \\text{ cm} = 280 \\text{ cm}^3$$"
+      "1. $P_p=\\frac12\\cdot7\\cdot10=35$.\n2. $h=10-2=8$.\n3. $V=35\\cdot8=280$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11667,19 +11636,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkich różnych liczb naturalnych czterocyfrowych nieparzystych podzielnych przez 5 jest",
+    "prompt": "Wszystkich różnych liczb naturalnych czterocyfrowych nieparzystych podzielnych przez $5$ jest",
     "choices": [
-      "9 ⋅ 8 ⋅ 7 ⋅ 2",
-      "9 ⋅ 10 ⋅ 10 ⋅ 1",
-      "9 ⋅ 10 ⋅ 10 ⋅ 2",
-      "9 ⋅ 9 ⋅ 8 ⋅ 1"
+      "$9\\cdot8\\cdot7\\cdot2$",
+      "$9\\cdot10\\cdot10\\cdot1$",
+      "$9\\cdot10\\cdot10\\cdot2$",
+      "$9\\cdot9\\cdot8\\cdot1$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $9 \\cdot 10 \\cdot 10 \\cdot 1$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Ustal warunki dla cyfr liczby czterocyfrowej nieparzystej podzielnej przez 5: pierwsza cyfra nie może być zerem $(9 możliwości: 1 - 9)$, ostatnia cyfra musi być 0 lub 5 $(2 możliwości)$, liczba musi być nieparzysta $(ostania cyfra 5)$, a jednocześnie podzielna przez 5 $(ostatnia cyfra 0 lub 5)$. Jedyny przypadek spełniający oba warunki to ostatnia cyfra 5.",
-      "Określ liczbę możliwości dla każdej pozycji cyfr: pierwsza cyfra (tysiące) ma 9 możliwości $(1 - 9)$, druga cyfra (setki) ma 10 możliwości $(0 - 9)$, trzecia cyfra (dziesiątki) ma 10 możliwości $(0 - 9)$, a czwarta cyfra (jedności) musi być 5, co daje 1 możliwość.",
-      "Oblicz całkowitą liczbę takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $9 \\cdot 10 \\cdot 10 \\cdot 1$."
+      "1. Ostatnia cyfra musi być $5$.\n2. Pierwsza: $9$, dwie środkowe: $10\\cdot10$.\n3. $9\\cdot10\\cdot10\\cdot1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11698,19 +11665,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna zestawu sześciu liczb: 2x,4,6,8,11,13, jest równa 5. Wynika stąd, że",
+    "prompt": "Średnia arytmetyczna zestawu sześciu liczb: $2x,4,6,8,11,13$, jest równa $5$. Wynika stąd, że",
     "choices": [
-      "$x = -1$",
-      "$x = 7$",
-      "$x = -6$",
-      "$x = 6$ Uwagi ogólne do zadań otwartych 1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki zadania. 2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną liczbę punktów. 3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może otrzymać co najwyżej $x - 1$) punktów (gdzie x jest maksymalną możliwą do uzyskania liczbą punktów za dane zadanie)."
+      "$x=-1$",
+      "$x=7$",
+      "$x=-6$",
+      "$x=6$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $x = -6$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Zapisz sumę liczb i podziel ją przez ich ilość $(6)$, przyrównując do średniej $(5)$. Suma liczb to $2x+4+6+8+11+13 = 2x+42$.",
-      "Ułóż równanie: $\\frac{2x+42}{6} = 5$.",
-      "Rozwiąż równanie: $2x+42 = 30$, czyli $2x = -12$, a stąd $x = -6$."
+      "1. $\\frac{2x+42}{6}=5$.\n2. $2x+42=30$, więc $x=-6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11729,16 +11694,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: $3x^{2} - 2x - 9 \\ge 7$",
+    "prompt": "Rozwiąż nierówność: $3x^2-2x-9\\ge7$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x \\in (-\\infty, -2] \\cup [\\frac{8}{3}, \\infty)$",
+    "explanation": "$x\\in(-\\infty,-2\\rangle\\cup\\left\\langle\\frac83,+\\infty\\right)$.",
     "solutionSteps": [
-      "Przekształć nierówność do postaci ogólnej $ax^2 + bx + c \\ge 0$. Odejmij 7 od obu stron, aby otrzymać $3x^2 - 2x - 16 \\ge 0$.",
-      "Oblicz deltę $(\\Delta)$ oraz pierwiastki ($x_1, x_2$) równania kwadratowego $3x^2 - 2x - 16 = 0$. $\\Delta = (-2)^2 - 4 \\cdot 3 \\cdot (-16) = 4 + 192 = 196$, $\\sqrt{\\Delta} = 14$. $x_1 = \\frac{2 - 14}{6} = -\\frac{12}{6} = -2$, $x_2 = \\frac{2 + 14}{6} = \\frac{16}{6} = \\frac{8}{3}$.",
-      "Określ przedziały spełniające nierówność, pamiętając, że parabola $y = 3x^2 - 2x - 16$ ma ramiona skierowane w górę (współczynnik $a=3 > 0$). Nierówność $3x^2 - 2x - 16 \\ge 0$ jest spełniona dla $x \\le -2$ lub $x \\ge \\frac{8}{3}$."
+      "1. $3x^2-2x-16\\ge0$.\n2. Pierwiastki: $x=-2$, $x=\\frac83$.\n3. $x\\in(-\\infty,-2\\rangle\\cup\\left\\langle\\frac83,+\\infty\\right)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11757,16 +11720,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W ciągu arytmetycznym ($a_{n}$), określonym dla każdej liczby naturalnej $n \\ge 1$, $a_{1} = -1$ i $a_{4} = 8$. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
+    "prompt": "W ciągu arytmetycznym $(a_n)$, określonym dla każdej liczby naturalnej $n\\ge1$, $a_1=-1$ i $a_4=8$. Oblicz sumę stu początkowych kolejnych wyrazów tego ciągu.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$14750$",
+    "explanation": "$14\\,750$.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu arytmetycznego ($a_n = a_1 + (n-1)r$), aby obliczyć różnicę $r$. Podstaw dane: $a_4 = a_1 + (4-1)r$, czyli $8 = -1 + 3r$, co daje $3r = 9$, a stąd $r=3$.",
-      "Oblicz sumę stu początkowych wyrazów ciągu ($S_n = \\frac{2a_1 + (n-1)r}{2} \\cdot n$). Podstaw dane: $S_{100} = \\frac{2(-1) + (100-1)3}{2} \\cdot 100 = \\frac{-2 + 99 \\cdot 3}{2} \\cdot 100$.",
-      "Dokończ obliczenia sumy: $S_{100} = \\frac{-2 + 297}{2} \\cdot 100 = \\frac{295}{2} \\cdot 100 = 295 \\cdot 50 = 14750$."
+      "1. $8=-1+3r$, więc $r=3$.\n2. $a_{100}=-1+99\\cdot3=296$.\n3. $S_{100}=\\frac{-1+296}{2}\\cdot100=14\\,750$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11813,17 +11774,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry i tg $α = 2$. Oblicz wartość wyrażenia sin 2 α.",
+    "prompt": "Kąt $\\alpha$ jest ostry i $\\operatorname{tg}\\alpha=2$. Oblicz wartość wyrażenia $\\sin2\\alpha$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{4}{5}$",
+    "explanation": "$\\frac45$.",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na sinus podwojonego kąta: $\\sin 2\\alpha = 2 \\sin \\alpha \\cos \\alpha$. Potrzebujemy znaleźć wartości $\\sin \\alpha$ i $\\cos \\alpha$.",
-      "Użyj tożsamości trygonometrycznej $1 + \\tan^2 \\alpha = \\frac{1}{\\cos^2 \\alpha}$. Podstawiając $\\operatorname{tg} \\alpha = 2$, otrzymujemy $1 + 2^2 = \\frac{1}{\\cos^2 \\alpha}$, czyli $\\cos^2 \\alpha = \\frac{1}{5}$. Ponieważ kąt $\\alpha$ jest ostry, $\\cos \\alpha = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$.",
-      "Oblicz $\\sin \\alpha$. Wiemy, że $\\operatorname{tg} \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha}$. Zatem $\\sin \\alpha = \\operatorname{tg} \\alpha \\cdot \\cos \\alpha = 2 \\cdot \\frac{\\sqrt{5}}{5} = \\frac{2\\sqrt{5}}{5}$.",
-      "Podstaw obliczone wartości do wzoru na $\\sin 2\\alpha$: $\\sin 2\\alpha = 2 \\cdot \\frac{2\\sqrt{5}}{5} \\cdot \\frac{\\sqrt{5}}{5} = 2 \\cdot \\frac{2 \\cdot 5}{25} = \\frac{20}{25} = \\frac{4}{5}$."
+      "1. $\\sin2\\alpha=\\frac{2\\operatorname{tg}\\alpha}{1+\\operatorname{tg}^2\\alpha}$.\n2. $\\sin2\\alpha=\\frac{4}{1+4}=\\frac45$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11871,16 +11829,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ze zbioru dziewięcioelementowego M = {1,2,3,4,5,6,7,8,9} losujemy kolejno ze zwracaniem dwa razy po jednej liczbie. Zdarzenie A polega na wylosowaniu dwóch liczb ze zbioru M, których iloczyn jest równy 24. Oblicz prawdopodobieństwo zdarzenia A.",
+    "prompt": "Ze zbioru dziewięcioelementowego $M=\\{1,2,3,4,5,6,7,8,9\\}$ losujemy kolejno ze zwracaniem dwa razy po jednej liczbie. Zdarzenie $A$ polega na wylosowaniu dwóch liczb ze zbioru $M$, których iloczyn jest równy $24$. Oblicz prawdopodobieństwo zdarzenia $A$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{4}{81}$",
+    "explanation": "1. Wszystkich par: $81$.\n2. Iloczyn $24$: $(3,8),(4,6),(6,4),(8,3)$ — $4$ pary.\n3. $P(A)=\\frac4{81}$.",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy dwa razy ze zwracaniem z dziewięcioelementowego zbioru, więc wszystkich par $(a, b)$ jest $9 \\cdot 9 = 81$.",
-      "Wypisujemy wszystkie pary liczb $(a, b)$ ze zbioru M, których iloczyn wynosi 24. Pary te to: $(3, 8)$, $(8, 3)$, $(4, 6)$, $(6, 4)$. Mamy więc 4 zdarzenia sprzyjające zdarzeniu A.",
-      "Obliczamy prawdopodobieństwo zdarzenia A, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich zdarzeń elementarnych: $P(A) = \\frac{4}{81}$."
+      "1. Wszystkich par: $81$.\n2. Iloczyn $24$: $(3,8),(4,6),(6,4),(8,3)$ — $4$ pary.\n3. $P(A)=\\frac4{81}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11899,16 +11855,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykres funkcji kwadratowej f określonej wzorem $f(x) = ax 2 + bx + c$ ma z prostą o równaniu $y = 6$ dokładnie jeden punkt wspólny. Punkty A = $(-5,0)$ i $B = (3,0)$ należą do wykresu funkcji $f$. Oblicz wartości współczynników a, b oraz c.",
+    "prompt": "Wykres funkcji kwadratowej $f$ określonej wzorem $f(x)=ax^2+bx+c$ ma z prostą o równaniu $y=6$ dokładnie jeden punkt wspólny. Punkty $A=(-5,0)$ i $B=(3,0)$ należą do wykresu funkcji $f$. Oblicz wartości współczynników $a$, $b$ oraz $c$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$a = -\\frac{3}{8}$, $b = -\\frac{3}{4}$, $c = \\frac{45}{8}$",
+    "explanation": "$a=-\\frac38$, $b=-\\frac34$, $c=\\frac{45}{8}$.",
     "solutionSteps": [
-      "Z warunku dotyczącego jednego punktu wspólnego z prostą $y=6$ wiemy, że wierzchołek paraboli ma współrzędną $y_w = 6$. Z podanych miejsc zerowych $x_1 = -5$ i $x_2 = 3$ obliczamy współrzędną $x$ wierzchołka: $x_w = \\frac{x_1 + x_2}{2} = \\frac{-5+3}{2} = -1$.",
-      "Znamy współrzędne wierzchołka $(-1, 6)$ oraz jedno miejsce zerowe (np. $x = 3$, $y = 0$). Używamy postaci kanonicznej funkcji kwadratowej $f(x) = a(x-x_w)^2 + y_w$, podstawiamy dane i obliczamy $a$: $0 = a(3 - (-1))^2 + 6 \\implies 0 = a(4)^2 + 6 \\implies 16a = -6 \\implies a = -\\frac{6}{16} = -\\frac{3}{8}$.",
-      "Używamy postaci ogólnej $f(x) = ax^2 + bx + c$ i podstawiamy obliczone $a = -\\frac{3}{8}$ oraz jedno z miejsc zerowych, np. $x = 3$, $f(3) = 0$: $0 = -\\frac{3}{8}(3)^2 + b(3) + c \\implies 0 = -\\frac{27}{8} + 3b + c$. Dodatkowo wiemy, że dla $x = -1$, $f(-1) = 6$: $6 = -\\frac{3}{8}(-1)^2 + b(-1) + c \\implies 6 = -\\frac{3}{8} - b + c$. Rozwiązujemy układ równań: $3b+c = \\frac{27}{8}$ i $-b+c = 6 + \\frac{3}{8} = \\frac{51}{8}$. Odejmując drugie równanie od pierwszego, otrzymujemy $4b = \\frac{27}{8} - \\frac{51}{8} = -\\frac{24}{8} = -3$, więc $b = -\\frac{3}{4}$. Podstawiając $b$ do drugiego równania: $c = 6 + b + \\frac{3}{8} = 6 - \\frac{3}{4} + \\frac{3}{8} = \\frac{48-6+3}{8} = \\frac{45}{8}$."
+      "1. Miejsca zerowe $-5,3$ dają $f(x)=a(x+5)(x-3)$.\n2. Wierzchołek $x=-1$, $f(-1)=-16a=6$, więc $a=-\\frac38$.\n3. $f(x)=-\\frac38x^2-\\frac34x+\\frac{45}{8}$."
     ],
     "examSource": {
       "kind": "matura",
