@@ -11857,18 +11857,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na osi liczbowej zaznaczono sumę przedziałów. ![Rysunek do zadania](/cke-matura/m23-maj/z01-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności",
+    "prompt": "Na osi liczbowej zaznaczono sumę przedziałów.\n\n![Rysunek 1](/cke-matura/m23-maj/z01-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności",
     "choices": [
-      "|$x - 3,5$| ≥ 1,5",
-      "|$x - 1,5$| ≥ 3,5",
-      "|$x - 3,5$| ≤ 1,5",
-      "|$x - 1,5$| ≤ 3,5"
+      "$|x-3{,}5|\\ge1{,}5$",
+      "$|x-1{,}5|\\ge3{,}5$",
+      "$|x-3{,}5|\\le1{,}5$",
+      "$|x-1{,}5|\\le3{,}5$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $|x - 3,5| \\ge 1,5$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zapisz zaznaczony przedział w postaci nierówności z wartością bezwzględną. Środek przedziału to $3,5$, a promień to $3,5 - 2 = 1,5$. Nierówność to $|x - 3,5| \\ge 1,5$.",
-      "Sprawdź, która z podanych odpowiedzi odpowiada nierówności $|x - 3,5| \\ge 1,5$. Jest to opcja A."
+      "1. Zaznaczony zbiór to $(-\\infty,2\\rangle\\cup\\langle5,+\\infty)$.\n2. Środek $3{,}5$, promień $1{,}5$, więc $|x-3{,}5|\\ge1{,}5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12064,19 +12063,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-maj/z08-1.png) w zbiorze liczb rzeczywistych",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRównanie $2x^2=2$ w zbiorze liczb rzeczywistych",
     "choices": [
       "nie ma rozwiązania.",
-      "ma dokładnie jedno rozwiązanie: -1.",
-      "ma dokładnie jedno rozwiązanie: 1.",
-      "ma dokładnie dwa rozwiązania: -1 oraz 1."
+      "ma dokładnie jedno rozwiązanie: $-1$.",
+      "ma dokładnie jedno rozwiązanie: $1$.",
+      "ma dokładnie dwa rozwiązania: $-1$ oraz $1$."
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli ma dokładnie dwa rozwiązania: -1 oraz 1.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Zapisz równanie w postaci z jedną stroną równą 0: $2x^2 = 2 \\iff 2x^2 - 2 = 0$.",
-      "Uprość równanie, dzieląc obie strony przez 2: $x^2 - 1 = 0$.",
-      "Rozwiąż równanie, rozkładając je na czynniki lub przenosząc 1 na drugą stronę i pierwiastkując: $(x-1)(x+1) = 0$, co daje $x=1$ lub $x=-1$."
+      "1. $2x^2=2$, więc $x^2=1$.\n2. $x=-1$ lub $x=1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12354,19 +12351,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) zaznaczono kąt α o wierzchołku w punkcie $O = (0 , 0)$. Jedno z ramion tego kąta pokrywa się z dodatnią półosią Ox, a drugie przechodzi przez punkt P = $(-3 , 1)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Tangens kąta α jest równy",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ zaznaczono kąt $\\alpha$ o wierzchołku w punkcie $O=(0,0)$. Jedno z ramion tego kąta pokrywa się z dodatnią półosią $Ox$, a drugie przechodzi przez punkt $P=(-3,1)$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-maj/z18-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nTangens kąta $\\alpha$ jest równy",
     "choices": [
-      "1 / $\\sqrt{10}$",
-      "$(-3 / $\\sqrt{10}$)$",
-      "$(-\\frac{3}{1})$",
-      "$(-\\frac{1}{3})$"
+      "$\\frac{1}{\\sqrt{10}}$",
+      "$-\\frac{3}{\\sqrt{10}}$",
+      "$-\\frac31$",
+      "$-\\frac13$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $-\\frac{1}{3}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Wierzchołek kąta jest w początku układu współrzędnych, a jedno z ramion pokrywa się z dodatnią półosią $Ox$. Drugie ramię przechodzi przez punkt $P=(-3, 1)$. Oznacza to, że punkt $P$ leży na drugim ramieniu kąta $\\alpha$.",
-      "Tangens kąta $\\alpha$ w tym układzie współrzędnych możemy obliczyć ze wzoru $\\operatorname{tg} \\alpha = \\frac{y}{x}$, gdzie $(x, y)$ to współrzędne punktu leżącego na ramieniu kąta (różnego od początku układu). Podstawiamy współrzędne punktu $P$: $\\operatorname{tg} \\alpha = \\frac{1}{-3}$.",
-      "Wartość $\\frac{1}{-3}$ można zapisać jako $-\\frac{1}{3}$."
+      "1. $\\operatorname{tg}\\alpha=\\frac{y}{x}=\\frac{1}{-3}=-\\frac13$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12443,19 +12438,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C leżą na okręgu o środku w punkcie O. Kąt ACO ma miarę $70^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego ABC jest równa",
+    "prompt": "Punkty $A$, $B$, $C$ leżą na okręgu o środku w punkcie $O$. Kąt $ACO$ ma miarę $70^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-maj/z21-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta ostrego $ABC$ jest równa",
     "choices": [
-      "$10^{\\circ}$",
-      "$20^{\\circ}$",
-      "$35^{\\circ}$",
-      "$40^{\\circ}$"
+      "$10^\\circ$",
+      "$20^\\circ$",
+      "$35^\\circ$",
+      "$40^\\circ$"
     ],
     "correctIndex": 1,
-    "explanation": "B) $20^{\\circ}$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Zauważ, że trójkąt ACO jest równoramienny, ponieważ boki AO i CO są promieniami okręgu, stąd miara kąta CAO jest również równa $70^{\\circ}$.",
-      "Oblicz miarę kąta AOC, który jest kątem środkowym. Suma kątów w trójkącie AOC wynosi $180^{\\circ}$, zatem $\\angle AOC = 180^\\circ - (70^\\circ + 70^\\circ) = 180^\\circ - 140^\\circ = 40^\\circ$.",
-      "Zauważ, że kąt ABC jest kątem wpisanym opartym na tym samym łuku co kąt środkowy AOC. Kąt wpisany ma miarę o połowę mniejszą od kąta środkowego opartego na tym samym łuku, zatem $\\angle ABC = \\frac{1}{2} \\angle AOC = \\frac{1}{2} \\cdot 40^\\circ = 20^\\circ$."
+      "1. $\\angle AOC=180^\\circ-2\\cdot70^\\circ=40^\\circ$.\n2. $\\angle ABC=\\frac12\\angle AOC=20^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12584,16 +12577,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^{\\circ}$ i ma długość $r$ówną 6 (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z26-1.png) Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.",
+    "prompt": "Dany jest ostrosłup prawidłowy czworokątny. Wysokość ściany bocznej tego ostrosłupa jest nachylona do płaszczyzny podstawy pod kątem $30^\\circ$ i ma długość $r$ówną $6$ (zobacz rysunek). Oblicz objętość i pole powierzchni całkowitej tego ostrosłupa.\n\n![Rysunek 1](/cke-matura/m23-maj/z26-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Objętość $V=108$, pole powierzchni całkowitej $P_c = 108 + 72\\sqrt{3}$.",
+    "explanation": "$V=108$, $P_c=108+72\\sqrt3$.",
     "solutionSteps": [
-      "Oblicz wysokość ostrosłupa ($h$) oraz połowę długości krawędzi podstawy ($a$). Wysokość ściany bocznej ($h_s=6$) to przeciwprostokątna w trójkącie prostokątnym, gdzie przyprostokątnymi są wysokość ostrosłupa ($h$) i połowa krawędzi podstawy ($a/2$). Kąt $30^{\\circ}$ leży naprzeciwko wysokości ostrosłupa. Z trygonometrii mamy: $h = h_s \\sin 30^\\circ = 6 \\cdot \\frac{1}{2} = 3$, oraz $\\frac{a}{2} = h_s \\cos 30^\\circ = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Stąd $a = 6\\sqrt{3}$.",
-      "Oblicz pole podstawy ($P_p$) oraz objętość ostrosłupa ($V$). Podstawa jest kwadratem o boku $a$, więc $P_p = a^2 = (6\\sqrt{3})^2 = 36 \\cdot 3 = 108$. Objętość to $V = \\frac{1}{3} P_p \\cdot h = \\frac{1}{3} \\cdot 108 \\cdot 3 = 108$.",
-      "Oblicz pole jednej ściany bocznej ($P_b$) oraz pole powierzchni całkowitej ($P_c$). Pole ściany bocznej to $P_b = \\frac{1}{2} a \\cdot h_s = \\frac{1}{2} \\cdot 6\\sqrt{3} \\cdot 6 = 18\\sqrt{3}$. Powierzchnia całkowita to suma pola podstawy $i$ czterech pól ścian bocznych: $P_c = P_p + 4 P_b = 108 + 4 \\cdot 18\\sqrt{3} = 108 + 72\\sqrt{3}$."
+      "1. $h=6\\sin30^\\circ=3$, $\\frac a2=6\\cos30^\\circ=3\\sqrt3$, więc $a=6\\sqrt3$.\n2. $P_p=a^2=108$.\n3. $V=\\frac13\\cdot108\\cdot3=108$.\n4. $P_b=4\\cdot\\frac12\\cdot6\\sqrt3\\cdot6=72\\sqrt3$.\n5. $P_c=108+72\\sqrt3$."
     ],
     "examSource": {
       "kind": "matura",
