@@ -38,31 +38,46 @@
       "numer": 6,
       "dzial": "Funkcje",
       "tresc": "Suma wszystkich rozwiązań równania x(x − 3)(x + 2) = 0 jest równa A) 0 B) 1 C) 2 D) 3 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)",
-      "rozwiazanie": "**Krok 1.** Rozwiąż równanie, przyrównując każdy czynnik do zera. Równanie $x(x - 3)(x + 2) = 0$ jest spełnione, gdy $x = 0$, $x - 3 = 0$ lub $x + 2 = 0$.\n**Krok 2.** Znajdź rozwiązania równania. Rozwiązaniami są $x_1 = 0$, $x_2 = 3$ i $x_3 = -2$.\n**Krok 3.** Zsumuj wszystkie znalezione rozwiązania. Suma wynosi $0 + 3 + (-2) = 1$.\n\n**Odpowiedź:** B, czyli $1$"
+      "rozwiazanie": "1. Pierwiastki: $x=0$, $x=3$, $x=-2$.\n2. Suma: $0+3+(-2)=1$.\n\nOdpowiedź: B.",
+      "tekst": "Suma wszystkich rozwiązań równania $x(x-3)(x+2)=0$ jest równa\n\nA) $0$\nB) $1$\nC) $2$\nD) $3$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 7,
       "dzial": "Funkcje",
       "tresc": "Współczynnik a we wzorze funkcji &fnof; jest równy A) 1 B) 2 C) − 2 D) − 1 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)",
-      "rozwiazanie": "**Krok 1.** Skorzystaj z informacji o wierzchołku paraboli $W=(2,1)$ i podstaw jego współrzędne do wzoru funkcji, pamiętając, że $f(2)=1$. Otrzymasz: $a(2-1)(2-3)=1$.\n**Krok 2.** Uprość równanie otrzymane w Kroku 1: $a(1)(-1)=1$, co daje $-a=1$.\n**Krok 3.** Rozwiąż równanie $-a=1$, aby wyznaczyć wartość współczynnika $a$. Stąd $a = -1$.\n\n**Odpowiedź:** D, czyli $-1$"
+      "rozwiazanie": "1. $W=(2,1)$ należy do wykresu: $1=a(2-1)(2-3)=-a$.\n2. $a=-1$.\n\nOdpowiedź: D.",
+      "tekst": "Informacja do zadań 7.–9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nWspółczynnik $a$ we wzorze funkcji $f$ jest równy\n\nA) $1$\nB) $2$\nC) $-2$\nD) $-1$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 8,
       "dzial": "Funkcje",
       "tresc": "Największa wartość funkcji &fnof; w przedziale &lang;1,4&rang; jest równa A) − 3 B) 0 C) 1 D) 2 Informacja do zadań 7.–9. Funkcja kwadratowa ƒ jest określona wzorem ƒ(x) = a(x − 1)(x − 3) . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt W = (2, 1) . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)",
-      "rozwiazanie": "**Krok 1.** Skorzystaj z informacji o wierzchołku paraboli, który wynosi $(2, 1)$, aby wyznaczyć współczynnik $a$. Podstaw współrzędne wierzchołka do wzoru funkcji: $1 = a(2-1)(2-3)$.\n**Krok 2.** Rozwiąż równanie z kroku 1, aby obliczyć wartość $a$: $1 = a(1)(-1) \\Rightarrow 1 = -a \\Rightarrow a = -1$. Teraz pełny wzór funkcji to $f(x) = -(x-1)(x-3)$.\n**Krok 3.** Oblicz wartość funkcji na końcach przedziału $\\langle 1, 4 \\rangle$ oraz sprawdź wartość w wierzchołku (jeśli należy do przedziału). Wartość $f(1) = -(1-1)(1-3) = 0$, $f(4) = -(4-1)(4-3) = -(3)(1) = -3$. Wierzchołek $(2,1)$ jest w przedziale, więc jego wartość wynosi $1$.\n**Krok 4.** Porównaj obliczone wartości funkcji: $0, -3, 1$. Największa z nich to $1$.\n\n**Odpowiedź:** C, czyli $1$"
+      "rozwiazanie": "1. $a=-1$, więc $f(x)=-(x-1)(x-3)$.\n2. $f(1)=0$, $f(2)=1$, $f(4)=-3$.\n3. Największa wartość w przedziale $\\langle1,4\\rangle$ to $1$.\n\nOdpowiedź: C.",
+      "tekst": "Informacja do zadań 7.–9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nNajwiększa wartość funkcji $f$ w przedziale $\\langle1,4\\rangle$ jest równa\n\nA) $-3$\nB) $0$\nC) $1$\nD) $2$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 9,
       "dzial": "Funkcje",
       "tresc": "Osią symetrii paraboli będącej wykresem funkcji &fnof; jest prosta o równaniu A) x = 1 B) x = 2 C) y = 1 D) y = 2",
-      "rozwiazanie": "**Krok 1.** Funkcja kwadratowa w postaci kanonicznej to $f(x) = a(x-p)^2 + q$. Oś symetrii paraboli to prosta pionowa $x=p$.\n**Krok 2.** Z postaci kanonicznej $f(x) = 2(x-2)^2+3$ odczytujemy, że $p=2$, a $q=3$.\n**Krok 3.** Oś symetrii ma równanie $x=p$, zatem $x=2$.\n\n**Odpowiedź:** B, czyli $x = 2$"
+      "rozwiazanie": "1. $f(x)=-(x-1)(x-3)$ ma wierzchołek w $x=2$.\n2. Oś symetrii paraboli to $x=2$.\n\nOdpowiedź: B.",
+      "tekst": "Informacja do zadań 7.–9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nOsią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu\n\nA) $x=1$\nB) $x=2$\nC) $y=1$\nD) $y=2$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 10,
       "dzial": "Równania",
       "tresc": "Równanie x(x − 2) = (x − 2) 2 w zbiorze liczb rzeczywistych A) nie ma rozwiązań B) ma dokładnie jedno rozwiązanie: x = 2 C) ma dokładnie jedno rozwiązanie: x = 0 D) ma dwa różne rozwiązania: x = 1 i x = 2",
-      "rozwiazanie": "**Krok 1.** Przekształć równanie do postaci, gdzie po jednej stronie jest 0. Wymnóż nawiasy i przenieś wszystkie wyrazy na lewą stronę.\n$$x^2 - 2x = x^2 - 4x + 4$$\n$$x^2 - 2x - x^2 + 4x - 4 = 0$$\n\n**Krok 2.** Uprość lewą stronę równania, redukując podobne wyrazy.\n$$2x - 4 = 0$$\n\n**Krok 3.** Rozwiąż otrzymane równanie liniowe, wyznaczając wartość $x$.\n$$2x = 4$$\n$$x = 2$$\n\n**Odpowiedź:** B, czyli ma dokładnie jedno rozwiązanie: $x=2$."
+      "rozwiazanie": "1. $x^2-2x=x^2-4x+4$.\n2. $-2x=-4x+4$, czyli $2x=4$ i $x=2$.\n3. Równanie ma jedno rozwiązanie.\n\nOdpowiedź: B.",
+      "tekst": "Równanie $x(x-2)=(x-2)^2$ w zbiorze liczb rzeczywistych\n\nA) nie ma rozwiązań\nB) ma dokładnie jedno rozwiązanie: $x=2$\nC) ma dokładnie jedno rozwiązanie: $x=0$\nD) ma dwa różne rozwiązania: $x=1$ i $x=2$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 11,
@@ -80,7 +95,10 @@
       "numer": 13,
       "dzial": "Równania",
       "tresc": "Proste o równaniach y = (m − 2)x oraz y = 3 &frasl; 4 x + 7 są równoległe. Wtedy A) m = − 5 &frasl; 4 B) m = 2 &frasl; 3 C) m = 11 &frasl; 4 D) m = 10 &frasl; 3",
-      "rozwiazanie": "**Krok 1.** Proste są równoległe, gdy mają równe współczynniki kierunkowe (liczby stojące przy $x$). W równaniu $y = (m-2)x$ współczynnik kierunkowy wynosi $m-2$, a w równaniu $y = \\frac{3}{4}x + 7$ wynosi $\\frac{3}{4}$.\n**Krok 2.** Przyrównujemy współczynniki kierunkowe: $m-2 = \\frac{3}{4}$. Dodajemy 2 do obu stron, aby wyznaczyć $m$: $m = \\frac{3}{4} + 2$.\n**Krok 3.** Obliczamy wartość $m$: $m = \\frac{3}{4} + \\frac{8}{4} = \\frac{11}{4}$.\n\n**Odpowiedź:** C, czyli $m = \\frac{11}{4}$"
+      "rozwiazanie": "**Krok 1.** Proste są równoległe, gdy mają równe współczynniki kierunkowe (liczby stojące przy $x$). W równaniu $y = (m-2)x$ współczynnik kierunkowy wynosi $m-2$, a w równaniu $y = \\frac{3}{4}x + 7$ wynosi $\\frac{3}{4}$.\n**Krok 2.** Przyrównujemy współczynniki kierunkowe: $m-2 = \\frac{3}{4}$. Dodajemy 2 do obu stron, aby wyznaczyć $m$: $m = \\frac{3}{4} + 2$.\n**Krok 3.** Obliczamy wartość $m$: $m = \\frac{3}{4} + \\frac{8}{4} = \\frac{11}{4}$.\n\n**Odpowiedź:** C, czyli $m = \\frac{11}{4}$",
+      "tekst": "Proste o równaniach $y=(m-2)x$ oraz $y=\\frac{3}{4}x+7$ są równoległe. Wtedy\n\nA) $m=-\\frac{5}{4}$\nB) $m=\\frac{2}{3}$\nC) $m=\\frac{11}{4}$\nD) $m=\\frac{10}{3}$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 14,

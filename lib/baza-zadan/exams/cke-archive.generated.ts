@@ -7110,19 +7110,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma wszystkich rozwiązań równania x$(x - 3)(x + 2)$ = 0 jest równa",
+    "prompt": "Suma wszystkich rozwiązań równania $x(x-3)(x+2)=0$ jest równa",
     "choices": [
-      "0",
-      "1",
-      "2",
-      "3 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z06-1.png)"
+      "$0$",
+      "$1$",
+      "$2$",
+      "$3$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $1$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Rozwiąż równanie, przyrównując każdy czynnik do zera. Równanie $x(x - 3)(x + 2) = 0$ jest spełnione, gdy $x = 0$, $x - 3 = 0$ lub $x + 2 = 0$.",
-      "Znajdź rozwiązania równania. Rozwiązaniami są $x_1 = 0$, $x_2 = 3$ i $x_3 = -2$.",
-      "Zsumuj wszystkie znalezione rozwiązania. Suma wynosi $0 + 3 + (-2) = 1$."
+      "1. Pierwiastki: $x=0$, $x=3$, $x=-2$.\n2. Suma: $0+3+(-2)=1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7141,19 +7139,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Współczynnik $a$ we wzorze funkcji $f$ jest równy",
+    "prompt": "Informacja do zadań 7.-9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nWspółczynnik $a$ we wzorze funkcji $f$ jest równy",
     "choices": [
-      "1",
-      "2",
-      "- 2",
-      "- 1 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z07-1.png)"
+      "$1$",
+      "$2$",
+      "$-2$",
+      "$-1$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $-1$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Skorzystaj z informacji o wierzchołku paraboli $W=(2,1)$ i podstaw jego współrzędne do wzoru funkcji, pamiętając, że $f(2)=1$. Otrzymasz: $a(2-1)(2-3)=1$.",
-      "Uprość równanie otrzymane w Kroku 1: $a(1)(-1)=1$, co daje $-a=1$.",
-      "Rozwiąż równanie $-a=1$, aby wyznaczyć wartość współczynnika $a$. Stąd $a = -1$."
+      "1. $W=(2,1)$ należy do wykresu: $1=a(2-1)(2-3)=-a$.\n2. $a=-1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7172,20 +7168,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Największa wartość funkcji $f$ w przedziale ⟨1,4⟩ jest równa",
+    "prompt": "Informacja do zadań 7.-9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nNajwiększa wartość funkcji $f$ w przedziale $\\langle1,4\\rangle$ jest równa",
     "choices": [
-      "- 3",
-      "0",
-      "1",
-      "2 Informacja do zadań 7.-9. Funkcja kwadratowa f jest określona wzorem $f(x) = a(x - 1)(x - 3)$ . Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W = (2, 1)$ . ![Rysunek do zadania](/cke-matura/m20-czerwiec/z08-1.png)"
+      "$-3$",
+      "$0$",
+      "$1$",
+      "$2$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $1$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Skorzystaj z informacji o wierzchołku paraboli, który wynosi $(2, 1)$, aby wyznaczyć współczynnik $a$. Podstaw współrzędne wierzchołka do wzoru funkcji: $1 = a(2-1)(2-3)$.",
-      "Rozwiąż równanie z kroku 1, aby obliczyć wartość $a$: $1 = a(1)(-1) \\Rightarrow 1 = -a \\Rightarrow a = -1$. Teraz pełny wzór funkcji to $f(x) = -(x-1)(x-3)$.",
-      "Oblicz wartość funkcji na końcach przedziału $\\langle 1, 4 \\rangle$ oraz sprawdź wartość w wierzchołku (jeśli należy do przedziału). Wartość $f(1) = -(1-1)(1-3) = 0$, $f(4) = -(4-1)(4-3) = -(3)(1) = -3$. Wierzchołek $(2,1)$ jest w przedziale, więc jego wartość wynosi $1$.",
-      "Porównaj obliczone wartości funkcji: $0, -3, 1$. Największa z nich to $1$."
+      "1. $a=-1$, więc $f(x)=-(x-1)(x-3)$.\n2. $f(1)=0$, $f(2)=1$, $f(4)=-3$.\n3. Największa wartość w przedziale $\\langle1,4\\rangle$ to $1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7204,19 +7197,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Osią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu",
+    "prompt": "Informacja do zadań 7.-9.\n\nFunkcja kwadratowa $f$ jest określona wzorem $f(x)=a(x-1)(x-3)$. Na rysunku przedstawiono fragment paraboli będącej wykresem tej funkcji. Wierzchołkiem tej paraboli jest punkt $W=(2,1)$.\n\n![Rysunek 1](/cke-matura/m20-czerwiec/z07-fig1.png)\n\nOsią symetrii paraboli będącej wykresem funkcji $f$ jest prosta o równaniu",
     "choices": [
-      "$x = 1$",
-      "$x = 2$",
-      "$y = 1$",
-      "$y = 2$"
+      "$x=1$",
+      "$x=2$",
+      "$y=1$",
+      "$y=2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $x = 2$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Funkcja kwadratowa w postaci kanonicznej to $f(x) = a(x-p)^2 + q$. Oś symetrii paraboli to prosta pionowa $x=p$.",
-      "Z postaci kanonicznej $f(x) = 2(x-2)^2+3$ odczytujemy, że $p=2$, a $q=3$.",
-      "Oś symetrii ma równanie $x=p$, zatem $x=2$."
+      "1. $f(x)=-(x-1)(x-3)$ ma wierzchołek w $x=2$.\n2. Oś symetrii paraboli to $x=2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -7235,19 +7226,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie x$(x - 2)$ = $(x - 2)$ 2 w zbiorze liczb rzeczywistych",
+    "prompt": "Równanie $x(x-2)=(x-2)^2$ w zbiorze liczb rzeczywistych",
     "choices": [
       "nie ma rozwiązań",
-      "ma dokładnie jedno rozwiązanie: $x = 2$",
-      "ma dokładnie jedno rozwiązanie: $x = 0$",
-      "ma dwa różne rozwiązania: $x = 1$ i $x = 2$"
+      "ma dokładnie jedno rozwiązanie: $x=2$",
+      "ma dokładnie jedno rozwiązanie: $x=0$",
+      "ma dwa różne rozwiązania: $x=1$ i $x=2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli ma dokładnie jedno rozwiązanie: $x=2$.",
+    "explanation": "B.",
     "solutionSteps": [
-      "Przekształć równanie do postaci, gdzie po jednej stronie jest 0. Wymnóż nawiasy i przenieś wszystkie wyrazy na lewą stronę.\n$x^2 - 2x = x^2 - 4x + 4$\n$x^2 - 2x - x^2 + 4x - 4 = 0$",
-      "Uprość lewą stronę równania, redukując podobne wyrazy.\n$2x - 4 = 0$",
-      "Rozwiąż otrzymane równanie liniowe, wyznaczając wartość $x$.\n$2x = 4$\n$x = 2$"
+      "1. $x^2-2x=x^2-4x+4$.\n2. $-2x=-4x+4$, czyli $2x=4$ i $x=2$.\n3. Równanie ma jedno rozwiązanie."
     ],
     "examSource": {
       "kind": "matura",
@@ -7329,12 +7318,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach y = $(m - 2)$x oraz y = \\frac{3}{4}$x + 7$ są równoległe. Wtedy",
+    "prompt": "Proste o równaniach $y=(m-2)x$ oraz $y=\\frac{3}{4}x+7$ są równoległe. Wtedy",
     "choices": [
-      "$m = -\\frac{5}{4}$",
-      "$m = \\frac{2}{3}$",
-      "$m = \\frac{11}{4}$",
-      "$m = \\frac{10}{3}$"
+      "$m=-\\frac{5}{4}$",
+      "$m=\\frac{2}{3}$",
+      "$m=\\frac{11}{4}$",
+      "$m=\\frac{10}{3}$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $m = \\frac{11}{4}$",
