@@ -68,13 +68,19 @@
       "numer": 9,
       "dzial": "Funkcje",
       "tresc": "Na rysunku przedstawiono wykres funkcji &fnof;. ![Rysunek do zadania](/cke-matura/m22-maj/z09-1.png) Iloczyn ƒ(−3) ⋅ ƒ(0) ⋅ ƒ(4) jest równy A) (−12) B) (−8) C) 0 D) 16",
-      "rozwiazanie": "**Krok 1.** Odczytaj wartości funkcji z wykresu dla $x = -3$, $x = 0$ i $x = 4$. Z wykresu wynika, że $f(-3) = -2$, $f(0) = 0$ oraz $f(4) = 2$.\n\n**Krok 2.** Oblicz iloczyn odczytanych wartości. Mamy $f(-3) \\cdot f(0) \\cdot f(4) = (-2) \\cdot 0 \\cdot 2$.\n\n**Krok 3.** Wynikiem mnożenia jest 0, ponieważ jednym z czynników jest 0.\n\n**Odpowiedź:** C, czyli 0"
+      "rozwiazanie": "1. Z wykresu: $f(-3)=-2$, $f(0)=0$, $f(4)=2$.\n2. Iloczyn zawiera $0$, więc jest równy $0$.\n\nOdpowiedź: C.",
+      "tekst": "Na rysunku przedstawiono wykres funkcji $f$.\n\n![Rysunek 1](/cke-matura/m22-maj/z09-fig1.png)\n\nIloczyn $f(-3)\\cdot f(0)\\cdot f(4)$ jest równy\n\nA) $-12$\nB) $-8$\nC) $0$\nD) $16$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 10,
       "dzial": "Funkcje",
       "tresc": "Na rysunku 1. przedstawiono wykres funkcji &fnof; określonej na zbiorze 〈−4, 5〉. Rysunek 1. ![Rysunek do zadania](/cke-matura/m22-maj/z10-1.png) Funkcję g określono za pomocą funkcji ƒ. Wykres funkcji g przedstawiono na rysunku 2. Rysunek 2. ![Rysunek do zadania](/cke-matura/m22-maj/z10-2.png) Wynika stąd, że A) g (x) = &fnof;(x) − 2 B) g (x) = &fnof;(x − 2) C) g (x) = &fnof;(x) + 2 D) g (x) = &fnof;(x + 2)",
-      "rozwiazanie": "**Krok 1.** Zauważ, że wykres funkcji $g(x)$ jest przesunięty względem wykresu funkcji $f(x)$ w pionie. Aby sprawdzić kierunek i wartość przesunięcia, porównaj charakterystyczne punkty obu wykresów.\n**Krok 2.** Wybierz punkt na wykresie funkcji $f(x)$, np. $(0, 1)$, i znajdź odpowiadający mu punkt na wykresie funkcji $g(x)$. W tym przypadku jest to punkt $(0, 3)$.\n**Krok 3.** Oblicz różnicę wartości $y$ dla tych punktów: $3 - 1 = 2$. Oznacza to, że wykres funkcji $g(x)$ jest przesunięty o 2 jednostki w górę w porównaniu do funkcji $f(x)$.\n**Odpowiedź:** C, czyli $g(x) = f(x) + 2$"
+      "rozwiazanie": "1. Punkt $(0,1)$ funkcji $f$ przechodzi na $(0,3)$ funkcji $g$.\n2. To przesunięcie o $2$ w górę: $g(x)=f(x)+2$.\n\nOdpowiedź: C.",
+      "tekst": "Na rysunku 1. przedstawiono wykres funkcji $f$ określonej na zbiorze $[-4,5]$.\n\n![Rysunek 1](/cke-matura/m22-maj/z10-fig1.png)\n\nFunkcję $g$ określono za pomocą funkcji $f$. Wykres funkcji $g$ przedstawiono na rysunku 2.\n\n![Rysunek 2](/cke-matura/m22-maj/z10-fig2.png)\n\nWynika stąd, że\n\nA) $g(x)=f(x)-2$\nB) $g(x)=f(x-2)$\nC) $g(x)=f(x)+2$\nD) $g(x)=f(x+2)$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 11,
@@ -95,7 +101,10 @@
       "numer": 13,
       "dzial": "Ciągi",
       "tresc": "Ciąg ( a n ) jest określony wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z13-1.png) dla każdej liczby naturalnej n ≥ 1. Wtedy a 7 jest równy A) (−196) B) (−32) C) (−26) D) (−16)",
-      "rozwiazanie": "**Krok 1.** Upraszczamy wzór: $a_n=\\frac{2n^2-30n}{n}=2n-30$ dla $n\\ge 1$.\n**Krok 2.** Podstawiamy $n=7$: $a_7=2\\cdot 7-30=14-30=-16$.\n**Odpowiedź:** D) $-16$."
+      "rozwiazanie": "1. $a_n=2n-30$.\n2. $a_7=14-30=-16$.\n\nOdpowiedź: D.",
+      "tekst": "Ciąg $(a_n)$ jest określony wzorem $a_n=\\frac{2n^2-30n}{n}$ dla każdej liczby naturalnej $n\\ge1$. Wtedy $a_7$ jest równy\n\nA) $-196$\nB) $-32$\nC) $-26$\nD) $-16$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 14,
@@ -128,13 +137,19 @@
       "numer": 17,
       "dzial": "Trygonometria",
       "tresc": "Punkty A, B, C leżą na okręgu o środku S. Punkt D jest punktem przecięcia cięciwy AC i średnicy okręgu poprowadzonej z punktu B. Miara kąta BSC jest równa α, a miara kąta ADB jest równa γ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z17-1.png) Wtedy kąt ABD ma miarę A) &alpha; &frasl; 2 + γ − 180° B) 180° − &alpha; &frasl; 2 − γ C) 180° − α − γ D) α + γ − 180°",
-      "rozwiazanie": "**Krok 1.** Rozważ trójkąt SBC. Jest to trójkąt równoramienny, ponieważ SB i SC są promieniami okręgu. Kąt SBC ma miarę $\\frac{180^\\circ - \\alpha}{2} = 90^\\circ - \\frac{\\alpha}{2}$.\n\n**Krok 2.** Kąt ABC jest kątem wpisanym opartym na tym samym łuku co kąt ASC. Kąt ASC jest kątem środkowym i jest równy $2 \\cdot \\angle ABC$ (jeśli C jest po tej samej stronie, co B od prostej AS). Jednakże, w tym zadaniu interesuje nas kąt oparty na łuku AC. Kąt środkowy oparty na łuku AC to $360^\\circ - \\alpha$. Kąt ABC jest równy $\\frac{1}{2} (360^\\circ - \\alpha) = 180^\\circ - \\frac{\\alpha}{2}$ lub $\\frac{\\alpha}{2}$ w zależności od tego, który łuk rozpatrujemy. Z rysunku widzimy, że kąt ABC jest ostry. W trójkącie SBC, $\\angle SCB = \\angle SBC = 90^\\circ - \\frac{\\alpha}{2}$. Kąt ACB jest kątem wpisanym opartym na łuku AB. Kąt ASB jest kątem środkowym opartym na łuku AB i ma miarę $360^\\circ - \\alpha$. Kąt ACB = $\\frac{1}{2} (360^\\circ - \\alpha) = 180^\\circ - \\frac{\\alpha}{2}$. Kąt ACB jest również oparty na łuku AB. Kąt AOB jest kątem środkowym, gdzie O jest środkiem okręgu. Oznaczymy środek okręgu jako O. Kąt $\\angle OBC = 90^\\circ - \\frac{\\alpha}{2}$.\n\n**Krok 3.** Rozważ trójkąt ABD. Suma kątów w trójkącie wynosi $180^\\circ$. Znamy kąt ADB = $\\gamma$. Kąt ABD jest szukanym kątem. Kąt BAD jest oparty na łuku BC. Kąt BOC jest kątem środkowym opartym na łuku BC. Kąt BOC = $\\alpha$. Zatem kąt BAD = $\\frac{\\alpha}{2}$. W trójkącie ABD: $\\angle ABD + \\angle BDA + \\angle DAB = 180^\\circ$. Podstawiamy znane wartości: $\\angle ABD + \\gamma + \\frac{\\alpha}{2} = 180^\\circ$. Stąd $\\angle ABD = 180^\\circ - \\frac{\\alpha}{2} - \\gamma$.\n\n**Odpowiedź:** B, czyli $180^\\circ - \\frac{\\alpha}{2} - \\gamma$"
+      "rozwiazanie": "1. $\\angle BAD=\\frac{\\alpha}{2}$ (kąt wpisany oparty na łuku $BC$).\n2. W trójkącie $ABD$: $\\angle ABD=180^\\circ-\\gamma-\\frac{\\alpha}{2}$.\n\nOdpowiedź: B.",
+      "tekst": "Punkty $A$, $B$, $C$ leżą na okręgu o środku $S$. Punkt $D$ jest punktem przecięcia cięciwy $AC$ i średnicy okręgu poprowadzonej z punktu $B$. Miara kąta $BSC$ jest równa $\\alpha$, a miara kąta $ADB$ jest równa $\\gamma$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m22-maj/z17-fig1.png)\n\nWtedy kąt $ABD$ ma miarę\n\nA) $\\frac{\\alpha}{2}+\\gamma-180^\\circ$\nB) $180^\\circ-\\frac{\\alpha}{2}-\\gamma$\nC) $180^\\circ-\\alpha-\\gamma$\nD) $\\alpha+\\gamma-180^\\circ$",
+      "tekstV": 2,
+      "correctIndex": 1
     },
     {
       "numer": 18,
       "dzial": "Geometria",
       "tresc": "Punkty A, B, P leżą na okręgu o środku S i promieniu 6. Czworokąt ASBP jest rombem, w którym kąt ostry PAS ma miarę 60° (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z18-1.png) Pole zakreskowanej na rysunku figury jest równe A) 6π B) 9π C) 10π D) 12π",
-      "rozwiazanie": "**Krok 1.** Określ kształt czworokąta ASBP. Skoro wszystkie punkty leżą na okręgu o środku S i promieniu 6, to odcinki AS, SB, SP oraz BP są promieniami o długości 6. Ponieważ ASBP jest rombem, wszystkie jego boki są równe, co jest zgodne z faktem, że są to promienie okręgu. Kąt PAS wynosi 60°, a w rombie przeciwległe kąty są równe, więc kąt SBP również wynosi 60°. Suma kątów w czworokącie wynosi 360°, więc kąty ASB i APB mają po 120°. Ponieważ AS = SP = 6 i kąt między nimi wynosi 60°, trójkąt ASP jest równoboczny, co oznacza, że AP = 6. Ponieważ AS = SB = 6 i kąt między nimi wynosi 120°, trójkąt ASB jest równoramienny.\n\n**Krok 2.** Oblicz pole rombu. Pole rombu można obliczyć jako sumę pól dwóch trójkątów równobocznych o boku 6 (ASP i SBP) lub jako sumę pól dwóch trójkątów równoramiennych (ASB i APB). Używając wzoru na pole trójkąta równobocznego $P = \\frac{a^2\\sqrt{3}}{4}$, pole trójkąta ASP wynosi $\\frac{6^2\\sqrt{3}}{4} = 9\\sqrt{3}$. Ponieważ romb składa się z dwóch takich trójkątów, jego pole wynosi $2 \\cdot 9\\sqrt{3} = 18\\sqrt{3}$. Alternatywnie, można obliczyć pole jako $P = \\frac{1}{2}d_1 d_2$, gdzie $d_1$ i $d_2$ to przekątne. Przekątna SP ma długość 6. Aby znaleźć długość przekątnej AB, możemy rozważyć trójkąt ASB. Wysokość z S na AB dzieli kąt ASB na dwa kąty po 60°, a odcinek AB na dwie równe części. Długość połowy AB wynosi $6 \\sin(60^\\circ) = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$. Zatem AB = $6\\sqrt{3}$. Pole rombu to $\\frac{1}{2} \\cdot 6 \\cdot 6\\sqrt{3} = 18\\sqrt{3}$.\n\n**Krok 3.** Oblicz pole wycinka koła. Zakreskowana figura to wycinek koła o środku S i promieniu 6, odpowiadający kątowi środkowemu ASB, który wynosi 120°. Pole wycinka koła obliczamy ze wzoru $P_{wycinka} = \\frac{\\alpha}{360^\\circ} \\cdot \\pi r^2$, gdzie $\\alpha$ to kąt środkowy w stopniach. W tym przypadku $P_{wycinka} = \\frac{120^\\circ}{360^\\circ} \\cdot \\pi \\cdot 6^2 = \\frac{1}{3} \\cdot 36\\pi = 12\\pi$.\n\n**Odpowiedź:** D, czyli $12\\pi$"
+      "rozwiazanie": "1. Kąt $ASB=120^\\circ$ (kąty rombu).\n2. Zakreskowana figura to wycinek koła: $P=\\frac{120^\\circ}{360^\\circ}\\pi\\cdot6^2=12\\pi$.\n\nOdpowiedź: D.",
+      "tekst": "Punkty $A$, $B$, $P$ leżą na okręgu o środku $S$ i promieniu $6$. Czworokąt $ASBP$ jest rombem, w którym kąt ostry $PAS$ ma miarę $60^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m22-maj/z18-fig1.png)\n\nPole zakreskowanej na rysunku figury jest równe\n\nA) $6\\pi$\nB) $9\\pi$\nC) $10\\pi$\nD) $12\\pi$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 19,
@@ -243,7 +258,9 @@
       "numer": 31,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla każdej liczby rzeczywistej a i każdej liczby rzeczywistej b takich, że b ≠ a, spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m22-maj/z31-1.png)",
-      "rozwiazanie": "**Krok 1.** Przekształć nierówność, przenosząc wszystko na jedną stronę, aby otrzymać nierówność typu $W(a, b) \\ge 0$. Otrzymujemy $\\frac{a^2+b^2}{2} - \\frac{(a+b)^2}{4} \\ge 0$.\n**Krok 2.** Sprowadź lewą stronę do wspólnego mianownika i uprość licznik. Wspólny mianownik to $4$. Po sprowadzeniu otrzymujemy $\\frac{2(a^2+b^2) - (a+b)^2}{4} \\ge 0$. Po wymnożeniu i redukcji wyrazów podobnych w liczniku mamy $\\frac{2a^2+2b^2 - (a^2+2ab+b^2)}{4} = \\frac{a^2-2ab+b^2}{4}$.\n**Krok 3.** Zauważ, że licznik jest kwadratem różnicy. Po skróceniu otrzymujemy $\\frac{(a-b)^2}{4} \\ge 0$. Ponieważ kwadrat dowolnej liczby rzeczywistej jest nieujemny, a $4 > 0$, to całe wyrażenie jest $\\ge 0$, co należało wykazać.\n\n**Odpowiedź:** Nierówność $\\frac{(a-b)^2}{4} \\ge 0$ jest prawdziwa dla wszystkich liczb rzeczywistych $a$ i $b$."
+      "rozwiazanie": "1. $\\frac{a^2+b^2}{2}-\\left(\\frac{a+b}{2}\\right)^2=\\frac{2(a^2+b^2)-(a+b)^2}{4}$.\n2. Licznik: $2a^2+2b^2-a^2-2ab-b^2=(a-b)^2$.\n3. $(a-b)^2>0$ dla $a\\ne b$, więc nierówność jest prawdziwa.",
+      "tekst": "Wykaż, że dla każdej liczby rzeczywistej $a$ i każdej liczby rzeczywistej $b$ takich, że $b\\ne a$, spełniona jest nierówność $\\frac{a^2+b^2}{2}>\\left(\\frac{a+b}{2}\\right)^2$.",
+      "tekstV": 2
     },
     {
       "numer": 32,
@@ -257,7 +274,9 @@
       "numer": 33,
       "dzial": "Geometria",
       "tresc": "Dany jest trójkąt równoramienny ABC, w którym |AC| = |BC|. Dwusieczna kąta BAC przecina bok BC w takim punkcie D, że trójkąty ABC i BDA są podobne (zobacz rysunek). Oblicz miarę kąta BAC. ![Rysunek do zadania](/cke-matura/m22-maj/z33-1.png)",
-      "rozwiazanie": "**Krok 1.** Zapisz zależności wynikające z podobieństwa trójkątów ABC i BDA: $\\frac{|AB|}{|BD|} = \\frac{|BC|}{|BA|} = \\frac{|AC|}{|DA|}$. Ponieważ $|AC|=|BC|$, mamy $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Oznaczając $|AB|=x$ i $|BD|=y$, otrzymujemy $\\frac{x}{y} = \\frac{x}{y}$, co jest oczywiste. Użyjmy relacji $\\frac{|BC|}{|AB|} = \\frac{|AB|}{|BD|}$. Niech $|AC|=|BC|=a$ i $|AB|=x$. Wtedy $|BC|=|BD|+|DC|$, czyli $a = y+d$. Z podobieństwa $\\frac{a}{x} = \\frac{x}{y}$, stąd $x^2 = ay$.\n\n**Krok 2.** Skorzystaj z faktu, że AD jest dwusieczną kąta BAC. Z twierdzenia o dwusiecznej kąta w trójkącie ABC mamy $\\frac{|AB|}{|AC|} = \\frac{|BD|}{|DC|}$, czyli $\\frac{x}{a} = \\frac{y}{d}$. Z tego $d = \\frac{ay}{x}$. Podstawiamy do $a = y+d$: $a = y + \\frac{ay}{x} = y(1+\\frac{a}{x})$.\n\n**Krok 3.** Połącz zależności. Z $a = y(1+\\frac{a}{x})$ wyznaczamy $y = \\frac{a}{1+\\frac{a}{x}} = \\frac{ax}{x+a}$. Podstawiamy to do $x^2 = ay$: $x^2 = a \\cdot \\frac{ax}{x+a}$. Dzieląc przez $x$ (ponieważ $x=|AB|>0$), otrzymujemy $x = \\frac{a^2}{x+a}$. Stąd $x(x+a) = a^2$, czyli $x^2+ax-a^2=0$. Rozwiązując to równanie kwadratowe względem $\\frac{x}{a}$ (dzieląc przez $a^2$ i oznaczając $t=\\frac{x}{a}$), dostajemy $t^2+t-1=0$. Jedynym dodatnim rozwiązaniem jest $t=\\frac{\\sqrt{5}-1}{2}$. To jest stosunek $\\frac{|AB|}{|AC|}$, który dla trójkąta o takim podobieństwie jest znany jako stosunek złoty, a kąt $\\alpha = \\angle BAC$ spełnia warunek $2 \\cos \\alpha = \\frac{\\sqrt{5}-1}{2}$.\n\n**Krok 4.** Wykorzystaj fakt, że $\\cos(36^\\circ) = \\frac{1+\\sqrt{5}}{4}$ i $\\cos(72^\\circ) = \\frac{\\sqrt{5}-1}{4}$. Ponieważ $\\frac{x}{a} = \\frac{|AB|}{|AC|} = 2 \\cos(\\angle BAC)$, a obliczona wartość to $\\frac{\\sqrt{5}-1}{2}$, to $2 \\cos(\\angle BAC) = \\frac{\\sqrt{5}-1}{2}$. Kąt $\\angle BAC$ wynosi $72^\\circ$.\n\n**Odpowiedź:** $72^\\circ$"
+      "rozwiazanie": "1. Niech $\\angle BAC=\\angle ABC=x$. Wtedy $\\angle ACB=180^\\circ-2x$.\n2. $AD$ jest dwusieczną, więc $\\angle DAB=\\frac{x}{2}$.\n3. Z podobieństwa $ABC\\sim BDA$: $\\angle BDA=\\angle BAC=x$ i $\\angle ABD=\\angle ACB$.\n4. W trójkącie $ABD$: $\\frac{x}{2}+x+(180^\\circ-2x)=180^\\circ$, więc $x=72^\\circ$.\n\nOdpowiedź: $72^\\circ$.",
+      "tekst": "Dany jest trójkąt równoramienny $ABC$, w którym $|AC|=|BC|$. Dwusieczna kąta $BAC$ przecina bok $BC$ w takim punkcie $D$, że trójkąty $ABC$ i $BDA$ są podobne (zobacz rysunek). Oblicz miarę kąta $BAC$.\n\n![Rysunek 1](/cke-matura/m22-maj/z33-fig1.png)",
+      "tekstV": 2
     },
     {
       "numer": 34,
