@@ -20,7 +20,9 @@
       "numer": 3,
       "dzial": "Algebra",
       "tresc": "Wykaż, że dla każdej liczby naturalnej 𝒏 ≥ 𝟏 liczba (𝟐𝒏 + 𝟏) 𝟐 − 𝟏 jest podzielna przez 𝟖.",
-      "rozwiazanie": "**Krok 1.** Rozwiń kwadrat wyrażenia $(2n + 1)^2$. Użyj wzoru skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$. Otrzymasz $(2n)^2 + 2 \\cdot 2n \\cdot 1 + 1^2 = 4n^2 + 4n + 1$.\n**Krok 2.** Podstaw rozwinięte wyrażenie do oryginalnego wzoru i uprość: $(4n^2 + 4n + 1) - 1 = 4n^2 + 4n$.\n**Krok 3.** Wyłącz wspólny czynnik przed nawias. Wyrażenie $4n^2 + 4n$ można zapisać jako $4n(n+1)$. Zauważ, że iloczyn dwóch kolejnych liczb naturalnych $n(n+1)$ jest zawsze liczbą parzystą, czyli można go zapisać jako $2k$ dla pewnej liczby całkowitej $k$.\n**Krok 4.** Podstaw $n(n+1) = 2k$ do wyrażenia z kroku 3: $4n(n+1) = 4(2k) = 8k$. Ponieważ wynik jest postaci $8k$, gdzie $k$ jest liczbą całkowitą, to liczba $(2n + 1)^2 - 1$ jest podzielna przez 8 dla każdej liczby naturalnej $n \\geq 1$.\n\n**Odpowiedź:** Wykazano, że $(2n + 1)^2 - 1 = 8k$ dla pewnego $k \\in \\mathbb{Z}$."
+      "rozwiazanie": "1. $(2n+1)^2-1=4n^2+4n=4n(n+1)$.\n2. Iloczyn $n(n+1)$ jest parzysty, więc $4n(n+1)$ jest podzielne przez $8$.",
+      "tekst": "Wykaż, że dla każdej liczby naturalnej $n\\ge1$ liczba $(2n+1)^2-1$ jest podzielna przez $8$.",
+      "tekstV": 2
     },
     {
       "numer": 4,
@@ -65,7 +67,9 @@
       "numer": 9,
       "dzial": "Równania",
       "tresc": "Rozwiąż równanie 𝟑𝒙 𝟑 − 𝟐𝒙 𝟐 − 𝟏𝟐𝒙 + 𝟖 = 𝟎",
-      "rozwiazanie": "**Krok 1.** Pogrupuj wyrazy, aby zastosować grupowanie wyrazów: $(3x^3 - 2x^2) + (-12x + 8) = 0$. Wyciągnij wspólne czynniki z każdej grupy: $x^2(3x - 2) - 4(3x - 2) = 0$.\n\n**Krok 2.** Wyciągnij wspólny nawias $(3x-2)$: $(x^2 - 4)(3x - 2) = 0$. Rozłóż różnicę kwadratów $x^2 - 4$ na czynniki: $(x-2)(x+2)(3x-2) = 0$.\n\n**Krok 3.** Przyrównaj każdy czynnik do zera, aby znaleźć rozwiązania: $x-2 = 0 \\implies x=2$, $x+2 = 0 \\implies x=-2$, $3x-2 = 0 \\implies x=\\frac{2}{3}$.\n\n**Odpowiedź:** $x \\in \\{-2, \\frac{2}{3}, 2\\}$"
+      "rozwiazanie": "1. $3x^3-2x^2-12x+8=(3x-2)(x^2-4)$.\n2. $x^2-4=0$ daje $x=2$ lub $x=-2$.\n3. $3x-2=0$ daje $x=\\frac23$.\n\nOdpowiedź: $x\\in\\left\\{-2,\\frac23,2\\right\\}$.",
+      "tekst": "Rozwiąż równanie $3x^3-2x^2-12x+8=0$.",
+      "tekstV": 2
     },
     {
       "numer": 10,
@@ -168,7 +172,9 @@
       "numer": 23,
       "dzial": "Funkcje",
       "tresc": "W kartezjańskim układzie współrzędnych (𝑥 , 𝑦) dane są proste 𝑘 oraz 𝑙 o równaniach 𝑘: 𝑦 = 2 ⁄ 3 𝑥 𝑙: 𝑦 = − 3 ⁄ 2 𝑥 + 13 Dokończ zdanie tak aby było prawdziwe. Proste 𝑘 oraz 𝑙 A) są prostopadłe B) nie są prostopadłe i przecinają się w punkcie 𝑃 o współrzędnych A) (−6 , −4) B) (6 , 4) C) (−6 , 4)",
-      "rozwiazanie": "**Krok 1.** Sprawdź warunek prostopadłości prostych. Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. W tym przypadku $2/3 \\cdot (-3/2) = -1$, więc proste są prostopadłe.\n\n**Krok 2.** Znajdź punkt przecięcia prostych, przyrównując ich równania. Ponieważ proste są prostopadłe, to wystarczy podstawić tę informację, aby zawęzić odpowiedź. Jednak dla pewności możemy policzyć punkt przecięcia: $2/3 x = -3/2 x + 13$.\n\n**Krok 3.** Rozwiąż równanie z Kroku 2. $2/3 x + 3/2 x = 13 \\Rightarrow (4/6 + 9/6)x = 13 \\Rightarrow 13/6 x = 13 \\Rightarrow x = 6$. Następnie oblicz $y$: $y = 2/3 \\cdot 6 = 4$. Punkt przecięcia to $(6, 4)$.\n\n**Odpowiedź:** A, czyli są prostopadłe"
+      "rozwiazanie": "1. $\\frac23\\cdot\\left(-\\frac32\\right)=-1$, więc proste są prostopadłe.\n2. $\\frac23x=-\\frac32x+13$, więc $\\frac{13}{6}x=13$ i $x=6$.\n3. $y=\\frac23\\cdot6=4$.\n\nOdpowiedź: punkt przecięcia $(6,4)$.",
+      "tekst": "W kartezjańskim układzie współrzędnych $(x,y)$ dane są proste $k$ oraz $l$ o równaniach\n\n$$k:\\ y=\\frac23x \\qquad l:\\ y=-\\frac32x+13.$$\n\nUzasadnij, że proste $k$ i $l$ są prostopadłe, i wyznacz współrzędne ich punktu przecięcia.",
+      "tekstV": 2
     },
     {
       "numer": 24,
@@ -222,13 +228,17 @@
       "numer": 30,
       "dzial": "Prawdopodobieństwo",
       "tresc": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 𝟏𝟓.",
-      "rozwiazanie": "**Krok 1.** Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.\n**Krok 2.** Określamy zdarzenia sprzyjające. Iloczyn jest podzielny przez 15, gdy co najmniej jedna z liczb jest podzielna przez 5 (czyli 5), a druga jest podzielna przez 3 (czyli 3, 6, 9). Rozważamy przypadki: (5, 3), (5, 6), (5, 9) oraz (3, 5), (6, 5), (9, 5). Mamy 6 takich par. Dodatkowo, jeśli wylosujemy dwie piątki, iloczyn jest podzielny przez 15 (choć faktycznie przez 25). Para (5,5) jest również dozwolona.\n**Krok 3.** Zliczamy zdarzenia sprzyjające. Pary to: (5,3), (5,6), (5,9), (3,5), (6,5), (9,5), (5,5). Łącznie 7 zdarzeń.\n**Krok 4.** Obliczamy prawdopodobieństwo zdarzenia A. Jest to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $\\frac{7}{64}$.\n\n**Odpowiedź:** $\\frac{7}{64}$"
+      "rozwiazanie": "1. Wszystkich par: $8\\cdot8=64$.\n2. Iloczyn podzielny przez $15$: $(5,3),(5,6),(5,9),(3,5),(6,5),(9,5),(5,5)$ — $7$ par.\n3. $P(A)=\\frac7{64}$.\n\nOdpowiedź: $\\frac7{64}$.",
+      "tekst": "Ze zbioru ośmiu liczb $\\{2,3,4,5,6,7,8,9\\}$ losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez $15$.",
+      "tekstV": 2
     },
     {
       "numer": 31,
       "dzial": "Funkcje",
       "tresc": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę 𝐿 obsługiwanych klientów 𝑛-tego dnia opisuje funkcja 𝐿(𝑛) = −𝑛 2 + 22𝑛 + 279 gdzie 𝑛 jest liczbą naturalną spełniającą warunki 𝑛 ≥ 1 i 𝑛 ≤ 30. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa 𝐿(30). A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia. <ul class=\"",
-      "rozwiazanie": "**Krok 1.** Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.\n**Krok 2.** Aby ocenić drugie stwierdzenie, obliczamy liczbę klientów w trzecim dniu, podstawiając $n=3$ do wzoru: $L(3) = -(3)^2 + 22(3) + 279 = -9 + 66 + 279 = 336$.\n**Krok 3.** Aby znaleźć dzień z największą liczbą klientów, szukamy wierzchołka paraboli $L(n) = -n^2 + 22n + 279$. Wartość $n$ wierzchołka to $-\\frac{b}{2a} = -\\frac{22}{2(-1)} = 11$. Obliczamy liczbę klientów dla $n=11$: $L(11) = -(11)^2 + 22(11) + 279 = -121 + 242 + 279 = 400$.\n\n**Odpowiedź:** F, P, 11. dnia obsłużono 400 klientów."
+      "rozwiazanie": "31.1. Pierwsze stwierdzenie: fałsz (suma to nie $L(30)$). Drugie: prawda, bo $L(3)=-9+66+279=336$.\n31.2. Wierzchołek $n=-\\frac{22}{2(-1)}=11$, a $L(11)=-121+242+279=400$.\n\nOdpowiedź: F, P; najwięcej $11$. dnia — $400$ klientów.",
+      "tekst": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z $30$ kolejnych dni. Przyjmijmy, że liczbę $L$ obsługiwanych klientów $n$-tego dnia opisuje funkcja\n\n$$L(n)=-n^2+22n+279,$$\n\ngdzie $n$ jest liczbą naturalną spełniającą warunki $n\\ge1$ i $n\\le30$.\n\n31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe.\n\nŁączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$.\n\nW trzecim dniu analizowanego okresu obsłużono $336$ klientów.\n\n31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
+      "tekstV": 2
     }
   ],
   "fetchedAt": "2026-05-24T14:01:33.581Z"

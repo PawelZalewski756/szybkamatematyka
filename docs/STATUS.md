@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-27 13:26 UTC · branch `feature/google-ads-zakup-pro` · commit `e7299cf`
+> Ostatnia aktualizacja: 2026-11-27 13:27 UTC · branch `feature/google-ads-zakup-pro` · commit `c5919a0`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.

@@ -11920,17 +11920,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej $n \\ge 1$ liczba $(2n + 1) 2 - 1$ jest podzielna przez 8.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n\\ge1$ liczba $(2n+1)^2-1$ jest podzielna przez $8$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Wykazano, że $(2n + 1)^2 - 1 = 8k$ dla pewnego $k \\in \\mathbb{Z}$.",
+    "explanation": "1. $(2n+1)^2-1=4n^2+4n=4n(n+1)$.\n2. Iloczyn $n(n+1)$ jest parzysty, więc $4n(n+1)$ jest podzielne przez $8$.",
     "solutionSteps": [
-      "Rozwiń kwadrat wyrażenia $(2n + 1)^2$. Użyj wzoru skróconego mnożenia $(a+b)^2 = a^2 + 2ab + b^2$. Otrzymasz $(2n)^2 + 2 \\cdot 2n \\cdot 1 + 1^2 = 4n^2 + 4n + 1$.",
-      "Podstaw rozwinięte wyrażenie do oryginalnego wzoru i uprość: $(4n^2 + 4n + 1) - 1 = 4n^2 + 4n$.",
-      "Wyłącz wspólny czynnik przed nawias. Wyrażenie $4n^2 + 4n$ można zapisać jako $4n(n+1)$. Zauważ, że iloczyn dwóch kolejnych liczb naturalnych $n(n+1)$ jest zawsze liczbą parzystą, czyli można go zapisać jako $2k$ dla pewnej liczby całkowitej $k$.",
-      "Podstaw $n(n+1) = 2k$ do wyrażenia z kroku 3: $4n(n+1) = 4(2k) = 8k$. Ponieważ wynik jest postaci $8k$, gdzie $k$ jest liczbą całkowitą, to liczba $(2n + 1)^2 - 1$ jest podzielna przez 8 dla każdej liczby naturalnej $n \\geq 1$."
+      "1. $(2n+1)^2-1=4n^2+4n=4n(n+1)$.\n2. Iloczyn $n(n+1)$ jest parzysty, więc $4n(n+1)$ jest podzielne przez $8$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12098,16 +12095,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie $3x^{3} - 2x^{2} - 12x + 8 = 0$",
+    "prompt": "Rozwiąż równanie $3x^3-2x^2-12x+8=0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x \\in \\{-2, \\frac{2}{3}, 2\\}$",
+    "explanation": "$x\\in\\left\\{-2,\\frac23,2\\right\\}$.",
     "solutionSteps": [
-      "Pogrupuj wyrazy, aby zastosować grupowanie wyrazów: $(3x^3 - 2x^2) + (-12x + 8) = 0$. Wyciągnij wspólne czynniki z każdej grupy: $x^2(3x - 2) - 4(3x - 2) = 0$.",
-      "Wyciągnij wspólny nawias $(3x-2)$: $(x^2 - 4)(3x - 2) = 0$. Rozłóż różnicę kwadratów $x^2 - 4$ na czynniki: $(x-2)(x+2)(3x-2) = 0$.",
-      "Przyrównaj każdy czynnik do zera, aby znaleźć rozwiązania: $x-2 = 0 \\implies x=2$, $x+2 = 0 \\implies x=-2$, $3x-2 = 0 \\implies x=\\frac{2}{3}$."
+      "1. $3x^3-2x^2-12x+8=(3x-2)(x^2-4)$.\n2. $x^2-4=0$ daje $x=2$ lub $x=-2$.\n3. $3x-2=0$ daje $x=\\frac23$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12499,25 +12494,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-maj-z23",
     "title": "Matura - maj 2023 - poziom podstawowy - zad. 23",
     "category": "funkcje",
-    "difficulty": "sredni",
+    "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są proste k oraz l o równaniach k: $y = \\frac{2}{3}$ x l: y = -\\frac{3}{2}$x + 13$ Dokończ zdanie tak aby było prawdziwe. Proste k oraz l",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ dane są proste $k$ oraz $l$ o równaniach\n\n$k:\\ y=\\frac23x \\qquad l:\\ y=-\\frac32x+13.$\n\nUzasadnij, że proste $k$ i $l$ są prostopadłe, i wyznacz współrzędne ich punktu przecięcia.",
     "choices": [
-      "są prostopadłe",
-      "nie są prostopadłe i przecinają się w punkcie P o współrzędnych",
-      "$(-6 , - 4)$",
-      "$(6 , 4)$"
+      "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli są prostopadłe",
+    "explanation": "punkt przecięcia $(6,4)$.",
     "solutionSteps": [
-      "Sprawdź warunek prostopadłości prostych. Proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. W tym przypadku $2/3 \\cdot (-3/2) = -1$, więc proste są prostopadłe.",
-      "Znajdź punkt przecięcia prostych, przyrównując ich równania. Ponieważ proste są prostopadłe, to wystarczy podstawić tę informację, aby zawęzić odpowiedź. Jednak dla pewności możemy policzyć punkt przecięcia: $2/3 x = -3/2 x + 13$.",
-      "Rozwiąż równanie z Kroku 2. $2/3 x + 3/2 x = 13 \\Rightarrow (4/6 + 9/6)x = 13 \\Rightarrow 13/6 x = 13 \\Rightarrow x = 6$. Następnie oblicz $y$: $y = 2/3 \\cdot 6 = 4$. Punkt przecięcia to $(6, 4)$."
+      "1. $\\frac23\\cdot\\left(-\\frac32\\right)=-1$, więc proste są prostopadłe.\n2. $\\frac23x=-\\frac32x+13$, więc $\\frac{13}{6}x=13$ i $x=6$.\n3. $y=\\frac23\\cdot6=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12708,17 +12698,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ze zbioru ośmiu liczb {2,3,4,5,6,7,8,9} losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez 15.",
+    "prompt": "Ze zbioru ośmiu liczb $\\{2,3,4,5,6,7,8,9\\}$ losujemy ze zwracaniem kolejno dwa razy po jednej liczbie. Oblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że iloczyn wylosowanych liczb jest podzielny przez $15$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{7}{64}$",
+    "explanation": "$\\frac7{64}$.",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych zdarzeń elementarnych. Losujemy ze zwracaniem dwie liczby z 8, więc wszystkich możliwości jest $8 \\cdot 8 = 64$.",
-      "Określamy zdarzenia sprzyjające. Iloczyn jest podzielny przez 15, gdy co najmniej jedna z liczb jest podzielna przez 5 $(czyli 5)$, a druga jest podzielna przez 3 $(czyli 3, 6, 9)$. Rozważamy przypadki: $(5, 3)$, $(5, 6)$, $(5, 9)$ oraz $(3, 5)$, $(6, 5)$, $(9, 5)$. Mamy 6 takich par. Dodatkowo, jeśli wylosujemy dwie piątki, iloczyn jest podzielny przez 15 $(choć faktycznie przez 25)$. Para $(5,5)$ jest również dozwolona.",
-      "Zliczamy zdarzenia sprzyjające. Pary to: $(5,3)$, $(5,6)$, $(5,9)$, $(3,5)$, $(6,5)$, $(9,5)$, $(5,5)$. Łącznie 7 zdarzeń.",
-      "Obliczamy prawdopodobieństwo zdarzenia A. Jest to stosunek liczby zdarzeń sprzyjających do liczby wszystkich zdarzeń elementarnych: $\\frac{7}{64}$."
+      "1. Wszystkich par: $8\\cdot8=64$.\n2. Iloczyn podzielny przez $15$: $(5,3),(5,6),(5,9),(3,5),(6,5),(9,5),(5,5)$ — $7$ par.\n3. $P(A)=\\frac7{64}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12737,16 +12724,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z 30 kolejnych dni. Przyjmijmy, że liczbę L obsługiwanych klientów n-tego dnia opisuje funkcja $L(n)$ = -$n^{2} + 22n + 279$ gdzie n jest liczbą naturalną spełniającą warunki $n \\ge 1$ i $n \\le 30$. Zadanie 31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe. Łączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$. A) prawda B) fałsz W trzecim dniu analizowanego okresu obsłużono 336 klientów. A) prawda B) fałsz Zadanie 31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
+    "prompt": "Właściciel pewnej apteki przeanalizował dane dotyczące liczby obsługiwanych klientów z $30$ kolejnych dni. Przyjmijmy, że liczbę $L$ obsługiwanych klientów $n$-tego dnia opisuje funkcja\n\n$L(n)=-n^2+22n+279,$\n\ngdzie $n$ jest liczbą naturalną spełniającą warunki $n\\ge1$ i $n\\le30$.\n\n31.1. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\nŁączna liczba klientów obsłużonych w czasie wszystkich analizowanych dni jest równa $L(30)$.\n\nW trzecim dniu analizowanego okresu obsłużono $336$ klientów.\n\n31.2. Którego dnia analizowanego okresu w aptece obsłużono największą liczbę klientów? Oblicz liczbę klientów obsłużonych tego dnia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "F, P, 11. dnia obsłużono 400 klientów.",
+    "explanation": "F, P; najwięcej $11$. dnia — $400$ klientów.",
     "solutionSteps": [
-      "Aby ocenić pierwsze stwierdzenie, należy obliczyć sumę klientów z 30 dni, a nie tylko liczbę klientów 30. dnia. Wzór $L(n)$ opisuje liczbę klientów danego dnia, a nie sumę.",
-      "Aby ocenić drugie stwierdzenie, obliczamy liczbę klientów w trzecim dniu, podstawiając $n=3$ do wzoru: $L(3) = -(3)^2 + 22(3) + 279 = -9 + 66 + 279 = 336$.",
-      "Aby znaleźć dzień z największą liczbą klientów, szukamy wierzchołka paraboli $L(n) = -n^2 + 22n + 279$. Wartość $n$ wierzchołka to $-\\frac{b}{2a} = -\\frac{22}{2(-1)} = 11$. Obliczamy liczbę klientów dla $n=11$: $L(11) = -(11)^2 + 22(11) + 279 = -121 + 242 + 279 = 400$."
+      "31.1. Pierwsze stwierdzenie: fałsz (suma to nie $L(30)$). Drugie: prawda, bo $L(3)=-9+66+279=336$.\n31.2. Wierzchołek $n=-\\frac{22}{2(-1)}=11$, a $L(11)=-121+242+279=400$."
     ],
     "examSource": {
       "kind": "matura",
