@@ -1021,20 +1021,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 0,6 jest jednym z przybliżeń liczby $\\frac{5}{8}$ . Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
+    "prompt": "Liczba $0{,}6$ jest jednym z przybliżeń liczby $\\frac{5}{8}$. Błąd względny tego przybliżenia, wyrażony w procentach, jest równy",
     "choices": [
-      "0,025%",
-      "2,5%",
-      "0,04%",
-      "4%"
+      "$0{,}025\\%$",
+      "$2{,}5\\%$",
+      "$0{,}04\\%$",
+      "$4\\%$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 4%",
+    "explanation": "D, czyli $4\\%$",
     "solutionSteps": [
-      "Obliczamy błąd bezwzględny, czyli różnicę między dokładną wartością a przybliżoną: $|5/8 - 0.6| = |0.625 - 0.6| = 0.025$.",
-      "Obliczamy błąd względny, dzieląc błąd bezwzględny przez dokładną wartość: $\\frac{0.025}{0.625} = 0.04$.",
-      "Zamieniamy błąd względny na procenty, mnożąc przez 100%: $0.04 \\cdot 100\\% = 4\\%$."
+      "Błąd bezwzględny to różnica między wartością dokładną i przybliżeniem: $\\left|\\frac{5}{8}-0{,}6\\right|=\\left|\\frac{25}{40}-\\frac{24}{40}\\right|=\\frac{1}{40}=0{,}025$.",
+      "Błąd względny to iloraz błędu bezwzględnego i wartości dokładnej: $\\frac{0{,}025}{0{,}625}=\\frac{1}{40}\\cdot\\frac{8}{5}=\\frac{1}{25}=0{,}04$.",
+      "W procentach: $0{,}04\\cdot100\\%=4\\%$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1052,20 +1053,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest okrąg o środku S = $(-6, - 8)$ i promieniu 2014. Obrazem tego okręgu w symetrii osiowej względem osi Oy jest okrąg o środku w punkcie $S_{1}$ . Odległość między punktami S i S 1 jest równa",
+    "prompt": "Dany jest okrąg o środku $S=(-6,-8)$ i promieniu $2014$. Obrazem tego okręgu w symetrii osiowej względem osi $Oy$ jest okrąg o środku w punkcie $S_1$. Odległość między punktami $S$ i $S_1$ jest równa",
     "choices": [
-      "12",
-      "16",
-      "2014",
-      "4028"
+      "$12$",
+      "$16$",
+      "$2014$",
+      "$4028$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 12",
+    "explanation": "A, czyli $12$",
     "solutionSteps": [
-      "Symetria osiowa względem osi $Oy$ przekształca punkt $(x, y)$ na punkt $(-x, y)$. Środek $S = (–6, –8)$ okręgu zostanie przekształcony na $S_1 = (–(–6), –8)$, czyli $S_1 = (6, –8)$.",
-      "Odległość między punktami $S = (x_1, y_1)$ i $S_1 = (x_2, y_2)$ obliczamy ze wzoru $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. W tym przypadku $d = \\sqrt{(6 - (–6))^2 + (–8 - (–8))^2}$.",
-      "Obliczamy odległość: $d = \\sqrt{(6 + 6)^2 + (–8 + 8)^2} = \\sqrt{12^2 + 0^2} = \\sqrt{144} = 12$. Promień okręgu nie wpływa na odległość między środkami."
+      "Symetria osiowa względem osi $Oy$ przekształca punkt $(x,y)$ na $(-x,y)$, więc $S_1=(6,-8)$.",
+      "$|SS_1|=\\sqrt{(6-(-6))^2+(-8-(-8))^2}=\\sqrt{12^2+0}=12$. Promień okręgu nie ma wpływu na odległość środków."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1083,20 +1084,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiązaniami równania $(x^{3} - 8)(x - 5)(2x + 1)$ = 0 są liczby",
+    "prompt": "Rozwiązaniami równania $(x^3-8)(x-5)(2x+1)=0$ są liczby",
     "choices": [
-      "- 8; -5; 1",
-      "- 1; 5; 8",
-      "- $\\frac{1}{2}$ ; 2; 5",
-      "- $\\frac{1}{2}$ ; 5; 8"
+      "$-8;\\ -5;\\ 1$",
+      "$-1;\\ 5;\\ 8$",
+      "$-\\frac{1}{2};\\ 2;\\ 5$",
+      "$-\\frac{1}{2};\\ 5;\\ 8$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $-\\frac{1}{2}$; $2$; $5$.",
+    "explanation": "C, czyli $-\\frac{1}{2};\\ 2;\\ 5$",
     "solutionSteps": [
-      "Równanie jest w postaci iloczynowej, więc aby je rozwiązać, przyrównujemy każdy czynnik do zera. Mamy więc $x^3 – 8 = 0$, $x – 5 = 0$ oraz $2x + 1 = 0$.",
-      "Rozwiązujemy każde z trzech równań: z pierwszego ($x^3 = 8$) otrzymujemy $x = 2$, z drugiego ($x = 5$), a z trzeciego ($2x = -1$) otrzymujemy $x = -\\frac{1}{2}$.",
-      "Zbiór wszystkich rozwiązań to $\\{-\\frac{1}{2}, 2, 5\\}$."
+      "Iloczyn jest równy zeru, gdy któryś z czynników jest równy zeru: $x^3-8=0$ lub $x-5=0$, lub $2x+1=0$.",
+      "Z $x^3=8$ otrzymujemy $x=2$, z $x-5=0$ mamy $x=5$, a z $2x=-1$ mamy $x=-\\frac{1}{2}$.",
+      "Zbiór rozwiązań to $\\left\\{-\\frac{1}{2},2,5\\right\\}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1114,20 +1116,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Cena towaru została podwyższona o 30%, a po pewnym czasie nową, wyższą cenę ponownie podwyższono, tym razem o 10%. W rezultacie obu podwyżek wyjściowa cena towaru zwiększyła się o",
+    "prompt": "Cena towaru została podwyższona o $30\\%$, a po pewnym czasie nową, wyższą cenę ponownie podwyższono, tym razem o $10\\%$. W rezultacie obu podwyżek wyjściowa cena towaru zwiększyła się o",
     "choices": [
-      "15%",
-      "20%",
-      "40%",
-      "43%"
+      "$15\\%$",
+      "$20\\%$",
+      "$40\\%$",
+      "$43\\%$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 43%",
+    "explanation": "D, czyli $43\\%$",
     "solutionSteps": [
-      "Załóżmy, że początkowa cena towaru wynosi $100$ zł. Po pierwszej podwyżce o 30% nowa cena to $100 + 0.30 \\cdot 100 = 130$ zł.",
-      "Następnie cenę 130 zł podwyższono o 10%. Obliczamy tę podwyżkę: $0.10 \\cdot 130 = 13$ zł. Nowa cena wynosi więc $130 + 13 = 143$ zł.",
-      "Obliczamy łączny procentowy wzrost ceny od ceny początkowej: $\\frac{143 - 100}{100} \\cdot 100\\% = 43\\%$."
+      "Przyjmijmy cenę początkową $100$ zł. Po podwyżce o $30\\%$ cena wynosi $100\\cdot1{,}3=130$ zł.",
+      "Druga podwyżka o $10\\%$: $130\\cdot1{,}1=143$ zł.",
+      "Cena wzrosła o $143-100=43$ zł, czyli o $\\frac{43}{100}\\cdot100\\%=43\\%$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1145,20 +1148,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych x wzorami $f(x) = -5x + 1$ oraz $g(x) = 5x$ . Liczba punktów wspólnych wykresów tych funkcji jest równa",
+    "prompt": "Dane są dwie funkcje określone dla wszystkich liczb rzeczywistych $x$ wzorami $f(x)=-5x+1$ oraz $g(x)=5^x$. Liczba punktów wspólnych wykresów tych funkcji jest równa",
     "choices": [
-      "3",
-      "2",
-      "1",
-      "0"
+      "$3$",
+      "$2$",
+      "$1$",
+      "$0$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 1",
+    "explanation": "C, czyli $1$",
     "solutionSteps": [
-      "Aby znaleźć liczbę punktów wspólnych wykresów funkcji $f(x)$ i $g(x)$, przyrównujemy je do siebie: $-5x + 1 = 5x$.",
-      "Rozwiązujemy otrzymane równanie liniowe, przenosząc wszystkie wyrazy $z$ $x$ na jedną stronę: $1 = 5x + 5x$, co daje $1 = 10x$. Dzieląc obie strony przez 10, otrzymujemy $x = \\frac{1}{10}$.",
-      "Ponieważ otrzymaliśmy dokładnie jedno rozwiązanie dla $x$, oznacza to, że wykresy funkcji mają dokładnie jeden punkt wspólny."
+      "Punkty wspólne wykresów odpowiadają rozwiązaniom równania $-5x+1=5^x$, czyli $5^x+5x-1=0$.",
+      "Funkcja $h(x)=5^x+5x-1$ jest sumą funkcji rosnących $5^x$ i $5x-1$, więc jest rosnąca. Równanie $h(x)=0$ ma więc co najwyżej jedno rozwiązanie.",
+      "$h(0)=1+0-1=0$, czyli $x=0$ jest rozwiązaniem. Wykresy mają dokładnie jeden punkt wspólny: $(0,1)$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1176,20 +1180,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie $(3x + 1 + y)$ 2 jest równe",
+    "prompt": "Wyrażenie $(3x+1+y)^2$ jest równe",
     "choices": [
-      "$3x^{2} + y^{2} + 1$",
-      "$9x^{2} + 6x + y^{2} + 1$",
-      "$3x^{2} + y^{2} + 6 xy + 6x + 1$",
-      "$9x^{2} + y^{2} + 6 xy + 6x + 2y + 1$"
+      "$3x^2+y^2+1$",
+      "$9x^2+6x+y^2+1$",
+      "$3x^2+y^2+6xy+6x+1$",
+      "$9x^2+y^2+6xy+6x+2y+1$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $9 x^2 + y^2 + 6 xy + 6 x + 2 y + 1$.",
+    "explanation": "D, czyli $9x^2+y^2+6xy+6x+2y+1$",
     "solutionSteps": [
-      "Rozpisz kwadrat sumy trzech wyrażeń, stosując wzór $(a+b+c)^2 = a^2+b^2+c^2+2ab+2ac+2bc$. W tym przypadku $a=3x$, $b=1$, $c=y$.\n$(3x+1+y)^2 = (3x)^2 + 1^2 + y^2 + 2(3x)(1) + 2(3x)(y) + 2(1)(y)$.",
-      "Oblicz poszczególne składniki, uprość wyrażenie i zsumuj podobne człony.\n$(3x)^2 = 9x^2$, $2(3x)(1) = 6x$, $2(3x)(y) = 6xy$, $2(1)(y) = 2y$. Po zsumowaniu otrzymujemy $9x^2 + 1 + y^2 + 6x + 6xy + 2y$.",
-      "Uporządkuj wyrazy $w$ celu dopasowania do jednej z opcji odpowiedzi.\n$9x^2 + y^2 + 6xy + 6x + 2y + 1$."
+      "Korzystamy ze wzoru $(a+b+c)^2=a^2+b^2+c^2+2ab+2ac+2bc$, gdzie $a=3x$, $b=1$, $c=y$: $(3x+1+y)^2=(3x)^2+1^2+y^2+2\\cdot3x\\cdot1+2\\cdot3x\\cdot y+2\\cdot1\\cdot y$.",
+      "Obliczamy składniki: $9x^2+1+y^2+6x+6xy+2y$.",
+      "Porządkujemy: $9x^2+y^2+6xy+6x+2y+1$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1207,19 +1212,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Połowa sumy 4 $28 + 4 28 + 4 28 + 4$ 28 jest równa",
+    "prompt": "Połowa sumy $4^{28}+4^{28}+4^{28}+4^{28}$ jest równa",
     "choices": [
-      "2 30",
-      "2 57",
-      "2 63",
-      "2 112"
+      "$2^{30}$",
+      "$2^{57}$",
+      "$2^{63}$",
+      "$2^{112}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $2^{57}$.",
+    "explanation": "B, czyli $2^{57}$",
     "solutionSteps": [
-      "Zapisz sumę w skróconej postaci, używając potęg: $4 \\cdot 4^{28} = 4^{1+28} = 4^{29}$.",
-      "Oblicz połowę tej sumy, dzieląc przez 2: $\\frac{1}{2} \\cdot 4^{29} = \\frac{1}{2} \\cdot (2^2)^{29} = \\frac{1}{2} \\cdot 2^{58} = 2^{-1} \\cdot 2^{58} = 2^{58-1} = 2^{57}$."
+      "Suma czterech jednakowych składników to $4\\cdot4^{28}=4^{29}$.",
+      "Połowa tej sumy: $\\frac{1}{2}\\cdot4^{29}=2^{-1}\\cdot(2^2)^{29}=2^{-1}\\cdot2^{58}$.",
+      "$2^{-1}\\cdot2^{58}=2^{57}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1237,20 +1244,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równania y = -\\frac{3}{4}$x + \\frac{5}{4}$ oraz $y = -\\frac{4}{3}$ opisują dwie proste",
+    "prompt": "Równania $y=-\\frac{3}{4}x+\\frac{5}{4}$ oraz $y=-\\frac{4}{3}$ opisują dwie proste",
     "choices": [
-      "przecinające się pod kątem o mierze $90^{\\circ}$.",
+      "przecinające się pod kątem o mierze $90^\\circ$.",
       "pokrywające się.",
-      "przecinające się pod kątem różnym od $90^{\\circ}$.",
+      "przecinające się pod kątem różnym od $90^\\circ$.",
       "równoległe i różne."
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli przecinające się pod kątem różnym od $90^{\\circ}$.",
+    "explanation": "C",
     "solutionSteps": [
-      "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Pierwsza prosta ma postać $y = -\\frac{3}{4}x + \\frac{5}{4}$, więc jej współczynnik kierunkowy wynosi $a_1 = -\\frac{3}{4}$. Druga prosta to $y = -\\frac{4}{3}$, co można zapisać jako $y = 0x - \\frac{4}{3}$, więc $a_2 = 0$.",
-      "Porównaj współczynniki kierunkowe prostych. Ponieważ $a_1 = -\\frac{3}{4}$ i $a_2 = 0$, współczynniki te są różne ($a_1 \\neq a_2$), co oznacza, że proste nie są równoległe ani pokrywające się.",
-      "Sprawdź warunek prostopadłości prostych. Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$ ($a_1 \\cdot a_2 = -1$). W tym przypadku $a_1 \\cdot a_2 = -\\frac{3}{4} \\cdot 0 = 0$. Ponieważ iloczyn nie jest równy $-1$, proste nie są prostopadłe."
+      "Pierwsza prosta ma współczynnik kierunkowy $a_1=-\\frac{3}{4}$. Druga prosta $y=-\\frac{4}{3}$ jest pozioma, więc $a_2=0$.",
+      "$a_1\\neq a_2$, więc proste nie są równoległe i się nie pokrywają — mają jeden punkt wspólny.",
+      "Iloczyn współczynników kierunkowych $a_1\\cdot a_2=-\\frac{3}{4}\\cdot0=0\\neq-1$, więc proste nie są prostopadłe. Przecinają się pod kątem różnym od $90^\\circ$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1261,28 +1269,28 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m15-probna-z09",
     "title": "Matura - próbna 2015 - poziom podstawowy - zad. 9",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie dane są punkty: ![Rysunek do zadania](/cke-matura/m15-probna/z09-1.png) Kąt BAC jest równy",
+    "prompt": "Na płaszczyźnie dane są punkty $A=(\\sqrt{2},\\sqrt{6})$, $B=(0,0)$ i $C=(\\sqrt{2},0)$. Kąt $BAC$ jest równy",
     "choices": [
-      "$30^{\\circ}$",
-      "$45^{\\circ}$",
-      "$60^{\\circ}$",
-      "$75^{\\circ}$"
+      "$30^\\circ$",
+      "$45^\\circ$",
+      "$60^\\circ$",
+      "$75^\\circ$"
     ],
-    "correctIndex": 1,
-    "explanation": "B",
+    "correctIndex": 0,
+    "explanation": "A, czyli $30^\\circ$",
     "solutionSteps": [
-      "Oblicz długości boków AB i AC, używając wzoru na odległość między punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Długość AB: $\\sqrt{(-1-2)^2 + (3-1)^2} = \\sqrt{(-3)^2 + 2^2} = \\sqrt{9+4} = \\sqrt{13}$. Długość AC: $\\sqrt{(5-2)^2 + (2-1)^2} = \\sqrt{3^2 + 1^2} = \\sqrt{9+1} = \\sqrt{10}$.",
-      "Oblicz długość boku BC. Długość BC: $\\sqrt{(5-(-1))^2 + (2-3)^2} = \\sqrt{6^2 + (-1)^2} = \\sqrt{36+1} = \\sqrt{37}$.",
-      "Użyj twierdzenia cosinusów, aby znaleźć kąt BAC. Wzór: $a^2 = b^2 + c^2 - 2bc \\cos(\\alpha)$. W naszym przypadku: $BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cos(\\angle BAC)$. $37 = 13 + 10 - 2 \\cdot \\sqrt{13} \\cdot \\sqrt{10} \\cos(\\angle BAC)$. $37 = 23 - 2\\sqrt{130} \\cos(\\angle BAC)$. $14 = -2\\sqrt{130} \\cos(\\angle BAC)$. $\\cos(\\angle BAC) = -\\frac{14}{2\\sqrt{130}} = -\\frac{7}{\\sqrt{130}}$.",
-      "Oblicz cosinus wektora AB i AC. Wektor $\\vec{AB} = (-1-2, 3-1) = (-3, 2)$. Wektor $\\vec{AC} = (5-2, 2-1) = (3, 1)$. $\\cos(\\angle BAC) = \\frac{\\vec{AB} \\cdot \\vec{AC}}{|\\vec{AB}| \\cdot |\\vec{AC}|} = \\frac{(-3)(3) + (2)(1)}{\\sqrt{13} \\cdot \\sqrt{10}} = \\frac{-9+2}{\\sqrt{130}} = \\frac{-7}{\\sqrt{130}}$. Kąt jest rozwarty. Pytanie dotyczy kąta w trójkącie, przyjmujemy kąt ostry."
+      "Obliczamy długości boków: $|AB|=\\sqrt{(\\sqrt{2})^2+(\\sqrt{6})^2}=\\sqrt{2+6}=2\\sqrt{2}$, $|BC|=\\sqrt{(\\sqrt{2})^2+0^2}=\\sqrt{2}$, $|AC|=\\sqrt{0^2+(\\sqrt{6})^2}=\\sqrt{6}$.",
+      "$|BC|^2+|AC|^2=2+6=8=|AB|^2$, więc trójkąt $ABC$ jest prostokątny z kątem prostym przy wierzchołku $C$.",
+      "$\\sin\\angle BAC=\\frac{|BC|}{|AB|}=\\frac{\\sqrt{2}}{2\\sqrt{2}}=\\frac{1}{2}$, więc $\\angle BAC=30^\\circ$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1300,20 +1308,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie x ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji $f$ zawiera dokładnie",
+    "prompt": "Funkcja $f$, określona dla wszystkich liczb całkowitych dodatnich, przyporządkowuje liczbie $x$ ostatnią cyfrę jej kwadratu. Zbiór wartości funkcji $f$ zawiera dokładnie",
     "choices": [
-      "5 elementów",
-      "6 elementów",
-      "9 elementów",
-      "10 elementów"
+      "$5$ elementów.",
+      "$6$ elementów.",
+      "$9$ elementów.",
+      "$10$ elementów."
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 6 elementów",
+    "explanation": "B, czyli $6$ elementów",
     "solutionSteps": [
-      "Obliczamy kwadraty pierwszych kilku liczb całkowitych dodatnich i wyznaczamy ich ostatnie cyfry: $1^2=1$ $(ostatnia cyfra 1)$, $2^2=4$ $(ostatnia cyfra 4)$, $3^2=9$ $(ostatnia cyfra 9)$, $4^2=16$ $(ostatnia cyfra 6)$, $5^2=25$ $(ostatnia cyfra 5)$, $6^2=36$ $(ostatnia cyfra 6)$, $7^2=49$ $(ostatnia cyfra 9)$, $8^2=64$ $(ostatnia cyfra 4)$, $9^2=81$ $(ostatnia cyfra 1)$, $10^2=100$ $(ostatnia cyfra 0)$.",
-      "Zauważamy, że ostatnia cyfra kwadratu liczby zależy tylko od ostatniej cyfry tej liczby, a sekwencja ostatnich cyfr kwadratów powtarza się co 10 liczb. Z zebranych przykładów widzimy, że możliwe ostatnie cyfry to: 0, 1, 4, 5, 6, 9.",
-      "Zliczamy unikalne ostatnie cyfry znalezione w poprzednim kroku; jest ich 6."
+      "Ostatnia cyfra kwadratu zależy tylko od ostatniej cyfry liczby $x$. Wystarczy więc sprawdzić cyfry $0,1,2,\\ldots,9$.",
+      "Kolejne kwadraty kończą się cyframi: $0^2\\to0$, $1^2\\to1$, $2^2\\to4$, $3^2\\to9$, $4^2\\to6$, $5^2\\to5$, $6^2\\to6$, $7^2\\to9$, $8^2\\to4$, $9^2\\to1$.",
+      "Zbiór wartości to $\\{0,1,4,5,6,9\\}$ — dokładnie $6$ elementów."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1333,18 +1342,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Ekipa złożona z 25 pracowników wymieniła tory kolejowe na pewnym odcinku w ciągu 156 dni. Jeśli wymianę torów kolejowych na kolejnym odcinku o tej samej długości trzeba przeprowadzić w ciągu 100 dni, to, przy założeniu takiej samej wydajności, należy zatrudnić do pracy o",
     "choices": [
-      "14 osób więcej",
-      "17 osób więcej",
-      "25 osób więcej",
-      "39 osób więcej"
+      "14 osób więcej.",
+      "17 osób więcej.",
+      "25 osób więcej.",
+      "39 osób więcej."
     ],
     "correctIndex": 0,
     "explanation": "A, czyli 14 osób więcej",
     "solutionSteps": [
-      "Obliczamy całkowitą liczbę \"dniówek\" potrzebnych do wykonania pracy: $25 \\text{ pracowników} \\cdot 156 \\text{ dni} = 3900 \\text{ dniówek}$.",
-      "Dzielimy całkowitą liczbę dniówek przez nowy termin $(100 dni)$, aby obliczyć minimalną liczbę pracowników: $\\frac{3900 \\text{ dniówek}}{100 \\text{ dni}} = 39 \\text{ pracowników}$.",
-      "Obliczamy, o ile więcej osób należy zatrudnić: $39 \\text{ pracowników} - 25 \\text{ pracowników} = 14 \\text{ osób więcej}$."
+      "Praca do wykonania to $25\\cdot156=3900$ dniówek.",
+      "Przy terminie $100$ dni potrzebujemy $\\frac{3900}{100}=39$ pracowników.",
+      "Należy zatrudnić $39-25=14$ osób więcej."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1362,21 +1372,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z sześcianu ABCDEFGH o krawędzi $d$ługości a odcięto ostrosłup ABDE (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z12-1.png) Ile razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
+    "prompt": "Z sześcianu $ABCDEFGH$ o krawędzi $a$ odcięto ostrosłup $ABDE$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m15-probna/z12-fig1.png)\n\nIle razy objętość tego ostrosłupa jest mniejsza od objętości pozostałej części sześcianu?",
     "choices": [
-      "2 razy",
-      "3 razy",
-      "4 razy",
-      "5 razy"
+      "2 razy.",
+      "3 razy.",
+      "4 razy.",
+      "5 razy."
     ],
     "correctIndex": 3,
     "explanation": "D, czyli 5 razy",
     "solutionSteps": [
-      "Oblicz objętość ostrosłupa ABDE. Podstawą jest trójkąt prostokątny ABD, a wysokością krawędź AE. Objętość ostrosłupa to $\\frac{1}{3} \\cdot \\text{pole podstawy} \\cdot \\text{wysokość}$. Pole trójkąta ABD to $\\frac{1}{2} a^2$, a wysokość to $a$. Zatem objętość ostrosłupa wynosi $V_{ostrosłupa} = \\frac{1}{3} \\cdot \\frac{1}{2} a^2 \\cdot a = \\frac{1}{6} a^3$.",
-      "Oblicz objętość całego sześcianu. Objętość sześcianu o krawędzi $a$ to $V_{sześcianu} = a^3$.",
-      "Oblicz objętość pozostałej części sześcianu po odcięciu ostrosłupa. Jest to różnica objętości sześcianu i objętości ostrosłupa: $V_{pozostała} = V_{sześcianu} - V_{ostrosłupa} = a^3 - \\frac{1}{6} a^3 = \\frac{5}{6} a^3$.",
-      "Oblicz, ile razy objętość ostrosłupa jest mniejsza od objętości pozostałej części sześcianu. Dzielimy objętość ostrosłupa przez objętość pozostałej części: $\\frac{V_{ostrosłupa}}{V_{pozostała}} = \\frac{\\frac{1}{6} a^3}{\\frac{5}{6} a^3} = \\frac{1}{5}$. Oznacza to, że objętość ostrosłupa jest 5 razy mniejsza."
+      "Objętość sześcianu wynosi $a^3$.",
+      "Ostrosłup $ABDE$ ma podstawę $ABD$ (połowa kwadratu $ABCD$, pole $\\frac{1}{2}a^2$) i wysokość $AE=a$. Zatem $V_{ABDE}=\\frac{1}{3}\\cdot\\frac{1}{2}a^2\\cdot a=\\frac{1}{6}a^3$.",
+      "Pozostała część sześcianu ma objętość $a^3-\\frac{1}{6}a^3=\\frac{5}{6}a^3$.",
+      "$\\frac{V_{ABDE}}{V_{\\text{pozostałej}}}=\\frac{\\frac{1}{6}a^3}{\\frac{5}{6}a^3}=\\frac{1}{5}$, więc objętość ostrosłupa jest 5 razy mniejsza."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1394,20 +1405,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie $A = (2, 4)$, która jest wykresem funkcji kwadratowej f. ![Rysunek do zadania](/cke-matura/m15-probna/z13-1.png) Funkcja $f$ może być opisana wzorem",
+    "prompt": "W układzie współrzędnych narysowano część paraboli o wierzchołku w punkcie $A=(2,4)$, która jest wykresem funkcji kwadratowej $f$.\n\n![Rysunek 1](/cke-matura/m15-probna/z13-fig1.png)\n\nFunkcja $f$ może być opisana wzorem",
     "choices": [
-      "$f(x)$ = $(x - 2) 2 + 4$",
-      "$f(x)$ = $(x + 2) 2 + 4$",
-      "$f(x)$ = - $(x - 2) 2 + 4$",
-      "$f(x)$ = - $(x + 2) 2 + 4$"
+      "$f(x)=(x-2)^2+4$",
+      "$f(x)=(x+2)^2+4$",
+      "$f(x)=-(x-2)^2+4$",
+      "$f(x)=-(x+2)^2+4$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $f(x) = -(x-2)^2 + 4$.",
+    "explanation": "C, czyli $f(x)=-(x-2)^2+4$",
     "solutionSteps": [
-      "Skorzystaj z postaci kanonicznej funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka paraboli. Podano wierzchołek $A=(2, 4)$, więc $p=2$ i $q=4$.",
-      "Określ współczynnik $a$ na podstawie rysunku. Ponieważ ramiona paraboli skierowane są w dół, współczynnik $a$ musi być ujemny. Z dostępnych opcji tylko C) i D) mają ujemny współczynnik $a$.",
-      "Sprawdź, która z opcji C) lub D) pasuje do wierzchołka $(2, 4)$. Opcja C) to $f(x) = -(x-2)^2 + 4$. Po przekształceniu $(x-p)^2 + q$ otrzymujemy $p=2$ i $q=4$, co zgadza się z wierzchołkiem. Opcja D) ma wierzchołek $(-2, 4)$."
+      "Postać kanoniczna: $f(x)=a(x-p)^2+q$, gdzie $(p,q)=(2,4)$, więc $f(x)=a(x-2)^2+4$.",
+      "Ramiona paraboli są skierowane w dół, więc $a<0$. To wyklucza odpowiedzi A i B, a z pozostałych wierzchołek $(2,4)$ ma tylko wzór z $p=2$.",
+      "Parabola przechodzi przez początek układu współrzędnych: $0=a(0-2)^2+4$, skąd $a=-1$. Zatem $f(x)=-(x-2)^2+4$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1425,20 +1437,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty ![Rysunek do zadania](/cke-matura/m15-probna/z14-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-2.png) ![Rysunek do zadania](/cke-matura/m15-probna/z14-3.png) są kolejnymi wierzchołkami równoległoboku ABCD . Przekątne tego równoległoboku przecinają się w punkcie",
+    "prompt": "Punkty $A=(-6-2\\sqrt{2},\\,4-2\\sqrt{2})$, $B=(2+4\\sqrt{2},\\,-6\\sqrt{2})$, $C=(2+6\\sqrt{2},\\,6-2\\sqrt{2})$ są kolejnymi wierzchołkami równoległoboku $ABCD$. Przekątne tego równoległoboku przecinają się w punkcie",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-probna/z14-4.png)",
-      "![Rysunek do zadania](/cke-matura/m15-probna/z14-5.png)",
-      "![Rysunek do zadania](/cke-matura/m15-probna/z14-6.png)",
-      "![Rysunek do zadania](/cke-matura/m15-probna/z14-7.png)"
+      "$S=(-1+4\\sqrt{2},\\,5-5\\sqrt{2})$",
+      "$S=(-2+\\sqrt{2},\\,2-4\\sqrt{2})$",
+      "$S=(2+5\\sqrt{2},\\,3-4\\sqrt{2})$",
+      "$S=(-2+2\\sqrt{2},\\,5-2\\sqrt{2})$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $(4,4)$",
+    "explanation": "D, czyli $S=(-2+2\\sqrt{2},\\,5-2\\sqrt{2})$",
     "solutionSteps": [
-      "W równoległoboku przekątne przecinają się w połowie. Oznaczmy punkt przecięcia przekątnych jako S. Wtedy $S = \\frac{A+C}{2} = \\frac{B+D}{2}$.",
-      "Wykorzystamy zależność, że środek odcinka AC jest tym samym punktem co środek odcinka BD. Podstawiamy współrzędne punktów A, B, C i D: $S = \\frac{(1,2)+(6,7)}{2} = (\\frac{1+6}{2}, \\frac{2+7}{2}) = (\\frac{7}{2}, \\frac{9}{2})$.",
-      "Punkt D obliczamy z równości $S = \\frac{B+D}{2}$. Stąd $D = 2S - B$. Podstawiamy współrzędne punktów S i B: $D = 2(\\frac{7}{2}, \\frac{9}{2}) - (3,5) = (7,9) - (3,5) = (7-3, 9-5) = (4,4)$."
+      "Przekątne równoległoboku przecinają się w punkcie $S$, który jest środkiem każdej z nich, w szczególności środkiem odcinka $AC$.",
+      "$S=\\left(\\frac{-6-2\\sqrt{2}+2+6\\sqrt{2}}{2},\\ \\frac{4-2\\sqrt{2}+6-2\\sqrt{2}}{2}\\right)=\\left(\\frac{-4+4\\sqrt{2}}{2},\\ \\frac{10-4\\sqrt{2}}{2}\\right)$.",
+      "$S=(-2+2\\sqrt{2},\\ 5-2\\sqrt{2})$, co odpowiada odpowiedzi D."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1456,20 +1469,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba $\\sin 150^{\\circ}$ jest równa liczbie",
+    "prompt": "Liczba $\\sin 150^\\circ$ jest równa liczbie",
     "choices": [
-      "$\\cos 60^{\\circ}$",
-      "$\\cos 120^{\\circ}$",
-      "$\\operatorname{tg} 120^{\\circ}$",
-      "$\\operatorname{tg} 60^{\\circ}$"
+      "$\\cos 60^\\circ$",
+      "$\\cos 120^\\circ$",
+      "$\\operatorname{tg} 120^\\circ$",
+      "$\\operatorname{tg} 60^\\circ$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\cos 60^\\circ$",
+    "explanation": "A, czyli $\\cos60^\\circ$",
     "solutionSteps": [
-      "Obliczamy wartość $\\sin 150^\\circ$. Korzystamy ze wzoru $\\sin(180^\\circ - \\alpha) = \\sin \\alpha$, zatem $\\sin 150^\\circ = \\sin(180^\\circ - 30^\\circ) = \\sin 30^\\circ = \\frac{1}{2}$.",
-      "Obliczamy wartości funkcji trygonometrycznych podanych w opcjach.\nA) $\\cos 60^\\circ = \\frac{1}{2}$.\nB) $\\cos 120^\\circ = \\cos(180^\\circ - 60^\\circ) = -\\cos 60^\\circ = -\\frac{1}{2}$.\nC) $\\operatorname{tg} 120^\\circ = \\operatorname{tg}(180^\\circ - 60^\\circ) = -\\operatorname{tg} 60^\\circ = -\\sqrt{3}$.\nD) $\\operatorname{tg} 60^\\circ = \\sqrt{3}$.",
-      "Porównujemy obliczone wartości z wartością $\\sin 150^\\circ$. Wartość $\\sin 150^\\circ$ jest równa wartości $\\cos 60^\\circ$."
+      "$\\sin150^\\circ=\\sin(180^\\circ-30^\\circ)=\\sin30^\\circ=\\frac{1}{2}$.",
+      "Obliczamy wartości z odpowiedzi: $\\cos60^\\circ=\\frac{1}{2}$, $\\cos120^\\circ=-\\frac{1}{2}$, $\\operatorname{tg}120^\\circ=-\\sqrt{3}$, $\\operatorname{tg}60^\\circ=\\sqrt{3}$.",
+      "$\\sin150^\\circ=\\cos60^\\circ=\\frac{1}{2}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1480,14 +1494,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m15-probna-z16",
     "title": "Matura - próbna 2015 - poziom podstawowy - zad. 16",
-    "category": "geometria",
+    "category": "ciagi",
     "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości 1m , a bok każdego z następnych trójkątów jest o 10 cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości 5,9m . Ile trójkątów przedstawia mural?",
+    "prompt": "Na ścianie kamienicy zaprojektowano mural utworzony z szeregu trójkątów równobocznych różnej wielkości. Najmniejszy trójkąt ma bok długości $1$ m, a bok każdego z następnych trójkątów jest o $10$ cm dłuższy niż bok poprzedzającego go trójkąta. Ostatni trójkąt ma bok długości $5{,}9$ m. Ile trójkątów przedstawia mural?",
     "choices": [
       "49",
       "50",
@@ -1497,10 +1511,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli 50",
     "solutionSteps": [
-      "Zauważ, że długości boków kolejnych trójkątów tworzą ciąg arytmetyczny. Pierwszy wyraz ($a_1$) to 1m, a różnica ($r$) to 10 $cm = 0,1m$. Ostatni wyraz ($a_n$) to 5,9m.",
-      "Użyj wzoru na $n$-ty wyraz ciągu arytmetycznego, $a_n = a_1 + (n-1)r$, aby obliczyć liczbę wyrazów ($n$). Podstaw dane: $5,9 = 1 + (n-1) \\cdot 0,1$.",
-      "Rozwiąż równanie względem $n$: $4,9 = (n-1) \\cdot 0,1 \\implies 49 = n-1 \\implies n = 50$."
+      "Długości boków tworzą ciąg arytmetyczny o pierwszym wyrazie $a_1=1$ m i różnicy $r=0{,}1$ m. Ostatni wyraz to $a_n=5{,}9$ m.",
+      "Ze wzoru $a_n=a_1+(n-1)r$: $5{,}9=1+(n-1)\\cdot0{,}1$.",
+      "$4{,}9=(n-1)\\cdot0{,}1$, czyli $n-1=49$ i $n=50$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1518,7 +1533,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości 20 tworzy z podstawą kąt 67,$5^{\\circ}$. Pole tego trójkąta jest równe",
+    "prompt": "Dany jest trójkąt równoramienny, w którym ramię o długości $20$ tworzy z podstawą kąt $67{,}5^\\circ$. Pole tego trójkąta jest równe",
     "choices": [
       "$100\\sqrt{3}$",
       "$100\\sqrt{2}$",
@@ -1526,11 +1541,12 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "$200\\sqrt{2}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $100 \\sqrt{2}$",
+    "explanation": "B, czyli $100\\sqrt{2}$",
     "solutionSteps": [
-      "Użyj wzoru na pole trójkąta $P = \\frac{1}{2}ab\\sin\\gamma$. W naszym przypadku $a=b=20$ (ramiona), a kąt $\\gamma$ między nimi to $180^\\circ - 2 \\cdot 67.5^\\circ = 180^\\circ - 135^\\circ = 45^\\circ$.",
-      "Podstaw dane do wzoru: $P = \\frac{1}{2} \\cdot 20 \\cdot 20 \\cdot \\sin(45^\\circ) = \\frac{1}{2} \\cdot 400 \\cdot \\frac{\\sqrt{2}}{2} = 100 \\sqrt{2}$."
+      "Kąty przy podstawie mają po $67{,}5^\\circ$, więc kąt między ramionami wynosi $180^\\circ-2\\cdot67{,}5^\\circ=45^\\circ$.",
+      "Pole: $P=\\frac{1}{2}\\cdot20\\cdot20\\cdot\\sin45^\\circ=200\\cdot\\frac{\\sqrt{2}}{2}=100\\sqrt{2}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1548,20 +1564,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów. ![Rysunek do zadania](/cke-matura/m15-probna/z18-1.png) ![Rysunek do zadania](/cke-matura/m15-probna/z18-2.png) Pole powierzchni całkowitej ostrosłupa o krawędzi $a$ jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi $b$ . Ile razy objętość ostrosłupa o krawędzi $a$ jest większa od objętości ostrosłupa o krawędzi $b$ ?",
+    "prompt": "Na rysunkach poniżej przedstawiono siatki dwóch ostrosłupów.\n\n![Rysunek 1](/cke-matura/m15-probna/z18-fig1.png)\n\n![Rysunek 2](/cke-matura/m15-probna/z18-fig2.png)\n\nPole powierzchni całkowitej ostrosłupa o krawędzi $a$ jest dwa razy większe od pola powierzchni całkowitej ostrosłupa o krawędzi $b$. Ile razy objętość ostrosłupa o krawędzi $a$ jest większa od objętości ostrosłupa o krawędzi $b$?",
     "choices": [
       "$\\sqrt{2}$",
-      "2",
+      "$2$",
       "$2\\sqrt{2}$",
-      "4"
+      "$4$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $2\\sqrt{2}$",
     "solutionSteps": [
-      "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $a$. Ostrosłup prawidłowy czworokątny ma 5 ścian: 1 kwadratową u podstawy $i$ 4 trójkątne. Pole podstawy $P_p = a^2$. Pole jednej ściany bocznej (trójkąta) to $P_s = \\frac{1}{2} \\cdot a \\cdot h_s$, gdzie $h_s$ to wysokość ściany bocznej. Z twierdzenia Pitagorasa dla połowy ściany bocznej: $h_s = \\sqrt{a^2 - (\\frac{a}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{4}} = \\sqrt{\\frac{3a^2}{4}} = \\frac{a\\sqrt{3}}{2}$. Pole powierzchni całkowitej $P_a = a^2 + 4 \\cdot \\frac{1}{2} \\cdot a \\cdot \\frac{a\\sqrt{3}}{2} = a^2 + a^2\\sqrt{3} = a^2(1+\\sqrt{3})$.",
-      "Oblicz pole powierzchni całkowitej ostrosłupa o krawędzi $b$. Analogicznie, pole powierzchni całkowitej $P_b = b^2(1+\\sqrt{3})$. Zgodnie z treścią zadania $P_a = 2 P_b$, czyli $a^2(1+\\sqrt{3}) = 2 b^2(1+\\sqrt{3})$. Po skróceniu mamy $a^2 = 2b^2$, co daje $\\frac{a}{b} = \\sqrt{2}$.",
-      "Oblicz objętości obu ostrosłupów i ich stosunek. Objętość ostrosłupa to $V = \\frac{1}{3} P_p \\cdot H$, gdzie $H$ to wysokość ostrosłupa. Dla ostrosłupa o krawędzi $a$, $P_p = a^2$. Wysokość $H_a = \\sqrt{a^2 - (\\frac{d}{2})^2}$, gdzie $d$ to przekątna podstawy. $d = a\\sqrt{2}$, więc $H_a = \\sqrt{a^2 - (\\frac{a\\sqrt{2}}{2})^2} = \\sqrt{a^2 - \\frac{2a^2}{4}} = \\sqrt{\\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}} = \\frac{a\\sqrt{2}}{2}$. Objętość $V_a = \\frac{1}{3} a^2 \\cdot \\frac{a\\sqrt{2}}{2} = \\frac{a^3\\sqrt{2}}{6}$. Analogicznie $V_b = \\frac{b^3\\sqrt{2}}{6}$. Stosunek objętości $\\frac{V_a}{V_b} = \\frac{a^3\\sqrt{2}/6}{b^3\\sqrt{2}/6} = \\frac{a^3}{b^3} = (\\frac{a}{b})^3 = (\\sqrt{2})^3 = 2\\sqrt{2}$."
+      "Obie siatki składają się z czterech trójkątów równobocznych, więc są to siatki czworościanów foremnych o krawędziach $a$ i $b$.",
+      "Pole powierzchni całkowitej czworościanu foremnego o krawędzi $x$ to $P_c=4\\cdot\\frac{x^2\\sqrt{3}}{4}=x^2\\sqrt{3}$. Z warunku $P_a=2P_b$ otrzymujemy $a^2\\sqrt{3}=2b^2\\sqrt{3}$, czyli $a^2=2b^2$ i $a=b\\sqrt{2}$.",
+      "Objętość czworościanu foremnego o krawędzi $x$ jest równa $V=\\frac{x^3\\sqrt{2}}{12}$, więc $\\frac{V_a}{V_b}=\\left(\\frac{a}{b}\\right)^3=(\\sqrt{2})^3=2\\sqrt{2}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1572,27 +1589,28 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m15-probna-z19",
     "title": "Matura - próbna 2015 - poziom podstawowy - zad. 19",
-    "category": "algebra",
+    "category": "geometria",
     "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na okręgu o środku S leżą punkty A , B , C i D . Odcinek AB jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą AC jest równy $21^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-probna/z19-1.png) Kąt α między cięciwami AD i CD jest równy",
+    "prompt": "Na okręgu o środku $S$ leżą punkty $A$, $B$, $C$ i $D$. Odcinek $AB$ jest średnicą tego okręgu. Kąt między tą średnicą a cięciwą $AC$ jest równy $21^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m15-probna/z19-fig1.png)\n\nKąt $\\alpha$ między cięciwami $AD$ i $CD$ jest równy",
     "choices": [
-      "$21^{\\circ}$",
-      "$42^{\\circ}$",
-      "$48^{\\circ}$",
-      "$69^{\\circ}$"
+      "$21^\\circ$",
+      "$42^\\circ$",
+      "$48^\\circ$",
+      "$69^\\circ$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $48^\\circ$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $69^\\circ$",
     "solutionSteps": [
-      "Kąt $\\angle ACB$ jest kątem wpisanym opartym na średnicy AB, więc jest kątem prostym ($90^\\circ$). W trójkącie prostokątnym ABC, kąt $\\angle ABC = 90^\\circ - \\angle BAC = 90^\\circ - 21^\\circ = 69^\\circ$.",
-      "Kąt $\\angle ADC$ jest kątem wpisanym opartym na tym samym łuku AC co kąt $\\angle ABC$. Kąty te są równe, więc $\\angle ADC = \\angle ABC = 69^\\circ$.",
-      "Kąt $\\angle CDB$ jest kątem wpisanym opartym na średnicy CB (nieprawda, CB nie jest średnicą. Kąt $\\angle CDB$ jest kątem wpisanym opartym na łuku CB). Kąt $\\angle CAB$ jest kątem wpisanym opartym na tym samym łuku CB co kąt $\\angle CDB$. Zatem $\\angle CDB = \\angle CAB = 21^\\circ$. Kąt $\\alpha$ jest różnicą między kątem $\\angle ADC$ a $\\angle CDB$: $\\alpha = \\angle ADC - \\angle CDB = 69^\\circ - 21^\\circ = 48^\\circ$."
+      "Kąt $\\angle ACB$ jest kątem wpisanym opartym na średnicy $AB$, więc $\\angle ACB=90^\\circ$.",
+      "W trójkącie $ABC$: $\\angle ABC=180^\\circ-90^\\circ-21^\\circ=69^\\circ$.",
+      "Kąty $\\angle ADC$ i $\\angle ABC$ są kątami wpisanymi opartymi na tym samym łuku $AC$ (punkty $B$ i $D$ leżą po tej samej stronie cięciwy $AC$), więc $\\alpha=\\angle ADC=\\angle ABC=69^\\circ$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1610,7 +1628,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Średnia arytmetyczna zestawu danych: 3, 8, 3, 11, 3, 10, 3, x jest równa 6. Mediana tego zestawu jest równa",
+    "prompt": "Średnia arytmetyczna zestawu danych: $3, 8, 3, 11, 3, 10, 3, x$ jest równa $6$. Mediana tego zestawu jest równa",
     "choices": [
       "5",
       "6",
@@ -1620,10 +1638,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "A, czyli 5",
     "solutionSteps": [
-      "Oblicz sumę danych, pamiętając, że średnia to suma liczb podzielona przez ich ilość. Mamy 8 liczb, więc suma to $3+8+3+11+3+10+3+x = 41+x$. Średnia wynosi 6, więc $\\frac{41+x}{8} = 6$.",
-      "Rozwiąż równanie, aby znaleźć wartość $x$. Mnożąc obie strony przez 8, otrzymujemy $41+x = 48$, co daje $x=7$.",
-      "Uporządkuj zestaw danych i znajdź medianę. Po dodaniu $x=7$ i uporządkowaniu mamy: 3, 3, 3, 3, 7, 8, 10, 11. Mediana to średnia arytmetyczna dwóch środkowych liczb, czyli $\\frac{3+7}{2} = \\frac{10}{2} = 5$."
+      "Suma ośmiu danych jest równa $3+8+3+11+3+10+3+x=41+x$, a średnia to $6$, więc $\\frac{41+x}{8}=6$.",
+      "$41+x=48$, czyli $x=7$.",
+      "Po uporządkowaniu: $3,3,3,3,7,8,10,11$. Mediana to średnia dwóch środkowych wyrazów: $\\frac{3+7}{2}=5$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1641,20 +1660,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), w którym $a_{1}$ = - $\\sqrt{2}$ , $a_{2} = 2$, $a_{3}$ = - $2\\sqrt{2}$ . Dziesiąty wyraz tego ciągu, czyli $a_{10}$ , jest równy",
+    "prompt": "Dany jest ciąg geometryczny $(a_n)$, w którym $a_1=-\\sqrt{2}$, $a_2=2$, $a_3=-2\\sqrt{2}$. Dziesiąty wyraz tego ciągu, czyli $a_{10}$, jest równy",
     "choices": [
-      "32",
-      "- 32",
+      "$32$",
+      "$-32$",
       "$16\\sqrt{2}$",
-      "- $16\\sqrt{2}$"
+      "$-16\\sqrt{2}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli -32",
+    "correctIndex": 0,
+    "explanation": "A, czyli $32$",
     "solutionSteps": [
-      "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy: $q = \\frac{a_2}{a_1} = \\frac{2}{-\\sqrt{2}} = \\frac{2 \\cdot \\sqrt{2}}{-\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{2\\sqrt{2}}{-2} = -\\sqrt{2}$.",
-      "Skorzystaj ze wzoru na $n$-ty wyraz ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$, aby obliczyć $a_{10}$. Podstaw dane: $a_{10} = a_1 \\cdot q^{10-1} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9$.",
-      "Oblicz $a_{10}$: $a_{10} = (-\\sqrt{2}) \\cdot (-\\sqrt{2})^9 = -(\\sqrt{2})^{10} = -(2^{1/2})^{10} = -2^5 = -32$."
+      "Iloraz ciągu: $q=\\frac{a_2}{a_1}=\\frac{2}{-\\sqrt{2}}=-\\sqrt{2}$.",
+      "$a_{10}=a_1\\cdot q^9=(-\\sqrt{2})\\cdot(-\\sqrt{2})^9$.",
+      "$(-\\sqrt{2})^9=-(\\sqrt{2})^9$, więc $a_{10}=(-\\sqrt{2})\\cdot\\left(-(\\sqrt{2})^9\\right)=(\\sqrt{2})^{10}=\\left((\\sqrt{2})^2\\right)^5=2^5=32$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1672,20 +1692,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$) jest określony wzorem ![Rysunek do zadania](/cke-matura/m15-probna/z22-1.png) dla $n \\ge 1$. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n=\\frac{24-4n}{n}$ dla $n\\ge1$. Liczba wszystkich całkowitych nieujemnych wyrazów tego ciągu jest równa",
     "choices": [
       "7",
       "6",
       "5",
       "4"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli 6",
+    "correctIndex": 2,
+    "explanation": "C, czyli $5$",
     "solutionSteps": [
-      "Aby znaleźć całkowite nieujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $\\frac{-n^2+9n-14}{n+1} \\ge 0$. Ponieważ mianownik $n+1$ jest dodatni dla $n \\ge 1$, wystarczy, że licznik będzie nieujemny: $-n^2+9n-14 \\ge 0$.",
-      "Rozwiązujemy nierówność kwadratową $-n^2+9n-14 \\ge 0$. Pierwiastki równania $-n^2+9n-14 = 0$ to $\\Delta = 81 - 4 \\cdot (-1) \\cdot (-14) = 81 - 56 = 25$, $\\sqrt{\\Delta}=5$, $n_1 = \\frac{-9-5}{-2} = 7$, $n_2 = \\frac{-9+5}{-2} = 2$. Nierówność jest spełniona dla $n \\in [2, 7]$.",
-      "Sprawdzamy, które liczby całkowite $n$ spełniają warunek $n \\ge 1$ i $n \\in [2, 7]$. Są to liczby: 2, 3, 4, 5, 6, 7. Jest ich łącznie 6."
+      "Zapisujemy $a_n=\\frac{24}{n}-4$ dla $n\\ge1$.",
+      "Wyraz jest liczbą całkowitą, gdy $n$ jest dzielnikiem $24$. Wyraz jest nieujemny, gdy $\\frac{24}{n}\\ge4$, czyli $n\\le6$.",
+      "Dzielniki $24$ nie większe od $6$ to $1,2,3,4,6$. Odpowiadają im wyrazy $20,8,4,2,0$ — jest ich $5$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1703,20 +1724,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia i oczek w $i - tym$ rzucie. Wtedy",
+    "prompt": "Rzucamy sześć razy symetryczną sześcienną kostką do gry. Niech $p_i$ oznacza prawdopodobieństwo wyrzucenia $i$ oczek w $i$-tym rzucie. Wtedy",
     "choices": [
-      "$p_{6} = 1$",
-      "$p_{6} = \\frac{1}{6}$",
-      "$p_{3} = 0$",
-      "$p_{3} = \\frac{1}{3}$"
+      "$p_6=1$",
+      "$p_6=\\frac{1}{6}$",
+      "$p_3=0$",
+      "$p_3=\\frac{1}{3}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $p_6 = \\frac{1}{6}$",
+    "explanation": "B, czyli $p_6=\\frac{1}{6}$",
     "solutionSteps": [
-      "Określamy, czym jest zdarzenie elementarne w przypadku rzutu symetryczną sześcienną kostką. Są to wyniki od 1 do 6, każdy z równym prawdopodobieństwem.",
-      "Prawdopodobieństwo wyrzucenia konkretnej liczby oczek (np. $i$ oczek) w jednym rzucie symetryczną sześcienną kostką wynosi $\\frac{1}{6}$. Zapisujemy to jako $p_i = \\frac{1}{6}$.",
-      "Wnioskujemy na podstawie Kroków 1 i 2. Prawdopodobieństwo wyrzucenia 6 oczek ($p_6$) lub 3 oczek ($p_3$) w pojedynczym rzucie jest zawsze takie samo i wynosi $\\frac{1}{6}$."
+      "W pojedynczym rzucie symetryczną kostką wszystkie wyniki $1,2,\\ldots,6$ są równie prawdopodobne.",
+      "Prawdopodobieństwo wyrzucenia ustalonej liczby oczek wynosi $\\frac{1}{6}$, niezależnie od numeru rzutu: $p_i=\\frac{1}{6}$.",
+      "W szczególności $p_6=\\frac{1}{6}$, a $p_3=\\frac{1}{6}$, nie $0$ ani $\\frac{1}{3}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1734,20 +1756,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wskaż liczbę, która spełnia równanie $4x = 9$ .",
+    "prompt": "Wskaż liczbę, która spełnia równanie $4^x=9$.",
     "choices": [
-      "$\\log 9 - \\log 4$",
-      "$\\log 2 / \\log 3$",
-      "2log 9 2",
-      "2log 4 3"
+      "$\\log 9-\\log 4$",
+      "$\\frac{\\log 2}{\\log 3}$",
+      "$2\\log_9 2$",
+      "$2\\log_4 3$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $2\\log_4 3$",
     "solutionSteps": [
-      "Zastosuj własność logarytmu $\\log_a b - \\log_a c = \\log_a \\frac{b}{c}$ do odpowiedzi A, przekształcając ją do postaci $\\log \\frac{9}{4}$.",
-      "Wykorzystaj definicję logarytmu, która mówi, że jeśli $\\log_a b = c$, to $a^c = b$. Równanie z zadania, $4x=9$, po podzieleniu przez 4 daje $x = \\frac{9}{4}$.",
-      "Porównaj przekształconą odpowiedź A z wynikiem równania. Odpowiedź A po przekształceniu to $\\log \\frac{9}{4}$, co jest liczbą, która nie jest równa $\\frac{9}{4}$. Sprawdzamy przekształcenia odpowiedzi D: $2\\log_4 3 = \\log_4 3^2 = \\log_4 9$. Z definicji logarytmu mamy $4^x = 9$, więc $x = \\log_4 9$."
+      "Z definicji logarytmu $4^x=9$ oznacza $x=\\log_4 9$.",
+      "$\\log_4 9=\\log_4 3^2=2\\log_4 3$, więc równanie spełnia liczba z odpowiedzi D.",
+      "Pozostałe: $\\log9-\\log4=\\log\\frac{9}{4}$, $\\frac{\\log2}{\\log3}=\\log_3 2$, $2\\log_9 2=\\log_9 4$ — żadna nie jest równa $\\log_4 9$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1765,17 +1788,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: - $x^{2} - 4x + 21$ .",
+    "prompt": "Rozwiąż nierówność: $-x^2-4x+21<0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x \\in [-7, 3]$",
+    "explanation": "$x\\in(-\\infty,-7)\\cup(3,\\infty)$",
     "solutionSteps": [
-      "Przekształć nierówność do postaci $ax^2 + bx + c \\ge 0$. Pomnóż obie strony przez $-1$ i zmień znak nierówności: $-x^2 - 4x + 21 \\ge 0 \\implies x^2 + 4x - 21 \\le 0$.",
-      "Znajdź miejsca zerowe funkcji kwadratowej $f(x) = x^2 + 4x - 21$. Użyj wzoru na deltę: $\\Delta = b^2 - 4ac = 4^2 - 4 \\cdot 1 \\cdot (-21) = 16 + 84 = 100$, a następnie pierwiastki: $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{-4 - 10}{2} = -7$ i $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{-4 + 10}{2} = 3$.",
-      "Określ zbiór rozwiązań nierówności $x^2 + 4x - 21 \\le 0$. Parabola $y = x^2 + 4x - 21$ ma ramiona skierowane w górę, więc wartości niedodatnie przyjmuje między pierwiastkami (włącznie z nimi)."
+      "Mnożymy obie strony przez $-1$ i zmieniamy znak nierówności: $x^2+4x-21>0$.",
+      "Miejsca zerowe: $\\Delta=4^2-4\\cdot1\\cdot(-21)=16+84=100$, $\\sqrt{\\Delta}=10$, $x_1=\\frac{-4-10}{2}=-7$, $x_2=\\frac{-4+10}{2}=3$.",
+      "Ramiona paraboli $y=x^2+4x-21$ są skierowane do góry, więc $x^2+4x-21>0$ poza przedziałem między pierwiastkami."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1793,17 +1817,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Uzasadnij, że żadna liczba całkowita nie jest rozwiązaniem równania ![Rysunek do zadania](/cke-matura/m15-probna/z26-1.png)",
+    "prompt": "Uzasadnij, że żadna liczba całkowita nie jest rozwiązaniem równania $\\frac{2x+4}{x-2}=2x+1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{1}{2}$",
+    "explanation": "Rozwiązania to $\\frac{5-\\sqrt{73}}{4}$ i $\\frac{5+\\sqrt{73}}{4}$ — liczby niewymierne, więc żadna liczba całkowita nie jest rozwiązaniem.",
     "solutionSteps": [
-      "Przekształć równanie do postaci $\\sqrt{x^2-4x+4} = \\sqrt{x^2+2x+1}$. Podnieś obie strony do kwadratu, aby pozbyć się pierwiastków, otrzymując $x^2-4x+4 = x^2+2x+1$.",
-      "Uprość równanie po odjęciu $x^2$ od obu stron: $-4x+4 = 2x+1$. Przenieś wyrazy $z$ $x$ na jedną stronę, a stałe na drugą: $4-1 = 2x+4x$, co daje $3 = 6x$.",
-      "Rozwiąż równanie liniowe, dzieląc obie strony przez 6: $x = \\frac{3}{6} = \\frac{1}{2}$. Ponieważ $\\frac{1}{2}$ nie jest liczbą całkowitą, równanie nie ma rozwiązań w zbiorze liczb całkowitych."
+      "Dziedziną równania jest $x\\neq2$. Mnożymy obie strony przez $x-2$: $2x+4=(2x+1)(x-2)$.",
+      "Rozwijamy prawą stronę: $(2x+1)(x-2)=2x^2-4x+x-2=2x^2-3x-2$, więc $2x+4=2x^2-3x-2$.",
+      "Porządkujemy: $2x^2-5x-6=0$. Wtedy $\\Delta=(-5)^2-4\\cdot2\\cdot(-6)=25+48=73$ i $x=\\frac{5-\\sqrt{73}}{4}$ lub $x=\\frac{5+\\sqrt{73}}{4}$.",
+      "Liczba $\\sqrt{73}$ jest niewymierna, więc oba rozwiązania są liczbami niewymiernymi. Żadna liczba całkowita nie spełnia równania."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1821,18 +1847,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze 100% pierwiastka pozostało 50% tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po x okresach rozpadu połowicznego wyraża się wzorem $y = (\\frac{1}{2})$ x . W przypadku izotopu jodu 131 I czas połowicznego rozpadu jest równy 8 dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z 1 g 131 I nie więcej niż 0,125 g tego pierwiastka.",
+    "prompt": "Czas połowicznego rozpadu pierwiastka to okres, jaki jest potrzebny, by ze $100\\%$ pierwiastka pozostało $50\\%$ tego pierwiastka. Oznacza to, że ilość pierwiastka pozostała z każdego grama pierwiastka po $x$ okresach rozpadu połowicznego wyraża się wzorem $y=\\left(\\frac{1}{2}\\right)^x$.\n\nW przypadku izotopu jodu $^{131}\\mathrm{I}$ czas połowicznego rozpadu jest równy $8$ dni. Wyznacz najmniejszą liczbę dni, po upływie których pozostanie z $1$ g $^{131}\\mathrm{I}$ nie więcej niż $0{,}125$ g tego pierwiastka.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "24 dni",
+    "explanation": "$24$ dni",
     "solutionSteps": [
-      "Zrozumienie problemu: potrzebujemy znaleźć liczbę okresów połowicznego rozpadu ($x$), po których z 1 g izotopu pozostanie co najwyżej 0,125g. Wzór opisujący ilość pozostałego pierwiastka to $y = (\\frac{1}{2})^x$, gdzie $y$ to pozostała masa w gramach, a $x$ to liczba okresów rozpadu.",
-      "Ustawienie nierówności na podstawie danych: $y \\le 0.125$, czyli $(\\frac{1}{2})^x \\le 0.125$. Ponieważ $0.125 = \\frac{125}{1000} = \\frac{1}{8} = (\\frac{1}{2})^3$, nierówność przyjmuje postać $(\\frac{1}{2})^x \\le (\\frac{1}{2})^3$.",
-      "Rozwiązanie nierówności: dla podstawy $\\frac{1}{2} < 1$, nierówność potęg jest odwrócona: $x \\ge 3$. Oznacza to, że potrzeba co najmniej 3 okresów połowicznego rozpadu.",
-      "Obliczenie najmniejszej liczby dni: czas połowicznego rozpadu wynosi 8 dni. Najmniejsza liczba dni to $3 \\cdot 8 \\text{ dni} = 24 \\text{ dni}$."
+      "Po $x$ okresach połowicznego rozpadu z $1$ g zostaje $\\left(\\frac{1}{2}\\right)^x$ grama. Szukamy $x$ takiego, że $\\left(\\frac{1}{2}\\right)^x\\le0{,}125$.",
+      "$0{,}125=\\frac{1}{8}=\\left(\\frac{1}{2}\\right)^3$, więc $\\left(\\frac{1}{2}\\right)^x\\le\\left(\\frac{1}{2}\\right)^3$.",
+      "Podstawa potęgi jest mniejsza od $1$, więc nierówność odwraca się: $x\\ge3$.",
+      "Jeden okres to $8$ dni, zatem najmniejsza liczba dni to $3\\cdot8=24$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1850,17 +1877,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Uzasadnij, że jeżeli liczba całkowita nie dzieli się przez 3, to jej kwadrat przy dzieleniu przez 3 daje resztę 1.",
+    "prompt": "Uzasadnij, że jeżeli liczba całkowita nie dzieli się przez $3$, to jej kwadrat przy dzieleniu przez $3$ daje resztę $1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "W obu przypadkach kwadrat liczby daje resztę 1 przy dzieleniu przez 3.",
+    "explanation": "W obu przypadkach kwadrat liczby daje resztę $1$ przy dzieleniu przez $3$.",
     "solutionSteps": [
-      "Liczbę całkowitą, która nie dzieli się przez 3, możemy zapisać w postaci $3k+1$ lub $3k+2$, gdzie $k$ jest liczbą całkowitą. Rozważymy oba przypadki.",
-      "Dla liczby postaci $3k+1$, jej kwadrat wynosi $(3k+1)^2 = 9k^2 + 6k + 1 = 3(3k^2+2k) + 1$. Przy dzieleniu przez 3 reszta wynosi 1.",
-      "Dla liczby postaci $3k+2$, jej kwadrat wynosi $(3k+2)^2 = 9k^2 + 12k + 4 = 3(3k^2+4k+1) + 1$. Również przy dzieleniu przez 3 reszta wynosi 1."
+      "Liczbę całkowitą, która nie dzieli się przez $3$, można zapisać w postaci $3k+1$ lub $3k+2$, gdzie $k$ jest liczbą całkowitą.",
+      "Dla $n=3k+1$: $n^2=(3k+1)^2=9k^2+6k+1=3(3k^2+2k)+1$, więc reszta z dzielenia przez $3$ wynosi $1$.",
+      "Dla $n=3k+2$: $n^2=(3k+2)^2=9k^2+12k+4=3(3k^2+4k+1)+1$, więc reszta również wynosi $1$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1878,17 +1906,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości A do miejscowości C przez miejscowość B , która znajduje się w połowie drogi z A do C . Wartość prędkości średniej samochodu na trasie z A do B była równa 40 $km / h$ , a na trasie z B do $C - 60 km / h$ . Oblicz wartość prędkości średniej samochodu na całej trasie z A do C .",
+    "prompt": "Wartość prędkości średniej obliczamy jako iloraz drogi i czasu, w którym ta droga została przebyta. Samochód przejechał z miejscowości $A$ do miejscowości $C$ przez miejscowość $B$, która znajduje się w połowie drogi z $A$ do $C$. Wartość prędkości średniej samochodu na trasie z $A$ do $B$ była równa $40$ $km/h$, a na trasie z $B$ do $C$ - $60$ $km/h$. Oblicz wartość prędkości średniej samochodu na całej trasie z $A$ do $C$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "48 $km/h$",
+    "explanation": "$48$ $km/h$",
     "solutionSteps": [
-      "Oznaczmy drogę z A do B jako $d$. Wtedy droga z B do C również wynosi $d$, a cała droga z A do C to $2d$.",
-      "Obliczmy czas podróży z A do B ($t_{AB}$) i z B do C ($t_{BC}$). Korzystając ze wzoru $czas = \\frac{droga}{predkosc}$: $t_{AB} = \\frac{d}{40}$ h, $t_{BC} = \\frac{d}{60}$ h.",
-      "Obliczmy prędkość średnią na całej trasie. Całkowity czas to $t_{AC} = t_{AB} + t_{BC} = \\frac{d}{40} + \\frac{d}{60} = \\frac{3d+2d}{120} = \\frac{5d}{120} = \\frac{d}{24}$ h. Prędkość średnia to $v_{sr} = \\frac{2d}{t_{AC}} = \\frac{2d}{\\frac{d}{24}} = 2d \\cdot \\frac{24}{d} = 48$ $km/h$."
+      "Niech $d$ będzie drogą z $A$ do $B$. Wtedy droga z $B$ do $C$ też wynosi $d$, a cała trasa ma długość $2d$.",
+      "Czasy przejazdu: $t_{AB}=\\frac{d}{40}$ h oraz $t_{BC}=\\frac{d}{60}$ h.",
+      "Łączny czas: $t=\\frac{d}{40}+\\frac{d}{60}=\\frac{3d+2d}{120}=\\frac{5d}{120}=\\frac{d}{24}$ h.",
+      "Prędkość średnia: $v_{sr}=\\frac{2d}{t}=\\frac{2d}{\\frac{d}{24}}=48$ $km/h$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1913,11 +1943,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 0,
     "explanation": "$\\frac{7}{60}$",
     "solutionSteps": [
-      "Obliczamy liczbę wszystkich możliwych par wylosowanych biletów. Jest to kombinacja $\\binom{16}{2} = \\frac{16 \\cdot 15}{2} = 120$.",
-      "Obliczamy liczbę par biletów na sąsiadujące miejsca. W pierwszym rzędzie mamy 9 par $(1 - 2, 2 - 3, ..., 9 - 10)$. W szesnastym rzędzie mamy 5 par $(11 - 12, 12 - 13, ..., 15 - 16)$. Łącznie jest $9 + 5 = 14$ par sąsiadujących miejsc.",
-      "Obliczamy prawdopodobieństwo, dzieląc liczbę par sąsiadujących miejsc przez całkowitą liczbę par biletów. Prawdopodobieństwo wynosi $\\frac{14}{120}$.",
-      "Upraszczamy wynik. $\\frac{14}{120} = \\frac{7}{60}$."
+      "Wszystkich sposobów wyboru dwóch biletów z szesnastu jest $\\binom{16}{2}=\\frac{16\\cdot15}{2}=120$.",
+      "W pierwszym rzędzie $(miejsca $1$ - $10$)$ par sąsiadujących miejsc jest $9$, a w szesnastym rzędzie $(miejsca $11$ - $16$)$ jest $5$. Razem $9+5=14$ par.",
+      "Prawdopodobieństwo wynosi $\\frac{14}{120}=\\frac{7}{60}$."
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1935,17 +1965,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trapezie ABCD (AB ∥ CD) przekątne AC i BD przecinają się w punkcie O takim, że $|AO|$:$|OC| = 5$:1 . Pole trójkąta AOD jest równe 10. Uzasadnij, że pole trapezu ABCD jest równe 72. ![Rysunek do zadania](/cke-matura/m15-probna/z31-1.png)",
+    "prompt": "W trapezie $ABCD$ ($AB\\parallel DC$) przekątne $AC$ i $BD$ przecinają się w punkcie $O$ takim, że $|AO|:|OC|=5:1$. Pole trójkąta $AOD$ jest równe $10$. Uzasadnij, że pole trapezu $ABCD$ jest równe $72$.\n\n![Rysunek 1](/cke-matura/m15-probna/z31-fig1.png)",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Pole trapezu $ABCD$ wynosi $72$.",
+    "explanation": "$P_{ABCD}=72$.",
     "solutionSteps": [
-      "Wykorzystaj podobieństwo trójkątów $\\triangle AOB$ i $\\triangle COD$. Ponieważ $AB \\parallel CD$, to $\\triangle AOB \\sim \\triangle COD$. Stosunek pól figur podobnych jest kwadratem stosunku ich boków, więc $\\frac{P(\\triangle AOB)}{P(\\triangle COD)} = \\left(\\frac{|AO|}{|OC|}\\right)^2 = \\left(\\frac{5}{1}\\right)^2 = 25$.",
-      "Wykorzystaj równość pól trójkątów leżących nad i pod przekątnymi. Trójkąty $\\triangle AOD$ i $\\triangle BOC$ mają równe pola, ponieważ mają tę samą podstawę $AO$ ($|AO|=5x$, $|OC|=x$) i równe wysokości opuszczone z punktu $D$ (lub $B$) na prostą $AC$. Zatem $P(\\triangle BOC) = P(\\triangle AOD) = 10$.",
-      "Oblicz pola pozostałych trójkątów i pole trapezu. Z Kroku 1 mamy $P(\\triangle AOB) = 25 \\cdot P(\\triangle COD)$. Również z podobieństwa trójkątów $\\triangle AOD \\sim \\triangle COD$, stosunek ich pól wynosi $\\frac{P(\\triangle AOD)}{P(\\triangle COD)} = \\frac{|AO|}{|OC|} = \\frac{5}{1}$, więc $P(\\triangle COD) = \\frac{1}{5} P(\\triangle AOD) = \\frac{10}{5} = 2$. Wtedy $P(\\triangle AOB) = 25 \\cdot 2 = 50$. Pole trapezu to suma pól wszystkich czterech trójkątów: $P(ABCD) = P(\\triangle AOB) + P(\\triangle BOC) + P(\\triangle COD) + P(\\triangle AOD) = 50 + 10 + 2 + 10 = 72$."
+      "Ponieważ $AB\\parallel DC$, trójkąty $AOB$ i $COD$ są podobne w skali $k=\\frac{|AO|}{|OC|}=5$. Stosunek pól figur podobnych jest kwadratem skali, więc $P_{AOB}=25\\cdot P_{COD}$.",
+      "Trójkąty $AOD$ i $COD$ mają wspólną wysokość opuszczoną z wierzchołka $D$ na prostą $AC$, a ich podstawy $AO$ i $OC$ leżą na tej prostej. Zatem $\\frac{P_{AOD}}{P_{COD}}=\\frac{|AO|}{|OC|}=5$, skąd $P_{COD}=\\frac{10}{5}=2$.",
+      "Wtedy $P_{AOB}=25\\cdot2=50$. Ponadto trójkąty $AOD$ i $BOC$ mają równe pola: $\\frac{P_{BOC}}{P_{COD}}=\\frac{|BO|}{|OD|}=\\frac{|AO|}{|OC|}=5$, więc $P_{BOC}=5\\cdot2=10$.",
+      "Pole trapezu to suma pól czterech trójkątów: $P_{ABCD}=P_{AOB}+P_{BOC}+P_{COD}+P_{AOD}=50+10+2+10=72$."
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1956,25 +1988,27 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m15-probna-z32",
     "title": "Matura - próbna 2015 - poziom podstawowy - zad. 32",
-    "category": "funkcje",
+    "category": "geometria",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty $A = (3,3)$ i $B = (9,1)$ są wierzchołkami trójkąta ABC , a punkt $M = (1,6)$ jest środkiem boku AC . Oblicz współrzędne punktu przecięcia prostej AB z wysokością tego trójkąta, poprowadzoną z wierzchołka C .",
+    "prompt": "Punkty $A=(3,3)$ i $B=(9,1)$ są wierzchołkami trójkąta $ABC$, a punkt $M=(1,6)$ jest środkiem boku $AC$. Oblicz współrzędne punktu przecięcia prostej $AB$ z wysokością tego trójkąta, poprowadzoną z wierzchołka $C$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$(-\\frac{12}{5}, \\frac{24}{5})$",
+    "explanation": "$\\left(-\\frac{12}{5},\\frac{24}{5}\\right)$",
     "solutionSteps": [
-      "Wyznacz współrzędne punktu C, korzystając z faktu, że M jest środkiem odcinka AC. Wzór na środek odcinka: $M = (\\frac{x_A + x_C}{2}, \\frac{y_A + y_C}{2})$. Podstawiamy dane: $(1,6) = (\\frac{3 + x_C}{2}, \\frac{3 + y_C}{2})$. Rozwiązując otrzymujemy $x_C = 2 \\cdot 1 - 3 = -1$ oraz $y_C = 2 \\cdot 6 - 3 = 9$. Zatem $C = (-1, 9)$.",
-      "Wyznacz równanie prostej AB. Korzystamy ze wzoru na równanie prostej przechodzącej przez dwa punkty: $y - y_A = \\frac{y_B - y_A}{x_B - x_A}(x - x_A)$. Podstawiamy punkty A i B: $y - 3 = \\frac{1 - 3}{9 - 3}(x - 3)$, co po uproszczeniu daje $y - 3 = -\\frac{1}{3}(x - 3)$, czyli $y = -\\frac{1}{3}x + 4$.",
-      "Wyznacz równanie wysokości opuszczonej z wierzchołka C. Wysokość ta jest prostopadła do prostej AB. Współczynnik kierunkowy prostej prostopadłej jest odwrotnością współczynnika prostej AB ze zmienionym znakiem: $m_{\\perp} = - \\frac{1}{-\\frac{1}{3}} = 3$. Równanie wysokości przechodzącej przez C: $y - y_C = m_{\\perp}(x - x_C)$. Podstawiamy $C=(-1,9)$ i $m_{\\perp}=3$: $y - 9 = 3(x - (-1))$, co daje $y = 3x + 12$.",
-      "Znajdź punkt przecięcia prostych AB i wysokości z C. Rozwiązujemy układ równań:\n$y = -\\frac{1}{3}x + 4$\n$y = 3x + 12$\nPrzyrównujemy prawe strony: $-\\frac{1}{3}x + 4 = 3x + 12$. Mnożymy przez 3: $-x + 12 = 9x + 36$. Rozwiązujemy dla x: $10x = -24$, czyli $x = -\\frac{24}{10} = -\\frac{12}{5}$. Podstawiamy x do jednego z równań: $y = 3(-\\frac{12}{5}) + 12 = -\\frac{36}{5} + \\frac{60}{5} = \\frac{24}{5}$."
+      "$M$ jest środkiem odcinka $AC$, więc $(1,6)=\\left(\\frac{3+x_C}{2},\\frac{3+y_C}{2}\\right)$. Stąd $x_C=2\\cdot1-3=-1$ i $y_C=2\\cdot6-3=9$, czyli $C=(-1,9)$.",
+      "Prosta $AB$: $a=\\frac{1-3}{9-3}=-\\frac{1}{3}$, więc $y-3=-\\frac{1}{3}(x-3)$, czyli $y=-\\frac{1}{3}x+4$.",
+      "Wysokość z wierzchołka $C$ jest prostopadła do $AB$, więc jej współczynnik kierunkowy to $3$. Równanie: $y-9=3(x+1)$, czyli $y=3x+12$.",
+      "Rozwiązujemy układ $\\begin{cases}y=-\\frac{1}{3}x+4\\\\ y=3x+12\\end{cases}$: $-\\frac{1}{3}x+4=3x+12$, skąd $-x+12=9x+36$, czyli $10x=-24$ i $x=-\\frac{12}{5}$.",
+      "$y=3\\cdot\\left(-\\frac{12}{5}\\right)+12=-\\frac{36}{5}+\\frac{60}{5}=\\frac{24}{5}$."
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -1992,17 +2026,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość 17, a wysokość stożka jest krótsza od średnicy jego podstawy $o$ 22. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
+    "prompt": "Tworząca stożka ma długość $17$, a wysokość stożka jest o $22$ krótsza od średnicy jego podstawy. Oblicz pole powierzchni całkowitej i objętość tego stożka.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Pole powierzchni całkowitej wynosi $390\\pi$, a objętość $\\frac{676}{3}\\pi$.",
+    "explanation": "$P_c=480\\pi$, $V=600\\pi$",
     "solutionSteps": [
-      "Oznaczmy przez $l$ tworzącą stożka, $h$ jego wysokość, $r$ promień podstawy $i$ $d$ średnicę podstawy. Mamy $l=17$. Ze średnicą i wysokością zachodzi zależność $h = d - 22$. Ponieważ $d=2r$, mamy $h = 2r - 22$. Z twierdzenia Pitagorasa dla trójkąta prostokątnego o bokach $h$, $r$ i $l$ (przeciwprostokątna) otrzymujemy równanie: $r^2 + h^2 = l^2$.",
-      "Podstawiamy dane do równania z kroku 1: $r^2 + (2r - 22)^2 = 17^2$. Rozwijamy i porządkujemy równanie: $r^2 + 4r^2 - 88r + 484 = 289 \\Rightarrow 5r^2 - 88r + 195 = 0$. Rozwiązujemy równanie kwadratowe, otrzymując dwa możliwe rozwiązania dla $r$: $r_1 = 3$ oraz $r_2 = 13$.",
-      "Analizujemy oba rozwiązania. Jeśli $r=3$, to $h = 2(3) - 22 = 6 - 22 = -16$, co jest niemożliwe (wysokość nie może być ujemna). Jeśli $r=13$, to $h = 2(13) - 22 = 26 - 22 = 4$. Zatem prawidłowe wymiary to $r=13$ i $h=4$. Obliczamy pole powierzchni całkowitej $P_c = \\pi r^2 + \\pi r l = \\pi (13^2) + \\pi (13)(17) = 169\\pi + 221\\pi = 390\\pi$. Obliczamy objętość $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (13^2)(4) = \\frac{1}{3} \\pi (169)(4) = \\frac{676}{3}\\pi$."
+      "Oznaczmy promień podstawy przez $r$, a wysokość przez $h$. Wtedy $h=2r-22$ oraz z twierdzenia Pitagorasa $r^2+h^2=17^2$.",
+      "Podstawiamy: $r^2+(2r-22)^2=289$, czyli $r^2+4r^2-88r+484=289$. Stąd $5r^2-88r+195=0$.",
+      "$\\Delta=(-88)^2-4\\cdot5\\cdot195=7744-3900=3844$, $\\sqrt{\\Delta}=62$. Zatem $r=\\frac{88-62}{10}=\\frac{26}{10}=2{,}6$ lub $r=\\frac{88+62}{10}=15$.",
+      "Dla $r=2{,}6$ mamy $h=2\\cdot2{,}6-22=-16{,}8<0$ — odrzucamy. Zostaje $r=15$ i $h=2\\cdot15-22=8$ (sprawdzenie: $15^2+8^2=225+64=289=17^2$).",
+      "Pole powierzchni całkowitej: $P_c=\\pi r^2+\\pi rl=\\pi\\cdot225+\\pi\\cdot15\\cdot17=225\\pi+255\\pi=480\\pi$.",
+      "Objętość: $V=\\frac{1}{3}\\pi r^2h=\\frac{1}{3}\\pi\\cdot225\\cdot8=600\\pi$."
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2015,
@@ -2020,19 +2058,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 15 jest przybliżeniem z niedomiarem liczby x . Błąd bezwzględny tego przybliżenia jest równy 0,24. Liczba x to",
+    "prompt": "Liczba $15$ jest przybliżeniem z niedomiarem liczby $x$. Błąd bezwzględny tego przybliżenia jest równy $0{,}24$. Liczba $x$ to",
     "choices": [
-      "14,76",
-      "14,80",
-      "15,20",
-      "15,24"
+      "$14{,}76$",
+      "$14{,}80$",
+      "$15{,}20$",
+      "$15{,}24$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 15,24",
+    "explanation": "D, czyli $15{,}24$",
     "solutionSteps": [
-      "Zapisz wzór na błąd bezwzględny: błąd bezwzględny $= |x - \\text{przybliżenie}|$. Mamy podane, że przybliżenie wynosi 15, a błąd bezwzględny to 0,24.",
-      "Podstaw dane do wzoru i ułóż równanie: $|x - 15| = 0,24$. Ponieważ 15 jest przybliżeniem z niedomiarem, wiemy, że $x > 15$.",
-      "Rozwiąż równanie, pamiętając o warunku $x > 15$. Równanie rozpadnie się na dwa przypadki: $x - 15 = 0,24$ lub $x - 15 = -0,24$. Z warunku $x > 15$ odrzucamy drugie równanie ($x=14,76$). Z pierwszego równania $x = 15 + 0,24 = 15,24$."
+      "Błąd bezwzględny przybliżenia to wartość bezwzględna różnicy liczby dokładnej i przybliżenia: $|x-15|=0{,}24$.",
+      "Przybliżenie jest z niedomiarem, czyli $15\\lt x$. Zostaje przypadek $x-15=0{,}24$; drugi przypadek $x-15=-0{,}24$ daje $x=14{,}76<15$ i odpada.",
+      "Stąd $x=15+0{,}24=15{,}24$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2051,34 +2089,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty $E = (7,1)$ i $F = (9,7)$ to środki boków, odpowiednio AB i BC kwadratu ABCD . Przekątna tego kwadratu ma długość",
+    "prompt": "Punkty $E=(7,1)$ i $F=(9,7)$ to środki boków, odpowiednio, $AB$ i $BC$ kwadratu $ABCD$. Przekątna tego kwadratu ma długość",
     "choices": [
       "$4\\sqrt{5}$",
-      "10",
+      "$10$",
       "$4\\sqrt{10}$",
-      "20"
+      "$20$"
     ],
     "correctIndex": 2,
     "explanation": "C, czyli $4\\sqrt{10}$",
     "solutionSteps": [
-      "Oblicz długość odcinka EF, który jest równy połowie długości boku kwadratu. Długość $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
-      "Długość boku kwadratu jest dwukrotnością długości odcinka EF, czyli $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.",
-      "Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$. Sprawdzamy jeszcze raz.",
-      "Oblicz długość odcinka EF, który jest równy połowie długości boku kwadratu. Długość $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
-      "Długość boku kwadratu jest dwukrotnością długości odcinka EF, czyli $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.",
-      "Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.",
-      "Odcinek EF łączy środki dwóch sąsiednich boków kwadratu. Długość odcinka EF jest równa połowie długości boku kwadratu ($a$), czyli $EF = \\frac{a}{2}$.",
-      "Obliczamy długość odcinka EF: $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
-      "Długość boku kwadratu wynosi $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.",
-      "Długość przekątnej kwadratu wynosi $d = a\\sqrt{2}$. Podstawiamy: $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.",
-      "Długość odcinka łączącego środki dwóch sąsiednich boków kwadratu jest równa połowie długości boku kwadratu ($a$), czyli $EF = \\frac{a}{2}$.",
-      "Obliczamy długość odcinka EF: $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
-      "Długość boku kwadratu wynosi $a = 2 \\cdot EF = 2 \\cdot 2\\sqrt{10} = 4\\sqrt{10}$.",
-      "Długość przekątnej kwadratu o boku $a$ wynosi $d = a\\sqrt{2}$. Podstawiając $a = 4\\sqrt{10}$, otrzymujemy $d = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\n\nPrzeanalizujmy jeszcze raz dane. E i F to środki boków AB i BC. Odcinek EF nie jest równoległy do przekątnej AC.\nOdległość między środkami boków to $\\sqrt{(9-7)^2+(7-1)^2} = \\sqrt{2^2+6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.\nTen odcinek jest równy długości połowy drugiego boku, czyli jest równy $\\frac{a}{2}$.\nZatem $\\frac{a}{2} = 2\\sqrt{10}$, stąd $a = 4\\sqrt{10}$.\nDługość przekątnej kwadratu to $d = a\\sqrt{2} = 4\\sqrt{10} \\cdot \\sqrt{2} = 4\\sqrt{20} = 4 \\cdot 2\\sqrt{5} = 8\\sqrt{5}$.\nWartości $8\\sqrt{5}$ nie ma wśród odpowiedzi.\n\nSprawdźmy inny sposób.\nŚrodek boku AB to E, środek BC to F.\nWektor $\\vec{EF} = (9-7, 7-1) = (2, 6)$.\nDługość $EF = \\sqrt{2^2+6^2} = \\sqrt{40} = 2\\sqrt{10}$.\nW kwadracie ABCD, wektor $\\vec{AB}$ jest prostopadły do $\\vec{BC}$.\nPunkt E jest środkiem AB, F jest środkiem BC.\nDługość boku kwadratu wynosi $a$.\nWtedy $AE = EB = a/2$ i $BF = FC = a/2$.\nW trójkącie prostokątnym EBF, przyprostokątne mają długość $a/2$.\n$EF^2 = EB^2 + BF^2 = (a/2)^2 + (a/2)^2 = 2(a/2)^2 = 2 \\frac{a^2}{4} = \\frac{a^2}{2}$.\n$EF = \\sqrt{\\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}} = \\frac{a\\sqrt{2}}{2}$.\nMamy $EF = 2\\sqrt{10}$.\nWięc $\\frac{a\\sqrt{2}}{2} = 2\\sqrt{10}$.\n$a\\sqrt{2} = 4\\sqrt{10}$.\n$a = \\frac{4\\sqrt{10}}{\\sqrt{2}} = 4\\sqrt{5}$.\nDługość przekątnej kwadratu to $d = a\\sqrt{2}$.\n$d = 4\\sqrt{5} \\cdot \\sqrt{2} = 4\\sqrt{10}$.\nTo jest opcja C.",
-      "Długość odcinka łączącego środki dwóch sąsiednich boków kwadratu ($EF$) jest równa $\\frac{a\\sqrt{2}}{2}$, gdzie $a$ to długość boku kwadratu.",
-      "Obliczamy długość odcinka $EF = \\sqrt{(9-7)^2 + (7-1)^2} = \\sqrt{2^2 + 6^2} = \\sqrt{4+36} = \\sqrt{40} = 2\\sqrt{10}$.",
-      "Przyrównujemy $EF$ do wzoru: $\\frac{a\\sqrt{2}}{2} = 2\\sqrt{10}$, co daje $a\\sqrt{2} = 4\\sqrt{10}$, a stąd $a = 4\\sqrt{5}$.",
-      "Długość przekątnej kwadratu to $d = a\\sqrt{2}$. Podstawiamy $a = 4\\sqrt{5}$, otrzymując $d = 4\\sqrt{5} \\cdot \\sqrt{2} = 4\\sqrt{10}$."
+      "Oblicz długość odcinka $EF$: $|EF|=\\sqrt{(9-7)^{2}+(7-1)^{2}}=\\sqrt{4+36}=\\sqrt{40}=2\\sqrt{10}$.",
+      "Odcinek $EF$ łączy środki boków $AB$ i $BC$ trójkąta $ABC$, więc jest równoległy do boku $AC$ i dwa razy od niego krótszy: $|AC|=2|EF|=4\\sqrt{10}$.",
+      "Odcinek $AC$ jest przekątną kwadratu $ABCD$, więc szukana długość to $4\\sqrt{10}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2097,18 +2120,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-1.png) jest równa",
+    "prompt": "Liczba $\\left(\\frac{3+\\sqrt{3}}{\\sqrt{3}}\\right)^{2}$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-2.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-4.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z03-5.png)"
+      "$4$",
+      "$9$",
+      "$\\frac{3+\\sqrt{3}}{3}$",
+      "$4+2\\sqrt{3}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $1$.",
+    "correctIndex": 3,
+    "explanation": "D, czyli $4+2\\sqrt{3}$",
     "solutionSteps": [
-      "Rozpisz pierwiastki, zamieniając liczby mieszane na ułamki niewłaściwe i grupując czynniki: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$ oraz $\\sqrt{1\\frac{1}{3}} = \\sqrt{\\frac{4}{3}} = \\frac{\\sqrt{4}}{\\sqrt{3}} = \\frac{2}{\\sqrt{3}}$.",
-      "Wykonaj mnożenie i pozbądź się niewymierności z mianownika: $\\frac{\\sqrt{3}}{2} \\cdot \\frac{2}{\\sqrt{3}} = \\frac{\\sqrt{3} \\cdot 2}{2 \\cdot \\sqrt{3}} = 1$."
+      "Uprość wyrażenie w nawiasie, rozbijając ułamek na dwa składniki: $\\frac{3+\\sqrt{3}}{\\sqrt{3}}=\\frac{3}{\\sqrt{3}}+\\frac{\\sqrt{3}}{\\sqrt{3}}=\\sqrt{3}+1$.",
+      "Podnieś otrzymaną sumę do kwadratu ze wzoru $(a+b)^{2}=a^{2}+2ab+b^{2}$: $\\left(\\sqrt{3}+1\\right)^{2}=3+2\\sqrt{3}+1$.",
+      "Zredukuj wyrazy podobne: $3+2\\sqrt{3}+1=4+2\\sqrt{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2121,21 +2145,25 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m15-przykladowa-z04",
     "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 4",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m15-przykladowa/z04-1.png) jest równa\n\nRozwiąż zadanie.",
+    "prompt": "Liczba $3^{\\frac{9}{4}}$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$3\\sqrt[4]{3}$",
+      "$9\\sqrt[4]{3}$",
+      "$27\\sqrt[4]{3}$",
+      "$3^{9}\\cdot 3^{\\frac{1}{4}}$"
     ],
-    "correctIndex": 0,
-    "explanation": "$2x - 5y$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $9\\sqrt[4]{3}$",
     "solutionSteps": [
-      "Zapisz wyrażenie z usuniętymi nawiasami, pamiętając o zmianie znaków przy minusie.\n$(3x - 2y) - (x + 3y) = 3x - 2y - x - 3y$",
-      "Zredukuj wyrazy podobne, grupując `x` z `x` oraz `y` z `y`.\n$(3x - x) + (-2y - 3y) = 2x - 5y$"
+      "Rozpisz wykładnik jako sumę części całkowitej i ułamkowej: $\\frac{9}{4}=2+\\frac{1}{4}$.",
+      "Skorzystaj z własności $a^{m+n}=a^{m}\\cdot a^{n}$: $3^{\\frac{9}{4}}=3^{2}\\cdot 3^{\\frac{1}{4}}=9\\cdot\\sqrt[4]{3}$.",
+      "Sprawdź pozostałe odpowiedzi: $3\\sqrt[4]{3}=3^{\\frac{5}{4}}$, $27\\sqrt[4]{3}=3^{\\frac{13}{4}}$, a $3^{9}\\cdot 3^{\\frac{1}{4}}=3^{\\frac{37}{4}}$ - żadna nie jest równa $3^{\\frac{9}{4}}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2154,19 +2182,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja wykładnicza określona wzorem $f(x) = 3$ x przyjmuje wartość 6 dla argumentu",
+    "prompt": "Funkcja wykładnicza określona wzorem $f(x)=3^{x}$ przyjmuje wartość $6$ dla argumentu",
     "choices": [
-      "$x = 2$",
-      "$x = \\log 3$ 2",
-      "$x = \\log 3$ 6",
-      "$x = \\log 6$ 3"
+      "$x=2$",
+      "$x=\\log_{3}2$",
+      "$x=\\log_{3}6$",
+      "$x=\\log_{6}3$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $x = \\log_3 6$",
+    "explanation": "C, czyli $x=\\log_{3}6$",
     "solutionSteps": [
-      "Zapisz równanie, podstawiając podaną wartość funkcji $f(x)=6$ do jej wzoru $f(x) = 3^x$. Otrzymujemy $6 = 3^x$.",
-      "Rozwiąż równanie $6 = 3^x$ stosując definicję logarytmu: jeśli $a^b = c$, to $b = \\log_a c$. W tym przypadku $a=3$, $b=x$, $c=6$.",
-      "Na podstawie definicji logarytmu, zapisz rozwiązanie jako $x = \\log_3 6$."
+      "Zapisz warunek z treści zadania: $3^{x}=6$.",
+      "Skorzystaj z definicji logarytmu: z równości $a^{b}=c$ wynika $b=\\log_{a}c$, więc $x=\\log_{3}6$.",
+      "Sprawdź pozostałe odpowiedzi: $3^{2}=9$, $3^{\\log_{3}2}=2$ oraz $3^{\\log_{6}3}\\ne 6$ - tylko $x=\\log_{3}6$ daje wartość $6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2185,19 +2213,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wyrażenie 16 - $(3x + 1)$ 2 jest równe",
+    "prompt": "Wyrażenie $16-(3x+1)^{2}$ jest równe",
     "choices": [
-      "$(3 - 3x)$ ⋅ $(5 + 3x)$",
-      "$(15 - 3x)$ 2",
-      "$(5 - 3x)$ ⋅ $(5 + 3x)$",
-      "$15 - 9x^{2}$"
+      "$(3-3x)\\cdot(5+3x)$",
+      "$(15-3x)^{2}$",
+      "$(5-3x)\\cdot(5+3x)$",
+      "$15-9x^{2}$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $(3 – 3 x ) ⋅ (5 + 3 x )$",
+    "explanation": "A, czyli $(3-3x)(5+3x)$",
     "solutionSteps": [
-      "Rozpoznaj wzór skróconego mnożenia na różnicę kwadratów $a^2 - b^2 = (a-b)(a+b)$. W tym przypadku $a=4$ i $b=(3x+1)$, więc mamy $4^2 - (3x+1)^2$.",
-      "Zastosuj wzór na różnicę kwadratów: $(4 - (3x+1))(4 + (3x+1))$.",
-      "Uprość oba nawiasy: $(4 - 3x - 1)(4 + 3x + 1) = (3 - 3x)(5 + 3x)$."
+      "Zapisz liczbę $16$ jako kwadrat: $16-(3x+1)^{2}=4^{2}-(3x+1)^{2}$.",
+      "Zastosuj wzór na różnicę kwadratów $a^{2}-b^{2}=(a-b)(a+b)$: $\\left(4-(3x+1)\\right)\\left(4+(3x+1)\\right)$.",
+      "Uprość oba nawiasy: $4-(3x+1)=3-3x$ oraz $4+(3x+1)=5+3x$, więc $16-(3x+1)^{2}=(3-3x)(5+3x)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2218,18 +2246,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Wskaż równość prawdziwą.",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-1.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-2.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-3.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z07-4.png)"
+      "$-256^{2}=(-256)^{2}$",
+      "$256^{3}=(-256)^{3}$",
+      "$\\sqrt{(-256)^{2}}=-256$",
+      "$\\sqrt[3]{-256}=-\\sqrt[3]{256}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $x^2 - 2x - 3 = 0$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\sqrt[3]{-256}=-\\sqrt[3]{256}$",
     "solutionSteps": [
-      "Rozpoznajemy, że na rysunkach znajdują się wykresy funkcji kwadratowych. Wartość $x$ najmniejszego argumentu dla którego funkcja przyjmuje wartość 0 (pierwiastek) to $x_1$. Wartość $x$ największego argumentu dla którego funkcja przyjmuje wartość 0 to $x_2$. Z wykresu odczytujemy pierwiastki funkcji.",
-      "Sprawdzamy równania z podpunktów A, B, C, D. Szukamy równania, którego pierwiastki odpowiadają pierwiastkom odczytanym z wykresu.",
-      "Dla wykresu z podpunktu A, pierwiastki to $x_1 = -3$ i $x_2 = 1$. Równanie to $(x+3)(x-1) = 0$, co po wymnożeniu daje $x^2 + 2x - 3 = 0$.",
-      "Sprawdzamy pozostałe podpunkty. Dla podpunktu B pierwiastki to $x_1=-1$ i $x_2=3$, równanie to $x^2 - 2x - 3 = 0$. Dla podpunktu C pierwiastki to $x_1=-3$ i $x_2=-1$, równanie to $x^2 + 4x + 3 = 0$. Dla podpunktu D pierwiastki to $x_1=1$ i $x_2=3$, równanie to $x^2 - 4x + 3 = 0$."
+      "Sprawdź A: $-256^{2}=-\\left(256^{2}\\right)<0$, a $(-256)^{2}=256^{2}>0$, więc równość jest fałszywa.",
+      "Sprawdź B: $256^{3}>0$, a $(-256)^{3}<0$, więc równość jest fałszywa.",
+      "Sprawdź C: $\\sqrt{(-256)^{2}}=\\sqrt{256^{2}}=256\\ne -256$, więc równość jest fałszywa.",
+      "Sprawdź D: pierwiastek stopnia nieparzystego z liczby ujemnej jest ujemny, więc $\\sqrt[3]{-256}=-\\sqrt[3]{256}$ - to równość prawdziwa."
     ],
     "examSource": {
       "kind": "matura",
@@ -2242,22 +2270,26 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m15-przykladowa-z08",
     "title": "Matura - przykładowa 2015 - poziom podstawowy - zad. 8",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m15-przykladowa/z08-1.png) jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Zbiorem rozwiązań nierówności $\\frac{2-x}{3}-\\frac{2x-1}{2}\\lt x$ jest przedział",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$\\left(-\\infty,\\frac{1}{2}\\right)$",
+      "$\\left(-\\infty,\\frac{1}{14}\\right)$",
+      "$\\left(\\frac{1}{14},+\\infty\\right)$",
+      "$\\left(\\frac{1}{2},+\\infty\\right)$"
     ],
-    "correctIndex": 0,
-    "explanation": "$[1, 3]$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\left(\\frac{1}{2},+\\infty\\right)$",
     "solutionSteps": [
-      "Nierówność kwadratowa $x^2 - 4x + 3 \\le 0$. Znajdź miejsca zerowe funkcji $f(x) = x^2 - 4x + 3$ przyrównując ją do zera: $x^2 - 4x + 3 = 0$. Użyj wzoru na deltę $\\Delta = b^2 - 4ac$.",
-      "Oblicz pierwiastki: $\\Delta = (-4)^2 - 4 \\cdot 1 \\cdot 3 = 16 - 12 = 4$, $\\sqrt{\\Delta} = 2$. $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a} = \\frac{4 - 2}{2} = 1$, $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a} = \\frac{4 + 2}{2} = 3$.",
-      "Parabola $y = x^2 - 4x + 3$ ma ramiona skierowane w górę (współczynnik $a=1 > 0$). Nierówność $f(x) \\le 0$ spełniają argumenty $x$ dla których parabola znajduje się pod osią $x$ lub na niej."
+      "Pomnóż obie strony nierówności przez $6$ (wspólny mianownik $3$ i $2$), żeby usunąć ułamki: $2(2-x)-3(2x-1)<6x$.",
+      "Wymnóż nawiasy i zredukuj lewą stronę: $4-2x-6x+3<6x$, czyli $7-8x<6x$.",
+      "Przenieś wyrazy $z$ $x$ na jedną stronę: $7<14x$, skąd $x>\\frac{1}{2}$.",
+      "Rozwiązaniem jest przedział $\\left(\\frac{1}{2},+\\infty\\right)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2278,17 +2310,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "W klasie jest cztery razy więcej chłopców niż dziewcząt. Ile procent wszystkich uczniów tej klasy stanowią dziewczęta?",
     "choices": [
-      "4%",
-      "5%",
-      "20%",
-      "25%"
+      "$4\\%$",
+      "$5\\%$",
+      "$20\\%$",
+      "$25\\%$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 20%",
+    "explanation": "C, czyli $20\\%$",
     "solutionSteps": [
-      "Oznaczmy liczbę dziewcząt przez $x$. Wtedy liczba chłopców wynosi $4x$.",
-      "Całkowita liczba uczniów w klasie to $x + 4x = 5x$.",
-      "Ułamek liczby dziewcząt do wszystkich uczniów to $\\frac{x}{5x} = \\frac{1}{5}$. Aby zamienić to na procenty, mnożymy przez 100%: $\\frac{1}{5} \\cdot 100\\% = 20\\%$."
+      "Oznacz liczbę dziewcząt przez $x$. Chłopców jest wtedy $4x$.",
+      "Wszystkich uczniów jest $x+4x=5x$.",
+      "Dziewczęta stanowią $\\frac{x}{5x}=\\frac{1}{5}$ wszystkich uczniów, czyli $\\frac{1}{5}\\cdot 100\\%=20\\%$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2307,18 +2339,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Reszta z dzielenia liczby 55 przez 8 jest równa",
+    "prompt": "Reszta z dzielenia liczby $55$ przez $8$ jest równa",
     "choices": [
-      "4",
-      "5",
-      "6",
-      "7"
+      "$4$",
+      "$5$",
+      "$6$",
+      "$7$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 7",
+    "explanation": "D, czyli $7$",
     "solutionSteps": [
-      "Wykonujemy dzielenie liczby 55 przez 8, aby znaleźć iloraz i resztę.",
-      "Dzielimy 55 przez 8: $55 = 8 \\cdot 6 + 7$. Iloraz wynosi 6, a reszta wynosi 7."
+      "Zapisz dzielenie z resztą: $55=8\\cdot 6+7$.",
+      "Iloraz jest równy $6$, a reszta $7$; spełnia ona warunek $0\\le 7<8$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2337,7 +2369,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ przyporządkowuje każdej liczbie naturalnej większej od 1 jej największy dzielnik będący liczbą pierwszą. Spośród liczb: $f(42)$, $f(44)$, $f(45)$, $f(48)$ największa to",
+    "prompt": "Funkcja $f$ przyporządkowuje każdej liczbie naturalnej większej od $1$ jej największy dzielnik będący liczbą pierwszą. Spośród liczb: $f(42)$, $f(44)$, $f(45)$, $f(48)$ największa to",
     "choices": [
       "$f(42)$",
       "$f(44)$",
@@ -2347,8 +2379,8 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $f(44)$",
     "solutionSteps": [
-      "Rozkładamy każdą z podanych liczb na czynniki pierwsze i wyszukujemy największy czynnik pierwszy.\nDla 42: $42 = 2 \\cdot 3 \\cdot 7$. Największy dzielnik pierwszy to 7.\nDla 44: $44 = 2 \\cdot 2 \\cdot 11$. Największy dzielnik pierwszy to 11.\nDla 45: $45 = 3 \\cdot 3 \\cdot 5$. Największy dzielnik pierwszy to 5.\nDla 48: $48 = 2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 3$. Największy dzielnik pierwszy to 3.",
-      "Porównujemy otrzymane wartości: 7, 11, 5, 3. Największą z nich jest 11, które odpowiada liczbie 44."
+      "Rozłóż każdą z liczb na czynniki pierwsze i wybierz największy z nich.\n$42=2\\cdot 3\\cdot 7$, więc $f(42)=7$.\n$44=2\\cdot 2\\cdot 11$, więc $f(44)=11$.\n$45=3\\cdot 3\\cdot 5$, więc $f(45)=5$.\n$48=2\\cdot 2\\cdot 2\\cdot 2\\cdot 3$, więc $f(48)=3$.",
+      "Porównaj otrzymane wartości: $7$, $11$, $5$, $3$. Największa jest $11$, czyli $f(44)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2367,19 +2399,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rysunek przedstawia ostrosłup prawidłowy czworokątny ABCDS . ![Rysunek do zadania](/cke-matura/m15-przykladowa/z12-1.png) Kątem między krawędzią CS a płaszczyzną podstawy tego ostrosłupa jest kąt",
+    "prompt": "Rysunek przedstawia ostrosłup prawidłowy czworokątny $ABCDS$.\n\n![Rysunek 1](/cke-matura/m15-przykladowa/z12-fig1.png)\n\nKątem między krawędzią $CS$ a płaszczyzną podstawy tego ostrosłupa jest kąt",
     "choices": [
-      "DCS",
-      "ACS",
-      "OSC",
-      "SCB"
+      "$\\angle DCS$",
+      "$\\angle ACS$",
+      "$\\angle OSC$",
+      "$\\angle SCB$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $OSC$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\angle ACS$",
     "solutionSteps": [
-      "Kąt między krawędzią a płaszczyzną podstawy to kąt między tą krawędzią a jej rzutem prostokątnym na tę płaszczyznę.",
-      "Krawędź CS ma punkt wspólny $C$ z płaszczyzną podstawy, więc jej rzutem prostokątnym na płaszczyznę podstawy jest odcinek $OC$, gdzie $O$ jest spodkiem wysokości ostrosłupa (środek kwadratu $ABCD$).",
-      "Kątem między krawędzią $CS$ a płaszczyzną podstawy jest zatem kąt między $CS$ a $OC$, czyli kąt $SCO$. Z podanych opcji odpowiedź C (kąt OSC) jest poprawna, gdyż punkt $O$ jest wierzchołkiem tego kąta."
+      "Kąt między krawędzią a płaszczyzną to kąt między tą krawędzią i jej rzutem prostokątnym na tę płaszczyznę.",
+      "Spodek wysokości ostrosłupa prawidłowego to środek $O$ podstawy, więc rzutem punktu $S$ na płaszczyznę podstawy jest $O$, a rzutem odcinka $CS$ - odcinek $CO$.",
+      "Szukany kąt to kąt $SCO$, czyli kąt między półprostymi $CS$ i $CO$. Punkty $C$, $O$, $A$ leżą na jednej prostej (przekątnej podstawy), więc ten sam kąt to $\\angle ACS$.",
+      "Kąty $\\angle DCS$ i $\\angle SCB$ leżą w ścianach bocznych, a $\\angle OSC$ ma wierzchołek w $S$ - żaden z nich nie jest kątem między $CS$ a płaszczyzną podstawy."
     ],
     "examSource": {
       "kind": "matura",
@@ -2398,19 +2431,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykresem funkcji kwadratowej f jest parabola o wierzchołku $W = (5,7)$ . Wówczas prawdziwa jest równość",
+    "prompt": "Wykresem funkcji kwadratowej $f$ jest parabola o wierzchołku $W=(5,7)$. Wówczas prawdziwa jest równość",
     "choices": [
-      "$f(1) = f(9)$",
-      "$f(1) = f(11)$",
-      "$f(1) = f(13)$",
-      "$f(1) = f(15)$"
+      "$f(1)=f(9)$",
+      "$f(1)=f(11)$",
+      "$f(1)=f(13)$",
+      "$f(1)=f(15)$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $f(1) = f(9)$",
+    "explanation": "A, czyli $f(1)=f(9)$",
     "solutionSteps": [
-      "Parabola jest symetryczna względem osi przechodzącej przez wierzchołek. Oznacza to, że dla argumentów równo oddalonych od współrzędnej x wierzchołka, wartości funkcji $s$ą równe.",
-      "Wierzchołek paraboli to $W=(5,7)$, więc oś symetrii ma równanie $x=5$. Sprawdzamy odległości argumentów od 5 dla każdej opcji.",
-      "Dla opcji A) argumenty 1 i 9 są oddalone od 5 o 4 ($|1-5|=4$, $|9-5|=4$), co oznacza, że $f(1) = f(9)$. Dla pozostałych opcji odległości są różne."
+      "Osią symetrii paraboli jest prosta przechodząca przez jej wierzchołek, w tym przypadku $x=5$.",
+      "Punkty wykresu o argumentach jednakowo oddalonych od osi symetrii mają równe wartości: $f(5-t)=f(5+t)$.",
+      "Liczba $1$ jest oddalona od $5$ o $4$, więc drugim argumentem musi być $5+4=9$. Liczby $11$, $13$ i $15$ są oddalone od osi symetrii bardziej niż $1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2429,20 +2462,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jeżeli kąt α jest ostry i ![Rysunek do zadania](/cke-matura/m15-przykladowa/z14-1.png) równa się",
+    "prompt": "Jeżeli kąt $\\alpha$ jest ostry i $\\operatorname{tg}\\alpha=\\frac{3}{4}$, to $\\frac{2-\\cos\\alpha}{2+\\cos\\alpha}$ równa się",
     "choices": [
-      "- 1",
-      "- $\\frac{1}{3}$",
+      "$-1$",
+      "$-\\frac{1}{3}$",
       "$\\frac{3}{7}$",
       "$\\frac{84}{25}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{12}{35}$.",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\frac{3}{7}$",
     "solutionSteps": [
-      "Z rysunku odczytujemy długości przyprostokątnych trójkąta prostokątnego: $a=7$, $b=24$.",
-      "Korzystamy z definicji funkcji tangens w trójkącie prostokątnym, gdzie $\\operatorname{tg} \\alpha = \\frac{\\text{przyprostokątna naprzeciwko kąta } \\alpha}{\\text{przyprostokątna przy kącie } \\alpha}$. Podstawiamy dane: $\\operatorname{tg} \\alpha = \\frac{7}{24}$.",
-      "Obliczamy $\\operatorname{ctg} \\alpha$, wiedząc, że $\\operatorname{ctg} \\alpha = \\frac{1}{\\operatorname{tg} \\alpha}$. Podstawiamy wartość $\\operatorname{tg} \\alpha$: $\\operatorname{ctg} \\alpha = \\frac{1}{\\frac{7}{24}} = \\frac{24}{7}$.",
-      "Obliczamy $\\frac{\\operatorname{ctg} \\alpha}{10}$: $\\frac{\\frac{24}{7}}{10} = \\frac{24}{7 \\cdot 10} = \\frac{24}{70} = \\frac{12}{35}$."
+      "Z definicji tangensa w trójkącie prostokątnym przyprostokątna naprzeciw kąta $\\alpha$ ma długość $3$, a przyprostokątna przy kącie $\\alpha$ ma długość $4$ (liczy się tylko stosunek, więc można przyjąć takie długości).",
+      "Oblicz przeciwprostokątną: $\\sqrt{3^{2}+4^{2}}=\\sqrt{25}=5$, więc $\\cos\\alpha=\\frac{4}{5}$ (kąt jest ostry, więc cosinus jest dodatni).",
+      "Podstaw $\\cos\\alpha$ do wyrażenia: $\\frac{2-\\frac{4}{5}}{2+\\frac{4}{5}}=\\frac{\\frac{6}{5}}{\\frac{14}{5}}=\\frac{6}{14}=\\frac{3}{7}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2461,19 +2493,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Równanie $(2x - 1)$⋅$(x - 2)$ = $(1 - 2x)$⋅$(x + 2)$ ma dwa rozwiązania. Są to liczby",
+    "prompt": "Równanie $(2x-1)\\cdot(x-2)=(1-2x)\\cdot(x+2)$ ma dwa rozwiązania. Są to liczby",
     "choices": [
-      "-2 oraz $\\frac{1}{2}$",
-      "0 oraz $\\frac{1}{2}$",
-      "$\\frac{1}{2}$ oraz 2",
-      "-2 oraz 2"
+      "$-2$ oraz $\\frac{1}{2}$",
+      "$0$ oraz $\\frac{1}{2}$",
+      "$\\frac{1}{2}$ oraz $2$",
+      "$-2$ oraz $2$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $0$ oraz $\\frac{1}{2}$",
     "solutionSteps": [
-      "Przenieś wszystkie wyrazy na jedną stronę, aby uzyskać równanie równe 0. Zauważ, że $(2x-1) = -(1-2x)$.\n$(2x-1)(x-2) = -(2x-1)(x+2)$\n$(2x-1)(x-2) + (2x-1)(x+2) = 0$",
-      "Wyciągnij wspólny czynnik $(2x-1)$ przed nawias i uprość wyrażenie w drugim nawiasie.\n$(2x-1) [ (x-2) + (x+2) ] = 0$\n$(2x-1) [ 2x ] = 0$",
-      "Rozwiąż otrzymane równanie, przyrównując każdy z czynników do zera.\n$2x-1 = 0 \\implies 2x = 1 \\implies x = \\frac{1}{2}$\n$2x = 0 \\implies x = 0$"
+      "Zauważ, że $1-2x=-(2x-1)$ i przenieś prawą stronę na lewo: $(2x-1)(x-2)+(2x-1)(x+2)=0$.",
+      "Wyłącz wspólny czynnik $(2x-1)$: $(2x-1)\\left[(x-2)+(x+2)\\right]=0$, czyli $(2x-1)\\cdot 2x=0$.",
+      "Przyrównaj każdy czynnik do zera: $2x-1=0$, skąd $x=\\frac{1}{2}$, oraz $2x=0$, skąd $x=0$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2492,19 +2524,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane jest równanie $3x + 4y - 5 = 0$ . Z którym z poniższych równań tworzy ono układ sprzeczny?",
+    "prompt": "Dane jest równanie $3x+4y-5=0$. Z którym z poniższych równań tworzy ono układ sprzeczny?",
     "choices": [
-      "$6x + 8y - 10 = 0$",
-      "$4x - 3y + 5 = 0$",
-      "$9x + 12y - 10 = 0$",
-      "$5x + 4y - 3 = 0$"
+      "$6x+8y-10=0$",
+      "$4x-3y+5=0$",
+      "$9x+12y-10=0$",
+      "$5x+4y-3=0$"
     ],
     "correctIndex": 2,
-    "explanation": "C",
+    "explanation": "C, czyli $9x+12y-10=0$",
     "solutionSteps": [
-      "Zapisz oba równania w postaci ogólnej $Ax + By + C = 0$ i porównaj współczynniki. Układ jest sprzeczny, gdy stosunek współczynników przy $x$ i przy $y$ jest taki sam, ale różny od stosunku wyrazów wolnych.",
-      "Przekształć dane równanie $3x + 4y - 5 = 0$ do postaci, gdzie współczynniki przy $x$ i $y$ będą takie same jak w jednej z odpowiedzi. Mnożąc pierwsze równanie przez 3, otrzymujemy $9x + 12y - 15 = 0$. Porównując to z opcją C) $9x + 12y - 10 = 0$, widzimy, że stosunek współczynników przy $x$ i $y$ jest taki sam ($\\frac{9}{9} = \\frac{12}{12} = 1$), ale stosunek wyrazów wolnych jest inny ($\\frac{-15}{-10} \\ne 1$).",
-      "Ponieważ stosunek współczynników przy $x$ i $y$ jest równy, a stosunek wyrazów wolnych jest różny, te dwa równania opisują proste równoległe, które się nie przecinają, tworząc układ sprzeczny."
+      "Układ dwóch równań liniowych jest sprzeczny, gdy opisane nimi proste są równoległe i różne: stosunek współczynników przy $x$ i przy $y$ jest taki sam, a stosunek wyrazów wolnych inny.",
+      "Dla odpowiedzi A jest $6=2\\cdot 3$, $8=2\\cdot 4$ i $-10=2\\cdot(-5)$, czyli to jest to samo równanie - układ ma nieskończenie wiele rozwiązań.",
+      "Dla odpowiedzi C jest $9=3\\cdot 3$ i $12=3\\cdot 4$, ale $-10\\ne 3\\cdot(-5)=-15$ - proste są równoległe i różne, więc układ jest sprzeczny.",
+      "Odpowiedzi B i D dają proste o różnych współczynnikach kierunkowych, czyli przecinające się - ich układy mają dokładnie jedno rozwiązanie."
     ],
     "examSource": {
       "kind": "matura",
@@ -2523,19 +2556,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego α jest równy ![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-1.png)",
+    "prompt": "W trójkącie, przedstawionym na rysunku poniżej, sinus kąta ostrego $\\alpha$ jest równy\n\n![Rysunek 1](/cke-matura/m15-przykladowa/z17-fig1.png)",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-2.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-3.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-4.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z17-5.png)"
+      "$\\frac{1}{5}$",
+      "$\\frac{\\sqrt{6}}{12}$",
+      "$\\frac{5}{24}$",
+      "$\\frac{2\\sqrt{6}}{5}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{3}{5}$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $\\frac{2\\sqrt{6}}{5}$",
     "solutionSteps": [
-      "Przypomnij definicję sinusa w trójkącie prostokątnym: sinus kąta ostrego to stosunek długości przyprostokątnej przeciwległej temu kątowi do długości przeciwprostokątnej.",
-      "Zidentyfikuj przyprostokątną przeciwległą kątowi $\\alpha$ $(ma długość 3)$ oraz przeciwprostokątną $(ma długość 5)$.",
-      "Oblicz sinus kąta $\\alpha$, dzieląc długość przyprostokątnej przeciwległej przez długość przeciwprostokątnej: $\\sin \\alpha = \\frac{3}{5}$."
+      "Odczytaj z rysunku: trójkąt jest prostokątny, przyprostokątna przy kącie prostym ma długość $1$, a przeciwprostokątna ma długość $5$.",
+      "Oblicz przyprostokątną naprzeciw kąta $\\alpha$ z twierdzenia Pitagorasa: $b=\\sqrt{5^{2}-1^{2}}=\\sqrt{24}=2\\sqrt{6}$.",
+      "Sinus kąta ostrego to stosunek przyprostokątnej naprzeciw tego kąta do przeciwprostokątnej: $\\sin\\alpha=\\frac{2\\sqrt{6}}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2554,19 +2587,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Tworząca stożka ma długość $l$ , a promień jego podstawy jest równy r (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-1.png) Powierzchnia boczna tego stożka jest 2 razy większa od pola jego podstawy. Wówczas",
+    "prompt": "Tworząca stożka ma długość $l$, a promień jego podstawy jest równy $r$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m15-przykladowa/z18-fig1.png)\n\nPowierzchnia boczna tego stożka jest $2$ razy większa od pola jego podstawy. Wówczas",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-2.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-3.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z18-5.png)"
+      "$r=\\frac{1}{6}l$",
+      "$r=\\frac{1}{4}l$",
+      "$r=\\frac{1}{3}l$",
+      "$r=\\frac{1}{2}l$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $l=2r$",
+    "correctIndex": 3,
+    "explanation": "D, czyli $r=\\frac{1}{2}l$",
     "solutionSteps": [
-      "Zapisz wzory na pole powierzchni bocznej stożka ($P_b = \\pi r l$) i pole jego podstawy ($P_p = \\pi r^2$). Z treści zadania wiemy, że $P_b = 2 P_p$.",
-      "Podstaw wzory do równania z treści zadania: $\\pi r l = 2 \\cdot \\pi r^2$. Skróć obie strony przez $\\pi r$ (zakładając, że $r>0$, co jest prawdą dla promienia podstawy stożka).",
-      "Po skróceniu otrzymujemy zależność $l = 2r$. Odpowiedź szukamy wśród podanych opcji, gdzie relacja między $l$ a $r$ jest przedstawiona w różny sposób. Opcja B) przedstawia tę zależność w postaci $l=2r$."
+      "Zapisz wzory: powierzchnia boczna stożka $P_b=\\pi r l$, pole podstawy $P_p=\\pi r^{2}$.",
+      "Zapisz warunek z treści zadania: $\\pi r l=2\\pi r^{2}$.",
+      "Podziel obie strony przez $\\pi r$ (jest to liczba dodatnia): $l=2r$, czyli $r=\\frac{1}{2}l$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2585,19 +2618,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są dwa okręgi o promieniach 10 i 15. Mniejszy okrąg przechodzi przez środek większego okręgu. Odległość między środkami tych okręgów jest równa",
+    "prompt": "Dane są dwa okręgi o promieniach $10$ i $15$. Mniejszy okrąg przechodzi przez środek większego okręgu. Odległość między środkami tych okręgów jest równa",
     "choices": [
-      "2,5",
-      "5",
-      "10",
-      "12,5"
+      "$2{,}5$",
+      "$5$",
+      "$10$",
+      "$12{,}5$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 10",
+    "explanation": "C, czyli $10$",
     "solutionSteps": [
-      "Oznaczmy promienie okręgów jako $r_1$ i $r_2$, gdzie $r_1 = 10$ i $r_2 = 15$. Z treści zadania wiemy, że mniejszy okrąg przechodzi przez środek większego okręgu.",
-      "Skoro mniejszy okrąg (o promieniu $r_1$) przechodzi przez środek większego okręgu, to odległość między środkami tych okręgów musi być równa promieniowi mniejszego okręgu.",
-      "Zatem odległość między środkami okręgów wynosi $r_1$, czyli 10."
+      "Oznacz środki okręgów przez $O_1$ (okrąg o promieniu $10$) i $O_2$ (okrąg o promieniu $15$).",
+      "Mniejszy okrąg przechodzi przez środek większego, czyli punkt $O_2$ leży na okręgu o środku $O_1$ i promieniu $10$.",
+      "Zatem $|O_1O_2|=10$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2618,17 +2651,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     ],
     "prompt": "Każdy uczestnik spotkania dwunastoosobowej grupy przyjaciół uścisnął dłoń każdemu z pozostałych członków tej grupy. Liczba wszystkich uścisków dłoni była równa",
     "choices": [
-      "66",
-      "72",
-      "132",
-      "144"
+      "$66$",
+      "$72$",
+      "$132$",
+      "$144$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 66",
+    "explanation": "A, czyli $66$",
     "solutionSteps": [
-      "Zrozum, że problem dotyczy kombinacji bez powtórzeń - każdy uścisk dłoni to wybór 2 osób z 12, kolejność nie ma znaczenia. Użyjemy wzoru na kombinacje $n$ elementów po $k$: $C(n, k) = \\frac{n!}{k!(n-k)!}$.",
-      "W tym zadaniu mamy $n=12$ (wszystkie osoby) i $k=2$ (dwie osoby biorące udział w uścisku dłoni). Podstaw wartości do wzoru: $C(12, 2) = \\frac{12!}{2!(12-2)!} = \\frac{12!}{2!10!}$.",
-      "Oblicz wartość kombinacji: $\\frac{12 \\times 11}{2 \\times 1} = 6 \\times 11 = 66$."
+      "Uścisk dłoni wyznaczają dwie osoby, a kolejność nie ma znaczenia, więc liczba uścisków to liczba dwuelementowych podzbiorów zbioru $12$ osób.",
+      "Oblicz $\\binom{12}{2}=\\frac{12\\cdot 11}{2}=66$.",
+      "Liczba $132$ odpowiada liczeniu z kolejnością (bez dzielenia przez $2$), więc jest błędna."
     ],
     "examSource": {
       "kind": "matura",
@@ -2647,19 +2680,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W dziewięciowyrazowym ciągu geometrycznym o wyrazach dodatnich pierwszy wyraz jest równy 3, a ostatni wyraz jest równy 12. Piąty wyraz tego ciągu jest równy",
+    "prompt": "W dziewięciowyrazowym ciągu geometrycznym o wyrazach dodatnich pierwszy wyraz jest równy $3$, a ostatni wyraz jest równy $12$. Piąty wyraz tego ciągu jest równy",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-1.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-2.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-3.png)",
-      "![Rysunek do zadania](/cke-matura/m15-przykladowa/z21-4.png)"
+      "$3\\sqrt[4]{2}$",
+      "$6$",
+      "$7\\frac{1}{2}$",
+      "$8\\frac{1}{7}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 6",
+    "explanation": "B, czyli $6$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na $n - ty$ wyraz ciągu geometrycznego: $a_n = a_1 \\cdot q^{n-1}$. Mamy $a_1 = 3$, $a_9 = 12$, więc $12 = 3 \\cdot q^{9-1}$, co daje $q^8 = 4$.",
-      "Oblicz 5. wyraz ciągu ($a_5$) używając wzoru $a_5 = a_1 \\cdot q^{5-1}$. Podstawiając dane i wynik z poprzedniego kroku: $a_5 = 3 \\cdot q^4$. Ponieważ $q^8 = 4$, to $q^4 = \\sqrt{4} = 2$.",
-      "Oblicz $a_5$: $a_5 = 3 \\cdot 2 = 6$."
+      "Skorzystaj ze wzoru na $n$-ty wyraz ciągu geometrycznego: $a_9=a_1\\cdot q^{8}$, czyli $12=3q^{8}$, skąd $q^{8}=4$.",
+      "Wszystkie wyrazy $s$ą dodatnie, więc $q>0$ i $q^{4}=\\sqrt{q^{8}}=2$.",
+      "Piąty wyraz to $a_5=a_1\\cdot q^{4}=3\\cdot 2=6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2678,19 +2711,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n}$ = $(n + 3)(n - 5)$ dla $n \\ge 1$ . Liczba ujemnych wyrazów tego ciągu jest równa",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n=(n+3)(n-5)$ dla $n\\ge 1$. Liczba ujemnych wyrazów tego ciągu jest równa",
     "choices": [
-      "3",
-      "4",
-      "7",
-      "9"
+      "$3$",
+      "$4$",
+      "$7$",
+      "$9$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 4",
+    "explanation": "B, czyli $4$",
     "solutionSteps": [
-      "Aby znaleźć ujemne wyrazy ciągu, szukamy takich $n \\ge 1$, dla których $a_n < 0$. Zapisujemy nierówność: $(n+3)(n-5) < 0$.",
-      "Nierówność kwadratowa $(n+3)(n-5) < 0$ jest spełniona, gdy jeden z czynników jest dodatni, a drugi ujemny. Ponieważ $n \\ge 1$, czynnik $(n+3)$ jest zawsze dodatni. Zatem musi być $(n-5) < 0$, co daje $n < 5$.",
-      "Liczby naturalne $n \\ge 1$, które spełniają warunek $n < 5$, to $n \\in \\{1, 2, 3, 4\\}$. Są to 4 liczby."
+      "Szukamy liczb $n\\ge 1$, dla których $(n+3)(n-5)<0$.",
+      "Dla $n\\ge 1$ czynnik $n+3$ jest dodatni, więc iloczyn jest ujemny dokładnie wtedy, gdy $n-5<0$, czyli $n<5$.",
+      "Warunek spełniają $n=1,2,3,4$ - cztery liczby. Dla $n=5$ wyraz jest równy $0$, więc nie jest ujemny."
     ],
     "examSource": {
       "kind": "matura",
@@ -2709,19 +2742,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech p i oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez i . Wtedy",
+    "prompt": "Rzucamy jeden raz symetryczną sześcienną kostką do gry. Niech $p_i$ oznacza prawdopodobieństwo wyrzucenia liczby oczek podzielnej przez $i$. Wtedy",
     "choices": [
-      "$2p_{4} = p_{2}$",
-      "$2p_{6} = p_{3}$",
-      "$2p_{3} = p_{6}$",
-      "$2p_{2} = p_{4}$"
+      "$2p_4=p_2$",
+      "$2p_6=p_3$",
+      "$2p_3=p_6$",
+      "$2p_2=p_4$"
     ],
     "correctIndex": 1,
-    "explanation": "B",
+    "explanation": "B, czyli $2p_6=p_3$",
     "solutionSteps": [
-      "Oblicz prawdopodobieństwa $p_2$, $p_3$, $p_4$, $p_6$. Na kostce są liczby od 1 do 6. $p_2$ $(podzielne przez 2)$: {2, 4, 6} -3 możliwości. $p_3$ $(podzielne przez 3)$: {3, 6} -2 możliwości. $p_4$ $(podzielne przez 4)$: {4} -1 możliwość. $p_6$ $(podzielne przez 6)$: {6} -1 możliwość. Prawdopodobieństwo to liczba sprzyjających wyników podzielona przez liczbę wszystkich wyników(6).",
-      "Wyraź obliczone prawdopodobieństwa w formie ułamków. $p_2 = \\frac{3}{6} = \\frac{1}{2}$, $p_3 = \\frac{2}{6} = \\frac{1}{3}$, $p_4 = \\frac{1}{6}$, $p_6 = \\frac{1}{6}$.",
-      "Sprawdź równości podane w opcjach.\nA) $2 \\cdot p_4 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_2 = \\frac{1}{2}$. $\\frac{1}{3} \\neq \\frac{1}{2}$.\nB) $2 \\cdot p_6 = 2 \\cdot \\frac{1}{6} = \\frac{1}{3}$, $p_3 = \\frac{1}{3}$. $\\frac{1}{3} = \\frac{1}{3}$.\nC) $2 \\cdot p_3 = 2 \\cdot \\frac{1}{3} = \\frac{2}{3}$, $p_6 = \\frac{1}{6}$. $\\frac{2}{3} \\neq \\frac{1}{6}$.\nD) $2 \\cdot p_2 = 2 \\cdot \\frac{1}{2} = 1$, $p_4 = \\frac{1}{6}$. $1 \\neq \\frac{1}{6}$."
+      "Wypisz wyniki sprzyjające: liczby podzielne przez $2$ to $\\{2,4,6\\}$, przez $3$ to $\\{3,6\\}$, przez $4$ to $\\{4\\}$, a przez $6$ to $\\{6\\}$.",
+      "Wszystkich wyników jest $6$, więc $p_2=\\frac{3}{6}=\\frac{1}{2}$, $p_3=\\frac{2}{6}=\\frac{1}{3}$, $p_4=\\frac{1}{6}$ i $p_6=\\frac{1}{6}$.",
+      "Sprawdź odpowiedzi: $2p_4=\\frac{1}{3}\\ne p_2$, $2p_6=\\frac{1}{3}=p_3$, $2p_3=\\frac{2}{3}\\ne p_6$ oraz $2p_2=1\\ne p_4$. Prawdziwa jest tylko druga równość."
     ],
     "examSource": {
       "kind": "matura",
@@ -2740,17 +2773,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem rozwiązań nierówności $ax + 4 \\ge 0$ z niewiadomą $x$ jest przedział (-∞, 2⟩ . Wyznacz a .",
+    "prompt": "Zbiorem rozwiązań nierówności $ax+4\\ge 0$ z niewiadomą $x$ jest przedział $(-\\infty,2]$. Wyznacz $a$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$a = -2$",
+    "explanation": "$a=-2$",
     "solutionSteps": [
-      "Nierówność $ax + 4 \\ge 0$ przekształcamy do postaci $ax \\ge -4$. Rozważamy dwa przypadki ze względu na znak współczynnika $a$.",
-      "Jeśli $a > 0$, dzielimy nierówność przez $a$ i otrzymujemy $x \\ge -\\frac{4}{a}$. Rozwiązaniem jest przedział $[-\\frac{4}{a}, \\infty)$, co nie zgadza się z danym przedziałem.",
-      "Jeśli $a < 0$, dzieląc przez $a$, zmieniamy kierunek nierówności: $x \\le -\\frac{4}{a}$. Rozwiązaniem jest przedział $(-\\infty, -\\frac{4}{a}]$. Porównując z danym przedziałem $(-\\infty, 2]$, otrzymujemy $-\\frac{4}{a} = 2$.",
-      "Rozwiązujemy równanie $-\\frac{4}{a} = 2$ mnożąc obie strony przez $a$: $-4 = 2a$, skąd $a = -2$. Sprawdzamy, że $a < 0$, co jest zgodne z założeniem."
+      "Przekształć nierówność do postaci $ax\\ge -4$ i rozważ dwa przypadki ze względu na znak współczynnika $a$.",
+      "Gdyby $a>0$, to dzieląc przez $a$ bez zmiany kierunku nierówności otrzymalibyśmy $x\\ge -\\frac{4}{a}$, czyli przedział $\\left[-\\frac{4}{a},+\\infty\\right)$ - nie jest to dany przedział.",
+      "Zatem $a<0$. Dzieląc przez liczbę ujemną zmieniamy kierunek nierówności: $x\\le -\\frac{4}{a}$, czyli zbiorem rozwiązań jest $\\left(-\\infty,-\\frac{4}{a}\\right]$.",
+      "Porównaj prawe końce przedziałów: $-\\frac{4}{a}=2$, skąd $-4=2a$, czyli $a=-2$. Otrzymana liczba jest ujemna, więc założenie z kroku 3 jest spełnione."
     ],
     "examSource": {
       "kind": "matura",
@@ -2769,16 +2802,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m15-przykladowa/z25-1.png) dla x ≠ 1.",
+    "prompt": "Rozwiąż równanie $\\frac{x(x+1)}{x-1}=5x-4$ dla $x\\ne 1$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x = \\frac{3}{2}$",
+    "explanation": "$x=\\frac{1}{2}$ lub $x=2$",
     "solutionSteps": [
-      "Pomnóż obie strony równania przez wspólny mianownik $(x-1)$, aby pozbyć się ułamków. Otrzymasz $1 = 2(x-1)$.",
-      "Rozwiąż otrzymane równanie liniowe: $1 = 2x - 2$, co po dodaniu $2$ do obu stron daje $3 = 2x$.",
-      "Podziel obie strony przez $2$, aby wyznaczyć $x$. Otrzymasz $x = \\frac{3}{2}$."
+      "Pomnóż obie strony przez $x-1$ (wolno, bo $x\\ne 1$): $x(x+1)=(5x-4)(x-1)$.",
+      "Wymnóż obie strony: $x^{2}+x=5x^{2}-5x-4x+4$, czyli $x^{2}+x=5x^{2}-9x+4$.",
+      "Przenieś wszystkie wyrazy na jedną stronę: $4x^{2}-10x+4=0$, a po podzieleniu przez $2$: $2x^{2}-5x+2=0$.",
+      "Oblicz wyróżnik i pierwiastki: $\\Delta=25-16=9$, $\\sqrt{\\Delta}=3$, więc $x_1=\\frac{5-3}{4}=\\frac{1}{2}$ oraz $x_2=\\frac{5+3}{4}=2$.",
+      "Obie liczby są różne od $1$, więc spełniają założenie. Sprawdzenie: dla $x=\\frac{1}{2}$ obie strony są równe $-1{,}5$, a dla $x=2$ obie są równe $6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2797,16 +2832,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kwadrat K 1 ma bok długości $a$ . Obok niego rysujemy kolejno kwadraty K 2 , K 3 , K 4 , ... takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z26-1.png) Wyznacz pole kwadratu K 12 .",
+    "prompt": "Kwadrat $K_1$ ma bok długości $a$. Obok niego rysujemy kolejno kwadraty $K_2$, $K_3$, $K_4$, $\\dots$ takie, że kolejny kwadrat ma bok o połowę mniejszy od boku poprzedniego kwadratu (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m15-przykladowa/z26-fig1.png)\n\nWyznacz pole kwadratu $K_{12}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{a^2}{2^{22}}$",
+    "explanation": "$P_{12}=\\frac{a^{2}}{2^{22}}$",
     "solutionSteps": [
-      "Długość boku kwadratu $K_n$ oznaczamy jako $a_n$. Zgodnie z treścią zadania, $a_1 = a$ oraz $a_n = \\frac{1}{2} a_{n-1}$ dla $n \\ge 2$. Jest to ciąg geometryczny o pierwszym wyrazie $a$ i ilorazie $q = \\frac{1}{2}$. Wzór ogólny na długość boku $n$-tego kwadratu to $a_n = a \\cdot \\left(\\frac{1}{2}\\right)^{n-1}$.",
-      "Aby wyznaczyć pole kwadratu $K_{12}$, potrzebujemy długości jego boku, czyli $a_{12}$. Korzystając ze wzoru ogólnego: $a_{12} = a \\cdot \\left(\\frac{1}{2}\\right)^{12-1} = a \\cdot \\left(\\frac{1}{2}\\right)^{11} = \\frac{a}{2^{11}}$.",
-      "Pole kwadratu $K_{12}$ (oznaczone jako $P_{12}$) obliczamy, podnosząc długość jego boku do kwadratu: $P_{12} = (a_{12})^2 = \\left(\\frac{a}{2^{11}}\\right)^2 = \\frac{a^2}{(2^{11})^2} = \\frac{a^2}{2^{22}}$."
+      "Długości boków kolejnych kwadratów tworzą ciąg geometryczny o pierwszym wyrazie $a_1=a$ i ilorazie $q=\\frac{1}{2}$, więc $a_n=a\\cdot\\left(\\frac{1}{2}\\right)^{n-1}$.",
+      "Bok kwadratu $K_{12}$ to $a_{12}=a\\cdot\\left(\\frac{1}{2}\\right)^{11}=\\frac{a}{2^{11}}$.",
+      "Pole kwadratu $K_{12}$ wynosi $P_{12}=\\left(a_{12}\\right)^{2}=\\left(\\frac{a}{2^{11}}\\right)^{2}=\\frac{a^{2}}{2^{22}}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2825,16 +2860,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pierścieniu kołowym cięciwa zewnętrznego okręgu ma długość 10 i jest styczna do wewnętrznego okręgu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m15-przykladowa/z27-1.png) Wykaż, że pole tego pierścienia można wyrazić wzorem, w którym nie występują promienie wyznaczających go okręgów.",
+    "prompt": "W pierścieniu kołowym cięciwa zewnętrznego okręgu ma długość $10$ i jest styczna do wewnętrznego okręgu (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m15-przykladowa/z27-fig1.png)\n\nWykaż, że pole tego pierścienia można wyrazić wzorem, w którym nie występują promienie wyznaczających go okręgów.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$P = 25\\pi$",
+    "explanation": "$P=25\\pi$",
     "solutionSteps": [
-      "Oznaczmy promienie zewnętrznego i wewnętrznego okręgu jako $R$ i $r$. Cięciwa o długości 10 jest styczna do wewnętrznego okręgu, co oznacza, że tworzy z promieniem $r$ trójkąt prostokątny. Połowa cięciwy $(długości 5)$ jest jedną przyprostokątną, $r$ jest drugą przyprostokątną, a $R$ jest przeciwprostokątną. Stosujemy twierdzenie Pitagorasa: $r^2 + 5^2 = R^2$.",
-      "Przekształcamy równanie z kroku 1, aby otrzymać $R^2 - r^2 = 5^2 = 25$. Pole pierścienia kołowego to różnica pól kół: $P = \\pi R^2 - \\pi r^2$.",
-      "Wyłączamy $\\pi$ przed nawias w wyrażeniu na pole: $P = \\pi (R^2 - r^2)$. Podstawiamy wartość $R^2 - r^2 = 25$ z kroku 2."
+      "Oznacz przez $R$ promień okręgu zewnętrznego, przez $r$ promień okręgu wewnętrznego, a przez $O$ wspólny środek obu okręgów.",
+      "Poprowadź promień $R$ do końca $A$ cięciwy. Promień wewnętrznego okręgu poprowadzony do punktu styczności jest prostopadły do cięciwy, więc trójkąt o bokach $R$, $r$ i $5$ (połowa cięciwy) jest prostokątny. Z twierdzenia Pitagorasa: $R^{2}=r^{2}+5^{2}$, czyli $R^{2}-r^{2}=25$.",
+      "Pole pierścienia to różnica pól kół: $P=\\pi R^{2}-\\pi r^{2}=\\pi\\left(R^{2}-r^{2}\\right)$.",
+      "Podstaw $R^{2}-r^{2}=25$: $P=25\\pi$. Otrzymany wzór nie zawiera promieni, co kończy dowód."
     ],
     "examSource": {
       "kind": "matura",
@@ -2853,16 +2889,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Uzasadnij, że liczba 4 $12 + 4 13 + 4$ 14 jest podzielna przez 42.",
+    "prompt": "Uzasadnij, że liczba $4^{12}+4^{13}+4^{14}$ jest podzielna przez $42$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Liczba jest podzielna przez 42.",
+    "explanation": "liczba $4^{12}+4^{13}+4^{14}$ jest podzielna przez $42$",
     "solutionSteps": [
-      "Wyłącz wspólny czynnik z przed nawiasu.\n$4^{12} + 4^{13} + 4^{14} = 4^{12}(1 + 4^1 + 4^2)$.",
-      "Oblicz wartość w nawiasie i uprość wyrażenie.\n$1 + 4 + 16 = 21$. Zatem mamy $4^{12} \\cdot 21$.",
-      "Rozłóż czynnik potęgowy na mniejsze części, aby wyodrębnić dzielnik 42.\n$4^{12} \\cdot 21 = 4 \\cdot 4^{11} \\cdot 21 = 4 \\cdot 21 \\cdot 4^{11} = 84 \\cdot 4^{11}$. Ponieważ $84 = 2 \\cdot 42$, liczba jest podzielna przez 42."
+      "Wyłącz $4^{12}$ przed nawias: $4^{12}+4^{13}+4^{14}=4^{12}\\left(1+4+4^{2}\\right)$.",
+      "Oblicz wartość w nawiasie: $1+4+16=21$, więc dana liczba jest równa $21\\cdot 4^{12}$.",
+      "Rozpisz $4^{12}=4\\cdot 4^{11}$: $21\\cdot 4^{12}=84\\cdot 4^{11}=42\\cdot\\left(2\\cdot 4^{11}\\right)$.",
+      "Otrzymaliśmy iloczyn liczby $42$ i liczby całkowitej $2\\cdot 4^{11}$, więc liczba $4^{12}+4^{13}+4^{14}$ jest podzielna przez $42$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2881,16 +2918,16 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na trójkącie o bokach długości $\\sqrt{7}$ , $\\sqrt{8}$ , $\\sqrt{15}$ opisano okrąg. Oblicz promień tego okręgu.",
+    "prompt": "Na trójkącie o bokach długości $\\sqrt{7}$, $\\sqrt{8}$, $\\sqrt{15}$ opisano okrąg. Oblicz promień tego okręgu.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{\\sqrt{15}}{2}$",
+    "explanation": "$R=\\frac{\\sqrt{15}}{2}$",
     "solutionSteps": [
-      "Sprawdź, czy trójkąt jest prostokątny, używając twierdzenia Pitagorasa. W tym celu podnieś długości boków do kwadratu: $(\\sqrt{7})^2=7$, $(\\sqrt{8})^2=8$, $(\\sqrt{15})^2=15$. Suma dwóch mniejszych kwadratów $7+8=15$, co jest równe kwadratowi najdłuższego boku.",
-      "Ponieważ $a^2+b^2=c^2$, trójkąt jest prostokątny. W trójkącie prostokątnym przeciwprostokątna jest średnicą okręgu opisanego na tym trójkącie.",
-      "Promień okręgu opisanego na trójkącie prostokątnym jest równy połowie długości przeciwprostokątnej. Przeciwprostokątna ma długość $\\sqrt{15}$."
+      "Sprawdź, czy trójkąt jest prostokątny: $\\left(\\sqrt{7}\\right)^{2}+\\left(\\sqrt{8}\\right)^{2}=7+8=15=\\left(\\sqrt{15}\\right)^{2}$.",
+      "Z twierdzenia odwrotnego do twierdzenia Pitagorasa trójkąt jest prostokątny, a jego przeciwprostokątna ma długość $\\sqrt{15}$.",
+      "W trójkącie prostokątnym środek okręgu opisanego jest środkiem przeciwprostokątnej, więc $R=\\frac{\\sqrt{15}}{2}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2909,16 +2946,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste l i k przecinają się w punkcie $A = (0, 4)$ . Prosta l wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu 8, zaś prosta k - trójkąt o polu 10. Oblicz pole trójkąta, którego wierzchołkami są: punkt A oraz punkty przecięcia prostych l i k z osią Ox .",
+    "prompt": "Proste $l$ i $k$ przecinają się w punkcie $A=(0,4)$. Prosta $l$ wyznacza wraz z dodatnimi półosiami układu współrzędnych trójkąt o polu $8$, zaś prosta $k$ - trójkąt o polu $10$. Oblicz pole trójkąta, którego wierzchołkami są: punkt $A$ oraz punkty przecięcia prostych $l$ i $k$ z osią $Ox$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "2",
+    "explanation": "$P=2$",
     "solutionSteps": [
-      "Określamy równania prostych. Prosta $l$ przechodzi przez $(0, 4)$ i tworzy trójkąt o polu 8 z dodatnimi półosiami. Jej równanie to $\\frac{x}{a_1} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_1| \\cdot 4 = 8$, stąd $|a_1| = 4$. Ponieważ przecina dodatnią półos $Ox$, $a_1=4$. Równanie prostej $l$: $\\frac{x}{4} + \\frac{y}{4} = 1$, czyli $x+y=4$. Prosta $k$ ma równanie $\\frac{x}{a_2} + \\frac{y}{4} = 1$. Pole trójkąta to $\\frac{1}{2} |a_2| \\cdot 4 = 10$, stąd $|a_2|=5$. Ponieważ przecina dodatnią półos $Ox$, $a_2=5$. Równanie prostej $k$: $\\frac{x}{5} + \\frac{y}{4} = 1$, czyli $4x+5y=20$.",
-      "Wyznaczamy punkty przecięcia prostych z osią $Ox$. Dla prostej $l$, podstawiamy $y=0$ do równania $x+y=4$, otrzymujemy punkt $P_1=(4, 0)$. Dla prostej $k$, podstawiamy $y=0$ do równania $4x+5y=20$, otrzymujemy punkt $P_2=(5, 0)$.",
-      "Obliczamy pole trójkąta o wierzchołkach $A=(0, 4)$, $P_1=(4, 0)$ i $P_2=(5, 0)$. Podstawą tego trójkąta jest odcinek $P_1P_2$ na osi $Ox$. Długość podstawy to $|5-4|=1$. Wysokością jest odległość punktu $A$ od osi $Ox$, czyli 4. Pole trójkąta wynosi $\\frac{1}{2} \\cdot 1 \\cdot 4 = 2$."
+      "Trójkąt wyznaczony przez punkt $A=(0,4)$ i dodatnie półosie ma przyprostokątne $4$ i $p$, gdzie $p$ jest odciętą punktu przecięcia prostej z osią $Ox$. Jego pole to $\\frac{1}{2}\\cdot 4\\cdot p=2p$.",
+      "Dla prostej $l$ jest $2p=8$, więc $p=4$ i punkt przecięcia z osią $Ox$ to $P_1=(4,0)$. Dla prostej $k$ jest $2p=10$, więc $p=5$ i punkt to $P_2=(5,0)$.",
+      "Trójkąt $AP_1P_2$ ma podstawę $P_1P_2$ o długości $|5-4|=1$ i wysokość równą odległości punktu $A$ od osi $Ox$, czyli $4$.",
+      "Pole wynosi $\\frac{1}{2}\\cdot 1\\cdot 4=2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2942,11 +2980,13 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "7:20",
+    "explanation": "o godzinie 7:20",
     "solutionSteps": [
-      "Oblicz prędkość Ali, zakładając, że droga do szkoły ma stałą długość. Załóżmy, że droga ma $d$ km. Ala pokonała drogę w 40 minut, czyli w $\\frac{40}{60} = \\frac{2}{3}$ godziny. Prędkość Ali $v_A = \\frac{d}{\\frac{2}{3}} = \\frac{3d}{2}$ $km/h$.",
-      "Oblicz prędkość Oli. Ola wyjechała 10 minut później niż Ala $(o 7:10)$ i jechała 20 minut. Pokonała tę samą drogę $d$ w $\\frac{20}{60} = \\frac{1}{3}$ godziny. Prędkość Oli $v_O = \\frac{d}{\\frac{1}{3}} = 3d$ $km/h$. Zauważ, że $v_O = 2v_A$.",
-      "Oblicz czas, po którym Ola wyprzedziła Alę. Ala jechała $t$ minut, Ola jechała $t - 10$ minut. Droga pokonana przez Alę to $d_A = v_A \\cdot \\frac{t}{60}$. Droga pokonana przez Olę to $d_O = v_O \\cdot \\frac{t-10}{60}$. Ola wyprzedziła Alę, gdy $d_O = d_A$. Podstawiając prędkości: $3d \\cdot \\frac{t-10}{60} = \\frac{3d}{2} \\cdot \\frac{t}{60}$. Po skróceniu $d$, $60$, $3$: $2(t-10) = t$, czyli $2t - 20 = t$, co daje $t = 20$ minut. Ola wyprzedziła Alę po 20 minutach od wyjazdu Ali, czyli o 7:20."
+      "Oznacz drogę do szkoły przez $d$ i licz czas w godzinach. Ala jedzie $\\frac{40}{60}=\\frac{2}{3}$ godziny, więc jej prędkość to $v_A=\\frac{d}{2/3}=\\frac{3d}{2}$.",
+      "Ola jedzie $\\frac{20}{60}=\\frac{1}{3}$ godziny, więc $v_O=\\frac{d}{1/3}=3d$. Jej prędkość jest dwa razy większa niż prędkość Ali.",
+      "Niech $t$ oznacza czas w godzinach liczony od godziny 7:00. Ala jest w drodze $t$ godzin, a Ola $t-\\frac{1}{6}$ godziny. Ola wyprzedza Alę, gdy obie pokonały tę samą drogę: $\\frac{3d}{2}\\cdot t=3d\\cdot\\left(t-\\frac{1}{6}\\right)$.",
+      "Podziel obie strony przez $3d$: $\\frac{t}{2}=t-\\frac{1}{6}$, skąd $\\frac{t}{2}=\\frac{1}{6}$, czyli $t=\\frac{1}{3}$ godziny, to jest $20$ minut.",
+      "Ola wyprzedziła Alę 20 minut po godzinie 7:00, czyli o 7:20. Sprawdzenie: Ala przejechała wtedy $\\frac{3d}{2}\\cdot\\frac{1}{3}=\\frac{d}{2}$, a Ola $3d\\cdot\\left(\\frac{1}{3}-\\frac{1}{6}\\right)=\\frac{d}{2}$ - tyle samo."
     ],
     "examSource": {
       "kind": "matura",
@@ -2965,16 +3005,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dane są wierzchołki trójkąta ABC : $A = (2, 2)$ , $B = (9, 5)$ i $C = (3, 9)$ . Z wierzchołka C poprowadzono wysokość tego trójkąta, która przecina bok AB w punkcie D . Wyznacz równanie prostej przechodzącej przez punkt D i równoległej do boku BC .",
+    "prompt": "Dane są wierzchołki trójkąta $ABC$: $A=(2,2)$, $B=(9,5)$ i $C=(3,9)$. Z wierzchołka $C$ poprowadzono wysokość tego trójkąta, która przecina bok $AB$ w punkcie $D$. Wyznacz równanie prostej przechodzącej przez punkt $D$ i równoległej do boku $BC$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$y = -\\frac{2}{3}x + \\frac{238}{15}$",
+    "explanation": "$y=-\\frac{2}{3}x+\\frac{204}{29}$",
     "solutionSteps": [
-      "Wyznacz równanie prostej AB, a następnie równanie prostej CD (wysokości), która jest prostopadła do AB i przechodzi przez C.\nProsta AB ma równanie $y = \\frac{1}{2}x + 1$. Prosta CD jest prostopadła do AB, więc jej współczynnik kierunkowy wynosi $-2$. Równanie prostej CD to $y - 9 = -2(x - 3)$, czyli $y = -2x + 15$.",
-      "Oblicz współrzędne punktu D, który jest punktem przecięcia prostych AB i CD.\nRozwiązując układ równań:\n$y = \\frac{1}{2}x + 1$\n$y = -2x + 15$\nOtrzymujemy $x = \\frac{28}{5}$ i $y = \\frac{34}{5}$. Punkt $D = (\\frac{28}{5}, \\frac{34}{5})$.",
-      "Wyznacz równanie prostej przechodzącej przez D i równoległej do BC.\nWspółczynnik kierunkowy prostej BC wynosi $a_{BC} = \\frac{9-5}{3-9} = \\frac{4}{-6} = -\\frac{2}{3}$. Prosta równoległa do BC ma taki sam współczynnik kierunkowy. Równanie szukanej prostej to $y - \\frac{34}{5} = -\\frac{2}{3}(x - \\frac{28}{5})$. Po przekształceniu otrzymujemy $y = -\\frac{2}{3}x + \\frac{238}{15}$."
+      "Wyznacz równanie prostej $AB$: współczynnik kierunkowy $a=\\frac{5-2}{9-2}=\\frac{3}{7}$, więc $y-2=\\frac{3}{7}(x-2)$, czyli $y=\\frac{3}{7}x+\\frac{8}{7}$.",
+      "Wysokość $CD$ jest prostopadła do $AB$, więc ma współczynnik kierunkowy $-\\frac{7}{3}$ i przechodzi przez $C=(3,9)$: $y=-\\frac{7}{3}(x-3)+9=-\\frac{7}{3}x+16$.",
+      "Znajdź punkt $D$, rozwiązując układ równań: $\\frac{3}{7}x+\\frac{8}{7}=-\\frac{7}{3}x+16$. Po pomnożeniu przez $21$: $9x+24=-49x+336$, skąd $58x=312$, czyli $x=\\frac{156}{29}$. Wtedy $y=\\frac{3}{7}\\cdot\\frac{156}{29}+\\frac{8}{7}=\\frac{468+232}{203}=\\frac{100}{29}$, więc $D=\\left(\\frac{156}{29},\\frac{100}{29}\\right)$.",
+      "Współczynnik kierunkowy prostej $BC$ to $\\frac{9-5}{3-9}=-\\frac{2}{3}$. Szukana prosta jest do niej równoległa i przechodzi przez $D$: $y-\\frac{100}{29}=-\\frac{2}{3}\\left(x-\\frac{156}{29}\\right)$.",
+      "Przekształć równanie do postaci kierunkowej: $y=-\\frac{2}{3}x+\\frac{104}{29}+\\frac{100}{29}=-\\frac{2}{3}x+\\frac{204}{29}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -2993,17 +3035,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi 2 cm . Zbudował z nich jeden duży sześcian o krawędzi 8 cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę - graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
+    "prompt": "Jacek bawi się sześciennymi klockami o krawędzi $2$ cm. Zbudował z nich jeden duży sześcian o krawędzi $8$ cm i wykorzystał do tego wszystkie swoje klocki. Następnie zburzył budowlę i ułożył z tych klocków drugą bryłę - graniastosłup prawidłowy czworokątny. Wtedy okazało się, że został mu dokładnie jeden klocek, którego nie było gdzie dołożyć. Oblicz stosunek pola powierzchni całkowitej pierwszej ułożonej bryły do pola powierzchni całkowitej drugiej bryły i wynik podaj w postaci ułamka nieskracalnego.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
     "explanation": "$\\frac{16}{17}$",
     "solutionSteps": [
-      "Oblicz objętość dużego sześcianu i liczbę mniejszych klocków. Duży sześcian ma krawędź 8 cm, więc jego objętość to $8^3 = 512 \\text{ cm}^3$. Mały klocek ma krawędź 2 cm, więc jego objętość to $2^3 = 8 \\text{ cm}^3$. Liczba klocków wynosi $\\frac{512}{8} = 64$.",
-      "Oblicz pola powierzchni całkowitej pierwszej bryły (sześcianu). Sześcian o krawędzi 8 cm ma 6 ścian, każda o polu $8^2 = 64 \\text{ cm}^2$. Pole powierzchni całkowitej wynosi $6 \\cdot 64 = 384 \\text{ cm}^2$.",
-      "Oblicz wymiary i pole powierzchni drugiej bryły (graniastosłupa). Po ułożeniu graniastosłupa pozostał jeden klocek, co oznacza, że na graniastosłup zużyto $64 - 1 = 63$ klocki. Objętość graniastosłupa to $63 \\cdot 8 = 504 \\text{ cm}^3$. Graniastosłup prawidłowy czworokątny ma w podstawie kwadrat. Szukamy wymiarów (podstawa $a \\times a$, wysokość $h$), których pole powierzchni jest minimalne dla danej objętości, a które da się ułożyć z klocków 2x2x2. Możliwe wymiary to np. podstawa $6 \\times 6$ (czyli $3 \\times 3$ klocki) i wysokość $504 / 36 = 14$. Powierzchnia wynosi $2 \\cdot (6 \\cdot 6) + 4 \\cdot (6 \\cdot 14) = 2 \\cdot 36 + 4 \\cdot 84 = 72 + 336 = 408 \\text{ cm}^2$. Alternatywnie podstawa $7 \\times 7$ nie jest możliwa z klocków 2x2x2. Inna możliwość to podstawa $4 \\times 4$ (czyli $2 \\times 2$ klocki) i wysokość $504 / 16 = 31.5$, nie jest możliwa. Przyjmujemy wymiary $6 \\times 6 \\times 14$.",
-      "Oblicz stosunek pól powierzchni. Stosunek pola powierzchni pierwszej bryły do drugiej wynosi $\\frac{384}{408}$. Skracamy ułamek: $\\frac{384}{408} = \\frac{192}{204} = \\frac{96}{102} = \\frac{48}{51} = \\frac{16}{17}$."
+      "Oblicz liczbę klocków: objętość dużego sześcianu to $8^{3}=512\\text{ cm}^{3}$, a jednego klocka $2^{3}=8\\text{ cm}^{3}$, więc klocków jest $\\frac{512}{8}=64$.",
+      "Pole powierzchni pierwszej bryły: $P_1=6\\cdot 8^{2}=384\\text{ cm}^{2}$.",
+      "Druga bryła to graniastosłup prawidłowy czworokątny ułożony z $63$ klocków, o podstawie $2k\\times 2k$ i wysokości $2m$, gdzie $k$ i $m$ są liczbami naturalnymi oraz $k^{2}m=63$. Zatem $k^{2}$ jest dzielnikiem $63$, więc $k=1$ lub $k=3$.",
+      "Dla $k=1$ bryłą byłby słupek $2\\times 2\\times 126$ i ostatni klocek dałoby się dołożyć na górę, otrzymując słupek $2\\times 2\\times 128$; byłoby to sprzeczne z treścią zadania. Zatem $k=3$ i $m=7$, czyli druga bryła ma wymiary $6\\text{ cm}\\times 6\\text{ cm}\\times 14\\text{ cm}$.",
+      "Pole powierzchni drugiej bryły: $P_2=2\\cdot 6^{2}+4\\cdot 6\\cdot 14=72+336=408\\text{ cm}^{2}$.",
+      "Stosunek pól: $\\frac{384}{408}=\\frac{16}{17}$ (po skróceniu przez $24$)."
     ],
     "examSource": {
       "kind": "matura",
@@ -12141,17 +12185,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest prostokąt o bokach długości $a$ i b, gdzie $a > b$. Obwód tego prostokąta jest równy 30. Jeden z boków prostokąta jest o 5 krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$ i podaj te litery w wykropkowanych miejscach. Zależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ......... oraz ......... . A) ![Rysunek do zadania](/cke-matura/m23-maj/z11-1.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z11-2.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z11-3.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z11-4.png) E) ![Rysunek do zadania](/cke-matura/m23-maj/z11-5.png) F) ![Rysunek do zadania](/cke-matura/m23-maj/z11-6.png)",
+    "prompt": "Dany jest prostokąt o bokach długości $a$ i $b$, gdzie $a>b$. Obwód tego prostokąta jest równy $30$. Jeden z boków prostokąta jest o $5$ krótszy od drugiego. Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami $A - F$.\n\nZależności między długościami boków tego prostokąta zapisano w układach równań oznaczonych literami: ......... oraz ......... .\n\nA) $2ab=30$ i $a-b=5$\nB) $2a+b=30$ i $a=5b$\nC) $2(a+b)=30$ i $b=a-5$\nD) $2a+2b=30$ i $b=5a$\nE) $2a+2b=30$ i $a-b=5$\nF) $a+b=30$ i $a=b+5$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "D oraz E",
+    "explanation": "C oraz E.",
     "solutionSteps": [
-      "Obwód prostokąta to $2a + 2b$. Z treści wiemy, że $2a + 2b = 30$, co po skróceniu daje $a + b = 15$.",
-      "Wiemy też, że jeden bok jest o 5 krótszy od drugiego. Ponieważ $a > b$, oznacza to, że $b = a - 5$.",
-      "Mamy układ równań: $a + b = 15$ oraz $b = a - 5$. Jest to układ równań z zadania, który odpowiada opcji **D**.",
-      "Po podstawieniu $b = a - 5$ do pierwszego równania otrzymujemy $a + (a - 5) = 15$, czyli $2a = 20$, co daje $a = 10$. Wtedy $b = 10 - 5 = 5$. Długości boków to 10 i 5. Ten układ odpowiada również opcji **E**."
+      "1. Obwód: $2a+2b=30$, czyli $a+b=15$.\n2. Bok krótszy: $b=a-5$.\n3. Odpowiadają temu układy C oraz E."
     ],
     "examSource": {
       "kind": "matura",
@@ -12170,16 +12211,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) narysowano wykres funkcji $y = f(x)$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-maj/z12-1.png) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji $f$ jest zbiór A) [-6 , 5] B) $(-6 , 5)$ C) $(-3 , 5] D)$ [-3 , 5] Zadanie 12.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa wartość funkcji $f$ w przedziale [-4 , 1] jest równa A) 0B) 1C) 2D) 5 Zadanie 12.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ jest malejąca w zbiorze A) [-6 , -3) B) [-3 , 1] C) $(1 , 2] D)$ [2 , 5]",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ narysowano wykres funkcji $y=f(x)$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-maj/z12-fig1.png)\n\n12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dziedziną funkcji $f$ jest zbiór\n\nRozwiąż zadanie.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "12.1. A) [-6 , 5], 12.2. C) 2, 12.3. D) [2 , 5]",
+    "explanation": "12.1 A; 12.2 C; 12.3D.",
     "solutionSteps": [
-      "Dziedzinę funkcji odczytujemy z osi X. Funkcja jest określona dla wartości $od - 6$ (włącznie) do 5 (włącznie).",
-      "Największą wartość funkcji $w$ przedziale [-4, 1] odczytujemy z osi Y. Dla $x = -4$, $y = 1$, dla $x = -2$, $y = 2$, dla $x = 1$, $y = 1$. Największa wartość to 2.",
-      "Funkcja jest malejąca, gdy jej wykres opada od lewej do prawej strony. Na wykresie widzimy, że funkcja maleje w przedziale od $x = 1$ do $x = 5$."
+      "12.1. Dziedzina: $[-6,5]$ — A.\n12.2. Największa wartość w $[-4,1]$ to $2$ — C.\n12.3. Funkcja maleje w $[2,5]$ — D."
     ],
     "examSource": {
       "kind": "matura",
@@ -12728,7 +12767,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia $(1 + 3 ⋅ 2 - 1)$ -2 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $(1+3\\cdot2^{-1})^{-2}$ jest równa",
     "choices": [
       "$\\frac{25}{4}$",
       "$\\frac{4}{25}$",
@@ -12738,10 +12777,10 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 1,
     "explanation": "B, czyli $\\frac{4}{25}$",
     "solutionSteps": [
-      "Obliczamy wartość wyrażenia w nawiasie wewnętrznym, pamiętając o kolejności działań (najpierw mnożenie, potem dodawanie): $1 + 3 \\cdot 2^{-1} = 1 + 3 \\cdot \\frac{1}{2} = 1 + \\frac{3}{2} = \\frac{2}{2} + \\frac{3}{2} = \\frac{5}{2}$.",
-      "Podnosimy otrzymaną wartość do potęgi drugiej: $(\\frac{5}{2})^2 = \\frac{5^2}{2^2} = \\frac{25}{4}$.",
-      "Ostatnim krokiem jest odwrócenie ułamka, co odpowiada podniesieniu do potęgi $-2$: $(\\frac{5}{2})^{-2} = (\\frac{25}{4})^{-1} = \\frac{4}{25}$."
+      "Wykonujemy mnożenie i potęgowanie w nawiasie:\n$$1+3\\cdot2^{-1}=1+3\\cdot\\frac12=1+\\frac32=\\frac52.$$",
+      "Podnosimy otrzymaną liczbę do potęgi $-2$, czyli odwracamy ułamek i podnosimy go do kwadratu:\n$$\\left(\\frac52\\right)^{-2}=\\left(\\frac25\\right)^{2}=\\frac{4}{25}.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12759,21 +12798,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia ![Rysunek do zadania](/cke-matura/m23-probna-ix/z02-1.jpg) jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $2\\log_5 5+1-\\frac12\\log_5 625$ jest równa",
     "choices": [
-      "1",
-      "5",
-      "10",
-      "25"
+      "$1$",
+      "$5$",
+      "$10$",
+      "$25$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli 10",
+    "correctIndex": 0,
+    "explanation": "A, czyli $1$",
     "solutionSteps": [
-      "Zamieniamy liczby mieszane na ułamki niewłaściwe: $1 \\frac{1}{4} = \\frac{5}{4}$ oraz $2 \\frac{1}{2} = \\frac{5}{2}$.",
-      "Podstawiamy wartości do wyrażenia i wykonujemy mnożenie: $\\frac{5}{4} \\cdot \\frac{5}{2} = \\frac{25}{8}$.",
-      "Dzielimy $\\frac{25}{8}$ przez $\\frac{1}{4}$, co jest równoważne mnożeniu przez odwrotność, czyli $\\frac{4}{1}$: $\\frac{25}{8} \\cdot \\frac{4}{1} = \\frac{25 \\cdot 4}{8 \\cdot 1} = \\frac{100}{8}$.",
-      "Upraszczamy ułamek $\\frac{100}{8}$ do postaci dziesiętnej: $\\frac{100}{8} = 12,5$."
+      "Korzystamy z własności logarytmów: $\\log_5 5=1$ oraz $\\log_5 625=\\log_5 5^4=4$.",
+      "Podstawiamy te wartości do wyrażenia:\n$$2\\log_5 5+1-\\frac12\\log_5 625=2\\cdot1+1-\\frac12\\cdot4=2+1-2=1.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12791,20 +12829,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich różnych liczb naturalnych czterocyfrowych, które są nieparzyste i podzielne przez 25, jest",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich różnych liczb naturalnych czterocyfrowych, które są nieparzyste i podzielne przez $25$, jest",
     "choices": [
-      "9 ⋅ 9 ⋅ 2",
-      "9 ⋅ 10 ⋅ 2",
-      "9 ⋅ 9 ⋅ 4",
-      "9 ⋅ 10 ⋅ 4"
+      "$9\\cdot9\\cdot2$",
+      "$9\\cdot10\\cdot2$",
+      "$9\\cdot9\\cdot4$",
+      "$9\\cdot10\\cdot4$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $9 \\cdot 10 \\cdot 2$",
+    "explanation": "B, czyli $9\\cdot10\\cdot2$",
     "solutionSteps": [
-      "Liczba czterocyfrowa ma postać $\\overline{abcd}$, gdzie $a \\in \\{1, 2, \\dots, 9\\}$, a $b, c, d \\in \\{0, 1, \\dots, 9\\}$. Aby liczba była podzielna przez 25, musi się kończyć na 00, 25, 50 lub 75, czyli $d$ musi być 0 lub 5, a $c$ musi być 0 lub 5. Skoro liczba ma być nieparzysta, ostatnia cyfra $d$ musi być 5.",
-      "Jeśli $d=5$, to aby liczba była podzielna przez 25, musi się kończyć na 25 lub 75. Zatem $c$ może być tylko 2 lub 7. Mamy więc 2 możliwości dla $c$ i 1 możliwość dla $d$.",
-      "Pierwsza cyfra $a$ może przyjmować wartości od 1 do 9 $(9 możliwości)$, a druga cyfra $b$ od 0 do 9 $(10 możliwości)$. Łączna liczba takich liczb wynosi $9 \\cdot 10 \\cdot 2 \\cdot 1 = 180$."
+      "Liczba jest podzielna przez $25$ wtedy i tylko wtedy, gdy jej dwie ostatnie cyfry tworzą liczbę $00$, $25$, $50$ albo $75$. Liczba ma być nieparzysta, więc odpadają końcówki $00$ i $50$ — zostają $25$ oraz $75$, czyli $2$ możliwości.",
+      "Cyfrę tysięcy wybieramy na $9$ sposobów (od $1$ do $9$), a cyfrę setek na $10$ sposobów (od $0$ do $9$).",
+      "Wszystkich takich liczb jest $9\\cdot10\\cdot2=180$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12822,20 +12861,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej x ≠ 1 wyrażenie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-1.jpg) jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDla każdej liczby rzeczywistej $x\\neq1$ wyrażenie $\\frac{2}{x-1}-5$ jest równe",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-2.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-3.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-4.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z04-5.jpg)"
+      "$\\frac{-5x+1}{x-1}$",
+      "$\\frac{-5x+7}{x-1}$",
+      "$\\frac{-5x+3}{x-1}$",
+      "$\\frac{-5x-3}{x-1}$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $x+1$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\frac{-5x+7}{x-1}$",
     "solutionSteps": [
-      "Przekształć licznik ułamka, stosując wzór skróconego mnożenia na różnicę kwadratów: $a^2 - b^2 = (a-b)(a+b)$. Mamy $x^2 - 1 = (x-1)(x+1)$.",
-      "Uprość wyrażenie, skracając wspólny czynnik $(x-1)$ w liczniku i mianowniku. Otrzymujemy $\\frac{(x-1)(x+1)}{x-1} = x+1$.",
-      "Wybierz odpowiedź, która odpowiada uproszczonemu wyrażeniu $x+1$."
+      "Sprowadzamy oba składniki do wspólnego mianownika $x-1$:\n$$\\frac{2}{x-1}-5=\\frac{2}{x-1}-\\frac{5(x-1)}{x-1}=\\frac{2-5x+5}{x-1}.$$",
+      "Redukujemy wyrazy podobne w liczniku:\n$\\frac{2-5x+5}{x-1}=\\frac{-5x+7}{x-1}.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12853,17 +12892,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych. Dla każdej liczby rzeczywistej x i dla każdej liczby rzeczywistej y wyrażenie 9 - $(x^{2} - 2 xy + y^{2})$ jest równe A) [3 - $(x - 2y)$] 2B) [3 + $(x - 2y)$] 2C) [3 - $(x + 2y)$] 2D) [3 - $(x - y)$] ⋅ [3 + $(x - y)$] E) [3 - $(x + 2y)$] ⋅ [3 + $(x + 2y)$] F) -[$(x - y)$ -3] ⋅ [$(x - y)$ + 3]",
+    "prompt": "Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych.\n\nDla każdej liczby rzeczywistej $x$ i dla każdej liczby rzeczywistej $y$ wyrażenie $9-(x^2-2xy+y^2)$ jest równe\n\nA) $[3-(x-2y)]^2$\nB) $[3+(x-2y)]^2$\nC) $[3-(x+2y)]^2$\nD) $[3-(x-y)]\\cdot[3+(x-y)]$\nE) $[3-(x+2y)]\\cdot[3+(x+2y)]$\nF) $-[(x-y)-3]\\cdot[(x-y)+3]$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "D, F",
+    "explanation": "D oraz F",
     "solutionSteps": [
-      "Zapisz dane wyrażenie i zauważ wzór skróconego mnożenia. Wyrażenie to $9 - (x^2 - 2xy + y^2)$. W nawiasie kryje się wzór $(x-y)^2$.",
-      "Podstaw wzór skróconego mnożenia do wyrażenia i zastosuj wzór na różnicę kwadratów. Otrzymujemy $9 - (x-y)^2 = 3^2 - (x-y)^2 = (3 - (x-y))(3 + (x-y))$.",
-      "Uprość otrzymane czynniki i porównaj z podanymi opcjami. Czynniki to $(3-x+y)$ i $(3+x-y)$. Opcja D to $[3 - (x − y)] ⋅ [3 + (x − y)]$, co jest poprawne. Opcja F to $-[(x-y)-3][(x-y)+3] = -((x-y)^2 - 9) = 9 - (x-y)^2$, co również jest poprawne."
+      "W nawiasie rozpoznajemy wzór skróconego mnożenia:\n$x^2-2xy+y^2=(x-y)^2.$",
+      "Korzystamy ze wzoru na różnicę kwadratów $a^2-b^2=(a-b)(a+b)$:\n$$9-(x^2-2xy+y^2)=3^2-(x-y)^2=[3-(x-y)]\\cdot[3+(x-y)].$$",
+      "Sprawdzamy, że druga poprawna odpowiedź daje ten sam wynik:\n$$-[(x-y)-3]\\cdot[(x-y)+3]=-\\left[(x-y)^2-9\\right]=9-(x-y)^2.$$"
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12881,17 +12921,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z06-1.jpg) Zapisz obliczenia.",
+    "prompt": "Rozwiąż równanie\n\n$3x^3-6x^2-27x+54=0$\n\nZapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x=-2$",
+    "explanation": "$x=-3$ lub $x=2$ lub $x=3$",
     "solutionSteps": [
-      "Przekształć równanie do postaci kwadratowej $ax^2+bx+c=0$. Pomnóż obie strony przez $x-3$, pamiętając, że $x \\neq 3$. Otrzymasz $2(x-3) = 5x$.",
-      "Rozwiń i uporządkuj równanie, aby uzyskać standardową postać równania kwadratowego. Po pomnożeniu mamy $2x-6 = 5x$, a po przeniesieniu wyrazów otrzymujemy $-3x - 6 = 0$, czyli $3x+6=0$.",
-      "Rozwiąż proste równanie liniowe. Dzieląc obie strony przez 3, uzyskujemy $x = -2$. Sprawdź, czy $x \\neq 3$."
+      "Lewą stronę równania rozkładamy na czynniki metodą grupowania:\n$$3x^3-6x^2-27x+54=3x^2(x-2)-27(x-2)=(x-2)(3x^2-27).$$",
+      "Wyłączamy $3$ przed nawias i korzystamy ze wzoru na różnicę kwadratów:\n$(x-2)(3x^2-27)=3(x-2)(x^2-9)=3(x-2)(x-3)(x+3).$",
+      "Iloczyn jest równy $0$ wtedy i tylko wtedy, gdy $x-2=0$ lub $x-3=0$, lub $x+3=0$.",
+      "Stąd $x=2$ lub $x=3$, lub $x=-3$."
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12909,20 +12951,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-probna-ix/z07-1.jpg) ma w zbiorze liczb rzeczywistych dokładnie",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRównanie $\\frac{(x^2+x)(x+3)(x-1)}{x^2-1}=0$ ma w zbiorze liczb rzeczywistych dokładnie",
     "choices": [
-      "jedno rozwiązanie: $x = -3$.",
-      "dwa rozwiązania: $x = -3$, $x = 0$.",
-      "trzy rozwiązania: $x = -3$, $x = -1$, $x = 0$.",
-      "cztery rozwiązania: $x = -3$, $x = -1$, $x = 0$, $x = 1$."
+      "jedno rozwiązanie: $x=-3$.",
+      "dwa rozwiązania: $x=-3$, $x=0$.",
+      "trzy rozwiązania: $x=-3$, $x=-1$, $x=0$.",
+      "cztery rozwiązania: $x=-3$, $x=-1$, $x=0$, $x=1$."
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli cztery rozwiązania: $x=-3$, $x=-1$, $x=0$, $x=1$.",
+    "correctIndex": 1,
+    "explanation": "B",
     "solutionSteps": [
-      "Równanie możemy zapisać w postaci iloczynowej, przyrównując każdy z czynników do zera, aby znaleźć jego rozwiązania. Mamy $ (x+3)(x^2-1)x = 0 $, co oznacza, że $ x+3=0 $ lub $ x^2-1=0 $ lub $ x=0 $.",
-      "Rozwiązujemy każde z otrzymanych równań: $ x+3=0 $ daje $ x=-3 $, $ x=0 $ jest już podane, a $ x^2-1=0 $ daje $ x^2=1 $, czyli $ x=1 $ lub $ x=-1 $.",
-      "Zbieramy wszystkie znalezione rozwiązania: $ x=-3, x=0, x=1, x=-1 $. Są to cztery różne rozwiązania rzeczywiste."
+      "Wyznaczamy dziedzinę: $x^2-1\\neq0$, czyli $x\\neq-1$ oraz $x\\neq1$.",
+      "Ułamek jest równy $0$ wtedy i tylko wtedy, gdy jego licznik jest równy $0$:\n$(x^2+x)(x+3)(x-1)=0 \\iff x(x+1)(x+3)(x-1)=0.$",
+      "Stąd $x=0$ lub $x=-1$ lub $x=-3$ lub $x=1$.",
+      "Liczby $-1$ oraz $1$ nie należą do dziedziny, więc zostają $x=-3$ oraz $x=0$ — równanie ma dokładnie dwa rozwiązania."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12940,20 +12984,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Spośród nierówności $A - D$ wybierz tę, której zbiór wszystkich rozwiązań zaznaczono na osi liczbowej. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z08-1.jpg)",
+    "prompt": "Spośród nierówności $A - D$ wybierz tę, której zbiór wszystkich rozwiązań zaznaczono na osi liczbowej.\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z08-fig1.png)",
     "choices": [
-      "|$x + 2$| ≤ 2",
-      "|$x - 2$| ≤ 2",
-      "|$x + 2$| ≥ 2",
-      "|$x - 2$| ≥ 2"
+      "$|x+2|\\le2$",
+      "$|x-2|\\le2$",
+      "$|x+2|\\ge2$",
+      "$|x-2|\\ge2$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $|x - 2| \\le 2$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $|x+2|\\ge2$",
     "solutionSteps": [
-      "Zinterpretuj zaznaczony przedział na osi liczbowej. Kropki zamalowane, przedział zamknięty. Zaznaczony jest przedział $[0, 4]$. Odległość od środka $x=2$ do końców przedziału $0$ i $4$ wynosi $2$. Zapisujemy jako $|x - 2| \\le 2$.",
-      "Rozwiąż nierówność z wartością bezwzględną. Nierówność $|x - 2| \\le 2$ jest równoważna dwóm nierównościom: $-2 \\le x - 2 \\le 2$. Dodając $2$ do wszystkich stron, otrzymujemy $0 \\le x \\le 4$.",
-      "Porównaj otrzymany zbiór rozwiązań z opcjami. Zbiór rozwiązań nierówności $|x - 2| \\le 2$ to przedział $[0, 4]$, co odpowiada zaznaczeniu na osi."
+      "Z osi liczbowej odczytujemy zbiór rozwiązań: $(-\\infty,-4]\\cup[0,+\\infty)$.",
+      "Jest to zbiór liczb, których odległość od liczby $-2$ jest nie mniejsza niż $2$, czyli $|x-(-2)|\\ge2$.",
+      "Zapisujemy nierówność w postaci $|x+2|\\ge2$ i sprawdzamy:\n$$|x+2|\\ge2 \\iff x+2\\le-2 \\text{ lub } x+2\\ge2 \\iff x\\le-4 \\text{ lub } x\\ge0,$$\nco zgadza się z rysunkiem."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -12971,20 +13016,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach o nominałach 20 zł , 50 zł oraz 100 zł . Banknotów 100-złotowych było dwa razy więcej niż 50-złotowych , a banknotów 20-złotowych było o 2 mniej niż 50-złotowych . Niech x oznacza liczbę banknotów 50-złotowych , a y - liczbę banknotów 20-złotowych , które otrzymał ten klient. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Poprawny układ równań prowadzący do obliczenia liczb x i y to",
+    "prompt": "Klient banku wypłacił z bankomatu kwotę $1040$ zł. Bankomat wydał kwotę w banknotach o nominałach $20$ zł, $50$ zł oraz $100$ zł. Banknotów $100$-złotowych było dwa razy więcej niż $50$-złotowych, a banknotów $20$-złotowych było o $2$ mniej niż $50$-złotowych.\n\nNiech $x$ oznacza liczbę banknotów $50$-złotowych, a $y$ - liczbę banknotów $20$-złotowych, które otrzymał ten klient.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPoprawny układ równań prowadzący do obliczenia liczb $x$ i $y$ to",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-1.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-2.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-3.jpg)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-ix/z09-4.jpg)"
+      "$\\begin{cases}20y+50x+100\\cdot2x=1040\\\\ y=x-2\\end{cases}$",
+      "$\\begin{cases}20y+50x+50x\\cdot2=1040\\\\ y=x-2\\end{cases}$",
+      "$\\begin{cases}20y+50x+100\\cdot2x=1040\\\\ x=y-2\\end{cases}$",
+      "$\\begin{cases}20y+50x+50x\\cdot2=1040\\\\ x=y-2\\end{cases}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $50x + 100(2x) + 20(x-2) = 1040$",
+    "correctIndex": 0,
+    "explanation": "A",
     "solutionSteps": [
-      "Zapisujemy liczbę banknotów każdego nominału w zależności od $x$ $(liczba banknotów 50 zł)$. Liczba banknotów 50 zł: $x$. Liczba banknotów 100 zł: $2x$. Liczba banknotów 20 zł: $x-2$.",
-      "Układamy równanie, sumując wartość wszystkich banknotów, która musi być równa 1040 zł: $50x + 100(2x) + 20(x-2) = 1040$.",
-      "Przekształcamy równanie do postaci wymaganej w odpowiedziach: $50x + 200x + 20x - 40 = 1040$, co daje $270x - 40 = 1040$."
+      "$x$ to liczba banknotów $50$-złotowych, a $y$ - liczba banknotów $20$-złotowych. Banknotów $100$-złotowych jest dwa razy więcej niż $50$-złotowych, czyli $2x$, a banknotów $20$-złotowych jest o $2$ mniej niż $50$-złotowych, czyli $y=x-2$.",
+      "Suma wartości wszystkich banknotów jest równa $1040$ zł:\n$50x+20y+100\\cdot2x=1040.$",
+      "Poprawny układ równań ma postać\n$$\\begin{cases}20y+50x+100\\cdot2x=1040\\\\ y=x-2\\end{cases}$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13002,17 +13048,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych (x , y) , przedstawiono wykres funkcji $f$ określonej dla każdego x ∈ [-5,4). Na tym wykresie zaznaczono punkty o współrzędnych całkowitych. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z10-1.jpg) Zadanie 10.1. Podaj zbiór wartości funkcji $f$. ......................... Zadanie 10.2. Oceń prawdziwość poniższych stwierdzeń. Dla każdego argumentu z przedziału $(-4, - 2)$ funkcja $f$ przyjmuje wartości ujemne. A) prawda B) fałsz Funkcja $f$ ma trzy miejsca zerowe. A) prawda B) fałsz Zadanie 10.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejsza wartość funkcji $f$ w przedziale [-4,0] jest równa A) $(-4)$ B) $(-3)$ C) $(-2)$ D) 0",
+    "prompt": "Na rysunku, w kartezjańskim układzie współrzędnych $(x,y)$, przedstawiono wykres funkcji $f$ określonej dla każdego $x\\in[-5,4)$. Na tym wykresie zaznaczono punkty o współrzędnych całkowitych.\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z10-fig1.png)\n\n**Zadanie 10.1.** Zapisz w wykropkowanym miejscu zbiór wartości funkcji $f$.\n\n.........................................................\n\n**Zadanie 10.2.** Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\nDla każdego argumentu z przedziału $(-4,-2)$ funkcja $f$ przyjmuje wartości ujemne. P F\n\nFunkcja $f$ ma trzy miejsca zerowe. P F\n\n**Zadanie 10.3.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNajmniejsza wartość funkcji $f$ w przedziale $[-4,0]$ jest równa\n\nA) $(-4)$\nB) $(-3)$\nC) $(-2)$\nD) $0$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "10.1. Zbiór wartości: $[-4, 3]$.\n10.2. Stwierdzenie 1: A) prawda. Stwierdzenie 2: A) prawda.\n10.3. C) $(-2)$",
+    "explanation": "10.1. $[-4,4]$; 10.2. F, P; 10.3. C, czyli $(-2)$",
     "solutionSteps": [
-      "Odczytaj z wykresu najmniejszą i największą wartość funkcji na osi Y. Zbiór wartości to przedział domknięty od najmniejszej do największej wartości, czyli $[min, max]$.",
-      "Aby ocenić stwierdzenia, sprawdź odczytane z wykresu wartości funkcji dla odpowiednich argumentów. Wartości ujemne to te poniżej osi X, a miejsca zerowe to przecięcia osi X.",
-      "Dla zadania 10.3, zlokalizuj przedział $[−4,0]$ na osi X i odczytaj z wykresu najniższy punkt (najmniejszą wartość) funkcji $w$ tym przedziale."
+      "**Zadanie 10.1.**",
+      "Największa wartość funkcji jest równa $4$ (w punkcie $x=-1$).",
+      "Najmniejsza wartość funkcji jest równa $-4$ (w punkcie $x=2$), a obie wartości są przyjmowane, więc zbiór wartości to $[-4,4]$.\n\n**Zadanie 10.2.**",
+      "Na przedziale $(-4,-2)$ funkcja nie przyjmuje wyłącznie wartości ujemnych — między $x=-3$ i $x=-2$ wykres przecina oś $Ox$ i przyjmuje wartości dodatnie (np. $f(-2{,}2)>0$). Pierwsze stwierdzenie jest fałszywe (F).",
+      "Wykres przecina oś $Ox$ w punktach $x=-4$, $x\\approx-2{,}33$ oraz $x=0$, więc funkcja ma trzy miejsca zerowe. Drugie stwierdzenie jest prawdziwe (P).\n\n**Zadanie 10.3.**",
+      "W przedziale $[-4,0]$ najniższy punkt wykresu to $(-3,-2)$, więc najmniejsza wartość jest równa $-2$."
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13030,20 +13080,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dane są: punkt $A = (8,11)$ oraz okrąg o równaniu $(x - 3)$ 2 + $(y + 1) 2 = 25$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odległość punktu A od środka tego okręgu jest równa",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ dane są: punkt $A=(8,11)$ oraz okrąg o równaniu $(x-3)^2+(y+1)^2=25$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nOdległość punktu $A$ od środka tego okręgu jest równa",
     "choices": [
-      "25",
-      "13",
+      "$25$",
+      "$13$",
       "$\\sqrt{125}$",
       "$\\sqrt{265}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 13",
+    "explanation": "B, czyli $13$",
     "solutionSteps": [
-      "Odczytaj współrzędne środka okręgu i punktu A. Środek okręgu ma współrzędne $(3, -1)$, a punkt A ma współrzędne $(8, 11)$.",
-      "Oblicz odległość między punktem A a środkiem okręgu, korzystając ze wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$. Mamy $d = \\sqrt{(8-3)^2 + (11-(-1))^2} = \\sqrt{5^2 + 12^2}$.",
-      "Wykonaj obliczenia: $d = \\sqrt{25 + 144} = \\sqrt{169}$. Wyciągnij pierwiastek: $\\sqrt{169} = 13$."
+      "Z równania okręgu $(x-3)^2+(y+1)^2=25$ odczytujemy współrzędne środka: $S=(3,-1)$.",
+      "Obliczamy odległość punktu $A$ od środka okręgu:\n$$|AS|=\\sqrt{(8-3)^2+(11-(-1))^2}=\\sqrt{5^2+12^2}=\\sqrt{25+144}=\\sqrt{169}=13.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13061,18 +13111,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Basen ma długość 25m. W najpłytszym miejscu jego głębokość jest równa 1,2m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku. Głębokość y basenu zmienia się wraz z odległością x od brzegu w sposób opisany funkcją: ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-1.jpg) Odległość x jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości x i y są wyrażone w metrach. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z12-2.jpg) Zadanie 12.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największa głębokość basenu jest równa A) 5,4 m B) 3,6 m C) 2,2 m D) 1,8 m Zadanie 12.2. Oblicz wartość współczynnika a oraz wartość współczynnika b . Zapisz obliczenia.",
+    "prompt": "Basen ma długość $25$ m. W najpłytszym miejscu jego głębokość jest równa $1{,}2$ m. Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku.\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z12-fig1.png)\n\nGłębokość $y$ basenu zmienia się wraz z odległością $x$ od brzegu w sposób opisany funkcją:\n\n$$y=\\begin{cases}ax+b & \\text{dla } 0\\le x\\le 15\\text{ m}\\\\ 0{,}18x-0{,}9 & \\text{dla } 15\\text{ m}\\le x\\le 25\\text{ m}\\end{cases}$$\n\nOdległość $x$ jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz rysunek). Wielkości $x$ i $y$ są wyrażone w metrach.\n\n**Zadanie 12.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNajwiększa głębokość basenu jest równa\n\nA) $5{,}4$ m\nB) $3{,}6$ m\nC) $2{,}2$ m\nD) $1{,}8$ m\n\n**Zadanie 12.2.** Oblicz wartość współczynnika $a$ oraz wartość współczynnika $b$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "D, czyli 1,8 m\n\n**Zadanie 12.2.**\n\n**Krok 1.** Skorzystaj z podanych punktów należących do paraboli: $(0, 1.2)$ oraz $(25, 1.8)$. Podstawiając $x=0$ do wzoru funkcji $y = ax^2 + bx + 1.2$, otrzymujemy $1.2 = a \\cdot 0^2 + b \\cdot 0 + 1.2$, co jest zgodne z danymi.\n**Krok 2.** Podstaw punkt $(25, 1.8)$ do równania funkcji: $1.8 = a \\cdot 25^2 + b \\cdot 25 + 1.2$. Po redukcji otrzymujemy równanie: $0.6 = 625a + 25b$.\n**Krok 3.** Zauważ, że na rysunku głębokość jest najmniejsza w połowie basenu, przy $x = \\frac{25}{2} = 12.5$ m. W tym punkcie nachylenie paraboli jest równe zero, co oznacza, że pochodna funkcji jest równa zero. Pochodna funkcji $y' = 2ax + b$. Zatem: $2a \\cdot 12.5 + b = 0$, czyli $25a + b = 0$.\n**Krok 4.** Rozwiąż układ równań:\n1) $625a + 25b = 0.6$\n2) $b = -25a$\nPodstawiając(2) do $(1)$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6$, co jest sprzecznością.\n*Poprawka:* Na rysunku widać, że w połowie basenu $x=12.5$ m głębokość jest **minimalna**, a nie równa 0. Przyjmujemy zatem, że wierzchołek paraboli znajduje się dla $x=12.5$ m. Wzór funkcji można zapisać w postaci kanonicznej $y = a(x-p)^2 + q$. Wierzchołek $(p, q)$ to $(12.5, 1.2)$, bo w tym punkcie jest najpłycej.\n**Krok 5.** Zapisz funkcję w postaci kanonicznej: $y = a(x-12.5)^2 + 1.2$. Skorzystaj z punktu $(25, 1.8)$: $1.8 = a(25-12.5)^2 + 1.2 \\implies 0.6 = a(12.5)^2 \\implies 0.6 = 156.25a \\implies a = \\frac{0.6}{156.25} = 0.00384$.\n**Krok 6.** Przekształć postać kanoniczną do postaci ogólnej $y = ax^2 + bx + c$: $y = 0.00384(x^2 - 25x + 156.25) + 1.2 = 0.00384x^2 - 0.096x + 0.6 + 1.2 = 0.00384x^2 - 0.096x + 1.8$. Porównując z $y = ax^2 + bx + 1.2$, widać, że $c$ powinno być 1.2.\n*Ponowna poprawka:* Minimalna głębokość jest w połowie basenu, co oznacza, że wierzchołek paraboli jest na tej wysokości, a nie na minimalnej głębokości. Rysunek pokazuje, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. Przyjmijmy, że wierzchołek paraboli znajduje się dla $x = 12.5$.\n**Krok 7.** Z treści zadania wiemy, że głębokość w najpłytszym miejscu to 1.2m, a w najgłębszym 1.8m. Funkcja kwadratowa ma minimum (ramiona w górę). Minimum głębokości występuje dla $x=0$. Zatem $1.2$ m to wartość minimalna. Wierzchołek jest dla $x=0$.\n**Krok 8.** Skorzystaj z punktów $(0, 1.2)$ i $(25, 1.8)$. Funkcja ma postać $y = ax^2 + bx + c$. Podstawiając $(0, 1.2)$, mamy $c=1.2$. Podstawiając $(25, 1.8)$: $1.8 = a(25)^2 + b(25) + 1.2 \\implies 0.6 = 625a + 25b$.\n**Krok 9.** Rysunek sugeruje, że parabola jest symetryczna względem osi $x=12.5$. Zatem wierzchołek jest dla $x=12.5$. Wzór funkcji ma postać $y = a(x-12.5)^2 + q$. Wartość $q$ to najmniejsza głębokość. Z rysunku nie wynika, że najmniejsza głębokość to 1.2m. Przyjmijmy dane z zadania: $y(0) = 1.2$ oraz $y(25) = 1.8$. Minimalna głębokość jest w połowie basenu, czyli $y(12.5)$. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. Ale ramiona paraboli są skierowane w górę, więc $y(12.5)$ jest minimum. To się kłóci z $y(0)=1.2$ i $y(25)=1.8$.\n**Krok 10.** Przyjmijmy, że przekrój podłużny basenu jest fragmentem paraboli, a nie całą. Z rysunku wynika, że funkcja opisuje głębokość dla $x \\in [0, 25]$. Najmniejsza głębokość jest dla $x=0$ ($1.2$ m), a największa dla $x=25$ ($1.8$ m). Minimum paraboli (wierzchołek) musi być dla $x=0$.\n**Krok 11.** Podstawiamy dane: $y(0) = a \\cdot 0^2 + b \\cdot 0 + 1.2 = 1.2$. $y(25) = a \\cdot 25^2 + b \\cdot 25 + 1.2 = 1.8 \\implies 625a + 25b = 0.6$. Z analizy rysunku widać, że w połowie basenu ($x=12.5$) głębokość jest mniejsza niż na brzegach. To oznacza, że wierzchołek paraboli jest dla $x=12.5$. To jest sprzeczne z poprzednim wnioskiem.\n**Krok 12.** Rozważmy funkcję $y = ax^2 + bx + c$. Wiemy, że $y(0) = 1.2$, więc $c = 1.2$. Wiemy, że $y(25) = 1.8$, więc $625a + 25b = 0.6$. Na rysunku widać, że oś symetrii paraboli jest w $x = \\frac{0+25}{2} = 12.5$. Wierzchołek paraboli ma współrzędną $x = -\\frac{b}{2a}$. Zatem $-\\frac{b}{2a} = 12.5 \\implies b = -25a$.\n**Krok 13.** Podstawiamy $b = -25a$ do równania $625a + 25b = 0.6$: $625a + 25(-25a) = 0.6 \\implies 625a - 625a = 0.6 \\implies 0 = 0.6$. Jest to sprzeczność, więc założenie o osi symetrii $x=12.5$ jest błędne w kontekście podanych punktów krańcowych i funkcji kwadratowej z ramionami w górę.\n**Krok 14.** Ponieważ z zadania 12.1 wynika, że największa głębokość to 1.8m, a najmniejsza 1.2m, i są one na brzegach, funkcja musi opisywać fragment paraboli, której minimum jest w $x=0$ lub $x=25$. Skoro ramiona są w górę, minimum jest w $x=0$. Zatem wierzchołek jest dla $x=0$. Wtedy $b=0$.\n**Krok 15.** Z $b=0$ i $625a + 25b = 0.6$ otrzymujemy $625a = 0.6 \\implies a = \\frac{0.6}{625} = 0.00096$.\n**Odpowiedź:** $a = 0.00096$, $b = 0$",
+    "explanation": "12.1. B, czyli $3{,}6$ m; 12.2. $a=0{,}04$, $b=1{,}2$",
     "solutionSteps": [
       "**Zadanie 12.1.**",
-      "Zauważ, że funkcja opisująca głębokość basenu jest funkcją kwadratową z ramionami skierowanymi w górę (współczynnik przy $x^2$ jest dodatni). Największa głębokość będzie więc występować na krańcach basenu.",
-      "Oblicz głębokość na krańcach basenu: dla $x=0$ (płytszy brzeg) $y = 1.2$ m, a dla $x=25$ (głębszy brzeg) $y = a \\cdot 25^2 + b \\cdot 25 + 1.2$.",
-      "Spójrz na rysunek przekroju podłużnego basenu. Widać, że najgłębszy punkt jest na prawym brzegu (przy $x=25$ m). Na rysunku jest zaznaczona głębokość 1.8 m przy $x=25$ m."
+      "Głębokość rośnie wraz z odległością od płytszego brzegu, więc największa głębokość jest na głębszym brzegu, dla $x=25$.",
+      "Korzystamy ze wzoru $y=0{,}18x-0{,}9$:\n$y(25)=0{,}18\\cdot25-0{,}9=4{,}5-0{,}9=3{,}6.$\nNajwiększa głębokość basenu jest równa $3{,}6$ m.\n\n**Zadanie 12.2.**",
+      "Dla $x=0$ (płytszy brzeg) głębokość jest równa $1{,}2$ m, więc $b=1{,}2$.",
+      "W miejscu połączenia obu części dna, dla $x=15$, głębokość obliczona z drugiego wzoru jest równa\n$y(15)=0{,}18\\cdot15-0{,}9=2{,}7-0{,}9=1{,}8.$",
+      "Podstawiamy $x=15$ i $y=1{,}8$ do pierwszego wzoru:\n$$a\\cdot15+1{,}2=1{,}8 \\iff 15a=0{,}6 \\iff a=0{,}04.$$"
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13090,17 +13143,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f jest określona wzorem $f(x)$ = -$(x - 1) 2 + 2$. Zadanie 13.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne A) $(1,2)$ B) $(-1,2)$ C) $(1, - 2)$ D) $(-1, - 2)$ Zadanie 13.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wartości funkcji $f$ jest przedział A) $(-\\infty ,2] B)(-\\infty ,2)$ C) $(2, + \\infty )$ D) [2,+∞)",
+    "prompt": "Funkcja kwadratowa $f$ jest określona wzorem $f(x)=-(x-1)^2+2$.\n\n**Zadanie 13.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWykresem funkcji $f$ jest parabola, której wierzchołek ma współrzędne\n\nA) $(1,2)$\nB) $(-1,2)$\nC) $(1,-2)$\nD) $(-1,-2)$\n\n**Zadanie 13.2.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nZbiorem wartości funkcji $f$ jest przedział\n\nA) $(-\\infty,2]$\nB) $(-\\infty,2)$\nC) $(2,+\\infty)$\nD) $[2,+\\infty)$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $(1,2)(dla zadania 13.1)$; A, czyli $(-\\infty ,2] (dla zadania 13.2)$.",
+    "explanation": "13.1. A, czyli $(1,2)$; 13.2. A, czyli $(-\\infty,2]$",
     "solutionSteps": [
-      "Rozpoznajemy postać kanoniczną funkcji kwadratowej $f(x) = a(x-p)^2 + q$, gdzie $(p, q)$ to współrzędne wierzchołka paraboli. W naszym przypadku $f(x) = -(x-1)^2 + 2$.",
-      "Odczytujemy współrzędne wierzchołka: $p = 1$ i $q = 2$. Wartość $a = -1$ informuje nas, że ramiona paraboli są skierowane w dół.",
-      "Ponieważ ramiona paraboli skierowane są w dół ($a < 0$), wierzchołek jest punktem maksymalnym funkcji, a jego współrzędna $q$ wyznacza górne ograniczenie zbioru wartości."
+      "**Zadanie 13.1.**",
+      "Funkcja jest dana w postaci kanonicznej $f(x)=a(x-p)^2+q$, gdzie $(p,q)$ to współrzędne wierzchołka paraboli.",
+      "Ze wzoru $f(x)=-(x-1)^2+2$ odczytujemy $p=1$ oraz $q=2$, więc wierzchołek ma współrzędne $(1,2)$.\n\n**Zadanie 13.2.**",
+      "Współczynnik $a=-1<0$, więc ramiona paraboli są skierowane w dół — funkcja przyjmuje największą wartość $2$ w wierzchołku.",
+      "Zatem zbiorem wartości jest przedział $(-\\infty,2]$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13118,17 +13174,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-1.jpg) określony wzorem ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-2.jpg) dla każdej liczby naturalnej ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-3.jpg) . Zadanie 14.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pięćdziesiątym wyrazem ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-4.jpg) jest A) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-5.jpg) B) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-6.jpg) C) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-7.jpg) D) ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-8.jpg) Zadanie 14.2. Oceń prawdziwość poniższych stwierdzeń. Ciąg ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-9.jpg) jest geometryczny. A) prawda B) fałsz Suma trzech początkowych wyrazów ciągu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z14-10.jpg) jest równa 20. A) prawda B) fałsz",
+    "prompt": "Dany jest ciąg $(a_n)$ określony wzorem $a_n=\\frac{7^n}{21}$ dla każdej liczby naturalnej $n\\ge1$.\n\n**Zadanie 14.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPięćdziesiątym wyrazem ciągu $(a_n)$ jest\n\nA) $\\frac{7^{49}}{3}$\nB) $\\frac{7^{50}}{3}$\nC) $\\frac{7^{51}}{3}$\nD) $\\frac{7^{52}}{3}$\n\n**Zadanie 14.2.** Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\nCiąg $(a_n)$ jest geometryczny. P F\n\nSuma trzech początkowych wyrazów ciągu $(a_n)$ jest równa $20$. P F",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "B, czyli $2352$\n\n**Zadanie 14.2**\n\n**Krok 1.** Sprawdź, czy ciąg jest geometryczny, obliczając iloraz dwóch kolejnych wyrazów: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2 - 3(n+1) + 2}{n^2 - 3n + 2}$. Po uproszczeniu otrzymamy $\\frac{n^2-n+2}{n^2-3n+2}$, który zależy od $n$, więc ciąg nie jest geometryczny.\n**Krok 2.** Oblicz sumę trzech początkowych wyrazów: $a_1 = 1^2 - 3(1) + 2 = 0$, $a_2 = 2^2 - 3(2) + 2 = 0$, $a_3 = 3^2 - 3(3) + 2 = 2$. Suma $a_1 + a_2 + a_3 = 0 + 0 + 2 = 2$.\n\n**Odpowiedź:** Ciąg jest geometryczny: B) fałsz. Suma trzech początkowych wyrazów: B) fałsz.",
+    "explanation": "14.1. A, czyli $\\frac{7^{49}}{3}$; 14.2. P, F",
     "solutionSteps": [
-      "**Zadanie 14.1**",
-      "Aby obliczyć 50. wyraz ciągu ($a_{50}$), podstaw $n=50$ do wzoru $a_n = n^2 - 3n + 2$. Otrzymujemy $a_{50} = 50^2 - 3 \\cdot 50 + 2$.",
-      "Obliczamy wartość: $a_{50} = 2500 - 150 + 2 = 2352$."
+      "**Zadanie 14.1.**",
+      "Podstawiamy $n=50$ do wzoru ciągu:\n$$a_{50}=\\frac{7^{50}}{21}=\\frac{7^{50}}{3\\cdot7}=\\frac{7^{49}}{3}.$$\n\n**Zadanie 14.2.**",
+      "Badamy iloraz kolejnych wyrazów:\n$$q=\\frac{a_{n+1}}{a_n}=\\frac{7^{n+1}}{21}:\\frac{7^n}{21}=\\frac{7^{n+1}}{7^n}=7.$$\nIloraz jest stały, więc ciąg jest geometryczny — prawda (P).",
+      "Obliczamy trzy początkowe wyrazy: $a_1=\\frac{7}{21}=\\frac13$, $a_2=\\frac{49}{21}=\\frac73$, $a_3=\\frac{343}{21}=\\frac{49}{3}$.",
+      "Ich suma jest równa\n$$\\frac13+\\frac73+\\frac{49}{3}=\\frac{57}{3}=19\\neq20,$$\nwięc drugie stwierdzenie jest fałszywe (F)."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13146,20 +13205,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x , y) , dana jest prosta k o równaniu $y = 3x + b$ , przechodząca przez punkt A = $(-1,3)$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik $b$ w równaniu tej prostej jest równy",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych $(x,y)$, dana jest prosta $k$ o równaniu $y=3x+b$, przechodząca przez punkt $A=(-1,3)$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWspółczynnik $b$ w równaniu tej prostej jest równy",
     "choices": [
-      "0",
-      "6",
+      "$0$",
+      "$6$",
       "$(-10)$",
-      "8"
+      "$8$"
     ],
     "correctIndex": 1,
     "explanation": "B, czyli $6$",
     "solutionSteps": [
-      "Skoro punkt $A = (-1, 3)$ leży na prostej $k$, jego współrzędne muszą spełniać równanie prostej $y = 3x + b$. Podstawiamy $x = -1$ i $y = 3$ do równania prostej.",
-      "Po podstawieniu otrzymujemy równanie $3 = 3 \\cdot (-1) + b$, które upraszczamy do $3 = -3 + b$. Aby wyznaczyć $b$, dodajemy 3 do obu stron równania.",
-      "Rozwiązanie $3 + 3 = b$ daje nam $b = 6$."
+      "Punkt $A=(-1,3)$ należy do prostej $y=3x+b$, więc jego współrzędne spełniają równanie tej prostej:\n$3=3\\cdot(-1)+b.$",
+      "Stąd $3=-3+b$, czyli $b=6$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13177,17 +13236,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 3n - 1$ dla każdej liczby naturalnej $n \\ge 1$. Zadanie 16.1. Dokończ zdanie tak, aby było prawdziwe. Ciąg ($a_{n}$) jest A) rosnący, B) malejący, C) stały, ponieważ dla każdej liczby naturalnej $n \\ge 1A$) $a_{n} + 1 - a_{n} = -1B$) $a_{n} + 1 - a_{n} = 0C$) $a_{n} + 1 - a_{n} = 3$ Zadanie 16.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Najmniejszą wartością n , dla której wyraz $a_{n}$ jest większy od 25, jest A) 8B) 9C) 7D) 26 Zadanie 16.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Suma n początkowych wyrazów ciągu ($a_{n}$) jest równa 57 dla n równego A) 6B) 23C) 5D) 11",
+    "prompt": "Dany jest ciąg $(a_n)$ określony wzorem $a_n=3n-1$ dla każdej liczby naturalnej $n\\ge1$.\n\n**Zadanie 16.1.** Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A, B albo C oraz jej uzasadnienie 1., 2. albo 3.\n\n| Ciąg $(a_n)$ jest | ponieważ dla każdej liczby naturalnej $n\\ge1$ |\n| --- | --- |\n| A) rosnący, | 1. $a_{n+1}-a_n=-1$ |\n| B) malejący, | 2. $a_{n+1}-a_n=0$ |\n| C) stały, | 3. $a_{n+1}-a_n=3$ |\n\n**Zadanie 16.2.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNajmniejszą wartością $n$, dla której wyraz $a_n$ jest większy od $25$, jest\n\nA) $8$\nB) $9$\nC) $7$\nD) $26$\n\n**Zadanie 16.3.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nSuma $n$ początkowych wyrazów ciągu $(a_n)$ jest równa $57$ dla $n$ równego\n\nA) $6$\nB) $23$\nC) $5$\nD) $11$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "16.1. C, ponieważ dla każdej liczby naturalnej $n \\ge 1C$) $a_{n} + 1 - a_{n} = 3$. 16.2. B) 9. 16.3. A) 6.",
+    "explanation": "16.1. A oraz 3; 16.2. B, czyli $9$; 16.3. A, czyli $6$",
     "solutionSteps": [
-      "Obliczamy różnicę między kolejnymi wyrazami ciągu: $a_{n+1} - a_n = (3(n+1) - 1) - (3n - 1) = 3n + 3 - 1 - 3n + 1 = 3$. Ponieważ różnica jest dodatnia ($3 > 0$), ciąg jest rosnący.",
-      "Szukamy najmniejszego $n$, dla którego $a_n > 25$. Rozwiązujemy nierówność $3n - 1 > 25$, co daje $3n > 26$, czyli $n > \\frac{26}{3} = 8\\frac{2}{3}$. Najmniejszą liczbą naturalną spełniającą ten warunek jest $n=9$.",
-      "Wyznaczamy wzór na sumę $n$ początkowych wyrazów ciągu arytmetycznego: $S_n = \\frac{a_1 + a_n}{2} \\cdot n$. Mamy $a_1 = 3(1)-1 = 2$ oraz $a_n = 3n-1$. Podstawiamy do wzoru: $S_n = \\frac{2 + (3n-1)}{2} \\cdot n = \\frac{3n+1}{2} \\cdot n = \\frac{3n^2+n}{2}$. Rozwiązujemy równanie $\\frac{3n^2+n}{2} = 57$, co daje $3n^2+n = 114$, czyli $3n^2+n-114 = 0$. Delta wynosi $\\Delta = 1^2 - 4(3)(-114) = 1 + 1368 = 1369$, a $\\sqrt{\\Delta} = 37$. Niespolaryczne pierwiastki to $n_1 = \\frac{-1 - 37}{6} = -\\frac{38}{6}$ (odrzucamy, bo $n$ musi być naturalne) oraz $n_2 = \\frac{-1 + 37}{6} = \\frac{36}{6} = 6$."
+      "**Zadanie 16.1.**",
+      "Obliczamy różnicę dwóch kolejnych wyrazów ciągu:\n$a_{n+1}-a_n=[3(n+1)-1]-[3n-1]=3n+3-1-3n+1=3.$",
+      "Różnica jest dodatnia, więc ciąg jest rosnący — odpowiedź A oraz uzasadnienie 3.\n\n**Zadanie 16.2.**",
+      "Rozwiązujemy nierówność $a_n>25$:\n$3n-1>25 \\iff 3n>26 \\iff n>8\\frac23.$\nNajmniejszą liczbą naturalną spełniającą ten warunek jest $n=9$.\n\n**Zadanie 16.3.**",
+      "Ciąg jest arytmetyczny, a $a_1=3\\cdot1-1=2$, więc\n$$S_n=\\frac{a_1+a_n}{2}\\cdot n=\\frac{2+3n-1}{2}\\cdot n=\\frac{3n^2+n}{2}.$$",
+      "Rozwiązujemy równanie $\\frac{3n^2+n}{2}=57$, czyli $3n^2+n-114=0$:\n$$\\Delta=1^2-4\\cdot3\\cdot(-114)=1369,\\quad\\sqrt{\\Delta}=37,$$\n$n=\\frac{-1+37}{6}=6$\n(drugi pierwiastek jest ujemny)."
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13199,23 +13262,27 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-probna-ix-z17",
     "title": "Matura - próbna wrzesień 2023 - poziom podstawowy - zad. 17",
     "category": "funkcje",
-    "difficulty": "trudny",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x , y), dane są: prosta k o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-1.jpg) prosta l o równaniu ![Rysunek do zadania](/cke-matura/m23-probna-ix/z17-2.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k i l\n\nRozwiąż zadanie.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych $(x,y)$, dane są:\n\n• prosta $k$ o równaniu $y=\\frac12x+5$\n\n• prosta $l$ o równaniu $y-1=-2x$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProste $k$ i $l$",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "się pokrywają.",
+      "nie mają punktów wspólnych.",
+      "są prostopadłe.",
+      "przecinają się pod kątem $30^\\circ$."
     ],
-    "correctIndex": 0,
-    "explanation": "C, czyli są prostopadłe.",
+    "correctIndex": 2,
+    "explanation": "C, czyli są prostopadłe",
     "solutionSteps": [
-      "Porównaj współczynniki kierunkowe obu prostych. Prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, więc jej współczynnik kierunkowy $a_k = -\\frac{1}{3}$. Prosta $l$ ma równanie $y = 3x - 1$, więc jej współczynnik kierunkowy $a_l = 3$.",
-      "Sprawdź warunek prostopadłości prostych. Dwie proste są prostopadłe, jeśli iloczyn ich współczynników kierunkowych wynosi $-1$, czyli $a_k \\cdot a_l = -1$. W tym przypadku $a_k \\cdot a_l = (-\\frac{1}{3}) \\cdot 3 = -1$.",
-      "Z wniosku z poprzedniego kroku wynika, że proste są prostopadłe."
+      "Odczytujemy współczynniki kierunkowe prostych. Prosta $k$: $y=\\frac12x+5$, więc $a_k=\\frac12$. Prostą $l$ zapisujemy w postaci kierunkowej: $y=-2x+1$, więc $a_l=-2$.",
+      "Sprawdzamy warunek prostopadłości:\n$a_k\\cdot a_l=\\frac12\\cdot(-2)=-1.$",
+      "Iloczyn współczynników kierunkowych jest równy $-1$, więc proste są prostopadłe."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13233,20 +13300,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia $(1 - \\cos 20^{\\circ})$ ⋅ $(1 + \\cos 20^{\\circ})$ - $sin^{2} 20^{\\circ}$ jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $(1-\\cos20^\\circ)\\cdot(1+\\cos20^\\circ)-\\sin^2 20^\\circ$ jest równa",
     "choices": [
       "$(-1)$",
-      "0",
-      "1",
-      "20"
+      "$0$",
+      "$1$",
+      "$20$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $0$.",
+    "explanation": "B, czyli $0$",
     "solutionSteps": [
-      "Zastosuj wzór na różnicę kwadratów $(a-b)(a+b) = a^2 - b^2$ dla pierwszego członu wyrażenia. Otrzymamy $1^2 - \\cos^2 20^\\circ = 1 - \\cos^2 20^\\circ$.",
-      "Zastosuj tożsamość trygonometryczną $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, z której wynika, że $1 - \\cos^2 \\alpha = \\sin^2 \\alpha$. W naszym przypadku otrzymamy $\\sin^2 20^\\circ$.",
-      "Podstaw wynik z kroku 2 do oryginalnego wyrażenia i wykonaj odejmowanie: $(\\sin^2 20^\\circ) - \\sin^2 20^\\circ$."
+      "Do iloczynu stosujemy wzór na różnicę kwadratów:\n$$(1-\\cos20^\\circ)(1+\\cos20^\\circ)=1-\\cos^2 20^\\circ.$$",
+      "Korzystamy z jedynki trygonometrycznej $\\sin^2\\alpha+\\cos^2\\alpha=1$, więc $1-\\cos^2 20^\\circ=\\sin^2 20^\\circ$.",
+      "Całe wyrażenie jest więc równe\n$\\sin^2 20^\\circ-\\sin^2 20^\\circ=0.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13264,20 +13332,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pojemniku są wyłącznie kule białe i czerwone. Stosunek liczby kul białych do liczby kul czerwonych jest równy 4∶5 . Z pojemnika losujemy jedną kulę. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo wylosowania kuli białej jest równe",
+    "prompt": "W pojemniku są wyłącznie kule białe i czerwone. Stosunek liczby kul białych do liczby kul czerwonych jest równy $4:5$. Z pojemnika losujemy jedną kulę.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPrawdopodobieństwo wylosowania kuli białej jest równe",
     "choices": [
-      "$\\frac{4}{9}$",
-      "$\\frac{4}{5}$",
-      "$\\frac{1}{9}$",
-      "$\\frac{1}{4}$"
+      "$\\frac49$",
+      "$\\frac45$",
+      "$\\frac19$",
+      "$\\frac14$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{4}{9}$",
+    "explanation": "A, czyli $\\frac49$",
     "solutionSteps": [
-      "Zapisujemy stosunek kul białych do czerwonych jako $4x$ do $5x$, gdzie $x$ to pewna liczba dodatnia. Łączna liczba kul w pojemniku wynosi $4x + 5x = 9x$.",
-      "Prawdopodobieństwo wylosowania kuli białej to stosunek liczby kul białych do łącznej liczby kul, czyli $\\frac{4x}{9x}$.",
-      "Upraszczamy otrzymany ułamek, skracając $x$ w liczniku i mianowniku, co daje $\\frac{4}{9}$."
+      "Oznaczamy liczby kul: białych jest $4x$, a czerwonych $5x$, gdzie $x>0$.",
+      "Wszystkich kul jest $4x+5x=9x$.",
+      "Prawdopodobieństwo wylosowania kuli białej jest równe\n$P=\\frac{4x}{9x}=\\frac49.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13295,22 +13364,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A , B oraz C leżą na okręgu o środku w punkcie O . Kąt ABO ma miarę $40^{\\circ}$, a kąt OBC ma miarę $10^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z20-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ACO jest równa",
+    "prompt": "Punkty $A$, $B$ oraz $C$ leżą na okręgu o środku w punkcie $O$. Kąt $ABO$ ma miarę $40^\\circ$, a kąt $OBC$ ma miarę $10^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z20-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta $ACO$ jest równa",
     "choices": [
-      "$30^{\\circ}$",
-      "$40^{\\circ}$",
-      "$50^{\\circ}$",
-      "$60^{\\circ}$"
+      "$30^\\circ$",
+      "$40^\\circ$",
+      "$50^\\circ$",
+      "$60^\\circ$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $40^\\circ$.",
+    "explanation": "B, czyli $40^\\circ$",
     "solutionSteps": [
-      "Ustal, że trójkąty ABO i OBC są równoramienne, ponieważ boki AO, BO, CO to promienie okręgu. Zatem $|\\angle OAB| = |\\angle OBA| = 40^\\circ$ oraz $|\\angle OCB| = |\\angle OBC| = 10^\\circ$.",
-      "Oblicz miarę kąta AOC, który jest kątem środkowym. $|\\angle AOC| = 180^\\circ - (|\\angle OAB| + |\\angle OBA|) + 180^\\circ - (|\\angle OCB| + |\\angle OBC|) = 180^\\circ - (40^\\circ+40^\\circ) + 180^\\circ - (10^\\circ+10^\\circ) = 180^\\circ - 80^\\circ + 180^\\circ - 20^\\circ$? Błąd w rozumowaniu. Kąt środkowy AOC to suma kątów AOB i BOC. W trójkącie ABO, $|\\angle AOB| = 180^\\circ - (40^\\circ + 40^\\circ) = 180^\\circ - 80^\\circ = 100^\\circ$. W trójkącie OBC, $|\\angle BOC| = 180^\\circ - (10^\\circ + 10^\\circ) = 180^\\circ - 20^\\circ = 160^\\circ$.",
-      "Zauważ, że kąt ABC to suma kątów ABO i OBC: $|\\angle ABC| = |\\angle ABO| + |\\angle OBC| = 40^\\circ + 10^\\circ = 50^\\circ$. Kąt ABC jest kątem wpisanym opartym na łuku AC. Kąt środkowy AOC jest oparty na tym samym łuku AC. Miara kąta środkowego jest dwa razy większa od miary kąta wpisanego opartego na tym samym łuku. $| \\angle AOC | = 2 \\cdot | \\angle ABC | = 2 \\cdot 50^\\circ = 100^\\circ$. Błąd - kąt AOC to niekoniecznie $2 \\cdot \\angle ABC$.",
-      "(poprawiony).** Oblicz miary kątów przy środku okręgu. W trójkącie równoramiennym ABO: $|\\angle AOB| = 180^\\circ - (40^\\circ + 40^\\circ) = 180^\\circ - 80^\\circ = 100^\\circ$. W trójkącie równoramiennym OBC: $|\\angle BOC| = 180^\\circ - (10^\\circ + 10^\\circ) = 180^\\circ - 20^\\circ = 160^\\circ$.",
-      "Oblicz miarę kąta ACO. Kąt ACO jest częścią trójkąta równoramiennego ACO. Miara kąta AOC wynosi: $|\\angle AOC| = 360^\\circ - (|\\angle AOB| + |\\angle BOC|) = 360^\\circ - (100^\\circ + 160^\\circ) = 360^\\circ - 260^\\circ = 100^\\circ$. To jest kąt AOC. Trójkąt ACO jest równoramienny ($OA=OC$), więc $|\\angle OAC| = |\\angle OCA|$. Suma kątów w trójkącie ACO: $|\\angle AOC| + |\\angle OAC| + |\\angle OCA| = 180^\\circ$. $100^\\circ + 2 \\cdot |\\angle ACO| = 180^\\circ$. $2 \\cdot |\\angle ACO| = 80^\\circ$. $|\\angle ACO| = 40^\\circ$."
+      "Odcinki $OA$, $OB$ i $OC$ są promieniami okręgu, więc trójkąty $ABO$, $BCO$ i $ACO$ są równoramienne.",
+      "W trójkącie $ABO$ mamy $|\\angle OAB|=|\\angle ABO|=40^\\circ$, więc\n$|\\angle AOB|=180^\\circ-2\\cdot40^\\circ=100^\\circ.$",
+      "W trójkącie $BCO$ mamy $|\\angle OCB|=|\\angle OBC|=10^\\circ$, więc\n$|\\angle BOC|=180^\\circ-2\\cdot10^\\circ=160^\\circ.$",
+      "Kąty $AOB$, $BOC$ i $AOC$ tworzą razem kąt pełny, więc\n$$|\\angle AOC|=360^\\circ-(100^\\circ+160^\\circ)=100^\\circ.$$",
+      "Trójkąt $ACO$ jest równoramienny, bo $|OA|=|OC|$, zatem\n$$|\\angle ACO|=\\frac{180^\\circ-100^\\circ}{2}=40^\\circ.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13328,18 +13398,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC o bokach długości 6, 7 oraz 8. Oblicz cosinus największego kąta tego trójkąta. Zapisz obliczenia.",
+    "prompt": "Dany jest trójkąt $ABC$ o bokach długości $6$, $7$ oraz $8$.\n\nOblicz cosinus największego kąta tego trójkąta. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{1}{4}$",
+    "explanation": "$\\cos\\alpha=\\frac14$",
     "solutionSteps": [
-      "Największy kąt leży naprzeciwko najdłuższego boku. Oznaczmy boki $a=6, b=7, c=8$, a kąt naprzeciwko boku $c$ jako $\\gamma$. Użyjemy twierdzenia cosinusów: $c^2 = a^2 + b^2 - 2ab \\cos \\gamma$.",
-      "Podstawiamy dane do wzoru i przekształcamy, aby wyznaczyć $\\cos \\gamma$: $8^2 = 6^2 + 7^2 - 2 \\cdot 6 \\cdot 7 \\cos \\gamma$, co daje $64 = 36 + 49 - 84 \\cos \\gamma$.",
-      "Rozwiązujemy równanie: $64 = 85 - 84 \\cos \\gamma$, czyli $84 \\cos \\gamma = 85 - 64$, co daje $84 \\cos \\gamma = 21$. Dzieląc obie strony przez 84, otrzymujemy $\\cos \\gamma = \\frac{21}{84}$.",
-      "Upraszczamy ułamek: $\\cos \\gamma = \\frac{21}{84} = \\frac{1}{4}$."
+      "Największy kąt trójkąta leży naprzeciwko najdłuższego boku, czyli boku długości $8$. Oznaczmy ten kąt przez $\\alpha$.",
+      "Stosujemy twierdzenie cosinusów:\n$8^2=6^2+7^2-2\\cdot6\\cdot7\\cdot\\cos\\alpha.$",
+      "Obliczamy:\n$$64=36+49-84\\cos\\alpha \\iff 64=85-84\\cos\\alpha \\iff 84\\cos\\alpha=21.$$",
+      "Stąd\n$\\cos\\alpha=\\frac{21}{84}=\\frac14.$"
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13357,7 +13428,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC bok AB ma długość 4, a bok BC ma długość 4,6. Dwusieczna kąta ABC przecina bok AC w punkcie D takim, że $|AD| = 3,2$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-ix/z22-1.jpg) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Odcinek CD ma długość",
+    "prompt": "W trójkącie $ABC$ bok $AB$ ma długość $4$, a bok $BC$ ma długość $4{,}6$. Dwusieczna kąta $ABC$ przecina bok $AC$ w punkcie $D$ takim, że $|AD|=3{,}2$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z22-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nOdcinek $CD$ ma długość",
     "choices": [
       "$\\frac{64}{23}$",
       "$\\frac{16}{5}$",
@@ -13367,10 +13438,11 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "correctIndex": 3,
     "explanation": "D, czyli $\\frac{92}{25}$",
     "solutionSteps": [
-      "Zastosuj twierdzenie o dwusiecznej kąta. W trójkącie ABC dwusieczna BD dzieli bok AC proporcjonalnie do długości pozostałych boków, czyli $\\frac{|AD|}{|CD|} = \\frac{|AB|}{|BC|}$.",
-      "Podstaw dane z zadania i oblicz długość odcinka CD. Mamy $\\frac{3.2}{|CD|} = \\frac{4}{4.6}$, co po przekształceniach daje $|CD| = \\frac{3.2 \\cdot 4.6}{4}$.",
-      "Uprość otrzymany wynik, aby wybrać poprawną odpowiedź. $|CD| = \\frac{14.72}{4} = 3.68$, co jest równe $\\frac{368}{100} = \\frac{92}{25}$."
+      "Korzystamy z twierdzenia o dwusiecznej kąta w trójkącie:\n$\\frac{|AD|}{|CD|}=\\frac{|AB|}{|BC|}.$",
+      "Podstawiamy dane z zadania:\n$\\frac{3{,}2}{|CD|}=\\frac{4}{4{,}6}.$",
+      "Stąd\n$$|CD|=\\frac{3{,}2\\cdot4{,}6}{4}=\\frac{14{,}72}{4}=3{,}68=\\frac{92}{25}.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13388,17 +13460,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że: przychód P (w złotych) z tygodniowej sprzedaży x wiatraków można opisać funkcją $P(x) = 251$ x koszt K (w złotych) produkcji x wiatraków w ciągu jednego tygodnia można określić funkcją $K(x) = x^{2} + 21x + 170$. Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków. Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia. Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
+    "prompt": "Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy rzeczywistych wpływów i wydatków stwierdzono, że:\n\n• przychód $P$ (w złotych) z tygodniowej sprzedaży $x$ wiatraków można opisać funkcją $P(x)=251x$\n\n• koszt $K$ (w złotych) produkcji $x$ wiatraków w ciągu jednego tygodnia można określić funkcją $K(x)=x^2+21x+170$.\n\nTygodniowo w zakładzie można wyprodukować co najwyżej $150$ wiatraków.\n\nOblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego tygodnia był największy. Oblicz ten największy zysk. Zapisz obliczenia.\n\nWskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Należy sprzedać 115 wiatraków, a największy zysk wyniesie 13055 zł.",
+    "explanation": "Należy sprzedawać $115$ wiatraków tygodniowo; największy zysk jest równy $13\\,055$ zł",
     "solutionSteps": [
-      "Zapisz wzór na zysk $Z(x)$ jako różnicę przychodu $P(x)$ i kosztu $K(x)$. Funkcja zysku będzie funkcją kwadratową, której ramiona skierowane są do dołu (współczynnik przy $x^2$ jest ujemny).\n$Z(x) = P(x) - K(x) = 251x - (x^2 + 21x + 170) = -x^2 + 230x - 170$.",
-      "Znajdź wierzchołek paraboli reprezentującej funkcję zysku, ponieważ jego współrzędna $x_w$ odpowiada liczbie wiatraków dającej największy zysk, a współrzędna $y_w$ jest tym największym zyskiem. Oblicz $x_w = -\\frac{b}{2a}$.\n$x_w = -\\frac{230}{2 \\cdot (-1)} = -\\frac{230}{-2} = 115$.",
-      "Oblicz największy zysk, podstawiając $x_w = 115$ do wzoru funkcji zysku $Z(x)$. Sprawdź, czy liczba sprzedanych wiatraków nie przekracza limitu produkcji $(150)$.\n$Z(115) = -(115)^2 + 230 \\cdot 115 - 170 = -13225 + 26450 - 170 = 13055$."
+      "Zysk jest różnicą przychodu i kosztu:\n$Z(x)=P(x)-K(x)=251x-(x^2+21x+170)=-x^2+230x-170.$",
+      "Tygodniowo można wyprodukować co najwyżej $150$ wiatraków, więc dziedziną funkcji $Z$ jest zbiór liczb całkowitych z przedziału $[0,150]$.",
+      "Wykresem funkcji $Z$ jest parabola z ramionami skierowanymi w dół, więc największa wartość jest przyjmowana w wierzchołku:\n$x_w=-\\frac{b}{2a}=-\\frac{230}{2\\cdot(-1)}=115.$",
+      "Liczba $115$ należy do dziedziny funkcji $Z$.",
+      "Obliczamy największy zysk:\n$$Z(115)=-115^2+230\\cdot115-170=-13\\,225+26\\,450-170=13\\,055.$$"
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13416,18 +13491,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Firma F zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano - wyrażoną w złotych - miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy F, którzy otrzymują płacę miesięczną w danej wysokości. ![Rysunek do zadania](/cke-matura/m23-probna-ix/z24-1.jpg) Zadanie 24.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia miesięczna płaca brutto w firmie F jest równa A) 4 593,75 zł B) 4 800,00 zł C) 5 360,00 zł D) 2 399,33 zł Zadanie 24.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana miesięcznej płacy pracowników firmy F jest równa A) 4 000 zł B) 4 800 zł C) 5 000 zł D) 5 500 zł Zadanie 24.3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba pracowników firmy F, których miesięczna płaca brutto nie przewyższa 5 000 zł, stanowi $(w zaokrągleniu do 1%)$ A) 91% liczby wszystkich pracowników tej firmy. B) 78% liczby wszystkich pracowników tej firmy. C) 53% liczby wszystkich pracowników tej firmy. D) 22% liczby wszystkich pracowników tej firmy.",
+    "prompt": "Firma $\\mathcal{F}$ zatrudnia $160$ osób. Rozkład płac brutto pracowników tej firmy przedstawia poniższy diagram. Na osi poziomej podano - wyrażoną w złotych - miesięczną płacę brutto, a na osi pionowej podano liczbę pracowników firmy $\\mathcal{F}$, którzy otrzymują płacę miesięczną w danej wysokości.\n\n![Rysunek 1](/cke-matura/m23-probna-ix/z24-fig1.png)\n\n**Zadanie 24.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nŚrednia miesięczna płaca brutto w firmie $\\mathcal{F}$ jest równa\n\nA) $4\\,593{,}75$ zł\nB) $4\\,800{,}00$ zł\nC) $5\\,360{,}00$ zł\nD) $2\\,399{,}33$ zł\n\n**Zadanie 24.2.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMediana miesięcznej płacy pracowników firmy $\\mathcal{F}$ jest równa\n\nA) $4\\,000$ zł\nB) $4\\,800$ zł\nC) $5\\,000$ zł\nD) $5\\,500$ zł\n\n**Zadanie 24.3.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba pracowników firmy $\\mathcal{F}$, których miesięczna płaca brutto nie przewyższa $5\\,000$ zł, stanowi (w zaokrągleniu do $1\\%$)\n\nA) $91\\%$ liczby wszystkich pracowników tej firmy.\nB) $78\\%$ liczby wszystkich pracowników tej firmy.\nC) $53\\%$ liczby wszystkich pracowników tej firmy.\nD) $22\\%$ liczby wszystkich pracowników tej firmy.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 4 593,75 zł (Jest błąd w moich obliczeniach lub w opcjach. Jeszcze raz: $20 \\times 3000 + 40 \\times 4000 + 60 \\times 5000 + 40 \\times 6000 = 60000 + 160000 + 300000 + 240000 = 760000$. $\\frac{760000}{160} = 4750$. Może być problem z odczytem wykresu lub opcjami. Sprawdzam ponownie odczyt z wykresu: 20, 40, 60, 40. Suma pracowników: $20+40+60+40=160$. Dane poprawne. Obliczenia poprawne. Może opcja A jest przybliżona? Zauważmy, że 4750 jest blisko 4593.75. Mogę spróbować dokładniej odczytać dane. Załóżmy, że pensje to 3000, 4000, 5000, 6000. Liczby pracowników to 20, 40, 60, 40. Suma: $20 \\cdot 3000 + 40 \\cdot 4000 + 60 \\cdot 5000 + 40 \\cdot 6000 = 60000 + 160000 + 300000 + 240000 = 760000$. Średnia: $760000 / 160 = 4750$. Nadal 4750. Sprawdzam opcje. Może odczyt wykresu jest inny? Popatrzmy na dokładniejsze wartości. Mogę spróbować opcji. Jeśli średnia to 4593.75, to suma płac: $4593.75 \\cdot 160 = 735000$. Jak uzyskać taką sumę?",
+    "explanation": "24.1. A, czyli $4593{,}75$ zł; 24.2. B, czyli $4800$ zł; 24.3. A, czyli $91\\%$",
     "solutionSteps": [
-      "**Zadanie 24.1. Średnia płaca**",
-      "Oblicz łączną sumę płac wszystkich pracowników. Mnożymy każdą płacę przez liczbę pracowników ją otrzymujących i sumujemy wyniki: $160 \\cdot 3000 + 160 \\cdot 4000 + 80 \\cdot 5000 + 80 \\cdot 6000 = 480000 + 640000 + 400000 + 480000 = 2000000$.",
-      "Podziel łączną sumę płac przez całkowitą liczbę pracowników, aby obliczyć średnią: $\\frac{2000000}{160} = 12500$.",
-      "Poprawka: użyłem złych danych z wykresu. Poprawne obliczenie: $20 \\cdot 3000 + 40 \\cdot 4000 + 60 \\cdot 5000 + 40 \\cdot 6000 = 60000 + 160000 + 300000 + 240000 = 760000$. Teraz dzielimy przez 160: $\\frac{760000}{160} = 4750$."
+      "**Zadanie 24.1.**",
+      "Z diagramu odczytujemy liczby pracowników: $75$ osób otrzymuje $4000$ zł, $50$ osób - $4800$ zł, $20$ osób - $5000$ zł, $10$ osób - $6000$ zł, $5$ osób - $7000$ zł. Razem $75+50+20+10+5=160$ osób.",
+      "Suma wszystkich płac:\n$$75\\cdot4000+50\\cdot4800+20\\cdot5000+10\\cdot6000+5\\cdot7000=735\\,000.$$",
+      "Średnia miesięczna płaca:\n$\\frac{735\\,000}{160}=4593{,}75.$\n\n**Zadanie 24.2.**",
+      "Mediana to średnia arytmetyczna płac pracowników nr $80$ i $81$ (przy uporządkowaniu niemalejącym). Obaj otrzymują $4800$ zł, więc mediana jest równa $4800$ zł.\n\n**Zadanie 24.3.**",
+      "Płaca nie przewyższa $5000$ zł u $75+50+20=145$ pracowników.",
+      "Stanowi to\n$\\frac{145}{160}\\cdot100\\%=90{,}625\\%\\approx91\\%.$"
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13445,17 +13524,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość $10\\sqrt{3}$ , a każda jego krawędź boczna ma długość 15. Oblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
+    "prompt": "Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość $10\\sqrt3$, a każda jego krawędź boczna ma długość $15$.\n\nOblicz wysokość tego ostrosłupa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$5\\sqrt{5}$",
+    "explanation": "$H=5\\sqrt5$",
     "solutionSteps": [
-      "Oblicz długość promienia okręgu opisanego na podstawie ostrosłupa. W podstawie jest trójkąt równoboczny o boku $a = 10\\sqrt{3}$. Promień $R$ tego okręgu to $R = \\frac{a\\sqrt{3}}{3} = \\frac{10\\sqrt{3} \\cdot \\sqrt{3}}{3} = \\frac{10 \\cdot 3}{3} = 10$.",
-      "Zastosuj twierdzenie Pitagorasa, aby obliczyć wysokość ostrosłupa ($H$). Tworzy się trójkąt prostokątny, którego przeciwprostokątną jest krawędź boczna ($l=15$), jedną przyprostokątną jest promień okręgu opisanego na podstawie ($R=10$), a drugą przyprostokątną jest wysokość ostrosłupa ($H$). Mamy więc $H^2 + R^2 = l^2$, czyli $H^2 + 10^2 = 15^2$.",
-      "Rozwiąż równanie, aby znaleźć wysokość $H$. $H^2 + 100 = 225$, więc $H^2 = 225 - 100 = 125$. Wyciągając pierwiastek, otrzymujemy $H = \\sqrt{125} = \\sqrt{25 \\cdot 5} = 5\\sqrt{5}$."
+      "Podstawą ostrosłupa jest trójkąt równoboczny o boku $a=10\\sqrt3$. Ponieważ wszystkie krawędzie boczne mają taką samą długość, spodek wysokości ostrosłupa jest środkiem okręgu opisanego na podstawie.",
+      "Obliczamy promień okręgu opisanego na trójkącie równobocznym:\n$$R=\\frac{a\\sqrt3}{3}=\\frac{10\\sqrt3\\cdot\\sqrt3}{3}=10.$$",
+      "Trójkąt utworzony przez wysokość $H$, promień $R$ i krawędź boczną długości $15$ jest prostokątny, więc z twierdzenia Pitagorasa:\n$H^2+R^2=15^2.$",
+      "Stąd\n$H^2=225-100=125 \\iff H=\\sqrt{125}=5\\sqrt5.$"
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13473,17 +13554,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $10n^{2} + 30n + 8$ przy dzieleniu przez 5 daje resztę 3.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n$ liczba $10n^2+30n+8$ przy dzieleniu przez $5$ daje resztę $3$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Wykazano, że $10n^2 + 30n + 8 = 5k + 3$, gdzie $k = 2n^2 + 6n + 1$ jest liczbą całkowitą.",
+    "explanation": "Wykazano, że $10n^2+30n+8=5(2n^2+6n+1)+3$, gdzie $2n^2+6n+1$ jest liczbą całkowitą.",
     "solutionSteps": [
-      "Przekształć dane wyrażenie, wyłączając liczbę 5 z pierwszych dwóch składników.\n$\\qquad 10n^2 + 30n + 8 = 5(2n^2 + 6n) + 8$.",
-      "Zauważ, że $8 = 5 + 3$, i podstaw to do wyrażenia.\n$\\qquad 5(2n^2 + 6n) + 8 = 5(2n^2 + 6n) + 5 + 3 = 5(2n^2 + 6n + 1) + 3$.",
-      "Wyrażenie $5(2n^2 + 6n + 1)$ jest wielokrotnością liczby 5, co oznacza, że reszta z dzielenia przez 5 wynosi 3.\n$\\qquad$ Ponieważ $n$ jest liczbą naturalną, $2n^2 + 6n + 1$ jest liczbą całkowitą, a zatem $5(2n^2 + 6n + 1)$ jest liczbą podzielną przez 5."
+      "Przekształcamy dane wyrażenie, wydzielając wielokrotność liczby $5$:\n$10n^2+30n+8=10n^2+30n+5+3=5(2n^2+6n+1)+3.$",
+      "Dla każdej liczby naturalnej $n$ liczba $2n^2+6n+1$ jest liczbą całkowitą, więc $5(2n^2+6n+1)$ jest podzielne przez $5$.",
+      "Zatem liczba $10n^2+30n+8$ przy dzieleniu przez $5$ daje resztę $3$, co należało wykazać."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13501,19 +13583,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba ![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-1.png) jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\left(5\\cdot5^{\\frac12}\\right)^{\\frac13}$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z01-5.png) 1 pkt - odpowiedź poprawna."
+      "$\\sqrt[6]{5}$",
+      "$\\sqrt[3]{25}$",
+      "$\\sqrt{5}$",
+      "$\\sqrt[3]{5}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $4$.",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\sqrt5$",
     "solutionSteps": [
-      "Zapisujemy wyrażenie pod pierwiastkiem jako potęgę. Zauważ, że $16 = 2^4$. Zatem $\\sqrt{16} = \\sqrt{2^4} = 2^{4/2} = 2^2$.",
-      "Obliczamy wartość wyrażenia. $2^2 = 4$."
+      "Zapisujemy iloczyn w nawiasie jako jedną potęgę o podstawie $5$:\n$$5\\cdot5^{\\frac12}=5^{1}\\cdot5^{\\frac12}=5^{1+\\frac12}=5^{\\frac32}.$$",
+      "Korzystamy ze wzoru na potęgę potęgi $\\left(a^m\\right)^n=a^{m\\cdot n}$:\n$$\\left(5^{\\frac32}\\right)^{\\frac13}=5^{\\frac32\\cdot\\frac13}=5^{\\frac12}.$$",
+      "Potęgę o wykładniku $\\frac12$ zapisujemy jako pierwiastek: $5^{\\frac12}=\\sqrt5$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13531,19 +13615,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pan Nowak kupił obligacje Skarbu Państwa za 40 000 zł oprocentowane 7% w skali roku. Odsetki są naliczane i kapitalizowane co rok. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość obligacji kupionych przez pana Nowaka będzie po dwóch latach równa",
+    "prompt": "Pan Nowak kupił obligacje Skarbu Państwa za $40\\,000$ zł oprocentowane $7\\%$ w skali roku. Odsetki są naliczane i kapitalizowane co rok.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość obligacji kupionych przez pana Nowaka będzie po dwóch latach równa",
     "choices": [
-      "40 000⋅$(1,07)$ 2 zł",
-      "40 000⋅$(1,7)$ 2 zł",
-      "40 000⋅1,14 zł",
-      "40 000⋅1,49 zł 1 pkt - odpowiedź poprawna."
+      "$40\\,000\\cdot(1{,}07)^2$ zł",
+      "$40\\,000\\cdot(1{,}7)^2$ zł",
+      "$40\\,000\\cdot1{,}14$ zł",
+      "$40\\,000\\cdot1{,}49$ zł"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $40 000 \\cdot (1,07)^2$ zł",
+    "explanation": "A, czyli $40\\,000\\cdot(1{,}07)^2$ zł",
     "solutionSteps": [
-      "Oprocentowanie 7% w skali roku oznacza, że po każdym roku wartość obligacji rośnie o 7%. Nowa wartość to 100% + 7% = 107% wartości poprzedniej, czyli mnożymy przez 1,07.",
-      "Po pierwszym roku wartość obligacji wyniesie $40 000 \\cdot 1,07$. Po drugim roku wartość ta zostanie ponownie pomnożona przez 1,07, dając $40 000 \\cdot 1,07 \\cdot 1,07$, co można zapisać jako $40 000 \\cdot (1,07)^2$."
+      "Oprocentowanie $7\\%$ w skali roku oznacza, że po każdym roku kapitał rośnie o $7\\%$, czyli jest mnożony przez $1{,}07$.",
+      "Po pierwszym roku wartość obligacji to $40\\,000\\cdot1{,}07$ zł. Po drugim roku odsetki naliczane są od nowej kwoty, więc wartość jest równa\n$$40\\,000\\cdot1{,}07\\cdot1{,}07=40\\,000\\cdot(1{,}07)^2.$$",
+      "Zapis $40\\,000\\cdot(1{,}07)^2$ zł odpowiada odpowiedzi A. Pozostałe zapisy nie opisują kapitalizacji rocznej."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13561,20 +13647,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po x zł za parę i 40 identycznych marynarek po y zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł. Po doliczeniu marży 50% na każdą parę spodni i 20% na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Cenę pary spodni x oraz cenę marynarki y, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
+    "prompt": "Właściciel sklepu kupił w hurtowni $50$ par identycznych spodni po $x$ zł za parę i $40$ identycznych marynarek po $y$ zł za sztukę. Za zakupy w hurtowni zapłacił $8000$ zł. Po doliczeniu marży $50\\%$ na każdą parę spodni i $20\\%$ na każdą marynarkę ceny detaliczne spodni i marynarki były jednakowe.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nCenę pary spodni $x$ oraz cenę marynarki $y$, jakie trzeba zapłacić w hurtowni, można obliczyć z układu równań",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-1.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z03-4.png) 1 pkt - odpowiedź poprawna."
+      "$\\begin{cases} x+y=8000 \\\\ 0{,}5x=0{,}2y \\end{cases}$",
+      "$\\begin{cases} 50x+40y=8000 \\\\ 0{,}5x=0{,}2y \\end{cases}$",
+      "$\\begin{cases} 50x+40y=8000 \\\\ 1{,}5x=1{,}2y \\end{cases}$",
+      "$\\begin{cases} x+y=8000 \\\\ 1{,}5x=1{,}2y \\end{cases}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\begin{cases} 50x + 40y = 8000 \\\\ 1.5x = 1.2y \\end{cases}$",
+    "correctIndex": 2,
+    "explanation": "C",
     "solutionSteps": [
-      "Zapisz równanie opisujące łączny koszt zakupów w hurtowni: $50x + 40y = 8000$.",
-      "Zapisz ceny detaliczne spodni i marynarek po doliczeniu marży, a następnie ich równość: $x \\cdot 1.5 = y \\cdot 1.2$.",
-      "Uporządkuj drugie równanie, aby uzyskać postać $1.5x - 1.2y = 0$ lub $5x - 4y = 0$ po pomnożeniu przez $\\frac{10}{3}$."
+      "Za $50$ par spodni i $40$ marynarek zapłacono łącznie $8000$ zł, więc\n$50x+40y=8000.$",
+      "Cena detaliczna spodni to cena hurtowa powiększona o marżę $50\\%$, czyli $x+0{,}5x=1{,}5x$. Cena detaliczna marynarki to $y+0{,}2y=1{,}2y$.",
+      "Ceny detaliczne były jednakowe, więc\n$1{,}5x=1{,}2y.$",
+      "Oba warunki dają układ równań z odpowiedzi C: $\\begin{cases} 50x+40y=8000 \\\\ 1{,}5x=1{,}2y \\end{cases}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13592,20 +13680,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczby rzeczywiste x i y są dodatnie oraz x≠y. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyrażenie ![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-1.png) można przekształcić do postaci",
+    "prompt": "Liczby rzeczywiste $x$ i $y$ są dodatnie oraz $x\\ne y$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyrażenie $\\frac{1}{x-y}+\\frac{1}{x+y}$ można przekształcić do postaci",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z04-5.png) 1 pkt - odpowiedź poprawna."
+      "$\\frac{2}{x-y}$",
+      "$\\frac{2}{x^2-y^2}$",
+      "$\\frac{2x}{x^2-y^2}$",
+      "$\\frac{-2xy}{x+y}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$",
+    "correctIndex": 2,
+    "explanation": "C, czyli $\\frac{2x}{x^2-y^2}$",
     "solutionSteps": [
-      "Zauważ, że licznik $\\sqrt{x^3} - \\sqrt{y^3}$ można zapisać jako różnicę sześcianów, a mianownik $\\sqrt{x} - \\sqrt{y}$ jako różnicę liczb, co po zastosowaniu wzorów skróconego mnożenia da $\\sqrt{x^3} - \\sqrt{y^3} = (\\sqrt{x}-\\sqrt{y})(x+\\sqrt{xy}+y)$ oraz $\\sqrt{x} - \\sqrt{y}$.",
-      "Skracamy wyrażenie, dzieląc licznik przez mianownik, co daje nam $x+\\sqrt{xy}+y$.",
-      "Ponieważ $\\sqrt{x^2} = x$ i $\\sqrt{y^2} = y$ dla dodatnich $x, y$, możemy zapisać $x+\\sqrt{xy}+y$ jako $\\sqrt{x^2} + \\sqrt{xy} + \\sqrt{y^2}$."
+      "Sprowadzamy oba ułamki do wspólnego mianownika $(x-y)(x+y)$:\n$$\\frac{1}{x-y}+\\frac{1}{x+y}=\\frac{x+y}{(x-y)(x+y)}+\\frac{x-y}{(x-y)(x+y)}.$$",
+      "Dodajemy liczniki:\n$$\\frac{x+y+x-y}{(x-y)(x+y)}=\\frac{2x}{(x-y)(x+y)}.$$",
+      "Mianownik zapisujemy ze wzoru skróconego mnożenia: $(x-y)(x+y)=x^2-y^2$. Zatem\n$\\frac{1}{x-y}+\\frac{1}{x+y}=\\frac{2x}{x^2-y^2}.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13623,20 +13712,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich różnych liczb naturalnych czterocyfrowych, w których zapisie dziesiętnym wszystkie cyfry są różne, jest",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich różnych liczb naturalnych czterocyfrowych, w których zapisie dziesiętnym wszystkie cyfry są różne, jest",
     "choices": [
-      "9⋅8⋅7⋅6",
-      "9⋅9⋅8⋅7",
-      "10⋅9⋅8⋅7",
-      "9⋅10⋅10⋅10 1 pkt - odpowiedź poprawna."
+      "$9\\cdot8\\cdot7\\cdot6$",
+      "$9\\cdot9\\cdot8\\cdot7$",
+      "$10\\cdot9\\cdot8\\cdot7$",
+      "$9\\cdot10\\cdot10\\cdot10$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $9 \\cdot 9 \\cdot 8 \\cdot 7$",
+    "explanation": "B, czyli $9\\cdot9\\cdot8\\cdot7$",
     "solutionSteps": [
-      "Określamy liczbę możliwości wyboru kolejnych cyfr liczby czterocyfrowej. Pierwsza cyfra (tysiące) może być dowolna z cyfr $\\{1, 2, \\dots, 9\\}$ $(9 możliwości)$, ponieważ nie może być zerem.",
-      "Dla drugiej cyfry (setki) mamy 9 możliwości wyboru: wszystkie cyfry od 0 do 9 oprócz tej, która została wybrana jako pierwsza. Trzecia cyfra (dziesiątki) ma 8 możliwości wyboru (wszystkie cyfry oprócz dwóch już wybranych), a czwarta cyfra (jedności) ma 7 możliwości wyboru (wszystkie cyfry oprócz trzech już wybranych).",
-      "Obliczamy całkowitą liczbę takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $9 \\cdot 9 \\cdot 8 \\cdot 7$."
+      "Pierwszą cyfrę (cyfrę tysięcy) wybieramy spośród $9$ cyfr: $1,2,\\dots,9$ - nie może nią być $0$.",
+      "Drugą cyfrę (setek) wybieramy spośród $9$ pozostałych cyfr: może nią być $0$ lub każda cyfra różna od pierwszej.",
+      "Trzecią cyfrę wybieramy spośród $8$ cyfr, a czwartą spośród $7$ cyfr, ponieważ cyfry nie mogą się powtarzać.",
+      "Mnożymy liczby możliwości:\n$9\\cdot9\\cdot8\\cdot7.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13654,20 +13745,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona wzorem $f(x)$ = - log x dla wszystkich liczb rzeczywistych dodatnich x. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość funkcji $f$ dla argumentu ![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-1.png) jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x)=-\\log x$ dla wszystkich liczb rzeczywistych dodatnich $x$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość funkcji $f$ dla argumentu $x=\\sqrt{10}$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z06-5.png) 1 pkt - odpowiedź poprawna."
+      "$2$",
+      "$\\left(-\\frac12\\right)$",
+      "$\\frac12$",
+      "$(-2)$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli 1",
+    "correctIndex": 1,
+    "explanation": "B, czyli $-\\frac12$",
     "solutionSteps": [
-      "Zapisz wzór funkcji $f(x)$ oraz podaną wartość argumentu. Wartość argumentu odczytana z rysunku to $x = \\frac{1}{10}$. Wzór funkcji to $f(x) = -\\log x$.",
-      "Podstaw wartość argumentu do wzoru funkcji $i$ wykonaj obliczenia. $f(\\frac{1}{10}) = -\\log(\\frac{1}{10})$. Ponieważ $\\log(\\frac{1}{10}) = \\log(10^{-1}) = -1$, otrzymujemy $f(\\frac{1}{10}) = -(-1)$.",
-      "Oblicz ostateczną wartość funkcji. $f(\\frac{1}{10}) = 1$."
+      "Podstawiamy argument do wzoru funkcji:\n$f\\left(\\sqrt{10}\\right)=-\\log\\sqrt{10}.$",
+      "Pierwiastek zapisujemy jako potęgę: $\\sqrt{10}=10^{\\frac12}$, więc z własności logarytmu potęgi\n$$\\log\\sqrt{10}=\\log10^{\\frac12}=\\frac12\\log10=\\frac12\\cdot1=\\frac12.$$",
+      "Zatem $f\\left(\\sqrt{10}\\right)=-\\frac12$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13685,17 +13777,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x,y) przedstawiono fragment wykresu funkcji kwadratowej $f(x) = ax 2 + bx + c$. Wierzchołek paraboli, która jest wykresem funkcji $f$, ma współrzędne $(5, - 3)$. Jeden z punktów przecięcia paraboli z osią Ox układu współrzędnych ma współrzędne $(4,0)$. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z07-1.png) Zadanie 7.1. Podaj zbiór wszystkich wartości funkcji $f$. ......................... Zadanie 7.2. Wyznacz wzór funkcji kwadratowej f w postaci kanonicznej .",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ przedstawiono fragment wykresu funkcji kwadratowej $f(x)=ax^2+bx+c$. Wierzchołek paraboli, która jest wykresem funkcji $f$, ma współrzędne $(5,-3)$. Jeden z punktów przecięcia paraboli z osią $Ox$ układu współrzędnych ma współrzędne $(4,0)$.\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z07-fig1.png)\n\n**Zadanie 7.1.** Zapisz poniżej zbiór wszystkich wartości funkcji $f$.\n\n...............................................................................\n\n**Zadanie 7.2.** Wyznacz wzór funkcji kwadratowej $f$ w postaci kanonicznej. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$f(x) = 3(x-5)^2 - 3$",
+    "explanation": "7.1. $\\langle-3,+\\infty)$; 7.2. $f(x)=3(x-5)^2-3$",
     "solutionSteps": [
-      "Zapisz wzór funkcji kwadratowej w postaci kanonicznej, korzystając ze współrzędnych wierzchołka $W=(p, q)$. W postaci kanonicznej funkcja ma postać $f(x) = a(x-p)^2 + q$. Podstaw dane $p=5$ i $q=-3$, otrzymując $f(x) = a(x-5)^2 - 3$.",
-      "Wyznacz współczynnik $a$ funkcji, korzystając z podanego punktu leżącego na paraboli $(4,0)$. Podstaw $x=4$ i $f(x)=0$ do wzoru z kroku 1: $0 = a(4-5)^2 - 3$. Rozwiąż równanie: $0 = a(-1)^2 - 3$, czyli $0 = a - 3$, co daje $a=3$.",
-      "Zapisz ostateczny wzór funkcji $w$ postaci kanonicznej, podstawiając wyznaczone $a=3$ do wzoru z kroku 1. Otrzymujemy $f(x) = 3(x-5)^2 - 3$."
+      "Z wykresu odczytujemy, że ramiona paraboli są skierowane do góry, a wierzchołek $W=(5,-3)$ jest najniższym punktem wykresu. Zatem zbiorem wartości funkcji $f$ jest przedział\n$\\langle-3,+\\infty).$\nOdpowiedź do zadania 7.1: $\\langle-3,+\\infty)$.",
+      "Korzystamy z postaci kanonicznej funkcji kwadratowej\n$f(x)=a(x-p)^2+q,$\ngdzie $(p,q)$ to współrzędne wierzchołka. Dla $p=5$ i $q=-3$ otrzymujemy\n$f(x)=a(x-5)^2-3.$",
+      "Wykres przechodzi przez punkt $(4,0)$, więc $f(4)=0$:\n$0=a(4-5)^2-3.$",
+      "Rozwiązujemy równanie:\n$0=a\\cdot(-1)^2-3, \\quad 0=a-3, \\quad a=3.$",
+      "Zapisujemy wzór funkcji $w$ postaci kanonicznej:\n$f(x)=3(x-5)^2-3.$\nOdpowiedź do zadania 7.2: $f(x)=3(x-5)^2-3$."
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13713,20 +13808,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność kwadratowa $(3x - 9)(x + k)$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Liczba k jest równa",
+    "prompt": "Dana jest nierówność kwadratowa\n$(3x-9)(x+k)<0$\nz niewiadomą $x$ i parametrem $k\\in\\mathbb{R}$. Rozwiązaniem tej nierówności jest przedział $(-2,3)$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $k$ jest równa",
     "choices": [
       "$(-2)$",
-      "2",
+      "$2$",
       "$(-3)$",
-      "3 1 pkt - odpowiedź poprawna."
+      "$3$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli 3",
+    "correctIndex": 1,
+    "explanation": "B, czyli $k=2$",
     "solutionSteps": [
-      "Przepisujemy nierówność i przyrównujemy ją do zera, aby znaleźć pierwiastki: $(3x - 9)(x + k) = 0$. Otrzymujemy $3x - 9 = 0$ lub $x + k = 0$. Z pierwszego równania mamy $x = 3$.",
-      "Z treści zadania wiemy, że $x=3$ jest jednym z pierwiastków (współczynnik przy $x^2$ jest dodatni, więc parabola ma ramiona skierowane w górę, a nierówność jest spełniona dla $x$ mniejszych lub równych mniejszemu pierwiastkowi i większych lub równych większemu pierwiastkowi). Drugim pierwiastkiem jest $-k$.",
-      "Ponieważ nierówność jest $(3x - 9)(x + k) \\le 0$, a wiemy, że $x=3$ jest pierwiastkiem, to drugi pierwiastek musi być mniejszy lub równy 3. Skoro ramiona paraboli są skierowane w górę, to nierówność jest spełniona dla przedziału między pierwiastkami. Domyślnie, jeśli $k$ jest liczbą dodatnią, to $-k$ będzie mniejsze niż 3. Jeśli $k=3$, to $-k=-3$, co jest mniejsze od 3."
+      "Zapisujemy nierówność w postaci iloczynowej z wyróżnionym współczynnikiem przy $x$:\n$$(3x-9)(x+k)<0 \\iff 3(x-3)(x+k)<0 \\iff (x-3)(x+k)<0.$$",
+      "Lewa strona jest iloczynem dwóch czynników liniowych, a współczynnik przy $x^2$ jest dodatni, więc rozwiązaniem nierówności jest przedział między miejscami zerowymi.",
+      "Miejsca zerowe to $x=3$ oraz $x=-k$. Z treści zadania rozwiązaniem jest przedział $(-2,3)$, więc mniejszym miejscem zerowym jest $-2$, czyli\n$-k=-2.$",
+      "Stąd $k=2$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13744,18 +13841,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest funkcja kwadratowa $f(x) = ax 2 + bx + c$, gdzie a, b i c są liczbami rzeczywistymi takimi, że a ≠ 0 oraz c Dokończ zdanie tak, aby było prawdziwe. Wykres funkcji $f$ leży w całości\n\nRozwiąż zadanie.",
+    "prompt": "Dana jest funkcja kwadratowa $f(x)=ax^2+bx+c$, gdzie $a$, $b$ i $c$ są liczbami rzeczywistymi takimi, że $a\\ne0$ oraz $c<0$. Funkcja $f$ nie ma miejsc zerowych.\n\nDokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej uzasadnienie 1., 2. albo 3.\n\nWykres funkcji $f$ leży w całości\n\n**A.** nad osią $Ox$,\n**B.** pod osią $Ox$,\n\nponieważ\n\n**1.** $a<0$ i $b^2-4ac<0$.\n**2.** $a>0$ i $b^2-4ac<0$.\n**3.** $a<0$ i $b^2-4ac=0$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Brak możliwości dokończenia zdania zgodnie z podanymi warunkami i opcjami.",
+    "explanation": "B oraz 1",
     "solutionSteps": [
-      "Funkcja kwadratowa $f(x) = ax^2 + bx + c$ ma wykres leżący w całości nad osią $Ox$, gdy $a > 0$ (ramiona paraboli skierowane do góry) i brak miejsc zerowych, co oznacza, że wyróżnik $\\Delta = b^2 - 4ac$ jest ujemny ($\\Delta < 0$).",
-      "Z treści zadania wiemy, że $a > 0$ oraz $c < 0$. Ponieważ $a > 0$ i $c < 0$, iloczyn $ac$ jest ujemny ($ac < 0$).",
-      "Zauważmy, że $-4ac > 0$, ponieważ mnożymy liczbę ujemną przez $-4$. Dodając do $-4ac$ wartość $b^2$ (która jest zawsze nieujemna, $b^2 \\geq 0$), otrzymujemy $\\Delta = b^2 - 4ac > 0$. Oznacza to, że funkcja ma dwa miejsca zerowe.",
-      "Skoro $a > 0$ i $\\Delta > 0$, wykres funkcji $f$ przecina oś $Ox$ w dwóch punktach. Nie leży w całości ani nad, ani pod osią $Ox$. Zadanie zawiera błąd logiczny lub jest źle sformułowane. Zakładając jednak, że chodziło o warunek, aby wykres leżał **poniżej** osi $Ox$, potrzebowalibyśmy $a < 0$ i $\\Delta < 0$. Jeśli miał leżeć **powyżej**, to $a > 0$ i $\\Delta < 0$. Przy danych $a > 0$ i $c < 0$, $\\Delta$ jest zawsze dodatnie."
+      "Funkcja kwadratowa nie ma miejsc zerowych wtedy i tylko wtedy, gdy jej wyróżnik jest ujemny:\n$\\Delta=b^2-4ac<0.$",
+      "Ponieważ $c<0$, mamy $-4ac>0$. Gdyby $a>0$, to $\\Delta=b^2-4ac>0$, co jest sprzeczne z brakiem miejsc zerowych. Zatem $a<0$.",
+      "Ramiona paraboli są skierowane do dołu ($a<0$), a parabola nie przecina osi $Ox$ ($\\Delta<0$). Cały wykres leży więc pod osią $Ox$ - poprawna jest odpowiedź B.",
+      "Uzasadnieniem jest jednoczesne spełnienie warunków $a<0$ i $b^2-4ac<0$, czyli odpowiedź 1. (Warunek $a>0$ jest niemożliwy, a $\\Delta=0$ oznaczałoby istnienie miejsca zerowego.)"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13766,27 +13864,29 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m23-probna-xii-z10",
     "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 10",
-    "category": "ciagi",
+    "category": "rownania",
     "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest układ równań ![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-1.png) Na którym z rysunków $A - D$ przedstawiona jest interpretacja geometryczna tego układu równań? Wybierz właściwą odpowiedź spośród podanych.",
+    "prompt": "Dany jest układ równań\n$\\begin{cases} y=x-1 \\\\ y=-x+1 \\end{cases}$\n\nNa którym z rysunków $A - D$ przedstawiona jest interpretacja geometryczna tego układu równań? Wybierz właściwą odpowiedź spośród podanych.",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z10-5.png) 1 pkt - odpowiedź poprawna."
+      "![Rysunek A](/cke-matura/m23-probna-xii/z10-fig1.png)",
+      "![Rysunek B](/cke-matura/m23-probna-xii/z10-fig2.png)",
+      "![Rysunek C](/cke-matura/m23-probna-xii/z10-fig3.png)",
+      "![Rysunek D](/cke-matura/m23-probna-xii/z10-fig4.png)"
     ],
     "correctIndex": 0,
     "explanation": "A",
     "solutionSteps": [
-      "Zapisujemy oba równania układu w postaci kierunkowej $y = ax + b$. Pierwsze równanie: $2x + y = 4 \\implies y = -2x + 4$. Drugie równanie: $x - y = -2 \\implies y = x + 2$.",
-      "Interpretujemy równania jako proste. Pierwsza prosta ma współczynnik kierunkowy $a_1 = -2$ i wyraz wolny $b_1 = 4$. Druga prosta ma współczynnik kierunkowy $a_2 = 1$ i wyraz wolny $b_2 = 2$.",
-      "Analizujemy przedstawione na rysunkach proste, szukając prostej przecinającej oś $y$ w punkcie $(0, 4)$ i mającej nachylenie ujemne (np. przechodzącej przez $(1, 2)$), oraz prostej przecinającej oś $y$ w punkcie $(0, 2)$ i mającej nachylenie dodatnie (np. przechodzącej przez $(1, 3)$). Taki układ prostych przedstawia rysunek A."
+      "Oba równania opisują proste w postaci kierunkowej $y=ax+b$.",
+      "Prosta $y=x-1$ ma współczynnik kierunkowy $1$ i przecina oś $Oy$ w punkcie $(0,-1)$. Prosta $y=-x+1$ ma współczynnik kierunkowy $-1$ i przecina oś $Oy$ w punkcie $(0,1)$.",
+      "Rozwiązujemy układ, aby znaleźć punkt przecięcia prostych:\n$x-1=-x+1, \\quad 2x=2, \\quad x=1.$\nWtedy $y=1-1=0$, czyli proste przecinają się w punkcie $(1,0)$.",
+      "Na rysunku A obie proste przechodzą przez punkt $(1,0)$ na osi $Ox$, a ich punkty przecięcia z osią $Oy$ to $(0,-1)$ i $(0,1)$. To jest interpretacja geometryczna danego układu."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13804,20 +13904,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest wielomian W określony wzorem $W(x) = x^{3} - 2x^{2} - 3x + 6$ dla każdej liczby rzeczywistej x. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wielomian W przy rozkładzie na czynniki ma postać",
+    "prompt": "Dany jest wielomian $W$ określony wzorem $W(x)=x^3-2x^2-3x+6$ dla każdej liczby rzeczywistej $x$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWielomian $W$ przy rozkładzie na czynniki ma postać",
     "choices": [
-      "$W(x)$=$(x + 2)(x^{2} - 3)$",
-      "$W(x)$=$(x - 2)(x^{2} - 3)$",
-      "$W(x)$=$(x + 2)(x^{2} + 3)$",
-      "$W(x)$=$(x - 2)(x^{2} + 3)$ 1 pkt - odpowiedź poprawna."
+      "$W(x)=(x+2)(x^2-3)$",
+      "$W(x)=(x-2)(x^2-3)$",
+      "$W(x)=(x+2)(x^2+3)$",
+      "$W(x)=(x-2)(x^2+3)$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $W(x)=(x–2)(x^2 −3)$",
+    "explanation": "B, czyli $W(x)=(x-2)(x^2-3)$",
     "solutionSteps": [
-      "Grupujemy wyrazy wielomianu $W(x)$ po dwie: $W(x) = (x^3 - 2x^2) + (-3x + 6)$.",
-      "Wyłączamy wspólne czynniki z każdej grupy: $W(x) = x^2(x - 2) - 3(x - 2)$.",
-      "Wyłączamy wspólny czynnik $(x - 2)$: $W(x) = (x - 2)(x^2 - 3)$."
+      "Rozkładamy wielomian metodą grupowania wyrazów:\n$$W(x)=x^3-2x^2-3x+6=\\left(x^3-2x^2\\right)+(-3x+6).$$",
+      "Wyłączamy wspólne czynniki z każdej grupy:\n$W(x)=x^2(x-2)-3(x-2).$",
+      "Wyłączamy wspólny nawias $(x-2)$:\n$W(x)=(x-2)\\left(x^2-3\\right).$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13835,21 +13936,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie ![Rysunek do zadania](/cke-matura/m23-probna-xii/z12-1.png) w zbiorze liczb rzeczywistych ma dokładnie",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nRównanie $\\frac{(4-x)(2x-3)}{(3x-5)(3-2x)}=0$ w zbiorze liczb rzeczywistych ma dokładnie",
     "choices": [
       "jedno rozwiązanie.",
       "dwa rozwiązania.",
       "trzy rozwiązania.",
-      "cztery rozwiązania. 1 pkt - odpowiedź poprawna."
+      "cztery rozwiązania."
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli trzy rozwiązania.",
+    "correctIndex": 0,
+    "explanation": "A, czyli jedno rozwiązanie",
     "solutionSteps": [
-      "Zauważ, że równanie jest wielomianem czwartego stopnia. Przepisujemy je w postaci iloczynowej, wyciągając wspólny czynnik $x^2$: $x^2(x^2 - 5x + 4) = 0$.",
-      "Rozwiązujemy równanie, przyrównując każdy z czynników do zera: $x^2 = 0$ lub $x^2 - 5x + 4 = 0$. Z pierwszego równania otrzymujemy $x=0$ (jedno rozwiązanie).",
-      "Drugie równanie kwadratowe rozwiązujemy za pomocą wyróżnika $\\Delta = b^2 - 4ac$. Mamy $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 4 = 25 - 16 = 9$, zatem $\\sqrt{\\Delta} = 3$. Rozwiązania to $x_1 = \\frac{5-3}{2} = 1$ i $x_2 = \\frac{5+3}{2} = 4$.",
-      "Łączymy wszystkie znalezione rozwiązania: $x=0$, $x=1$, $x=4$. Są to trzy różne rozwiązania w zbiorze liczb rzeczywistych."
+      "Wyznaczamy dziedzinę równania. Mianownik musi być różny od zera:\n$(3x-5)(3-2x)\\ne0,$\nczyli $x\\ne\\frac53$ oraz $x\\ne\\frac32$.",
+      "Ułamek jest równy zero wtedy i tylko wtedy, gdy jego licznik jest równy zero:\n$(4-x)(2x-3)=0.$",
+      "Stąd $x=4$ lub $x=\\frac32$.",
+      "Liczba $\\frac32$ nie należy do dziedziny, ponieważ zeruje mianownik. Rozwiązaniem jest tylko $x=4$, czyli równanie ma dokładnie jedno rozwiązanie."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13867,20 +13969,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dana jest nierówność ![Rysunek do zadania](/cke-matura/m23-probna-xii/z13-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Największą liczbą całkowitą, która spełnia tę nierówność, jest",
+    "prompt": "Dana jest nierówność\n$2-\\frac{x}{2}\\ge\\frac{x}{3}-3.$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nNajwiększą liczbą całkowitą, która spełnia tę nierówność, jest",
     "choices": [
-      "6",
-      "5",
-      "7",
-      "$(-6)$ 1 pkt - odpowiedź poprawna."
+      "$6$",
+      "$5$",
+      "$7$",
+      "$(-6)$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli 5",
+    "correctIndex": 0,
+    "explanation": "A, czyli $6$",
     "solutionSteps": [
-      "Zapisz nierówność w prostszej postaci, grupując wyrazy $z$ niewiadomą $i$ stałe. Po przeniesieniu $-3$ na drugą stronę nierówność przyjmie postać $2x \\le 10$.",
-      "Rozwiąż nierówność, dzieląc obie strony przez $2$. Otrzymasz $x \\le 5$.",
-      "Znajdź największą liczbę całkowitą, która spełnia warunek $x \\le 5$. Tą liczbą jest $5$."
+      "Mnożymy obie strony nierówności przez $6$, aby pozbyć się mianowników:\n$12-3x\\ge2x-18.$",
+      "Przenosimy wyrazy $z$ $x$ na jedną stronę, a liczby na drugą:\n$-3x-2x\\ge-18-12, \\quad -5x\\ge-30.$",
+      "Dzielimy obie strony przez $-5$ i zmieniamy znak nierówności:\n$x\\le6.$",
+      "Największą liczbą całkowitą spełniającą warunek $x\\le6$ jest $6$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13898,17 +14002,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdej liczby naturalnej n liczba $5n^{2} + 15n$ jest podzielna przez 10.",
+    "prompt": "Wykaż, że dla każdej liczby naturalnej $n$ liczba $5n^2+15n$ jest podzielna przez $10$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Wykazano.",
+    "explanation": "wykazano, że liczba $5n^2+15n$ jest podzielna przez $10$ dla każdej liczby naturalnej $n$",
     "solutionSteps": [
-      "Wyłącz wspólny czynnik przed nawias w wyrażeniu $5n^2 + 15n$, aby otrzymać $5n(n+3)$.",
-      "Zauważ, że jedna z liczb $n$ lub $n+3$ jest zawsze parzysta, co gwarantuje podzielność przez 2.",
-      "Wyrażenie $5n(n+3)$ jest iloczynem liczby 5 oraz liczby parzystej $(czyli podzielnej przez 2)$, więc jest zawsze podzielne przez $5 \\cdot 2 = 10$."
+      "Wyłączamy wspólny czynnik przed nawias:\n$5n^2+15n=5n(n+3).$",
+      "Liczba $5n(n+3)$ jest podzielna przez $5$. Wystarczy zatem wykazać, że jest podzielna przez $2$.",
+      "Liczby $n$ oraz $n+3$ różnią się o $3$, czyli o liczbę nieparzystą. Gdy $n$ jest parzysta, to $n+3$ jest nieparzysta; gdy $n$ jest nieparzysta, to $n+3$ jest parzysta. W obu przypadkach jedna z liczb $n$, $n+3$ jest parzysta, więc iloczyn $n(n+3)$ jest liczbą parzystą.",
+      "Iloczyn $5n(n+3)$ jest podzielny przez $5$ i przez $2$, a liczby $5$ i $2$ są względnie pierwsze, więc jest podzielny przez $5\\cdot2=10$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13926,16 +14032,19 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg ($a_{n}$) określony wzorem $a_{n} = 2n^{2} + n$ dla każdej liczby naturalnej $n \\ge 1$. Oceń prawdziwość poniższych stwierdzeń. Ciąg ($a_{n}$) jest malejący. A) prawda B) fałsz Ósmy wyraz ciągu ($a_{n}$) jest równy 136. A) prawda B) fałsz",
+    "prompt": "Dany jest ciąg $(a_n)$ określony wzorem $a_n=2n^2+n$ dla każdej liczby naturalnej $n\\ge1$.\n\nOceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F - jeśli jest fałszywe.\n\n| Stwierdzenie | P | F |\n| --- | :---: | :---: |\n| Ciąg $(a_n)$ jest malejący. |  |  |\n| Ósmy wyraz ciągu $(a_n)$ jest równy $136$. |  |  |",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Ciąg ($a_{n}$) jest malejący - fałsz. Ósmy wyraz ciągu ($a_{n}$) jest równy 136 - prawda.",
+    "explanation": "F, P",
     "solutionSteps": [
-      "Sprawdzamy, czy ciąg jest malejący, badając znak różnicy $a_{n+1} - a_n$. Obliczamy $a_{n+1} = 2(n+1)^2 + (n+1) = 2(n^2+2n+1) + n+1 = 2n^2+4n+2+n+1 = 2n^2+5n+3$. Różnica $a_{n+1} - a_n = (2n^2+5n+3) - (2n^2+n) = 4n+3$. Dla $n \\ge 1$, $4n+3 > 0$, więc ciąg jest rosnący, a nie malejący.",
-      "Obliczamy ósmy wyraz ciągu, podstawiając $n=8$ do wzoru $a_n = 2n^2+n$. Mamy $a_8 = 2 \\cdot 8^2 + 8 = 2 \\cdot 64 + 8 = 128 + 8 = 136$."
+      "Badamy monotoniczność ciągu, obliczając różnicę dwóch kolejnych wyrazów:\n$a_{n+1}-a_n=2(n+1)^2+(n+1)-\\left(2n^2+n\\right).$",
+      "Rozwijamy kwadrat i redukujemy wyrazy podobne:\n$a_{n+1}-a_n=2n^2+4n+2+n+1-2n^2-n=4n+3.$",
+      "Dla każdej liczby naturalnej $n\\ge1$ różnica $4n+3$ jest dodatnia, więc ciąg jest rosnący. Stwierdzenie „ciąg $(a_n)$ jest malejący” jest fałszywe.",
+      "Obliczamy ósmy wyraz ciągu:\n$a_8=2\\cdot8^2+8=2\\cdot64+8=128+8=136.$\nStwierdzenie o ósmym wyrazie jest prawdziwe."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13953,20 +14062,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pięciowyrazowy ciąg ![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-1.png) jest arytmetyczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczby x oraz y są równe",
+    "prompt": "Pięciowyrazowy ciąg $\\left(-3,\\frac12,x,y,11\\right)$ jest arytmetyczny.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczby $x$ oraz $y$ są równe",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z16-5.png) 1 pkt - odpowiedź poprawna."
+      "$x=4$ oraz $y=\\frac{15}{2}$.",
+      "$x=\\frac{15}{2}$ oraz $y=4$.",
+      "$x=-4$ oraz $y=\\frac{15}{2}$.",
+      "$x=-\\frac{15}{2}$ oraz $y=4$."
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $x = 15$ i $y = 5$.",
+    "correctIndex": 0,
+    "explanation": "A, czyli $x=4$ oraz $y=\\frac{15}{2}$",
     "solutionSteps": [
-      "W ciągu arytmetycznym różnica między kolejnymi wyrazami jest stała; zapisujemy to jako równania: $10 - x = y - 10$ oraz $y - 10 = 2y - (y+5)$.",
-      "Z drugiego równania wyznaczamy $y$: $y - 10 = 2y - y - 5$, co daje $y - 10 = y - 5$, czyli $y = 5$.",
-      "Podstawiamy $y = 5$ do pierwszego równania i wyznaczamy $x$: $10 - x = 5 - 10$, co daje $10 - x = -5$, czyli $x = 15$."
+      "Obliczamy różnicę ciągu arytmetycznego, odejmując dwa pierwsze wyrazy:\n$r=\\frac12-(-3)=\\frac12+3=\\frac72.$",
+      "Wyznaczamy trzeci wyraz ciągu:\n$x=\\frac12+\\frac72=\\frac82=4.$",
+      "Wyznaczamy czwarty wyraz ciągu:\n$y=4+\\frac72=\\frac82+\\frac72=\\frac{15}{2}.$",
+      "Sprawdzamy piąty wyraz: $\\frac{15}{2}+\\frac72=\\frac{22}{2}=11$, co zgadza się z danymi. Zatem $x=4$ i $y=\\frac{15}{2}$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -13984,17 +14095,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest ciąg geometryczny ($a_{n}$), określony dla każdej liczby naturalnej $n \\ge 1$. W tym ciągu $a_{1} = -5$, $a_{2} = 15$, $a_{3} = -45$. Dokończ zdanie. Podaj dwie odpowiedzi tak, aby dla każdej z nich dokończenie poniższego zdania było prawdziwe. Wzór ogólny ciągu ($a_{n}$) ma postać A. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-1.png) B. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-2.png) C. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-3.png) D. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-4.png) E. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-5.png) F. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z17-6.png)",
+    "prompt": "Dany jest ciąg geometryczny $(a_n)$, określony dla każdej liczby naturalnej $n\\ge1$. W tym ciągu $a_1=-5$, $a_2=15$, $a_3=-45$.\n\nDokończ zdanie. Zaznacz dwie odpowiedzi tak, aby dla każdej z nich dokończenie poniższego zdania było prawdziwe.\n\nWzór ogólny ciągu $(a_n)$ ma postać\n\nA) $a_n=-5\\cdot(-3)^{n-1}$\nB) $a_n=-5\\cdot(-3)^n$\nC) $a_n=-5\\cdot3^{n-1}$\nD) $a_n=-5\\cdot\\frac{(-3)^n}{3}$\nE) $a_n=5\\cdot\\frac{(-3)^n}{3}$\nF) $a_n=5\\cdot(-3)^n\\cdot3$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "E, F, czyli $a_n = -5 \\cdot (-3)^{n-1}$",
+    "explanation": "A oraz E",
     "solutionSteps": [
-      "Oblicz iloraz ciągu geometrycznego, dzieląc drugi wyraz przez pierwszy. $q = \\frac{a_2}{a_1} = \\frac{15}{-5} = -3$.",
-      "Zapisz wzór ogólny ciągu geometrycznego $a_n = a_1 \\cdot q^{n-1}$. Podstaw dane: $a_n = -5 \\cdot (-3)^{n-1}$.",
-      "Sprawdź, czy wzór pasuje do trzeciego wyrazu: $a_3 = -5 \\cdot (-3)^{3-1} = -5 \\cdot (-3)^2 = -5 \\cdot 9 = -45$. Wzór jest poprawny."
+      "Obliczamy iloraz ciągu geometrycznego:\n$q=\\frac{a_2}{a_1}=\\frac{15}{-5}=-3.$",
+      "Wzór ogólny ciągu geometrycznego ma postać $a_n=a_1q^{n-1}$, więc\n$a_n=-5\\cdot(-3)^{n-1}.$",
+      "Sprawdzamy wzór dla $n=1$, $n=2$, $n=3$:\n$$a_1=-5\\cdot(-3)^0=-5, \\quad a_2=-5\\cdot(-3)^1=15, \\quad a_3=-5\\cdot(-3)^2=-45.$$\nWzór jest poprawny, co odpowiada odpowiedzi A.",
+      "Przekształcamy prawą stronę z odpowiedzi E, korzystając z $3=-(-3)$:\n$$5\\cdot\\frac{(-3)^n}{3}=5\\cdot\\frac{(-3)^n}{-(-3)}=-5\\cdot(-3)^{n-1}.$$\nOdpowiedź E opisuje więc ten sam ciąg.",
+      "Pozostałe odpowiedzi nie opisują danego ciągu: B i F dają $a_1=15$ lub wielokrotność $15$, C nie uwzględnia zmiany znaku ($a_2=-15$), a D daje $a_1=5$."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14012,20 +14126,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Kąt α jest ostry oraz ![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia sin α ∙ cos α jest równa",
+    "prompt": "Kąt $\\alpha$ jest ostry oraz\n$$\\frac{1}{\\sin^2\\alpha}+\\frac{1}{\\cos^2\\alpha}=\\frac{16}{9}.$$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWartość wyrażenia $\\sin\\alpha\\cdot\\cos\\alpha$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-2.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-3.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-4.png)",
-      "![Rysunek do zadania](/cke-matura/m23-probna-xii/z18-5.png) 1 pkt - odpowiedź poprawna."
+      "$\\frac43$",
+      "$\\frac34$",
+      "$\\frac{16}{9}$",
+      "$\\frac{9}{16}$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{12}{25}$",
+    "correctIndex": 1,
+    "explanation": "B, czyli $\\frac34$",
     "solutionSteps": [
-      "Z rysunku odczytujemy wartości $\\sin \\alpha = \\frac{3}{5}$ oraz $\\cos \\alpha = \\frac{4}{5}$.",
-      "Obliczamy wartość wyrażenia $\\sin \\alpha \\cdot \\cos \\alpha$, podstawiając odczytane wartości. Otrzymujemy $\\frac{3}{5} \\cdot \\frac{4}{5}$.",
-      "Mnożymy licznik przez licznik i mianownik przez mianownik: $\\frac{3 \\cdot 4}{5 \\cdot 5} = \\frac{12}{25}$."
+      "Sprowadzamy oba ułamki do wspólnego mianownika $\\sin^2\\alpha\\cos^2\\alpha$:\n$$\\frac{1}{\\sin^2\\alpha}+\\frac{1}{\\cos^2\\alpha}=\\frac{\\cos^2\\alpha+\\sin^2\\alpha}{\\sin^2\\alpha\\cos^2\\alpha}.$$",
+      "Korzystamy z jedynki trygonometrycznej $\\sin^2\\alpha+\\cos^2\\alpha=1$:\n$\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{16}{9}.$",
+      "Stąd $\\sin^2\\alpha\\cos^2\\alpha=\\frac{9}{16}$, czyli\n$$\\left(\\sin\\alpha\\cos\\alpha\\right)^2=\\frac{9}{16}.$$",
+      "Kąt $\\alpha$ jest ostry, więc $\\sin\\alpha>0$ i $\\cos\\alpha>0$, czyli $\\sin\\alpha\\cos\\alpha>0$. Zatem\n$\\sin\\alpha\\cos\\alpha=\\frac34.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14043,19 +14159,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C leżą na okręgu o środku O (zobacz rysunek). Ponadto $|\\angle AOC| = 130^{\\circ}$ oraz $|\\angle BOA| = 110^{\\circ}$. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z19-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta wewnętrznego BAC trójkąta ABC jest równa",
+    "prompt": "Punkty $A$, $B$, $C$ leżą na okręgu o środku $O$ (zobacz rysunek). Ponadto $|\\angle AOC|=130^\\circ$ oraz $|\\angle BOA|=110^\\circ$.\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z19-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nMiara kąta wewnętrznego $BAC$ trójkąta $ABC$ jest równa",
     "choices": [
-      "$60^{\\circ}$",
-      "$55^{\\circ}$",
-      "$50^{\\circ}$",
-      "$65^{\\circ}$ 1 pkt - odpowiedź poprawna."
+      "$60^\\circ$",
+      "$55^\\circ$",
+      "$50^\\circ$",
+      "$65^\\circ$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $60^{\\circ}$",
+    "explanation": "A, czyli $60^\\circ$",
     "solutionSteps": [
-      "Oblicz miarę kąta środkowego BOC, korzystając z faktu, że suma kątów środkowych wokół punktu O wynosi $360^{\\circ}$.\n$|\\measuredangle BOC| = 360° - |\\measuredangle AOC| - |\\measuredangle BOA| = 360° - 130° - 110° = 120°$.",
-      "Oblicz miarę kąta wpisanego BAC, wiedząc, że jest on równy połowie miary kąta środkowego opartego na tym samym łuku BC.\n$|\\measuredangle BAC| = \\frac{1}{2} |\\measuredangle BOC| = \\frac{1}{2} \\cdot 120° = 60°$."
+      "Kąty środkowe $AOC$, $BOA$ i $BOC$ wyznaczają pełny kąt wokół punktu $O$, więc\n$$|\\angle BOC|=360^\\circ-130^\\circ-110^\\circ=120^\\circ.$$",
+      "Kąt $BAC$ jest kątem wpisanym opartym na tym samym łuku $BC$ co kąt środkowy $BOC$.",
+      "Miara kąta wpisanego jest równa połowie miary kąta środkowego opartego na tym samym łuku:\n$|\\angle BAC|=\\frac12\\cdot120^\\circ=60^\\circ.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14073,18 +14191,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny o długości 200m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który w tym miejscu jest linią prostą (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z20-1.png) Oblicz wymiary a i b kąpieliska tak, aby jego powierzchnia była największa.",
+    "prompt": "Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny o długości $200$ m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który w tym miejscu jest linią prostą (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z20-fig1.png)\n\nOblicz wymiary $a$ i $b$ kąpieliska tak, aby jego powierzchnia była największa. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$a = 50$ m, $b = 100$ m.",
+    "explanation": "$a=50$ m oraz $b=100$ m",
     "solutionSteps": [
-      "Zapisz pole prostokąta $P = a \\cdot b$ oraz zależności wynikające z długości liny: $2a + b = 200$, skąd $b = 200 - 2a$.",
-      "Podstaw zależność na $b$ do wzoru na pole, otrzymując funkcję kwadratową jednej zmiennej: $P(a) = a(200 - 2a) = -2a^2 + 200a$.",
-      "Znajdź wierzchołek paraboli $P(a)$ w postaci kanonicznej $P(a) = -2(a-50)^2 + 5000$, gdzie $a$ jest pierwszą współrzędną wierzchołka ($a = 50$), ponieważ funkcja ma ramiona skierowane w dół i osiąga maksimum w wierzchołku.",
-      "Oblicz wymiar $b$, podstawiając znalezioną wartość $a$: $b = 200 - 2 \\cdot 50 = 200 - 100 = 100$."
+      "Lina wyznacza dwa boki o długości $a$ oraz jeden bok o długości $b$, więc\n$2a+b=200.$",
+      "Wyznaczamy $b$:\n$b=200-2a.$\nPonieważ $a>0$ i $b>0$, dziedziną jest $a\\in(0,100)$.",
+      "Powierzchnia kąpieliska jest polem prostokąta o bokach $a$ i $b$:\n$P=a\\cdot b=a(200-2a)=-2a^2+200a.$",
+      "Wykresem funkcji $P(a)=-2a^2+200a$ jest parabola skierowana ramionami do dołu, więc największa wartość jest przyjmowana w wierzchołku:\n$p=-\\frac{200}{2\\cdot(-2)}=\\frac{200}{4}=50.$\nPonieważ $50\\in(0,100)$, jest to szukana wartość.",
+      "Obliczamy drugi wymiar:\n$b=200-2\\cdot50=200-100=100.$"
     ],
+    "points": 4,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14096,23 +14216,27 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m23-probna-xii-z21",
     "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 21",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest kwadrat ABCD o boku długości 8. Z wierzchołka A zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z21-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole powierzchni części wspólnej koła i kwadratu jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest kwadrat $ABCD$ o boku długości $8$. Z wierzchołka $A$ zakreślono koło o promieniu równym długości boku kwadratu (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z21-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole powierzchni części wspólnej koła i kwadratu jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$16\\pi$",
+      "$8\\pi$",
+      "$4\\sqrt2\\pi$",
+      "$16\\sqrt2\\pi$"
     ],
     "correctIndex": 0,
-    "explanation": "$16\\pi$",
+    "explanation": "A, czyli $16\\pi$",
     "solutionSteps": [
-      "Zauważamy, że koło zakreślono z wierzchołka $A$ i ma promień równy bokowi kwadratu ($r=8$). Część wspólna koła i kwadratu to ćwiartka koła wpisana w kwadrat, ponieważ kąt przy wierzchołku $A$ wynosi $90^\\circ$.",
-      "Obliczamy pole ćwiartki koła. Wzór na pole koła to $P = \\pi r^2$. Pole ćwiartki koła wynosi $\\frac{1}{4} \\pi r^2$. Podstawiamy $r=8$: $P_{\\text{ćwiartki}} = \\frac{1}{4} \\pi (8)^2 = \\frac{1}{4} \\pi \\cdot 64 = 16\\pi$.",
-      "Pole powierzchni części wspólnej koła i kwadratu jest równe polu tej ćwiartki koła, ponieważ cała ćwiartka mieści się w kwadracie."
+      "Koło ma środek w wierzchołku $A$ i promień $r=8$. Kąt wewnętrzny kwadratu przy wierzchołku $A$ ma miarę $90^\\circ$, więc część koła zawarta w kwadracie to wycinek koła odpowiadający kątowi $90^\\circ$, czyli ćwiartka koła.",
+      "Pole koła o promieniu $8$ jest równe\n$P_k=\\pi r^2=\\pi\\cdot8^2=64\\pi.$",
+      "Pole części wspólnej to ćwiartka pola koła:\n$P=\\frac14\\cdot64\\pi=16\\pi.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14123,24 +14247,30 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m23-probna-xii-z22",
     "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 22",
-    "category": "algebra",
-    "difficulty": "trudny",
+    "category": "geometria",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Odcinki AC i BD przecinają się w punkcie O. Ponadto $|AD| = 4$ i $|OD| = |BC| = 6$. Kąty ODA i BCO są proste (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z22-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych Długość odcinka OC jest równa\n\nRozwiąż zadanie.",
+    "prompt": "Odcinki $AC$ i $BD$ przecinają się w punkcie $O$. Ponadto $|AD|=4$ i $|OD|=|BC|=6$. Kąty $ODA$ i $BCO$ są proste (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z22-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDługość odcinka $OC$ jest równa",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$9$",
+      "$8$",
+      "$2\\sqrt{13}$",
+      "$3\\sqrt{13}$"
     ],
     "correctIndex": 0,
-    "explanation": "9",
+    "explanation": "A, czyli $9$",
     "solutionSteps": [
-      "Zauważ, że trójkąty $\\triangle AOD$ i $\\triangle BOC$ są podobne (cecha kąt-kąt-kąt, ponieważ kąty przy wierzchołku $O$ są równe, a kąty przy $D$ i $C$ są proste). Oznaczmy długość odcinka $OC$ jako $x$.",
-      "Z podobieństwa trójkątów mamy proporcję $\\frac{|AD|}{|BC|} = \\frac{|OD|}{|OC|}$, co po podstawieniu danych daje $\\frac{4}{6} = \\frac{6}{x}$.",
-      "Rozwiąż równanie, aby znaleźć $x$: $4x = 36$, czyli $x = \\frac{36}{4} = 9$."
+      "Trójkąty $AOD$ i $BOC$ są prostokątne: kąt $ODA$ jest prosty w trójkącie $AOD$, a kąt $BCO$ jest prosty w trójkącie $BOC$.",
+      "Kąty $AOD$ i $BOC$ są kątami wierzchołkowymi, więc mają równe miary. Trójkąty $AOD$ i $BOC$ mają dwa równe kąty, więc są podobne $(cecha kąt - kąt - kąt)$.",
+      "Z podobieństwa trójkątów wynika proporcja między bokami leżącymi naprzeciw równych kątów:\n$\\frac{|AD|}{|BC|}=\\frac{|OD|}{|OC|}.$",
+      "Podstawiamy dane $|AD|=4$, $|BC|=6$, $|OD|=6$:\n$\\frac46=\\frac{6}{|OC|}.$",
+      "Rozwiązujemy równanie:\n$4\\cdot|OC|=36, \\quad |OC|=9.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14158,35 +14288,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przekątne równoległoboku ABCD mają długości: $|AC| = 16$ oraz $|BD| = 12$. Wierzchołki E, F, G oraz H rombu EFGH leżą na bokach równoległoboku ABCD (zobacz rysunek). Boki tego rombu są równoległe do przekątnych równoległoboku. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z23-1.png) Oblicz długość boku rombu EFGH.",
+    "prompt": "Przekątne równoległoboku $ABCD$ mają długości: $|AC|=16$ oraz $|BD|=12$. Wierzchołki $E$, $F$, $G$ oraz $H$ rombu $EFGH$ leżą na bokach równoległoboku $ABCD$ (zobacz rysunek). Boki tego rombu są równoległe do przekątnych równoległoboku.\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z23-fig1.png)\n\nOblicz długość boku rombu $EFGH$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "10",
+    "explanation": "$\\frac{48}{7}$",
     "solutionSteps": [
-      "Zauważ, że środek rombu pokrywa się ze środkiem równoległoboku. Punkt przecięcia przekątnych równoległoboku $O$ jest środkiem jego przekątnych. Ponieważ boki rombu są równoległe do przekątnych równoległoboku, punkt $O$ jest również środkiem rombu.",
-      "Rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem boku $AC$. Punkt $E$ leży na boku $AB$, a punkt $F$ na boku $BC$. Odcinek $EF$ jest jednym z boków rombu. Ponieważ $EF$ jest równoległy do przekątnej $BD$, z twierdzenia o podobieństwie trójkątów (lub twierdzenia o odcinku łączącym środki boków, jeśli $E$ i $F$ byłyby środkami) wynika, że długość boku rombu $EF$ jest równa połowie długości przekątnej $BD$, pod warunkiem że $E$ i $F$ są środkami boków. W tym przypadku, ponieważ $EF$ jest równoległy do $BD$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$ w skali 1:2, co oznacza, że $EF = \\frac{1}{2} AC$. Podobnie analizując trójkąt $\\triangle BCD$, bok $FG$ jest równoległy do $AC$ i $FG = \\frac{1}{2} BD$.",
-      "Wykorzystaj własność, że boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$. Bok $EF$ jest równoległy do $BD$, a jego długość wynosi połowę długości przekątnej $AC$. Bok $FG$ jest równoległy do $AC$, a jego długość wynosi połowę długości przekątnej $BD$. Ponieważ $EFGH$ jest rombem, wszystkie jego boki mają tę samą długość. Zatem długość boku rombu jest równa połowie długości jednej z przekątnych równoległoboku. Wybierając bok $EF$ jako równoległy do $BD$, jego długość jest połową długości $AC$. Wybierając bok $FG$ jako równoległy do $AC$, jego długość jest połową długości $BD$. Ponieważ boki rombu są równe, to $\\frac{1}{2} |AC| = \\frac{1}{2} |BD|$ co jest sprzeczne. Poprawnie: Bok $EF$ jest równoległy do $BD$, a ponieważ $E$ i $F$ leżą na bokach $AB$ i $BC$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$, a stosunek podobieństwa wynosi $1:2$ (bo $O$ jest środkiem). Zatem $EF = \\frac{1}{2} AC = \\frac{1}{2} \\cdot 16 = 8$. Analogicznie, bok $FG$ jest równoległy do $AC$ i $FG = \\frac{1}{2} BD = \\frac{1}{2} \\cdot 12 = 6$. Ponieważ $EFGH$ jest rombem, wszystkie jego boki są równe. Pomyłka w rozumowaniu.",
-      "(poprawiony)** Zauważ, że punkty $E,F,G,H$ dzielą boki równoległoboku w stosunku 1:1. Nie jest to powiedziane w zadaniu. Skupiamy się na zależnościach równoległości. Skoro boki rombu są równoległe do przekątnych równoległoboku, a punkt $O$ jest środkiem obu figur, to rozważmy trójkąt $\\triangle OAB$. Punkt $E$ leży na $AB$. Bok $HE$ rombu jest równoległy do $BD$. Punkt $H$ leży na $AD$, a punkt $E$ na $AB$. Odcinek $OE$ jest odcinkiem łączącym środek $O$ z bokiem $AB$.",
-      "(ponownie poprawiony)** Skoro boki rombu są równoległe do przekątnych równoległoboku, rozważ trójkąt $\\triangle ABD$. Punkt $H$ leży na $AD$, a punkt $E$ na $AB$. Bok rombu $EH$ jest równoległy do $BD$. Ponieważ $O$ jest środkiem równoległoboku i rombu, $OE$ jest równoległy do $BC$ i $OE = \\frac{1}{2} BC$. To nie jest pomocne.",
-      "(trzecia próba poprawy)** Skoro boki rombu są równoległe do przekątnych równoległoboku, to rozważmy jeden z trójkątów utworzonych przez środek $O$ i dwa sąsiednie wierzchołki równoległoboku, np. $\\triangle OAB$. Bok rombu $EF$ jest równoległy do $BD$. Bok rombu $FG$ jest równoległy do $AC$. Oznacza to, że $\\triangle EBF$ jest podobny do $\\triangle ABC$ w pewnej skali, a $\\triangle FCG$ do $\\triangle BCD$. Ponieważ $EF$ jest równoległy do $BD$, oraz $E$ jest na $AB$ a $F$ na $BC$, to trójkąt $\\triangle EBF$ jest podobny do $\\triangle ABC$. Stosunek podobieństwa, wynikający z równoległości $EF$ do $BD$ i faktu, że $O$ jest środkiem, prowadzi do tego, że $EF = \\frac{1}{2} AC$. Podobnie, bok $FG$ jest równoległy do $AC$, więc $\\triangle FCG$ jest podobny do $\\triangle DCB$. Stąd $FG = \\frac{1}{2} BD$.",
-      "Ponieważ $EFGH$ jest rombem, jego boki są równe: $|EF| = |FG|$. Z kroku 3 otrzymujemy $|EF| = \\frac{1}{2} |AC| = \\frac{1}{2} \\cdot 16 = 8$ oraz $|FG| = \\frac{1}{2} |BD| = \\frac{1}{2} \\cdot 12 = 6$. To prowadzi do sprzeczności. Błąd w założeniu o podobieństwie.",
-      "(ostateczna próba)** Niech $s$ będzie skalą podobieństwa rombu do równoległoboku. Ponieważ boki rombu są równoległe do przekątnych, rozważmy połowę równoległoboku, np. trójkąt $\\triangle OAB$, gdzie $O$ jest środkiem. Bok rombu $HE$ jest równoległy do $BD$. Bok $EF$ jest równoległy do $AC$. Rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem $AC$. Punkt $E$ na $AB$, punkt $F$ na $BC$. Odcinek $OE$ jest równoległy do $BC$. To nie jest poprawne.",
-      "(znowu)** Niech $O$ będzie punktem przecięcia przekątnych. Rozważ trójkąt $\\triangle OAB$. Bok rombu $EH$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$. To nie ma sensu. Kluczem jest, że boki rombu są równoległe do przekątnych. Zatem bok $EF$ jest równoległy do $BD$. Trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$. Stosunek podstaw $EF$ do $AC$ jest taki sam jak stosunek $BE$ do $BA$ i $BF$ do $BC$. Ponieważ $O$ jest środkiem, to $OF$ jest równoległe do $AB$ i $OF = \\frac{1}{2} AB$. To też nie prowadzi do celu.",
-      "(ponownie, tym razem poprawnie)** Skoro boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$, to rozważmy jeden z czterech trójkątów utworzonych przez środek $O$ i boki równoległoboku, np. $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$. To jest błąd.\nRozważmy trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem $AC$. Punkt $E$ na $AB$, $F$ na $BC$. Odcinek $EF$ jest równoległy do $BD$. Ponieważ $O$ jest środkiem $AC$, to $OE$ jest równoległe do $BC$. To nie jest pomocne.",
-      "(naprawdę ostatnia próba)** Skoro boki rombu są równoległe do przekątnych równoległoboku, to rozważmy trójkąt $\\triangle OAB$, gdzie $O$ jest środkiem równoległoboku. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$. Odcinek $OE$ jest równoległy do $BC$. To też nie ma zastosowania.\nSkoro boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$, to rozważmy fragment równoległoboku utworzony przez środek $O$ i jeden z wierzchołków, np. $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ jest na $AB$. Odcinek $OE$ jest równoległy do $BC$.",
-      "(w końcu poprawne)** Zauważ, że środek rombu $O$ jest środkiem równoległoboku. Ponieważ boki rombu są równoległe do przekątnych równoległoboku, rozważ trójkąt $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, a $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$.",
-      "(bardzo konkretnie)** Skoro boki rombu są równoległe do przekątnych, rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem $AC$. Odcinek $EF$ jest bokiem rombu i jest równoległy do $BD$. Ponieważ $O$ jest środkiem $AC$, a $E$ leży na $AB$ i $F$ na $BC$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$ w skali $k$. W tym przypadku, ponieważ $EF$ jest równoległy do $BD$, a $O$ jest środkiem, to $OE$ jest równoległe do $BC$. To nie jest pomocne.",
-      "(z diagramu)** Skoro boki rombu są równoległe do przekątnych, to przekątne rombu są prostopadłe do boków równoległoboku. Nie.",
-      "(prawidłowe rozumowanie)** Skoro boki rombu $EFGH$ są równoległe do przekątnych $AC$ i $BD$, to rozważ trójkąt $\\triangle OAB$, gdzie $O$ jest środkiem równoległoboku. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$, punkt $H$ na $AD$. Odcinek $OE$ jest równoległy do $BC$. Rozważmy trójkąt $\\triangle OMA$, gdzie $M$ jest środkiem boku $AB$. Długość boku rombu jest równa $\\frac{1}{2} |AC|$ lub $\\frac{1}{2} |BD|$. Nie, to nie tak.",
-      "(nowe podejście)** Rozważmy jeden z czterech mniejszych równoległoboków utworzonych przez środek $O$ i punkty $A, B, C, D$, np. równoległobok $OAEH$. Nie, to nie jest równoległobok.\nNiech $x$ będzie długością boku rombu. Ponieważ boki rombu są równoległe do przekątnych, rozważmy trójkąt $\\triangle ABC$. Odcinek $EF$ jest bokiem rombu i jest równoległy do $BD$. Ponieważ $O$ jest środkiem $AC$, a $E$ i $F$ leżą na bokach $AB$ i $BC$, trójkąt $\\triangle BEF$ jest podobny do $\\triangle BAC$. W tym przypadku, długość boku rombu jest związana z połową długości przekątnych.",
-      "(najprościej jak się da)** Rozważ trójkąt $\\triangle ABC$. Punkt $O$ jest środkiem boku $AC$. Bok rombu $EF$ jest równoległy do $BD$. Z twierdzenia o odcinku łączącym środki boków (jeśli $E$ i $F$ byłyby środkami) mielibyśmy $EF = \\frac{1}{2} AC$. Tutaj $EF$ jest równoległy do $BD$. To prowadzi do wniosku, że $EF = \\frac{1}{2} AC$. Analogicznie, rozważając trójkąt $\\triangle BCD$, bok rombu $FG$ jest równoległy do $AC$, więc $FG = \\frac{1}{2} BD$. Ponieważ $EFGH$ jest rombem, $|EF| = |FG|$.",
-      "(ostateczne i poprawne)** Niech $O$ będzie środkiem równoległoboku i rombu. Rozważ trójkąt $\\triangle OAB$. Bok rombu $HE$ jest równoległy do $BD$. Punkt $E$ leży na $AB$. Odcinek $OE$ jest równoległy do $BC$. Długość boku rombu jest równa $\\sqrt{(\\frac{1}{2}|AC|)^2 + (\\frac{1}{2}|BD|)^2}$ ? Nie. Długość boku rombu $x$ można wyliczyć z zależności $\\frac{|AC|}{2} = \\sqrt{x^2 - (\\frac{|BD|}{2})^2}$ lub $\\frac{|BD|}{2} = \\sqrt{x^2 - (\\frac{|AC|}{2})^2}$ ? Nie.\nRozważmy $\\triangle OAB$. Bok $HE$ rombu jest równoległy do $BD$. Punkt $E$ leży na $AB$. Odcinek $OE$ jest równoległy do $BC$. Nie.",
-      "(rozwiązanie)** Rozważ jeden z czterech trójkątów tworzonych przez środek $O$ i dwa sąsiednie wierzchołki, np. $\\triangle OAB$. Ponieważ boki rombu są równoległe do przekątnych, bok $HE$ rombu jest równoległy do $BD$. Punkt $E$ leży na $AB$. Odcinek $OE$ jest równoległy do $BC$. Długość boku rombu $x$ jest taka, że jego połowa jest związana z połowami przekątnych. Długość boku rombu $x$ można wyliczyć ze wzoru $x^2 = (\\frac{1}{2} |AC|)^2 + (\\frac{1}{2} |BD|)^2$? Nie.\nRozważmy trójkąt $\\triangle OAB$. Bok $HE$ rombu jest równoległy do $BD$. Punkt $E$ jest na $AB$. Odcinek $OE$ jest równoległy do $BC$. Długość boku rombu $x$ można wyliczyć jako $x^2 = (\\frac{1}{2} AC)^2 + (\\frac{1}{2} BD)^2$? Nie.\nDługość boku rombu $x$ można wyliczyć ze wzoru $x^2 = (\\frac{|AC|}{2})^2 + (\\frac{|BD|}{2})^2$. Nie.",
-      "(poprawne podejście)** Niech $O$ będzie środkiem równoległoboku. Połowa przekątnej $AC$ ma długość $\\frac{16}{2} = 8$. Połowa przekątnej $BD$ ma długość $\\frac{12}{2} = 6$. Ponieważ boki rombu są równoległe do przekątnych równoległoboku, a środek rombu pokrywa się ze środkiem równoległoboku, to długość boku rombu $x$ można obliczyć z twierdzenia Pitagorasa w jednym z czterech trójkątów utworzonych przez środek $O$ i dwa sąsiednie wierzchołki równoległoboku, po odpowiednim podziale. Długość boku rombu $x$ jest przeciwprostokątną w trójkącie prostokątnym o przyprostokątnych równych połowom przekątnych równoległoboku. Stąd $x^2 = (\\frac{1}{2} |AC|)^2 + (\\frac{1}{2} |BD|)^2$.",
-      "Oblicz długość boku rombu $x$ korzystając z twierdzenia Pitagorasa: $x^2 = 8^2 + 6^2$. Stąd $x^2 = 64 + 36 = 100$. Zatem $x = \\sqrt{100} = 10$."
+      "Niech $a$ oznacza długość boku rombu $EFGH$. Punkt $E$ leży na boku $AD$, punkt $F$ na boku $AB$, punkt $G$ na boku $BC$, a punkt $H$ na boku $CD$.",
+      "Bok $EF$ rombu jest równoległy do przekątnej $BD$, więc trójkąt $AEF$ jest podobny do trójkąta $ADB$ $(cecha kąt - kąt - kąt)$. Z podobieństwa:\n$$\\frac{|AF|}{|AB|}=\\frac{|EF|}{|BD|}=\\frac{a}{12}.$$\nStąd $|AF|=\\frac{|AB|\\cdot a}{12}$.",
+      "Bok $FG$ rombu jest równoległy do przekątnej $AC$, więc trójkąt $FBG$ jest podobny do trójkąta $ABC$. Z podobieństwa:\n$$\\frac{|BF|}{|AB|}=\\frac{|FG|}{|AC|}=\\frac{a}{16}.$$\nStąd $|BF|=\\frac{|AB|\\cdot a}{16}$.",
+      "Punkt $F$ leży na boku $AB$, więc $|AF|+|BF|=|AB|$:\n$$\\frac{|AB|\\cdot a}{12}+\\frac{|AB|\\cdot a}{16}=|AB|.$$",
+      "Dzielimy obie strony przez $|AB|>0$:\n$\\frac{a}{12}+\\frac{a}{16}=1.$",
+      "Sprowadzamy ułamki do wspólnego mianownika $48$:\n$$\\frac{4a}{48}+\\frac{3a}{48}=1, \\quad \\frac{7a}{48}=1, \\quad a=\\frac{48}{7}.$$"
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14204,17 +14320,18 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trójkąt ABC, w którym |$AC = 4$, $|AB| = 3$, cos \\angle BAC = ![Rysunek do zadania](/cke-matura/m23-probna-xii/z24-1.png) Oblicz pole trójkąta ABC.",
+    "prompt": "Dany jest trójkąt $ABC$, w którym $|AC|=4$, $|AB|=3$, $\\cos\\angle BAC=\\frac45$.\n\nOblicz pole trójkąta $ABC$. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{3\\sqrt{15}}{2}$",
+    "explanation": "$P=\\frac{18}{5}$",
     "solutionSteps": [
-      "Skorzystaj ze wzoru na pole trójkąta, uwzględniając dane boki i cosinus kąta między nimi: $P = \\frac{1}{2}ab \\sin \\alpha$. Potrzebujemy $\\sin(\\angle BAC)$, a mamy $\\cos(\\angle BAC) = -\\frac{1}{4}$.",
-      "Użyj tożsamości trygonometrycznej $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$, aby obliczyć $\\sin(\\angle BAC)$. Ponieważ kąt w trójkącie jest zawsze mniejszy niż $180^\\circ$, sinus będzie dodatni: $\\sin(\\angle BAC) = \\sqrt{1 - \\cos^2(\\angle BAC)} = \\sqrt{1 - (-\\frac{1}{4})^2} = \\sqrt{1 - \\frac{1}{16}} = \\sqrt{\\frac{15}{16}} = \\frac{\\sqrt{15}}{4}$.",
-      "Podstaw obliczoną wartość sinusa do wzoru na pole trójkąta: $P = \\frac{1}{2} \\cdot |AC| \\cdot |AB| \\cdot \\sin(\\angle BAC) = \\frac{1}{2} \\cdot 4 \\cdot 3 \\cdot \\frac{\\sqrt{15}}{4} = 6 \\cdot \\frac{\\sqrt{15}}{4} = \\frac{3\\sqrt{15}}{2}$."
+      "Oznaczamy $\\alpha=|\\angle BAC|$. Korzystamy ze wzoru na pole trójkąta z wykorzystaniem dwóch boków i sinusa kąta między nimi:\n$P=\\frac12\\cdot|AB|\\cdot|AC|\\cdot\\sin\\alpha.$",
+      "Wyznaczamy $\\sin\\alpha$ z jedynki trygonometrycznej:\n$\\sin^2\\alpha+\\cos^2\\alpha=1.$\nPonieważ $\\alpha$ jest kątem trójkąta, $\\sin\\alpha>0$, więc\n$$\\sin\\alpha=\\sqrt{1-\\left(\\frac45\\right)^2}=\\sqrt{1-\\frac{16}{25}}=\\sqrt{\\frac{9}{25}}=\\frac35.$$",
+      "Podstawiamy dane do wzoru na pole:\n$$P=\\frac12\\cdot3\\cdot4\\cdot\\frac35=6\\cdot\\frac35=\\frac{18}{5}.$$"
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14232,17 +14349,20 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześciokąt foremny ABCDEF o polu równym ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-1.png) (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-2.png) Zadanie 25.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole trójkąta ABE jest równe A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-3.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-4.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-5.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-6.png) 1 pkt - odpowiedź poprawna. Zadanie 25.2. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość odcinka AE jest równa A) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-7.png) B) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-8.png) C) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-9.png) D) ![Rysunek do zadania](/cke-matura/m23-probna-xii/z25-10.png) 1 pkt - odpowiedź poprawna.",
+    "prompt": "Dany jest sześciokąt foremny $ABCDEF$ o polu równym $6\\sqrt3$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z25-fig1.png)\n\n**Zadanie 25.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPole trójkąta $ABE$ jest równe\n\nA) $6$\nB) $4\\sqrt3$\nC) $2\\sqrt3$\nD) $4$\n\n**Zadanie 25.2.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDługość odcinka $AE$ jest równa\n\nA) $2$\nB) $2\\sqrt3$\nC) $4\\sqrt3$\nD) $4$",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $4\\sqrt{3}$ $(zadanie 25.1)$, D, czyli $4$ $(zadanie 25.2)$.",
+    "explanation": "25.1. C; 25.2. B",
     "solutionSteps": [
-      "Sześciokąt foremny składa się z 6 trójkątów równobocznych o boku $a$. Pole sześciokąta to $P_{sześciokąta} = 6 \\cdot \\frac{a^2 \\sqrt{3}}{4}$. Wiemy, że $P_{sześciokąta} = 24\\sqrt{3}$, więc $24\\sqrt{3} = \\frac{3a^2 \\sqrt{3}}{2}$. Po skróceniu $\\sqrt{3}$ i pomnożeniu przez $\\frac{2}{3}$, otrzymujemy $a^2 = 16$, co daje $a = 4$.",
-      "Trójkąt $ABE$ jest równoramienny, a jego podstawa $AB$ ma długość $a=4$. Kąt przy wierzchołku $A$ między bokami $AB$ i $AE$ wynosi $120^\\circ$ (ponieważ suma kątów w sześciokącie to $720^\\circ$, a każdy kąt wewnętrzny to $120^\\circ$). Pole trójkąta $ABE$ obliczymy ze wzoru $P_{ABE} = \\frac{1}{2} |AB| \\cdot |AE| \\sin(\\angle BAE)$. Ponieważ $|AB| = |AE| = a = 4$, mamy $P_{ABE} = \\frac{1}{2} \\cdot 4 \\cdot 4 \\cdot \\sin(120^\\circ) = 8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$.",
-      "Długość odcinka $AE$ jest równa długości boku sześciokąta, czyli $a$. Obliczyliśmy, że $a=4$."
+      "Sześciokąt foremny o boku $a$ składa się z sześciu trójkątów równobocznych o boku $a$, więc jego pole jest równe\n$$P=6\\cdot\\frac{a^2\\sqrt3}{4}=\\frac{3a^2\\sqrt3}{2}.$$",
+      "Z treści zadania $P=6\\sqrt3$, więc\n$\\frac{3a^2\\sqrt3}{2}=6\\sqrt3.$\nDzielimy obie strony przez $\\sqrt3$ i mnożymy przez $2$:\n$3a^2=12, \\quad a^2=4, \\quad a=2.$",
+      "Wyznaczamy długość odcinka $AE$. Odcinek $AE$ jest przekątną sześciokąta łączącą wierzchołki odległe o dwa boki, więc jego długość jest równa\n$|AE|=a\\sqrt3=2\\sqrt3.$\nTo odpowiada odpowiedzi B w zadaniu 25.2.",
+      "Kąt $BAE$ ma miarę $90^\\circ$: kąt wewnętrzny sześciokąta przy wierzchołku $A$ ma $120^\\circ$, a trójkąt $AFE$ jest równoramienny o kącie $120^\\circ$ przy $F$, więc $|\\angle FAE|=30^\\circ$. Zatem $|\\angle BAE|=120^\\circ-30^\\circ=90^\\circ$.",
+      "Obliczamy pole trójkąta $ABE$:\n$$P_{ABE}=\\frac12\\cdot|AB|\\cdot|AE|\\cdot\\sin90^\\circ=\\frac12\\cdot2\\cdot2\\sqrt3\\cdot1=2\\sqrt3.$$\nTo odpowiada odpowiedzi C w zadaniu 25.1."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14260,20 +14380,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest trapez ABCD, w którym AB||CD oraz przekątne AC i BD przecinają się w punkcie O (zobacz rysunek). Wysokość tego trapezu jest równa 12. Obwód trójkąta ABO jest równy 39, a obwód trójkąta CDO jest równy 13. ![Rysunek do zadania](/cke-matura/m23-probna-xii/z26-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wysokość trójkąta ABO poprowadzona z punktu O jest równa",
+    "prompt": "Dany jest trapez $ABCD$, w którym $AB\\parallel CD$ oraz przekątne $AC$ i $BD$ przecinają się w punkcie $O$ (zobacz rysunek). Wysokość tego trapezu jest równa $12$. Obwód trójkąta $ABO$ jest równy $39$, a obwód trójkąta $CDO$ jest równy $13$.\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z26-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWysokość trójkąta $ABO$ poprowadzona z punktu $O$ jest równa",
     "choices": [
-      "3",
-      "4",
-      "9",
-      "6 1 pkt - odpowiedź poprawna."
+      "$3$",
+      "$4$",
+      "$9$",
+      "$6$"
     ],
-    "correctIndex": 3,
-    "explanation": "D) 9",
+    "correctIndex": 2,
+    "explanation": "C, czyli $9$",
     "solutionSteps": [
-      "Trójkąty $ABO$ i $CDO$ są podobne na mocy cechy podobieństwa kąt-kąt-kąt (kąty naprzemianległe są równe, kąty wierzchołkowe są równe). Niech skala podobieństwa z trójkąta $CDO$ do $ABO$ wynosi $k$. Wtedy stosunek obwodów jest równy skali podobieństwa: $k = \\frac{39}{13} = 3$.",
-      "Stosunek wysokości opuszczonych z punktu $O$ w trójkątach $ABO$ i $CDO$ jest również równy $k$. Niech $h_1$ to wysokość trójkąta $ABO$, a $h_2$ to wysokość trójkąta $CDO$. Mamy $\\frac{h_1}{h_2} = k = 3$. Wiemy, że suma tych wysokości jest równa wysokości trapezu, czyli $h_1 + h_2 = 12$.",
-      "Rozwiązujemy układ równań: $h_1 = 3h_2$ i $h_1 + h_2 = 12$. Podstawiając pierwsze równanie do drugiego, otrzymujemy $3h_2 + h_2 = 12$, czyli $4h_2 = 12$, co daje $h_2 = 3$. Wtedy $h_1 = 3 \\cdot 3 = 9$."
+      "Trójkąty $ABO$ i $CDO$ są podobne $(cecha kąt - kąt - kąt)$: kąty $AOB$ i $COD$ są wierzchołkowe, a kąty $ABO$ i $CDO$ oraz $BAO$ i $DCO$ są naprzemianległe, bo $AB\\parallel CD$.",
+      "Skala podobieństwa trójkąta $ABO$ względem trójkąta $CDO$ jest równa stosunkowi obwodów:\n$k=\\frac{39}{13}=3.$",
+      "Stosunek wysokości poprowadzonych z punktu $O$ jest równy skali podobieństwa. Oznaczmy przez $h_1$ wysokość trójkąta $ABO$, a przez $h_2$ wysokość trójkąta $CDO$. Wtedy\n$h_1=3h_2.$",
+      "Wysokości te tworzą wysokość trapezu, więc\n$h_1+h_2=12.$",
+      "Rozwiązujemy układ równań:\n$$3h_2+h_2=12, \\quad 4h_2=12, \\quad h_2=3, \\quad h_1=3\\cdot3=9.$$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14291,20 +14414,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dany jest okrąg O o równaniu $(x - 3)$ 2 + $(y - 3) 2 = 13$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Okrąg O przecina oś Oy w punktach o współrzędnych",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych $(x,y)$, dany jest okrąg $\\mathcal{O}$ o równaniu\n$(x-3)^2+(y-3)^2=13.$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nOkrąg $\\mathcal{O}$ przecina oś $Oy$ w punktach o współrzędnych",
     "choices": [
       "$(0,1)$ i $(0,5)$.",
-      "$(0,1)$ i $(0, - 5)$.",
+      "$(0,1)$ i $(0,-5)$.",
       "$(1,0)$ i $(5,0)$.",
-      "$(0, - 1)$ i $(0,5)$. 1 pkt - odpowiedź poprawna."
+      "$(0,-1)$ i $(0,5)$."
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $(0,1)$ i $(0,5)$.",
+    "explanation": "A, czyli $(0,1)$ i $(0,5)$",
     "solutionSteps": [
-      "Okrąg przecina oś Oy, gdy współrzędna x wynosi 0. Podstawiamy $x = 0$ do równania okręgu: $(0-3)^2 + (y-3)^2 = 13$.",
-      "Rozwiązujemy równanie powstałe w poprzednim kroku, aby znaleźć wartości y: $9 + (y-3)^2 = 13$, czyli $(y-3)^2 = 4$. Stąd $y-3 = 2$ lub $y-3 = -2$, co daje $y = 5$ lub $y = 1$.",
-      "Punkty przecięcia okręgu z osią Oy mają współrzędne $(0, 1)$ i $(0, 5)$."
+      "Punkty przecięcia okręgu z osią $Oy$ mają pierwszą współrzędną równą $0$. Podstawiamy $x=0$ do równania okręgu:\n$(0-3)^2+(y-3)^2=13.$",
+      "Upraszczamy równanie:\n$9+(y-3)^2=13, \\quad (y-3)^2=4.$",
+      "Stąd $y-3=2$ lub $y-3=-2$, czyli $y=5$ lub $y=1$.",
+      "Punkty przecięcia okręgu z osią $Oy$ mają współrzędne $(0,1)$ i $(0,5)$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14322,17 +14447,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dane są proste k oraz l o równaniach ![Rysunek do zadania](/cke-matura/m23-probna-xii/z28-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste k oraz l\n\nRozwiąż zadanie.",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych $(x,y)$, dane są proste $k$ oraz $l$ o równaniach\n$k:\\ y=\\frac13x-1 \\qquad l:\\ y=-3x+6.$\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProste $k$ oraz $l$",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "nie mają punktów wspólnych.",
+      "są prostopadłe.",
+      "przecinają się w punkcie $P=(0,-1)$.",
+      "się pokrywają."
     ],
-    "correctIndex": 0,
-    "explanation": "B) są prostopadłe.",
+    "correctIndex": 1,
+    "explanation": "B, czyli proste $k$ i $l$ są prostopadłe",
     "solutionSteps": [
-      "Zapisz równania prostych w postaci kierunkowej $y = ax + b$. Dla prostej $k$: $2y = -x + 2 \\implies y = -\\frac{1}{2}x + 1$. Dla prostej $l$: $y = 2x - 1$.",
-      "Porównaj współczynniki kierunkowe prostych. Współczynnik kierunkowy prostej $k$ wynosi $a_k = -\\frac{1}{2}$, a prostej $l$ wynosi $a_l = 2$. Ponieważ $a_k \\cdot a_l = -\\frac{1}{2} \\cdot 2 = -1$, proste są prostopadłe.",
-      "Sprawdź punkt przecięcia, podstawiając $x=0$ do równań prostych. Dla $k$: $y = -\\frac{1}{2}(0) + 1 = 1$. Dla $l$: $y = 2(0) - 1 = -1$. Punkty przecięcia z osią $y$ są różne, więc nie przecinają się w punkcie $(0, -1)$."
+      "Odczytujemy współczynniki kierunkowe prostych: $a_k=\\frac13$ oraz $a_l=-3$.",
+      "Sprawdzamy iloczyn współczynników kierunkowych:\n$a_k\\cdot a_l=\\frac13\\cdot(-3)=-1.$\nProste są więc prostopadłe - poprawna jest odpowiedź B.",
+      "Sprawdzamy pozostałe odpowiedzi. Proste nie są równoległe, bo mają różne współczynniki kierunkowe, więc nie są też pokrywające się. Punkt $P=(0,-1)$ należy do prostej $k$, ale nie do prostej $l$, bo $l(0)=6\\ne-1$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14350,20 +14479,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych (x,y), dane są punkty $A = (1,2)$ i $B = (2m,m)$, gdzie m jest liczbą rzeczywistą, oraz prosta k o równaniu y = -$x - 1$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta przechodząca przez punkty A i B jest równoległa do prostej k, gdy",
+    "prompt": "Na płaszczyźnie, w kartezjańskim układzie współrzędnych $(x,y)$, dane są punkty $A=(1,2)$ i $B=(2m,m)$, gdzie $m$ jest liczbą rzeczywistą, oraz prosta $k$ o równaniu $y=-x-1$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProsta przechodząca przez punkty $A$ i $B$ jest równoległa do prostej $k$, gdy",
     "choices": [
-      "$m = -1$",
-      "$m = 1$",
-      "$m = \\frac{1}{2}$",
-      "$m = 2$ 1 pkt - odpowiedź poprawna."
+      "$m=-1$",
+      "$m=1$",
+      "$m=\\frac12$",
+      "$m=2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $m = 1$.",
+    "explanation": "B, czyli $m=1$",
     "solutionSteps": [
-      "Oblicz współczynnik kierunkowy prostej przechodzącej przez punkty A i B. Wzór na współczynnik kierunkowy $a$ to $\\frac{y_B - y_A}{x_B - x_A}$. Podstawiając dane punkty, otrzymujemy $a = \\frac{m - 2}{2m - 1}$.",
-      "Proste są równoległe, gdy mają równe współczynniki kierunkowe. Prosta $k$ ma równanie $y = -x - 1$, więc jej współczynnik kierunkowy wynosi $-1$. Przyrównujemy oba współczynniki: $\\frac{m - 2}{2m - 1} = -1$.",
-      "Rozwiąż równanie z niewiadomą $m$. Mnożymy obie strony przez $2m - 1$ (zakładając $2m - 1 \\ne 0$, czyli $m \\ne \\frac{1}{2}$), aby otrzymać $m - 2 = -(2m - 1)$, co po uproszczeniu daje $m - 2 = -2m + 1$, a stąd $3m = 3$, czyli $m = 1$."
+      "Prosta $k$ ma równanie $y=-x-1$, więc jej współczynnik kierunkowy jest równy $-1$.",
+      "Prosta przechodząca przez punkty $A=(1,2)$ i $B=(2m,m)$ ma współczynnik kierunkowy\n$a=\\frac{y_B-y_A}{x_B-x_A}=\\frac{m-2}{2m-1},$\nprzy założeniu $2m-1\\ne0$, czyli $m\\ne\\frac12$.",
+      "Proste równoległe mają równe współczynniki kierunkowe, więc\n$\\frac{m-2}{2m-1}=-1.$",
+      "Mnożymy obie strony przez $2m-1$:\n$m-2=-(2m-1), \\quad m-2=-2m+1.$",
+      "Rozwiązujemy równanie:\n$3m=3, \\quad m=1.$\nLiczba $1$ spełnia założenie $m\\ne\\frac12$."
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14381,17 +14513,22 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości 9. Wierzchołki podstawy ABCD sześcianu połączono odcinkami z punktem W, który jest punktem przecięcia przekątnych podstawy EFGH. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny ABCDW (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m23-probna-xii/z30-1.png) Zadanie 30.1. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość V ostrosłupa ABCDW jest równa A) 243B) 364,5C) 489D) 729 1 pkt - odpowiedź poprawna. Zadanie 30.2. Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy.",
+    "prompt": "Dany jest sześcian $ABCDEFGH$, którego krawędź ma długość $9$. Wierzchołki podstawy $ABCD$ sześcianu połączono odcinkami z punktem $W$, który jest punktem przecięcia przekątnych podstawy $EFGH$. Otrzymano w ten sposób ostrosłup prawidłowy czworokątny $ABCDW$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m23-probna-xii/z30-fig1.png)\n\n**Zadanie 30.1.** Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObjętość $V$ ostrosłupa $ABCDW$ jest równa\n\nA) $243$\nB) $364{,}5$\nC) $489$\nD) $729$\n\n**Zadanie 30.2.** Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny podstawy. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 243",
+    "explanation": "30.1. A; 30.2. $\\cos\\alpha=\\frac{\\sqrt3}{3}$",
     "solutionSteps": [
-      "Obliczamy pole podstawy ostrosłupa. Podstawa ABCD to kwadrat o boku 9, więc jej pole wynosi $P_{p} = 9^2 = 81$.",
-      "Określamy wysokość ostrosłupa. Punkt W jest środkiem górnej podstawy, a podstawa ostrosłupa to dolna podstawa sześcianu. Wysokość ostrosłupa jest więc równa krawędzi sześcianu, czyli $h = 9$.",
-      "Obliczamy objętość ostrosłupa ze wzoru $V = \\frac{1}{3} P_{p} \\cdot h$. Podstawiając dane, otrzymujemy $V = \\frac{1}{3} \\cdot 81 \\cdot 9 = 243$."
+      "Podstawą ostrosłupa $ABCDW$ jest kwadrat $ABCD$ o boku $9$, więc\n$P_p=9^2=81.$",
+      "Wysokość ostrosłupa jest równa długości krawędzi sześcianu, ponieważ punkt $W$ leży w górnej podstawie sześcianu, a podstawa $ABCD$ - w dolnej:\n$H=9.$",
+      "Obliczamy objętość ostrosłupa:\n$$V=\\frac13\\cdot P_p\\cdot H=\\frac13\\cdot81\\cdot9=243.$$\nTo odpowiada odpowiedzi A w zadaniu 30.1.",
+      "Niech $O$ będzie środkiem podstawy $ABCD$ (spodkiem wysokości ostrosłupa). Wtedy $|OW|=9$. Przekątna podstawy ma długość $9\\sqrt2$, więc\n$|AO|=\\frac{9\\sqrt2}{2}.$",
+      "Kąt nachylenia krawędzi bocznej $AW$ do płaszczyzny podstawy to kąt $WAO$ między krawędzią $AW$ a jej rzutem $AO$ na płaszczyznę podstawy. Oznaczmy go przez $\\alpha$.",
+      "Z twierdzenia Pitagorasa w trójkącie $AOW$:\n$$|AW|^2=|AO|^2+|OW|^2=\\left(\\frac{9\\sqrt2}{2}\\right)^2+9^2=\\frac{162}{4}+81=\\frac{81}{2}+\\frac{162}{2}=\\frac{243}{2}.$$\nStąd $|AW|=\\frac{9\\sqrt6}{2}$.",
+      "Obliczamy cosinus kąta $\\alpha$:\n$$\\cos\\alpha=\\frac{|AO|}{|AW|}=\\frac{\\frac{9\\sqrt2}{2}}{\\frac{9\\sqrt6}{2}}=\\frac{\\sqrt2}{\\sqrt6}=\\frac{\\sqrt3}{3}.$$"
     ],
+    "points": 3,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14409,20 +14546,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian F o krawędzi $d$ługości a i objętości V oraz sześcian G o krawędzi $d$ługości 3a. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Objętość sześcianu G jest równa",
+    "prompt": "Dany jest sześcian $\\mathcal{F}$, którego krawędź ma długość $a$ i objętość $V$, oraz sześcian $\\mathcal{G}$, którego krawędź ma długość $3a$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nObjętość sześcianu $\\mathcal{G}$ jest równa",
     "choices": [
-      "3V",
-      "9V",
-      "18V",
-      "27V^{1} pkt - odpowiedź poprawna."
+      "$3V$",
+      "$9V$",
+      "$18V$",
+      "$27V$"
     ],
     "correctIndex": 3,
     "explanation": "D, czyli $27V$",
     "solutionSteps": [
-      "Oblicz objętość sześcianu F. Objętość sześcianu o krawędzi $a$ wynosi $V = a^3$.",
-      "Oblicz objętość sześcianu G. Sześcian G ma krawędź $3a$, więc jego objętość wynosi $(3a)^3 = 27a^3$.",
-      "Porównaj objętości sześcianów G i F. Ponieważ $27a^3 = 27 \\cdot a^3 = 27V$, objętość sześcianu G jest 27 razy większa od objętości sześcianu F."
+      "Objętość sześcianu $\\mathcal{F}$ jest równa\n$V=a^3.$",
+      "Sześcian $\\mathcal{G}$ ma krawędź $3a$, więc jego objętość jest równa\n$V_{\\mathcal{G}}=(3a)^3=27a^3.$",
+      "Ponieważ $a^3=V$, otrzymujemy\n$V_{\\mathcal{G}}=27V.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14440,20 +14578,21 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na loterii stosunek liczby losów wygrywających do liczby losów przegrywających jest równy 2∶7. Zakupiono jeden los z tej loterii. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prawdopodobieństwo zdarzenia polegającego na tym, że zakupiony los jest wygrywający, jest równe",
+    "prompt": "Na loterii stosunek liczby losów wygrywających do liczby losów przegrywających jest równy $2:7$. Zakupiono jeden los z tej loterii.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPrawdopodobieństwo zdarzenia polegającego na tym, że zakupiony los jest wygrywający, jest równe",
     "choices": [
-      "$\\frac{1}{9}$",
-      "$\\frac{1}{2}$",
-      "$\\frac{2}{9}$",
-      "$\\frac{2}{7}$ 1 pkt - odpowiedź poprawna."
+      "$\\frac19$",
+      "$\\frac12$",
+      "$\\frac29$",
+      "$\\frac27$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $\\frac{2}{9}$",
+    "explanation": "C, czyli $\\frac29$",
     "solutionSteps": [
-      "Z sumy części stosunku $2+7=9$ dowiadujemy się, że na każde 9 losów, 2 są wygrywające, a 7 są przegrywające.",
-      "Prawdopodobieństwo zdarzenia (wylosowanie losu wygrywającego) obliczamy dzieląc liczbę losów wygrywających przez łączną liczbę losów.",
-      "Prawdopodobieństwo wynosi $\\frac{2}{9}$."
+      "Stosunek liczby losów wygrywających do przegrywających jest równy $2:7$, więc losów wygrywających jest $2x$, a przegrywających $7x$, gdzie $x>0$.",
+      "Wszystkich losów jest\n$2x+7x=9x.$",
+      "Prawdopodobieństwo wylosowania losu wygrywającego jest równe\n$P=\\frac{2x}{9x}=\\frac29.$"
     ],
+    "points": 1,
     "examSource": {
       "kind": "matura",
       "year": 2023,
@@ -14464,24 +14603,25 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
   {
     "id": "cke-m23-probna-xii-z33",
     "title": "Matura - próbna grudzień 2023 - poziom podstawowy - zad. 33",
-    "category": "algebra",
+    "category": "arytmetyka",
     "difficulty": "trudny",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic: • w I donicy -133 nasiona • w II donicy -140 nasion • w III donicy -119 nasion • w IV donicy -147 nasion • w V donicy -161 nasion. Odchylenie standardowe liczby wykiełkowanych nasion jest równe $σ = 14$. Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej.",
+    "prompt": "W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu policzono wykiełkowane nasiona w każdej z donic:\n\n- w I donicy - $133$ nasiona\n- w II donicy - $140$ nasion\n- w III donicy - $119$ nasion\n- w IV donicy - $147$ nasion\n- w V donicy - $161$ nasion.\n\nOdchylenie standardowe liczby wykiełkowanych nasion jest równe $\\sigma=14$.\n\nPodaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale określonym przez jedno odchylenie standardowe od średniej. Zapisz obliczenia.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "II, IV",
+    "explanation": "I, II oraz IV",
     "solutionSteps": [
-      "Obliczamy średnią arytmetyczną liczby wykiełkowanych nasion: $\\bar{x} = \\frac{133+140+119+147+161}{5} = \\frac{700}{5} = 140$.",
-      "Określamy przedział zgodny z definicją: $[\\bar{x} - \\sigma, \\bar{x} + \\sigma] = [140 - 14, 140 + 14] = [126, 154]$.",
-      "Sprawdzamy, w których donicach liczba wykiełkowanych nasion mieści się w przedziale $[126, 154]$: donica II $(140)$, donica III $(119 - nie mieści się)$, donica IV $(147)$. Donica $I(133)$ mieści się, ale odchylenie od średniej to 7, a nie 14. Donica $V(161)$ nie mieści się w przedziale."
+      "Obliczamy średnią liczbę wykiełkowanych nasion:\n$$\\bar{x}=\\frac{133+140+119+147+161}{5}=\\frac{700}{5}=140.$$",
+      "Przedział określony przez jedno odchylenie standardowe od średniej to\n$$(\\bar{x}-\\sigma,\\ \\bar{x}+\\sigma)=(140-14,\\ 140+14)=(126,\\ 154).$$",
+      "Sprawdzamy, które liczby wykiełkowanych nasion należą do przedziału $(126,154)$:\n- I donica: $133\\in(126,154)$ - należy,\n- II donica: $140\\in(126,154)$ - należy,\n- III donica: $119\\notin(126,154)$ - nie należy,\n- IV donica: $147\\in(126,154)$ - należy,\n- V donica: $161\\notin(126,154)$ - nie należy."
     ],
+    "points": 2,
     "examSource": {
       "kind": "matura",
       "year": 2023,
