@@ -87,7 +87,10 @@
       "numer": 10,
       "dzial": "Ciągi",
       "tresc": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych (𝑥 , 𝑦) jednego z niżej zapisanych układów równań A – D. ![Rysunek do zadania](/cke-matura/m23-maj/z10-1.png) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest A) ![Rysunek do zadania](/cke-matura/m23-maj/z10-2.png) B) ![Rysunek do zadania](/cke-matura/m23-maj/z10-3.png) C) ![Rysunek do zadania](/cke-matura/m23-maj/z10-4.png) D) ![Rysunek do zadania](/cke-matura/m23-maj/z10-5.png)",
-      "rozwiazanie": "**Krok 1.** Zauważ, że na rysunku znajdują się dwie proste - pozioma i ukośna. Prosta pozioma przecina oś $y$ w punkcie $(0, 2)$, co oznacza, że jej równanie ma postać $y = 2$.\n**Krok 2.** Prosta ukośna przecina oś $y$ w punkcie $(0, -1)$ i oś $x$ w punkcie $(2, 0)$. Obliczamy jej nachylenie $a = \\frac{0 - (-1)}{2 - 0} = \\frac{1}{2}$. Równanie tej prostej to $y = \\frac{1}{2}x - 1$.\n**Krok 3.** Zapisz układ równań, łącząc równania obu prostych. Pamiętaj, że na rysunku podane są dwie wersje równania prostej ukośnej (jedna z $y$, druga z $x$).\n**Odpowiedź:** B, czyli $\\begin{cases} y = 2 \\\\ y = \\frac{1}{2}x - 1 \\end{cases}$"
+      "rozwiazanie": "1. Jedna prosta: $y=-x+2$ (przez $(0,2)$ i $(1,1)$).\n2. Druga prosta: $y=2x-1$ (przez $(0,-1)$ i $(1,1)$).\n\nOdpowiedź: D.",
+      "tekst": "Na rysunku przedstawiono interpretację geometryczną w kartezjańskim układzie współrzędnych $(x,y)$ jednego z niżej zapisanych układów równań A–D.\n\n![Rysunek 1](/cke-matura/m23-maj/z10-fig1.png)\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nUkładem równań, którego interpretację geometryczną przedstawiono na rysunku, jest\n\nA) $y=-x+2$ i $y=-2x+1$\nB) $y=x-2$ i $y=-2x-1$\nC) $y=x-2$ i $y=2x+1$\nD) $y=-x+2$ i $y=2x-1$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 11,
@@ -245,7 +248,9 @@
       "numer": 29,
       "dzial": "Statystyka",
       "tresc": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach. ![Rysunek do zadania](/cke-matura/m23-maj/z29-1.png) Wybierz właściwą odpowiedź, wybraną spośród oznaczonych literami A–E. Zadanie 29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł Zadanie 29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa A) 5,80 zł B) 5,73 zł C) 5,85 zł D) 6,00 zł E) 5,70 zł",
-      "rozwiazanie": "**Krok 1.** Uporządkuj dane cen od najniższej do najwyższej: 5,40, 5,50, 5,50, 5,60, 5,60, 5,60, 5,60, 5,70, 5,70, 5,80, 5,80, 5,90, 6,00, 6,10, 6,10, 6,20.\n**Krok 2.** Mediana to wartość środkowa; dla parzystej liczby danych (tutaj 16) to średnia dwóch środkowych wartości: 8. i 9. pozycji. Mediana = $\\frac{5,70 + 5,70}{2} = 5,70$ zł.\n**Krok 3.** Średnia to suma wszystkich cen podzielona przez ich liczbę (16). Suma cen = $5,40 + 2 \\cdot 5,50 + 4 \\cdot 5,60 + 2 \\cdot 5,70 + 2 \\cdot 5,80 + 5,90 + 6,00 + 2 \\cdot 6,10 + 6,20 = 92,30$ zł. Średnia = $\\frac{92,30}{16} = 5,76875$ zł. Zaokrąglając do dwóch miejsc po przecinku, otrzymujemy $5,77$ zł.\n\n**Odpowiedź:** Zadanie 29.1: E, czyli 5,70 zł. Zadanie 29.2: B, czyli 5,73 zł (po zaokrągleniu do dwóch miejsc po przecinku z 5,76875 zł)."
+      "rozwiazanie": "29.1. Po uporządkowaniu danych środkowe wartości to $5{,}70$ i $6{,}00$, więc mediana $=5{,}85$ zł.\n29.2. Suma cen $=92{,}80$ zł, więc średnia $=\\frac{92{,}80}{16}=5{,}80$ zł.\n\nOdpowiedź: 29.1 C; 29.2 A.",
+      "tekst": "Na diagramie poniżej przedstawiono ceny pomidorów w szesnastu wybranych sklepach.\n\n![Rysunek 1](/cke-matura/m23-maj/z29-fig1.png)\n\n29.1. Mediana ceny kilograma pomidorów w tych wybranych sklepach jest równa\n\nA) $5{,}80$ zł\nB) $5{,}73$ zł\nC) $5{,}85$ zł\nD) $6{,}00$ zł\nE) $5{,}70$ zł\n\n29.2. Średnia cena kilograma pomidorów w tych wybranych sklepach jest równa\n\nA) $5{,}80$ zł\nB) $5{,}73$ zł\nC) $5{,}85$ zł\nD) $6{,}00$ zł\nE) $5{,}70$ zł",
+      "tekstV": 2
     },
     {
       "numer": 30,
