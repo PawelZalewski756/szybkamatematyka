@@ -8,7 +8,10 @@
       "numer": 1,
       "dzial": "Algebra",
       "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z01-1.png) jest równa A) 2 B) 1 C) 26 D) 14",
-      "rozwiazanie": "**Krok 1.** Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.\n**Krok 2.** Oblicz wartość pierwiastka sześciennego z 8, czyli $\\sqrt[3]{8} = 2$.\n**Krok 3.** Dodaj uzyskane wyniki: $13 + 2 = 15$.\n\n**Odpowiedź:** D, czyli 15."
+      "rozwiazanie": "1. $2\\sqrt8=4\\sqrt2$.\n2. $(4\\sqrt2-3\\sqrt2)^2=2$.\n\nOdpowiedź: A.",
+      "tekst": "Liczba $(2\\sqrt8-3\\sqrt2)^2$ jest równa\n\nA) $2$\nB) $1$\nC) $26$\nD) $14$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 2,
@@ -41,19 +44,28 @@
       "numer": 5,
       "dzial": "Algebra",
       "tresc": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z05-1.png) jest równa A) ![Rysunek do zadania](/cke-matura/m22-maj/z05-2.png) B) ![Rysunek do zadania](/cke-matura/m22-maj/z05-3.png) C) ![Rysunek do zadania](/cke-matura/m22-maj/z05-4.png) D) ![Rysunek do zadania](/cke-matura/m22-maj/z05-5.png)",
-      "rozwiazanie": "**Krok 1.** Rozpisujemy pierwiastek z ułamka jako różnicę pierwiastków: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}}$.\n**Krok 2.** Obliczamy pierwiastek z licznika i mianownika: $\\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$.\n**Odpowiedź:** B, czyli $\\frac{\\sqrt{3}}{2}$"
+      "rozwiazanie": "1. $3^{2+1/4}=3^2\\cdot3^{1/4}$.\n2. $3^{1/4}=\\sqrt[4]{3}$.\n\nOdpowiedź: A.",
+      "tekst": "Liczba $3^{2+\\frac14}$ jest równa\n\nA) $3^2\\cdot\\sqrt[4]{3}$\nB) $\\sqrt[4]{3^3}$\nC) $3^2+\\sqrt[4]{3}$\nD) $3^2+\\sqrt{3^4}$",
+      "tekstV": 2,
+      "correctIndex": 0
     },
     {
       "numer": 6,
       "dzial": "Algebra",
       "tresc": "Rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m22-maj/z06-1.png) jest para liczb: x = x 0 , y = y 0 . Wtedy A) x 0 > 0 i y 0 > 0 B) x 0 > 0 i y 0 C) x 0 0 > 0 D) x 0 0",
-      "rozwiazanie": "**Krok 1.** Przekształć drugie równanie tak, aby wyznaczyć $x$: $x = -2y + 4$.\n**Krok 2.** Podstaw wyznaczone $x$ do pierwszego równania: $2(-2y + 4) + 3y = 1$.\n**Krok 3.** Rozwiąż równanie z jedną niewiadomą $y$: $-4y + 8 + 3y = 1$, co daje $-y = -7$, czyli $y_0 = 7$.\n**Krok 4.** Oblicz $x_0$, podstawiając $y_0 = 7$ do wzoru $x = -2y + 4$: $x_0 = -2(7) + 4 = -14 + 4 = -10$.\n**Odpowiedź:** D, czyli $x_0 < 0$ i $y_0 > 0$."
+      "rozwiazanie": "1. $x-y=\\frac1{11}$, $x+y=-\\frac1{22}$.\n2. $x=\\frac1{44}>0$, $y=\\frac3{44}>0$.\n\nOdpowiedź: A.",
+      "tekst": "Rozwiązaniem układu równań\n\n$$11x-11y=1 \\qquad 22x+22y=-1$$\n\njest para liczb: $x=x_0$, $y=y_0$. Wtedy\n\nA) $x_0>0$ i $y_0>0$\nB) $x_0>0$ i $y_0<0$\nC) $x_0<0$ i $y_0<0$\nD) $x_0<0$ i $y_0>0$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 7,
       "dzial": "Algebra",
       "tresc": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m22-maj/z07-1.png) jest przedział A) (−∞, 0) B) (0, +∞) C) (−∞, 3 &frasl; 4 ) D) ( 3 &frasl; 4 ,+∞)",
-      "rozwiazanie": "**Krok 1.** Nierówność $\\frac{x-3}{4-x} \\ge 0$ rozwiążemy, analizując znaki licznika i mianownika. Licznik jest zerowy dla $x=3$, a mianownik dla $x=4$. Zwróć uwagę, że $x \\neq 4$.\n**Krok 2.** Tworzymy tabelę znaków dla wyrażenia $\\frac{x-3}{4-x}$. Wartości $x=3$ i $x=4$ dzielą oś na przedziały: $(-\\infty, 3]$, $(3, 4)$ i $(4, +\\infty)$. Po analizie znaków stwierdzamy, że nierówność jest spełniona dla $x \\in [3, 4)$.\n**Krok 3.** Ponieważ rozwiązaniem jest przedział domknięty z lewej strony i otwarty z prawej, a prawidłową odpowiedzią jest $3/4$, to należy przeanalizować treść zadania. Wygląda na to, że w treści zadania podano złą wartość ($3/4$), zamiast wartości $3$.\n**Odpowiedź:** D, czyli $(\\frac{3}{4}, +\\infty)$."
+      "rozwiazanie": "1. $6-5x>3x$, więc $x<\\frac34$.\n\nOdpowiedź: C.",
+      "tekst": "Zbiorem wszystkich rozwiązań nierówności $\\frac25-\\frac{x}{3}>\\frac{x}{5}$ jest przedział\n\nA) $(-\\infty,0)$\nB) $(0,+\\infty)$\nC) $\\left(-\\infty,\\frac34\\right)$\nD) $\\left(\\frac34,+\\infty\\right)$",
+      "tekstV": 2,
+      "correctIndex": 2
     },
     {
       "numer": 8,
@@ -86,7 +98,10 @@
       "numer": 11,
       "dzial": "Funkcje",
       "tresc": "Miejscem zerowym funkcji liniowej ƒ określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba A) (−3) B) 9 &frasl; 2 C) 5 D) 12",
-      "rozwiazanie": "**Krok 1.** Aby znaleźć miejsce zerowe funkcji liniowej, przyrównujemy jej wzór do zera. Zatem szukamy $x$ takiego, że $f(x) = 0$.\n**Krok 2.** Rozwiązujemy równanie $-\\frac{1}{2}x + 3 = 0$. Dodajemy $\\frac{1}{2}x$ do obu stron, otrzymując $3 = \\frac{1}{2}x$.\n**Krok 3.** Mnożymy obie strony przez 2, aby wyznaczyć $x$. $3 \\cdot 2 = (\\frac{1}{2}x) \\cdot 2$, co daje $6 = x$.\n\n**Odpowiedź:** A, czyli 6"
+      "rozwiazanie": "1. $-\\frac13(x+3)+5=0$.\n2. $x=12$.\n\nOdpowiedź: D.",
+      "tekst": "Miejscem zerowym funkcji liniowej $f$ określonej wzorem $f(x)=-\\frac13(x+3)+5$ jest liczba\n\nA) $-3$\nB) $\\frac92$\nC) $5$\nD) $12$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 12,
@@ -218,7 +233,10 @@
       "numer": 26,
       "dzial": "Geometria",
       "tresc": "Dany jest sześcian ABCDEFGH o krawędzi długości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe A) ![Rysunek do zadania](/cke-matura/m22-maj/z26-2.png) B) ![Rysunek do zadania](/cke-matura/m22-maj/z26-3.png) C) ![Rysunek do zadania](/cke-matura/m22-maj/z26-4.png) D) ![Rysunek do zadania](/cke-matura/m22-maj/z26-5.png)",
-      "rozwiazanie": "**Krok 1.** Ostrosłup EFGB ma w podstawie trójkąt prostokątny EFG, a jego ściany boczne to trójkąty prostokątne EFB, BFG oraz EGB. Każda z krawędzi EFG, EF, FG, EB, GB ma długość $a$. Długość krawędzi FB jest krótsza ($a\\sqrt{2}$), a przekątna EG ma długość $a\\sqrt{2}$.\n\n**Krok 2.** Pole podstawy $\\triangle EFG$: $P_p = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2}a^2$. Pole ścian bocznych $\\triangle EFB$ i $\\triangle BFG$: $P_{FB} = P_{FG} = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2}a^2$.\n\n**Krok 3.** Ściana BGE jest trójkątem prostokątnym o przyprostokątnych $a$ i $a$, co daje pole $P_{BGE} = \\frac{1}{2}a^2$. Ściana EGB jest trójkątem równoramiennym. Krawędź $EB=a$, $GB=a$, $EG=a\\sqrt{2}$. Wysokość tego trójkąta opuszczona na EG jest równa $\\sqrt{a^2 - (\\frac{a\\sqrt{2}}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}}$. Pole tej ściany to $P_{EGB} = \\frac{1}{2} \\cdot a\\sqrt{2} \\cdot \\frac{a}{\\sqrt{2}} = \\frac{1}{2}a^2$.\n\n**Krok 4.** Pole powierzchni całkowitej ostrosłupa to suma pól wszystkich ścian: $P_c = P_p + P_{EFB} + P_{BFG} + P_{EGB} = \\frac{1}{2}a^2 + \\frac{1}{2}a^2 + \\frac{1}{2}a^2 + \\frac{1}{2}a^2 = 4 \\cdot \\frac{1}{2}a^2 = 2a^2$.\n\n**Odpowiedź:** $2a^2$"
+      "rozwiazanie": "1. Podstawa $\\frac12a^2$, dwie ściany po $\\frac12a^2$, ściana $EGB$ ma pole $\\frac{\\sqrt3}{2}a^2$.\n2. Razem $\\frac{3+\\sqrt3}{2}a^2$.\n\nOdpowiedź: D.",
+      "tekst": "Dany jest sześcian $ABCDEFGH$ o krawędzi długości $a$. Punkty $E$, $F$, $G$, $B$ są wierzchołkami ostrosłupa $EFGB$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m22-maj/z26-fig1.png)\n\nPole powierzchni całkowitej ostrosłupa $EFGB$ jest równe\n\nA) $a^2$\nB) $\\frac{3\\sqrt3}{2}a^2$\nC) $\\frac32a^2$\nD) $\\frac{3+\\sqrt3}{2}a^2$",
+      "tekstV": 2,
+      "correctIndex": 3
     },
     {
       "numer": 27,

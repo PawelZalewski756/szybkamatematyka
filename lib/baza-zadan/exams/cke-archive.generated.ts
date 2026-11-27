@@ -10863,19 +10863,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z01-1.png) jest równa",
+    "prompt": "Liczba $(2\\sqrt8-3\\sqrt2)^2$ jest równa",
     "choices": [
-      "2",
-      "1",
-      "26",
-      "14"
+      "$2$",
+      "$1$",
+      "$26$",
+      "$14$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli 15.",
+    "correctIndex": 0,
+    "explanation": "A.",
     "solutionSteps": [
-      "Oblicz wartość pierwiastka kwadratowego z 169, czyli $\\sqrt{169} = 13$.",
-      "Oblicz wartość pierwiastka sześciennego z 8, czyli $\\sqrt[3]{8} = 2$.",
-      "Dodaj uzyskane wyniki: $13 + 2 = 15$."
+      "1. $2\\sqrt8=4\\sqrt2$.\n2. $(4\\sqrt2-3\\sqrt2)^2=2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -10981,18 +10979,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba ![Rysunek do zadania](/cke-matura/m22-maj/z05-1.png) jest równa",
+    "prompt": "Liczba $3^{2+\\frac14}$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m22-maj/z05-2.png)",
-      "![Rysunek do zadania](/cke-matura/m22-maj/z05-3.png)",
-      "![Rysunek do zadania](/cke-matura/m22-maj/z05-4.png)",
-      "![Rysunek do zadania](/cke-matura/m22-maj/z05-5.png)"
+      "$3^2\\cdot\\sqrt[4]{3}$",
+      "$\\sqrt[4]{3^3}$",
+      "$3^2+\\sqrt[4]{3}$",
+      "$3^2+\\sqrt{3^4}$"
     ],
-    "correctIndex": 1,
-    "explanation": "B, czyli $\\frac{\\sqrt{3}}{2}$",
+    "correctIndex": 0,
+    "explanation": "A.",
     "solutionSteps": [
-      "Rozpisujemy pierwiastek z ułamka jako różnicę pierwiastków: $\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{\\sqrt{4}}$.",
-      "Obliczamy pierwiastek z licznika i mianownika: $\\frac{\\sqrt{3}}{\\sqrt{4}} = \\frac{\\sqrt{3}}{2}$."
+      "1. $3^{2+1/4}=3^2\\cdot3^{1/4}$.\n2. $3^{1/4}=\\sqrt[4]{3}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11011,20 +11008,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiązaniem układu równań ![Rysunek do zadania](/cke-matura/m22-maj/z06-1.png) jest para liczb: $x = x^{0}$ , $y = y^{0}$ . Wtedy",
+    "prompt": "Rozwiązaniem układu równań\n\n$11x-11y=1 \\qquad 22x+22y=-1$\n\njest para liczb: $x=x_0$, $y=y_0$. Wtedy",
     "choices": [
-      "$x^{0} > 0$ i $y^{0} > 0$",
-      "$x^{0} > 0$ i $y^{0}$",
-      "$x^{0} 0 > 0$",
-      "$x^{0}$ 0"
+      "$x_0>0$ i $y_0>0$",
+      "$x_0>0$ i $y_0<0$",
+      "$x_0<0$ i $y_0<0$",
+      "$x_0<0$ i $y_0>0$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $x_0 < 0$ i $y_0 > 0$.",
+    "explanation": "A.",
     "solutionSteps": [
-      "Przekształć drugie równanie tak, aby wyznaczyć $x$: $x = -2y + 4$.",
-      "Podstaw wyznaczone $x$ do pierwszego równania: $2(-2y + 4) + 3y = 1$.",
-      "Rozwiąż równanie z jedną niewiadomą $y$: $-4y + 8 + 3y = 1$, co daje $-y = -7$, czyli $y_0 = 7$.",
-      "Oblicz $x_0$, podstawiając $y_0 = 7$ do wzoru $x = -2y + 4$: $x_0 = -2(7) + 4 = -14 + 4 = -10$."
+      "1. $x-y=\\frac1{11}$, $x+y=-\\frac1{22}$.\n2. $x=\\frac1{44}>0$, $y=\\frac3{44}>0$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11043,19 +11037,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m22-maj/z07-1.png) jest przedział",
+    "prompt": "Zbiorem wszystkich rozwiązań nierówności $\\frac25-\\frac{x}{3}>\\frac{x}{5}$ jest przedział",
     "choices": [
-      "$(-\\infty , 0)$",
-      "$(0, + \\infty )$",
-      "$(-\\infty , \\frac{3}{4})$",
-      "$(\\frac{3}{4} , + \\infty )$"
+      "$(-\\infty,0)$",
+      "$(0,+\\infty)$",
+      "$\\left(-\\infty,\\frac34\\right)$",
+      "$\\left(\\frac34,+\\infty\\right)$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $(\\frac{3}{4}, +\\infty)$.",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Nierówność $\\frac{x-3}{4-x} \\ge 0$ rozwiążemy, analizując znaki licznika i mianownika. Licznik jest zerowy dla $x=3$, a mianownik dla $x=4$. Zwróć uwagę, że $x \\neq 4$.",
-      "Tworzymy tabelę znaków dla wyrażenia $\\frac{x-3}{4-x}$. Wartości $x=3$ i $x=4$ dzielą oś na przedziały: $(-\\infty, 3]$, $(3, 4)$ i $(4, +\\infty)$. Po analizie znaków stwierdzamy, że nierówność jest spełniona dla $x \\in [3, 4)$.",
-      "Ponieważ rozwiązaniem jest przedział domknięty z lewej strony i otwarty z prawej, a prawidłową odpowiedzią jest $3/4$, to należy przeanalizować treść zadania. Wygląda na to, że w treści zadania podano złą wartość ($3/4$), zamiast wartości $3$."
+      "1. $6-5x>3x$, więc $x<\\frac34$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11161,19 +11153,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Miejscem zerowym funkcji liniowej f określonej wzorem ![Rysunek do zadania](/cke-matura/m22-maj/z11-1.png) jest liczba",
+    "prompt": "Miejscem zerowym funkcji liniowej $f$ określonej wzorem $f(x)=-\\frac13(x+3)+5$ jest liczba",
     "choices": [
-      "$(-3)$",
-      "$\\frac{9}{2}$",
-      "5",
-      "12"
+      "$-3$",
+      "$\\frac92$",
+      "$5$",
+      "$12$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli 6",
+    "correctIndex": 3,
+    "explanation": "D.",
     "solutionSteps": [
-      "Aby znaleźć miejsce zerowe funkcji liniowej, przyrównujemy jej wzór do zera. Zatem szukamy $x$ takiego, że $f(x) = 0$.",
-      "Rozwiązujemy równanie $-\\frac{1}{2}x + 3 = 0$. Dodajemy $\\frac{1}{2}x$ do obu stron, otrzymując $3 = \\frac{1}{2}x$.",
-      "Mnożymy obie strony przez 2, aby wyznaczyć $x$. $3 \\cdot 2 = (\\frac{1}{2}x) \\cdot 2$, co daje $6 = x$."
+      "1. $-\\frac13(x+3)+5=0$.\n2. $x=12$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11598,17 +11588,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest sześcian ABCDEFGH o krawędzi $d$ługości a. Punkty E,F,G,B są wierzchołkami ostrosłupa EFGB (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m22-maj/z26-1.png) Pole powierzchni całkowitej ostrosłupa EFGB jest równe\n\nRozwiąż zadanie.",
+    "prompt": "Dany jest sześcian $ABCDEFGH$ o krawędzi $d$ługości $a$. Punkty $E$, $F$, $G$, $B$ są wierzchołkami ostrosłupa $EFGB$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m22-maj/z26-fig1.png)\n\nPole powierzchni całkowitej ostrosłupa $EFGB$ jest równe",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$a^2$",
+      "$\\frac{3\\sqrt3}{2}a^2$",
+      "$\\frac32a^2$",
+      "$\\frac{3+\\sqrt3}{2}a^2$"
     ],
-    "correctIndex": 0,
-    "explanation": "$2a^2$",
+    "correctIndex": 3,
+    "explanation": "D.",
     "solutionSteps": [
-      "Ostrosłup EFGB ma w podstawie trójkąt prostokątny EFG, a jego ściany boczne to trójkąty prostokątne EFB, BFG oraz EGB. Każda z krawędzi EFG, EF, FG, EB, GB ma długość $a$. Długość krawędzi FB jest krótsza ($a\\sqrt{2}$), a przekątna EG ma długość $a\\sqrt{2}$.",
-      "Pole podstawy $\\triangle EFG$: $P_p = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2}a^2$. Pole ścian bocznych $\\triangle EFB$ i $\\triangle BFG$: $P_{FB} = P_{FG} = \\frac{1}{2} \\cdot a \\cdot a = \\frac{1}{2}a^2$.",
-      "Ściana BGE jest trójkątem prostokątnym o przyprostokątnych $a$ i $a$, co daje pole $P_{BGE} = \\frac{1}{2}a^2$. Ściana EGB jest trójkątem równoramiennym. Krawędź $EB=a$, $GB=a$, $EG=a\\sqrt{2}$. Wysokość tego trójkąta opuszczona na EG jest równa $\\sqrt{a^2 - (\\frac{a\\sqrt{2}}{2})^2} = \\sqrt{a^2 - \\frac{a^2}{2}} = \\frac{a}{\\sqrt{2}}$. Pole tej ściany to $P_{EGB} = \\frac{1}{2} \\cdot a\\sqrt{2} \\cdot \\frac{a}{\\sqrt{2}} = \\frac{1}{2}a^2$.",
-      "Pole powierzchni całkowitej ostrosłupa to suma pól wszystkich ścian: $P_c = P_p + P_{EFB} + P_{BFG} + P_{EGB} = \\frac{1}{2}a^2 + \\frac{1}{2}a^2 + \\frac{1}{2}a^2 + \\frac{1}{2}a^2 = 4 \\cdot \\frac{1}{2}a^2 = 2a^2$."
+      "1. Podstawa $\\frac12a^2$, dwie ściany po $\\frac12a^2$, ściana $EGB$ ma pole $\\frac{\\sqrt3}{2}a^2$.\n2. Razem $\\frac{3+\\sqrt3}{2}a^2$."
     ],
     "examSource": {
       "kind": "matura",
