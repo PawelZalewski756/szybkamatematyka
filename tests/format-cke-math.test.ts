@@ -183,7 +183,7 @@ describe("regresja archiwum CKE", () => {
     expect(out).not.toContain("<ul");
     expect(out).toContain("$");
     expect(out).toMatch(/P\s*\(\s*x\s*\)|\$P/);
-    expect(out).toContain("![Rysunek do zadania]");
+    expect(out).toMatch(/!\[Rysunek/);
   });
 });
 
