@@ -11949,19 +11949,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba log 9 $27 + \\log 9$ 3 jest równa",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $\\log_9 27+\\log_9 3$ jest równa",
     "choices": [
-      "81",
-      "9",
-      "4",
-      "2"
+      "$81$",
+      "$9$",
+      "$4$",
+      "$2$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $2$.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Skorzystaj z własności logarytmów $\\log_b x + \\log_b y = \\log_b (x \\cdot y)$, aby połączyć oba logarytmy w jeden. Otrzymamy $\\log_9 (27 \\cdot 3)$.",
-      "Oblicz iloczyn w argumencie logarytmu: $27 \\cdot 3 = 81$. Zatem mamy $\\log_9 81$.",
-      "Znajdź liczbę, do której należy podnieść podstawę $(9)$, aby otrzymać argument $(81)$. Ponieważ $9^2 = 81$, $\\log_9 81 = 2$."
+      "1. $\\log_9 27+\\log_9 3=\\log_9 81$.\n2. $\\log_9 81=2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -11980,19 +11978,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej a wyrażenie $(2a - 3)$ 2 - $(2a + 3)$ 2 jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDla każdej liczby rzeczywistej $a$ wyrażenie $(2a-3)^2-(2a+3)^2$ jest równe",
     "choices": [
-      "-24a",
-      "0",
-      "18",
-      "$16a^{2} - 24a$"
+      "$-24a$",
+      "$0$",
+      "$18$",
+      "$16a^2-24a$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $-24a$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Rozwiń oba kwadraty używając wzorów skróconego mnożenia $(x-y)^2 = x^2 - 2xy + y^2$ oraz $(x+y)^2 = x^2 + 2xy + y^2$. Otrzymasz $(4a^2 - 12a + 9) - (4a^2 + 12a + 9)$.",
-      "Opuszczamy nawiasy, pamiętając o zmianie znaków w drugim nawiasie: $4a^2 - 12a + 9 - 4a^2 - 12a - 9$.",
-      "Redukujemy wyrazy podobne, grupując te z $a^2$, z $a$ i stałe: $(4a^2 - 4a^2) + (-12a - 12a) + (9 - 9) = 0 - 24a + 0 = -24a$."
+      "1. $(2a-3)^2-(2a+3)^2=(4a^2-12a+9)-(4a^2+12a+9)$.\n2. $=-24a$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12042,19 +12038,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Jednym z rozwiązań równania $\\sqrt{3}$ $(x^{2} - 2)(x + 3)$ = 0 jest liczba",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nJednym z rozwiązań równania $\\sqrt3(x^2-2)(x+3)=0$ jest liczba",
     "choices": [
-      "3",
-      "2",
-      "$\\sqrt{3}$",
-      "$\\sqrt{2}$"
+      "$3$",
+      "$2$",
+      "$\\sqrt3$",
+      "$\\sqrt2$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $\\sqrt{2}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Przyrównaj każdy z czynników do zera, aby znaleźć potencjalne rozwiązania. Równanie jest spełnione, gdy co najmniej jeden z czynników jest równy zero.",
-      "Rozwiąż poszczególne równania: $\\sqrt{3} = 0$ (niemożliwe), $x^2 - 2 = 0 \\Rightarrow x^2 = 2 \\Rightarrow x = \\sqrt{2}$ lub $x = -\\sqrt{2}$, oraz $x + 3 = 0 \\Rightarrow x = -3$.",
-      "Spośród znalezionych rozwiązań ($-\\sqrt{2}$, $\\sqrt{2}$, $-3$) wybierz to, które znajduje się na liście odpowiedzi."
+      "1. $x^2-2=0$ daje $x=\\pm\\sqrt2$, a $x+3=0$ daje $x=-3$.\n2. W odpowiedziach jest $\\sqrt2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12252,19 +12246,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Jednym z miejsc zerowych funkcji kwadratowej f jest liczba $(-5)$. Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji $f$, jest równa 3. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Drugim miejscem zerowym funkcji $f$ jest liczba",
+    "prompt": "Jednym z miejsc zerowych funkcji kwadratowej $f$ jest liczba $-5$. Pierwsza współrzędna wierzchołka paraboli, będącej wykresem funkcji $f$, jest równa $3$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDrugim miejscem zerowym funkcji $f$ jest liczba",
     "choices": [
-      "11",
-      "1",
-      "$(-1)$",
-      "$(-13)$"
+      "$11$",
+      "$1$",
+      "$-1$",
+      "$-13$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 11",
+    "explanation": "A.",
     "solutionSteps": [
-      "Własność paraboli mówi, że miejsca zerowe są symetryczne względem osi symetrii, której równanie to $x = x_w$. Oś symetrii przechodzi przez wierzchołek paraboli, więc $x_w = 3$.",
-      "Oznaczmy miejsca zerowe jako $x_1$ i $x_2$. Wiemy, że $x_1 = -5$ i $x_w = 3$. Połowa odległości między miejscami zerowymi jest równa odległości od miejsca zerowego do osi symetrii. Zatem $\\frac{|x_2 - x_1|}{2} = |x_w - x_1|$.",
-      "Podstawiamy dane: $\\frac{|x_2 - (-5)|}{2} = |3 - (-5)|$, co daje $\\frac{|x_2 + 5|}{2} = 8$. Stąd $|x_2 + 5| = 16$. Rozwiązujemy dwa przypadki: $x_2 + 5 = 16$ (czyli $x_2 = 11$) lub $x_2 + 5 = -16$ (czyli $x_2 = -21$). Ponieważ $x_1 = -5$, drugim miejscem zerowym musi być $11$."
+      "1. Wierzchołek jest w $x=3$, więc miejsca zerowe są symetryczne.\n2. $\\frac{-5+x_2}{2}=3$, więc $x_2=11$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12283,19 +12275,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($a_{n}$) jest określony wzorem $a_{n} = 2$ n ⋅ $(n + 1)$ dla każdej liczby naturalnej $n \\ge 1$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wyraz $a$ 4 jest równy",
+    "prompt": "Ciąg $(a_n)$ jest określony wzorem $a_n=2^n\\cdot(n+1)$ dla każdej liczby naturalnej $n\\ge1$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWyraz $a_4$ jest równy",
     "choices": [
-      "64",
-      "40",
-      "48",
-      "80"
+      "$64$",
+      "$40$",
+      "$48$",
+      "$80$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 80",
+    "explanation": "D.",
     "solutionSteps": [
-      "Podstawiamy $n=4$ do wzoru $a_n = 2^n \\cdot (n+1)$. Otrzymujemy $a_4 = 2^4 \\cdot (4+1)$.",
-      "Obliczamy potęgę $2^4 = 16$ i sumę w nawiasie $(4+1) = 5$.",
-      "Mnożymy otrzymane wyniki: $a_4 = 16 \\cdot 5 = 80$."
+      "1. $a_4=2^4\\cdot(4+1)=16\\cdot5$.\n2. $a_4=80$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12314,19 +12304,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg $(27 , 9 , a - 1)$ jest geometryczny. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba a jest równa",
+    "prompt": "Trzywyrazowy ciąg $(27,9,a-1)$ jest geometryczny.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nLiczba $a$ jest równa",
     "choices": [
-      "3",
-      "0",
-      "4",
-      "2"
+      "$3$",
+      "$0$",
+      "$4$",
+      "$2$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 4",
+    "explanation": "C.",
     "solutionSteps": [
-      "W ciągu geometrycznym iloraz dowolnego wyrazu (oprócz pierwszego) przez wyraz poprzedzający jest stały. Zapisujemy to jako $\\frac{9}{27} = \\frac{a-1}{9}$.",
-      "Rozwiązujemy równanie, mnożąc obie strony przez $27 \\cdot 9$: $9 \\cdot 9 = 27 \\cdot (a-1)$. Upraszczamy do $81 = 27a - 27$.",
-      "Przenosimy stałe na jedną stronę: $81 + 27 = 27a$, czyli $108 = 27a$. Dzielimy przez 27, aby otrzymać $a = \\frac{108}{27} = 4$."
+      "1. $\\frac{9}{27}=\\frac{a-1}{9}$.\n2. $\\frac13=\\frac{a-1}{9}$, więc $a-1=3$ i $a=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12345,16 +12333,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pan Stanisław spłacił pożyczkę w wysokości 8910 zł w osiemnastu ratach. Każda kolejna rata była mniejsza od poprzedniej o 30 zł. Oblicz kwotę pierwszej raty.",
+    "prompt": "Pan Stanisław spłacił pożyczkę w wysokości $8910$ zł w osiemnastu ratach. Każda kolejna rata była mniejsza od poprzedniej o $30$ zł. Oblicz kwotę pierwszej raty.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "750 zł",
+    "explanation": "$750$ zł.",
     "solutionSteps": [
-      "Zapisujemy dane: kwota pożyczki $S_n = 8910$ zł, liczba rat $n=18$, różnica między ratami $d = -30$ zł. Szukamy pierwszej raty $a_1$.",
-      "Korzystamy ze wzoru na sumę ciągu arytmetycznego: $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$. Podstawiamy dane: $8910 = \\frac{18}{2}(2a_1 + (18-1)(-30))$.",
-      "Rozwiązujemy równanie: $8910 = 9(2a_1 + 17 \\cdot (-30))$, $8910 = 9(2a_1 - 510)$, $990 = 2a_1 - 510$, $1500 = 2a_1$, czyli $a_1 = 750$."
+      "1. $S_{18}=\\frac{18}{2}(2a_1+17\\cdot(-30))=8910$.\n2. $9(2a_1-510)=8910$, więc $2a_1-510=990$ i $a_1=750$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12404,18 +12390,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdego kąta ostrego α wyrażenie sin 4 $α + \\sin 2$ α ⋅cos 2 α jest równe",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDla każdego kąta ostrego $\\alpha$ wyrażenie $\\sin^4\\alpha+\\sin^2\\alpha\\cdot\\cos^2\\alpha$ jest równe",
     "choices": [
-      "sin 2 α",
-      "sin 6 α ⋅ cos 2 α",
-      "sin 4 $α + 1$",
-      "sin 2 α ⋅ $(\\sinα + \\cosα)$ ⋅ $(\\sinα - \\cosα)$"
+      "$\\sin^2\\alpha$",
+      "$\\sin6\\alpha\\cdot\\cos2\\alpha$",
+      "$\\sin4\\alpha+1$",
+      "$\\sin2\\alpha\\cdot(\\sin\\alpha+\\cos\\alpha)\\cdot(\\sin\\alpha-\\cos\\alpha)$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\sin^2 \\alpha$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zastosuj tożsamość trygonometryczną $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$. Wyrażenie można przekształcić: $\\sin^4 \\alpha + \\sin^2 \\alpha \\cdot \\cos^2 \\alpha = \\sin^2 \\alpha (\\sin^2 \\alpha + \\cos^2 \\alpha)$.",
-      "Po podstawieniu tożsamości $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ otrzymujemy: $\\sin^2 \\alpha \\cdot 1 = \\sin^2 \\alpha$."
+      "1. $\\sin^4\\alpha+\\sin^2\\alpha\\cos^2\\alpha=\\sin^2\\alpha(\\sin^2\\alpha+\\cos^2\\alpha)$.\n2. $=\\sin^2\\alpha$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12434,19 +12419,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W rombie o boku długości $6\\sqrt{2}$ kąt rozwarty ma miarę $150^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Iloczyn długości przekątnych tego rombu jest równy",
+    "prompt": "W rombie o boku długości $6\\sqrt2$ kąt rozwarty ma miarę $150^\\circ$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nIloczyn długości przekątnych tego rombu jest równy",
     "choices": [
-      "24",
-      "72",
-      "36",
-      "$36\\sqrt{2}$"
+      "$24$",
+      "$72$",
+      "$36$",
+      "$36\\sqrt2$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 72",
+    "explanation": "B.",
     "solutionSteps": [
-      "Pole rombu możemy obliczyć ze wzoru $P = a^2 \\sin \\alpha$, gdzie $a$ to długość boku, a $\\alpha$ to miara jednego z kątów. Skoro kąt rozwarty ma $150^{\\circ}$, to kąt ostry ma $180° - 150° = 30°$. Używamy kąta ostrego, bo $\\sin 150° = \\sin 30°$.",
-      "Obliczamy pole rombu: $P = (6\\sqrt{2})^2 \\sin 30° = (36 \\cdot 2) \\cdot \\frac{1}{2} = 72 \\cdot \\frac{1}{2} = 36$.",
-      "Pole rombu można również obliczyć ze wzoru $P = \\frac{1}{2} d_1 d_2$, gdzie $d_1$ i $d_2$ to długości przekątnych. Szukamy iloczynu $d_1 d_2$, który jest równy $2P$."
+      "1. Kąt ostry $=30^\\circ$, więc $P=(6\\sqrt2)^2\\sin30^\\circ=36$.\n2. $d_1d_2=2P=72$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12496,17 +12479,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąty prostokątne T 1 i T 2 są podobne. Przyprostokątne trójkąta T 1 mają długości 5 i 12. Przeciwprostokątna trójkąta T 2 ma długość 26. Oblicz pole trójkąta T 2 .",
+    "prompt": "Trójkąty prostokątne $T_1$ i $T_2$ są podobne. Przyprostokątne trójkąta $T_1$ mają długości $5$ i $12$. Przeciwprostokątna trójkąta $T_2$ ma długość $26$. Oblicz pole trójkąta $T_2$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$120$",
+    "explanation": "$120$.",
     "solutionSteps": [
-      "Oblicz przeciwprostokątną trójkąta $T_1$ z twierdzenia Pitagorasa: $c_1 = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.",
-      "Wyznacz skalę podobieństwa $k$ między $T_2$ a $T_1$, porównując ich przeciwprostokątne: $k = \\frac{c_2}{c_1} = \\frac{26}{13} = 2$.",
-      "Oblicz długości przyprostokątnych trójkąta $T_2$, mnożąc przyprostokątne $T_1$ przez skalę $k$: $a_2 = 5 \\cdot 2 = 10$, $b_2 = 12 \\cdot 2 = 24$.",
-      "Oblicz pole trójkąta $T_2$, korzystając ze wzoru na pole trójkąta prostokątnego: $P_2 = \\frac{1}{2} a_2 b_2 = \\frac{1}{2} \\cdot 10 \\cdot 24 = 5 \\cdot 24 = 120$."
+      "1. Przeciwprostokątna $T_1$: $\\sqrt{5^2+12^2}=13$.\n2. Skala $k=\\frac{26}{13}=2$, więc $P_{T_2}=k^2\\cdot\\frac12\\cdot5\\cdot12=120$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12556,19 +12536,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W kartezjańskim układzie współrzędnych (x , y) dana jest prosta k o równaniu y = -\\frac{1}{3}$x + 2$ Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Prosta o równaniu $y = ax + b$ jest równoległa do prostej k i przechodzi przez punkt $P = (3 , 5)$, gdy",
+    "prompt": "W kartezjańskim układzie współrzędnych $(x,y)$ dana jest prosta $k$ o równaniu $y=-\\frac13x+2$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nProsta o równaniu $y=ax+b$ jest równoległa do prostej $k$ i przechodzi przez punkt $P=(3,5)$, gdy",
     "choices": [
-      "$a = 3$ i $b = 4$.",
-      "$a = -\\frac{1}{3}$ i $b = 4$.",
-      "$a = 3$ i $b = -4$.",
-      "$a = -\\frac{1}{3}$ i $b = 6$."
+      "$a=3$ i $b=4$.",
+      "$a=-\\frac13$ i $b=4$.",
+      "$a=3$ i $b=-4$.",
+      "$a=-\\frac13$ i $b=6$."
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $a = -\\frac{1}{3}$ i $b = 6$.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Proste równoległe mają takie same współczynniki kierunkowe. Skoro prosta $k$ ma równanie $y = -\\frac{1}{3}x + 2$, to współczynnik kierunkowy $a$ szukanej prostej musi być równy $-\\frac{1}{3}$.",
-      "Skorzystamy ze wzoru na równanie prostej przechodzącej przez punkt $(x_0, y_0)$ o danym współczynniku kierunkowym $a$: $y - y_0 = a(x - x_0)$. Podstawiamy dane: $P = (3, 5)$ i $a = -\\frac{1}{3}$.",
-      "Obliczamy $b$: $y - 5 = -\\frac{1}{3}(x - 3) \\implies y - 5 = -\\frac{1}{3}x + 1 \\implies y = -\\frac{1}{3}x + 6$. Zatem $a = -\\frac{1}{3}$ i $b = 6$."
+      "1. Równoległość: $a=-\\frac13$.\n2. $5=-\\frac13\\cdot3+b$, więc $b=6$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12587,19 +12565,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość 15. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem α takim, że cosα = $\\frac{\\sqrt{2}}{3}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Długość przekątnej tego graniastosłupa jest równa",
+    "prompt": "Dany jest graniastosłup prawidłowy czworokątny, w którym krawędź podstawy ma długość $15$. Przekątna graniastosłupa jest nachylona do płaszczyzny podstawy pod kątem $\\alpha$ takim, że $\\cos\\alpha=\\frac{\\sqrt2}{3}$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nDługość przekątnej tego graniastosłupa jest równa",
     "choices": [
-      "$15\\sqrt{2}$",
-      "45",
-      "$5\\sqrt{2}$",
-      "10"
+      "$15\\sqrt2$",
+      "$45$",
+      "$5\\sqrt2$",
+      "$10$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 45",
+    "explanation": "B.",
     "solutionSteps": [
-      "Z danych wiemy, że krawędź podstawy $a = 15$ oraz $\\cos\\alpha = \\frac{\\sqrt{2}}{3}$. W graniastosłupie prawidłowym czworokątnym podstawa jest kwadratem, zatem przekątna podstawy $d$ wynosi $d = a\\sqrt{2} = 15\\sqrt{2}$.",
-      "Kąt $\\alpha$ nachylenia przekątnej graniastosłupa do płaszczyzny podstawy tworzy trójkąt prostokątny wraz z przekątną podstawy $i$ przekątną graniastosłupa. Z definicji cosinusa mamy $\\cos\\alpha = \\frac{d}{D}$, gdzie $D$ to długość przekątnej graniastosłupa.",
-      "Podstawiamy znane wartości do wzoru: $\\frac{\\sqrt{2}}{3} = \\frac{15\\sqrt{2}}{D}$. Mnożąc obie strony przez $3D$ otrzymujemy $\\sqrt{2}D = 3 \\cdot 15\\sqrt{2}$, co po skróceniu $\\sqrt{2}$ daje $D = 45$."
+      "1. Przekątna podstawy $d=15\\sqrt2$.\n2. $\\cos\\alpha=\\frac{d}{D}=\\frac{\\sqrt2}{3}$, więc $D=\\frac{15\\sqrt2}{\\sqrt2/3}=45$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12646,7 +12622,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby W wszystkich wierzchołków do liczby K wszystkich krawędzi jest równy $W / K = \\frac{3}{5}$ . Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Podstawą tego ostrosłupa jest",
+    "prompt": "W pewnym ostrosłupie prawidłowym stosunek liczby $W$ wszystkich wierzchołków do liczby $K$ wszystkich krawędzi jest równy $\\frac{W}{K}=\\frac35$.\n\nDokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nPodstawą tego ostrosłupa jest",
     "choices": [
       "kwadrat.",
       "pięciokąt foremny.",
@@ -12654,11 +12630,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "siedmiokąt foremny."
     ],
     "correctIndex": 1,
-    "explanation": "B) pięciokąt foremny.",
+    "explanation": "B.",
     "solutionSteps": [
-      "W ostrosłupie o $n$-kątnej podstawie mamy $n+1$ wierzchołków ($n$ w podstawie i 1 wierzchołek stożka) i $2n$ krawędzi ($n$ w podstawie i $n$ łączących wierzchołki podstawy $z$ wierzchołkiem stożka).",
-      "Zgodnie z treścią zadania, stosunek liczby wierzchołków ($W$) do liczby krawędzi ($K$) wynosi $\\frac{W}{K} = \\frac{n+1}{2n} = \\frac{3}{5}$.",
-      "Rozwiązujemy równanie $\\frac{n+1}{2n} = \\frac{3}{5}$: $5(n+1) = 3(2n) \\implies 5n+5 = 6n \\implies n=5$. Podstawą jest pięciokąt."
+      "1. $W=n+1$, $K=2n$.\n2. $\\frac{n+1}{2n}=\\frac35$, więc $5n+5=6n$ i $n=5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -12677,19 +12651,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wszystkich liczb naturalnych pięciocyfrowych, w których zapisie dziesiętnym występują tylko cyfry 0, 5, 7 $(np. 57 075, 55 555)$, jest",
+    "prompt": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.\n\nWszystkich liczb naturalnych pięciocyfrowych, w których zapisie dziesiętnym występują tylko cyfry $0,5,7$ (np. $57\\,075$, $55\\,555$), jest",
     "choices": [
-      "5 3",
-      "2 ⋅ 4 3",
-      "2 ⋅ 3 4",
-      "3 5"
+      "$5^3$",
+      "$2\\cdot4^3$",
+      "$2\\cdot3^4$",
+      "$3^5$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $2 \\cdot 3^4$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Zapisz możliwości dla każdej z pięciu pozycji liczby pięciocyfrowej, pamiętając, że pierwsza cyfra nie może być zerem. Pierwsza cyfra może być 5 lub 7 $(2 możliwości)$, a pozostałe cztery cyfry mogą być 0, 5 lub 7 $(3 możliwości każda)$.",
-      "Oblicz całkowitą liczbę takich liczb, mnożąc liczbę możliwości dla każdej pozycji: $2 \\cdot 3 \\cdot 3 \\cdot 3 \\cdot 3 = 2 \\cdot 3^4$.",
-      "Porównaj wynik z podanymi opcjami. Otrzymany wynik $2 \\cdot 3^4$ odpowiada opcji C."
+      "1. Pierwsza cyfra: $5$ lub $7$ — $2$ możliwości.\n2. Każda z czterech pozostałych: $3$ możliwości.\n3. $2\\cdot3^4$."
     ],
     "examSource": {
       "kind": "matura",
