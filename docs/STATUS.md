@@ -1,7 +1,7 @@
 # STATUS - Szybka Matematyka
 
 > Plik generowany przez `npm run status`. Nie edytuj ręcznie.
-> Ostatnia aktualizacja: 2026-11-26 09:17 UTC · branch `chore/audyt-i-seo` · commit `9f997a6`
+> Ostatnia aktualizacja: 2026-11-27 14:04 UTC · branch `feature/google-ads-zakup-pro` · commit `da7155c`
 
 Liczby poniżej pochodzą z kodu i danych w repo. Stan bazy Supabase,
 płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
@@ -9,7 +9,7 @@ płatności i ruchu nie jest tutaj mierzony - to sprawdza się w panelach.
 <!-- STATUS:START -->
 | Co | Wartość | Źródło |
 |---|---:|---|
-| Zadania w katalogu statycznym | 1926 | `lib/baza-zadan/catalog.ts` |
+| Zadania w katalogu statycznym | 1925 | `lib/baza-zadan/catalog.ts` |
 | Zadania prerenderowane | 1066 | `getPrerenderTaskIds()` |
 | Zadania w archiwum CKE | 986 | `cke-archive.generated.ts` |
 | Sesje CKE | 40 | `EXAM_ARCHIVE_SHEETS` |
