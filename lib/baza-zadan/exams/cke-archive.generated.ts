@@ -8875,19 +8875,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 100 5 ⋅ $(0,1) - 6$ jest równa",
+    "prompt": "Liczba $100^5\\cdot(0{,}1)^{-6}$ jest równa",
     "choices": [
-      "10 13",
-      "10 16",
-      "$10 - 1$",
-      "$10 - 30$ pokaż wskazówkę »"
+      "$10^{13}$",
+      "$10^{16}$",
+      "$10^{-1}$",
+      "$10^{-30}$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $10^{13}$",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Zamień $0,1$ na ułamek $\\frac{1}{10}$, a następnie na potęgę dziesiątki $10^{-1}$. Otrzymasz $100 \\cdot (10^{-1})^{-6}$.",
-      "Wykorzystaj własność potęgowania potęg $(a^m)^n = a^{m \\cdot n}$. Otrzymasz $100 \\cdot 10^{(-1) \\cdot (-6)} = 100 \\cdot 10^6$.",
-      "Zamień $100$ na $10^2$. Korzystając z własności mnożenia potęg o tej samej podstawie $a^m \\cdot a^n = a^{m+n}$, oblicz $10^2 \\cdot 10^6 = 10^{2+6} = 10^8$."
+      "1. $100^5=10^{10}$, $(0{,}1)^{-6}=10^6$.\n2. $10^{10}\\cdot10^6=10^{16}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8906,19 +8904,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Liczba 78 stanowi 150% liczby c. Wtedy liczba c jest równa",
+    "prompt": "Liczba $78$ stanowi $150\\%$ liczby $c$. Wtedy liczba $c$ jest równa",
     "choices": [
-      "60",
-      "52",
-      "48",
-      "39"
+      "$60$",
+      "$52$",
+      "$48$",
+      "$39$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 52",
+    "explanation": "B.",
     "solutionSteps": [
-      "Zapisz podaną informację w postaci równania, gdzie 78 to 150% liczby c. Możemy to zapisać jako $78 = 1.50 \\cdot c$.",
-      "Oblicz liczbę c, dzieląc obie strony równania przez 1.50. Otrzymujemy $c = \\frac{78}{1.50}$.",
-      "Wykonaj dzielenie: $78 \\div 1.5 = 52$."
+      "1. $1{,}5c=78$.\n2. $c=52$."
     ],
     "examSource": {
       "kind": "matura",
@@ -8937,20 +8933,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozważamy przedziały liczbowe $(-\\infty , 5)$ i ⟨-1, +∞). Ile jest wszystkich liczb całkowitych, które należą jednocześnie do obu rozważanych przedziałów?",
+    "prompt": "Rozważamy przedziały liczbowe $(-\\infty,5)$ i $\\langle-1,+\\infty)$. Ile jest wszystkich liczb całkowitych, które należą jednocześnie do obu rozważanych przedziałów?",
     "choices": [
-      "6",
-      "5",
-      "4",
-      "7"
+      "$6$",
+      "$5$",
+      "$4$",
+      "$7$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli 6",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zapisz w postaci nierówności przedziały liczbowe: $(-\\infty, 5)$ to $x < 5$, a $\\langle -1, +\\infty)$ to $x \\ge -1$.",
-      "Połącz obie nierówności, aby znaleźć wspólne liczby: $x < 5$ i $x \\ge -1$ oznacza $-1 \\le x < 5$.",
-      "Wypisz liczby całkowite spełniające nierówność $-1 \\le x < 5$: są to $-1, 0, 1, 2, 3, 4$.",
-      "Policz znalezione liczby całkowite: jest ich 6."
+      "1. Wspólne liczby: $-1\\le x<5$.\n2. Są to $-1,0,1,2,3,4$ — sześć liczb."
     ],
     "examSource": {
       "kind": "matura",
@@ -8969,19 +8962,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Suma 2 log $\\sqrt{10}$ + log 10 3 jest równa",
+    "prompt": "Suma $2\\log\\sqrt{10}+\\log 10^3$ jest równa",
     "choices": [
-      "2",
-      "3",
-      "4",
-      "5 pokaż wskazówkę »"
+      "$2$",
+      "$3$",
+      "$4$",
+      "$5$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli 4",
+    "explanation": "C.",
     "solutionSteps": [
-      "Zastosuj wzór na logarytm potęgi: $\\log_b(a^c) = c \\log_b(a)$. W tym przypadku $\\log \\sqrt{10} = \\log(10^{1/2}) = \\frac{1}{2} \\log 10$. Pamiętaj, że $\\log 10 = 1$.",
-      "Podstaw wynik z pierwszego kroku do wyrażenia: $2 \\log \\sqrt{10} + \\log 3 = 2 \\cdot \\frac{1}{2} \\cdot 1 + \\log 3 = 1 + \\log 3$.",
-      "Użyj wzoru na sumę logarytmów: $\\log_b(x) + \\log_b(y) = \\log_b(x \\cdot y)$. Otrzymasz $1 + \\log 3 = \\log 10 + \\log 3 = \\log(10 \\cdot 3) = \\log 30$. Zauważ, że w treści zadania jest błąd - suma wynosi $\\log 30$, a nie jedną z podanych opcji. Poprawna odpowiedź"
+      "1. $2\\log\\sqrt{10}=2\\cdot\\frac12=1$.\n2. $\\log10^3=3$, więc suma to $4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9000,19 +8991,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Różnica 0,$(3) - \\frac{23}{33}$ jest równa",
+    "prompt": "Różnica $0{,}(3)-\\frac{23}{33}$ jest równa",
     "choices": [
-      "- 0,$(39)$",
-      "- $\\frac{39}{100}$",
-      "- 0,36",
-      "- $\\frac{4}{11}$"
+      "$-0{,}(39)$",
+      "$-\\frac{39}{100}$",
+      "$-0{,}36$",
+      "$-\\frac{4}{11}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $-\\frac{4}{11}$.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Zamień liczbę 0,$(3)$ na ułamek zwykły: $0,(3) = \\frac{3}{10} + \\frac{3}{100} + \\dots = \\frac{0,3}{1-0,1} = \\frac{3/10}{9/10} = \\frac{3}{9} = \\frac{1}{3}$. Alternatywnie: $x = 0,333...$, $10x = 3,333...$, $10x - x = 3$, $9x = 3$, $x = \\frac{3}{9} = \\frac{1}{3}$.",
-      "Wykonaj odejmowanie: $\\frac{1}{3} - \\frac{23}{33} = \\frac{1 \\cdot 11}{3 \\cdot 11} - \\frac{23}{33} = \\frac{11}{33} - \\frac{23}{33} = \\frac{11 - 23}{33} = \\frac{-12}{33}$.",
-      "Uprość wynik i porównaj z opcjami: $\\frac{-12}{33} = \\frac{-12 \\div 3}{33 \\div 3} = \\frac{-4}{11}$."
+      "1. $0{,}(3)=\\frac13=\\frac{11}{33}$.\n2. $\\frac{11}{33}-\\frac{23}{33}=-\\frac{12}{33}=-\\frac4{11}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9196,18 +9185,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Do wykresu funkcji $f$ określonej dla każdej liczby rzeczywistej x wzorem $f(x) = 3x - 2$ należy punkt o współrzędnych",
+    "prompt": "Do wykresu funkcji $f$ określonej dla każdej liczby rzeczywistej $x$ wzorem $f(x)=3^x-2$ należy punkt o współrzędnych",
     "choices": [
-      "$(-1, - 5)$",
-      "$(0, - 2)$",
-      "$(0, - 1)$",
-      "$(2, 4)$ pokaż wskazówkę »"
+      "$(-1,-5)$",
+      "$(0,-2)$",
+      "$(0,-1)$",
+      "$(2,4)$"
     ],
-    "correctIndex": 0,
-    "explanation": "A, czyli $(-1, -5)$",
+    "correctIndex": 2,
+    "explanation": "C.",
     "solutionSteps": [
-      "Aby sprawdzić, czy punkt należy do wykresu funkcji, podstaw jego współrzędne do wzoru funkcji. Punkt $(x, y)$ należy do wykresu funkcji $f(x)$, jeśli $y = f(x)$.",
-      "Sprawdź każdą z podanych opcji:\nA) $(-1, -5)$: $f(-1) = 3 \\cdot (-1) - 2 = -3 - 2 = -5$. Punkt należy do wykresu.\nB) $(0, -2)$: $f(0) = 3 \\cdot 0 - 2 = 0 - 2 = -2$. Punkt należy do wykresu.\nC) $(0, -1)$: $f(0) = -2 \\neq -1$. Punkt nie należy do wykresu.\nD) $(2, 4)$: $f(2) = 3 \\cdot 2 - 2 = 6 - 2 = 4$. Punkt należy do wykresu.\n\n*Uwaga: W zadaniu jest błąd, ponieważ trzy punkty należą do wykresu.* Przyjmujemy, że pierwsza poprawna odpowiedź jest właściwa."
+      "1. $f(0)=3^0-2=1-2=-1$.\n2. Punkt $(0,-1)$ należy do wykresu."
     ],
     "examSource": {
       "kind": "matura",
@@ -9226,19 +9214,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja kwadratowa f określona wzorem $f(x) = -2(x + 1)(x - 3)$ jest malejąca w przedziale",
+    "prompt": "Funkcja kwadratowa $f$ określona wzorem $f(x)=-2(x+1)(x-3)$ jest malejąca w przedziale",
     "choices": [
-      "⟨1, +∞)",
-      "(-∞, 1⟩",
-      "(-∞, -8⟩",
-      "⟨-8, +∞)"
+      "$\\langle1,+\\infty)$",
+      "$(-\\infty,1\\rangle$",
+      "$(-\\infty,-8\\rangle$",
+      "$\\langle-8,+\\infty)$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\langle 1, +\\infty)$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Przekształć wzór funkcji do postaci ogólnej $ax^2+bx+c$, aby zidentyfikować współczynnik $a$. W tym celu wymnóż nawiasy: $f(x) = -2(x^2 - 3x + x - 3) = -2(x^2 - 2x - 3) = -2x^2 + 4x + 6$. Współczynnik $a = -2$.",
-      "Parabola o ramionach skierowanych w dół (gdy $a < 0$) jest rosnąca po lewej stronie wierzchołka i malejąca po prawej. Wierzchołek paraboli $f(x)=ax^2+bx+c$ znajduje się w punkcie $x_w = -\\frac{b}{2a}$. Oblicz $x_w = -\\frac{4}{2 \\cdot (-2)} = -\\frac{4}{-4} = 1$.",
-      "Funkcja jest malejąca dla argumentów większych lub równych od współrzędnej x wierzchołka. Zatem $f(x)$ jest malejąca w przedziale $\\langle 1, +\\infty)$."
+      "1. $f(x)=-2x^2+4x+6$, więc wierzchołek jest w $x=1$ i ramiona w dół.\n2. Funkcja maleje dla $x\\ge1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9257,19 +9243,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trzywyrazowy ciąg $(15, 3x, \\frac{5}{3})$ jest geometryczny i wszystkie jego wyrazy $s$ą dodatnie. Stąd wynika, że",
+    "prompt": "Trzywyrazowy ciąg $(15,3x,\\frac53)$ jest geometryczny i wszystkie jego wyrazy $s$ą dodatnie. Stąd wynika, że",
     "choices": [
-      "$x = \\frac{3}{5}$",
-      "$x = \\frac{4}{5}$",
-      "$x = 1$",
-      "$x = \\frac{5}{3}$ pokaż wskazówkę »"
+      "$x=\\frac35$",
+      "$x=\\frac45$",
+      "$x=1$",
+      "$x=\\frac53$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $x = \\frac{5}{3}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Dla ciągu geometrycznego zachodzi warunek, że kwadrat środkowego wyrazu jest równy iloczynowi wyrazów skrajnych: $(3x)^2 = 15 \\cdot \\frac{5}{3}$.",
-      "Obliczamy obie strony równania: $9x^2 = \\frac{75}{3}$, co daje $9x^2 = 25$.",
-      "Dzielimy obie strony przez 9 i wyciągamy pierwiastek: $x^2 = \\frac{25}{9}$, stąd $x = \\frac{5}{3}$ (wybieramy wartość dodatnią, ponieważ wszystkie wyrazy ciągu są dodatnie)."
+      "1. $(3x)^2=15\\cdot\\frac53=25$.\n2. $9x^2=25$, więc $x=\\frac53$ (wyrazy dodatnie)."
     ],
     "examSource": {
       "kind": "matura",
@@ -9288,19 +9272,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg ($b_{n}$) jest określony wzorem $b_{n} = 3n^{2} - 25n$ dla każdej liczby naturalnej $n \\ge 1$. Liczba niedodatnich wyrazów ciągu ($b_{n}$) jest równa",
+    "prompt": "Ciąg $(b_n)$ jest określony wzorem $b_n=3n^2-25n$ dla każdej liczby naturalnej $n\\ge1$. Liczba niedodatnich wyrazów ciągu $(b_n)$ jest równa",
     "choices": [
-      "14",
-      "13",
-      "9",
-      "8"
+      "$14$",
+      "$13$",
+      "$9$",
+      "$8$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli 8",
+    "explanation": "D.",
     "solutionSteps": [
-      "Szukamy wyrazów niedodatnich, czyli takich, dla których $b_n \\le 0$. Podstawiamy wzór ciągu: $3n^2 - 25n \\le 0$.",
-      "Rozwiązujemy nierówność kwadratową, wyciągając wspólny czynnik: $n(3n - 25) \\le 0$. Miejsca zerowe to $n=0$ i $n=\\frac{25}{3} = 8\\frac{1}{3}$. Nierówność jest spełniona dla $0 \\le n \\le 8\\frac{1}{3}$.",
-      "Ponieważ $n$ musi być liczbą naturalną $\\ge 1$, interesują nas liczby naturalne z przedziału $[1, 8\\frac{1}{3}]$. Są to liczby: 1, 2, 3, 4, 5, 6, 7, 8. Jest ich 8."
+      "1. $3n^2-25n\\le0$, więc $n(3n-25)\\le0$.\n2. $1\\le n\\le8$, czyli $8$ wyrazów."
     ],
     "examSource": {
       "kind": "matura",
@@ -9319,19 +9301,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Ciąg arytmetyczny ($a_{n}$) jest określony dla każdej liczby naturalnej $n \\ge 1$. Trzeci i piąty wyraz ciągu spełniają warunek $a_{3} + a_{5} = 58$ . Wtedy czwarty wyraz tego ciągu jest równy",
+    "prompt": "Ciąg arytmetyczny $(a_n)$ jest określony dla każdej liczby naturalnej $n\\ge1$. Trzeci i piąty wyraz ciągu spełniają warunek $a_3+a_5=58$. Wtedy czwarty wyraz tego ciągu jest równy",
     "choices": [
-      "28",
-      "29",
-      "33",
-      "40 pokaż wskazówkę »"
+      "$28$",
+      "$29$",
+      "$33$",
+      "$40$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 29",
+    "explanation": "B.",
     "solutionSteps": [
-      "Skorzystaj z definicji ciągu arytmetycznego: $a_n = a_1 + (n-1)r$. Wyrazy $a_3$, $a_5$ i $a_4$ to odpowiednio $a_1+2r$, $a_1+4r$ oraz $a_1+3r$.",
-      "Podstaw do podanego warunku: $(a_1+2r) + (a_1+4r) = 58$, co upraszcza się do $2a_1 + 6r = 58$.",
-      "Zauważ, że $2a_1 + 6r = 2(a_1+3r)$. Szukana wartość to $a_4 = a_1+3r$. Po podzieleniu obu stron równania z kroku 2 przez 2 otrzymujemy $a_1+3r = 29$."
+      "1. $a_3+a_5=2a_4=58$.\n2. $a_4=29$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9628,19 +9608,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkt A = $(3, - 5)$ jest wierzchołkiem kwadratu ABCD, a punkt $M = (1, 3)$ jest punktem przecięcia się przekątnych tego kwadratu. Wynika stąd, że pole kwadratu ABCD jest równe",
+    "prompt": "Punkt $A=(3,-5)$ jest wierzchołkiem kwadratu $ABCD$, a punkt $M=(1,3)$ jest punktem przecięcia się przekątnych tego kwadratu. Wynika stąd, że pole kwadratu $ABCD$ jest równe",
     "choices": [
-      "68",
-      "136",
+      "$68$",
+      "$136$",
       "$2\\sqrt{34}$",
-      "$8\\sqrt{34}$ pokaż wskazówkę »"
+      "$8\\sqrt{34}$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 136",
+    "explanation": "B.",
     "solutionSteps": [
-      "Oblicz długość połowy przekątnej kwadratu jako odległość między punktem A i punktem M, używając wzoru na odległość między dwoma punktami $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$.\n$d_{AM} = \\sqrt{(1-3)^2 + (3-(-5))^2} = \\sqrt{(-2)^2 + 8^2} = \\sqrt{4 + 64} = \\sqrt{68}$.",
-      "Długość całej przekątnej kwadratu jest dwukrotnie dłuższa niż połowa przekątnej: $d_{kwadratu} = 2 \\cdot d_{AM} = 2\\sqrt{68}$.",
-      "Pole kwadratu można obliczyć ze wzoru $P = \\frac{d^2}{2}$, gdzie $d$ to długość przekątnej. Podstawiając obliczoną długość przekątnej: $P = \\frac{(2\\sqrt{68})^2}{2} = \\frac{4 \\cdot 68}{2} = 2 \\cdot 68 = 136$."
+      "1. $|AM|=\\sqrt{2^2+8^2}=\\sqrt{68}=2\\sqrt{17}$.\n2. Przekątna $=4\\sqrt{17}$, bok $=4\\sqrt{17}/\\sqrt2=2\\sqrt{34}$.\n3. Pole $=(2\\sqrt{34})^2=136$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9659,19 +9637,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Z wierzchołków sześcianu ABCDEFGH losujemy jednocześnie dwa różne wierzchołki. Prawdopodobieństwo tego, że wierzchołki te będą końcami przekątnej sześcianu ABCDEFGH, jest równe",
+    "prompt": "Z wierzchołków sześcianu $ABCDEFGH$ losujemy jednocześnie dwa różne wierzchołki. Prawdopodobieństwo tego, że wierzchołki te będą końcami przekątnej sześcianu $ABCDEFGH$, jest równe",
     "choices": [
-      "$\\frac{1}{7}$",
-      "$\\frac{4}{7}$",
-      "$\\frac{1}{14}$",
-      "$\\frac{3}{7}$ pokaż wskazówkę »"
+      "$\\frac17$",
+      "$\\frac47$",
+      "$\\frac1{14}$",
+      "$\\frac37$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\frac{1}{7}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Policzmy wszystkie możliwe pary różnych wierzchołków sześcianu. Sześcian ma 8 wierzchołków, więc liczbę par obliczymy jako $\\binom{8}{2} = \\frac{8 \\cdot 7}{2} = 28$.",
-      "Zidentyfikujmy pary wierzchołków, które są końcami przekątnych sześcianu. Przekątne sześcianu łączą przeciwległe wierzchołki, a jest ich 4 (np. AG, BH, CE, DF).",
-      "Obliczmy prawdopodobieństwo, dzieląc liczbę przekątnych przez całkowitą liczbę możliwych par wierzchołków: $\\frac{4}{28} = \\frac{1}{7}$."
+      "1. Wszystkich par: $\\binom82=28$.\n2. Przekątnych sześcianu jest $4$.\n3. $P=\\frac4{28}=\\frac17$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9690,19 +9666,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wszystkich liczb naturalnych trzycyfrowych, większych od 700, w których każda cyfra należy do zbioru {1,2,3,7,8,9} i żadna cyfra się nie powtarza, jest",
+    "prompt": "Wszystkich liczb naturalnych trzycyfrowych, większych od $700$, w których każda cyfra należy do zbioru $\\{1,2,3,7,8,9\\}$ i żadna cyfra się nie powtarza, jest",
     "choices": [
-      "108",
-      "60",
-      "40",
-      "299"
+      "$108$",
+      "$60$",
+      "$40$",
+      "$299$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli 60",
+    "explanation": "B.",
     "solutionSteps": [
-      "Określamy warunki: liczba jest trzycyfrowa, większa od 700, cyfry pochodzą ze zbioru {1,2,3,7,8,9} i nie powtarzają się. Liczba musi być większa od 700, więc pierwsza cyfra (setek) może być tylko 7, 8 lub 9. Mamy 3 możliwości wyboru pierwszej cyfry.",
-      "Wybieramy pozostałe dwie cyfry. Dostępnych cyfr jest 6. Po wyborze pierwszej cyfry pozostało nam 5 cyfr do wyboru na drugą pozycję (dziesiątek). Po wyborze drugiej cyfry pozostały nam 4 cyfry do wyboru na trzecią pozycję (jedności).",
-      "Obliczamy łączną liczbę możliwości. Mnożymy liczbę możliwości dla każdej pozycji: $3 \\cdot 5 \\cdot 4 = 60$."
+      "1. Setki: $7,8,9$ — $3$ możliwości.\n2. Dziesiątki: $5$ możliwości, jedności: $4$.\n3. $3\\cdot5\\cdot4=60$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9721,19 +9695,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Sześciowyrazowy ciąg liczbowy $(1, 2, 2x, x + 2, 5, 6)$ jest niemalejący. Mediana wyrazów tego ciągu jest równa 4. Wynika stąd, że",
+    "prompt": "Sześciowyrazowy ciąg liczbowy $(1,2,2x,x+2,5,6)$ jest niemalejący. Mediana wyrazów tego ciągu jest równa $4$. Wynika stąd, że",
     "choices": [
-      "$x = 1$",
-      "$x = \\frac{3}{2}$",
-      "$x = 2$",
-      "$x = \\frac{8}{3}$ pokaż wskazówkę »"
+      "$x=1$",
+      "$x=\\frac32$",
+      "$x=2$",
+      "$x=\\frac83$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $x=2$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Ciąg jest niemalejący, więc wyrazy $s$ą ułożone w kolejności od najmniejszego do największego. Z tej własności i podanych wartości wynika, że $2 \\le 2x \\le x+2 \\le 5$. Rozwiązując te nierówności, otrzymujemy $2 \\le x \\le 2$.",
-      "Ciąg ma 6 wyrazów. Mediana to średnia arytmetyczna dwóch środkowych wyrazów, czyli wyrazów na 3. i 4. pozycji. Mając $x=2$, ciąg to $(1, 2, 4, 4, 5, 6)$. Mediana wynosi $\\frac{4+4}{2}=4$.",
-      "Ponieważ otrzymana mediana jest zgodna z treścią zadania ($4=4$) i nierówności dla $x$ są spełnione, znalezioną wartość $x=2$ można uznać za poprawną."
+      "1. Mediana to średnia $2x$ i $x+2$: $\\frac{3x+2}{2}=4$.\n2. $3x+2=8$, więc $x=2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9752,16 +9724,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż nierówność: $x^{2} - 5x \\le 14$",
+    "prompt": "Rozwiąż nierówność: $x^2-5x\\le14$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x \\in [-2, 7]$",
+    "explanation": "$x\\in\\langle-2,7\\rangle$.",
     "solutionSteps": [
-      "Przekształć nierówność do postaci z zerem po prawej stronie: $x^2 - 5x - 14 \\leq 0$.",
-      "Znajdź miejsca zerowe funkcji kwadratowej $f(x) = x^2 - 5x - 14$, rozwiązując równanie $x^2 - 5x - 14 = 0$. Użyj delty: $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot (-14) = 25 + 56 = 81$, $\\sqrt{\\Delta} = 9$. Miejsca zerowe to $x_1 = \\frac{5 - 9}{2} = -2$ i $x_2 = \\frac{5 + 9}{2} = 7$.",
-      "Narysuj parabolę $y = x^2 - 5x - 14$ (ramiona skierowane w górę) i odczytaj zbiór rozwiązań nierówności $f(x) \\leq 0$, czyli wartości $x$, dla których parabola znajduje się poniżej lub na osi $x$. Jest to przedział domknięty między miejscami zerowymi."
+      "1. $x^2-5x-14\\le0$, więc $(x+2)(x-7)\\le0$.\n2. $x\\in\\langle-2,7\\rangle$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9809,17 +9779,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja liniowa f przyjmuje wartość 2 dla argumentu 0, a ponadto $f(4) - f(2) = 6$ . Wyznacz wzór funkcji $f$.",
+    "prompt": "Funkcja liniowa $f$ przyjmuje wartość $2$ dla argumentu $0$, a ponadto $f(4)-f(2)=6$. Wyznacz wzór funkcji $f$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$f(x) = 3x + 2$",
+    "explanation": "$f(x)=3x+2$.",
     "solutionSteps": [
-      "Zapisz ogólny wzór funkcji liniowej jako $f(x) = ax + b$ i wykorzystaj warunek $f(0) = 2$. Podstawienie $x=0$ do wzoru daje $f(0) = a \\cdot 0 + b$, czyli $b=2$, zatem $f(x) = ax + 2$.",
-      "Wykorzystaj drugie dane zadania: $f(4) - f(2) = 6$. Podstaw wzór funkcji do tego równania: $(a \\cdot 4 + 2) - (a \\cdot 2 + 2) = 6$.",
-      "Rozwiąż równanie z kroku 2, aby znaleźć współczynnik $a$. Po uproszczeniu otrzymujemy $4a + 2 - 2a - 2 = 6$, co daje $2a = 6$, a stąd $a = 3$.",
-      "Zapisz ostateczny wzór funkcji, podstawiając znalezione wartości $a=3$ i $b=2$ do ogólnego wzoru $f(x) = ax + b$. Otrzymujemy $f(x) = 3x + 2$."
+      "1. $f(0)=2$, więc $b=2$.\n2. $f(4)-f(2)=2a=6$, więc $a=3$.\n3. $f(x)=3x+2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9866,16 +9833,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Trójkąt równoboczny ABC ma pole równe $9\\sqrt{3}$ . Prosta równoległa do boku BC przecina boki AB i AC - odpowiednio - w punktach K i L. Trójkąty ABC i AKL są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac{3}{2}$ . Oblicz długość boku trójkąta AKL.",
+    "prompt": "Trójkąt równoboczny $ABC$ ma pole równe $9\\sqrt3$. Prosta równoległa do boku $BC$ przecina boki $AB$ i $AC$ - odpowiednio - w punktach $K$ i $L$. Trójkąty $ABC$ i $AKL$ są podobne, a stosunek długości boków tych trójkątów jest równy $\\frac32$. Oblicz długość boku trójkąta $AKL$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "4",
+    "explanation": "$4$.",
     "solutionSteps": [
-      "Pole trójkąta równobocznego o boku $a$ to $\\frac{a^2\\sqrt{3}}{4}$. Zatem $9\\sqrt{3} = \\frac{a^2\\sqrt{3}}{4}$, co po skróceniu $\\sqrt{3}$ i przemnożeniu przez 4 daje $a^2 = 36$, czyli $a=6$. Bok trójkąta ABC ma długość 6.",
-      "Stosunek długości boków trójkątów podobnych ABC i AKL wynosi $\\frac{3}{2}$. Ponieważ trójkąty są podobne, stosunek ten dotyczy wszystkich ich odpowiednich boków. Oznacza to, że bok trójkąta ABC jest $\\frac{3}{2}$ razy dłuższy od odpowiedniego boku trójkąta AKL.",
-      "Niech $x$ będzie długością boku trójkąta AKL. Wtedy stosunek długości boków wynosi $\\frac{6}{x} = \\frac{3}{2}$. Rozwiązując to równanie, mnożymy na krzyż: $6 \\cdot 2 = 3 \\cdot x$, co daje $12 = 3x$, a stąd $x=4$."
+      "1. $9\\sqrt3=\\frac{a^2\\sqrt3}{4}$, więc $a=6$.\n2. $\\frac{|AB|}{|AK|}=\\frac32$, więc $|AK|=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9894,16 +9859,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Gracz rzuca dwukrotnie symetryczną sześcienną kostką do gry i oblicza sumę liczb wyrzuconych oczek. Oblicz prawdopodobieństwo zdarzenia A polegającego na tym, że suma liczb wyrzuconych oczek jest równa 4 lub 5, lub 6.",
+    "prompt": "Gracz rzuca dwukrotnie symetryczną sześcienną kostką do gry i oblicza sumę liczb wyrzuconych oczek. Oblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że suma liczb wyrzuconych oczek jest równa $4$ lub $5$, lub $6$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$\\frac{1}{3}$",
+    "explanation": "1. Wszystkich par: $36$.\n2. Sumy $4,5,6$: $3+4+5=12$ par.\n3. $P=\\frac{12}{36}=\\frac13$.",
     "solutionSteps": [
-      "Określ przestrzeń zdarzeń elementarnych. Rzucając dwukrotnie kostką, mamy $6 \\times 6 = 36$ możliwych wyników(par).",
-      "Wypisz zdarzenia sprzyjające sumie równej 4, 5 lub 6. Suma równa 4: $(1,3)$, $(2,2)$, $(3,1)$. Suma równa 5: $(1,4)$, $(2,3)$, $(3,2)$, $(4,1)$. Suma równa 6: $(1,5)$, $(2,4)$, $(3,3)$, $(4,2)$, $(5,1)$. Jest łącznie $3+4+5=12$ takich zdarzeń.",
-      "Oblicz prawdopodobieństwo, dzieląc liczbę zdarzeń sprzyjających przez liczbę wszystkich możliwych zdarzeń. Prawdopodobieństwo $P(A) = \\frac{12}{36} = \\frac{1}{3}$."
+      "1. Wszystkich par: $36$.\n2. Sumy $4,5,6$: $3+4+5=12$ par.\n3. $P=\\frac{12}{36}=\\frac13$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9922,16 +9885,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A = $(-20, 12)$ i $B = (7, 3)$ są wierzchołkami trójkąta równoramiennego ABC, w którym $|AC| = |BC|$. Wierzchołek C leży na osi Oy układu współrzędnych. Oblicz współrzędne wierzchołka C oraz obwód tego trójkąta.",
+    "prompt": "Punkty $A=(-20,12)$ i $B=(7,3)$ są wierzchołkami trójkąta równoramiennego $ABC$, w którym $|AC|=|BC|$. Wierzchołek $C$ leży na osi $Oy$ układu współrzędnych. Oblicz współrzędne wierzchołka $C$ oraz obwód tego trójkąta.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "Współrzędne wierzchołka C to $(0, 27)$, a obwód trójkąta to $50 + 9\\sqrt{10}$.",
+    "explanation": "$C=(0,27)$, obwód $50+9\\sqrt{10}$.",
     "solutionSteps": [
-      "Skoro punkt C leży na osi Oy, jego współrzędne to $(0, y)$. Skorzystamy z warunku $|AC| = |BC|$, czyli z równości kwadratów odległości, aby obliczyć y. $|AC|^2 = (0 - (-20))^2 + (y - 12)^2 = 20^2 + (y - 12)^2 = 400 + (y - 12)^2$. $|BC|^2 = (0 - 7)^2 + (y - 3)^2 = (-7)^2 + (y - 3)^2 = 49 + (y - 3)^2$.",
-      "Przyrównujemy $|AC|^2$ i $|BC|^2$: $400 + (y - 12)^2 = 49 + (y - 3)^2$. Rozpisujemy kwadraty: $400 + y^2 - 24y + 144 = 49 + y^2 - 6y + 9$. Upraszczamy równanie: $544 - 24y = 58 - 6y$. Rozwiązujemy dla y: $486 = 18y$, czyli $y = 27$. Zatem punkt C ma współrzędne $(0, 27)$.",
-      "Obliczamy długości boków trójkąta: $|AC| = |BC| = \\sqrt{49 + (27 - 3)^2} = \\sqrt{49 + 24^2} = \\sqrt{49 + 576} = \\sqrt{625} = 25$. $|AB| = \\sqrt{(7 - (-20))^2 + (3 - 12)^2} = \\sqrt{27^2 + (-9)^2} = \\sqrt{729 + 81} = \\sqrt{810} = \\sqrt{81 \\cdot 10} = 9\\sqrt{10}$. Obwód trójkąta wynosi $25 + 25 + 9\\sqrt{10} = 50 + 9\\sqrt{10}$."
+      "1. $C=(0,y)$; $|AC|^2=20^2+(y-12)^2$, $|BC|^2=7^2+(y-3)^2$.\n2. $400+(y-12)^2=49+(y-3)^2$, więc $y=27$.\n3. $|AC|=|BC|=25$, $|AB|=9\\sqrt{10}$.\n4. Obwód $=50+9\\sqrt{10}$."
     ],
     "examSource": {
       "kind": "matura",
