@@ -9014,33 +9014,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-maj-z06",
     "title": "Matura - maj 2021 - poziom podstawowy - zad. 6",
     "category": "algebra",
-    "difficulty": "trudny",
+    "difficulty": "latwy",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Zbiorem wszystkich rozwiązań nierówności ![Rysunek do zadania](/cke-matura/m21-maj/z06-1.png) jest przedział\n\nRozwiąż zadanie.",
+    "prompt": "Zbiorem wszystkich rozwiązań nierówności $\\frac{2-x}{2}-2x\\ge1$ jest przedział",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$[0,+\\infty)$",
+      "$(-\\infty,0]$",
+      "$(-\\infty,5]$",
+      "$\\left(-\\infty,1\\frac13\\right]$"
     ],
-    "correctIndex": 0,
-    "explanation": "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$.",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Przekształć nierówność do postaci, gdzie jedna strona jest zerem, a następnie porównaj licznik z zerem, aby znaleźć miejsca zerowe funkcji $f(x) = \\frac{x-1}{x-5}$. Miejsca zerowe licznika to $x=1$, a mianownik jest różny od zera dla $x \\neq 5$.",
-      "Narysuj oś liczbową i zaznacz punkty $x=1$ (zamalowane, bo nierówność jest \"większe lub równe\") i $x=5$ (zamalowane, bo licznik może być równy zero, mianownik nie może być). Podziel oś na przedziały i sprawdź znak wyrażenia w każdym z nich, np. dla $x=0$, $\\frac{0-1}{0-5} = \\frac{-1}{-5} = \\frac{1}{5} \\ge 0$.",
-      "Wybierz przedziały, w których nierówność jest spełniona. W naszym przypadku funkcja jest dodatnia lub równa zero dla $x \\in \\langle 1, 5)$. Nierówność to $\\frac{x-1}{x-5} \\ge 0$. Wartość $x=5$ nie należy do dziedziny. Mamy $\\frac{x-1}{x-5} \\ge 0$ dla $x \\in \\langle 1, 5)$. Niestety, żadna z odpowiedzi nie pasuje. Sprawdzam ponownie rozwiązanie.",
-      "(poprawiony).** Rozwiązanie nierówności $\\frac{x-1}{x-5} \\ge 0$ jest zbiorem $x \\in (-\\infty, 1] \\cup (5, +\\infty)$. Z powodu błędu w przepisywaniu zadania lub w opcjach odpowiedzi, nie mogę wskazać poprawnej. Zakładając, że w zadaniu chodziło o $\\frac{x-1}{x-5} \\le 0$, rozwiązaniem jest przedział $\\langle 1, 5)$. Jeśli był błąd w rysunku, i zamiast pierwiastka był inny wzór, odpowiedź może być inna.\n\nNa podstawie dostępnych opcji odpowiedzi i rysunku, zakładam, że pierwiastek jest $\\sqrt{x-1}$ i nierówność to $\\sqrt{x-1} \\le 5-x$.",
-      "Określ dziedzinę nierówności: $x-1 \\ge 0$, czyli $x \\ge 1$.",
-      "Rozważ dwa przypadki.\nPrzypadek 1: $5-x < 0$, czyli $x > 5$. Wtedy nierówność nie ma rozwiązań, bo $\\sqrt{x-1} \\ge 0$.\nPrzypadek 2: $5-x \\ge 0$, czyli $x \\le 5$. Podnieś obie strony do kwadratu: $x-1 \\le (5-x)^2$, co daje $x-1 \\le 25 - 10x + x^2$. Przekształcając otrzymujemy $x^2 - 11x + 26 \\ge 0$.",
-      "Rozwiąż nierówność kwadratową $x^2 - 11x + 26 \\ge 0$. Miejsca zerowe to $\\frac{11 \\pm \\sqrt{121 - 4 \\cdot 26}}{2} = \\frac{11 \\pm \\sqrt{17}}{2}$. Nierówność jest spełniona dla $x \\in (-\\infty, \\frac{11 - \\sqrt{17}}{2}] \\cup [\\frac{11 + \\sqrt{17}}{2}, +\\infty)$.",
-      "Połącz warunki z dziedziny, przypadków i rozwiązania nierówności kwadratowej. $\\sqrt{17}$ jest między 4a_{5}.\n$\\frac{11 - \\sqrt{17}}{2} \\approx \\frac{11 - 4.12}{2} \\approx 3.44$.\n$\\frac{11 + \\sqrt{17}}{2} \\approx \\frac{11 + 4.12}{2} \\approx 7.56$.\nRozwiązanie z kroku 3 to $x \\in (-\\infty, 3.44] \\cup [7.56, \\infty)$.\nŁącząc z warunkiem $x \\ge 1$ (dziedzina) i $x \\le 5$ $(przypadek 2)$, otrzymujemy przedział $\\langle 1, \\frac{11 - \\sqrt{17}}{2} \\rangle$. Nadal żadna z odpowiedzi nie pasuje.\n\nZakładam, że rysunek przedstawia nierówność $\\frac{x-1}{x-5} \\le 0$.",
-      "Znajdź miejsca zerowe licznika i mianownika: $x=1$ oraz $x=5$ (nie należy do dziedziny).",
-      "Narysuj oś liczbową i zaznacz punkty 1 (zamalowane) i 5 (kółko otwarte). Funkcja $\\frac{x-1}{x-5}$ jest ujemna lub równa zero między miejscem zerowym licznika a miejscem zerowym mianownika.",
-      "Rozwiązaniem nierówności jest przedział $\\langle 1, 5)$. Nadal nie ma takiej odpowiedzi.\n\nPrzeanalizowałem treść zadania z matury maj 2021 podstawowy zadanie 6. Nierówność jest $\\frac{x-1}{x-5} \\ge 0$.",
-      "Miejsca zerowe licznika to $x=1$, mianownik jest różny od zera dla $x \\neq 5$.",
-      "Analiza znaków:\n- Dla $x < 1$: licznik ujemny, mianownik ujemny, iloraz dodatni ($\\ge 0$).\n- Dla $1 \\le x < 5$: licznik dodatni lub zero, mianownik ujemny, iloraz ujemny ($\\le 0$).\n- Dla $x > 5$: licznik dodatni, mianownik dodatni, iloraz dodatni ($\\ge 0$).",
-      "Rozwiązaniem nierówności $\\frac{x-1}{x-5} \\ge 0$ jest suma przedziałów $(-\\infty, 1] \\cup (5, +\\infty)$. Spośród podanych opcji, żadna nie jest poprawna. Podana w zadaniu C to $(-\\infty, 5]$, a D to $(-\\infty, 1\\frac{1}{3}]$."
+      "1. $\\frac{2-x}{2}-2x\\ge1$, więc $2-x-4x\\ge2$.\n2. $-5x\\ge0$, czyli $x\\le0$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9059,20 +9049,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji $f$ określonej w zbiorze ⟨-6, 5⟩. ![Rysunek do zadania](/cke-matura/m21-maj/z07-1.gif) Funkcja $g$ jest określona wzorem $g(x) = f(x) - 2$ dla x ∈ ⟨-6, 5⟩ . Wskaż zdanie prawdziwe.",
+    "prompt": "Na poniższym rysunku przedstawiono wykres funkcji $f$ określonej w zbiorze $\\langle-6,5\\rangle$.\n\n![Rysunek 1](/cke-matura/m21-maj/z07-fig1.png)\n\nFunkcja $g$ jest określona wzorem $g(x)=f(x)-2$ dla $x\\in\\langle-6,5\\rangle$. Wskaż zdanie prawdziwe.",
     "choices": [
-      "Liczba $f(2) + g(2)$ jest równa $(-2)$ .",
-      "Zbiory wartości funkcji $f$ i g są równe.",
-      "Funkcje f i g mają te same miejsca zerowe.",
-      "Punkt P = $(0, - 2)$ należy do wykresów funkcji $f$ i g . pokaż wskazówkę »"
+      "Liczba $f(2)+g(2)$ jest równa $-2$.",
+      "Zbiory wartości funkcji $f$ i $g$ są równe.",
+      "Funkcje $f$ i $g$ mają te same miejsca zerowe.",
+      "Punkt $P=(0,-2)$ należy do wykresów funkcji $f$ i $g$."
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $f(2) + g(2) = -2$ (przy założeniu $f(2)=0$ na podstawie potencjalnego błędu w treści zadania).",
+    "explanation": "A.",
     "solutionSteps": [
-      "Analizujemy wykres funkcji $f(x)$. Odczytujemy wartości kluczowych punktów: $f(0) = 0$, $f(2) = 2$, $f(5) = -2$. Zbiorem wartości funkcji $f$ jest $\\langle -2, 2 \\rangle$.",
-      "Analizujemy wzór funkcji $g(x) = f(x) - 2$. Oznacza to, że wykres funkcji $g$ otrzymujemy przez przesunięcie wykresu funkcji $f$ o 2 jednostki w dół.",
-      "Sprawdzamy poszczególne odpowiedzi.\nA) $f(2) + g(2) = f(2) + (f(2) - 2) = 2 + (2 - 2) = 2$. Zdanie fałszywe.\nB) Zbiór wartości funkcji $g$ to $\\langle -2-2, 2-2 \\rangle = \\langle -4, 0 \\rangle$. Zbiory wartości funkcji $f$ i $g$ nie są równe. Zdanie fałszywe.\nC) Miejsca zerowe funkcji $f$ to $x = 0$. Miejsca zerowe funkcji $g$ to $x$ takie, że $f(x) - 2 = 0$, czyli $f(x) = 2$. Z wykresu wynika, że $f(2)=2$, zatem $x=2$ jest jedynym miejscem zerowym funkcji $g$. Miejsca zerowe nie są te same. Zdanie fałszywe.\nD) Sprawdzamy, czy punkt $P=(0, -2)$ należy do wykresów funkcji $f$ i $g$. Dla funkcji $f$: $f(0)=0$, więc punkt $(0,0)$ należy do wykresu $f$. Dla funkcji $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Zatem punkt $(0, -2)$ należy do wykresu funkcji $g$. Zdanie fałszywe.",
-      "Ponownie analizujemy wykres i opisy. Wartość $f(2)$ wynosi 2, a nie $-2$. Zatem $f(2) + g(2) = 2 + (f(2) - 2) = 2 + (2 - 2) = 2$. Zatem opcja A jest niepoprawnie zinterpretowana przez mnie w kroku 3. Ponowna analiza opcji A: $f(2) = 2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2) + g(2) = 2 + 0 = 2$. Zdanie A jest fałszywe.\nPrzyjrzyjmy się ponownie opcji D. Punkt $P=(0, -2)$. Dla $f$: $f(0)=0$. Punkt $(0,0)$ jest na wykresie $f$. Dla $g$: $g(0) = f(0) - 2 = 0 - 2 = -2$. Punkt $(0, -2)$ jest na wykresie $g$. Zatem punkt P=$(0, - 2)$ należy do wykresu funkcji $g$. Ale nie do f. Czyli D jest fałszywe.\nWrócmy do opcji A. Może źle odczytałem wartości. Wykres przechodzi przez $(2,2)$. Zatem $f(2)=2$. $g(2) = f(2) - 2 = 2 - 2 = 0$. $f(2)+g(2) = 2+0=2$. A jest fałszywe.\nMożliwe, że ja źle interpretuje zapis $(-2)$ jako $-2$.\nA) Liczba $f(2) + g(2)$ jest równa $-2$. Obliczyliśmy, że $f(2)+g(2) = 2$. A jest fałszywe.\nB) Zbiory wartości $f$: $\\langle -2, 2 \\rangle$. Zbiór wartości $g$: $\\langle -4, 0 \\rangle$. B jest fałszywe.\nC) Miejsca zerowe $f$: $x=0$. Miejsca zerowe $g$: $f(x)=2$, $x=2$. C jest fałszywe.\nD) Punkt $P = (0, -2)$. $f(0)=0$. Punkt $(0,0)$ na $f$. $g(0) = f(0)-2 = 0-2 = -2$. Punkt $(0, -2)$ na $g$. D jest fałszywe.\n\nChyba mam problem z odczytem wykresu lub treści."
+      "1. Z wykresu $f(2)=0$, więc $g(2)=-2$.\n2. $f(2)+g(2)=0-2=-2$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9091,20 +9078,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Na rysunku przedstawiono geometryczną interpretację jednego z niżej zapisanych układów równań. Wskaż ten układ, którego geometryczną interpretację przedstawiono na rysunku. ![Rysunek do zadania](/cke-matura/m21-maj/z08-1.gif)",
+    "prompt": "Na rysunku przedstawiono graficzną interpretację jednego z niżej zapisanych układów równań.\n\n![Rysunek 1](/cke-matura/m21-maj/z08-fig1.png)\n\nWskaż ten układ, którego interpretację przedstawiono na rysunku.",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-2.png)",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-3.png)",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-4.png)",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z08-5.png) pokaż wskazówkę »"
+      "$\\begin{cases}y=x+1\\\\y=-2x+4\\end{cases}$",
+      "$\\begin{cases}y=x-1\\\\y=2x+4\\end{cases}$",
+      "$\\begin{cases}y=x-1\\\\y=-2x+4\\end{cases}$",
+      "$\\begin{cases}y=x+1\\\\y=2x+4\\end{cases}$"
     ],
     "correctIndex": 0,
-    "explanation": "A",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zauważ, że rysunek przedstawia dwie proste przecinające się w punkcie $(1, 2)$. Układ równań, którego rozwiązaniem jest ten punkt, będzie pasował do rysunku.",
-      "Sprawdź, który z podanych układów równań ma rozwiązanie $(1, 2)$, podstawiając $x=1$ i $y=2$ do każdego równania.",
-      "Zapiszmy punkty przecięcia dla poszczególnych opcji:\nA) $y=x+1$ i $y=-x+3$: $2=1+1$ (prawda) i $2=-1+3$ (prawda).\nB) $y=2x$ i $y=-x+3$: $2=2 \\cdot 1$ (prawda) i $2=-1+3$ (prawda).\nC) $y=x-1$ i $y=-2x+4$: $2=1-1$ (fałsz).\nD) $y=-x+3$ i $y=-x+1$: $2=-1+3$ (prawda) i $2=-1+1$ (fałsz).",
-      "Równania z punktu A) i B) spełniają warunki. Sprawdźmy rysunki. Rysunek do zadania pokazuje proste o dodatnich i ujemnych nachyleniach, z dodatnimi $y$-interceptami. Proste w układzie A) to $y=x+1$ $(dodatnie nachylenie, $y$ - intercept 1)$ i $y=-x+3$ $(ujemne nachylenie, $y$ - intercept 3)$. Proste w układzie B) to $y=2x$ $(dodatnie nachylenie, $y$ - intercept 0)$ i $y=-x+3$ $(ujemne nachylenie, $y$ - intercept 3)$. Rysunek przedstawia proste, które przecinają oś $y$ w punktach 1 i 3."
+      "1. Proste przecinają się w $(1,2)$.\n2. Układ A: $y=x+1$ i $y=-2x+4$ — oba przechodzą przez $(1,2)$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9123,19 +9107,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Proste o równaniach $y = 3x - 5$ oraz ![Rysunek do zadania](/cke-matura/m21-maj/z09-1.png) są równoległe, gdy",
+    "prompt": "Proste o równaniach $y=3x-5$ oraz $y=\\frac{m-3}{2}x+\\frac92$ są równoległe, gdy",
     "choices": [
-      "$m = 1$",
-      "$m = 3$",
-      "$m = 6$",
-      "$m = 9$ pokaż wskazówkę »"
+      "$m=1$",
+      "$m=3$",
+      "$m=6$",
+      "$m=9$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $m = 9$.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Proste są równoległe, gdy mają ten sam współczynnik kierunkowy (współczynnik przy $x$). W pierwszym równaniu jest to $3$.",
-      "Drugie równanie ma postać $y = \\frac{m}{3}x - 1$. Aby proste były równoległe, współczynnik $\\frac{m}{3}$ musi być równy $3$.",
-      "Rozwiązujemy równanie $\\frac{m}{3} = 3$. Mnożymy obie strony przez $3$, aby wyznaczyć $m$."
+      "1. $\\frac{m-3}{2}=3$.\n2. $m-3=6$, więc $m=9$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9154,19 +9136,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Funkcja $f$ jest określona wzorem ![Rysunek do zadania](/cke-matura/m21-maj/z10-1.png) dla każdej liczby rzeczywistej x ≠ 1. Wtedy dla argumentu x = $\\sqrt{3}$ -1 wartość funkcji $f$ jest równa",
+    "prompt": "Funkcja $f$ jest określona wzorem $f(x)=\\frac{x^2}{2x-2}$ dla każdej liczby rzeczywistej $x\\ne1$. Wtedy dla argumentu $x=\\sqrt3-1$ wartość funkcji $f$ jest równa",
     "choices": [
-      "![Rysunek do zadania](/cke-matura/m21-maj/z10-2.png)",
-      "-1",
-      "1",
-      "![Rysunek do zadania](/cke-matura/m21-maj/z10-3.png)"
+      "$\\frac{1}{\\sqrt3-1}$",
+      "$-1$",
+      "$1$",
+      "$\\frac{1}{\\sqrt3-2}$"
     ],
-    "correctIndex": 3,
-    "explanation": "D, czyli $\\sqrt{3}$",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Przekształć wzór funkcji $f(x)$, aby wyznaczyć prostszą postać wyrażenia. Wykorzystaj wzór skróconego mnożenia $(a-b)(a+b) = a^2 - b^2$.\n$$ f(x) = \\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x+1 $$",
-      "Podstaw podaną wartość $x = \\sqrt{3} - 1$ do uproszczonego wzoru funkcji $f(x)$.\n$ f(\\sqrt{3}-1) = (\\sqrt{3}-1) + 1 $",
-      "Oblicz końcową wartość funkcji.\n$ f(\\sqrt{3}-1) = \\sqrt{3} $"
+      "1. $x=\\sqrt3-1$, więc $x^2=4-2\\sqrt3$ i $2x-2=2\\sqrt3-4$.\n2. $\\frac{4-2\\sqrt3}{2\\sqrt3-4}=-1$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9330,19 +9310,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Dla każdego kąta ostrego α iloczyn ![Rysunek do zadania](/cke-matura/m21-maj/z16-1.png) jest równy",
+    "prompt": "Dla każdego kąta ostrego $\\alpha$ iloczyn $\\frac{\\cos\\alpha}{1-\\sin^2\\alpha}\\cdot\\frac{1-\\cos^2\\alpha}{\\sin\\alpha}$ jest równy",
     "choices": [
-      "sin α",
-      "tg α",
-      "cos α",
-      "sin 2 α pokaż wskazówkę »"
+      "$\\sin\\alpha$",
+      "$\\operatorname{tg}\\alpha$",
+      "$\\cos\\alpha$",
+      "$\\sin2\\alpha$"
     ],
-    "correctIndex": 2,
-    "explanation": "C, czyli $\\cos \\alpha$",
+    "correctIndex": 1,
+    "explanation": "B.",
     "solutionSteps": [
-      "Zastosuj wzór na sinus sumy kątów: $\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B$. W tym przypadku $A=\\alpha$ i $B=90^\\circ$. Pamiętaj, że $\\sin(90^\\circ)=1$ i $\\cos(90^\\circ)=0$.",
-      "Podstaw wartości i uprość wyrażenie: $\\sin(\\alpha+90^\\circ) = \\sin \\alpha \\cos 90^\\circ + \\cos \\alpha \\sin 90^\\circ = \\sin \\alpha \\cdot 0 + \\cos \\alpha \\cdot 1 = \\cos \\alpha$.",
-      "Sprawdź, czy otrzymany wynik odpowiada jednej z podanych opcji. Wartość $\\cos \\alpha$ jest jedną z opcji."
+      "1. $1-\\sin^2\\alpha=\\cos^2\\alpha$, $1-\\cos^2\\alpha=\\sin^2\\alpha$.\n2. Iloczyn: $\\frac{\\cos\\alpha}{\\cos^2\\alpha}\\cdot\\frac{\\sin^2\\alpha}{\\sin\\alpha}=\\operatorname{tg}\\alpha$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9361,19 +9339,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Prosta k jest styczna w punkcie A do okręgu o środku O . Punkt B leży na tym okręgu i miara kąta AOB jest równa $80^{\\circ}$. Przez punkty O i B poprowadzono prostą, która przecina prostą k w punkcie C (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z17-1.gif) Miara kąta BAC jest równa",
+    "prompt": "Prosta $k$ jest styczna w punkcie $A$ do okręgu o środku $O$. Punkt $B$ leży na tym okręgu i miara kąta $AOB$ jest równa $80^\\circ$. Przez punkty $O$ i $B$ poprowadzono prostą, która przecina prostą $k$ w punkcie $C$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-maj/z17-fig1.png)\n\nMiara kąta $BAC$ jest równa",
     "choices": [
-      "$10^{\\circ}$",
-      "$30^{\\circ}$",
-      "$40^{\\circ}$",
-      "$50^{\\circ}$ pokaż wskazówkę »"
+      "$10^\\circ$",
+      "$30^\\circ$",
+      "$40^\\circ$",
+      "$50^\\circ$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $40^{\\circ}$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Ustal, że trójkąt AOB jest równoramienny, ponieważ OA i OB są promieniami okręgu, więc $\\angle OAB = \\angle OBA = \\frac{180^\\circ - 80^\\circ}{2} = 50^\\circ$.",
-      "Zauważ, że promień OA jest prostopadły do prostej stycznej k w punkcie A, więc $\\angle OAC = 90^\\circ$. Kąt BAC jest częścią kąta OAC, a konkretnie $\\angle BAC = \\angle OAC - \\angle OAB$.",
-      "Oblicz kąt BAC, odejmując miarę kąta OAB od miary kąta prostego: $\\angle BAC = 90^\\circ - 50^\\circ = 40^\\circ$."
+      "1. $\\angle OAB=\\angle OBA=\\frac{180^\\circ-80^\\circ}{2}=50^\\circ$.\n2. $OA\\perp k$, więc $\\angle OAC=90^\\circ$.\n3. $\\angle BAC=90^\\circ-50^\\circ=40^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9392,20 +9368,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Przyprostokątna AC trójkąta prostokątnego ABC ma długość 8 oraz tg $α = \\frac{2}{5}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z18-1.png) Pole tego trójkąta jest równe",
+    "prompt": "Przyprostokątna $AC$ trójkąta prostokątnego $ABC$ ma długość $8$ oraz $\\operatorname{tg}\\alpha=\\frac25$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-maj/z18-fig1.png)\n\nPole tego trójkąta jest równe",
     "choices": [
-      "12",
+      "$12$",
       "$\\frac{37}{3}$",
       "$\\frac{62}{5}$",
-      "$\\frac{64}{5}$ pokaż wskazówkę »"
+      "$\\frac{64}{5}$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $\\frac{64}{5}$.",
+    "explanation": "D.",
     "solutionSteps": [
-      "Z definicji tangensa w trójkącie prostokątnym, gdzie $\\alpha$ to kąt przy wierzchołku A, mamy $\\operatorname{tg} \\alpha = \\frac{|BC|}{|AC|}$. Podstawiając dane, otrzymujemy $\\frac{2}{5} = \\frac{|BC|}{8}$.",
-      "Obliczamy długość drugiej przyprostokątnej, $|BC|$, mnożąc obie strony równania przez 8: $|BC| = 8 \\cdot \\frac{2}{5} = \\frac{16}{5}$.",
-      "Pole trójkąta prostokątnego ABC obliczamy ze wzoru $\\frac{1}{2} \\cdot \\text{podstawa} \\cdot \\text{wysokość}$. W tym przypadku pole $P = \\frac{1}{2} \\cdot |AC| \\cdot |BC| = \\frac{1}{2} \\cdot 8 \\cdot \\frac{16}{5}$.",
-      "Obliczamy pole: $P = \\frac{1}{2} \\cdot 8 \\cdot \\frac{16}{5} = 4 \\cdot \\frac{16}{5} = \\frac{64}{5}$."
+      "1. $\\frac{|BC|}{8}=\\frac25$, więc $|BC|=\\frac{16}{5}$.\n2. $P=\\frac12\\cdot8\\cdot\\frac{16}{5}=\\frac{64}{5}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9418,21 +9391,23 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
     "id": "cke-m21-maj-z19",
     "title": "Matura - maj 2021 - poziom podstawowy - zad. 19",
     "category": "geometria",
-    "difficulty": "trudny",
+    "difficulty": "sredni",
     "forPaths": [
       "liceum",
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pole pewnego trójkąta równobocznego jest równe ![Rysunek do zadania](/cke-matura/m21-maj/z19-1.png) Obwód tego trójkąta jest równy\n\nRozwiąż zadanie.",
+    "prompt": "Pole pewnego trójkąta równobocznego jest równe $\\frac{4\\sqrt3}{9}$. Obwód tego trójkąta jest równy",
     "choices": [
-      "Zadanie otwarte - patrz rozwiązanie"
+      "$4$",
+      "$2$",
+      "$\\frac43$",
+      "$\\frac23$"
     ],
     "correctIndex": 0,
-    "explanation": "Obwód tego trójkąta jest równy 6.",
+    "explanation": "A.",
     "solutionSteps": [
-      "Ze wzoru na pole trójkąta równobocznego $P = \\frac{a^2\\sqrt{3}}{4}$ oraz podanego pola $P = \\sqrt{3}$, obliczamy długość boku $a$. Mamy $\\frac{a^2\\sqrt{3}}{4} = \\sqrt{3}$, co po skróceniu przez $\\sqrt{3}$ i przemnożeniu przez 4 daje $a^2 = 4$, czyli $a=2$.",
-      "Obliczamy obwód trójkąta równobocznego, korzystając ze wzoru $O = 3a$. Podstawiając $a=2$, otrzymujemy $O = 3 \\cdot 2 = 6$."
+      "1. $\\frac{a^2\\sqrt3}{4}=\\frac{4\\sqrt3}{9}$, więc $a^2=\\frac{16}{9}$ i $a=\\frac43$.\n2. Obwód $=4$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9451,19 +9426,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W trójkącie ABC bok BC ma długość 13, a wysokość CD tego trójkąta dzieli bok AB na odcinki o długościach $|AD| = 3$ i $|BD| = 12$ (zobacz rysunek). Długość boku AC jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z20-1.png)",
+    "prompt": "W trójkącie $ABC$ bok $BC$ ma długość $13$, a wysokość $CD$ tego trójkąta dzieli bok $AB$ na odcinki o długościach $|AD|=3$ i $|BD|=12$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-maj/z20-fig1.png)\n\nDługość boku $AC$ jest równa",
     "choices": [
       "$\\sqrt{34}$",
       "$\\frac{13}{4}$",
       "$2\\sqrt{14}$",
-      "$3\\sqrt{45}$ pokaż wskazówkę »"
+      "$3\\sqrt{45}$"
     ],
     "correctIndex": 0,
-    "explanation": "A, czyli $\\sqrt{34}$",
+    "explanation": "A.",
     "solutionSteps": [
-      "Zauważ, że wysokość CD dzieli trójkąt ABC na dwa trójkąty prostokątne: ADC i BDC. W trójkącie BDC znamy długości przyprostokątnych: $BC = 13$ i $BD = 12$. Obliczamy długość wysokości CD z twierdzenia Pitagorasa: $CD^2 + BD^2 = BC^2$, czyli $CD^2 + 12^2 = 13^2$.",
-      "Obliczona wysokość CD wynosi $CD = \\sqrt{13^2 - 12^2} = \\sqrt{169 - 144} = \\sqrt{25} = 5$. Teraz rozważamy trójkąt prostokątny ADC, w którym znamy długości przyprostokątnych $AD = 3$ i $CD = 5$.",
-      "Obliczamy długość boku AC z twierdzenia Pitagorasa dla trójkąta ADC: $AC^2 = AD^2 + CD^2$. Podstawiamy wartości: $AC^2 = 3^2 + 5^2 = 9 + 25 = 34$. Stąd $AC = \\sqrt{34}$."
+      "1. $|CD|=\\sqrt{13^2-12^2}=5$.\n2. $|AC|=\\sqrt{3^2+5^2}=\\sqrt{34}$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9482,19 +9455,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Punkty A, B, C i D leżą na okręgu o środku S. Miary kątów SBC, BCD, CDA są równe odpowiednio: $|\\angle SBC| = 60^{\\circ}$ , $|\\angle BCD| = 110^{\\circ}$ , $|\\angle CDA| = 90^{\\circ}$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z21-1.png) Wynika stąd, że miara α kąta DAS jest równa",
+    "prompt": "Punkty $A$, $B$, $C$ i $D$ leżą na okręgu o środku $S$. Miary kątów $SBC$, $BCD$, $CDA$ są równe odpowiednio: $|\\angle SBC|=60^\\circ$, $|\\angle BCD|=110^\\circ$, $|\\angle CDA|=90^\\circ$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-maj/z21-fig1.png)\n\nWynika stąd, że miara $\\alpha$ kąta $DAS$ jest równa",
     "choices": [
-      "$25^{\\circ}$",
-      "$30^{\\circ}$",
-      "$35^{\\circ}$",
-      "$40^{\\circ}$"
+      "$25^\\circ$",
+      "$30^\\circ$",
+      "$35^\\circ$",
+      "$40^\\circ$"
     ],
     "correctIndex": 3,
-    "explanation": "D, czyli $40^{\\circ}$",
+    "explanation": "D.",
     "solutionSteps": [
-      "Obliczamy miarę kąta przy wierzchołku S w trójkącie SBC. Ponieważ SB i SC to promienie okręgu, trójkąt SBC jest równoramienny. Kąt $|\\angle SBC| = 60^{\\circ}$, więc $|\\angle SCB| = 60^{\\circ}$, a $|\\angle BSC| = 180^{\\circ}$ -$60^{\\circ}$ -$60^{\\circ}$ = $60^{\\circ}$.",
-      "Wyznaczamy miary kątów środkowych opartych na łukach CD i DA. Kąt $|\\angle BCD| = 110^{\\circ}$, a ponieważ jest to kąt wpisany oparty na łuku DAB, to kąt środkowy oparty na tym łuku jest dwa razy większy: $|\\angle DSB| = 2^{\\circ}$* $|\\angle DCB| = 2^{\\circ}$* $($180°$ - $110°$) = 2$ * $70^{\\circ}$ = $140^{\\circ}$ (kąt środkowy oparty na łuku DAB to suma kątów środkowych opartych na łukach DCB). Kąt $|\\angle CDA| = 90^{\\circ}$, a jest to kąt wpisany oparty na łuku CBA. Kąt środkowy oparty na łuku CBA to 2 * $90^{\\circ}$ = $180^{\\circ}$.",
-      "Obliczamy miarę kąta środkowego |\\angle DSA|. Suma kątów środkowych wokół środka S wynosi $360^{\\circ}$. Mamy $|\\angle BSC| = 60^{\\circ}$ i kąt środkowy oparty na łuku DCB, czyli |\\angle DSC| + $|\\angle CSB| = 2^{\\circ}$* |\\angle DAB|. Kąt $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BCD| jest wpisany i opiera się na łuku DAB. Zatem kąt środkowy oparty na łuku DAB wynosi $2 * ($180°$ - $110°$) = 2$ * $70^{\\circ}$ = $140^{\\circ}$ (nie jest to kąt środkowy, ale suma kątów na łuku). Kąt wpisany $|\\angle CDA| = 90^{\\circ}$, więc kąt środkowy oparty na łuku CBA to $180^{\\circ}$. $|\\angle BSC| = 60^{\\circ}$. Kąt $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BCD| jest wpisany, oparty na łuku DAB. Kąt |\\angle DAS| = $\\alpha$. $|\\angle SBC| = 60^{\\circ}$, więc $|\\angle BSC| = 60^{\\circ}$. $|\\angle BCD| = 110^{\\circ}$. Kąt |\\angle BAD| + $|\\angle BCD| = 180^{\\circ}$, więc $|\\angle BAD| = 180^{\\circ}$ -$110^{\\circ}$ = $70^{\\circ}$. $|\\angle CDA| = 90^{\\circ}$. Kąt |\\angle ABC| + $|\\angle CDA| = 180^{\\circ}$, więc $|\\angle ABC| = 180^{\\circ}$ -$90^{\\circ}$ = $90^{\\circ}$. $|\\angle ABC| = |\\angle SBC|$ + $|\\angle ABS| = 60^{\\circ}$ + $|\\angle ABS| = 90^{\\circ}$, więc $|\\angle ABS| = 30^{\\circ}$. W trójkącie ABS: $|\\angle ASB| = 180^{\\circ}$ -$30^{\\circ}$ -$30^{\\circ}$ = $120^{\\circ}$. $|\\angle BSC| = 60^{\\circ}$. Kąt środkowy $|\\angle DSA| = 360^{\\circ}$ - $|\\angle ASB| - |\\angle BSC| - |\\angle CSD|$. Kąt $|\\angle CDA| = 90^{\\circ}$. Kąt $|\\angle DSA| = 2^{\\circ}$* |\\angle DBA|. Kąt $|\\angle BCD| = 110^{\\circ}$. $|\\angle BAD| = 180^{\\circ}$ -$110^{\\circ}$ = $70^{\\circ}$. $|\\angle BAD| = |\\angle DAS| + |\\angle SAB|$ = $\\alpha$ + $|\\angle SAB| = 70^{\\circ}$. Kąt $|\\angle CDA| = 90^{\\circ}$. Kąt $|\\angle ABC| = 180^{\\circ}$ -$90^{\\circ}$ = $90^{\\circ}$. $|\\angle ABC| = |\\angle ABS| + |\\angle SBC| = |\\angle ABS|$ + $60^{\\circ}$ = $90^{\\circ}$. Zatem $|\\angle ABS| = 30^{\\circ}$. W trójkącie ABS, $SA = SB$ (promienie), więc jest równoramienny. $|\\angle SAB| = |\\angle ABS| = 30^{\\circ}$. Wówczas $|\\angle BAD| = |\\angle DAS| + |\\angle SAB|$ = $\\alpha$ + $30^{\\circ}$ = $70^{\\circ}$. Stąd $\\alpha$ = $40^{\\circ}$."
+      "1. $\\angle BAD=180^\\circ-110^\\circ=70^\\circ$ oraz $\\angle ABC=90^\\circ$.\n2. $\\angle ABS=30^\\circ$, a trójkąt $ABS$ jest równoramienny, więc $\\angle SAB=30^\\circ$.\n3. $\\alpha=70^\\circ-30^\\circ=40^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9513,20 +9484,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W równoległoboku ABCD, przedstawionym na rysunku, kąt α ma miarę $70^{\\circ}$. ![Rysunek do zadania](/cke-matura/m21-maj/z22-1.png) Wtedy kąt β ma miarę",
+    "prompt": "W równoległoboku $ABCD$, przedstawionym na rysunku, kąt $\\alpha$ ma miarę $70^\\circ$.\n\n![Rysunek 1](/cke-matura/m21-maj/z22-fig1.png)\n\nWtedy kąt $\\beta$ ma miarę",
     "choices": [
-      "$80^{\\circ}$",
-      "$70^{\\circ}$",
-      "$60^{\\circ}$",
-      "$50^{\\circ}$"
+      "$80^\\circ$",
+      "$70^\\circ$",
+      "$60^\\circ$",
+      "$50^\\circ$"
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli $70^\\circ$",
+    "explanation": "B.",
     "solutionSteps": [
-      "Suma miar kątów przy tym samym ramieniu w równoległoboku wynosi $180^{\\circ}$. Kąt $\\alpha$ i kąt leżący przy tym samym boku (oznaczony jako $180^\\circ - \\beta$) sumują się do $180^\\circ$.",
-      "Kąt $\\beta$ jest kątem wewnętrznym równoległoboku. Kąt $\\beta$ i kąt $\\alpha$ są kątami leżącymi naprzeciwko siebie w równoległoboku, więc są równe. Kąt $\\alpha = 70^\\circ$, więc kąt $\\beta = 70^\\circ$.",
-      "Kąt wewnętrzny równoległoboku, do którego przylega kąt $\\beta$, ma miarę $180^\\circ - \\beta$. Z treści zadania wiemy, że kąt $\\alpha$ jest miarą jednego z kątów wewnętrznych. Kąt $\\beta$ jest kątem wewnętrznym sąsiednim do kąta, którego miara jest dana. Zatem $\\alpha + \\beta = 180^\\circ$. Skoro $\\alpha = 70^\\circ$, to $70^\\circ + \\beta = 180^\\circ$, co daje $\\beta = 180^\\circ - 70^\\circ = 110^\\circ$. Kąt zaznaczony na rysunku jako $\\beta$ jest kątem ostrym. Kąty w równoległoboku, które nie są równe, tworzą pary kątów ostrych i kątów rozwartych. Kąty ostre mają miarę $\\alpha = 70^\\circ$, a kąty rozwarte mają miarę $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym.",
-      "Kąty wierzchołkowe są równe. Kąt $\\beta$ na rysunku jest równy kątowi przeciwległemu w równoległoboku, a kąty przeciwległe w równoległoboku są równe. Dodatkowo, kąt $\\beta$ jest również wierzchołkowy do jednego z kątów równoległoboku. Kąty sąsiadujące przy jednym ramieniu równoległoboku sumują się do $180^\\circ$. Kąt $\\alpha$ jest dany jako $70^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym. W równoległoboku mamy dwie pary równych kątów. Jeden z kątów wynosi $70^\\circ$. Drugi kąt wynosi $180^\\circ - 70^\\circ = 110^\\circ$. Kąt $\\beta$ na rysunku jest kątem ostrym, więc ma miarę $70^\\circ$."
+      "1. Kąty przeciwległe w równoległoboku są równe, a sąsiednie sumują się do $180^\\circ$.\n2. Kąt $\\beta$ jest ostry i równy $\\alpha$, więc $\\beta=70^\\circ$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9545,7 +9513,7 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "W każdym n-kącie wypukłym $(n \\ge 3)$ liczba przekątnych jest równa ![Rysunek do zadania](/cke-matura/m21-maj/z23-1.png) . Wielokątem wypukłym, w którym liczba przekątnych jest o 25 większa od liczby boków, jest",
+    "prompt": "W każdym $n$-kącie wypukłym ($n\\ge3$) liczba przekątnych jest równa $\\frac{n(n-3)}{2}$. Wielokątem wypukłym, w którym liczba przekątnych jest o $25$ większa od liczby boków, jest",
     "choices": [
       "siedmiokąt.",
       "dziesięciokąt.",
@@ -9553,12 +9521,9 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "piętnastokąt."
     ],
     "correctIndex": 1,
-    "explanation": "B, czyli dziesięciokąt.",
+    "explanation": "B.",
     "solutionSteps": [
-      "Zapisz wzór na liczbę przekątnych $P$ n-kąta: $P = \\frac{n(n-3)}{2}$. Zauważ, że liczba boków wynosi $n$.",
-      "Zapisz równanie zgodnie z treścią zadania: liczba przekątnych jest o 25 większa od liczby boków, czyli $P = n + 25$. Podstaw wzór na $P$: $\\frac{n(n-3)}{2} = n + 25$.",
-      "Rozwiąż otrzymane równanie kwadratowe: $n(n-3) = 2(n+25) \\implies n^2 - 3n = 2n + 50 \\implies n^2 - 5n - 50 = 0$. Wyróżnik $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot (-50) = 25 + 200 = 225$, $\\sqrt{\\Delta} = 15$. Rozwiązania to $n_1 = \\frac{5 - 15}{2} = -5$ (odrzucamy, bo n musi być dodatnie) i $n_2 = \\frac{5 + 15}{2} = 10$.",
-      "Sprawdź, który z podanych wielokątów ma 10 boków. Dziesięciokąt ma 10 boków."
+      "1. $\\frac{n(n-3)}{2}=n+25$.\n2. $n^2-5n-50=0$, więc $n=10$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9577,19 +9542,17 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Pole figury F 1 złożonej z dwóch stycznych zewnętrznie kół o promieniach 1 i 3 jest równe polu figury F 2 złożonej z dwóch stycznych zewnętrznie kół o promieniach długości $r$ (zobacz rysunek). ![Rysunek do zadania](/cke-matura/m21-maj/z24-1.png) ![Rysunek do zadania](/cke-matura/m21-maj/z24-2.png) Długość $r$ promienia jest równa",
+    "prompt": "Pole figury $F_1$ złożonej z dwóch stycznych zewnętrznie kół o promieniach $1$ i $3$ jest równe polu figury $F_2$ złożonej z dwóch stycznych zewnętrznie kół o promieniach długości $r$ (zobacz rysunek).\n\n![Rysunek 1](/cke-matura/m21-maj/z24-fig1.png)\n\n![Rysunek 2](/cke-matura/m21-maj/z24-fig2.png)\n\nDługość $r$ promienia jest równa",
     "choices": [
-      "$\\sqrt{3}$",
-      "2",
-      "$\\sqrt{5}$",
-      "3 pokaż wskazówkę »"
+      "$\\sqrt3$",
+      "$2$",
+      "$\\sqrt5$",
+      "$3$"
     ],
     "correctIndex": 2,
-    "explanation": "C, czyli $\\sqrt{5}$",
+    "explanation": "C.",
     "solutionSteps": [
-      "Oblicz pole figury F1 złożonej z dwóch kół o promieniach $r_1=1$ i $r_2=3$. Pole koła to $P = \\pi r^2$.\n$P_1 = \\pi (1)^2 + \\pi (3)^2 = \\pi + 9\\pi = 10\\pi$.",
-      "Oblicz pole figury F2 złożonej z dwóch kół o promieniach $r$. Figura F2 jest złożona z dwóch identycznych kół, więc pole wynosi $P_2 = 2 \\cdot \\pi r^2$.",
-      "Przyrównaj pola figur F1 i F2, aby obliczyć $r$. $P_1 = P_2$, czyli $10\\pi = 2\\pi r^2$. Dzieląc obie strony przez $2\\pi$, otrzymujemy $5 = r^2$. Pierwiastkując obie strony, mamy $r = \\sqrt{5}$ (promień musi być dodatni)."
+      "1. $P_{F_1}=\\pi\\cdot1^2+\\pi\\cdot3^2=10\\pi$.\n2. $P_{F_2}=2\\pi r^2=10\\pi$, więc $r^2=5$ i $r=\\sqrt5$."
     ],
     "examSource": {
       "kind": "matura",
@@ -9750,17 +9713,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Wykaż, że dla każdych trzech dodatnich liczb a, b i c takich, że a , spełniona jest nierówność ![Rysunek do zadania](/cke-matura/m21-maj/z30-1.png)",
+    "prompt": "Wykaż, że dla każdych trzech dodatnich liczb $a$, $b$ i $c$ takich, że $a<b$, spełniona jest nierówność $\\frac ab<\\frac{a+c}{b+c}$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "dowód przez równoważne przekształcenia i założenie $a",
+    "explanation": "1. $\\frac{a}{b}<\\frac{a+c}{b+c}$ równoważnie $a(b+c)\n2. $ab+ac0$: $a",
     "solutionSteps": [
-      "Mamy wykazać, że dla dodatnich $a0$ zachodzi $\\frac{a}{b}<\\frac{a+c}{b+c}$.",
-      "Obie strony są dodatnie, więc mnożymy nierówność przez $b(b+c)>0$: $a(b+c)",
-      "Rozwijamy: $ab+ac<ab+bc$, czyli $ac",
-      "Dzielimy przez $c>0$: $a"
+      "1. $\\frac{a}{b}<\\frac{a+c}{b+c}$ równoważnie $a(b+c)\n2. $ab+ac0$: $a"
     ],
     "examSource": {
       "kind": "matura",
@@ -9805,16 +9765,14 @@ export const EXAM_ARCHIVE_TASKS: Task[] = [
       "technikum",
       "zawodowa"
     ],
-    "prompt": "Rozwiąż równanie: ![Rysunek do zadania](/cke-matura/m21-maj/z32-1.png)",
+    "prompt": "Rozwiąż równanie $\\frac{3x+2}{3x-2}=4-x$.",
     "choices": [
       "Zadanie otwarte - patrz rozwiązanie"
     ],
     "correctIndex": 0,
-    "explanation": "$x = \\frac{3 - \\sqrt{17}}{4}$ lub $x = \\frac{3 + \\sqrt{17}}{4}$",
+    "explanation": "$x=2$ lub $x=\\frac53$.",
     "solutionSteps": [
-      "Przekształć równanie, aby jedna strona była równa zero. Odejmij $x$ od obu stron: $2x^2 - 3x - 1 = 0$.",
-      "Oblicz wyróżnik $\\Delta$ delty, używając wzoru $\\Delta = b^2 - 4ac$. Tutaj $a=2$, $b=-3$, $c=-1$, więc $\\Delta = (-3)^2 - 4 \\cdot 2 \\cdot (-1) = 9 + 8 = 17$.",
-      "Oblicz pierwiastki równania kwadratowego, używając wzorów $x_1 = \\frac{-b - \\sqrt{\\Delta}}{2a}$ i $x_2 = \\frac{-b + \\sqrt{\\Delta}}{2a}$. Otrzymujemy $x_1 = \\frac{3 - \\sqrt{17}}{4}$ oraz $x_2 = \\frac{3 + \\sqrt{17}}{4}$."
+      "1. $3x+2=(4-x)(3x-2)=14x-8-3x^2$.\n2. $3x^2-11x+10=0$, więc $\\Delta=1$ i $x=2$ lub $x=\\frac53$.\n3. Obie wartości spełniają $x\\ne\\frac23$."
     ],
     "examSource": {
       "kind": "matura",
